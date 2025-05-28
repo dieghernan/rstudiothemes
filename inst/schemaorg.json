@@ -14,15 +14,15 @@
         "familyName": "Hernangómez",
         "givenName": "Diego"
       },
-      "description": "Create and install RStudio themes originated from Visual Studio Code themes.",
+      "description": "Create and install 'RStudio' themes originated from Visual Studio Code themes.",
       "license": "https://spdx.org/licenses/MIT",
-      "name": "rstudiothemes: Ports of VSCode Themes for RStudio",
+      "name": "rstudiothemes: Ports of Visual Studio Code Themes for 'RStudio'",
       "programmingLanguage": {
         "type": "ComputerLanguage",
         "name": "R",
         "url": "https://r-project.org"
       },
-      "runtimePlatform": "R version 4.5.0 (2025-04-11 ucrt)",
+      "runtimePlatform": "R version 4.5.0 (2025-04-11)",
       "version": "0.0.0.9000"
     },
     {
@@ -32,7 +32,7 @@
         "familyName": "Hernangómez",
         "givenName": "Diego"
       },
-      "name": "{rstudiothemes}: Ports of {VSCode} Themes for {RStudio}"
+      "name": "{rstudiothemes}: Ports of {Visual Studio Code} Themes for {RStudio}"
     }
   ]
 }

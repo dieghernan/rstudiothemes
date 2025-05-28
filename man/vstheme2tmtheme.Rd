@@ -15,7 +15,7 @@ vstheme2tmtheme(
 \item{vstheme}{Path to a Visual Studio Code theme, in \verb{*.json} format.}
 
 \item{out_file}{Path were the resulting file would be written. By default
-is a temporal file (\code{\link[=tempfile]{tempfile()}}),}
+is a temporal file (\code{\link[=tempfile]{tempfile()}}).}
 
 \item{name}{Optional. The name of the theme. If nor provided the name of
 the \code{vstheme} would be used.}
