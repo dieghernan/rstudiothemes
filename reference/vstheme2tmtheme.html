@@ -88,13 +88,14 @@ the <code>vstheme</code> would be used.</p></dd>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="va">vstheme</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"ext/test-color-theme.json"</span>,</span></span>
+<span class="r-in"><span><span class="va">vstheme</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"ext/test-simple-color-theme.json"</span>,</span></span>
 <span class="r-in"><span>  package <span class="op">=</span> <span class="st">"rstudiothemes"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">path</span> <span class="op">&lt;-</span> <span class="fu">vstheme2tmtheme</span><span class="op">(</span><span class="va">vstheme</span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> This vscode theme does not have author, use the `author` parameter</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">path</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\Rtmp4eA3qC\\fileee0f5c750b.tmTheme"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "/tmp/Rtmpnc3hfQ/file22625f78f846.tmTheme"</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/readLines.html" class="external-link">readLines</a></span><span class="op">(</span><span class="va">path</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fl">50</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
@@ -103,52 +104,52 @@ the <code>vstheme</code> would be used.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;plist version="1.0"&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;dict&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;key&gt;name&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;string&gt;Tokyo Night&lt;/string&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;string&gt;Skeletor Syntax&lt;/string&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;key&gt;author&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;string&gt;Enkia, rstudiothemes R package&lt;/string&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;string&gt;rstudiothemes R package&lt;/string&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;key&gt;colorSpaceName&lt;/key&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;string&gt;sRGB&lt;/string&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;key&gt;semanticClass&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;string&gt;theme.dark.tokyo_night&lt;/string&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;string&gt;theme.dark.skeletor_syntax&lt;/string&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;key&gt;comment&lt;/key&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;string&gt;Generated with rstudiothemes R package&lt;/string&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;key&gt;uuid&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;string&gt;32343636-6637-4430-b235-386366336632&lt;/string&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;string&gt;65316264-3362-4031-a334-396431643737&lt;/string&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;key&gt;settings&lt;/key&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;array&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;dict&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;key&gt;settings&lt;/key&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;dict&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;key&gt;background&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#1A1B26&lt;/string&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#2B2836&lt;/string&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;key&gt;foreground&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#A9B1D6&lt;/string&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#DCE7FD&lt;/string&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;key&gt;selection&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#515C7E4D&lt;/string&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;key&gt;inactiveSelection&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#515C7E25&lt;/string&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;key&gt;selectionHighlightColor&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#515C7E44&lt;/string&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;key&gt;wordHighlight&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#515C7E44&lt;/string&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;key&gt;wordHighlightStrong&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#515C7E55&lt;/string&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;key&gt;findMatchHighlight&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#3D59A166&lt;/string&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;key&gt;currentFindMatchHighlight&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#3D59A166&lt;/string&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;key&gt;findRangeHighlight&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#515C7E33&lt;/string&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;key&gt;referenceHighlight&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#3D59A166&lt;/string&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#55535E&lt;/string&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;key&gt;lineHighlight&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#1E202E&lt;/string&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;key&gt;rangeHighlight&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#515C7E20&lt;/string&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#55535E&lt;/string&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;key&gt;caret&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#C0CAF5&lt;/string&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#BD93F9&lt;/string&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;key&gt;invisibles&lt;/key&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#363B54&lt;/string&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#363340&lt;/string&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;key&gt;gutterForeground&lt;/key&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#655E7F&lt;/string&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;/dict&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;/dict&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;dict&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;key&gt;name&lt;/key&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;string&gt;comment&lt;/string&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;key&gt;scope&lt;/key&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;string&gt;comment&lt;/string&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;key&gt;settings&lt;/key&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;dict&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;key&gt;foreground&lt;/key&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;string&gt;#655E7F&lt;/string&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;/dict&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;/dict&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;dict&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;key&gt;name&lt;/key&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;string&gt;doctype&lt;/string&gt;</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
