@@ -47,13 +47,16 @@ vstheme2tmtheme <- function(vstheme,
   scopes_df <- tmtheme_scopes_df(vs_df)
 
   # 4. Top level
+  for_top <- vs_df$section %in% c("colors", "highlevel") & !is.na(vs_df$name)
+  for_top_df <- vs_df[for_top, ]
+
   if (is.null(name)) {
-    name <- unlist(vs_df[vs_df$name == "name", ]$value)
+    name <- unlist(for_top_df[for_top_df$name == "name", ]$value)
   }
 
 
   if (is.null(author)) {
-    orig_aut <- unlist(vs_df[vs_df$name == "author", ]$value)
+    orig_aut <- unlist(for_top_df[for_top_df$name == "author", ]$value)
 
     if (length(orig_aut) < 1) {
       message(
@@ -119,7 +122,7 @@ vstheme2tmtheme <- function(vstheme,
     this <- as.list(scopes_df[i, ])
     name <- unlist(this$name)
 
-    if (length(name) == 0) {
+    if (length(name) == 0 | is.na(name)) {
       name <- ""
     }
 
@@ -183,6 +186,13 @@ tmtheme_settings_df <- function(vs_df) {
   colnames(end) <- c("tm", "color")
   end <- dplyr::distinct(end)
   end <- end[!is.na(end$color), ]
+
+  # Avoid duplicates
+  end$rank <- seq_len(nrow(end))
+  end <- dplyr::grouped_df(end, "tm")
+  end <- dplyr::slice_head(end, n = 1)
+  end <- dplyr::ungroup(end)
+  end <- end[order(end$rank), c("tm", "color")]
 
   # As a bare minimum we should have:
   # background, foreground, selection, invisibles,lineHighlight, caret.
@@ -260,14 +270,6 @@ tmtheme_scopes_df <- function(vs_df) {
   )
   eend$scope <- stringr::str_squish(eend$scope)
 
-  # Assign a unique name
-  eend <- eend[order(eend$rank, decreasing = TRUE), ]
-  eend_g <- dplyr::grouped_df(eend, "name")
-  eend_g <- dplyr::mutate(eend_g, nr = dplyr::row_number(), ng = dplyr::n())
-  eend$name <- ifelse(eend_g$ng > 1, paste0(
-    eend_g$name, " - ",
-    stringr::str_pad(eend_g$nr, width = 2, pad = "0")
-  ), eend_g$name)
 
 
   eend <- eend[

@@ -7,19 +7,23 @@
     "function": {
       "foreground": "#ffc600"
     },
-    "variable": "#fff",
+    "variable": {
+      "foreground": "#fff"
+    },
     "interface": {
       // "foreground": "#ff0088",
       "foreground": "#FF68B8",
-      "italic": true
+	  "fontStyle": "italic"
     },
     "type": {
       // "foreground": "#ff0088",
       "foreground": "#FF68B8",
-      "italic": true
+	  "fontStyle": "italic"
     },
     // This colours both object definiton properties, as well as references. If the property does not exist, it will be white\.
-    "property": "#9effff"
+    "property": {
+      "foreground": "#9effff"
+    }
   },
   "colors": {
     // menu
