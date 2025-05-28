@@ -11,7 +11,7 @@ URL: https://dieghernan.github.io/rstudiothemes/,
     https://github.com/dieghernan/rstudiothemes
 BugReports: https://github.com/dieghernan/rstudiothemes/issues
 Depends: 
-    R (>= 4.0.0)
+    R (>= 4.1.0)
 Imports: 
     dplyr,
     jsonlite,

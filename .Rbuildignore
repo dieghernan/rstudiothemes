@@ -25,3 +25,5 @@
 ^vendor$
 ^README\.Rmd$
 ^data-raw$
+^rsthemes$
+^themes$
