@@ -33,7 +33,7 @@ the equivalent TextMate theme (\verb{*.tmTheme}).
 }
 \examples{
 
-vstheme <- system.file("ext/test-color-theme.json",
+vstheme <- system.file("ext/test-simple-color-theme.json",
   package = "rstudiothemes"
 )
 path <- vstheme2tmtheme(vstheme)
