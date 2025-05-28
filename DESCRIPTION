@@ -1,0 +1,23 @@
+Package: rstudiothemes
+Title: Ports of VSCode Themes for RStudio
+Version: 0.0.0.9000
+Authors@R: 
+    person("Diego", "Hernangómez", , "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"),
+           comment = c(ORCID = "0000-0001-8457-4658"))
+Description: Create and install RStudio themes originated from Visual
+    Studio Code themes.
+Depends: 
+    R (>= 4.0.0)
+Imports: 
+    dplyr,
+    jsonlite,
+    tidyr,
+    stringr
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Suggests: 
+    testthat (>= 3.0.0),
+    uuid
+Config/testthat/edition: 3
