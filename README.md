@@ -4,6 +4,7 @@
 # rstudiothemes <a href="https://dieghernan.github.io/rstudiothemes/"><img src="man/figures/logo.png" align="right" height="139"/></a>
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 The goal of **rstudiothemes** is to …
