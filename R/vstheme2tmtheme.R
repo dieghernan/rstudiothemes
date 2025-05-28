@@ -23,7 +23,7 @@
 #'
 #' @examples
 #'
-#' vstheme <- system.file("ext/test-color-theme.json",
+#' vstheme <- system.file("ext/test-simple-color-theme.json",
 #'   package = "rstudiothemes"
 #' )
 #' path <- vstheme2tmtheme(vstheme)
@@ -122,7 +122,7 @@ vstheme2tmtheme <- function(vstheme,
     this <- as.list(scopes_df[i, ])
     name <- unlist(this$name)
 
-    if (length(name) == 0 | is.na(name)) {
+    if (length(name) == 0 || is.na(name)) {
       name <- ""
     }
 
