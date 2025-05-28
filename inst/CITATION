@@ -2,7 +2,7 @@ year <- format(Sys.time(), "%Y")
 abs <- trimws(gsub("\\s+", " ", meta$Description))
 abs <- gsub("'", "", abs)
 title <- gsub("'", "", meta$Title, fixed = TRUE)
-title <- gsub("VSCode", "{VSCode}", title, fixed = TRUE)
+title <- gsub("Visual Studio Code", "{Visual Studio Code}", title, fixed = TRUE)
 title <- gsub("RStudio", "{RStudio}", title, fixed = TRUE)
 
 pkg <- meta$Package

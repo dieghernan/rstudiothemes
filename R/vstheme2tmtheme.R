@@ -7,7 +7,7 @@
 #'
 #' @inheritParams read_vstheme
 #' @param out_file Path were the resulting file would be written. By default
-#'   is a temporal file ([tempfile()]),
+#'   is a temporal file ([tempfile()]).
 #' @param name Optional. The name of the theme. If nor provided the name of
 #'   the `vstheme` would be used.
 #' @param author Optional. The author of the theme. If nor provided the name of
