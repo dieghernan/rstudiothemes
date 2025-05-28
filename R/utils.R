@@ -1,4 +1,3 @@
-
 # Try to create HEX values
 col2hex <- function(x) {
   x <- trimws(x)

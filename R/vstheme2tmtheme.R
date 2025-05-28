@@ -78,7 +78,7 @@ vstheme2tmtheme <- function(vstheme,
   md5 <- unname(tools::md5sum(vstheme))
   uuid <- generate_uuid(md5)
 
-  toplevel_df <- tibble::tibble(
+  toplevel_df <- dplyr::tibble(
     tm = c(
       "name", "author", "colorSpaceName", "semanticClass",
       "comment", "uuid"
@@ -219,7 +219,7 @@ tmtheme_scopes_df <- function(vs_df) {
   tokens_df <- vs_df[grepl("tokenColor", vs_df$section, ignore.case = TRUE), ]
   tokens_df$rank <- seq_len(nrow(tokens_df))
 
-  tokens_df <- tokens_df[!grepl("\\*|\\?|\\¿", tokens_df$scope), ]
+  tokens_df <- tokens_df[!grepl("\\*", tokens_df$scope), ]
 
   # If has semanticTokenColors this has priority over other scopes
   if ("semanticTokenColors" %in% tokens_df$section) {

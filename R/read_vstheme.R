@@ -19,7 +19,7 @@
 #' )
 #' read_vstheme(vstheme)
 #'
-read_vstheme <- function(vstheme, name = NULL, type = NULL) {
+read_vstheme <- function(vstheme) {
   # 1. Read vscode and prepare
   vs <- jsonlite::read_json(vstheme)
 
@@ -39,7 +39,7 @@ read_vstheme <- function(vstheme, name = NULL, type = NULL) {
   type <- paste0(unlist(vs$type)[1], collapse = ", ")
   author <- paste0(unlist(vs$author), collapse = ", ")
 
-  top_df <- tibble::tibble(
+  top_df <- dplyr::tibble(
     value = c(name, author, type)
   )
 

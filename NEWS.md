@@ -1,3 +1,3 @@
 # rstudiothemes (development version)
 
-* Initial CRAN submission.
+-   First stable version.

@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "type": "SoftwareSourceCode",
+      "author": {
+        "id": "https://orcid.org/0000-0001-8457-4658"
+      },
+      "codeRepository": "https://github.com/dieghernan/rstudiothemes",
+      "copyrightHolder": {
+        "id": "https://orcid.org/0000-0001-8457-4658",
+        "type": "Person",
+        "email": "diego.hernangomezherrero@gmail.com",
+        "familyName": "Hernangómez",
+        "givenName": "Diego"
+      },
+      "description": "Create and install RStudio themes originated from Visual Studio Code themes.",
+      "license": "https://spdx.org/licenses/MIT",
+      "name": "rstudiothemes: Ports of VSCode Themes for RStudio",
+      "programmingLanguage": {
+        "type": "ComputerLanguage",
+        "name": "R",
+        "url": "https://r-project.org"
+      },
+      "runtimePlatform": "R version 4.4.3 (2025-02-28)",
+      "version": "0.0.0.9000"
+    },
+    {
+      "type": "SoftwareSourceCode",
+      "author": {
+        "type": "Person",
+        "familyName": "Hernangómez",
+        "givenName": "Diego"
+      },
+      "name": "{rstudiothemes}: Ports of {VSCode} Themes for {RStudio}"
+    }
+  ]
+}
