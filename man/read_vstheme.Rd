@@ -25,6 +25,7 @@ read_vstheme(vstheme)
 }
 \seealso{
 Other converters: 
+\code{\link{read_tmtheme}()},
 \code{\link{vstheme2tmtheme}()}
 }
 \concept{converters}

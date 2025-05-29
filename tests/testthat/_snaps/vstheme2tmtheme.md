@@ -17,7 +17,7 @@
           <key>comment</key>
           <string>Generated with rstudiothemes R package</string>
           <key>uuid</key>
-          <string>39376365-3863-4364-a533-653336313663</string>
+      <string>(masked_uuid)</string>
           <key>settings</key>
           <array>
             <dict>
@@ -530,7 +530,7 @@
           <key>comment</key>
           <string>Generated with rstudiothemes R package</string>
           <key>uuid</key>
-          <string>65316264-3362-4031-a334-396431643737</string>
+      <string>(masked_uuid)</string>
 
 ---
 
@@ -551,5 +551,5 @@
           <key>comment</key>
           <string>Generated with rstudiothemes R package</string>
           <key>uuid</key>
-          <string>65316264-3362-4031-a334-396431643737</string>
+      <string>(masked_uuid)</string>
 

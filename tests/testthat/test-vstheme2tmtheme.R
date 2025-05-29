@@ -8,7 +8,14 @@ test_that("Theme creation", {
   thef <- vstheme2tmtheme(vstheme, out_tm = tmout)
   expect_true(file.exists(thef))
   expect_identical(thef, tmout)
+
+
   out <- readLines(tmout)
+
+  # Mask uuid from snapshot
+  remove <- min(grep(">uuid<", out)) + 1
+  out[remove] <- "<string>(masked_uuid)</string>"
+
   expect_snapshot(cat(out[seq(1, 500)], sep = "\n"))
   unlink(tmout)
 })
@@ -24,6 +31,11 @@ test_that("Simple Theme creation", {
   expect_true(file.exists(thef))
   expect_identical(thef, tmout)
   out <- readLines(tmout)
+
+  # Mask uuid from snapshot
+  remove <- min(grep(">uuid<", out)) + 1
+  out[remove] <- "<string>(masked_uuid)</string>"
+
   expect_snapshot(cat(out[seq(1, 15)], sep = "\n"))
   unlink(tmout)
 
@@ -35,6 +47,12 @@ test_that("Simple Theme creation", {
 
   expect_true(file.exists(tmout2))
   out <- readLines(tmout2)
+
+  # Mask uuid from snapshot
+  remove <- min(grep(">uuid<", out)) + 1
+  out[remove] <- "<string>(masked_uuid)</string>"
+
+
   expect_snapshot(cat(out[seq(1, 15)], sep = "\n"))
   unlink(tmout2)
 })

@@ -47,6 +47,7 @@ readLines(path) |>
 }
 \seealso{
 Other converters: 
+\code{\link{read_tmtheme}()},
 \code{\link{read_vstheme}()}
 }
 \concept{converters}
