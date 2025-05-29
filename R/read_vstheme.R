@@ -64,12 +64,31 @@ read_vstheme <- function(vstheme) {
       scopes <- paste0(scopes, collapse = ",")
       scopes <- unlist(strsplit(scopes, ","))
 
+      # Some issues for cobalt2
+      vals <- unlist(this_tok[[1]])
+      if (any(is.null(names(vals)))) {
+        vals <- vals[1]
+        names(vals) <- "foreground"
+      }
+
+      # To df
+      df_vals <- as.data.frame(t(vals))
+
+      # If italic then
+      if ("italic" %in% names(df_vals)) {
+        if (identical(df_vals$italic, "TRUE")) {
+          df_vals$fontStyle <- "italic"
+        }
+        setdiff(names(df_vals), "italic")
+        df_vals <- df_vals[, setdiff(names(df_vals), "italic")]
+      }
+
+
       this_tok_df <- dplyr::tibble(
         name = nm,
-        scope = scopes,
-        foreground = unlist(this_tok[[1]]$foreground),
-        background = unlist(this_tok[[1]]$background)
+        scope = scopes
       )
+      this_tok_df <- dplyr::bind_cols(this_tok_df, df_vals)
 
 
       this_tok_df

@@ -6,7 +6,7 @@
 #'
 #'
 #' @inheritParams read_vstheme
-#' @param out_file Path were the resulting file would be written. By default
+#' @param out_tm Path were the resulting file would be written. By default
 #'   is a temporal file ([tempfile()]).
 #' @param name Optional. The name of the theme. If nor provided the name of
 #'   the `vstheme` would be used.
@@ -35,7 +35,7 @@
 #'   cat(sep = "\n")
 #'
 vstheme2tmtheme <- function(vstheme,
-                            out_file = tempfile(fileext = ".tmTheme"),
+                            out_tm = tempfile(fileext = ".tmTheme"),
                             name = NULL, author = NULL) {
   # 1. Manipulate vstheme file
   vs_df <- read_vstheme(vstheme)
@@ -169,9 +169,9 @@ vstheme2tmtheme <- function(vstheme,
 
 
   the_theme <- xml2::as_xml_document(the_theme)
-  xml2::write_xml(the_theme, out_file)
+  xml2::write_xml(the_theme, out_tm)
 
-  invisible(out_file)
+  invisible(out_tm)
 }
 
 tmtheme_settings_df <- function(vs_df) {

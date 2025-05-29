@@ -6,7 +6,7 @@
 \usage{
 vstheme2tmtheme(
   vstheme,
-  out_file = tempfile(fileext = ".tmTheme"),
+  out_tm = tempfile(fileext = ".tmTheme"),
   name = NULL,
   author = NULL
 )
@@ -14,7 +14,7 @@ vstheme2tmtheme(
 \arguments{
 \item{vstheme}{Path to a Visual Studio Code theme, in \verb{*.json} format.}
 
-\item{out_file}{Path were the resulting file would be written. By default
+\item{out_tm}{Path were the resulting file would be written. By default
 is a temporal file (\code{\link[=tempfile]{tempfile()}}).}
 
 \item{name}{Optional. The name of the theme. If nor provided the name of
