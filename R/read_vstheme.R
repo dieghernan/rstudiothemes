@@ -131,7 +131,7 @@ read_vstheme <- function(vstheme) {
     if (is.null(nm)) nm <- paste0("tokenColors ", i)
 
     # Split in individual pieces (some jsons provides it collapsed)
-    scopes <- unlist(this_tok$scope)
+    scopes <- sort(unlist(this_tok$scope))
     scopes <- paste0(scopes, collapse = ",")
     scopes <- unlist(strsplit(scopes, ","))
 

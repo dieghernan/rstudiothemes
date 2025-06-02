@@ -209,11 +209,9 @@
               <key>name</key>
               <string>Italics - Comments, Storage, Keyword Flow, Vue attributes, Decorators</string>
               <key>scope</key>
-              <string>meta.var.expr storage.type, storage.modifier</string>
+              <string>keyword.control.flow, keyword.control.return</string>
               <key>settings</key>
               <dict>
-                <key>foreground</key>
-                <string>#9D7CD8</string>
                 <key>fontStyle</key>
                 <string>italic</string>
               </dict>
@@ -222,9 +220,11 @@
               <key>name</key>
               <string>Italics - Comments, Storage, Keyword Flow, Vue attributes, Decorators</string>
               <key>scope</key>
-              <string>keyword.control.flow, keyword.control.return</string>
+              <string>meta.directive.vue entity.other.attribute-name.html</string>
               <key>settings</key>
               <dict>
+                <key>foreground</key>
+                <string>#BB9AF7</string>
                 <key>fontStyle</key>
                 <string>italic</string>
               </dict>
@@ -246,11 +246,11 @@
               <key>name</key>
               <string>Italics - Comments, Storage, Keyword Flow, Vue attributes, Decorators</string>
               <key>scope</key>
-              <string>meta.directive.vue entity.other.attribute-name.html</string>
+              <string>meta.var.expr storage.type, storage.modifier</string>
               <key>settings</key>
               <dict>
                 <key>foreground</key>
-                <string>#BB9AF7</string>
+                <string>#9D7CD8</string>
                 <key>fontStyle</key>
                 <string>italic</string>
               </dict>

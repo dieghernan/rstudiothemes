@@ -192,7 +192,10 @@ tmtheme_settings_df <- function(vs_df) {
   end <- dplyr::grouped_df(end, "tm")
   end <- dplyr::slice_head(end, n = 1)
   end <- dplyr::ungroup(end)
-  end <- dplyr::arrange(end, end$rank)[c("tm", "color")]
+  end <- dplyr::arrange(
+    end,
+    dplyr::pick(dplyr::all_of("rank"))
+  )[c("tm", "color")]
 
   # As a bare minimum we should have:
   # background, foreground, selection, invisibles,lineHighlight, caret.
@@ -251,7 +254,10 @@ tmtheme_scopes_df <- function(vs_df) {
   unique_g <- dplyr::slice_head(filled, n = 1)
 
   # Sort scopes
-  unique_g <- dplyr::arrange(unique_g, unique_g$name, unique_g$scope)
+  unique_g <- dplyr::arrange(
+    unique_g,
+    dplyr::pick(dplyr::all_of(c("name", "scope")))
+  )
 
 
   # One line for scope
@@ -272,9 +278,10 @@ tmtheme_scopes_df <- function(vs_df) {
 
 
 
-  eend <- dplyr::arrange(eend, eend$rank)[
-    c("name", "scope", "foreground", "background", "fontStyle")
-  ]
+  eend <- dplyr::arrange(
+    eend,
+    dplyr::pick(dplyr::all_of("rank"))
+  )[c("name", "scope", "foreground", "background", "fontStyle")]
 
 
 
