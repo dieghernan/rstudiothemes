@@ -2376,7 +2376,7 @@
   background: linear-gradient(to left, #dc91dbbb 1px, #dc91db77 1px, #dc91db77);
 }
 
-/* Generated and tested in RStudio 2025.05.0+496 ("Mariposa Orchid") */
+/* Generated with rstudiothemes package (0.0.0.9000) */
 /* Rules from tmTheme */
 .ace_cursor {
   color: #BD93F9;
@@ -2391,7 +2391,7 @@
 }
 
 .ace_constant {
-  color: #93B4FF;
+  color: #DCE7FD;
 }
 
 .ace_constant.ace_language {
@@ -2432,7 +2432,7 @@
 }
 
 .ace_entity {
-  color: #BD93F9;
+  color: #FF8ADB;
 }
 
 .ace_entity.ace_name {
@@ -2453,8 +2453,7 @@
 }
 
 .ace_heading {
-  color: #FF8ADB;
-  font-weight: bold;
+  color: #BD93F9;
 }
 
 .ace_invalid {
@@ -2520,7 +2519,7 @@
 }
 
 .ace_markup {
-  color: #93B4FF;
+  color: #BD93F9;
 }
 
 .ace_markup.ace_bold {
@@ -2554,14 +2553,6 @@
 
 .ace_markup.ace_raw {
   color: #BD93F9;
-}
-
-.ace_markup.ace_underline {
-  color: #93B4FF;
-}
-
-.ace_markup.ace_underline.ace_link {
-  color: #93B4FF;
 }
 
 .ace_meta {
@@ -2706,14 +2697,6 @@
   color: #655E7F;
 }
 
-/* Source: https://github.com/dieghernan/pretty-themes */
-/*
-$bg: white !default;
-$fg: black !default;
-$accent: blue !default;
-$selection: grey !default;
-$comment: grey90 !default;
-*/
 /* ---- RStudio Theme ---- */
 /* Main window borders and ribbons (Environment > Function, etc.) */
 .rstudio-themes-flat .rstudio-themes-default,
@@ -2968,12 +2951,4 @@ $comment: grey90 !default;
 .rstudio-themes-flat .gwt-TabLayoutPanelContentContainer, .rstudio-themes-dark-grey .gwt-TabLayoutPanelContentContainer, .rstudio-themes-default .gwt-TabLayoutPanelContentContainer {
   scrollbar-width: auto;
   scrollbar-color: #483d5d #2e2a3a;
-}
-
-.ace_markup.ace_heading {
-  color: #DCE7FD;
-}
-
-.ace_heading {
-  color: #BD93F9;
 }

@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plist>
+<plist version="1.0">
   <dict>
     <key>name</key>
     <string>JellyFish Theme</string>
+    <key>author</key>
+    <string>Pawel Borkar, rstudiothemes R package</string>
+    <key>colorSpaceName</key>
+    <string>sRGB</string>
+    <key>semanticClass</key>
+    <string>theme.dark.jellyfish_theme</string>
+    <key>comment</key>
+    <string>Generated with rstudiothemes R package</string>
+    <key>uuid</key>
+    <string>33336530-3839-4662-b331-383439626562</string>
     <key>settings</key>
     <array>
       <dict>
@@ -62,17 +72,6 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>String constant</string>
-        <key>scope</key>
-        <string>string constant.other.placeholder</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#FA71FF</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
         <string>Colors</string>
         <key>scope</key>
         <string>constant.other.color</string>
@@ -108,22 +107,11 @@
         <key>name</key>
         <string>Operator, Misc</string>
         <key>scope</key>
-        <string>constant.other.color, keyword.control, keyword.other.substitution, keyword.other.template, meta.tag, punctuation, punctuation.definition.tag, punctuation.definition.tag.begin.html, punctuation.definition.tag.end.html, punctuation.definition.tag.html, punctuation.section.embedded, punctuation.separator.inheritance.php</string>
+        <string>keyword.control, keyword.other.substitution, keyword.other.template, meta.tag, punctuation, punctuation.definition.tag, punctuation.definition.tag.begin.html, punctuation.definition.tag.end.html, punctuation.definition.tag.html, punctuation.section.embedded, punctuation.separator.inheritance.php</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
           <string>#FFFFFF</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>Operator, Misc</string>
-        <key>scope</key>
-        <string>keyword.control</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#FF006A</string>
         </dict>
       </dict>
       <dict>
@@ -194,17 +182,6 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>Tag Attribute, Embedded</string>
-        <key>scope</key>
-        <string>keyword.other, keyword.other.unit</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#82FBFF</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
         <string>Symbols, Inherited Class, Markup Heading</string>
         <key>scope</key>
         <string>constant.other.key, constant.other.symbol, entity.other.inherited-class, markup.heading, markup.inserted.git_gutter, meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js</string>
@@ -234,17 +211,6 @@
         <dict>
           <key>foreground</key>
           <string>#FFCB6B</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>Entity Types</string>
-        <key>scope</key>
-        <string>support.type</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#F0B565</string>
         </dict>
       </dict>
       <dict>
@@ -405,17 +371,6 @@
         <dict>
           <key>foreground</key>
           <string>#89DDFF</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>URL</string>
-        <key>scope</key>
-        <string>*link*, *uri*, *url*</string>
-        <key>settings</key>
-        <dict>
-          <key>fontStyle</key>
-          <string>underline</string>
         </dict>
       </dict>
       <dict>
@@ -731,22 +686,11 @@
         <key>name</key>
         <string>Markdown - Fenced Bode Block Variable</string>
         <key>scope</key>
-        <string>markup.raw.block.fenced.markdown, punctuation.section.class.end, variable.language.fenced.markdown</string>
+        <string>punctuation.section.class.end, variable.language.fenced.markdown</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
           <string>#EEFFFF</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>Markdown - Fenced Language</string>
-        <key>scope</key>
-        <string>variable.language.fenced.markdown</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#65737E</string>
         </dict>
       </dict>
       <dict>
@@ -774,13 +718,5 @@
         </dict>
       </dict>
     </array>
-    <key>colorSpaceName</key>
-    <string>sRGB</string>
-    <key>semanticClass</key>
-    <string>theme.dark.jellyfish_theme</string>
-    <key>author</key>
-    <string>dieghernan</string>
-    <key>comment</key>
-    <string>Based on VS Code Jellyfish Theme</string>
   </dict>
 </plist>

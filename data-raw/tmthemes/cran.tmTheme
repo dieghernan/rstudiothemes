@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plist>
+<plist version="1.0">
   <dict>
     <key>name</key>
     <string>CRAN</string>
+    <key>author</key>
+    <string>dieghernan, rstudiothemes R package</string>
+    <key>colorSpaceName</key>
+    <string>sRGB</string>
+    <key>semanticClass</key>
+    <string>theme.light.cran</string>
+    <key>comment</key>
+    <string>Generated with rstudiothemes R package</string>
+    <key>uuid</key>
+    <string>35656633-6162-4264-a664-343437313731</string>
     <key>settings</key>
     <array>
       <dict>
@@ -10,16 +20,18 @@
         <dict>
           <key>background</key>
           <string>#F7F7F7</string>
-          <key>caret</key>
-          <string>#06287E</string>
           <key>foreground</key>
           <string>#333333</string>
-          <key>invisibles</key>
+          <key>selection</key>
           <string>#DBDBDB</string>
           <key>lineHighlight</key>
           <string>#DBDBDB</string>
-          <key>selection</key>
+          <key>caret</key>
+          <string>#06287E</string>
+          <key>invisibles</key>
           <string>#DBDBDB</string>
+          <key>gutterForeground</key>
+          <string>#60A0B0</string>
         </dict>
       </dict>
       <dict>
@@ -231,15 +243,5 @@
         </dict>
       </dict>
     </array>
-    <key>uuid</key>
-    <string>83091B89-765E-4F0D-9275-0EC6CB084126</string>
-    <key>colorSpaceName</key>
-    <string>sRGB</string>
-    <key>author</key>
-    <string>dieghernan</string>
-    <key>comment</key>
-    <string>Based on CRAN (R-Project) web theme, produced with Pandoc</string>
-    <key>semanticClass</key>
-    <string>theme.light.cran</string>
   </dict>
 </plist>

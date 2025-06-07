@@ -2363,7 +2363,7 @@
   background: linear-gradient(to left, #dc91dbbb 1px, #dc91db77 1px, #dc91db77);
 }
 
-/* Generated and tested in RStudio 2025.05.0+496 ("Mariposa Orchid") */
+/* Generated with rstudiothemes package (0.0.0.9000) */
 /* Rules from tmTheme */
 .ace_cursor {
   color: #B75301;
@@ -2466,7 +2466,7 @@
 }
 
 .ace_markup {
-  color: #567A0D;
+  color: #3B4045;
 }
 
 .ace_markup.ace_bold {
@@ -2493,10 +2493,6 @@
   font-style: italic;
 }
 
-.ace_markup.ace_link {
-  color: #567A0D;
-}
-
 .ace_markup.ace_quote {
   color: #B75301;
 }
@@ -2505,16 +2501,8 @@
   color: #3B4045;
 }
 
-.ace_markup.ace_underline {
-  color: #567A0D;
-}
-
-.ace_markup.ace_underline.ace_link {
-  color: #567A0D;
-}
-
 .ace_meta {
-  color: #015493;
+  color: #B75301;
 }
 
 .ace_meta.ace_doctype {
@@ -2621,14 +2609,6 @@
   color: #666F78;
 }
 
-/* Source: https://github.com/dieghernan/pretty-themes */
-/*
-$bg: white !default;
-$fg: black !default;
-$accent: blue !default;
-$selection: grey !default;
-$comment: grey90 !default;
-*/
 /* ---- RStudio Theme ---- */
 /* Main window borders and ribbons (Environment > Function, etc.) */
 .rstudio-themes-flat .rstudio-themes-default,

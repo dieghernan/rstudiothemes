@@ -148,7 +148,8 @@ create_rstheme <- function(input_theme,
     additional <- c(
       sass_vars,
       readLines(system.file("scss/_themed_ide.scss",
-                            package = "rstudiothemes"))
+        package = "rstudiothemes"
+      ))
     )
   }
 

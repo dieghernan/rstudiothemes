@@ -219,7 +219,7 @@
 }
 
 .xtermBlur {
-  filter: blur(1px);
+  filter: brightness(75%);
 }
 
 .xtermUnderline {
@@ -2376,7 +2376,7 @@
   background: linear-gradient(to left, #dc91dbbb 1px, #dc91db77 1px, #dc91db77);
 }
 
-/* Generated and tested in RStudio 2024.04.2+764.pro1 ("Chocolate Cosmos") */
+/* Generated with rstudiothemes package (0.0.0.9000) */
 /* Rules from tmTheme */
 .ace_cursor {
   color: #FF4B82;
@@ -2412,7 +2412,7 @@
 }
 
 .ace_entity {
-  color: #19F9D8;
+  color: #B084EB;
 }
 
 .ace_entity.ace_name {
@@ -2566,7 +2566,7 @@
 }
 
 .ace_meta.ace_tag {
-  color: #FFCC95;
+  color: #FF2C6D;
 }
 
 .ace_meta.ace_tag.ace_other {
@@ -2666,7 +2666,7 @@
 }
 
 .ace_variable.ace_interpolation {
-  color: #FF75B5;
+  color: #FF9AC1;
 }
 
 .ace_variable.ace_language {
@@ -2710,14 +2710,6 @@
   font-style: italic;
 }
 
-/* Source: https://github.com/dieghernan/pretty-themes */
-/*
-$bg: white !default;
-$fg: black !default;
-$accent: blue !default;
-$selection: grey !default;
-$comment: grey90 !default;
-*/
 /* ---- RStudio Theme ---- */
 /* Main window borders and ribbons (Environment > Function, etc.) */
 .rstudio-themes-flat .rstudio-themes-default,

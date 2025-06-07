@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plist>
+<plist version="1.0">
   <dict>
     <key>name</key>
     <string>Night Owl</string>
+    <key>author</key>
+    <string>rstudiothemes R package</string>
+    <key>colorSpaceName</key>
+    <string>sRGB</string>
+    <key>semanticClass</key>
+    <string>theme.dark.night_owl</string>
+    <key>comment</key>
+    <string>Generated with rstudiothemes R package</string>
+    <key>uuid</key>
+    <string>38653938-3164-4962-b831-363837663738</string>
     <key>settings</key>
     <array>
       <dict>
@@ -25,7 +35,7 @@
           <key>wordHighlightStrong</key>
           <string>#E2A2F433</string>
           <key>findMatchHighlight</key>
-          <string>#FFFFFFCC</string>
+          <string>#1085BB5D</string>
           <key>currentFindMatchHighlight</key>
           <string>#5F7E9779</string>
           <key>referenceHighlight</key>
@@ -75,7 +85,9 @@
           <key>gutterForeground</key>
           <string>#4B6479</string>
           <key>invisibles</key>
-          <string>#0C2031</string>
+          <string>#5E81CE52</string>
+          <key>invalid</key>
+          <string>#EF5350</string>
         </dict>
       </dict>
       <dict>
@@ -87,8 +99,6 @@
         <dict>
           <key>foreground</key>
           <string>#A2BFFC</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -100,8 +110,6 @@
         <dict>
           <key>foreground</key>
           <string>#EF535090</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -113,8 +121,6 @@
         <dict>
           <key>foreground</key>
           <string>#C5E478</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -126,8 +132,6 @@
         <dict>
           <key>foreground</key>
           <string>#637777</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -304,8 +308,6 @@
         <dict>
           <key>foreground</key>
           <string>#C792EA</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -339,8 +341,6 @@
         <dict>
           <key>foreground</key>
           <string>#C5E478</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -351,7 +351,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#F78C6C</string>
+          <string>#C5E478</string>
         </dict>
       </dict>
       <dict>
@@ -444,8 +444,6 @@
         <dict>
           <key>foreground</key>
           <string>#C792EA</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -534,8 +532,6 @@
         <dict>
           <key>foreground</key>
           <string>#FF5874</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -558,8 +554,6 @@
         <dict>
           <key>foreground</key>
           <string>#C792EA</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -593,8 +587,6 @@
         <dict>
           <key>foreground</key>
           <string>#FF5874</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -716,8 +708,6 @@
         <dict>
           <key>foreground</key>
           <string>#C792EA</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -755,43 +745,6 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>Variable Instances</string>
-        <key>scope</key>
-        <string>variable.instance, variable.other.instance, variable.other.property, variable.other.readwrite.instance, variable.readwrite.instance</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#BAEBE2</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>Variable Property Other object property</string>
-        <key>scope</key>
-        <string>variable.other.object.property</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#FAF39F</string>
-          <key>fontStyle</key>
-          <string>italic</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>Entity Name Function</string>
-        <key>scope</key>
-        <string>entity.name.function</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#82AAFF</string>
-          <key>fontStyle</key>
-          <string>italic</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
         <string>This Keyword JS</string>
         <key>scope</key>
         <string>variable.language.this.js</string>
@@ -805,22 +758,31 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>Keyword Operator Comparison, imports, returns and Keyword Operator Ruby</string>
+        <string>Variable Instances</string>
         <key>scope</key>
-        <string>keyword.control.class.ruby, keyword.control.def.ruby, keyword.control.flow.js, keyword.control.flow.ts, keyword.control.flow.tsx, keyword.control.from.js, keyword.control.from.ts, keyword.control.from.tsx, keyword.control.import.js, keyword.control.import.ts, keyword.control.import.tsx, keyword.control.loop.js, keyword.control.loop.ts, keyword.control.module.ruby, keyword.control.ruby, keyword.operator.comparison, keyword.operator.expression.instanceof.ts, keyword.operator.expression.instanceof.tsx, keyword.operator.instanceof.js</string>
+        <string>variable.instance, variable.other.instance, variable.other.property, variable.other.readwrite.instance, variable.readwrite.instance</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#C792EA</string>
-          <key>fontStyle</key>
-          <string>italic</string>
+          <string>#7FDBCA</string>
         </dict>
       </dict>
       <dict>
         <key>name</key>
-        <string>Keyword Control Conditional</string>
+        <string>Variable Property Other object property</string>
         <key>scope</key>
-        <string>keyword.control.conditional.js, keyword.control.conditional.ts, keyword.control.switch.js, keyword.control.switch.ts</string>
+        <string>variable.other.object.property</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#FAF39F</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Keyword Operator Comparison, returns, imports, and Keyword Operator Ruby</string>
+        <key>scope</key>
+        <string>keyword.control.conditional.js, keyword.control.conditional.ts, keyword.control.def.ruby, keyword.control.flow.js, keyword.control.flow.ts, keyword.control.flow.tsx, keyword.control.from.js, keyword.control.from.ts, keyword.control.from.tsx, keyword.control.import.js, keyword.control.import.ts, keyword.control.import.tsx, keyword.control.loop.js, keyword.control.loop.ts, keyword.control.ruby, keyword.control.switch.js, keyword.control.switch.ts, keyword.operator.comparison, keyword.operator.expression.instanceof.ts, keyword.operator.expression.instanceof.tsx, keyword.operator.instanceof.js</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -831,22 +793,11 @@
         <key>name</key>
         <string>Support Constant, `new` keyword, Special Method Keyword, `debugger`, other keywords</string>
         <key>scope</key>
-        <string>keyword.control, keyword.other.debugger, keyword.other.new, keyword.other.special-method, support.constant</string>
+        <string>keyword.control, keyword.other.debugger, keyword.other.new, keyword.other.special-method</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
           <string>#7FDBCA</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>Support Function</string>
-        <key>scope</key>
-        <string>support.function</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#C5E478</string>
         </dict>
       </dict>
       <dict>
@@ -1033,8 +984,6 @@
         <dict>
           <key>foreground</key>
           <string>#697098</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1068,17 +1017,6 @@
         <dict>
           <key>foreground</key>
           <string>#D6DEEB</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>CoffeeScript Assignments</string>
-        <key>scope</key>
-        <string>variable.assignment.coffee</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#7FDBCA</string>
         </dict>
       </dict>
       <dict>
@@ -1219,7 +1157,7 @@
         <key>name</key>
         <string>Attribute Name for CSS</string>
         <key>scope</key>
-        <string>meta.attribute-selector.css entity.other.attribute-name.attribute, variable.other.readwrite.js</string>
+        <string>meta.attribute-selector.css entity.other.attribute-name.attribute</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -1290,8 +1228,6 @@
         <dict>
           <key>foreground</key>
           <string>#C792EA</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1325,8 +1261,6 @@
         <dict>
           <key>foreground</key>
           <string>#C792EA</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1448,8 +1382,6 @@
         <dict>
           <key>foreground</key>
           <string>#C792EA</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1641,19 +1573,6 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>JavaScript Other Variable</string>
-        <key>scope</key>
-        <string>variable.other.object.js</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#7FDBCA</string>
-          <key>fontStyle</key>
-          <string>italic</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
         <string>Ruby Variables</string>
         <key>scope</key>
         <string>variable.other.ruby</string>
@@ -1683,39 +1602,6 @@
         <dict>
           <key>foreground</key>
           <string>#7FDBCA</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>Ruby Symbols</string>
-        <key>scope</key>
-        <string>constant.language.symbol.ruby</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#7FDBCA</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>LESS Tag names</string>
-        <key>scope</key>
-        <string>entity.name.tag.less</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#7FDBCA</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>LESS Keyword Other Unit</string>
-        <key>scope</key>
-        <string>keyword.other.unit.css</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#FFEB95</string>
         </dict>
       </dict>
       <dict>
@@ -1775,8 +1661,6 @@
         <dict>
           <key>foreground</key>
           <string>#697098</string>
-          <key>fontStyle</key>
-          <string>italic</string>
         </dict>
       </dict>
       <dict>
@@ -1816,7 +1700,7 @@
         <key>name</key>
         <string>Markdown Punctuation</string>
         <key>scope</key>
-        <string>meta.link.inline.markdown punctuation.definition.string, punctuation.definition.string.begin.markdown, punctuation.definition.string.end.markdown, punctuation.definition.string.markdown</string>
+        <string>meta.link.inline.markdown punctuation.definition.string, punctuation.definition.string.end.markdown, punctuation.definition.string.markdown</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -1860,7 +1744,7 @@
         <key>name</key>
         <string>PHP Variables</string>
         <key>scope</key>
-        <string>variable.other.php, variable.other.property.php</string>
+        <string>variable.other.php</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -1979,19 +1863,6 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>Python import control keyword</string>
-        <key>scope</key>
-        <string>keyword.control</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#C792EA</string>
-          <key>fontStyle</key>
-          <string>italic</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
         <string>SCSS Variable</string>
         <key>scope</key>
         <string>variable.parameter.url.sass, variable.parameter.url.scss, variable.sass, variable.scss</string>
@@ -2010,17 +1881,6 @@
         <dict>
           <key>foreground</key>
           <string>#82AAFF</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>Variables in SASS At-Rules</string>
-        <key>scope</key>
-        <string>source.css.sass meta.at-rule variable, source.css.scss meta.at-rule variable</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#BEC5D4</string>
         </dict>
       </dict>
       <dict>
@@ -2135,17 +1995,6 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>JavaScript Variable Other ReadWrite</string>
-        <key>scope</key>
-        <string>variable.other.readwrite.js, variable.parameter</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#D7DBE0</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
         <string>Support Class Component</string>
         <key>scope</key>
         <string>support.class.component.js, support.class.component.tsx</string>
@@ -2181,7 +2030,7 @@
         <key>name</key>
         <string>TypeScript Entity Name Type</string>
         <key>scope</key>
-        <string>entity.name.type.module.tsx, entity.name.type.tsx</string>
+        <string>entity.name.type.module.tsx</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -2210,47 +2059,6 @@
           <string>#82AAFF</string>
         </dict>
       </dict>
-      <dict>
-        <key>name</key>
-        <string>TextmateDeleted</string>
-        <key>scope</key>
-        <string>markup.deleted</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#FF0000</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>Textmate Inserted</string>
-        <key>scope</key>
-        <string>markup.inserted</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#036A07</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>TextmateUnderline</string>
-        <key>scope</key>
-        <string>markup.underline</string>
-        <key>settings</key>
-        <dict>
-          <key>fontStyle</key>
-          <string>underline</string>
-        </dict>
-      </dict>
     </array>
-    <key>colorSpaceName</key>
-    <string>sRGB</string>
-    <key>semanticClass</key>
-    <string>theme.dark.night_owl</string>
-    <key>author</key>
-    <string>Sarah Drasner, ported by dieghernan</string>
-    <key>comment</key>
-    <string>NIGHT OWL: A VS Code dark theme for contrast for nighttime coding,</string>
   </dict>
 </plist>

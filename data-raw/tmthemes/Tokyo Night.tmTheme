@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plist>
+<plist version="1.0">
   <dict>
     <key>name</key>
     <string>Tokyo Night</string>
+    <key>author</key>
+    <string>Enkia, rstudiothemes R package</string>
+    <key>colorSpaceName</key>
+    <string>sRGB</string>
+    <key>semanticClass</key>
+    <string>theme.dark.tokyo_night</string>
+    <key>comment</key>
+    <string>Generated with rstudiothemes R package</string>
+    <key>uuid</key>
+    <string>38653462-3932-4033-b032-623665303738</string>
     <key>settings</key>
     <array>
       <dict>
@@ -37,7 +47,7 @@
           <key>caret</key>
           <string>#C0CAF5</string>
           <key>invisibles</key>
-          <string>#101014</string>
+          <string>#363B54</string>
           <key>ansiBlack</key>
           <string>#363B54</string>
           <key>ansiRed</key>
@@ -73,14 +83,167 @@
           <key>gutterForeground</key>
           <string>#363B54</string>
           <key>invalid</key>
-          <string>#DB4B4B</string>
+          <string>#515670</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Semantic: parameter.declaration</string>
+        <key>scope</key>
+        <string>parameter.declaration</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#E0AF68</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Semantic: parameter</string>
+        <key>scope</key>
+        <string>parameter</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#D9D4CD</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Semantic: property.declaration</string>
+        <key>scope</key>
+        <string>property.declaration</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#73DACA</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Semantic: property.defaultLibrary</string>
+        <key>scope</key>
+        <string>property.defaultLibrary</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#2AC3DE</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Semantic: variable.defaultLibrary</string>
+        <key>scope</key>
+        <string>variable.defaultLibrary</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#2AC3DE</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Semantic: variable.declaration</string>
+        <key>scope</key>
+        <string>variable.declaration</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#BB9AF7</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Semantic: variable</string>
+        <key>scope</key>
+        <string>variable</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#C0CAF5</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Italics - Comments, Storage, Keyword Flow, Vue attributes, Decorators</string>
+        <key>scope</key>
+        <string>comment, string.quoted.docstring.multi, string.quoted.docstring.multi.python constant.character.escape, string.quoted.docstring.multi.python punctuation.definition.string.begin, string.quoted.docstring.multi.python punctuation.definition.string.end</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#51597D</string>
+          <key>fontStyle</key>
+          <string>italic</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Italics - Comments, Storage, Keyword Flow, Vue attributes, Decorators</string>
+        <key>scope</key>
+        <string>keyword.control.flow, keyword.control.return</string>
+        <key>settings</key>
+        <dict>
+          <key>fontStyle</key>
+          <string>italic</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Italics - Comments, Storage, Keyword Flow, Vue attributes, Decorators</string>
+        <key>scope</key>
+        <string>meta.directive.vue entity.other.attribute-name.html</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#BB9AF7</string>
+          <key>fontStyle</key>
+          <string>italic</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Italics - Comments, Storage, Keyword Flow, Vue attributes, Decorators</string>
+        <key>scope</key>
+        <string>meta.directive.vue punctuation.separator.key-value.html</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#89DDFF</string>
+          <key>fontStyle</key>
+          <string>italic</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Italics - Comments, Storage, Keyword Flow, Vue attributes, Decorators</string>
+        <key>scope</key>
+        <string>meta.var.expr storage.type, storage.modifier</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#9D7CD8</string>
+          <key>fontStyle</key>
+          <string>italic</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Italics - Comments, Storage, Keyword Flow, Vue attributes, Decorators</string>
+        <key>scope</key>
+        <string>tag.decorator.js entity.name.tag.js, tag.decorator.js punctuation.definition.tag.js</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#7AA2F7</string>
+          <key>fontStyle</key>
+          <string>italic</string>
         </dict>
       </dict>
       <dict>
         <key>name</key>
         <string>Comment</string>
         <key>scope</key>
-        <string>comment, comment.block.documentation, comment.block.documentation punctuation, punctuation.definition.comment, string.quoted.docstring.multi, string.quoted.docstring.multi.python constant.character.escape, string.quoted.docstring.multi.python punctuation.definition.string.begin, string.quoted.docstring.multi.python punctuation.definition.string.end</string>
+        <string>comment.block.documentation, comment.block.documentation punctuation, punctuation.definition.comment</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -102,7 +265,7 @@
         <key>name</key>
         <string>Comment Doc Emphasized</string>
         <key>scope</key>
-        <string>comment.block.documentation entity.name.type.instance, comment.block.documentation punctuation.definition.block.tag, comment.block.documentation storage.type, meta.other.type.phpdoc.php support.class</string>
+        <string>comment.block.documentation entity.name.type.instance, comment.block.documentation punctuation.definition.block.tag, comment.block.documentation storage.type</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -177,17 +340,6 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>Storage - modifier, var, const, let</string>
-        <key>scope</key>
-        <string>meta.var.expr storage.type, storage.modifier</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#9D7CD8</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
         <string>Interpolation, PHP tags, Smarty tags</string>
         <key>scope</key>
         <string>meta.embedded.line.tag.smarty, punctuation.definition.template-expression, punctuation.section.embedded, punctuation.section.tag.twig, support.constant.handlebars</string>
@@ -225,7 +377,7 @@
         <key>name</key>
         <string>Operator, Misc</string>
         <key>scope</key>
-        <string>entity.name.operator, expression.embbeded.vue punctuation.definition.tag, keyword.control.as, keyword.operator, keyword.operator.bitwise.shift, keyword.other, keyword.other.substitution, keyword.other.template, meta.at-rule.function variable.parameter.url, meta.at-rule.mixin punctuation.separator.key-value, meta.attribute.directive, meta.directive.vue punctuation.separator.key-value.html, meta.embedded.inline.phpx punctuation.definition.tag.begin.html, meta.embedded.inline.phpx punctuation.definition.tag.end.html, meta.property-list punctuation.separator.key-value, meta.tag.template.value.twig meta.function.arguments.twig, punctuation, punctuation.definition.constant.markdown, punctuation.definition.entity, punctuation.definition.keyword, punctuation.definition.string, punctuation.separator.inheritance.php, punctuation.support.type.property-name, punctuation.terminator.rule, text.html.twig meta.tag.inline.any.html, text.html.vue-html meta.tag</string>
+        <string>entity.name.operator, expression.embbeded.vue punctuation.definition.tag, keyword.control.as, keyword.operator, keyword.operator.bitwise.shift, keyword.other, keyword.other.substitution, keyword.other.template, meta.at-rule.function variable.parameter.url, meta.at-rule.mixin punctuation.separator.key-value, meta.attribute.directive, meta.embedded.inline.phpx punctuation.definition.tag.begin.html, meta.embedded.inline.phpx punctuation.definition.tag.end.html, meta.property-list punctuation.separator.key-value, meta.tag.template.value.twig meta.function.arguments.twig, punctuation, punctuation.definition.constant.markdown, punctuation.definition.entity, punctuation.definition.keyword, punctuation.definition.string, punctuation.separator.inheritance.php, punctuation.support.type.property-name, punctuation.terminator.rule, text.html.twig meta.tag.inline.any.html, text.html.vue-html meta.tag</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -324,7 +476,7 @@
         <key>name</key>
         <string>Variables</string>
         <key>scope</key>
-        <string>meta.embedded.inline.phpx constant.other.php, meta.fstring, meta.function-call meta.function-call.arguments, string constant.other.placeholder, support.variable, variable, variable.other.object, variable.parameter.handlebars</string>
+        <string>meta.embedded.inline.phpx constant.other.php, meta.fstring, meta.function-call meta.function-call.arguments, string constant.other.placeholder, support.variable, variable.other.object, variable.parameter.handlebars</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -632,7 +784,7 @@
         <key>name</key>
         <string>SCSS Mixins, Extends, Include Keyword</string>
         <key>scope</key>
-        <string>entity.other.attribute-name.placeholder.css punctuation.definition.entity.css, keyword.control punctuation.definition.keyword, keyword.control.at-rule.extend punctuation.definition.keyword, keyword.control.at-rule.include punctuation.definition.keyword, keyword.control.at-rule.mixin punctuation.definition.keyword, meta.at-rule.extend keyword.control.at-rule.extend, meta.at-rule.function keyword.control.at-rule.function, meta.at-rule.include keyword.control.at-rule.include, meta.at-rule.media keyword.control.at-rule.media, meta.at-rule.mixin keyword.control.at-rule.mixin</string>
+        <string>entity.other.attribute-name.placeholder.css punctuation.definition.entity.css, keyword.control punctuation.definition.keyword, keyword.control.at-rule.extend punctuation.definition.keyword, keyword.control.at-rule.include punctuation.definition.keyword, keyword.control.at-rule.mixin punctuation.definition.keyword, meta.at-rule.extend keyword.control.at-rule.extend, meta.at-rule.function keyword.control.at-rule.function, meta.at-rule.media keyword.control.at-rule.media</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -731,7 +883,7 @@
         <key>name</key>
         <string>Vue (Vetur / deprecated) Template attributes</string>
         <key>scope</key>
-        <string>entity.other.attribute-name.id.html, meta.directive.vue entity.other.attribute-name.html</string>
+        <string>entity.other.attribute-name.id.html</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -868,28 +1020,6 @@
         <dict>
           <key>foreground</key>
           <string>#89DDFF</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>Decorators</string>
-        <key>scope</key>
-        <string>tag.decorator.js entity.name.tag.js, tag.decorator.js punctuation.definition.tag.js</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#7AA2F7</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>CSS Units</string>
-        <key>scope</key>
-        <string>keyword.other.unit</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#F7768E</string>
         </dict>
       </dict>
       <dict>
@@ -1061,7 +1191,7 @@
         <key>name</key>
         <string>Markdown - Heading 1</string>
         <key>scope</key>
-        <string>heading.1.markdown entity.name, heading.1.markdown punctuation.definition.heading.markdown, markup.heading</string>
+        <string>heading.1.markdown entity.name, heading.1.markdown punctuation.definition.heading.markdown</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -1330,25 +1460,6 @@
           <string>#7AA2F7</string>
         </dict>
       </dict>
-      <dict>
-        <key>name</key>
-        <string>Italics - Comments, Storage, Keyword Flow, Vue attributes, Decorators</string>
-        <key>scope</key>
-        <string>comment, keyword.other.important, storage.type</string>
-        <key>settings</key>
-        <dict>
-          <key>fontStyle</key>
-          <string>italic</string>
-        </dict>
-      </dict>
     </array>
-    <key>colorSpaceName</key>
-    <string>sRGB</string>
-    <key>semanticClass</key>
-    <string>theme.dark.tokyo_night</string>
-    <key>author</key>
-    <string>enkia, ported by dieghernan</string>
-    <key>comment</key>
-    <string>A clean Visual Studio Code theme that celebrates the lights of Downtown Tokyo at night</string>
   </dict>
 </plist>

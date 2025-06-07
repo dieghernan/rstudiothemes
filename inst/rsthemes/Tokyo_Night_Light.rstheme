@@ -258,7 +258,7 @@
 }
 
 .xtermBlur {
-  filter: blur(1px);
+  filter: brightness(75%);
 }
 
 .xtermUnderline {
@@ -2403,7 +2403,7 @@
   background: linear-gradient(to left, #dc91dbbb 1px, #dc91db77 1px, #dc91db77);
 }
 
-/* Generated and tested in RStudio 2024.04.2+764.pro1 ("Chocolate Cosmos") */
+/* Generated with rstudiothemes package (0.0.0.9000) */
 /* Rules from tmTheme */
 .ace_cursor {
   color: #363C4D;
@@ -2426,7 +2426,7 @@
 }
 
 .ace_comment {
-  font-style: italic;
+  color: #888B94;
 }
 
 .ace_comment.ace_block {
@@ -2438,7 +2438,7 @@
 }
 
 .ace_constant {
-  color: #65359D;
+  color: #965027;
 }
 
 .ace_constant.ace_character {
@@ -2490,7 +2490,7 @@
 }
 
 .ace_entity {
-  color: #343B58;
+  color: #8C4351;
 }
 
 .ace_entity.ace_name {
@@ -2656,7 +2656,7 @@
 }
 
 .ace_keyword.ace_other.ace_unit {
-  color: #65359D;
+  color: #8C4351;
 }
 
 .ace_log {
@@ -2665,10 +2665,6 @@
 
 .ace_log.ace_date {
   color: #6C6E75;
-}
-
-.ace_markup {
-  color: #343B58;
 }
 
 .ace_markup.ace_bold {
@@ -2703,10 +2699,6 @@
 
 .ace_markup.ace_table {
   color: #C0CEFC;
-}
-
-.ace_markup.ace_underline.ace_link {
-  color: #33635C;
 }
 
 .ace_meta {
@@ -2903,7 +2895,7 @@
 }
 
 .ace_storage.ace_modifier {
-  font-style: italic;
+  color: #7B43BA;
 }
 
 .ace_storage.ace_type {
@@ -3031,7 +3023,7 @@
 }
 
 .ace_token {
-  color: #0DB9D7;
+  color: #FFDB69;
 }
 
 .ace_token.ace_debug-token {
@@ -3103,17 +3095,9 @@
 }
 
 .ace_xml-pe {
-  font-style: italic;
+  color: #888B94;
 }
 
-/* Source: https://github.com/dieghernan/pretty-themes */
-/*
-$bg: white !default;
-$fg: black !default;
-$accent: blue !default;
-$selection: grey !default;
-$comment: grey90 !default;
-*/
 /* ---- RStudio Theme ---- */
 /* Main window borders and ribbons (Environment > Function, etc.) */
 .rstudio-themes-flat .rstudio-themes-default,

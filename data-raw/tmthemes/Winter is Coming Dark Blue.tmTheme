@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plist>
+<plist version="1.0">
   <dict>
     <key>name</key>
     <string>Winter is Coming Dark Blue</string>
+    <key>author</key>
+    <string>rstudiothemes R package</string>
+    <key>colorSpaceName</key>
+    <string>sRGB</string>
+    <key>semanticClass</key>
+    <string>theme.dark.winter_is_coming_dark_blue</string>
+    <key>comment</key>
+    <string>Generated with rstudiothemes R package</string>
+    <key>uuid</key>
+    <string>66363362-3735-4135-b938-313439656531</string>
     <key>settings</key>
     <array>
       <dict>
@@ -26,8 +36,6 @@
           <string>#103362</string>
           <key>findMatchHighlight</key>
           <string>#103362</string>
-          <key>findMatchHighlight</key>
-          <string>#7E57C25A</string>
           <key>referenceHighlight</key>
           <string>#7E57C25A</string>
           <key>lineHighlight</key>
@@ -52,7 +60,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 2</string>
         <key>scope</key>
         <string>meta.paragraph.markdown, string.other.link.description.title.markdown</string>
         <key>settings</key>
@@ -63,7 +71,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 3</string>
         <key>scope</key>
         <string>entity.name.section.markdown, punctuation.definition.heading.markdown</string>
         <key>settings</key>
@@ -74,7 +82,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 4</string>
         <key>scope</key>
         <string>markup.quote.markdown, punctuation.definition.string.begin.markdown, punctuation.definition.string.end.markdown</string>
         <key>settings</key>
@@ -85,7 +93,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 6</string>
         <key>scope</key>
         <string>markup.bold.markdown, punctuation.definition.bold.markdown</string>
         <key>settings</key>
@@ -98,7 +106,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 7</string>
         <key>scope</key>
         <string>markup.italic.markdown, punctuation.definition.italic.markdown</string>
         <key>settings</key>
@@ -109,7 +117,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 8</string>
         <key>scope</key>
         <string>markup.fenced_code.block.markdown, markup.inline.raw.string.markdown</string>
         <key>settings</key>
@@ -120,7 +128,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 9</string>
         <key>scope</key>
         <string>punctuation.definition.metadata.markdown</string>
         <key>settings</key>
@@ -131,7 +139,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 10</string>
         <key>scope</key>
         <string>markup.underline.link.image.markdown, markup.underline.link.markdown</string>
         <key>settings</key>
@@ -331,7 +339,7 @@
         <key>name</key>
         <string>JavaScript Variable Other ReadWrite</string>
         <key>scope</key>
-        <string>variable.other.readwrite.js, variable.parameter</string>
+        <string>variable.parameter</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -397,7 +405,7 @@
         <key>name</key>
         <string>Storage</string>
         <key>scope</key>
-        <string>meta.class meta.method.declaration meta.var.expr storage.type.js, meta.var.expr, storage, storage.type.property.js, storage.type.property.ts</string>
+        <string>meta.class meta.method.declaration meta.var.expr storage.type.js, meta.var.expr, storage.type.property.js, storage.type.property.ts</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -468,17 +476,6 @@
         <dict>
           <key>foreground</key>
           <string>#87AFF4</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>Function argument</string>
-        <key>scope</key>
-        <string>variable.parameter</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#D7DBE0</string>
         </dict>
       </dict>
       <dict>
@@ -718,17 +715,6 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>[Markdown] text</string>
-        <key>scope</key>
-        <string>meta.paragraph.markdown</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#FFFFFF</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
         <string>Quotes</string>
         <key>scope</key>
         <string>markup.quote</string>
@@ -761,13 +747,5 @@
         </dict>
       </dict>
     </array>
-    <key>colorSpaceName</key>
-    <string>sRGB</string>
-    <key>semanticClass</key>
-    <string>theme.dark.winteriscoming_dark_blue</string>
-    <key>author</key>
-    <string>dieghernan</string>
-    <key>comment</key>
-    <string>Dark theme with fun and bright foreground colors</string>
   </dict>
 </plist>

@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plist>
+<plist version="1.0">
   <dict>
     <key>name</key>
     <string>SynthWave 84</string>
+    <key>author</key>
+    <string>rstudiothemes R package</string>
+    <key>colorSpaceName</key>
+    <string>sRGB</string>
+    <key>semanticClass</key>
+    <string>theme.dark.synthwave_84</string>
+    <key>comment</key>
+    <string>Generated with rstudiothemes R package</string>
+    <key>uuid</key>
+    <string>32643136-6238-4634-a263-353234653333</string>
     <key>settings</key>
     <array>
       <dict>
@@ -66,10 +76,6 @@
           <string>#A148AB80</string>
           <key>invalid</key>
           <string>#FE4450</string>
-          <key>invalid</key>
-          <string>#FE4450E6</string>
-          <key>invalid</key>
-          <string>#FE445000</string>
           <key>lineHighlight</key>
           <string>#FFFFFF20</string>
         </dict>
@@ -480,7 +486,7 @@
         <key>name</key>
         <string>JS object path</string>
         <key>scope</key>
-        <string>variable.other.constant.property.js, variable.other.property.js</string>
+        <string>variable.other.property.js, variable.other.constant.property.js</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -1071,13 +1077,5 @@
         </dict>
       </dict>
     </array>
-    <key>colorSpaceName</key>
-    <string>sRGB</string>
-    <key>semanticClass</key>
-    <string>theme.dark.synthwave_84</string>
-    <key>author</key>
-    <string>dieghernan</string>
-    <key>comment</key>
-    <string>Based on VS Code SynthWave 84 Theme</string>
   </dict>
 </plist>

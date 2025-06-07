@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plist>
+<plist version="1.0">
   <dict>
     <key>name</key>
     <string>Dracula2025</string>
+    <key>author</key>
+    <string>Zeno Rocha, rstudiothemes R package</string>
+    <key>colorSpaceName</key>
+    <string>sRGB</string>
+    <key>semanticClass</key>
+    <string>theme.dark.dracula2025</string>
+    <key>comment</key>
+    <string>Generated with rstudiothemes R package</string>
+    <key>uuid</key>
+    <string>63396363-3362-4535-b063-393238636362</string>
     <key>settings</key>
     <array>
       <dict>
@@ -24,8 +34,6 @@
           <string>#50FA7B50</string>
           <key>findMatchHighlight</key>
           <string>#FFFFFF40</string>
-          <key>findMatchHighlight</key>
-          <string>#F1FA8C80</string>
           <key>currentFindMatchHighlight</key>
           <string>#FFB86C80</string>
           <key>findRangeHighlight</key>
@@ -82,7 +90,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 1</string>
         <key>scope</key>
         <string>emphasis</string>
         <key>settings</key>
@@ -93,7 +101,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 2</string>
         <key>scope</key>
         <string>strong</string>
         <key>settings</key>
@@ -104,7 +112,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 3</string>
         <key>scope</key>
         <string>header</string>
         <key>settings</key>
@@ -115,7 +123,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 4</string>
         <key>scope</key>
         <string>meta.diff, meta.diff.header</string>
         <key>settings</key>
@@ -126,7 +134,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 5</string>
         <key>scope</key>
         <string>markup.inserted</string>
         <key>settings</key>
@@ -137,9 +145,9 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 6</string>
         <key>scope</key>
-        <string>markup.deleted, markup.error</string>
+        <string>markup.deleted</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -148,7 +156,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 7</string>
         <key>scope</key>
         <string>markup.changed</string>
         <key>settings</key>
@@ -159,7 +167,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 8</string>
         <key>scope</key>
         <string>invalid</string>
         <key>settings</key>
@@ -172,7 +180,7 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 9</string>
         <key>scope</key>
         <string>invalid.deprecated</string>
         <key>settings</key>
@@ -185,13 +193,24 @@
       </dict>
       <dict>
         <key>name</key>
-        <string></string>
+        <string>tokenColors 10</string>
         <key>scope</key>
         <string>entity.name.filename</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
           <string>#F1FA8C</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>tokenColors 11</string>
+        <key>scope</key>
+        <string>markup.error</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#FF5555</string>
         </dict>
       </dict>
       <dict>
@@ -636,8 +655,6 @@
         <string>support.function, support.type.property-name</string>
         <key>settings</key>
         <dict>
-          <key>foreground</key>
-          <string>#8BE9FD</string>
           <key>fontStyle</key>
           <string>regular</string>
         </dict>
@@ -887,7 +904,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#50FA7B</string>
+          <string>#F8F8F2</string>
         </dict>
       </dict>
       <dict>
@@ -1055,13 +1072,5 @@
         </dict>
       </dict>
     </array>
-    <key>colorSpaceName</key>
-    <string>sRGB</string>
-    <key>semanticClass</key>
-    <string>theme.dark.dracula2025</string>
-    <key>author</key>
-    <string>dieghernan</string>
-    <key>comment</key>
-    <string>Based on VS Code Dracula Theme</string>
   </dict>
 </plist>

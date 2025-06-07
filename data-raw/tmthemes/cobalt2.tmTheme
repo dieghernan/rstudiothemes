@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plist>
+<plist version="1.0">
   <dict>
     <key>name</key>
     <string>cobalt2</string>
+    <key>author</key>
+    <string>rstudiothemes R package</string>
+    <key>colorSpaceName</key>
+    <string>sRGB</string>
+    <key>semanticClass</key>
+    <string>theme.dark.cobalt2</string>
+    <key>comment</key>
+    <string>Generated with rstudiothemes R package</string>
+    <key>uuid</key>
+    <string>37356662-3165-4337-b664-656532393965</string>
     <key>settings</key>
     <array>
       <dict>
@@ -25,7 +35,7 @@
           <key>wordHighlightStrong</key>
           <string>#FFFFFF21</string>
           <key>findMatchHighlight</key>
-          <string>#0D3A58</string>
+          <string>#CAD40F66</string>
           <key>currentFindMatchHighlight</key>
           <string>#FF720066</string>
           <key>findRangeHighlight</key>
@@ -39,7 +49,7 @@
           <key>caret</key>
           <string>#FFC600</string>
           <key>invisibles</key>
-          <string>#1F4662</string>
+          <string>#FFFFFF52</string>
           <key>guide</key>
           <string>#3B5364</string>
           <key>ansiBlack</key>
@@ -79,7 +89,66 @@
           <key>gutterForeground</key>
           <string>#AAAAAA</string>
           <key>invalid</key>
+          <string>#A22929</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Semantic: function</string>
+        <key>scope</key>
+        <string>function</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
           <string>#FFC600</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Semantic: variable</string>
+        <key>scope</key>
+        <string>variable</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#FFFFFF</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Semantic: interface</string>
+        <key>scope</key>
+        <string>interface</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#FF68B8</string>
+          <key>fontStyle</key>
+          <string>italic</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Semantic: type</string>
+        <key>scope</key>
+        <string>type</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#FF68B8</string>
+          <key>fontStyle</key>
+          <string>italic</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Semantic: property</string>
+        <key>scope</key>
+        <string>property</string>
+        <key>settings</key>
+        <dict>
+          <key>foreground</key>
+          <string>#9EFFFF</string>
         </dict>
       </dict>
       <dict>
@@ -143,7 +212,7 @@
         <key>name</key>
         <string>Keyword</string>
         <key>scope</key>
-        <string>keyword, keyword.control.default.ts, storage.type.class</string>
+        <string>keyword.control.default.ts, storage.type.class, keyword</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -339,17 +408,6 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>Variable</string>
-        <key>scope</key>
-        <string>variable</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#E1EFFF</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
         <string>[CSS] - Entity</string>
         <key>scope</key>
         <string>source.css entity, source.stylus entity</string>
@@ -475,7 +533,7 @@
         <key>name</key>
         <string>[HTML] - Quotes. these are a slightly different colour because expand selection will then not include quotes</string>
         <key>scope</key>
-        <string>punctuation.definition.string.begin, punctuation.definition.string.end</string>
+        <string>punctuation.definition.string.end, punctuation.definition.string.begin</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -530,7 +588,7 @@
         <key>name</key>
         <string>[JAVASCRIPT] - Storage Type Function</string>
         <key>scope</key>
-        <string>source.js storage.type.function, source.ts storage.type.function</string>
+        <string>source.ts storage.type.function, source.js storage.type.function</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -618,7 +676,7 @@
         <key>name</key>
         <string>[MARKDOWN] - Heading Name Section</string>
         <key>scope</key>
-        <string>entity.name.section.markdown, markup.heading, markup.heading.setext.1.markdown, markup.heading.setext.2.markdown</string>
+        <string>entity.name.section.markdown, markup.heading.setext.1.markdown, markup.heading.setext.2.markdown</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -725,7 +783,7 @@
         <key>name</key>
         <string>[MARKDOWN] - Link/Image Title</string>
         <key>scope</key>
-        <string>string.other.link.description.markdown, string.other.link.description.title.markdown, string.other.link.title.markdown</string>
+        <string>string.other.link.description.markdown, string.other.link.description.title.markdown</string>
         <key>settings</key>
         <dict>
           <key>foreground</key>
@@ -746,17 +804,6 @@
       <dict>
         <key>name</key>
         <string>[MARKDOWN] - Inline Code</string>
-        <key>scope</key>
-        <string>fenced_code.block.language, markup.inline.raw.markdown</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#9EFFFF</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>[MARKDOWN] - Code Block</string>
         <key>scope</key>
         <string>fenced_code.block.language, markup.inline.raw.markdown</string>
         <key>settings</key>
@@ -901,7 +948,7 @@
         <key>name</key>
         <string>Italicsify for Operator Mono</string>
         <key>scope</key>
-        <string>comment, entity.other.attribute-name.html, entity.other.attribute-name.js, entity.other.attribute-name.ts, entity.other.attribute-name.tsx, modifier, storage.modifier, this</string>
+        <string>entity.other.attribute-name.html, entity.other.attribute-name.js, entity.other.attribute-name.ts, entity.other.attribute-name.tsx, modifier, storage.modifier, this</string>
         <key>settings</key>
         <dict>
           <key>fontStyle</key>
@@ -935,13 +982,5 @@
         </dict>
       </dict>
     </array>
-    <key>colorSpaceName</key>
-    <string>sRGB</string>
-    <key>semanticClass</key>
-    <string>theme.dark.cobalt</string>
-    <key>author</key>
-    <string>Wes Bos, ported by dieghernan</string>
-    <key>comment</key>
-    <string>https://github.com/wesbos/cobalt2-vscode/</string>
   </dict>
 </plist>

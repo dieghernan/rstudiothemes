@@ -1,5 +1,5 @@
 {
-  "name": "Night Owl",
+  "name": "Night Owl No Italics",
   "type": "dark",
   "semanticHighlighting": false,
   "colors": {
@@ -109,9 +109,9 @@
     "editorGutter.background": "#011627",
     "editorGutter.modifiedBackground": "#e2b93d",
     "editorGutter.addedBackground": "#9CCC65",
-    "editorGutter.deletedBackground": "#EF5350",
     "editorInlayHint.background": "#0000",
     "editorInlayHint.foreground": "#829D9D",
+    "editorGutter.deletedBackground": "#EF5350",
     "diffEditor.insertedTextBackground": "#99b76d23",
     "diffEditor.removedTextBackground": "#ef535033",
     "editorWidget.background": "#021320",
@@ -220,24 +220,21 @@
         "meta.diff.header.to-file"
       ],
       "settings": {
-        "foreground": "#a2bffc",
-        "fontStyle": "italic"
+        "foreground": "#a2bffc"
       }
     },
     {
       "name": "Deleted",
       "scope": "markup.deleted.diff",
       "settings": {
-        "foreground": "#EF535090",
-        "fontStyle": "italic"
+        "foreground": "#EF535090"
       }
     },
     {
       "name": "Inserted",
       "scope": "markup.inserted.diff",
       "settings": {
-        "foreground": "#c5e478ff",
-        "fontStyle": "italic"
+        "foreground": "#c5e478ff"
       }
     },
     {
@@ -252,7 +249,7 @@
       "scope": ["comment", "punctuation.definition.comment"],
       "settings": {
         "foreground": "#637777",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
@@ -335,7 +332,7 @@
       "scope": ["punctuation.accessor", "keyword"],
       "settings": {
         "foreground": "#c792ea",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
@@ -350,7 +347,7 @@
       ],
       "settings": {
         "foreground": "#c792ea",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
@@ -386,7 +383,7 @@
       "scope": "entity.name.function",
       "settings": {
         "foreground": "#c792ea",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
@@ -419,7 +416,7 @@
       "name": "Tag attribute",
       "scope": "entity.other.attribute-name",
       "settings": {
-        "fontStyle": "italic",
+        "fontStyle": "",
         "foreground": "#c5e478"
       }
     },
@@ -427,7 +424,7 @@
       "name": "Entity Name Tag Custom",
       "scope": "entity.name.tag.custom",
       "settings": {
-        "foreground": "#f78c6c"
+        "foreground": "#c5e478"
       }
     },
     {
@@ -487,7 +484,7 @@
       "scope": "keyword.operator.relational",
       "settings": {
         "foreground": "#c792ea",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
@@ -558,7 +555,7 @@
       "scope": "meta.delimiter.period",
       "settings": {
         "foreground": "#c792ea",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
@@ -643,7 +640,7 @@
       "scope": "meta.selector",
       "settings": {
         "foreground": "#c792ea",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
@@ -665,7 +662,7 @@
       "scope": ["entity.name.tag.doctype", "meta.tag.sgml.doctype"],
       "settings": {
         "foreground": "#c792ea",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
@@ -691,6 +688,14 @@
       }
     },
     {
+      "name": "This Keyword JS",
+      "scope": ["variable.language.this.js"],
+      "settings": {
+        "foreground": "#41eec6",
+        "fontStyle": "italic"
+      }
+    },
+    {
       "name": "Variable Instances",
       "scope": [
         "variable.instance",
@@ -700,7 +705,7 @@
         "variable.other.property"
       ],
       "settings": {
-        "foreground": "#baebe2"
+        "foreground": "#7fdbca"
       }
     },
     {
@@ -708,7 +713,7 @@
       "scope": ["variable.other.object.property"],
       "settings": {
         "foreground": "#faf39f",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
@@ -723,27 +728,18 @@
       "scope": ["entity.name.function"],
       "settings": {
         "foreground": "#82AAFF",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
-      "name": "This Keyword JS",
-      "scope": ["variable.language.this.js"],
-      "settings": {
-        "foreground": "#41eec6",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "name": "Keyword Operator Comparison, imports, returns and Keyword Operator Ruby",
+      "name": "Keyword Operator Comparison, returns, imports, and Keyword Operator Ruby",
       "scope": [
+        "keyword.control.conditional.js",
         "keyword.operator.comparison",
         "keyword.control.flow.js",
         "keyword.control.flow.ts",
         "keyword.control.flow.tsx",
         "keyword.control.ruby",
-        "keyword.control.module.ruby",
-        "keyword.control.class.ruby",
         "keyword.control.def.ruby",
         "keyword.control.loop.js",
         "keyword.control.loop.ts",
@@ -753,22 +749,13 @@
         "keyword.control.from.js",
         "keyword.control.from.ts",
         "keyword.control.from.tsx",
-        "keyword.operator.instanceof.js",
-        "keyword.operator.expression.instanceof.ts",
-        "keyword.operator.expression.instanceof.tsx"
-      ],
-      "settings": {
-        "foreground": "#c792ea",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "name": "Keyword Control Conditional",
-      "scope": [
         "keyword.control.conditional.js",
         "keyword.control.conditional.ts",
         "keyword.control.switch.js",
-        "keyword.control.switch.ts"
+        "keyword.control.switch.ts",
+        "keyword.operator.instanceof.js",
+        "keyword.operator.expression.instanceof.ts",
+        "keyword.operator.expression.instanceof.tsx"
       ],
       "settings": {
         "foreground": "#c792ea",
@@ -921,7 +908,7 @@
       "scope": "quote",
       "settings": {
         "foreground": "#697098",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
@@ -1114,7 +1101,7 @@
       "scope": "source.elixir .punctuation.binary.elixir",
       "settings": {
         "foreground": "#c792ea",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
@@ -1147,8 +1134,7 @@
         "source.go keyword.control.go"
       ],
       "settings": {
-        "foreground": "#c792ea",
-        "fontStyle": "italic"
+        "foreground": "#c792ea"
       }
     },
     {
@@ -1232,7 +1218,7 @@
       "scope": "meta.tag.sgml.doctype.html",
       "settings": {
         "foreground": "#c792ea",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
@@ -1372,8 +1358,7 @@
       "name": "JavaScript Other Variable",
       "scope": "variable.other.object.js",
       "settings": {
-        "foreground": "#7fdbca",
-        "fontStyle": "italic"
+        "foreground": "#7fdbca"
       }
     },
     {
@@ -1393,13 +1378,6 @@
     {
       "name": "Ruby Hashkeys",
       "scope": "constant.language.symbol.hashkey.ruby",
-      "settings": {
-        "foreground": "#7fdbca"
-      }
-    },
-    {
-      "name": "Ruby Symbols",
-      "scope": "constant.language.symbol.ruby",
       "settings": {
         "foreground": "#7fdbca"
       }
@@ -1457,7 +1435,7 @@
       "scope": "markup.quote",
       "settings": {
         "foreground": "#697098",
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
@@ -1469,10 +1447,7 @@
     },
     {
       "name": "Markdown Links",
-      "scope": [
-        "markup.underline.link",
-        "markup.underline.link.image"
-      ],
+      "scope": ["markup.underline.link", "markup.underline.link.image"],
       "settings": {
         "foreground": "#ff869a"
       }
@@ -1522,7 +1497,7 @@
     },
     {
       "name": "PHP Variables",
-      "scope": ["variable.other.php", "variable.other.property.php"],
+      "scope": "variable.other.php",
       "settings": {
         "foreground": "#bec5d4"
       }
@@ -1607,8 +1582,7 @@
       "name": "Python import control keyword",
       "scope": "keyword.control",
       "settings": {
-        "foreground": "#c792ea",
-        "fontStyle": "italic"
+        "foreground": "#c792ea"
       }
     },
     {
@@ -1805,27 +1779,6 @@
       ],
       "settings": {
         "foreground": "#82AAFF"
-      }
-    },
-    {
-      "name": "TextmateDeleted",
-      "scope": "markup.deleted",
-      "settings": {
-        "foreground": "#ff0000"
-      }
-    },
-    {
-      "name": "Textmate Inserted",
-      "scope": "markup.inserted",
-      "settings": {
-        "foreground": "#036A07"
-      }
-    },
-    {
-      "name": "TextmateUnderline",
-      "scope": "markup.underline",
-      "settings": {
-        "fontStyle": "underline"
       }
     },
     {
