@@ -15,7 +15,8 @@ Depends:
 Imports: 
     dplyr,
     jsonlite,
-    stringr,
+    rstudioapi,
+    sass,
     tidyr,
     xml2
 Suggests: 

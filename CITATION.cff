@@ -82,22 +82,55 @@ references:
     email: jeroenooms@gmail.com
     orcid: https://orcid.org/0000-0002-4035-0289
   year: '2025'
-  identifiers:
-  - type: url
-    value: https://arxiv.org/abs/1403.2805
   doi: 10.32614/CRAN.package.jsonlite
 - type: software
-  title: stringr
-  abstract: 'stringr: Simple, Consistent Wrappers for Common String Operations'
+  title: rstudioapi
+  abstract: 'rstudioapi: Safely Access the RStudio API'
   notes: Imports
-  url: https://stringr.tidyverse.org
-  repository: https://CRAN.R-project.org/package=stringr
+  url: https://rstudio.github.io/rstudioapi/
+  repository: https://CRAN.R-project.org/package=rstudioapi
   authors:
+  - family-names: Ushey
+    given-names: Kevin
+    email: kevin@rstudio.com
+  - family-names: Allaire
+    given-names: JJ
+    email: jj@posit.co
   - family-names: Wickham
     given-names: Hadley
     email: hadley@posit.co
+  - family-names: Ritchie
+    given-names: Gary
+    email: gary@posit.co
   year: '2025'
-  doi: 10.32614/CRAN.package.stringr
+  doi: 10.32614/CRAN.package.rstudioapi
+- type: software
+  title: sass
+  abstract: 'sass: Syntactically Awesome Style Sheets (''Sass'')'
+  notes: Imports
+  url: https://rstudio.github.io/sass/
+  repository: https://CRAN.R-project.org/package=sass
+  authors:
+  - family-names: Cheng
+    given-names: Joe
+    email: joe@rstudio.com
+  - family-names: Mastny
+    given-names: Timothy
+    email: tim.mastny@gmail.com
+  - family-names: Iannone
+    given-names: Richard
+    email: rich@rstudio.com
+    orcid: https://orcid.org/0000-0003-3925-190X
+  - family-names: Schloerke
+    given-names: Barret
+    email: barret@rstudio.com
+    orcid: https://orcid.org/0000-0001-9986-114X
+  - family-names: Sievert
+    given-names: Carson
+    email: carson@rstudio.com
+    orcid: https://orcid.org/0000-0002-4958-2844
+  year: '2025'
+  doi: 10.32614/CRAN.package.sass
 - type: software
   title: tidyr
   abstract: 'tidyr: Tidy Messy Data'

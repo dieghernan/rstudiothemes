@@ -14,7 +14,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.4.3 (2025-02-28)",
+  "runtimePlatform": "R version 4.5.0 (2025-04-11 ucrt)",
   "author": [
     {
       "@type": "Person",
@@ -102,17 +102,29 @@
     },
     "4": {
       "@type": "SoftwareApplication",
-      "identifier": "stringr",
-      "name": "stringr",
+      "identifier": "rstudioapi",
+      "name": "rstudioapi",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
         "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
       },
-      "sameAs": "https://CRAN.R-project.org/package=stringr"
+      "sameAs": "https://CRAN.R-project.org/package=rstudioapi"
     },
     "5": {
+      "@type": "SoftwareApplication",
+      "identifier": "sass",
+      "name": "sass",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=sass"
+    },
+    "6": {
       "@type": "SoftwareApplication",
       "identifier": "tidyr",
       "name": "tidyr",
@@ -124,7 +136,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=tidyr"
     },
-    "6": {
+    "7": {
       "@type": "SoftwareApplication",
       "identifier": "xml2",
       "name": "xml2",
@@ -138,7 +150,7 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "1506.89KB",
+  "fileSize": "1635.301KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",

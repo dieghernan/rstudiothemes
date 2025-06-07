@@ -274,9 +274,10 @@ tmtheme_scopes_df <- function(vs_df) {
     scope = paste0(scope, collapse = ", "),
     rank = min(rank), .groups = "drop"
   )
-  eend$scope <- stringr::str_squish(eend$scope)
-
-
+  eend$scope <- gsub("  ", " ", eend$scope)
+  eend$scope <- gsub("  ", " ", eend$scope)
+  eend$scope <- gsub("  ", " ", eend$scope)
+  eend$scope <- trimws(eend$scope)
 
   eend <- dplyr::arrange(
     eend,
