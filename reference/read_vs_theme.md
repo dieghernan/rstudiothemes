@@ -5,12 +5,12 @@ Read a `*.json` file representing a Visual Studio Code theme.
 ## Usage
 
 ``` r
-read_vstheme(vstheme)
+read_vs_theme(path)
 ```
 
 ## Arguments
 
-- vstheme:
+- path:
 
   Path to a Visual Studio Code theme, in `*.json` format.
 
@@ -21,9 +21,8 @@ A
 
 ## See also
 
-Other converters:
-[`read_tmtheme()`](https://dieghernan.github.io/rstudiothemes/reference/read_tmtheme.md),
-[`vstheme2tmtheme()`](https://dieghernan.github.io/rstudiothemes/reference/vstheme2tmtheme.md)
+Other reading:
+[`read_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/read_tm_theme.md)
 
 ## Examples
 
@@ -31,7 +30,7 @@ Other converters:
 vstheme <- system.file("ext/test-color-theme.json",
   package = "rstudiothemes"
 )
-read_vstheme(vstheme)
+read_vs_theme(vstheme)
 #> # A tibble: 706 × 7
 #>    section   name                  scope value   foreground background fontStyle
 #>    <chr>     <chr>                 <chr> <chr>   <chr>      <lgl>      <chr>    

@@ -11,8 +11,7 @@ generate_uuid(hint = NULL)
 
 ## Source
 
-Heavily based on unreleased version of
-[`ids::uuid()`](https://rdrr.io/pkg/ids/man/uuid.html).
+Heavily based on unreleased version of `ids::uuid()`.
 
 ## Arguments
 
@@ -46,10 +45,10 @@ Davis KR, Peabody B, Leach P (2024). "Universally Unique IDentifiers
 ``` r
 # Random
 generate_uuid()
-#> [1] "cb3ee465-6e2e-4ec3-a5c8-c404fe174e4c"
+#> [1] "e4656e2e-9ec3-45c8-8404-fe174e4c81bd"
 
 generate_uuid()
-#> [1] "81bd36aa-3d2a-44d4-abbc-2145febe03ef"
+#> [1] "36aa3d2a-04d4-4bbc-a145-febe03efa1a2"
 
 # Persistent with hint param
 
