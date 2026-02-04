@@ -5,7 +5,12 @@ test_that("Test color generator", {
 
   # Expand colors
   xpan <- "#FFF"
+  expect_identical("#FFFFFF", expand_hex(xpan))
   expect_identical("#FFFFFF", col2hex(xpan))
+  expect_identical("#FF002211", expand_hex("#F021"))
+  expect_identical("#FF002211", col2hex("#F021"))
+  expect_identical("not_a_color", expand_hex("not_a_color"))
+  expect_snapshot(col2hex("not_a_color"))
 
   skip_on_cran()
 
@@ -27,4 +32,5 @@ test_that("Theme type", {
   expect_identical(dark_or_light("grey60"), "light")
   expect_identical(dark_or_light("skyblue"), "light")
   expect_identical(dark_or_light("darkblue"), "dark")
+  expect_snapshot(error = TRUE, dark_or_light("not_a_color"))
 })

@@ -74,10 +74,10 @@ $bgfg2: mix($bg, $fg, 70%);
 	}
 
 
-  // Breadcrimbs
+  // Breadcrumbs
 	.rstheme_toolbarWrapper {
 		background: $bgfg1;
-		foreground: $fg;
+		color: $fg;
 
 		button,
 		a,
@@ -120,7 +120,7 @@ $bgfg2: mix($bg, $fg, 70%);
 		.gwt-Label {
 			color: $accent;
 			font-style: italic; // vscode style
-		}
+  	}
 	}
 
 	// Tab: Hover
@@ -212,8 +212,7 @@ $bgfg2: mix($bg, $fg, 70%);
 /* hacky toolbars section */
 
 .rstudio-themes-dark-grey,
-.rstudio-themes-default,
-{
+.rstudio-themes-default {
 
 /* Data Frame Preview */
 .dataTables_wrapper thead th {
@@ -258,5 +257,3 @@ $bgfg2: mix($bg, $fg, 70%);
 
   }
 }
-
-
