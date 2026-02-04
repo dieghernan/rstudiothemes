@@ -7,5 +7,4 @@
 mapping_db <- readr::read_csv("data-raw/mapping_db.csv")
 
 
-
 usethis::use_data(mapping_db, overwrite = TRUE, internal = TRUE)

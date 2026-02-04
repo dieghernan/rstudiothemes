@@ -249,7 +249,6 @@ tmtheme_scopes_df <- function(vs_df) {
   )
 
 
-
   # unique by group
   unique_g <- dplyr::slice_head(filled, n = 1)
 
@@ -283,7 +282,6 @@ tmtheme_scopes_df <- function(vs_df) {
     eend,
     dplyr::pick(dplyr::all_of("rank"))
   )[c("name", "scope", "foreground", "background", "fontStyle")]
-
 
 
   eend

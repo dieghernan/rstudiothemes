@@ -179,7 +179,6 @@ read_tmtheme <- function(tmtheme) {
   final_df <- final_df[, nms]
 
 
-
   # Blanks as NAs
   final_df[final_df == ""] <- NA
 

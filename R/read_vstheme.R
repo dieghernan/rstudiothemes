@@ -123,7 +123,6 @@ read_vstheme <- function(vstheme) {
   it <- seq_len(length(token_list))
 
 
-
   token_df <- lapply(it, function(i) {
     this_tok <- token_list[i][[1]]
 
@@ -171,7 +170,6 @@ read_vstheme <- function(vstheme) {
   ))
 
   final_df <- final_df[, nms]
-
 
 
   # Blanks as NAs

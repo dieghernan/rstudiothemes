@@ -24,3 +24,5 @@ cran-comments.md
 .github/pkg.lock
 Rplots.pdf
 docs/
+/.quarto/
+**/*.quarto_ipynb

@@ -23,7 +23,7 @@ preferred-citation:
     given-names: Diego
     email: diego.hernangomezherrero@gmail.com
     orcid: https://orcid.org/0000-0001-8457-4658
-  year: '2025'
+  year: '2026'
   version: 0.0.0.9000
   abstract: Create and install RStudio themes originated from Visual Studio Code themes.
 repository-code: https://github.com/dieghernan/rstudiothemes
@@ -43,7 +43,7 @@ references:
   institution:
     name: R Foundation for Statistical Computing
     address: Vienna, Austria
-  year: '2025'
+  year: '2026'
   version: '>= 4.1.0'
 - type: software
   title: dplyr
@@ -68,7 +68,7 @@ references:
     given-names: Davis
     email: davis@posit.co
     orcid: https://orcid.org/0000-0003-4777-038X
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.dplyr
 - type: software
   title: jsonlite
@@ -81,7 +81,7 @@ references:
     given-names: Jeroen
     email: jeroenooms@gmail.com
     orcid: https://orcid.org/0000-0002-4035-0289
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.jsonlite
 - type: software
   title: rstudioapi
@@ -102,7 +102,7 @@ references:
   - family-names: Ritchie
     given-names: Gary
     email: gary@posit.co
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.rstudioapi
 - type: software
   title: sass
@@ -129,7 +129,7 @@ references:
     given-names: Carson
     email: carson@rstudio.com
     orcid: https://orcid.org/0000-0002-4958-2844
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.sass
 - type: software
   title: tidyr
@@ -146,7 +146,7 @@ references:
     email: davis@posit.co
   - family-names: Girlich
     given-names: Maximilian
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.tidyr
 - type: software
   title: xml2
@@ -162,7 +162,7 @@ references:
   - family-names: Ooms
     given-names: Jeroen
     email: jeroenooms@gmail.com
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.xml2
 - type: software
   title: testthat
@@ -174,7 +174,7 @@ references:
   - family-names: Wickham
     given-names: Hadley
     email: hadley@posit.co
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.testthat
   version: '>= 3.0.0'
 - type: software
@@ -191,6 +191,6 @@ references:
   - family-names: Ts'o
     given-names: Theodore
     email: tytso@thunk.org
-  year: '2025'
+  year: '2026'
   doi: 10.32614/CRAN.package.uuid
 

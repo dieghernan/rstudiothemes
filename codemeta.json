@@ -14,7 +14,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.5.0 (2025-04-11 ucrt)",
+  "runtimePlatform": "R version 4.5.2 (2025-10-31)",
   "author": [
     {
       "@type": "Person",
@@ -150,11 +150,11 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "1591.481KB",
+  "fileSize": "1562.437KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
-      "datePublished": "2025",
+      "datePublished": "2026",
       "author": [
         {
           "@type": "Person",
@@ -165,7 +165,7 @@
       "name": "{rstudiothemes}: Ports of {Visual Studio Code} Themes for {RStudio}"
     }
   ],
-  "releaseNotes": "https://github.com/dieghernan/rstudiothemes/blob/master/NEWS.md",
+  "releaseNotes": "https://github.com/dieghernan/rstudiothemes/blob/main/NEWS.md",
   "readme": "https://github.com/dieghernan/rstudiothemes/blob/main/README.md",
   "contIntegration": ["https://github.com/dieghernan/rstudiothemes/actions/workflows/check-full.yaml", "https://github.com/dieghernan/rstudiothemes/actions/workflows/rhub.yaml", "https://app.codecov.io/gh/dieghernan/rstudiothemes"]
 }
