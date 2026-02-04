@@ -51,7 +51,7 @@ path <- convert_vs_to_tm_theme(vstheme)
 #> ℹ Using `author = "rstudiothemes R package"`.
 
 path
-#> [1] "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\RtmpwRyNNn\\fileaf87b1d5527.tmTheme"
+#> [1] "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\Rtmp8SOzSt\\file59c130f22a5.tmTheme"
 
 readLines(path) |>
   head(50) |>
