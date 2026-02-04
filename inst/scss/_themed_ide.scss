@@ -1,19 +1,16 @@
 // Similar to the treatment for vscode
 
-
 $bg: white !default;
 $fg: black !default;
 $accent: blue !default;
 $selection: grey !default;
 $comment: grey90 !default;
 
-
 $bgaccent1: mix($bg, $accent, 98%);
 $bgaccent2: mix($bg, $accent, 80%);
 $bgaccent3: mix($fg, $accent, 50%);
 $bgfg1: mix($bg, $fg, 90%);
 $bgfg2: mix($bg, $fg, 70%);
-
 
 /* ---- RStudio Theme ---- */
 
@@ -30,9 +27,9 @@ $bgfg2: mix($bg, $fg, 70%);
 	}
 
 	// collapsed toolbar on rstudio server
-	[role="banner"]+[role="navigation"],
-	header+[role="navigation"] {
-		&>table>tbody>tr>td {
+	[role="banner"] + [role="navigation"],
+	header + [role="navigation"] {
+		& > table > tbody > tr > td {
 			background: $bgfg1;
 			border-color: $bgfg2;
 		}
@@ -44,7 +41,7 @@ $bgfg2: mix($bg, $fg, 70%);
 
 	// Data Grid
 	.dataGridHeader,
-	tr[__gwt_header_row]> :-webkit-any(td, th),
+	tr[__gwt_header_row] > :-webkit-any(td, th),
 	.dataTables_info {
 		background-color: $bgfg1;
 		border-color: $bgfg2;
@@ -70,11 +67,10 @@ $bgfg2: mix($bg, $fg, 70%);
 
 	.gwt-SplitLayoutPanel-HDragger,
 	.gwt-SplitLayoutPanel-VDragger {
-		background: $bgaccent1  !important;
+		background: $bgaccent1 !important;
 	}
 
-
-  // Breadcrumbs
+	// Breadcrumbs
 	.rstheme_toolbarWrapper {
 		background: $bgfg1;
 		color: $fg;
@@ -96,9 +92,9 @@ $bgfg2: mix($bg, $fg, 70%);
 
 .rstudio-themes-dark-grey,
 .rstudio-themes-default {
-
 	// Background Panel
-	.gwt-TabLayoutPanelTabs, .GNTYACMBNS,
+	.gwt-TabLayoutPanelTabs,
+	.GNTYACMBNS,
 	.rstheme_multiPodUtilityTabArea {
 		background: $bgaccent1;
 	}
@@ -114,20 +110,21 @@ $bgfg2: mix($bg, $fg, 70%);
 	}
 
 	// Tab: Active
-	.gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTab-selected table.rstheme_tabLayoutCenter {
+	.gwt-TabLayoutPanelTabs
+		.gwt-TabLayoutPanelTab-selected
+		table.rstheme_tabLayoutCenter {
 		background: $bgaccent2;
 
 		.gwt-Label {
 			color: $accent;
 			font-style: italic; // vscode style
-  	}
+		}
 	}
 
 	// Tab: Hover
 	.gwt-TabLayoutPanelTab:hover .rstheme_tabLayoutCenter {
 		background: $bgaccent2;
 	}
-
 }
 
 #rstudio_workbench_panel_find_in_files td[colspan="2"] {
@@ -139,8 +136,7 @@ $bgfg2: mix($bg, $fg, 70%);
 
 .rstudio-themes-dark-grey,
 .rstudio-themes-default {
-
-  // Breadcrumbs
+	// Breadcrumbs
 	.rstheme_secondaryToolbar,
 	.dataGridHeader {
 		background: $bgfg1;
@@ -152,7 +148,6 @@ $bgfg2: mix($bg, $fg, 70%);
 .rstudio-themes-dark-grey,
 .rstudio-themes-default,
 .rstudio-themes-flat {
-
 	.popupMiddleCenter,
 	.menuPopupMiddleCenter,
 	.suggestPopupMiddleCenter {
@@ -168,7 +163,7 @@ $bgfg2: mix($bg, $fg, 70%);
 	.themedPopupPanel {
 		border: solid 1px $bgaccent2;
 
-		&~div.popupContent div:nth-child(1) {
+		& ~ div.popupContent div:nth-child(1) {
 			border: solid 1px $bgaccent2;
 		}
 	}
@@ -183,7 +178,7 @@ $bgfg2: mix($bg, $fg, 70%);
 			border: none;
 		}
 
-		&+.rstudio-themes-scrollbars {
+		& + .rstudio-themes-scrollbars {
 			border-color: $bgaccent2;
 		}
 	}
@@ -203,7 +198,7 @@ $bgfg2: mix($bg, $fg, 70%);
 	}
 
 	.gwt-MenuItem.gwt-MenuItem-selected,
-	.gwt-MenuItem.gwt-MenuItem-selected>table {
+	.gwt-MenuItem.gwt-MenuItem-selected > table {
 		background: $bgaccent2;
 		color: $accent;
 	}
@@ -213,47 +208,45 @@ $bgfg2: mix($bg, $fg, 70%);
 
 .rstudio-themes-dark-grey,
 .rstudio-themes-default {
+	/* Data Frame Preview */
+	.dataTables_wrapper thead th {
+		background-color: $bgaccent2 !important;
+		color: $accent !important;
+	}
 
-/* Data Frame Preview */
-.dataTables_wrapper thead th {
-	background-color: $bgaccent2  !important;
-	color: $accent  !important;
-}
+	.dataTables_scrollBody table tbody td:first-child {
+		background: $bgfg1 !important;
+		color: $fg !important;
+	}
 
-.dataTables_scrollBody table tbody td:first-child {
-	background: $bgfg1  !important;
-	color: $fg  !important;
+	.dataTables_info {
+		background: $bgaccent1 !important;
+		color: $accent !important;
+	}
 }
-
-.dataTables_info {
-	background: $bgaccent1  !important;
-	color: $accent  !important;
-}
-}
-
 
 /* job progress bar */
 .rstheme_toolbarWrapper,
 .windowframe {
-	[role="progressbar"]>div {
+	[role="progressbar"] > div {
 		background-color: opacify($selection, 1);
 	}
 }
 
-
 // Input only in dark
-.rstudio-themes-dark-grey{
-  input[type="checkbox" i] {
+.rstudio-themes-dark-grey {
+	input[type="checkbox" i] {
 		background-color: $bgaccent3;
 	}
 }
 
 /* scrollbars */
 // In tabs only
-.rstudio-themes-flat, .rstudio-themes-dark-grey, .rstudio-themes-default {
-  .gwt-TabLayoutPanelContentContainer {
-    scrollbar-width: auto;
-    scrollbar-color: $bgaccent2 $bgaccent1;
-
-  }
+.rstudio-themes-flat,
+.rstudio-themes-dark-grey,
+.rstudio-themes-default {
+	.gwt-TabLayoutPanelContentContainer {
+		scrollbar-width: auto;
+		scrollbar-color: $bgaccent2 $bgaccent1;
+	}
 }
