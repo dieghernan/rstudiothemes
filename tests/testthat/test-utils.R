@@ -3,7 +3,6 @@ test_that("Test color generator", {
   not <- "bold italic underline"
   expect_identical(not, col2hex(not))
 
-
   # Expand colors
   xpan <- "#FFF"
   expect_identical("#FFFFFF", col2hex(xpan))

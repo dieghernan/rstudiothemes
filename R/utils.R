@@ -14,14 +14,16 @@ col2hex <- function(x) {
   if (res[4] < 255) {
     # Hex
     hex <- rgb(
-      red = res[1], green = res[2], blue = res[3], alpha = res[4],
+      red = res[1],
+      green = res[2],
+      blue = res[3],
+      alpha = res[4],
       maxColorValue = 255
     )
   } else {
     # No needed
     hex <- rgb(red = res[1], green = res[2], blue = res[3], maxColorValue = 255)
   }
-
 
   toupper(hex)
 }
@@ -31,10 +33,11 @@ dark_or_light <- function(x) {
   theme_type <- "dark"
 
   rgb_values <- t(col2rgb(x))
-  bright <- sum(rgb_values * c(.299, .587, .114))
+  bright <- sum(rgb_values * c(0.299, 0.587, 0.114))
 
-
-  if (bright > 128) theme_type <- "light"
+  if (bright > 128) {
+    theme_type <- "light"
+  }
 
   theme_type
 }

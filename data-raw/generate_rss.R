@@ -1,7 +1,9 @@
 library(rstudiothemes)
 library(tidyverse)
-mythemes <- list.files("./data-raw/tmthemes",
-  pattern = "tmTheme", recursive = TRUE,
+mythemes <- list.files(
+  "./data-raw/tmthemes",
+  pattern = "tmTheme",
+  recursive = TRUE,
   full.names = TRUE
 )
 t <- mythemes[1]

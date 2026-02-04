@@ -1,11 +1,9 @@
 test_that("Test full theme", {
-  vstheme <- system.file("ext/test-color-theme.json",
-    package = "rstudiothemes"
-  )
+  vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
 
-  fpath <- vstheme |> vstheme2tmtheme()
+  fpath <- vstheme |> convert_vs_to_tm_theme()
 
-  res <- read_tmtheme(fpath)
+  res <- read_tm_theme(fpath)
 
   expect_identical(res[res$name == "name", ]$value, "Tokyo Night")
   expect_identical(
@@ -17,13 +15,14 @@ test_that("Test full theme", {
 })
 
 test_that("Test simple theme", {
-  vstheme <- system.file("ext/test-simple-color-theme.json",
+  vstheme <- system.file(
+    "ext/test-simple-color-theme.json",
     package = "rstudiothemes"
   )
 
-  fpath <- vstheme |> vstheme2tmtheme()
+  expect_snapshot(fpath <- vstheme |> convert_vs_to_tm_theme())
 
-  res <- read_tmtheme(fpath)
+  res <- read_tm_theme(fpath)
 
   expect_identical(res[res$name == "name", ]$value, "Skeletor Syntax")
   expect_identical(

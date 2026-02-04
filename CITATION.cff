@@ -33,6 +33,11 @@ contact:
   given-names: Diego
   email: diego.hernangomezherrero@gmail.com
   orcid: https://orcid.org/0000-0001-8457-4658
+keywords:
+- r-package
+- rstudio-themes
+- textmate-themes
+- vscode-themes
 references:
 - type: software
   title: 'R: A Language and Environment for Statistical Computing'
@@ -45,6 +50,18 @@ references:
     address: Vienna, Austria
   year: '2026'
   version: '>= 4.1.0'
+- type: software
+  title: cli
+  abstract: 'cli: Helpers for Developing Command Line Interfaces'
+  notes: Imports
+  url: https://cli.r-lib.org
+  repository: https://CRAN.R-project.org/package=cli
+  authors:
+  - family-names: Csárdi
+    given-names: Gábor
+    email: gabor@posit.co
+  year: '2026'
+  doi: 10.32614/CRAN.package.cli
 - type: software
   title: dplyr
   abstract: 'dplyr: A Grammar of Data Manipulation'

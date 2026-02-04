@@ -5,17 +5,17 @@
 #' the equivalent TextMate theme (`*.tmTheme`).
 #'
 #'
-#' @inheritParams read_vstheme
+#' @inheritParams read_vs_theme
 #' @param out_tm Path were the resulting file would be written. By default
 #'   is a temporal file ([tempfile()]).
 #' @param name Optional. The name of the theme. If nor provided the name of
-#'   the `vstheme` would be used.
+#'   the VS Code theme in `path` would be used.
 #' @param author Optional. The author of the theme. If nor provided the name of
-#'   the `vstheme` would be used.
+#'   the VS Code theme in `path` would be used.
 #'
 #' @returns
-#' This function is called for its side effects. It would return (as
-#' [invisible()]) the path of the file.
+#' This function is called for its side effects. It would return a character
+#' with the path of the file `out_tm`.
 #'
 #' @family converters
 #'
@@ -26,7 +26,7 @@
 #' vstheme <- system.file("ext/test-simple-color-theme.json",
 #'   package = "rstudiothemes"
 #' )
-#' path <- vstheme2tmtheme(vstheme)
+#' path <- convert_vs_to_tm_theme(vstheme)
 #'
 #' path
 #'
@@ -34,11 +34,14 @@
 #'   head(50) |>
 #'   cat(sep = "\n")
 #'
-vstheme2tmtheme <- function(vstheme,
-                            out_tm = tempfile(fileext = ".tmTheme"),
-                            name = NULL, author = NULL) {
+convert_vs_to_tm_theme <- function(
+  path,
+  out_tm = tempfile(fileext = ".tmTheme"),
+  name = NULL,
+  author = NULL
+) {
   # 1. Manipulate vstheme file
-  vs_df <- read_vstheme(vstheme)
+  vs_df <- read_vs_theme(path)
 
   # 2. Prepare df for settings
   settings_df <- tmtheme_settings_df(vs_df)
@@ -54,16 +57,18 @@ vstheme2tmtheme <- function(vstheme,
     name <- unlist(for_top_df[for_top_df$name == "name", ]$value)
   }
 
-
   if (is.null(author)) {
     orig_aut <- unlist(for_top_df[for_top_df$name == "author", ]$value)
 
     if (length(orig_aut) < 1) {
-      message(
-        "This vscode theme does not have author, ",
-        "use the `author` parameter"
+      cli::cli_alert_warning(
+        paste0(
+          "VSCode theme {.str {name}} does not have author, ",
+          "use the {.arg author} argument."
+        )
       )
       author <- "rstudiothemes R package"
+      cli::cli_alert_info("Using {.code author = {.str {author}}}.")
     } else {
       author <- paste0(orig_aut, ", rstudiothemes R package")
     }
@@ -73,26 +78,32 @@ vstheme2tmtheme <- function(vstheme,
 
   semclass <- paste("theme", semclass, name, sep = ".")
   semclass <- tolower(semclass)
-  semclass <- gsub(" ", "_", semclass)
+  semclass <- gsub(" ", "_", semclass, fixed = TRUE)
 
   comm <- "Generated with rstudiothemes R package"
 
   # Generate uuid from md5 of the original file
-  md5 <- unname(tools::md5sum(vstheme))
+  md5 <- unname(tools::md5sum(path))
   uuid <- generate_uuid(md5)
 
   toplevel_df <- dplyr::tibble(
     tm = c(
-      "name", "author", "colorSpaceName", "semanticClass",
-      "comment", "uuid"
+      "name",
+      "author",
+      "colorSpaceName",
+      "semanticClass",
+      "comment",
+      "uuid"
     ),
     value = c(name, author, "sRGB", semclass, comm, uuid)
   )
 
   # Start building the list that would be converted to tmTheme
-  the_theme <- list(plist = list(
-    dict = list()
-  ))
+  the_theme <- list(
+    plist = list(
+      dict = list()
+    )
+  )
 
   # Top level
 
@@ -128,11 +139,16 @@ vstheme2tmtheme <- function(vstheme,
 
     scope <- unlist(this$scope)
 
-    onl <- list(dict = list(
-      key = list("name"), string = list(name),
-      key = list("scope"), string = list(scope),
-      key = list("settings"), dict = list()
-    ))
+    onl <- list(
+      dict = list(
+        key = list("name"),
+        string = list(name),
+        key = list("scope"),
+        string = list(scope),
+        key = list("settings"),
+        dict = list()
+      )
+    )
 
     # Prepare settings dictionary
     mat <- t(scopes_df[i, c("foreground", "background", "fontStyle")])
@@ -156,29 +172,28 @@ vstheme2tmtheme <- function(vstheme,
     }
   }
 
-
   end <- c(
     top_list,
     list(key = list("settings"), array = array_list)
   )
 
-
   # Finally write it
   the_theme$plist$dict <- end
   attr(the_theme$plist, "version") <- "1.0"
 
-
   the_theme <- xml2::as_xml_document(the_theme)
   xml2::write_xml(the_theme, out_tm)
 
-  invisible(out_tm)
+  out_tm
 }
 
 tmtheme_settings_df <- function(vs_df) {
   # Mapping
   maps <- mapping_db
 
-  end <- dplyr::inner_join(maps, vs_df[vs_df$section == "colors", ],
+  end <- dplyr::inner_join(
+    maps,
+    vs_df[vs_df$section == "colors", ],
     by = c("vscode" = "name")
   )
 
@@ -248,7 +263,6 @@ tmtheme_scopes_df <- function(vs_df) {
     .direction = "up"
   )
 
-
   # unique by group
   unique_g <- dplyr::slice_head(filled, n = 1)
 
@@ -257,7 +271,6 @@ tmtheme_scopes_df <- function(vs_df) {
     unique_g,
     dplyr::pick(dplyr::all_of(c("name", "scope")))
   )
-
 
   # One line for scope
   prepare <- dplyr::grouped_df(
@@ -269,20 +282,18 @@ tmtheme_scopes_df <- function(vs_df) {
   scope <- ""
 
   # And go
-  eend <- dplyr::summarise(prepare,
+  eend <- dplyr::summarise(
+    prepare,
     scope = paste0(scope, collapse = ", "),
-    rank = min(rank), .groups = "drop"
+    rank = min(rank),
+    .groups = "drop"
   )
-  eend$scope <- gsub("  ", " ", eend$scope)
-  eend$scope <- gsub("  ", " ", eend$scope)
-  eend$scope <- gsub("  ", " ", eend$scope)
-  eend$scope <- trimws(eend$scope)
+  eend$scope <- gsub("\\s+", " ", trimws(eend$scope))
 
   eend <- dplyr::arrange(
     eend,
     dplyr::pick(dplyr::all_of("rank"))
   )[c("name", "scope", "foreground", "background", "fontStyle")]
-
 
   eend
 }

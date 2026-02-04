@@ -1,22 +1,16 @@
 #' Random UUIDs generation
 #'
-#' @description
-#'
-#' Generate Universally Unique Identifiers (UUID) version 4
-#' (pseudo-random numbers).
-#'
+#' Generate Universally Unique Identifiers (UUID) version 4 (pseudo-random
+#' numbers).
 #'
 #' @family helpers
-#'
 #'
 #' @param hint Optional. Character (or object coercible with [as.character()])
 #'   that may be used as random seed.
 #'
-#'
 #' @return
 #' A [character()] representing valid UUID that can be validated with
-#' [uuid::UUIDvalidate()].
-#'
+#' `uuid::UUIDvalidate()`.
 #'
 #' @details
 #' This is a helper function that assign

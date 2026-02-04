@@ -1,15 +1,15 @@
 #' Read and parse a TextMate theme
 #'
 #' @description
-#' Read a `*.tmTheme` file (really a `*.xml` file) representing a
-#' TextMate or a Sublime Text theme.
+#' Read a `*.tmTheme` file (really a `*.xml` file) representing a TextMate or
+#' a Sublime Text theme.
 #'
-#' @param tmtheme Path to a TextMate theme, in `*.tmTheme` format.
+#' @param path Path to a TextMate theme, in `*.tmTheme` format.
 #'
 #' @returns
-#' A [tibble::tibble()].
+#' A [tibble][tibble::tbl_df()].
 #'
-#' @family converters
+#' @family reading
 #'
 #' @export
 #'
@@ -19,27 +19,31 @@
 #'   package = "rstudiothemes"
 #' ) |>
 #'   # Generate the theme
-#'   vstheme2tmtheme()
+#'   convert_vs_to_tm_theme()
 #'
 #' # Check
 #' readLines(the_theme) |>
 #'   head(10) |>
 #'   cat(sep = "\n")
 #'
-#' read_tmtheme(the_theme)
-read_tmtheme <- function(tmtheme) {
-  tm <- xml2::read_xml(tmtheme)
+#' read_tm_theme(the_theme)
+read_tm_theme <- function(path) {
+  tm <- xml2::read_xml(path)
   tm <- xml2::as_list(tm)
 
   tm <- rapply(tm, col2hex, how = "list")
 
   # Remove trailings / double  whitespace
-  tm <- rapply(tm, function(x) {
-    x <- gsub("  ", " ", x)
-    x <- gsub("  ", " ", x)
+  tm <- rapply(
+    tm,
+    function(x) {
+      x <- gsub("  ", " ", x, fixed = TRUE)
+      x <- gsub("  ", " ", x, fixed = TRUE)
 
-    trimws(x)
-  }, how = "list")
+      trimws(x)
+    },
+    how = "list"
+  )
 
   # 1. High level inputs -----
   specs <- tm$plist$dict
@@ -63,19 +67,22 @@ read_tmtheme <- function(tmtheme) {
     value = unname(hl_values)[l_merged]
   )
 
-
   # 2. Colors (Settings) ----
   array <- specs[names(specs) == "array"][[1]]
 
   # Identify high level settings since it should present only key and dict
 
-  id_settings <- vapply(array, function(x) {
-    nms <- sort(names(x))
-    if (length(nms) == 2 && identical(nms, c("dict", "key"))) {
-      return(TRUE)
-    }
-    FALSE
-  }, FUN.VALUE = logical(1))
+  id_settings <- vapply(
+    array,
+    function(x) {
+      nms <- sort(names(x))
+      if (length(nms) == 2 && identical(nms, c("dict", "key"))) {
+        return(TRUE)
+      }
+      FALSE
+    },
+    FUN.VALUE = logical(1)
+  )
 
   settings_list <- array[id_settings][1]$dict$dict
 
@@ -95,7 +102,7 @@ read_tmtheme <- function(tmtheme) {
 
   # 3. Tokens ----
   token_list <- array[!id_settings]
-  it <- seq_len(length(token_list))
+  it <- seq_along(token_list)
 
   token_df <- lapply(it, function(i) {
     # Same assumptions
@@ -158,7 +165,6 @@ read_tmtheme <- function(tmtheme) {
 
   token_df <- dplyr::bind_rows(token_df)
 
-
   #  Final df
   final_df <- dplyr::bind_rows(top_df, settings_df, token_df)
 
@@ -172,12 +178,17 @@ read_tmtheme <- function(tmtheme) {
   }
 
   nms <- unique(c(
-    "section", "name", "scope", "value", "foreground", "background",
-    "fontStyle", names(final_df)
+    "section",
+    "name",
+    "scope",
+    "value",
+    "foreground",
+    "background",
+    "fontStyle",
+    names(final_df)
   ))
 
   final_df <- final_df[, nms]
-
 
   # Blanks as NAs
   final_df[final_df == ""] <- NA

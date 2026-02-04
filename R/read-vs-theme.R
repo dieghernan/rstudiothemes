@@ -3,12 +3,12 @@
 #' @description
 #' Read a `*.json` file representing a Visual Studio Code theme.
 #'
-#' @param vstheme Path to a Visual Studio Code theme, in `*.json` format.
+#' @param path Path to a Visual Studio Code theme, in `*.json` format.
 #'
 #' @returns
 #' A [tibble::tibble()].
 #'
-#' @family converters
+#' @family reading
 #'
 #' @export
 #'
@@ -17,22 +17,26 @@
 #' vstheme <- system.file("ext/test-color-theme.json",
 #'   package = "rstudiothemes"
 #' )
-#' read_vstheme(vstheme)
+#' read_vs_theme(vstheme)
 #'
-read_vstheme <- function(vstheme) {
+read_vs_theme <- function(path) {
   # 1. Read vscode and prepare
-  vs <- jsonlite::read_json(vstheme)
+  vs <- jsonlite::read_json(path)
 
   vs <- rapply(vs, col2hex, how = "list")
 
   # Remove trailings / double  whitespace
 
-  vs <- rapply(vs, function(x) {
-    x <- gsub("  ", " ", x)
-    x <- gsub("  ", " ", x)
+  vs <- rapply(
+    vs,
+    function(x) {
+      x <- gsub("  ", " ", x, fixed = TRUE)
+      x <- gsub("  ", " ", x, fixed = TRUE)
 
-    trimws(x)
-  }, how = "list")
+      trimws(x)
+    },
+    how = "list"
+  )
 
   # High level inputs
   name <- paste0(unlist(vs$name)[1], collapse = ", ")
@@ -46,18 +50,16 @@ read_vstheme <- function(vstheme) {
   top_df$section <- "highlevel"
   top_df$name <- c("name", "author", "type")
 
-
   semantic_df <- NULL
   if ("semanticTokenColors" %in% names(vs)) {
     semantic_list <- vs$semanticTokenColors
 
-    it <- seq_len(length(semantic_list))
+    it <- seq_along(semantic_list)
 
     semantic_df <- lapply(it, function(i) {
       this_tok <- semantic_list[i]
 
       nm <- paste0("Semantic: ", names(this_tok))
-
 
       # Split in individual pieces (some jsons provides it collapsed)
       scopes <- names(this_tok)
@@ -83,13 +85,11 @@ read_vstheme <- function(vstheme) {
         df_vals <- df_vals[, setdiff(names(df_vals), "italic")]
       }
 
-
       this_tok_df <- dplyr::tibble(
         name = nm,
         scope = scopes
       )
       this_tok_df <- dplyr::bind_cols(this_tok_df, df_vals)
-
 
       this_tok_df
     })
@@ -98,16 +98,17 @@ read_vstheme <- function(vstheme) {
     semantic_df$section <- "semanticTokenColors"
   }
 
-
   # Colors (Settings)
   settings_list <- vs$colors
 
-  it <- seq_len(length(settings_list))
+  it <- seq_along(settings_list)
 
   settings_df <- lapply(it, function(i) {
     x <- settings_list[i]
     val <- unlist(x)
-    if (length(val) < 1) val <- NA
+    if (length(val) < 1) {
+      val <- NA
+    }
     dplyr::tibble(
       name = names(x),
       foreground = unname(val)
@@ -120,14 +121,15 @@ read_vstheme <- function(vstheme) {
   # Token colors
 
   token_list <- vs$tokenColors
-  it <- seq_len(length(token_list))
-
+  it <- seq_along(token_list)
 
   token_df <- lapply(it, function(i) {
     this_tok <- token_list[i][[1]]
 
     nm <- unlist(this_tok$name)
-    if (is.null(nm)) nm <- paste0("tokenColors ", i)
+    if (is.null(nm)) {
+      nm <- paste0("tokenColors ", i)
+    }
 
     # Split in individual pieces (some jsons provides it collapsed)
     scopes <- sort(unlist(this_tok$scope))
@@ -151,7 +153,6 @@ read_vstheme <- function(vstheme) {
   token_df <- dplyr::bind_rows(token_df)
   token_df$section <- "tokenColors"
 
-
   #  Final df
   final_df <- dplyr::bind_rows(top_df, settings_df, semantic_df, token_df)
 
@@ -165,12 +166,17 @@ read_vstheme <- function(vstheme) {
   }
 
   nms <- unique(c(
-    "section", "name", "scope", "value", "foreground", "background",
-    "fontStyle", names(final_df)
+    "section",
+    "name",
+    "scope",
+    "value",
+    "foreground",
+    "background",
+    "fontStyle",
+    names(final_df)
   ))
 
   final_df <- final_df[, nms]
-
 
   # Blanks as NAs
   final_df[final_df == ""] <- NA

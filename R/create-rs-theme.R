@@ -1,10 +1,13 @@
-create_rstheme <- function(input_theme,
-                           out_rs = tempfile(fileext = ".rstheme"),
-                           use_italics = TRUE,
-                           themed_ide = TRUE,
-                           output_style = "expanded",
-                           force = FALSE, apply = FALSE) {
-  tmcols <- read_tmtheme(input_theme)
+create_rs_theme <- function(
+  input_theme,
+  out_rs = tempfile(fileext = ".rstheme"),
+  use_italics = TRUE,
+  themed_ide = TRUE,
+  output_style = "expanded",
+  force = FALSE,
+  apply = FALSE
+) {
+  tmcols <- read_tm_theme(input_theme)
   # Top level cols
   tb_hlp_top <- dplyr::tibble(
     name = c("caret", "invisibles"),
@@ -14,7 +17,6 @@ create_rstheme <- function(input_theme,
   tmcols_top <- dplyr::inner_join(tmcols, tb_hlp_top, by = "name")
   keepvals <- c("rstheme", "foreground", "background", "fontStyle")
   rstheme_top <- tmcols_top[, keepvals]
-
 
   # Map tmTheme scopes to ace_editor (css) rules
   tmcols_scopes <- tmcols[
@@ -33,7 +35,8 @@ create_rstheme <- function(input_theme,
   ## *.link to href
 
   tmcols_scopes[
-    grepl("markup[\\S]*link|link[\\S]*markdown",
+    grepl(
+      "markup[\\S]*link|link[\\S]*markdown",
       tmcols_scopes$scope,
       perl = TRUE
     ),
@@ -41,10 +44,7 @@ create_rstheme <- function(input_theme,
 
   ## Additonal markup heading
   heading <- tmcols_scopes[
-    grepl("markup.heading",
-      tmcols_scopes$scope,
-      fixed = TRUE
-    ),
+    grepl("markup.heading", tmcols_scopes$scope, fixed = TRUE),
   ]
   heading$scope <- "heading"
   tmcols_scopes <- rbind(tmcols_scopes, heading)
@@ -63,22 +63,21 @@ create_rstheme <- function(input_theme,
   # Final touch
   end_df <- dplyr::bind_rows(rstheme_top, tmcols_scopes_end)
 
-
   end_df$fontweight <- ifelse(
-    grepl("bold", end_df$fontStyle, ignore.case = TRUE), "bold", NA
+    grepl("bold", end_df$fontStyle, ignore.case = TRUE),
+    "bold",
+    NA
   )
 
   if (use_italics) {
     end_df$fontstyle <- ifelse(
-      grepl("italic", end_df$fontStyle,
-        ignore.case = TRUE
-      ),
-      "italic", NA
+      grepl("italic", end_df$fontStyle, ignore.case = TRUE),
+      "italic",
+      NA
     )
   } else {
     end_df$fontstyle <- NA
   }
-
 
   new_css <- c("/* Rules from tmTheme */", "")
   for (cssrule in end_df$rstheme) {
@@ -86,7 +85,8 @@ create_rstheme <- function(input_theme,
     if (cssrule == ".ace_print-margin") {
       thisrule <- paste0(
         ".ace_print-margin {background: ",
-        thisval$foreground, ";}"
+        thisval$foreground,
+        ";}"
       )
       new_css <- c(new_css, thisrule, "")
     } else {
@@ -97,7 +97,9 @@ create_rstheme <- function(input_theme,
         "font-style" = thisval$fontstyle
       )
       newr_clean <- newr[!is.na(newr)]
-      if (length(newr_clean) == 0) next # Empty model
+      if (length(newr_clean) == 0) {
+        next
+      } # Empty model
       specs <- paste0(names(newr_clean), ": ", newr_clean, ";", collapse = " ")
       thisrule <- paste0(cssrule, " {", specs, "}")
       new_css <- c(new_css, thisrule, "")
@@ -110,11 +112,12 @@ create_rstheme <- function(input_theme,
   uuid <- generate_uuid()
   tmp <- file.path(tempdir(), uuid)
   dir.create(tmp)
-  rstudioapi::convertTheme(input_theme,
-    add = FALSE, outputLocation = tmp,
+  rstudioapi::convertTheme(
+    input_theme,
+    add = FALSE,
+    outputLocation = tmp,
     force = TRUE
   )
-
 
   # Read the lines of the auto-generated rstheme (is a css)
   # and add new css rules and extra cols
@@ -124,7 +127,8 @@ create_rstheme <- function(input_theme,
 
   vtext <- paste0(
     "/* Generated with rstudiothemes package (",
-    packageVersion("rstudiothemes"), ") */"
+    packageVersion("rstudiothemes"),
+    ") */"
   )
 
   additional <- c("")
@@ -132,8 +136,10 @@ create_rstheme <- function(input_theme,
     hl_sass <- dplyr::tibble(
       section = "colors",
       name = c(
-        "foreground", "background",
-        "caret", "selection"
+        "foreground",
+        "background",
+        "caret",
+        "selection"
       ),
       var = c("fg", "bg", "accent", "selection")
     )
@@ -147,17 +153,15 @@ create_rstheme <- function(input_theme,
 
     additional <- c(
       sass_vars,
-      readLines(system.file("scss/_themed_ide.scss",
-        package = "rstudiothemes"
-      ))
+      readLines(system.file("scss/_themed_ide.scss", package = "rstudiothemes"))
     )
   }
 
   themelines <- c(themelines, vtext, "", new_css, additional)
 
-
   # Write
-  sass::sass(themelines,
+  sass::sass(
+    themelines,
     output = out_rs,
     cache = FALSE,
     options = sass::sass_options(output_style = output_style)
@@ -166,7 +170,7 @@ create_rstheme <- function(input_theme,
   # Install
   rstudioapi::addTheme(out_rs, apply = apply, force = force)
   unlink(tmp)
-  return(invisible(out_rs))
+  invisible(out_rs)
 }
 
 create_ace_cascade <- function(tmcols_scopes) {
@@ -174,22 +178,24 @@ create_ace_cascade <- function(tmcols_scopes) {
   full <- dplyr::distinct(full, .keep_all = FALSE)
 
   # Don't want scopes with spaces - pseudo css
-  full <- full[!grepl(" ", full$scope), ]
-
+  full <- full[!grepl(" ", full$scope, fixed = TRUE), ]
 
   # Workout levels
 
-  level <- vapply(full$scope, function(x) {
-    ll <- gregexpr(".", x, fixed = TRUE)
-    if (-1 %in% ll) {
-      return(1)
-    }
+  level <- vapply(
+    full$scope,
+    function(x) {
+      ll <- gregexpr(".", x, fixed = TRUE)
+      if (-1 %in% ll) {
+        return(1)
+      }
 
-    length(unlist(ll)) + 1
-  }, FUN.VALUE = numeric(1))
+      length(unlist(ll)) + 1
+    },
+    FUN.VALUE = numeric(1)
+  )
 
   level <- unname(level)
-
 
   lev3 <- full[level == 3, ]
   lev2 <- full[level == 2, ]
@@ -198,7 +204,6 @@ create_ace_cascade <- function(tmcols_scopes) {
   # Ensure single value for scope
   lev3 <- more_freq_rule(lev3)
 
-
   # Enrich lev2 with this info
 
   lev2_xtra <- lev3
@@ -206,14 +211,17 @@ create_ace_cascade <- function(tmcols_scopes) {
   # Limit fontStyle inheritance
   lev2_xtra$fontStyle <- NA
 
-  lev2_xtra$scope <- vapply(lev3$scope, function(x) {
-    l <- unlist(strsplit(x, split = ".", fixed = TRUE))
+  lev2_xtra$scope <- vapply(
+    lev3$scope,
+    function(x) {
+      l <- unlist(strsplit(x, split = ".", fixed = TRUE))
 
-    paste0(l[seq_len(2)], collapse = ".")
-  }, FUN.VALUE = character(1))
+      paste0(l[seq_len(2)], collapse = ".")
+    },
+    FUN.VALUE = character(1)
+  )
 
   lev2_xtra <- more_freq_rule(lev2_xtra)
-
 
   lev2_end <- dplyr::bind_rows(
     lev2,
@@ -223,17 +231,20 @@ create_ace_cascade <- function(tmcols_scopes) {
   lev2_end <- more_freq_rule(lev2_end)
   # Enrich lev1 with this info
 
-
   lev1_xtra <- lev2_end
 
   # Limit fontStyle inheritance
   lev1_xtra$fontStyle <- NA
 
-  lev1_xtra$scope <- vapply(lev2_end$scope, function(x) {
-    l <- unlist(strsplit(x, split = ".", fixed = TRUE))
+  lev1_xtra$scope <- vapply(
+    lev2_end$scope,
+    function(x) {
+      l <- unlist(strsplit(x, split = ".", fixed = TRUE))
 
-    l[1]
-  }, FUN.VALUE = character(1))
+      l[1]
+    },
+    FUN.VALUE = character(1)
+  )
   lev1_xtra <- more_freq_rule(lev1_xtra)
 
   lev1_end <- dplyr::bind_rows(
@@ -243,15 +254,14 @@ create_ace_cascade <- function(tmcols_scopes) {
 
   lev1_end <- more_freq_rule(lev1_end)
 
-
   final_ace <- dplyr::bind_rows(lev1_end, lev2_end, lev3)
   final_ace <- more_freq_rule(final_ace)
   final_ace <- final_ace[!duplicated(final_ace$scope), ]
   final_ace <- final_ace[order(final_ace$scope), ]
-  final_ace$rstheme <- paste0(".ace_", gsub(".", ".ace_",
-    final_ace$scope,
-    fixed = TRUE
-  ))
+  final_ace$rstheme <- paste0(
+    ".ace_",
+    gsub(".", ".ace_", final_ace$scope, fixed = TRUE)
+  )
   final_ace[, c("rstheme", "foreground", "background", "fontStyle")]
 }
 

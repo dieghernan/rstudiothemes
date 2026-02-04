@@ -507,9 +507,10 @@
 # Simple Theme creation
 
     Code
-      vstheme2tmtheme(vstheme, out_tm = tmout)
+      thef <- convert_vs_to_tm_theme(vstheme, out_tm = tmout)
     Message
-      This vscode theme does not have author, use the `author` parameter
+      tmTheme created in xxx
+      tmTheme created in xxx
 
 ---
 

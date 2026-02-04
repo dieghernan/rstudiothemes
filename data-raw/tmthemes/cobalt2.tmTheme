@@ -4,7 +4,7 @@
     <key>name</key>
     <string>cobalt2</string>
     <key>author</key>
-    <string>rstudiothemes R package</string>
+    <string>Wes Bos</string>
     <key>colorSpaceName</key>
     <string>sRGB</string>
     <key>semanticClass</key>
@@ -12,7 +12,7 @@
     <key>comment</key>
     <string>Generated with rstudiothemes R package</string>
     <key>uuid</key>
-    <string>37356662-3165-4337-b664-656532393965</string>
+    <string>38303662-6534-4030-b136-353263643465</string>
     <key>settings</key>
     <array>
       <dict>
