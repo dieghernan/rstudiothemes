@@ -57,7 +57,7 @@ path <- vstheme2tmtheme(vstheme)
 #> This vscode theme does not have author, use the `author` parameter
 
 path
-#> [1] "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\RtmpSaIaNr\\file1d44158e13a3.tmTheme"
+#> [1] "/tmp/RtmpvrZ6NH/file22d03cf3a34a.tmTheme"
 
 readLines(path) |>
   head(50) |>

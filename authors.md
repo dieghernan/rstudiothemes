@@ -11,13 +11,13 @@
 Source:
 [`inst/CITATION`](https://github.com/dieghernan/rstudiothemes/blob/main/inst/CITATION)
 
-Hernangómez D (2025). *rstudiothemes: Ports of Visual Studio Code Themes
+Hernangómez D (2026). *rstudiothemes: Ports of Visual Studio Code Themes
 for RStudio*.
 
     @Manual{R-rstudiothemes,
       title = {{rstudiothemes}: Ports of {Visual Studio Code} Themes for {RStudio}},
       author = {Diego Hernangómez},
-      year = {2025},
+      year = {2026},
       version = {0.0.0.9000},
       abstract = {Create and install RStudio themes originated from Visual Studio Code themes.},
     }

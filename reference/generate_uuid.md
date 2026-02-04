@@ -11,7 +11,8 @@ generate_uuid(hint = NULL)
 
 ## Source
 
-Heavily based on unreleased version of `ids::uuid()`.
+Heavily based on unreleased version of
+[`ids::uuid()`](https://rdrr.io/pkg/ids/man/uuid.html).
 
 ## Arguments
 
