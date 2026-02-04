@@ -1,5 +1,6 @@
-library(rstudiothemes)
+# library(rstudiothemes)
 library(tidyverse)
+devtools::load_all()
 mythemes <- list.files(
   "./data-raw/tmthemes",
   pattern = "tmTheme",
@@ -14,5 +15,5 @@ for (t in mythemes) {
     str_replace_all(" ", "_") %>%
     file.path("inst/rsthemes", .)
 
-  create_rstheme(t, out, force = TRUE)
+  create_rs_theme(t, out, force = TRUE)
 }

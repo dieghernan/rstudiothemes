@@ -3173,7 +3173,7 @@
 .rstudio-themes-dark-grey .rstheme_toolbarWrapper,
 .rstudio-themes-default .rstheme_toolbarWrapper {
   background: #31364b;
-  foreground: #A9B1D6;
+  color: #A9B1D6;
 }
 
 .rstudio-themes-dark-grey .rstheme_toolbarWrapper button,

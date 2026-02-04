@@ -7,7 +7,15 @@ create_rs_theme <- function(
   force = FALSE,
   apply = FALSE
 ) {
+  ext <- tools::file_ext(input_theme)
+
+  if (ext == "json") {
+    tm_temp <- tempfile(fileext = ".tmTheme")
+    input_theme <- convert_vs_to_tm_theme(input_theme, tm_temp)
+  }
+
   tmcols <- read_tm_theme(input_theme)
+
   # Top level cols
   tb_hlp_top <- dplyr::tibble(
     name = c("caret", "invisibles"),
