@@ -4,6 +4,10 @@ Adaptation of some rsthemes functions.
 
 MIT License Copyright (c) 2024 rsthemes authors.
 
+**Important**: These functions (except
+`list_rstudiothemes(list_installed = FALSE)` only works in RStudio; it
+returns `NULL` when called from other IDEs.
+
 ## Usage
 
 ``` r
@@ -13,7 +17,11 @@ remove_rstudiothemes(style = c("all", "dark", "light"))
 
 list_rstudiothemes(style = c("all", "dark", "light"), list_installed = TRUE)
 
-try_rstudiothemes(style = c("all", "dark", "light"), delay = 0)
+try_rstudiothemes(
+  style = c("all", "dark", "light"),
+  selected = NULL,
+  delay = 0
+)
 ```
 
 ## Arguments
@@ -35,6 +43,11 @@ try_rstudiothemes(style = c("all", "dark", "light"), delay = 0)
   Should the installed rstudiothemes themes be listed (default). If
   `FALSE`, the available themes in the rstudiothemes package are listed
   instead.
+
+- selected:
+
+  Vector of theme names (`list_rstudiothemes()`). If provided just those
+  themes would be tried, and `style` will be ignored.
 
 - delay:
 
@@ -75,7 +88,7 @@ Garrick Aden-Buie <https://github.com/gadenbuie>
 ``` r
 list_rstudiothemes()
 #> ℹ Detected GUI: "RTerm".
-#> ✖ `rstudiothemes::try_rs_themes()` only works in RStudio, not in RTerm.
+#> ✖ `rstudiothemes::list_rstudiothemes()` only works in RStudio, not in RTerm.
 #> → Bye
 #> NULL
 ```

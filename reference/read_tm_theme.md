@@ -1,7 +1,7 @@
 # Read and parse a TextMate theme
 
-Read a `*.tmTheme` file (which is XML) representing a TextMate or
-Sublime Text theme.
+Read a `.tmTheme` file (which is XML) representing a TextMate or Sublime
+Text theme.
 
 ## Usage
 
@@ -13,7 +13,7 @@ read_tm_theme(path)
 
 - path:
 
-  Path to a TextMate theme, in `*.tmTheme` format.
+  Path or URL to a TextMate theme, in `.tmTheme` format.
 
 ## Value
 

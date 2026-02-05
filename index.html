@@ -97,27 +97,39 @@
 <p>This package includes ports of several popular Visual Studio Code themes, ready to use in RStudio. Simply use the <code><a href="reference/rstudiothemes-actions.html">install_rstudiothemes()</a></code> function to install them into your RStudio environment:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">rstudiothemes</span><span class="fu">::</span><span class="fu"><a href="reference/rstudiothemes-actions.html">install_rstudiothemes</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; ℹ Detected GUI: "RTerm".</span></span>
-<span><span class="co">#&gt; ✖ `rstudiothemes::try_rs_themes()` only works in RStudio, not in RTerm.</span></span>
-<span><span class="co">#&gt; → Bye</span></span>
-<span><span class="co">#&gt; NULL</span></span>
 <span></span>
-<span><span class="fu">rstudiothemes</span><span class="fu">::</span><span class="fu"><a href="reference/rstudiothemes-actions.html">list_rstudiothemes</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; ℹ Detected GUI: "RTerm".</span></span>
-<span><span class="co">#&gt; ✖ `rstudiothemes::try_rs_themes()` only works in RStudio, not in RTerm.</span></span>
-<span><span class="co">#&gt; → Bye</span></span>
-<span><span class="co">#&gt; NULL</span></span></code></pre></div>
-<p>Available themes include popular choices such as Tokyo Night, Night Owl, Winter is Coming, SynthWave 84, Nord, and many others.</p>
+<span><span class="co">#&gt; ✔ Installed 31 themes</span></span>
+<span><span class="co">#&gt; ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes</span></span>
+<span><span class="co">#&gt; ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes</span></span></code></pre></div>
+<p>Available themes include popular choices such as Tokyo Night, Night Owl, Winter is Coming, SynthWave 84, Nord, and many others:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">rstudiothemes</span><span class="fu">::</span><span class="fu"><a href="reference/rstudiothemes-actions.html">list_rstudiothemes</a></span><span class="op">(</span>list_installed <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="co">#&gt;  [1] "cobalt2"                      "CRAN"                        </span></span>
+<span><span class="co">#&gt;  [3] "Dracula2025"                  "GitHub Dark"                 </span></span>
+<span><span class="co">#&gt;  [5] "GitHub Light"                 "JellyFish Theme"             </span></span>
+<span><span class="co">#&gt;  [7] "Night Owl"                    "Nord"                        </span></span>
+<span><span class="co">#&gt;  [9] "OKSolar Blue"                 "OKSolar Dark"                </span></span>
+<span><span class="co">#&gt; [11] "OKSolar Green"                "OKSolar Light"               </span></span>
+<span><span class="co">#&gt; [13] "OKSolar Purple"               "OKSolar Red"                 </span></span>
+<span><span class="co">#&gt; [15] "OKSolar Sky"                  "Overflow Dark"               </span></span>
+<span><span class="co">#&gt; [17] "Overflow Dark High Contrast"  "Overflow Light"              </span></span>
+<span><span class="co">#&gt; [19] "Overflow Light High Contrast" "Panda Syntax"                </span></span>
+<span><span class="co">#&gt; [21] "rOpenSpain"                   "Selenized Black"             </span></span>
+<span><span class="co">#&gt; [23] "Selenized Dark"               "Selenized Light"             </span></span>
+<span><span class="co">#&gt; [25] "Selenized White"              "Skeletor Syntax"             </span></span>
+<span><span class="co">#&gt; [27] "SynthWave 84"                 "Tokyo Night"                 </span></span>
+<span><span class="co">#&gt; [29] "Tokyo Night Light"            "Tokyo Night Storm"           </span></span>
+<span><span class="co">#&gt; [31] "Winter is Coming Dark Blue"</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>You can install <strong>rstudiothemes</strong> using either of these methods:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
 <span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"dieghernan/rstudiothemes"</span><span class="op">)</span></span></code></pre></div>
 <p>Or, install it from r-universe:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Install rstudiothemes in R:</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span></span>
 <span>  <span class="st">"rstudiothemes"</span>,</span>
@@ -128,20 +140,29 @@
 <span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="creating-a-new-theme">Creating a new theme<a class="anchor" aria-label="anchor" href="#creating-a-new-theme"></a>
+<h2 id="migrating-an-existing-theme">Migrating an existing theme<a class="anchor" aria-label="anchor" href="#migrating-an-existing-theme"></a>
 </h2>
 <p>You can convert any Visual Studio Code or TextMate theme to RStudio format. Here’s how:</p>
 <ol style="list-style-type: decimal">
-<li>Download your favorite Visual Studio Code or TextMate theme file.</li>
-<li>Use the <code><a href="reference/convert_to_rs_theme.html">convert_to_rs_theme()</a></code> function to convert and install it:</li>
+<li>Use your favorite Visual Studio Code or TextMate theme file or the URL of an online theme.</li>
+<li>Use the <code><a href="reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme()</a></code> function to convert and install it:</li>
 </ol>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">rstudiothemes</span><span class="fu">::</span><span class="fu"><a href="reference/convert_to_rs_theme.html">convert_to_rs_theme</a></span><span class="op">(</span><span class="st">"&lt;path/to/file&gt;"</span>, apply <span class="op">=</span> <span class="cn">TRUE</span>, force <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">rstudiothemes</span><span class="fu">::</span><span class="fu"><a href="reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme</a></span><span class="op">(</span><span class="st">"&lt;path/to/file&gt;"</span>, apply <span class="op">=</span> <span class="cn">TRUE</span>, force <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p>Alternatively, install the <code>.rstheme</code> file via the RStudio UI:</p>
 <p><em>Tools &gt; Global Options &gt; Appearance &gt; Add Theme</em></p>
 <figure><img src="reference/figures/rstudiogui.png" alt="Example on how to update themes on RStudio IDE"><figcaption aria-hidden="true">
 Example on how to update themes on RStudio IDE
 </figcaption></figure><p>The package also includes the reverse conversion functions <code><a href="reference/convert_vs_to_tm_theme.html">convert_vs_to_tm_theme()</a></code> and <code><a href="reference/convert_tm_to_vs_theme.html">convert_tm_to_vs_theme()</a></code>, allowing you to convert themes in both directions if needed.</p>
+</div>
+<div class="section level2">
+<h2 id="creating-themes-from-scratch">Creating themes from scratch<a class="anchor" aria-label="anchor" href="#creating-themes-from-scratch"></a>
+</h2>
+<p><strong>rstudiothemes</strong> does not provide a built-in theme editor, but you can create your own themes from scratch using the following tools:</p>
+<ul>
+<li>TextMate <code>*tmTheme</code>: <a href="https://tmtheme-editor.linuxbox.ninja/" class="external-link uri">https://tmtheme-editor.linuxbox.ninja/</a>. Also see the official RStudio documentation on <a href="https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html" class="external-link">creating themes</a>.</li>
+<li>Visual Studio Code <code>*json</code>: See the official documentation on <a href="https://code.visualstudio.com/api/extension-guides/color-theme" class="external-link">creating color themes</a>.</li>
+</ul>
 </div>
 <div class="section level2">
 <h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>

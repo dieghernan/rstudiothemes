@@ -1,7 +1,7 @@
 # Convert a TextMate or VS Code theme to an RStudio theme
 
-Read a `*.tmTheme` or `*.json` file that defines a TextMate or Visual
-Studio Code theme and write the equivalent RStudio theme `*.rstheme`.
+Read a `.tmTheme` or `.json` file that defines a TextMate or Visual
+Studio Code theme and write the equivalent RStudio theme `.rstheme`.
 
 Optionally, the generated theme can be installed and applied to the
 RStudio IDE.
@@ -14,7 +14,7 @@ Function tested in **RStudio 2026.01.0+392** "Apple Blossom".
 ## Usage
 
 ``` r
-convert_to_rs_theme(
+convert_to_rstudio_theme(
   path,
   outfile = tempfile(fileext = ".rstheme"),
   name = NULL,
@@ -29,8 +29,8 @@ convert_to_rs_theme(
 
 - path:
 
-  Path to a TextMate theme (in `*.tmTheme` format) or a Visual Studio
-  Code theme, in `*.json` format.
+  Path or URL to a TextMate theme (in `.tmTheme` format) or a Visual
+  Studio Code theme, in `.json` format.
 
 - outfile:
 
@@ -65,18 +65,17 @@ convert_to_rs_theme(
 
 ## Value
 
-This function is called for its side effects. It writes a new
-`*.rstheme` file to `outfile` and returns the path. If `force` or
-`apply` are `TRUE`, it will install and apply the theme to your RStudio
-IDE.
+This function is called for its side effects. It writes a new `.rstheme`
+file to `outfile` and returns the path. If `force` or `apply` are
+`TRUE`, it will install and apply the theme to your RStudio IDE.
 
 ## Details
 
-RStudio supports custom editor themes in two formats: `tmTheme` and
-`rstheme`. The `tmTheme` format originated with TextMate and has become
-a common theme format. [This tmTheme
+RStudio supports custom editor themes in two formats: `.tmTheme` and
+`.rstheme`. The `.tmTheme` format originated with TextMate and has
+become a common theme format. [This tmTheme
 editor](https://tmtheme-editor.linuxbox.ninja/) hosts a large collection
-of `tmTheme` files. The `rstheme` format is specific to RStudio.
+of `.tmTheme` files. The `.rstheme` format is specific to RStudio.
 
 To switch editor themes, go to `Tools > Global Options > Appearance` and
 use the Editor theme selector.
@@ -110,7 +109,7 @@ if (on_rstudio() && interactive()) {
 
   # Current theme name:
   current_theme
-  new_rs_theme <- convert_to_rs_theme(vstheme,
+  new_rs_theme <- convert_to_rstudio_theme(vstheme,
     name = "A testing theme",
     apply = TRUE, force = TRUE
   )

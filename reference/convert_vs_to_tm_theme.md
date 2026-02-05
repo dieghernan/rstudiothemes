@@ -1,7 +1,7 @@
 # Convert a Visual Studio Code theme into a TextMate theme
 
-Read a `*.json` file representing a Visual Studio Code theme and write
-the equivalent TextMate theme (`*.tmTheme`).
+Read a `.json` file representing a Visual Studio Code theme and write
+the equivalent TextMate theme (`.tmTheme`).
 
 ## Usage
 
@@ -18,7 +18,7 @@ convert_vs_to_tm_theme(
 
 - path:
 
-  Path to a Visual Studio Code theme, in `*.json` format.
+  Path or URL to a Visual Studio Code theme, in `.json` format.
 
 - outfile:
 
@@ -37,14 +37,14 @@ convert_vs_to_tm_theme(
 
 ## Value
 
-This function is called for its side effects: it writes a `*.tmTheme`
+This function is called for its side effects: it writes a `.tmTheme`
 file to `outfile` and returns the path.
 
 ## See also
 
 Other functions for creating themes:
 [`convert_tm_to_vs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_tm_to_vs_theme.md),
-[`convert_to_rs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_to_rs_theme.md)
+[`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_to_rstudio_theme.md)
 
 ## Examples
 

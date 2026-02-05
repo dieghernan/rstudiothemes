@@ -4,7 +4,7 @@
 
 - [`convert_tm_to_vs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_tm_to_vs_theme.md)
   : Convert a TextMate theme into a Visual Studio Code theme
-- [`convert_to_rs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_to_rs_theme.md)
+- [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_to_rstudio_theme.md)
   : Convert a TextMate or VS Code theme to an RStudio theme
 - [`convert_vs_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_vs_to_tm_theme.md)
   : Convert a Visual Studio Code theme into a TextMate theme
