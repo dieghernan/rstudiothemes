@@ -51,7 +51,13 @@ RStudio IDE.
 \strong{Important}: This function only works in RStudio; it returns \code{NULL} when
 called from other IDEs.
 
-Function tested in \strong{RStudio 2026.01.0+392} "Apple Blossom".
+\if{html}{\out{<div class="sourceCode {r, echo=FALSE, results='asis'}">}}\preformatted{v <- rstudioapi::versionInfo()
+c("\\n", paste0(
+  " Function tested in **RStudio ", v$long_version,
+  '** "', v$release_name, '".'
+)) |> cat()
+
+}\if{html}{\out{</div>}}
 }
 \details{
 RStudio supports custom editor themes in two formats: \code{.tmTheme} and
