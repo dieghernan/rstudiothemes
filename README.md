@@ -24,9 +24,14 @@ in `.rstheme` format since [version
 
 ## Features
 
-- Convert VS Code and TextMate themes into RStudio `.rstheme` format.
+- Convert Visual Studio Code and TextMate themes into RStudio `.rstheme`
+  format.
+- Bidirectional conversion between Visual Studio Code and TextMate
+  themes.
 - Organize and manage custom themes in a reproducible way.
 - Integrates with R tooling for easier installation and testing.
+- Includes ports of popular Visual Studio Code themes ready to use in
+  RStudio.
 
 ## Built-in Themes
 
@@ -122,7 +127,9 @@ alt="Example on how to update themes on RStudio IDE" />
 RStudio IDE</figcaption>
 </figure>
 
-The package also includes the reverse conversion functions
+### Bidirectional conversion Visual Studio Code - TextMate
+
+The package also includes the conversion functions
 `convert_vs_to_tm_theme()` and `convert_tm_to_vs_theme()`, allowing you
 to convert themes in both directions if needed.
 
