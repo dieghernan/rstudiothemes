@@ -80,16 +80,53 @@
 <!-- badges: start -->
 
 <!-- badges: end -->
-<p>The goal of <strong>rstudiothemes</strong> is to …</p>
+</div>
+<div class="section level1">
+<h1 id="rstudiothemes">rstudiothemes<a class="anchor" aria-label="anchor" href="#rstudiothemes"></a>
+</h1>
+<p>Create custom <strong>RStudio themes</strong> from <strong>Visual Studio Code</strong> and <strong>TextMate</strong> theme formats.</p>
+<p>This project provides tools to convert and work with <code>.tmTheme</code> / <code>.json</code> (VS Code / TextMate) theme files and generate <code>.rstheme</code> files that can be installed into RStudio. RStudio supports custom themes (in <code>.rstheme</code> format) as of version 1.2+. (<a href="https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html" class="external-link">rstudio.github.io</a>)</p>
+<div class="section level2">
+<h2 id="features">Features<a class="anchor" aria-label="anchor" href="#features"></a>
+</h2>
+<ul>
+<li>Convert VS Code and TextMate themes into RStudio <code>.rstheme</code> format</li>
+<li>Organize and manage custom themes in a reproducible way</li>
+<li>Integrates with R tooling for easier installation and testing</li>
+</ul>
+</div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of rstudiothemes from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
-<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"dieghernan/rstudiothemes"</span><span class="op">)</span></span></code></pre></div>
+<p>You can install the developing version of <strong>rstudiothemes</strong> with:</p>
+<p><code>{r, eval=FALSE} # install.packages(“pak”) pak::pak(“dieghernan/rstudiothemes”)</code></p>
+<p>Alternatively, you can install <strong>geobounds</strong> using the <a href="https://dieghernan.r-universe.dev/rstudiothemes" class="external-link">r-universe</a>:</p>
+<p><code>{r, eval=FALSE} # Install rstudiothemes in R: install.packages(   “rstudiothemes”,   repos = c(     “https://dieghernan.r-universe.dev”,     “https://cloud.r-project.org”   ) )</code></p>
+</div>
+<div class="section level2">
+<h2 id="example-workflow-high-level">Example workflow (high-level):<a class="anchor" aria-label="anchor" href="#example-workflow-high-level"></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li>Add your Visual Studio Code or TextMate theme files into the appropriate folder.</li>
+<li>Use provided functions or scripts to convert these files into .rstheme files.</li>
+<li>Install the generated <code>.rstheme</code> in RStudio using:</li>
+</ol>
+<p><code>{r, eval=FALSE} rstudioapi::addTheme(“path/to/theme.rstheme”, apply = TRUE)</code></p>
+<p>Alternatively, install themes via the RStudio UI:</p>
+<p><em>Tools &gt; Global Options &gt; Appearance &gt; Add Theme…</em></p>
+</div>
+<div class="section level2">
+<h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
+</h2>
+<p>Contributions are welcome! Please:</p>
+<ol style="list-style-type: decimal">
+<li>Open an issue to discuss changes or ideas.</li>
+<li>Fork the repository and submit a pull request.</li>
+<li>Follow standard GitHub workflows with clear commit messages.</li>
+</ol>
 </div>
 </div>
+
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
