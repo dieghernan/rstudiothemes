@@ -9,8 +9,6 @@ RStudio IDE.
 **Important**: This function only works in RStudio; it returns `NULL`
 when called from other IDEs.
 
-Function tested in **RStudio 2026.01.0+392** "Apple Blossom".
-
 ## Usage
 
 ``` r
