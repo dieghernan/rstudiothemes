@@ -5,9 +5,9 @@ Version: 0.0.0.9000
 Authors@R:
     person("Diego", "Hernangómez", , "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0001-8457-4658"))
-Description: Create and install 'RStudio' themes derived from Visual Studio
-    Code and 'TextMate' themes; also provides functions to convert between
-    TextMate and Visual Studio Code themes.
+Description: Create and install 'RStudio' themes derived from Visual
+    Studio Code and 'TextMate' themes; also provides functions to convert
+    between TextMate and Visual Studio Code themes.
 License: MIT + file LICENSE
 URL: https://dieghernan.github.io/rstudiothemes/,
     https://github.com/dieghernan/rstudiothemes

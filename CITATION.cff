@@ -10,9 +10,9 @@ license: MIT
 title: 'rstudiothemes: Create ''RStudio'' Themes from Visual Studio Code and ''TextMate''
   Themes'
 version: 0.0.0.9000
-abstract: Create and install RStudio themes derived from Visual Studio Code and TextMate
-  themes; also provides functions to convert between TextMate and Visual Studio Code
-  themes.
+abstract: Create and install 'RStudio' themes derived from Visual Studio Code and
+  'TextMate' themes; also provides functions to convert between TextMate and Visual
+  Studio Code themes.
 authors:
 - family-names: Hernangómez
   given-names: Diego
