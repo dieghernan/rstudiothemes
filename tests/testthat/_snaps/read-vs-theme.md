@@ -22,3 +22,10 @@
       Error in `read_vs_theme()`:
       ! File 'a.json' does not exists.
 
+# Online
+
+    Code
+      res <- read_vs_theme(path)
+    Message
+      i Downloading from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test-color-theme.json>
+

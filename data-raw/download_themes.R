@@ -35,8 +35,8 @@ download.file(url, dest, mode = "wb")
 
 
 # Generate rstheme
-convert_to_rs_theme("<path/to/file>", apply = TRUE, force = TRUE)
-dd <- convert_to_rs_theme(
+convert_to_rstudio_theme("<path/to/file>", apply = TRUE, force = TRUE)
+dd <- convert_to_rstudio_theme(
   dest,
   "inst/rsthemes/Nord.rstheme",
   force = TRUE,

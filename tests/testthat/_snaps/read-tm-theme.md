@@ -46,3 +46,10 @@
        [5] "author"         "comment"        "background"     "caret"         
        [9] "foreground"     "invisibles"     "lineHighlight"  "selection"     
 
+# Online
+
+    Code
+      res <- read_tm_theme(path)
+    Message
+      i Downloading from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test.tmTheme>
+

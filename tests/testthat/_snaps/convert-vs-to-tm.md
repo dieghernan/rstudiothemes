@@ -3,7 +3,7 @@
     Code
       convert_vs_to_tm_theme()
     Condition
-      Error in `convert_vs_to_tm_theme()`:
+      Error in `read_vs_theme()`:
       ! Argument `path` can't be empty.
 
 ---
@@ -11,7 +11,7 @@
     Code
       convert_vs_to_tm_theme("a.txt")
     Condition
-      Error in `convert_vs_to_tm_theme()`:
+      Error in `read_vs_theme()`:
       ! Argument `path` should be a "json" file not "txt".
 
 ---
@@ -19,7 +19,7 @@
     Code
       convert_vs_to_tm_theme("a.json")
     Condition
-      Error in `convert_vs_to_tm_theme()`:
+      Error in `read_vs_theme()`:
       ! File 'a.json' does not exists.
 
 # Theme creation
@@ -569,4 +569,11 @@
           <string>Generated with rstudiothemes R package</string>
           <key>uuid</key>
       <string>(masked_uuid)</string>
+
+# Online
+
+    Code
+      thef <- convert_vs_to_tm_theme(path)
+    Message
+      i Downloading from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test-color-theme.json>
 

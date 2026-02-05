@@ -37,20 +37,34 @@ environment:
 
 ``` r
 rstudiothemes::install_rstudiothemes()
-#> ℹ Detected GUI: "RTerm".
-#> ✖ `rstudiothemes::try_rs_themes()` only works in RStudio, not in RTerm.
-#> → Bye
-#> NULL
 
-rstudiothemes::list_rstudiothemes()
-#> ℹ Detected GUI: "RTerm".
-#> ✖ `rstudiothemes::try_rs_themes()` only works in RStudio, not in RTerm.
-#> → Bye
-#> NULL
+#> ✔ Installed 31 themes
+#> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes
+#> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes
 ```
 
 Available themes include popular choices such as Tokyo Night, Night Owl,
-Winter is Coming, SynthWave 84, Nord, and many others.
+Winter is Coming, SynthWave 84, Nord, and many others:
+
+``` r
+rstudiothemes::list_rstudiothemes(list_installed = FALSE)
+#>  [1] "cobalt2"                      "CRAN"                        
+#>  [3] "Dracula2025"                  "GitHub Dark"                 
+#>  [5] "GitHub Light"                 "JellyFish Theme"             
+#>  [7] "Night Owl"                    "Nord"                        
+#>  [9] "OKSolar Blue"                 "OKSolar Dark"                
+#> [11] "OKSolar Green"                "OKSolar Light"               
+#> [13] "OKSolar Purple"               "OKSolar Red"                 
+#> [15] "OKSolar Sky"                  "Overflow Dark"               
+#> [17] "Overflow Dark High Contrast"  "Overflow Light"              
+#> [19] "Overflow Light High Contrast" "Panda Syntax"                
+#> [21] "rOpenSpain"                   "Selenized Black"             
+#> [23] "Selenized Dark"               "Selenized Light"             
+#> [25] "Selenized White"              "Skeletor Syntax"             
+#> [27] "SynthWave 84"                 "Tokyo Night"                 
+#> [29] "Tokyo Night Light"            "Tokyo Night Storm"           
+#> [31] "Winter is Coming Dark Blue"
+```
 
 ## Installation
 
@@ -74,16 +88,18 @@ install.packages(
 )
 ```
 
-## Creating a new theme
+## Migrating an existing theme
 
 You can convert any Visual Studio Code or TextMate theme to RStudio
 format. Here’s how:
 
-1.  Download your favorite Visual Studio Code or TextMate theme file.
-2.  Use the `convert_to_rs_theme()` function to convert and install it:
+1.  Use your favorite Visual Studio Code or TextMate theme file or the
+    URL of an online theme.
+2.  Use the `convert_to_rstudio_theme()` function to convert and install
+    it:
 
 ``` r
-rstudiothemes::convert_to_rs_theme("<path/to/file>", apply = TRUE, force = TRUE)
+rstudiothemes::convert_to_rstudio_theme("<path/to/file>", apply = TRUE, force = TRUE)
 ```
 
 Alternatively, install the `.rstheme` file via the RStudio UI:
@@ -100,6 +116,18 @@ RStudio IDE</figcaption>
 The package also includes the reverse conversion functions
 `convert_vs_to_tm_theme()` and `convert_tm_to_vs_theme()`, allowing you
 to convert themes in both directions if needed.
+
+## Creating themes from scratch
+
+**rstudiothemes** does not provide a built-in theme editor, but you can
+create your own themes from scratch using the following tools:
+
+- TextMate `*tmTheme`: <https://tmtheme-editor.linuxbox.ninja/>. Also
+  see the official RStudio documentation on [creating
+  themes](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html).
+- Visual Studio Code `*json`: See the official documentation on
+  [creating color
+  themes](https://code.visualstudio.com/api/extension-guides/color-theme).
 
 ## Contributing
 

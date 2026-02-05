@@ -7,13 +7,13 @@
 read_tm_theme(path)
 }
 \arguments{
-\item{path}{Path to a TextMate theme, in \verb{*.tmTheme} format.}
+\item{path}{Path or URL to a TextMate theme, in \code{.tmTheme} format.}
 }
 \value{
 A \link[tibble:tbl_df-class]{tibble} with the data of the theme.
 }
 \description{
-Read a \verb{*.tmTheme} file (which is XML) representing a TextMate or
+Read a \code{.tmTheme} file (which is XML) representing a TextMate or
 Sublime Text theme.
 }
 \examples{

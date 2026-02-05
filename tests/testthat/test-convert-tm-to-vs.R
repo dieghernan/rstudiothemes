@@ -76,3 +76,18 @@ test_that("Produce the same results", {
     compare = compare_file_text
   )
 })
+
+test_that("Online", {
+  skip_on_cran()
+
+  path <- paste0(
+    "https://raw.githubusercontent.com/dieghernan/",
+    "rstudiothemes/refs/heads/main/inst/ext/test.tmTheme"
+  )
+
+  expect_snapshot(
+    res <- convert_tm_to_vs_theme(path),
+  )
+  df_json <- read_vs_theme(res)
+  expect_s3_class(df_json, "tbl_df")
+})

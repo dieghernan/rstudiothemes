@@ -28,3 +28,17 @@ test_that("Test simple theme", {
   expect_identical(res[res$name == "name", ]$value, "Skeletor Syntax")
   expect_length(res[res$name == "type", ]$value, 0)
 })
+
+test_that("Online", {
+  skip_on_cran()
+
+  path <- paste0(
+    "https://raw.githubusercontent.com/dieghernan/",
+    "rstudiothemes/refs/heads/main/inst/ext/test-color-theme.json"
+  )
+
+  expect_snapshot(
+    res <- read_vs_theme(path),
+  )
+  expect_s3_class(res, "tbl_df")
+})

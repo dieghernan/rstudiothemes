@@ -14,7 +14,11 @@ remove_rstudiothemes(style = c("all", "dark", "light"))
 
 list_rstudiothemes(style = c("all", "dark", "light"), list_installed = TRUE)
 
-try_rstudiothemes(style = c("all", "dark", "light"), delay = 0)
+try_rstudiothemes(
+  style = c("all", "dark", "light"),
+  selected = NULL,
+  delay = 0
+)
 }
 \arguments{
 \item{style}{Limit to a subgroup of themes (\code{all}, \code{dark}, \code{light}).}
@@ -24,9 +28,12 @@ uses \code{\link[rstudioapi:addTheme]{rstudioapi::addTheme()}} to install themes
 users install themes to non-standard directories, or in case the location
 of the RStudio theme directory has changed.}
 
-\item{list_installed}{Should the installed \pkg{rstudiothemes} themes be listed
-(default). If \code{FALSE}, the available themes in the \pkg{rstudiothemes} package
-are listed instead.}
+\item{list_installed}{Should the installed \pkg{rstudiothemes} themes be
+listed (default). If \code{FALSE}, the available themes in the
+\pkg{rstudiothemes} package are listed instead.}
+
+\item{selected}{Vector of theme names (\code{list_rstudiothemes()}).
+If provided just those themes would be tried, and \code{style} will be ignored.}
 
 \item{delay}{Number of seconds to wait between themes. Set to 0 to be
 prompted to continue after each theme.}
@@ -35,6 +42,10 @@ prompted to continue after each theme.}
 Adaptation of some \pkg{rsthemes} functions.
 
 MIT License Copyright (c) 2024 rsthemes authors.
+
+\strong{Important}: These functions (except
+\code{list_rstudiothemes(list_installed = FALSE)} only works in RStudio;
+it returns \code{NULL} when called from other IDEs.
 }
 \section{Functions}{
 \itemize{
@@ -42,7 +53,8 @@ MIT License Copyright (c) 2024 rsthemes authors.
 
 \item \code{remove_rstudiothemes()}: Remove \pkg{rstudiothemes} from RStudio
 
-\item \code{list_rstudiothemes()}: List installed themes (default) or available themes
+\item \code{list_rstudiothemes()}: List installed themes (default) or
+available themes
 
 \item \code{try_rstudiothemes()}: Try each \pkg{rstudiothemes} RStudio theme
 

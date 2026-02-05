@@ -65,3 +65,18 @@ test_that("Simple Theme creation", {
   expect_snapshot(cat(out[seq(1, 15)], sep = "\n"))
   unlink(tmout2)
 })
+
+
+test_that("Online", {
+  skip_on_cran()
+
+  path <- paste0(
+    "https://raw.githubusercontent.com/dieghernan/",
+    "rstudiothemes/refs/heads/main/inst/ext/test-color-theme.json"
+  )
+  expect_snapshot(
+    thef <- convert_vs_to_tm_theme(path)
+  )
+  read_tm <- read_tm_theme(thef)
+  expect_s3_class(read_tm, "tbl_df")
+})

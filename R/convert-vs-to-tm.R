@@ -1,8 +1,8 @@
 #' Convert a Visual Studio Code theme into a TextMate theme
 #'
 #' @description
-#' Read a `*.json` file representing a Visual Studio Code theme and write
-#' the equivalent TextMate theme (`*.tmTheme`).
+#' Read a `.json` file representing a Visual Studio Code theme and write
+#' the equivalent TextMate theme (`.tmTheme`).
 #'
 #' @inheritParams read_vs_theme
 #' @inheritParams convert_vs_to_tm_theme
@@ -15,7 +15,7 @@
 #'   the theme in `path` will be used.
 #'
 #' @returns
-#' This function is called for its side effects: it writes a `*.tmTheme`
+#' This function is called for its side effects: it writes a `.tmTheme`
 #' file to `outfile` and returns the path.
 #'
 #' @family functions for creating themes
@@ -39,24 +39,6 @@ convert_vs_to_tm_theme <- function(
   name = NULL,
   author = NULL
 ) {
-  # Validate inputs
-  if (missing(path)) {
-    cli::cli_abort("Argument {.arg path} can't be empty.")
-  }
-
-  if (tools::file_ext(path) != "json") {
-    cli::cli_abort(
-      paste0(
-        "Argument {.arg path} should be a {.str json} file",
-        " not {.str {tools::file_ext(path)}}."
-      )
-    )
-  }
-
-  if (!file.exists(path)) {
-    cli::cli_abort("File {.path {path}} does not exists.")
-  }
-
   # Read and parse the VS Code theme file
   vs_df <- read_vs_theme(path)
 

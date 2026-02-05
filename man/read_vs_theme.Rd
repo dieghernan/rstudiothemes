@@ -7,13 +7,13 @@
 read_vs_theme(path)
 }
 \arguments{
-\item{path}{Path to a Visual Studio Code theme, in \verb{*.json} format.}
+\item{path}{Path or URL to a Visual Studio Code theme, in \code{.json} format.}
 }
 \value{
 A \link[tibble:tbl_df-class]{tibble} with the data of the theme.
 }
 \description{
-Read a \verb{*.json} file representing a Visual Studio Code theme.
+Read a \code{.json} file representing a Visual Studio Code theme.
 }
 \examples{
 

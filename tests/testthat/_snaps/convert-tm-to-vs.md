@@ -3,7 +3,7 @@
     Code
       convert_tm_to_vs_theme()
     Condition
-      Error in `convert_tm_to_vs_theme()`:
+      Error in `read_tm_theme()`:
       ! Argument `path` can't be empty.
 
 ---
@@ -11,7 +11,7 @@
     Code
       convert_tm_to_vs_theme("a.txt")
     Condition
-      Error in `convert_tm_to_vs_theme()`:
+      Error in `read_tm_theme()`:
       ! Argument `path` should be a "tmTheme" file not "txt".
 
 ---
@@ -19,7 +19,7 @@
     Code
       convert_tm_to_vs_theme("a.tmTheme")
     Condition
-      Error in `convert_tm_to_vs_theme()`:
+      Error in `read_tm_theme()`:
       ! File 'a.tmTheme' does not exists.
 
 # Theme creation
@@ -682,4 +682,11 @@
           "titleBar.activeForeground": "#F8F8F2"
         }
       }
+
+# Online
+
+    Code
+      res <- convert_tm_to_vs_theme(path)
+    Message
+      i Downloading from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test.tmTheme>
 

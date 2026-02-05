@@ -62,3 +62,18 @@ test_that("Test error theme", {
     regexp = '"lineHighlight" and "selection" values are'
   )
 })
+
+
+test_that("Online", {
+  skip_on_cran()
+
+  path <- paste0(
+    "https://raw.githubusercontent.com/dieghernan/",
+    "rstudiothemes/refs/heads/main/inst/ext/test.tmTheme"
+  )
+
+  expect_snapshot(
+    res <- read_tm_theme(path),
+  )
+  expect_s3_class(res, "tbl_df")
+})

@@ -1,10 +1,10 @@
 #' Read and parse a TextMate theme
 #'
 #' @description
-#' Read a `*.tmTheme` file (which is XML) representing a TextMate or
+#' Read a `.tmTheme` file (which is XML) representing a TextMate or
 #' Sublime Text theme.
 #'
-#' @param path Path to a TextMate theme, in `*.tmTheme` format.
+#' @param path Path or URL to a TextMate theme, in `.tmTheme` format.
 #'
 #' @returns
 #' A [tibble][tibble::tbl_df()] with the data of the theme.
@@ -42,11 +42,20 @@ read_tm_theme <- function(path) {
     )
   }
 
-  if (!file.exists(path)) {
-    cli::cli_abort("File {.path {path}} does not exists.")
+  # Check if the file is online
+  if (grepl("^http", path)) {
+    local_file <- tempfile(fileext = ".tmTheme")
+    cli::cli_alert_info("Downloading from {.url {path}}")
+    download.file(path, local_file, quiet = TRUE)
+  } else {
+    local_file <- path
   }
 
-  tm <- xml2::read_xml(path)
+  if (!file.exists(local_file)) {
+    cli::cli_abort("File {.path {local_file}} does not exists.")
+  }
+
+  tm <- xml2::read_xml(local_file)
   tm <- xml2::as_list(tm)
 
   tm <- rapply(tm, col2hex, how = "list")

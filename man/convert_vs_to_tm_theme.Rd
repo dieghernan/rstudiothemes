@@ -12,7 +12,7 @@ convert_vs_to_tm_theme(
 )
 }
 \arguments{
-\item{path}{Path to a Visual Studio Code theme, in \verb{*.json} format.}
+\item{path}{Path or URL to a Visual Studio Code theme, in \code{.json} format.}
 
 \item{outfile}{Path where the resulting file will be written. By default
 a temporary file (\code{\link[=tempfile]{tempfile()}}).}
@@ -24,12 +24,12 @@ the theme in \code{path} will be used.}
 the theme in \code{path} will be used.}
 }
 \value{
-This function is called for its side effects: it writes a \verb{*.tmTheme}
+This function is called for its side effects: it writes a \code{.tmTheme}
 file to \code{outfile} and returns the path.
 }
 \description{
-Read a \verb{*.json} file representing a Visual Studio Code theme and write
-the equivalent TextMate theme (\verb{*.tmTheme}).
+Read a \code{.json} file representing a Visual Studio Code theme and write
+the equivalent TextMate theme (\code{.tmTheme}).
 }
 \examples{
 
@@ -46,6 +46,6 @@ readLines(path) |>
 \seealso{
 Other functions for creating themes: 
 \code{\link{convert_tm_to_vs_theme}()},
-\code{\link{convert_to_rs_theme}()}
+\code{\link{convert_to_rstudio_theme}()}
 }
 \concept{functions for creating themes}

@@ -45,14 +45,20 @@ This package includes ports of several popular Visual Studio Code themes, ready
 to use in RStudio. Simply use the `install_rstudiothemes()` function to install
 them into your RStudio environment:
 
-```{r}
+```{r, eval=FALSE}
 rstudiothemes::install_rstudiothemes()
 
-rstudiothemes::list_rstudiothemes()
+#> ✔ Installed 31 themes
+#> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes
+#> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes
 ```
 
 Available themes include popular choices such as Tokyo Night, Night Owl, Winter
-is Coming, SynthWave 84, Nord, and many others.
+is Coming, SynthWave 84, Nord, and many others:
+
+```{r}
+rstudiothemes::list_rstudiothemes(list_installed = FALSE)
+```
 
 ## Installation
 
@@ -76,16 +82,17 @@ install.packages(
 )
 ```
 
-## Creating a new theme
+## Migrating an existing theme
 
 You can convert any Visual Studio Code or TextMate theme to RStudio format.
 Here's how:
 
-1.  Download your favorite Visual Studio Code or TextMate theme file.
-2.  Use the `convert_to_rs_theme()` function to convert and install it:
+1.  Use your favorite Visual Studio Code or TextMate theme file or the URL of an
+    online theme.
+2.  Use the `convert_to_rstudio_theme()` function to convert and install it:
 
 ```{r, eval=FALSE}
-rstudiothemes::convert_to_rs_theme("<path/to/file>", apply = TRUE, force = TRUE)
+rstudiothemes::convert_to_rstudio_theme("<path/to/file>", apply = TRUE, force = TRUE)
 ```
 
 Alternatively, install the `.rstheme` file via the RStudio UI:
@@ -97,6 +104,18 @@ Alternatively, install the `.rstheme` file via the RStudio UI:
 The package also includes the reverse conversion functions
 `convert_vs_to_tm_theme()` and `convert_tm_to_vs_theme()`, allowing you to
 convert themes in both directions if needed.
+
+## Creating themes from scratch
+
+**rstudiothemes** does not provide a built-in theme editor, but you can create
+your own themes from scratch using the following tools:
+
+-   TextMate `*tmTheme`: <https://tmtheme-editor.linuxbox.ninja/>. Also see the
+    official RStudio documentation on [creating
+    themes](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html).
+-   Visual Studio Code `*json`: See the official documentation on [creating
+    color
+    themes](https://code.visualstudio.com/api/extension-guides/color-theme).
 
 ## Contributing
 

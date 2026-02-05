@@ -5,6 +5,10 @@
 #'
 #' MIT License Copyright (c) 2024 rsthemes authors.
 #'
+#' **Important**: These functions (except
+#' `list_rstudiothemes(list_installed = FALSE)` only works in RStudio;
+#' it returns `NULL` when called from other IDEs.
+#'
 #' @section Palettes: \pkg{rstudiothemes} includes RStudio themes based on the
 #'   following color palettes.
 #'
@@ -40,7 +44,7 @@ install_rstudiothemes <- function(
     gui <- detect_gui() # nolint
     cli::cli_alert_danger(
       paste0(
-        "{.fn rstudiothemes::try_rs_themes} only works in RStudio, ",
+        "{.fn rstudiothemes::install_rstudiothemes} only works in RStudio, ",
         "not in {gui}."
       )
     )
@@ -50,8 +54,6 @@ install_rstudiothemes <- function(
 
   theme_files <- list_pkg_rstudiothemes(style = style)
   theme_files <- unname(theme_files)
-
-  theme_rstudio_files <- paste0("rstudiothemes_", basename(theme_files))
 
   if (!is.null(destdir)) {
     cli::cli_alert("Installing themes to {.file {destdir}}")
@@ -86,7 +88,7 @@ remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
     gui <- detect_gui() # nolint
     cli::cli_alert_danger(
       paste0(
-        "{.fn rstudiothemes::try_rs_themes} only works in RStudio, ",
+        "{.fn rstudiothemes::remove_rstudiothemes} only works in RStudio, ",
         "not in {gui}."
       )
     )
@@ -110,16 +112,18 @@ cli_how2install <- function() {
   cli::cli_alert_danger("No {.pkg rstudiothemes} themes are installed.")
   cli::cli_alert_info(
     paste0(
-      "Use {.fn rstudiothemes::install_rstudiothemes} to install {.pkg rstudiothemes} RStudio themes"
+      "Use {.fn rstudiothemes::install_rstudiothemes} to install",
+      " {.pkg rstudiothemes} RStudio themes"
     )
   )
 }
 
 
-#' @describeIn rstudiothemes-actions List installed themes (default) or available themes
-#' @param list_installed Should the installed \pkg{rstudiothemes} themes be listed
-#'   (default). If `FALSE`, the available themes in the \pkg{rstudiothemes} package
-#'   are listed instead.
+#' @describeIn rstudiothemes-actions List installed themes (default) or
+#'   available themes
+#' @param list_installed Should the installed \pkg{rstudiothemes} themes be
+#'   listed (default). If `FALSE`, the available themes in the
+#'   \pkg{rstudiothemes} package are listed instead.
 #' @export
 list_rstudiothemes <- function(
   style = c("all", "dark", "light"),
@@ -133,7 +137,7 @@ list_rstudiothemes <- function(
     gui <- detect_gui() # nolint
     cli::cli_alert_danger(
       paste0(
-        "{.fn rstudiothemes::try_rs_themes} only works in RStudio, ",
+        "{.fn rstudiothemes::list_rstudiothemes} only works in RStudio, ",
         "not in {gui}."
       )
     )
@@ -202,11 +206,14 @@ list_pkg_rstudiothemes <- function(style = c("all", "dark", "light")) {
 }
 
 #' @describeIn rstudiothemes-actions Try each \pkg{rstudiothemes} RStudio theme
+#' @param selected Vector of theme names (`list_rstudiothemes()`).
+#'   If provided just those themes would be tried, and `style` will be ignored.
 #' @param delay Number of seconds to wait between themes. Set to 0 to be
 #'   prompted to continue after each theme.
 #' @export
 try_rstudiothemes <- function(
   style = c("all", "dark", "light"),
+  selected = NULL,
   delay = 0
 ) {
   # Only works in RStudio
@@ -222,7 +229,12 @@ try_rstudiothemes <- function(
     return(NULL)
   }
 
-  themes <- list_rstudiothemes(style = style)
+  if (!is.null(selected)) {
+    themes <- intersect(selected, list_rstudiothemes())
+  } else {
+    themes <- list_rstudiothemes(style = style)
+  }
+
   current_theme <- rstudioapi::getThemeInfo()
 
   cli::cli_alert(c(

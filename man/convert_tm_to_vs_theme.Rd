@@ -12,7 +12,7 @@ convert_tm_to_vs_theme(
 )
 }
 \arguments{
-\item{path}{Path to a TextMate theme, in \verb{*.tmTheme} format.}
+\item{path}{Path or URL to a TextMate theme, in \code{.tmTheme} format.}
 
 \item{outfile}{Path where the resulting file will be written. By default
 a temporary file (\code{\link[=tempfile]{tempfile()}}).}
@@ -24,12 +24,12 @@ the theme in \code{path} will be used.}
 the theme in \code{path} will be used.}
 }
 \value{
-This function is called for its side effects. It would write a new \verb{*.json}
+This function is called for its side effects. It would write a new \code{.json}
 file in \code{outfile} and returns the path.
 }
 \description{
-Read a \verb{*.tmTheme} file representing a TextMate theme and write the
-equivalent Visual Studio Code theme (\verb{*.json}).
+Read a \code{.tmTheme} file representing a TextMate theme and write the
+equivalent Visual Studio Code theme (\code{.json}).
 }
 \examples{
 tmtheme <- system.file("ext/test.tmTheme",
@@ -44,7 +44,7 @@ readLines(path) |>
 }
 \seealso{
 Other functions for creating themes: 
-\code{\link{convert_to_rs_theme}()},
+\code{\link{convert_to_rstudio_theme}()},
 \code{\link{convert_vs_to_tm_theme}()}
 }
 \concept{functions for creating themes}
