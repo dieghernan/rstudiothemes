@@ -1,7 +1,7 @@
 # rstudiothemes: Create 'RStudio' Themes from Visual Studio Code and 'TextMate' Themes
 
 Create and install 'RStudio' themes derived from Visual Studio Code and
-'TextMate' themes. Provides functions to convert between TextMate and
+'TextMate' themes. Provides functions to convert between 'TextMate' and
 Visual Studio Code themes, as well as ports of several Visual Studio
 Code themes.
 
