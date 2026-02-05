@@ -1,15 +1,13 @@
 # rstudiothemes
 
-# rstudiothemes
-
 Create custom **RStudio themes** from **Visual Studio Code** and
 **TextMate** theme formats.
 
 This project provides tools to convert and work with `.tmTheme` /
 `.json` (VS Code / TextMate) theme files and generate `.rstheme` files
 that can be installed into RStudio. RStudio supports custom themes (in
-`.rstheme` format) as of version 1.2+.
-([rstudio.github.io](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html))
+`.rstheme` format) as of [version
+1.2+](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html).
 
 ## Features
 
@@ -21,12 +19,24 @@ that can be installed into RStudio. RStudio supports custom themes (in
 
 You can install the developing version of **rstudiothemes** with:
 
-`{r, eval=FALSE} # install.packages(“pak”) pak::pak(“dieghernan/rstudiothemes”)`
+``` r
+# install.packages("pak")
+pak::pak("dieghernan/rstudiothemes")
+```
 
 Alternatively, you can install **geobounds** using the
 [r-universe](https://dieghernan.r-universe.dev/rstudiothemes):
 
-`{r, eval=FALSE} # Install rstudiothemes in R: install.packages( “rstudiothemes”, repos = c( “https://dieghernan.r-universe.dev”, “https://cloud.r-project.org” ) )`
+``` r
+# Install rstudiothemes in R:
+install.packages(
+  "rstudiothemes",
+  repos = c(
+    "https://dieghernan.r-universe.dev",
+    "https://cloud.r-project.org"
+  )
+)
+```
 
 ## Example workflow (high-level):
 
@@ -36,7 +46,9 @@ Alternatively, you can install **geobounds** using the
     .rstheme files.
 3.  Install the generated `.rstheme` in RStudio using:
 
-`{r, eval=FALSE} rstudioapi::addTheme(“path/to/theme.rstheme”, apply = TRUE)`
+``` r
+rstudioapi::addTheme("path/to/theme.rstheme", apply = TRUE)
+```
 
 Alternatively, install themes via the RStudio UI:
 
