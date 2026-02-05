@@ -41,7 +41,16 @@ rstudiothemes::install_rstudiothemes()
 #> ✔ Installed 31 themes
 #> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes
 #> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes
+
+rstudioapi::applyTheme("Winter is Coming Dark Blue")
 ```
+
+<figure>
+<img src="man/figures/winteriscoming.png"
+alt="Screenshot of theme Winter is Coming Dark Blue" />
+<figcaption aria-hidden="true">Screenshot of theme Winter is Coming Dark
+Blue</figcaption>
+</figure>
 
 Available themes include popular choices such as Tokyo Night, Night Owl,
 Winter is Coming, SynthWave 84, Nord, and many others:
