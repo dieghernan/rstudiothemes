@@ -19,8 +19,6 @@ install_rstudiothemes()
 #> ✔ Installed 31 themes
 #> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes
 #> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes
-
-rstudioapi::applyTheme("Winter is Coming Dark Blue")
 ```
 
 This will add many popular themes (e.g., Tokyo Night, Nord, Winter is
