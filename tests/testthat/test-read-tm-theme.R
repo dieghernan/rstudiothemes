@@ -38,3 +38,27 @@ test_that("Test simple theme", {
   )
   unlink(fpath)
 })
+
+test_that("Test minimal theme", {
+  fpath <- system.file(
+    "ext/test-minimal.tmTheme",
+    package = "rstudiothemes"
+  )
+
+  res <- read_tm_theme(fpath)
+
+  expect_snapshot(unique(res$section))
+  expect_snapshot(res$name)
+})
+
+test_that("Test error theme", {
+  fpath <- system.file(
+    "ext/test-error.tmTheme",
+    package = "rstudiothemes"
+  )
+
+  expect_error(
+    res <- read_tm_theme(fpath),
+    regexp = '"lineHighlight" and "selection" values are'
+  )
+})

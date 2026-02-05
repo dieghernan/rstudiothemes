@@ -118,6 +118,27 @@ read_tm_theme <- function(path) {
     foreground = unname(sett_values)[l_set_merged]
   )
 
+  # Validate the tmTheme here
+  minimal_keys <- c(
+    "background",
+    "caret",
+    "foreground",
+    "invisibles",
+    "lineHighlight",
+    "selection"
+  )
+
+  the_keys <- settings_df$name
+  difs <- setdiff(minimal_keys, the_keys)
+  if (length(difs) > 0) {
+    cli::cli_abort(
+      paste0(
+        "tmTheme in {.file {path}} invalid. {.str {difs}} ",
+        "{?value is/values are} missing."
+      )
+    )
+  }
+
   # 3. Tokens ----
   token_list <- array[!id_settings]
   it <- seq_along(token_list)
@@ -193,6 +214,10 @@ read_tm_theme <- function(path) {
 
   if (!"fontStyle" %in% names(final_df)) {
     final_df$fontStyle <- NA
+  }
+
+  if (!"scope" %in% names(final_df)) {
+    final_df$scope <- NA
   }
 
   nms <- unique(c(

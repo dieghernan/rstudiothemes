@@ -1,6 +1,6 @@
 year <- format(Sys.time(), "%Y")
 abs <- trimws(gsub("\\s+", " ", meta$Description))
-abs <- gsub("'", "", abs)
+abs <- gsub("'", "", abs, fixed = TRUE)
 title <- gsub("'", "", meta$Title, fixed = TRUE)
 title <- gsub("Visual Studio Code", "{Visual Studio Code}", title, fixed = TRUE)
 title <- gsub("RStudio", "{RStudio}", title, fixed = TRUE)

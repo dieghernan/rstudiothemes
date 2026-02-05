@@ -18,10 +18,10 @@ convert_tm_to_vs_theme(
 a temporary file (\code{tempfile()}).}
 
 \item{name}{Optional. The name of the theme. If not provided, the name of
-the VS Code theme in \code{path} will be used.}
+the TextMate theme in \code{path} will be used.}
 
-\item{author}{Optional. The author of the theme. If not provided, the name of
-the VS Code theme in \code{path} will be used.}
+\item{author}{Optional. The author of the theme. If not provided, the name
+of the TextMate theme in \code{path} will be used.}
 }
 \value{
 This function is called for its side effects. It would write a new \verb{*.json}

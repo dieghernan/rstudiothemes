@@ -30,3 +30,19 @@
       ! VSCode theme "Skeletor Syntax" does not have author, use the `author` argument.
       i Using `author = "rstudiothemes R package"`.
 
+# Test minimal theme
+
+    Code
+      unique(res$section)
+    Output
+      [1] "highlevel" "colors"   
+
+---
+
+    Code
+      res$name
+    Output
+       [1] "name"           "uuid"           "colorSpaceName" "semanticClass" 
+       [5] "author"         "comment"        "background"     "caret"         
+       [9] "foreground"     "invisibles"     "lineHighlight"  "selection"     
+

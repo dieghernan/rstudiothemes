@@ -4,6 +4,11 @@
 #' Read a `*.tmTheme` file representing a TextMate theme and write the
 #' equivalent Visual Studio Code theme (`*.json`).
 #'
+#' @param name Optional. The name of the theme. If not provided, the name of
+#'   the TextMate theme in `path` will be used.
+#' @param author Optional. The author of the theme. If not provided, the name
+#'   of the TextMate theme in `path` will be used.
+#'
 #' @inheritParams read_tm_theme
 #' @inheritParams convert_vs_to_tm_theme
 #'
@@ -132,100 +137,110 @@ convert_tm_to_vs_theme <- function(
   col_end <- modifyList(init, col_l)
   col_end <- col_end[sort(names(col_end))]
 
+  # Remove nulls
+  col_end <- col_end[lengths(col_end) > 0]
+
   # Token colors
   tokencols <- theme_db[
     theme_db$section == "tokenColors",
     c("name", "scope", "foreground", "background", "fontStyle")
   ]
 
-  tokencols$index <- seq_len(nrow(tokencols))
+  if (nrow(tokencols) > 1) {
+    tokencols$index <- seq_len(nrow(tokencols))
 
-  # Split and group items with the same variables (by section)
+    # Split and group items with the same variables (by section)
 
-  # Group by name and arrange
-  tokencols[is.na(tokencols)] <- "MISSING_VALUE"
-  splitted <- split(
-    tokencols,
-    factor(tokencols$name, levels = unique(tokencols$name))
-  )
-  pp <- lapply(splitted, nrow) |>
-    unlist() |>
-    sort()
-  pp
-  df <- splitted[[
-    "Keyword Operator Comparison, imports, returns and Keyword Operator Ruby"
-  ]]
-  res2 <- lapply(splitted, function(df) {
-    df <- df[order(df$index), ]
+    # Group by name and arrange
+    tokencols[is.na(tokencols)] <- "MISSING_VALUE"
+    splitted <- split(
+      tokencols,
+      factor(tokencols$name, levels = unique(tokencols$name))
+    )
+    pp <- lapply(splitted, nrow) |>
+      unlist() |>
+      sort()
+    pp
+    df <- splitted[[
+      "Keyword Operator Comparison, imports, returns and Keyword Operator Ruby"
+    ]]
+    res2 <- lapply(splitted, function(df) {
+      df <- df[order(df$index), ]
 
-    df2 <- split(df, list(df$name, df$foreground, df$background, df$fontStyle))
+      df2 <- split(
+        df,
+        list(df$name, df$foreground, df$background, df$fontStyle)
+      )
 
-    res <- lapply(df2, function(other_df) {
-      df_end <- unique(other_df[, c(
-        "name",
-        "foreground",
-        "background",
-        "fontStyle"
-      )])
-      df_end$sc <- paste0(other_df$scope, collapse = ", ")
-      df_end$minr <- paste0(other_df$index, collapse = ", ")
-      df_end
+      res <- lapply(df2, function(other_df) {
+        df_end <- unique(other_df[, c(
+          "name",
+          "foreground",
+          "background",
+          "fontStyle"
+        )])
+        df_end$sc <- paste0(other_df$scope, collapse = ", ")
+        df_end$minr <- paste0(other_df$index, collapse = ", ")
+        df_end
+      })
+
+      end_df <- do.call("rbind", res)
+      end_df[order(end_df$minr), ]
     })
 
-    end_df <- do.call("rbind", res)
-    end_df[order(end_df$minr), ]
-  })
+    tok_g <- do.call("rbind", res2)
 
-  tok_g <- do.call("rbind", res2)
+    tok_g[tok_g == "MISSING_VALUE"] <- NA
 
-  tok_g[tok_g == "MISSING_VALUE"] <- NA
+    # Build token list
 
-  # Build token list
-
-  tok <- list()
-  # Create list for tokens
-  tok[[1]] <- list(
-    settings = list(
-      background = col_l$editor.background,
-      foreground = col_l$editor.foreground
-    )
-  )
-
-  ntok <- seq_len(nrow(tok_g))
-
-  for (i in ntok) {
-    thiscope <- tok_g[i, ]
-    scp <- as.character(thiscope$sc)
-    scp <- trimws(unlist(strsplit(scp, ",")))
-
-    thistok <- list(
-      name = thiscope$name,
-      scope = scp,
-      settings = list()
+    tok <- list()
+    # Create list for tokens
+    tok[[1]] <- list(
+      settings = list(
+        background = col_l$editor.background,
+        foreground = col_l$editor.foreground
+      )
     )
 
-    dictt <- list()
+    ntok <- seq_len(nrow(tok_g))
 
-    fg <- unlist(thiscope$foreground)
-    bg <- unlist(thiscope$background)
-    fnt <- unlist(thiscope$fontStyle)
-    if (!is.na(fg)) {
-      dictt <- c(dictt, list(foreground = fg))
-    }
-    if (!is.na(bg)) {
-      dictt <- c(dictt, list(background = bg))
-    }
-    if (!is.na(fnt)) {
-      dictt <- c(dictt, list(fontStyle = fnt))
-    }
-    if (length(dictt) > 0) {
-      thistok$settings <- dictt
+    for (i in ntok) {
+      thiscope <- tok_g[i, ]
+      scp <- as.character(thiscope$sc)
+      scp <- trimws(unlist(strsplit(scp, ",")))
 
-      tok[[i + 1]] <- thistok
+      thistok <- list(
+        name = thiscope$name,
+        scope = scp,
+        settings = list()
+      )
+
+      dictt <- list()
+
+      fg <- unlist(thiscope$foreground)
+      bg <- unlist(thiscope$background)
+      fnt <- unlist(thiscope$fontStyle)
+      if (!is.na(fg)) {
+        dictt <- c(dictt, list(foreground = fg))
+      }
+      if (!is.na(bg)) {
+        dictt <- c(dictt, list(background = bg))
+      }
+      if (!is.na(fnt)) {
+        dictt <- c(dictt, list(fontStyle = fnt))
+      }
+      if (length(dictt) > 0) {
+        thistok$settings <- dictt
+
+        tok[[i + 1]] <- thistok
+      }
     }
+
+    vs_l <- c(thejson, list(tokenColors = tok), list(colors = col_end))
+  } else {
+    vs_l <- c(thejson, list(colors = col_end))
   }
-
-  vs_l <- c(thejson, list(tokenColors = tok), list(colors = col_end))
 
   jsonlite::write_json(vs_l, path = outfile, auto_unbox = TRUE, pretty = TRUE)
   # Add a small comment...

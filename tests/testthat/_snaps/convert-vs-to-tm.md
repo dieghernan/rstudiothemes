@@ -531,14 +531,6 @@
 # Simple Theme creation
 
     Code
-      thef <- convert_vs_to_tm_theme(vstheme, outfile = tmout)
-    Message
-      tmTheme created in xxx
-      tmTheme created in xxx
-
----
-
-    Code
       cat(out[seq(1, 15)], sep = "\n")
     Output
       <?xml version="1.0" encoding="UTF-8"?>

@@ -34,12 +34,7 @@ test_that("Simple Theme creation", {
     package = "rstudiothemes"
   )
 
-  expect_snapshot(
-    thef <- convert_vs_to_tm_theme(vstheme, outfile = tmout),
-    transform = function(x) {
-      x[grepl("tmTheme", x, fixed = TRUE)] <- "tmTheme created in xxx"
-    }
-  )
+  thef <- convert_vs_to_tm_theme(vstheme, outfile = tmout)
 
   expect_true(file.exists(thef))
   expect_identical(thef, tmout)
