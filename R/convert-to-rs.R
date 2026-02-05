@@ -123,13 +123,17 @@ convert_to_rstudio_theme <- function(
     )
   }
 
-  if (!file.exists(path)) {
-    cli::cli_abort("File {.path {path}} does not exist.")
-  }
-
   if (ext == "json") {
     tm_temp <- tempfile(fileext = ".tmTheme")
     path <- convert_vs_to_tm_theme(path, tm_temp)
+  } else if (grepl("^http", path)) {
+    # Only tmTheme as for VS it is done implicitly on convert_vs_to_tm_theme
+    tmp_file <- tempfile(fileext = ".tmTheme")
+    cli::cli_alert_info("Downloading from {.url {path}}")
+
+    download.file(path, tmp_file, mode = "wb", quiet = TRUE)
+
+    path <- tmp_file
   }
 
   tmcols <- read_tm_theme(path)

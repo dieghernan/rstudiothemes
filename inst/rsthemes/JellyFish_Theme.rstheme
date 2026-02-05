@@ -2413,7 +2413,7 @@
   background: linear-gradient(to left, #dc91dbbb 1px, #dc91db77 1px, #dc91db77);
 }
 
-/* Generated with rstudiothemes package (0.0.0.9000) */
+/* Generated with rstudiothemes package */
 /* Rules from tmTheme */
 .ace_cursor {
   color: #00F7FF;
@@ -2838,7 +2838,8 @@
 }
 
 /* Editor Group & Tabs */
-.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs, .rstudio-themes-dark-grey .GNTYACMBNS,
+.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
+.rstudio-themes-dark-grey .GNTYACMBNS,
 .rstudio-themes-dark-grey .rstheme_multiPodUtilityTabArea,
 .rstudio-themes-default .gwt-TabLayoutPanelTabs,
 .rstudio-themes-default .GNTYACMBNS,
@@ -2860,13 +2861,21 @@
   color: #FFFFFF;
 }
 
-.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTab-selected table.rstheme_tabLayoutCenter,
-.rstudio-themes-default .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTab-selected table.rstheme_tabLayoutCenter {
+.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs
+.gwt-TabLayoutPanelTab-selected
+table.rstheme_tabLayoutCenter,
+.rstudio-themes-default .gwt-TabLayoutPanelTabs
+.gwt-TabLayoutPanelTab-selected
+table.rstheme_tabLayoutCenter {
   background: #003156;
 }
 
-.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTab-selected table.rstheme_tabLayoutCenter .gwt-Label,
-.rstudio-themes-default .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTab-selected table.rstheme_tabLayoutCenter .gwt-Label {
+.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs
+.gwt-TabLayoutPanelTab-selected
+table.rstheme_tabLayoutCenter .gwt-Label,
+.rstudio-themes-default .gwt-TabLayoutPanelTabs
+.gwt-TabLayoutPanelTab-selected
+table.rstheme_tabLayoutCenter .gwt-Label {
   color: #00F7FF;
   font-style: italic;
 }
@@ -3013,7 +3022,9 @@
 }
 
 /* scrollbars */
-.rstudio-themes-flat .gwt-TabLayoutPanelContentContainer, .rstudio-themes-dark-grey .gwt-TabLayoutPanelContentContainer, .rstudio-themes-default .gwt-TabLayoutPanelContentContainer {
+.rstudio-themes-flat .gwt-TabLayoutPanelContentContainer,
+.rstudio-themes-dark-grey .gwt-TabLayoutPanelContentContainer,
+.rstudio-themes-default .gwt-TabLayoutPanelContentContainer {
   scrollbar-width: auto;
   scrollbar-color: #003156 #000530;
 }

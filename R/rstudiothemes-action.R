@@ -216,6 +216,8 @@ try_rstudiothemes <- function(
   selected = NULL,
   delay = 0
 ) {
+  style <- match.arg(style)
+
   # Only works in RStudio
   if (!on_rstudio()) {
     gui <- detect_gui() # nolint
@@ -229,10 +231,21 @@ try_rstudiothemes <- function(
     return(NULL)
   }
 
+  # Logic, extract in order (dark/light) and then select based in user inputs
+  darks <- list_rstudiothemes("dark")
+  lights <- list_rstudiothemes("light")
+  all <- c(darks, lights)
+
   if (!is.null(selected)) {
-    themes <- intersect(selected, list_rstudiothemes())
+    themes <- intersect(selected, all)
   } else {
-    themes <- list_rstudiothemes(style = style)
+    themes <- switch(style,
+      "all" = all,
+      "light" = lights,
+      "dark" = darks,
+      NULL
+    )
+    list_rstudiothemes(style = style)
   }
 
   current_theme <- rstudioapi::getThemeInfo()
