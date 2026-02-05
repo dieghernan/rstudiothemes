@@ -5,10 +5,9 @@
 #'
 #' @param path Path to a Visual Studio Code theme, in `*.json` format.
 #'
-#' @returns
-#' A [tibble::tibble()].
+#' @inherit read_tm_theme return
 #'
-#' @family reading
+#' @family functions for reading themes
 #'
 #' @export
 #'
@@ -20,12 +19,30 @@
 #' read_vs_theme(vstheme)
 #'
 read_vs_theme <- function(path) {
+  # 0. Validate
+  if (missing(path)) {
+    cli::cli_abort("Argument {.arg path} can't be empty.")
+  }
+
+  if (tools::file_ext(path) != "json") {
+    cli::cli_abort(
+      paste0(
+        "Argument {.arg path} should be a {.str json} file",
+        " not {.str {tools::file_ext(path)}}."
+      )
+    )
+  }
+
+  if (!file.exists(path)) {
+    cli::cli_abort("File {.path {path}} does not exists")
+  }
+
   # 1. Read vscode and prepare
   vs <- jsonlite::read_json(path)
 
   vs <- rapply(vs, col2hex, how = "list")
 
-  # Remove trailings / double  whitespace
+  # Remove trailings / double whitespace
 
   vs <- rapply(
     vs,

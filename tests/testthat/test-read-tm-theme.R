@@ -1,3 +1,10 @@
+test_that("Errors", {
+  expect_snapshot(error = TRUE, read_tm_theme())
+  expect_snapshot(error = TRUE, read_tm_theme("a.txt"))
+  expect_snapshot(error = TRUE, read_tm_theme("a.json"))
+})
+
+
 test_that("Test full theme", {
   vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
 

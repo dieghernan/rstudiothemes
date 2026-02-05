@@ -4,6 +4,7 @@ abs <- gsub("'", "", abs)
 title <- gsub("'", "", meta$Title, fixed = TRUE)
 title <- gsub("Visual Studio Code", "{Visual Studio Code}", title, fixed = TRUE)
 title <- gsub("RStudio", "{RStudio}", title, fixed = TRUE)
+title <- gsub("TextMate", "{TextMate}", title, fixed = TRUE)
 
 pkg <- meta$Package
 doi <- paste0("10.32614/CRAN.package.", pkg)
@@ -16,7 +17,7 @@ bibentry(
   author = c(person("Diego", "Hernangómez")),
   year = year,
   version = meta$Version,
-# url = unlist(strsplit(meta$URL, ","))[1],
+  url = unlist(strsplit(meta$URL, ","))[1],
   abstract = abs,
   key = paste0("R-", pkg)
 )

@@ -1,23 +1,22 @@
-#' Random UUIDs generation
+#' Generate random UUIDs
 #'
-#' Generate Universally Unique Identifiers (UUID) version 4 (pseudo-random
-#' numbers).
+#' Generate version 4 (pseudo-random) Universally Unique Identifiers (UUIDs).
 #'
 #' @family helpers
 #'
 #' @param hint Optional. Character (or object coercible with [as.character()])
-#'   that may be used as random seed.
+#'   that may be used as a random seed.
 #'
 #' @return
-#' A [character()] representing valid UUID that can be validated with
+#' A character string representing a valid UUID that can be validated with
 #' `uuid::UUIDvalidate()`.
 #'
 #' @details
-#' This is a helper function that assign
+#' This helper function assigns a
 #' [UUID](https://www.rfc-editor.org/rfc/rfc9562.html) for identifying versions
-#' of the generated themes.
+#' of generated themes.
 #'
-#' @source Heavily based on unreleased version of `ids::uuid()`.
+#' @source Heavily based on an unreleased version of `ids::uuid()`.
 #'
 #' @references
 #' Davis KR, Peabody B, Leach P (2024). "Universally Unique

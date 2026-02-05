@@ -14,9 +14,9 @@
         "familyName": "Hernangómez",
         "givenName": "Diego"
       },
-      "description": "Create and install 'RStudio' themes originated from Visual Studio Code themes.",
+      "description": "Create and install RStudio themes derived from Visual Studio Code and TextMate themes; also provides functions to convert between TextMate and Visual Studio Code themes.",
       "license": "https://spdx.org/licenses/MIT",
-      "name": "rstudiothemes: Ports of Visual Studio Code Themes for 'RStudio'",
+      "name": "rstudiothemes: Create 'RStudio' Themes from Visual Studio Code and 'TextMate'\n    Themes",
       "programmingLanguage": {
         "type": "ComputerLanguage",
         "name": "R",
@@ -32,7 +32,7 @@
         "familyName": "Hernangómez",
         "givenName": "Diego"
       },
-      "name": "{rstudiothemes}: Ports of {Visual Studio Code} Themes for {RStudio}"
+      "name": "{rstudiothemes}: Create {RStudio} Themes from {Visual Studio Code} and {TextMate} Themes"
     }
   ]
 }

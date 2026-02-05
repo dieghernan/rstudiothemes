@@ -6,7 +6,7 @@
 \usage{
 convert_vs_to_tm_theme(
   path,
-  out_tm = tempfile(fileext = ".tmTheme"),
+  outfile = tempfile(fileext = ".tmTheme"),
   name = NULL,
   author = NULL
 )
@@ -14,18 +14,18 @@ convert_vs_to_tm_theme(
 \arguments{
 \item{path}{Path to a Visual Studio Code theme, in \verb{*.json} format.}
 
-\item{out_tm}{Path were the resulting file would be written. By default
-is a temporal file (\code{\link[=tempfile]{tempfile()}}).}
+\item{outfile}{Path where the resulting file will be written. By default
+a temporary file (\code{tempfile()}).}
 
-\item{name}{Optional. The name of the theme. If nor provided the name of
-the VS Code theme in \code{path} would be used.}
+\item{name}{Optional. The name of the theme. If not provided, the name of
+the VS Code theme in \code{path} will be used.}
 
-\item{author}{Optional. The author of the theme. If nor provided the name of
-the VS Code theme in \code{path} would be used.}
+\item{author}{Optional. The author of the theme. If not provided, the name of
+the VS Code theme in \code{path} will be used.}
 }
 \value{
-This function is called for its side effects. It would return a character
-with the path of the file \code{out_tm}.
+This function is called for its side effects: it writes a \verb{*.tmTheme}
+file to \code{outfile} and returns the path.
 }
 \description{
 Read a \verb{*.json} file representing a Visual Studio Code theme and write
@@ -38,11 +38,13 @@ vstheme <- system.file("ext/test-simple-color-theme.json",
 )
 path <- convert_vs_to_tm_theme(vstheme)
 
-path
-
 readLines(path) |>
   head(50) |>
   cat(sep = "\n")
 
 }
-\concept{converters}
+\seealso{
+Other functions for creating themes: 
+\code{\link{convert_tm_to_vs_theme}()}
+}
+\concept{functions for creating themes}

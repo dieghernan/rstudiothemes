@@ -1,31 +1,35 @@
 Package: rstudiothemes
-Title: Ports of Visual Studio Code Themes for 'RStudio'
+Title: Create 'RStudio' Themes from Visual Studio Code and 'TextMate'
+    Themes
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R:
     person("Diego", "Hernangómez", , "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0001-8457-4658"))
-Description: Create and install 'RStudio' themes originated from Visual
-    Studio Code themes.
+Description: Create and install RStudio themes derived from Visual Studio
+    Code and TextMate themes; also provides functions to convert between
+    TextMate and Visual Studio Code themes.
 License: MIT + file LICENSE
 URL: https://dieghernan.github.io/rstudiothemes/,
     https://github.com/dieghernan/rstudiothemes
 BugReports: https://github.com/dieghernan/rstudiothemes/issues
-Depends: 
+Depends:
     R (>= 4.1.0)
-Imports: 
+Imports:
     cli,
+    colorspace,
     dplyr,
     jsonlite,
     rstudioapi,
     sass,
     tidyr,
     xml2
-Suggests: 
+Suggests:
     testthat (>= 3.0.0),
     uuid
 Config/Needs/coverage: covr
 Config/Needs/website: dieghernan/gitdevr, ragg, styler
 Config/testthat/edition: 3
+Config/testthat/parallel: true
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3

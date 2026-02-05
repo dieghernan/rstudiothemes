@@ -7,9 +7,12 @@ cff-version: 1.2.0
 message: 'To cite package "rstudiothemes" in publications use:'
 type: software
 license: MIT
-title: 'rstudiothemes: Ports of Visual Studio Code Themes for ''RStudio'''
+title: 'rstudiothemes: Create ''RStudio'' Themes from Visual Studio Code and ''TextMate''
+  Themes'
 version: 0.0.0.9000
-abstract: Create and install 'RStudio' themes originated from Visual Studio Code themes.
+abstract: Create and install RStudio themes derived from Visual Studio Code and TextMate
+  themes; also provides functions to convert between TextMate and Visual Studio Code
+  themes.
 authors:
 - family-names: Hernangómez
   given-names: Diego
@@ -17,7 +20,8 @@ authors:
   orcid: https://orcid.org/0000-0001-8457-4658
 preferred-citation:
   type: manual
-  title: 'rstudiothemes: Ports of Visual Studio Code Themes for RStudio'
+  title: 'rstudiothemes: Create RStudio Themes from Visual Studio Code and TextMate
+    Themes'
   authors:
   - family-names: Hernangómez
     given-names: Diego
@@ -25,7 +29,10 @@ preferred-citation:
     orcid: https://orcid.org/0000-0001-8457-4658
   year: '2026'
   version: 0.0.0.9000
-  abstract: Create and install RStudio themes originated from Visual Studio Code themes.
+  url: https://dieghernan.github.io/rstudiothemes/
+  abstract: Create and install RStudio themes derived from Visual Studio Code and
+    TextMate themes; also provides functions to convert between TextMate and Visual
+    Studio Code themes.
 repository-code: https://github.com/dieghernan/rstudiothemes
 url: https://dieghernan.github.io/rstudiothemes/
 contact:
@@ -62,6 +69,46 @@ references:
     email: gabor@posit.co
   year: '2026'
   doi: 10.32614/CRAN.package.cli
+- type: software
+  title: colorspace
+  abstract: 'colorspace: A Toolbox for Manipulating and Assessing Colors and Palettes'
+  notes: Imports
+  url: https://colorspace.R-Forge.R-project.org/
+  repository: https://CRAN.R-project.org/package=colorspace
+  authors:
+  - family-names: Ihaka
+    given-names: Ross
+    email: ihaka@stat.auckland.ac.nz
+  - family-names: Murrell
+    given-names: Paul
+    email: paul@stat.auckland.ac.nz
+    orcid: https://orcid.org/0000-0002-3224-8858
+  - family-names: Hornik
+    given-names: Kurt
+    email: Kurt.Hornik@R-project.org
+    orcid: https://orcid.org/0000-0003-4198-9911
+  - family-names: Fisher
+    given-names: Jason C.
+    email: jfisher@usgs.gov
+    orcid: https://orcid.org/0000-0001-9032-8912
+  - family-names: Stauffer
+    given-names: Reto
+    email: Reto.Stauffer@uibk.ac.at
+    orcid: https://orcid.org/0000-0002-3798-5507
+  - family-names: Wilke
+    given-names: Claus O.
+    email: wilke@austin.utexas.edu
+    orcid: https://orcid.org/0000-0002-7470-9261
+  - family-names: McWhite
+    given-names: Claire D.
+    email: claire.mcwhite@utmail.utexas.edu
+    orcid: https://orcid.org/0000-0001-7346-3047
+  - family-names: Zeileis
+    given-names: Achim
+    email: Achim.Zeileis@R-project.org
+    orcid: https://orcid.org/0000-0003-0918-3766
+  year: '2026'
+  doi: 10.32614/CRAN.package.colorspace
 - type: software
   title: dplyr
   abstract: 'dplyr: A Grammar of Data Manipulation'

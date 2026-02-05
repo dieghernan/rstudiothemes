@@ -4,20 +4,19 @@
 #' Read a `*.json` file representing a Visual Studio Code theme and write
 #' the equivalent TextMate theme (`*.tmTheme`).
 #'
-#'
 #' @inheritParams read_vs_theme
-#' @param out_tm Path were the resulting file would be written. By default
-#'   is a temporal file ([tempfile()]).
-#' @param name Optional. The name of the theme. If nor provided the name of
-#'   the VS Code theme in `path` would be used.
-#' @param author Optional. The author of the theme. If nor provided the name of
-#'   the VS Code theme in `path` would be used.
+#' @param outfile Path where the resulting file will be written. By default
+#'   a temporary file (`tempfile()`).
+#' @param name Optional. The name of the theme. If not provided, the name of
+#'   the VS Code theme in `path` will be used.
+#' @param author Optional. The author of the theme. If not provided, the name of
+#'   the VS Code theme in `path` will be used.
 #'
 #' @returns
-#' This function is called for its side effects. It would return a character
-#' with the path of the file `out_tm`.
+#' This function is called for its side effects: it writes a `*.tmTheme`
+#' file to `outfile` and returns the path.
 #'
-#' @family converters
+#' @family functions for creating themes
 #'
 #' @export
 #'
@@ -28,28 +27,44 @@
 #' )
 #' path <- convert_vs_to_tm_theme(vstheme)
 #'
-#' path
-#'
 #' readLines(path) |>
 #'   head(50) |>
 #'   cat(sep = "\n")
 #'
 convert_vs_to_tm_theme <- function(
   path,
-  out_tm = tempfile(fileext = ".tmTheme"),
+  outfile = tempfile(fileext = ".tmTheme"),
   name = NULL,
   author = NULL
 ) {
-  # 1. Manipulate vstheme file
+  # Validate inputs
+  if (missing(path)) {
+    cli::cli_abort("Argument {.arg path} can't be empty.")
+  }
+
+  if (tools::file_ext(path) != "json") {
+    cli::cli_abort(
+      paste0(
+        "Argument {.arg path} should be a {.str json} file",
+        " not {.str {tools::file_ext(path)}}."
+      )
+    )
+  }
+
+  if (!file.exists(path)) {
+    cli::cli_abort("File {.path {path}} does not exists")
+  }
+
+  # Read and parse the VS Code theme file
   vs_df <- read_vs_theme(path)
 
-  # 2. Prepare df for settings
+  # Prepare data frame for settings
   settings_df <- tmtheme_settings_df(vs_df)
 
-  # 3. Prepare df for scopes
+  # Prepare data frame for scopes
   scopes_df <- tmtheme_scopes_df(vs_df)
 
-  # 4. Top level
+  # Top-level metadata
   for_top <- vs_df$section %in% c("colors", "highlevel") & !is.na(vs_df$name)
   for_top_df <- vs_df[for_top, ]
 
@@ -182,9 +197,9 @@ convert_vs_to_tm_theme <- function(
   attr(the_theme$plist, "version") <- "1.0"
 
   the_theme <- xml2::as_xml_document(the_theme)
-  xml2::write_xml(the_theme, out_tm)
+  xml2::write_xml(the_theme, outfile)
 
-  out_tm
+  outfile
 }
 
 tmtheme_settings_df <- function(vs_df) {
@@ -212,9 +227,8 @@ tmtheme_settings_df <- function(vs_df) {
     dplyr::pick(dplyr::all_of("rank"))
   )[c("tm", "color")]
 
-  # As a bare minimum we should have:
-  # background, foreground, selection, invisibles,lineHighlight, caret.
-  # If not assing colors
+  # As a bare minimum we should have: background, foreground, selection,
+  # invisibles, lineHighlight, and caret. If any are missing, assign defaults.
 
   fg <- as.character(end[end$tm == "foreground", 2])
   sel <- as.character(end[end$tm == "selection", 2])

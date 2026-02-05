@@ -10,7 +10,7 @@ read_vs_theme(path)
 \item{path}{Path to a Visual Studio Code theme, in \verb{*.json} format.}
 }
 \value{
-A \code{\link[tibble:tibble]{tibble::tibble()}}.
+A \link[tibble:tbl_df-class]{tibble} with the data of the theme.
 }
 \description{
 Read a \verb{*.json} file representing a Visual Studio Code theme.
@@ -24,7 +24,7 @@ read_vs_theme(vstheme)
 
 }
 \seealso{
-Other reading: 
+Other functions for reading themes: 
 \code{\link{read_tm_theme}()}
 }
-\concept{reading}
+\concept{functions for reading themes}

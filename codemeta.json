@@ -2,8 +2,8 @@
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "rstudiothemes",
-  "description": "Create and install 'RStudio' themes originated from Visual Studio Code themes.",
-  "name": "rstudiothemes: Ports of Visual Studio Code Themes for 'RStudio'",
+  "description": "Create and install RStudio themes derived from Visual Studio Code and TextMate themes; also provides functions to convert between TextMate and Visual Studio Code themes.",
+  "name": "rstudiothemes: Create 'RStudio' Themes from Visual Studio Code and 'TextMate'\n    Themes",
   "relatedLink": "https://dieghernan.github.io/rstudiothemes/",
   "codeRepository": "https://github.com/dieghernan/rstudiothemes",
   "issueTracker": "https://github.com/dieghernan/rstudiothemes/issues",
@@ -90,6 +90,18 @@
     },
     "3": {
       "@type": "SoftwareApplication",
+      "identifier": "colorspace",
+      "name": "colorspace",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=colorspace"
+    },
+    "4": {
+      "@type": "SoftwareApplication",
       "identifier": "dplyr",
       "name": "dplyr",
       "provider": {
@@ -100,7 +112,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=dplyr"
     },
-    "4": {
+    "5": {
       "@type": "SoftwareApplication",
       "identifier": "jsonlite",
       "name": "jsonlite",
@@ -112,7 +124,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=jsonlite"
     },
-    "5": {
+    "6": {
       "@type": "SoftwareApplication",
       "identifier": "rstudioapi",
       "name": "rstudioapi",
@@ -124,7 +136,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=rstudioapi"
     },
-    "6": {
+    "7": {
       "@type": "SoftwareApplication",
       "identifier": "sass",
       "name": "sass",
@@ -136,7 +148,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=sass"
     },
-    "7": {
+    "8": {
       "@type": "SoftwareApplication",
       "identifier": "tidyr",
       "name": "tidyr",
@@ -148,7 +160,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=tidyr"
     },
-    "8": {
+    "9": {
       "@type": "SoftwareApplication",
       "identifier": "xml2",
       "name": "xml2",
@@ -163,7 +175,7 @@
     "SystemRequirements": null
   },
   "keywords": ["r-package", "rstudio-themes", "textmate-themes", "vscode-themes"],
-  "fileSize": "1593.014KB",
+  "fileSize": "1615.316KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
@@ -175,7 +187,8 @@
           "familyName": "Hernangómez"
         }
       ],
-      "name": "{rstudiothemes}: Ports of {Visual Studio Code} Themes for {RStudio}"
+      "name": "{rstudiothemes}: Create {RStudio} Themes from {Visual Studio Code} and {TextMate} Themes",
+      "url": "https://dieghernan.github.io/rstudiothemes/"
     }
   ],
   "releaseNotes": "https://github.com/dieghernan/rstudiothemes/blob/main/NEWS.md",

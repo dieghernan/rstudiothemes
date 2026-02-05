@@ -1,11 +1,7 @@
 #' @keywords internal
 "_PACKAGE"
 
-## usethis namespace: start
-## usethis namespace: end
-NULL
-
-# import stuffs
-#' @importFrom utils download.file URLencode packageVersion
+# Import functions
+#' @importFrom utils download.file URLencode packageVersion read.csv modifyList
 #' @importFrom grDevices col2rgb rgb
 NULL

@@ -1,3 +1,27 @@
+# Errors
+
+    Code
+      convert_vs_to_tm_theme()
+    Condition
+      Error in `convert_vs_to_tm_theme()`:
+      ! Argument `path` can't be empty.
+
+---
+
+    Code
+      convert_vs_to_tm_theme("a.txt")
+    Condition
+      Error in `convert_vs_to_tm_theme()`:
+      ! Argument `path` should be a "json" file not "txt".
+
+---
+
+    Code
+      convert_vs_to_tm_theme("a.json")
+    Condition
+      Error in `convert_vs_to_tm_theme()`:
+      ! File 'a.json' does not exists
+
 # Theme creation
 
     Code
@@ -507,7 +531,7 @@
 # Simple Theme creation
 
     Code
-      thef <- convert_vs_to_tm_theme(vstheme, out_tm = tmout)
+      thef <- convert_vs_to_tm_theme(vstheme, outfile = tmout)
     Message
       tmTheme created in xxx
       tmTheme created in xxx

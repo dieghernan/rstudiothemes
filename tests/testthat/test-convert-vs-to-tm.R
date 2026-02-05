@@ -1,9 +1,16 @@
+test_that("Errors", {
+  expect_snapshot(error = TRUE, convert_vs_to_tm_theme())
+  expect_snapshot(error = TRUE, convert_vs_to_tm_theme("a.txt"))
+  expect_snapshot(error = TRUE, convert_vs_to_tm_theme("a.json"))
+})
+
+
 test_that("Theme creation", {
   tmout <- file.path(tempdir(), "my_test.tmTheme")
   vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
 
   expect_silent(
-    thef <- convert_vs_to_tm_theme(vstheme, out_tm = tmout)
+    thef <- convert_vs_to_tm_theme(vstheme, outfile = tmout)
   )
   expect_true(file.exists(thef))
   expect_identical(thef, tmout)
@@ -28,7 +35,7 @@ test_that("Simple Theme creation", {
   )
 
   expect_snapshot(
-    thef <- convert_vs_to_tm_theme(vstheme, out_tm = tmout),
+    thef <- convert_vs_to_tm_theme(vstheme, outfile = tmout),
     transform = function(x) {
       x[grepl("tmTheme", x, fixed = TRUE)] <- "tmTheme created in xxx"
     }
@@ -48,7 +55,7 @@ test_that("Simple Theme creation", {
   tmout2 <- file.path(tempdir(), "my_test_simple_params.tmTheme")
   expect_silent(convert_vs_to_tm_theme(
     vstheme,
-    out_tm = tmout2,
+    outfile = tmout2,
     name = "A test theme",
     author = "I am"
   ))

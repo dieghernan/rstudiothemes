@@ -4,11 +4,11 @@
 \name{rstudiothemes-package}
 \alias{rstudiothemes}
 \alias{rstudiothemes-package}
-\title{rstudiothemes: Ports of Visual Studio Code Themes for 'RStudio'}
+\title{rstudiothemes: Create 'RStudio' Themes from Visual Studio Code and 'TextMate' Themes}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-Create and install 'RStudio' themes originated from Visual Studio Code themes.
+Create and install RStudio themes derived from Visual Studio Code and TextMate themes; also provides functions to convert between TextMate and Visual Studio Code themes.
 }
 \seealso{
 Useful links:

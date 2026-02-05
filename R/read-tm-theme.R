@@ -1,15 +1,15 @@
 #' Read and parse a TextMate theme
 #'
 #' @description
-#' Read a `*.tmTheme` file (really a `*.xml` file) representing a TextMate or
-#' a Sublime Text theme.
+#' Read a `*.tmTheme` file (which is XML) representing a TextMate or
+#' Sublime Text theme.
 #'
 #' @param path Path to a TextMate theme, in `*.tmTheme` format.
 #'
 #' @returns
-#' A [tibble][tibble::tbl_df()].
+#' A [tibble][tibble::tbl_df()] with the data of the theme.
 #'
-#' @family reading
+#' @family functions for reading themes
 #'
 #' @export
 #'
@@ -28,12 +28,30 @@
 #'
 #' read_tm_theme(the_theme)
 read_tm_theme <- function(path) {
+  # Validate inputs
+  if (missing(path)) {
+    cli::cli_abort("Argument {.arg path} can't be empty.")
+  }
+
+  if (tools::file_ext(path) != "tmTheme") {
+    cli::cli_abort(
+      paste0(
+        "Argument {.arg path} should be a {.str tmTheme} file",
+        " not {.str {tools::file_ext(path)}}."
+      )
+    )
+  }
+
+  if (!file.exists(path)) {
+    cli::cli_abort("File {.path {path}} does not exists")
+  }
+
   tm <- xml2::read_xml(path)
   tm <- xml2::as_list(tm)
 
   tm <- rapply(tm, col2hex, how = "list")
 
-  # Remove trailings / double  whitespace
+  # Remove trailing and double whitespace
   tm <- rapply(
     tm,
     function(x) {
@@ -45,12 +63,12 @@ read_tm_theme <- function(path) {
     how = "list"
   )
 
-  # 1. High level inputs -----
+  # 1. High-level inputs -----
   specs <- tm$plist$dict
   # Not use the array, this is where the colors are
   highlev <- specs[names(specs) != "array"]
 
-  # Strong assumption here! structure should be a list of consecutive
+  # Strong assumption: structure should be a list of consecutive
   # <key><string><key><string>...
   hl_keys <- unlist(highlev[names(highlev) == "key"])
 
@@ -67,10 +85,10 @@ read_tm_theme <- function(path) {
     value = unname(hl_values)[l_merged]
   )
 
-  # 2. Colors (Settings) ----
+  # 2. Colors (settings) ----
   array <- specs[names(specs) == "array"][[1]]
 
-  # Identify high level settings since it should present only key and dict
+  # Identify high-level settings (key and dict)
 
   id_settings <- vapply(
     array,
@@ -86,7 +104,7 @@ read_tm_theme <- function(path) {
 
   settings_list <- array[id_settings][1]$dict$dict
 
-  # Same assumptions
+  # Same assumptions apply
 
   sett_keys <- unlist(settings_list[names(settings_list) == "key"])
   sett_values <- unlist(settings_list[names(settings_list) == "string"])
@@ -165,10 +183,10 @@ read_tm_theme <- function(path) {
 
   token_df <- dplyr::bind_rows(token_df)
 
-  #  Final df
+  # Final data frame
   final_df <- dplyr::bind_rows(top_df, settings_df, token_df)
 
-  # Complete columns if doesn't exist
+  # Ensure required columns exist
   if (!"background" %in% names(final_df)) {
     final_df$background <- NA
   }
@@ -190,10 +208,10 @@ read_tm_theme <- function(path) {
 
   final_df <- final_df[, nms]
 
-  # Blanks as NAs
+  # Convert blank strings to NA
   final_df[final_df == ""] <- NA
 
-  # Filter un-defined
+  # Filter undefined entries
   undef <- is.na(final_df$value) &
     is.na(final_df$foreground) &
     is.na(final_df$background) &

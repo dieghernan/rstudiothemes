@@ -2,29 +2,28 @@
 % Please edit documentation in R/generate-uuid.R
 \name{generate_uuid}
 \alias{generate_uuid}
-\title{Random UUIDs generation}
+\title{Generate random UUIDs}
 \source{
-Heavily based on unreleased version of \code{ids::uuid()}.
+Heavily based on an unreleased version of \code{ids::uuid()}.
 }
 \usage{
 generate_uuid(hint = NULL)
 }
 \arguments{
 \item{hint}{Optional. Character (or object coercible with \code{\link[=as.character]{as.character()}})
-that may be used as random seed.}
+that may be used as a random seed.}
 }
 \value{
-A \code{\link[=character]{character()}} representing valid UUID that can be validated with
+A character string representing a valid UUID that can be validated with
 \code{uuid::UUIDvalidate()}.
 }
 \description{
-Generate Universally Unique Identifiers (UUID) version 4 (pseudo-random
-numbers).
+Generate version 4 (pseudo-random) Universally Unique Identifiers (UUIDs).
 }
 \details{
-This is a helper function that assign
+This helper function assigns a
 \href{https://www.rfc-editor.org/rfc/rfc9562.html}{UUID} for identifying versions
-of the generated themes.
+of generated themes.
 }
 \examples{
 # Random
