@@ -6,6 +6,9 @@
   maintainer, copyright holder.
   [](https://orcid.org/0000-0001-8457-4658)
 
+- **Garrick Aden-Buie**. Copyright holder.  
+  for the rsthemes::try_rsthemes() function
+
 ## Citation
 
 Source:
@@ -21,5 +24,5 @@ Studio Code and TextMate Themes*.
       year = {2026},
       version = {0.0.0.9000},
       url = {https://dieghernan.github.io/rstudiothemes/},
-      abstract = {Create and install RStudio themes derived from Visual Studio Code and TextMate themes; also provides functions to convert between TextMate and Visual Studio Code themes.},
+      abstract = {Create and install RStudio themes derived from Visual Studio Code and TextMate themes. Provides functions to convert between TextMate and Visual Studio Code themes, as well as ports of several Visual Studio Code themes.},
     }

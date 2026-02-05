@@ -28,12 +28,12 @@ convert_tm_to_vs_theme(
 - name:
 
   Optional. The name of the theme. If not provided, the name of the
-  TextMate theme in `path` will be used.
+  theme in `path` will be used.
 
 - author:
 
   Optional. The author of the theme. If not provided, the name of the
-  TextMate theme in `path` will be used.
+  theme in `path` will be used.
 
 ## Value
 
@@ -43,6 +43,7 @@ This function is called for its side effects. It would write a new
 ## See also
 
 Other functions for creating themes:
+[`convert_to_rs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_to_rs_theme.md),
 [`convert_vs_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_vs_to_tm_theme.md)
 
 ## Examples

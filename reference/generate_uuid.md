@@ -40,15 +40,20 @@ Davis KR, Peabody B, Leach P (2024). "Universally Unique IDentifiers
 [doi:10.17487/RFC9562](https://doi.org/10.17487/RFC9562) ,
 <https://www.rfc-editor.org/info/rfc9562>.
 
+## See also
+
+Other helpers:
+[`on_rstudio()`](https://dieghernan.github.io/rstudiothemes/reference/on_rstudio.md)
+
 ## Examples
 
 ``` r
 # Random
 generate_uuid()
-#> [1] "6e2e9ec3-e5c8-4404-be17-4e4c81bd36aa"
+#> [1] "9ec3e5c8-c404-4e17-8e4c-81bd36aa3d2a"
 
 generate_uuid()
-#> [1] "3d2a04d4-2bbc-4145-bebe-03efa1a2d8d5"
+#> [1] "04d42bbc-2145-4ebe-83ef-a1a2d8d52a86"
 
 # Persistent with hint param
 

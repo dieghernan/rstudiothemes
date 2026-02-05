@@ -27,13 +27,13 @@ convert_vs_to_tm_theme(
 
 - name:
 
-  Optional. The name of the theme. If not provided, the name of the VS
-  Code theme in `path` will be used.
+  Optional. The name of the theme. If not provided, the name of the
+  theme in `path` will be used.
 
 - author:
 
-  Optional. The author of the theme. If not provided, the name of the VS
-  Code theme in `path` will be used.
+  Optional. The author of the theme. If not provided, the name of the
+  theme in `path` will be used.
 
 ## Value
 
@@ -43,7 +43,8 @@ file to `outfile` and returns the path.
 ## See also
 
 Other functions for creating themes:
-[`convert_tm_to_vs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_tm_to_vs_theme.md)
+[`convert_tm_to_vs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_tm_to_vs_theme.md),
+[`convert_to_rs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_to_rs_theme.md)
 
 ## Examples
 
