@@ -27,13 +27,13 @@ convert_tm_to_vs_theme(
 
 - name:
 
-  Optional. The name of the theme. If not provided, the name of the VS
-  Code theme in `path` will be used.
+  Optional. The name of the theme. If not provided, the name of the
+  TextMate theme in `path` will be used.
 
 - author:
 
-  Optional. The author of the theme. If not provided, the name of the VS
-  Code theme in `path` will be used.
+  Optional. The author of the theme. If not provided, the name of the
+  TextMate theme in `path` will be used.
 
 ## Value
 
