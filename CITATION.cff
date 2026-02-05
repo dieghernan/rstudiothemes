@@ -11,8 +11,8 @@ title: 'rstudiothemes: Create ''RStudio'' Themes from Visual Studio Code and ''T
   Themes'
 version: 0.0.0.9000
 abstract: Create and install 'RStudio' themes derived from Visual Studio Code and
-  'TextMate' themes; also provides functions to convert between TextMate and Visual
-  Studio Code themes.
+  'TextMate' themes. Provides functions to convert between TextMate and Visual Studio
+  Code themes, as well as ports of several Visual Studio Code themes.
 authors:
 - family-names: Hernangómez
   given-names: Diego
@@ -31,8 +31,8 @@ preferred-citation:
   version: 0.0.0.9000
   url: https://dieghernan.github.io/rstudiothemes/
   abstract: Create and install RStudio themes derived from Visual Studio Code and
-    TextMate themes; also provides functions to convert between TextMate and Visual
-    Studio Code themes.
+    TextMate themes. Provides functions to convert between TextMate and Visual Studio
+    Code themes, as well as ports of several Visual Studio Code themes.
 repository-code: https://github.com/dieghernan/rstudiothemes
 url: https://dieghernan.github.io/rstudiothemes/
 contact:

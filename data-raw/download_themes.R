@@ -21,3 +21,24 @@ dd <- convert_vs_to_tm_theme(
   author = "Wes Bos",
   name = "cobalt2"
 )
+
+# nord -----
+
+url <- file.path(
+  "https://raw.githubusercontent.com/nordtheme/visual-studio-code/refs/heads/",
+  "develop/themes/nord-color-theme.json"
+)
+
+
+dest <- file.path("data-raw", "themes", "src", basename(url))
+download.file(url, dest, mode = "wb")
+
+
+# Generate rstheme
+convert_to_rs_theme("<path/to/file>", apply = TRUE, force = TRUE)
+dd <- convert_to_rs_theme(
+  dest,
+  "inst/rsthemes/Nord.rstheme",
+  force = TRUE,
+  apply = TRUE
+)

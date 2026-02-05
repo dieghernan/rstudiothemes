@@ -2,7 +2,7 @@
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "rstudiothemes",
-  "description": "Create and install 'RStudio' themes derived from Visual Studio Code and 'TextMate' themes; also provides functions to convert between TextMate and Visual Studio Code themes.",
+  "description": "Create and install 'RStudio' themes derived from Visual Studio Code and 'TextMate' themes. Provides functions to convert between TextMate and Visual Studio Code themes, as well as ports of several Visual Studio Code themes.",
   "name": "rstudiothemes: Create 'RStudio' Themes from Visual Studio Code and 'TextMate'\n    Themes",
   "relatedLink": "https://dieghernan.github.io/rstudiothemes/",
   "codeRepository": "https://github.com/dieghernan/rstudiothemes",
@@ -31,6 +31,12 @@
       "familyName": "Hernangómez",
       "email": "diego.hernangomezherrero@gmail.com",
       "@id": "https://orcid.org/0000-0001-8457-4658"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Garrick",
+      "familyName": "Aden-Buie",
+      "email": "garrick@adenbuie.com"
     }
   ],
   "maintainer": [
@@ -175,7 +181,7 @@
     "SystemRequirements": null
   },
   "keywords": ["r-package", "rstudio-themes", "textmate-themes", "vscode-themes"],
-  "fileSize": "1763.305KB",
+  "fileSize": "1821.245KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",

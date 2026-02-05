@@ -5,12 +5,14 @@
 #' the equivalent TextMate theme (`*.tmTheme`).
 #'
 #' @inheritParams read_vs_theme
+#' @inheritParams convert_vs_to_tm_theme
+#'
 #' @param outfile Path where the resulting file will be written. By default
-#'   a temporary file (`tempfile()`).
+#'   a temporary file ([tempfile()]).
 #' @param name Optional. The name of the theme. If not provided, the name of
-#'   the VS Code theme in `path` will be used.
+#'   the theme in `path` will be used.
 #' @param author Optional. The author of the theme. If not provided, the name of
-#'   the VS Code theme in `path` will be used.
+#'   the theme in `path` will be used.
 #'
 #' @returns
 #' This function is called for its side effects: it writes a `*.tmTheme`
@@ -52,7 +54,7 @@ convert_vs_to_tm_theme <- function(
   }
 
   if (!file.exists(path)) {
-    cli::cli_abort("File {.path {path}} does not exists")
+    cli::cli_abort("File {.path {path}} does not exists.")
   }
 
   # Read and parse the VS Code theme file

@@ -2,12 +2,16 @@ Package: rstudiothemes
 Title: Create 'RStudio' Themes from Visual Studio Code and 'TextMate'
     Themes
 Version: 0.0.0.9000
-Authors@R:
+Authors@R: c(
     person("Diego", "Hernangómez", , "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"),
-           comment = c(ORCID = "0000-0001-8457-4658"))
+           comment = c(ORCID = "0000-0001-8457-4658")),
+    person("Garrick", "Aden-Buie", , "garrick@adenbuie.com", role = "cph",
+           comment = "for the rsthemes::try_rsthemes() function")
+  )
 Description: Create and install 'RStudio' themes derived from Visual
-    Studio Code and 'TextMate' themes; also provides functions to convert
-    between TextMate and Visual Studio Code themes.
+    Studio Code and 'TextMate' themes. Provides functions to convert
+    between TextMate and Visual Studio Code themes, as well as ports of
+    several Visual Studio Code themes.
 License: MIT + file LICENSE
 URL: https://dieghernan.github.io/rstudiothemes/,
     https://github.com/dieghernan/rstudiothemes
@@ -27,7 +31,7 @@ Suggests:
     testthat (>= 3.0.0),
     uuid
 Config/Needs/coverage: covr
-Config/Needs/website: dieghernan/gitdevr, ragg, styler
+Config/Needs/website: dieghernan/gitdevr, ragg, styler, gadenbuie/rsthemes
 Config/testthat/edition: 3
 Config/testthat/parallel: true
 Encoding: UTF-8

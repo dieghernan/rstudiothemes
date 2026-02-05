@@ -45,4 +45,8 @@ Davis KR, Peabody B, Leach P (2024). "Universally Unique
 IDentifiers (UUIDs)." RFC 9562. \doi{10.17487/RFC9562},
 \url{https://www.rfc-editor.org/info/rfc9562}.
 }
+\seealso{
+Other helpers: 
+\code{\link{on_rstudio}()}
+}
 \concept{helpers}

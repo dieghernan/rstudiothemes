@@ -20,7 +20,7 @@
       convert_vs_to_tm_theme("a.json")
     Condition
       Error in `convert_vs_to_tm_theme()`:
-      ! File 'a.json' does not exists
+      ! File 'a.json' does not exists.
 
 # Theme creation
 

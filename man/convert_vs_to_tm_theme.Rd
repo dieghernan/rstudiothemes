@@ -15,13 +15,13 @@ convert_vs_to_tm_theme(
 \item{path}{Path to a Visual Studio Code theme, in \verb{*.json} format.}
 
 \item{outfile}{Path where the resulting file will be written. By default
-a temporary file (\code{tempfile()}).}
+a temporary file (\code{\link[=tempfile]{tempfile()}}).}
 
 \item{name}{Optional. The name of the theme. If not provided, the name of
-the VS Code theme in \code{path} will be used.}
+the theme in \code{path} will be used.}
 
 \item{author}{Optional. The author of the theme. If not provided, the name of
-the VS Code theme in \code{path} will be used.}
+the theme in \code{path} will be used.}
 }
 \value{
 This function is called for its side effects: it writes a \verb{*.tmTheme}
@@ -45,6 +45,7 @@ readLines(path) |>
 }
 \seealso{
 Other functions for creating themes: 
-\code{\link{convert_tm_to_vs_theme}()}
+\code{\link{convert_tm_to_vs_theme}()},
+\code{\link{convert_to_rs_theme}()}
 }
 \concept{functions for creating themes}

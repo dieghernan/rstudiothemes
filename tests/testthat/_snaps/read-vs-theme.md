@@ -20,5 +20,5 @@
       read_vs_theme("a.json")
     Condition
       Error in `read_vs_theme()`:
-      ! File 'a.json' does not exists
+      ! File 'a.json' does not exists.
 

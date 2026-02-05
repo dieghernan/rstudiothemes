@@ -34,7 +34,7 @@ read_vs_theme <- function(path) {
   }
 
   if (!file.exists(path)) {
-    cli::cli_abort("File {.path {path}} does not exists")
+    cli::cli_abort("File {.path {path}} does not exists.")
   }
 
   # 1. Read vscode and prepare

@@ -1,0 +1,60 @@
+
+# NOTE! This file has been generated automatically by the VSCode R Test Adapter. Modification has no effect.
+
+# This file modifies the original behavior of the testthat::test_that and testthat::describe methods
+# such that they trigger only the tests specified by the 'desc' argument.
+# Please report any unwanted effects at https://github.com/meakbiyik/vscode-r-test-adapter/issues.
+
+# Entry point for the '/c:/Users/diego/Documents/R/Projects/rstudiothemes/tests/testthat/test-generate_uuid.R' test follows...
+
+TEST_THAT <- "test_that"
+DESCRIBE <- "describe"
+IS_DESCRIBE <- 0
+IS_DEBUG <- 0
+IS_WHOLE_FILE_TEST <- 1
+
+testthat <- loadNamespace('testthat')
+new_describe <- function(...) { }
+new_test_that <- function(...) { }
+
+if (!IS_WHOLE_FILE_TEST) {
+    if (IS_DESCRIBE) {
+        orig_describe <- testthat::describe
+        new_describe <- function(desc, ...) {
+            if ('testthat/test-generate_uuid.R' == desc) {
+                orig_describe(desc, ...)
+            }
+        }
+
+    } else {
+        orig_test_that <- testthat::test_that
+        new_test_that <- function(desc, ...) {
+            if ('testthat/test-generate_uuid.R' == desc) {
+                orig_test_that(desc, ...)
+            }
+        }
+    }
+
+    unlockBinding(DESCRIBE, testthat)
+    assignInNamespace(DESCRIBE, new_describe, ns = 'testthat')
+    assign(DESCRIBE, new_describe, envir = .GlobalEnv)
+    lockBinding(DESCRIBE, testthat)
+
+    unlockBinding(TEST_THAT, testthat)
+    assignInNamespace(TEST_THAT, new_test_that, ns = 'testthat')
+    assign(TEST_THAT, new_test_that, envir = .GlobalEnv)
+    lockBinding(TEST_THAT, testthat)
+
+}
+
+library(devtools)
+devtools::load_all('c:/Users/diego/.vscode/extensions/meakbiyik.vscode-r-test-adapter-0.9.1/src/testthat/reporter')
+if (IS_DEBUG) {
+    .vsc.load_all('c:/Users/diego/Documents/R/Projects/rstudiothemes')
+    with_reporter(VSCodeReporter, {
+        .vsc.debugSource('c:/Users/diego/Documents/R/Projects/rstudiothemes/tests/testthat/test-generate_uuid.R')
+    })
+} else {
+    devtools::load_all('c:/Users/diego/Documents/R/Projects/rstudiothemes')
+    devtools::test_active_file('c:/Users/diego/Documents/R/Projects/rstudiothemes/tests/testthat/test-generate_uuid.R', reporter=VSCodeReporter)
+}

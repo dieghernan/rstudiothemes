@@ -4,11 +4,6 @@
 #' Read a `*.tmTheme` file representing a TextMate theme and write the
 #' equivalent Visual Studio Code theme (`*.json`).
 #'
-#' @param name Optional. The name of the theme. If not provided, the name of
-#'   the TextMate theme in `path` will be used.
-#' @param author Optional. The author of the theme. If not provided, the name
-#'   of the TextMate theme in `path` will be used.
-#'
 #' @inheritParams read_tm_theme
 #' @inheritParams convert_vs_to_tm_theme
 #'
@@ -51,7 +46,7 @@ convert_tm_to_vs_theme <- function(
   }
 
   if (!file.exists(path)) {
-    cli::cli_abort("File {.path {path}} does not exists")
+    cli::cli_abort("File {.path {path}} does not exists.")
   }
 
   theme_db <- read_tm_theme(path)

@@ -43,7 +43,7 @@ read_tm_theme <- function(path) {
   }
 
   if (!file.exists(path)) {
-    cli::cli_abort("File {.path {path}} does not exists")
+    cli::cli_abort("File {.path {path}} does not exists.")
   }
 
   tm <- xml2::read_xml(path)

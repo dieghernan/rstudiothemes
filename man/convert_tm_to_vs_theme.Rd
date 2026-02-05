@@ -15,13 +15,13 @@ convert_tm_to_vs_theme(
 \item{path}{Path to a TextMate theme, in \verb{*.tmTheme} format.}
 
 \item{outfile}{Path where the resulting file will be written. By default
-a temporary file (\code{tempfile()}).}
+a temporary file (\code{\link[=tempfile]{tempfile()}}).}
 
 \item{name}{Optional. The name of the theme. If not provided, the name of
-the TextMate theme in \code{path} will be used.}
+the theme in \code{path} will be used.}
 
-\item{author}{Optional. The author of the theme. If not provided, the name
-of the TextMate theme in \code{path} will be used.}
+\item{author}{Optional. The author of the theme. If not provided, the name of
+the theme in \code{path} will be used.}
 }
 \value{
 This function is called for its side effects. It would write a new \verb{*.json}
@@ -44,6 +44,7 @@ readLines(path) |>
 }
 \seealso{
 Other functions for creating themes: 
+\code{\link{convert_to_rs_theme}()},
 \code{\link{convert_vs_to_tm_theme}()}
 }
 \concept{functions for creating themes}

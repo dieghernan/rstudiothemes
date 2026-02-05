@@ -13,32 +13,55 @@
 
 <!-- badges: end -->
 
-Create custom **RStudio themes** from **Visual Studio Code** and
-**TextMate** theme formats.
+Convert **Visual Studio Code** and **TextMate** themes into **RStudio**
+custom themes.
 
-This project provides tools to convert and work with `.tmTheme` /
-`.json` (VS Code / TextMate) theme files and generate `.rstheme` files
-that can be installed into RStudio. RStudio supports custom themes (in
-`.rstheme` format) as of [version
+This package provides tools to easily convert Visual Studio Code and
+TextMate theme files (`.json` and `.tmTheme` formats) into
+RStudio-compatible `.rstheme` files. RStudio has supported custom themes
+in `.rstheme` format since [version
 1.2+](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html).
 
 ## Features
 
-- Convert VS Code and TextMate themes into RStudio `.rstheme` format
-- Organize and manage custom themes in a reproducible way
-- Integrates with R tooling for easier installation and testing
+- Convert VS Code and TextMate themes into RStudio `.rstheme` format.
+- Organize and manage custom themes in a reproducible way.
+- Integrates with R tooling for easier installation and testing.
+
+## Built-in Themes
+
+This package includes ports of several popular Visual Studio Code
+themes, ready to use in RStudio. Simply use the
+`install_rstudiothemes()` function to install them into your RStudio
+environment:
+
+``` r
+rstudiothemes::install_rstudiothemes()
+#> ℹ Detected GUI: "RTerm".
+#> ✖ `rstudiothemes::try_rs_themes()` only works in RStudio, not in RTerm.
+#> → Bye
+#> NULL
+
+rstudiothemes::list_rstudiothemes()
+#> ℹ Detected GUI: "RTerm".
+#> ✖ `rstudiothemes::try_rs_themes()` only works in RStudio, not in RTerm.
+#> → Bye
+#> NULL
+```
+
+Available themes include popular choices such as Tokyo Night, Night Owl,
+Winter is Coming, SynthWave 84, Nord, and many others.
 
 ## Installation
 
-You can install the developing version of **rstudiothemes** with:
+You can install **rstudiothemes** using either of these methods:
 
 ``` r
 # install.packages("pak")
 pak::pak("dieghernan/rstudiothemes")
 ```
 
-Alternatively, you can install **geobounds** using the
-[r-universe](https://dieghernan.r-universe.dev/rstudiothemes):
+Or, install it from r-universe:
 
 ``` r
 # Install rstudiothemes in R:
@@ -51,26 +74,37 @@ install.packages(
 )
 ```
 
-## Example workflow (high-level):
+## Creating a new theme
 
-1.  Add your Visual Studio Code or TextMate theme files into the
-    appropriate folder.
-2.  Use provided functions or scripts to convert these files into
-    .rstheme files.
-3.  Install the generated `.rstheme` in RStudio using:
+You can convert any Visual Studio Code or TextMate theme to RStudio
+format. Here’s how:
+
+1.  Download your favorite Visual Studio Code or TextMate theme file.
+2.  Use the `convert_to_rs_theme()` function to convert and install it:
 
 ``` r
-rstudioapi::addTheme("path/to/theme.rstheme", apply = TRUE)
+rstudiothemes::convert_to_rs_theme("<path/to/file>", apply = TRUE, force = TRUE)
 ```
 
-Alternatively, install themes via the RStudio UI:
+Alternatively, install the `.rstheme` file via the RStudio UI:
 
-*Tools \> Global Options \> Appearance \> Add Theme…*
+*Tools \> Global Options \> Appearance \> Add Theme*
+
+<figure>
+<img src="man/figures/rstudiogui.png"
+alt="Example on how to update themes on RStudio IDE" />
+<figcaption aria-hidden="true">Example on how to update themes on
+RStudio IDE</figcaption>
+</figure>
+
+The package also includes the reverse conversion functions
+`convert_vs_to_tm_theme()` and `convert_tm_to_vs_theme()`, allowing you
+to convert themes in both directions if needed.
 
 ## Contributing
 
-Contributions are welcome! Please:
+Contributions are welcome! To contribute to this project:
 
-1.  Open an issue to discuss changes or ideas.
-2.  Fork the repository and submit a pull request.
-3.  Follow standard GitHub workflows with clear commit messages.
+1.  Open an issue to discuss your ideas or proposed changes.
+2.  Fork the repository and create a feature branch.
+3.  Submit a pull request with clear commit messages and descriptions.

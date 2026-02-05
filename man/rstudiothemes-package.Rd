@@ -8,7 +8,7 @@
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-Create and install 'RStudio' themes derived from Visual Studio Code and 'TextMate' themes; also provides functions to convert between TextMate and Visual Studio Code themes.
+Create and install 'RStudio' themes derived from Visual Studio Code and 'TextMate' themes. Provides functions to convert between TextMate and Visual Studio Code themes, as well as ports of several Visual Studio Code themes.
 }
 \seealso{
 Useful links:
@@ -21,6 +21,11 @@ Useful links:
 }
 \author{
 \strong{Maintainer}: Diego Hernangómez \email{diego.hernangomezherrero@gmail.com} (\href{https://orcid.org/0000-0001-8457-4658}{ORCID}) [copyright holder]
+
+Other contributors:
+\itemize{
+  \item Garrick Aden-Buie \email{garrick@adenbuie.com} (for the rsthemes::try_rsthemes() function) [copyright holder]
+}
 
 }
 \keyword{internal}

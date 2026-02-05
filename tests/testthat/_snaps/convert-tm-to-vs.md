@@ -20,7 +20,7 @@
       convert_tm_to_vs_theme("a.tmTheme")
     Condition
       Error in `convert_tm_to_vs_theme()`:
-      ! File 'a.tmTheme' does not exists
+      ! File 'a.tmTheme' does not exists.
 
 # Theme creation
 

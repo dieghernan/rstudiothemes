@@ -7,14 +7,22 @@
         "id": "https://orcid.org/0000-0001-8457-4658"
       },
       "codeRepository": "https://github.com/dieghernan/rstudiothemes",
-      "copyrightHolder": {
-        "id": "https://orcid.org/0000-0001-8457-4658",
-        "type": "Person",
-        "email": "diego.hernangomezherrero@gmail.com",
-        "familyName": "Hernangómez",
-        "givenName": "Diego"
-      },
-      "description": "Create and install 'RStudio' themes derived from Visual Studio Code and 'TextMate' themes; also provides functions to convert between TextMate and Visual Studio Code themes.",
+      "copyrightHolder": [
+        {
+          "id": "https://orcid.org/0000-0001-8457-4658",
+          "type": "Person",
+          "email": "diego.hernangomezherrero@gmail.com",
+          "familyName": "Hernangómez",
+          "givenName": "Diego"
+        },
+        {
+          "type": "Person",
+          "email": "garrick@adenbuie.com",
+          "familyName": "Aden-Buie",
+          "givenName": "Garrick"
+        }
+      ],
+      "description": "Create and install 'RStudio' themes derived from Visual Studio Code and 'TextMate' themes. Provides functions to convert between TextMate and Visual Studio Code themes, as well as ports of several Visual Studio Code themes.",
       "license": "https://spdx.org/licenses/MIT",
       "name": "rstudiothemes: Create 'RStudio' Themes from Visual Studio Code and 'TextMate'\n    Themes",
       "programmingLanguage": {
