@@ -46,8 +46,10 @@
 #'
 #' \if{html}{
 #'   \out{<div style="text-align: center">}
-#'      \figure{rstudiogui.png}{options: alt="Install a theme from RStudio GUI"
+#'
+#'    \figure{rstudiogui.png}{options: alt="Install a theme from RStudio GUI"
 #'        style="max-width:90\%;"}
+#'
 #'    \out{</div>}
 #' }
 #'

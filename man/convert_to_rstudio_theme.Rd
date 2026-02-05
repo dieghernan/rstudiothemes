@@ -51,13 +51,7 @@ RStudio IDE.
 \strong{Important}: This function only works in RStudio; it returns \code{NULL} when
 called from other IDEs.
 
-\if{html}{\out{<div class="sourceCode {r, echo=FALSE, results='asis'}">}}\preformatted{v <- rstudioapi::versionInfo()
-c("\\n", paste0(
-  " Function tested in **RStudio ", v$long_version,
-  '** "', v$release_name, '".'
-)) |> cat()
-
-}\if{html}{\out{</div>}}
+Function tested in \strong{RStudio 2026.01.0+392} "Apple Blossom".
 }
 \details{
 RStudio supports custom editor themes in two formats: \code{.tmTheme} and
@@ -71,8 +65,10 @@ use the Editor theme selector.
 
 \if{html}{
   \out{<div style="text-align: center">}
-     \figure{rstudiogui.png}{options: alt="Install a theme from RStudio GUI"
+
+   \figure{rstudiogui.png}{options: alt="Install a theme from RStudio GUI"
        style="max-width:90\%;"}
+
    \out{</div>}
 }
 

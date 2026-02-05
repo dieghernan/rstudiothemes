@@ -7,6 +7,8 @@ figures:
 template:
   bootstrap: 5
   package: gitdevr
+  params:
+    ganalytics: G-JE054GNWFF
   opengraph:
     twitter:
       creator: "@dhernangomez"
