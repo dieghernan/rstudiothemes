@@ -10,7 +10,7 @@ Authors@R: c(
   )
 Description: Create and install 'RStudio' themes derived from Visual
     Studio Code and 'TextMate' themes. Provides functions to convert
-    between TextMate and Visual Studio Code themes, as well as ports of
+    between 'TextMate' and Visual Studio Code themes, as well as ports of
     several Visual Studio Code themes.
 License: MIT + file LICENSE
 URL: https://dieghernan.github.io/rstudiothemes/,
@@ -28,8 +28,12 @@ Imports:
     tidyr,
     xml2
 Suggests:
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0),
     uuid
+VignetteBuilder: 
+    knitr
 Config/Needs/coverage: covr
 Config/Needs/website: dieghernan/gitdevr, ragg, styler, gadenbuie/rsthemes
 Config/testthat/edition: 3

@@ -37,7 +37,7 @@ read_vs_theme <- function(path) {
   if (grepl("^http", path)) {
     local_file <- tempfile(fileext = ".json")
     cli::cli_alert_info("Downloading from {.url {path}}")
-    download.file(path, local_file, quiet = TRUE)
+    download.file(path, local_file, quiet = TRUE, mode = "wb")
   } else {
     local_file <- path
   }
