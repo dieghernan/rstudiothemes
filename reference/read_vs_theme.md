@@ -16,12 +16,12 @@ read_vs_theme(path)
 
 ## Value
 
-A
-[`tibble::tibble()`](https://tibble.tidyverse.org/reference/tibble.html).
+A [tibble](https://tibble.tidyverse.org/reference/tbl_df-class.html)
+with the data of the theme.
 
 ## See also
 
-Other reading:
+Other functions for reading themes:
 [`read_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/read_tm_theme.md)
 
 ## Examples

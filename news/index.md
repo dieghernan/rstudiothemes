@@ -2,4 +2,4 @@
 
 ## rstudiothemes (development version)
 
-- First stable version.
+- In active development.

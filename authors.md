@@ -11,13 +11,15 @@
 Source:
 [`inst/CITATION`](https://github.com/dieghernan/rstudiothemes/blob/main/inst/CITATION)
 
-Hernangómez D (2026). *rstudiothemes: Ports of Visual Studio Code Themes
-for RStudio*.
+Hernangómez D (2026). *rstudiothemes: Create RStudio Themes from Visual
+Studio Code and TextMate Themes*.
+<https://dieghernan.github.io/rstudiothemes/>.
 
     @Manual{R-rstudiothemes,
-      title = {{rstudiothemes}: Ports of {Visual Studio Code} Themes for {RStudio}},
+      title = {{rstudiothemes}: Create {RStudio} Themes from {Visual Studio Code} and {TextMate} Themes},
       author = {Diego Hernangómez},
       year = {2026},
       version = {0.0.0.9000},
-      abstract = {Create and install RStudio themes originated from Visual Studio Code themes.},
+      url = {https://dieghernan.github.io/rstudiothemes/},
+      abstract = {Create and install RStudio themes derived from Visual Studio Code and TextMate themes; also provides functions to convert between TextMate and Visual Studio Code themes.},
     }

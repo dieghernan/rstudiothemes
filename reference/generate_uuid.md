@@ -1,7 +1,7 @@
-# Random UUIDs generation
+# Generate random UUIDs
 
-Generate Universally Unique Identifiers (UUID) version 4 (pseudo-random
-numbers).
+Generate version 4 (pseudo-random) Universally Unique Identifiers
+(UUIDs).
 
 ## Usage
 
@@ -11,7 +11,7 @@ generate_uuid(hint = NULL)
 
 ## Source
 
-Heavily based on unreleased version of `ids::uuid()`.
+Heavily based on an unreleased version of `ids::uuid()`.
 
 ## Arguments
 
@@ -19,19 +19,18 @@ Heavily based on unreleased version of `ids::uuid()`.
 
   Optional. Character (or object coercible with
   [`as.character()`](https://rdrr.io/r/base/character.html)) that may be
-  used as random seed.
+  used as a random seed.
 
 ## Value
 
-A [`character()`](https://rdrr.io/r/base/character.html) representing
-valid UUID that can be validated with
+A character string representing a valid UUID that can be validated with
 [`uuid::UUIDvalidate()`](https://rdrr.io/pkg/uuid/man/UUIDgenerate.html).
 
 ## Details
 
-This is a helper function that assign
+This helper function assigns a
 [UUID](https://www.rfc-editor.org/rfc/rfc9562.html) for identifying
-versions of the generated themes.
+versions of generated themes.
 
 ## References
 
@@ -45,10 +44,10 @@ Davis KR, Peabody B, Leach P (2024). "Universally Unique IDentifiers
 ``` r
 # Random
 generate_uuid()
-#> [1] "e4656e2e-9ec3-45c8-8404-fe174e4c81bd"
+#> [1] "6e2e9ec3-e5c8-4404-be17-4e4c81bd36aa"
 
 generate_uuid()
-#> [1] "36aa3d2a-04d4-4bbc-a145-febe03efa1a2"
+#> [1] "3d2a04d4-2bbc-4145-bebe-03efa1a2d8d5"
 
 # Persistent with hint param
 

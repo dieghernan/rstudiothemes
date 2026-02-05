@@ -1,12 +1,27 @@
 # Package index
 
-## All functions
+## Create themes
 
+- [`convert_tm_to_vs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_tm_to_vs_theme.md)
+  : Convert a TextMate theme into a Visual Studio Code theme
 - [`convert_vs_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_vs_to_tm_theme.md)
   : Convert a Visual Studio Code theme into a TextMate theme
-- [`generate_uuid()`](https://dieghernan.github.io/rstudiothemes/reference/generate_uuid.md)
-  : Random UUIDs generation
+
+## Read themes
+
 - [`read_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/read_tm_theme.md)
   : Read and parse a TextMate theme
 - [`read_vs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/read_vs_theme.md)
   : Read and parse a Visual Studio Code theme
+
+## Utils
+
+- [`generate_uuid()`](https://dieghernan.github.io/rstudiothemes/reference/generate_uuid.md)
+  : Generate random UUIDs
+
+## About the package
+
+- [`rstudiothemes`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-package.md)
+  [`rstudiothemes-package`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-package.md)
+  : rstudiothemes: Create 'RStudio' Themes from Visual Studio Code and
+  'TextMate' Themes

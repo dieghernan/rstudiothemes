@@ -8,7 +8,7 @@ the equivalent TextMate theme (`*.tmTheme`).
 ``` r
 convert_vs_to_tm_theme(
   path,
-  out_tm = tempfile(fileext = ".tmTheme"),
+  outfile = tempfile(fileext = ".tmTheme"),
   name = NULL,
   author = NULL
 )
@@ -20,25 +20,30 @@ convert_vs_to_tm_theme(
 
   Path to a Visual Studio Code theme, in `*.json` format.
 
-- out_tm:
+- outfile:
 
-  Path were the resulting file would be written. By default is a
-  temporal file ([`tempfile()`](https://rdrr.io/r/base/tempfile.html)).
+  Path where the resulting file will be written. By default a temporary
+  file ([`tempfile()`](https://rdrr.io/r/base/tempfile.html)).
 
 - name:
 
-  Optional. The name of the theme. If nor provided the name of the VS
-  Code theme in `path` would be used.
+  Optional. The name of the theme. If not provided, the name of the VS
+  Code theme in `path` will be used.
 
 - author:
 
-  Optional. The author of the theme. If nor provided the name of the VS
-  Code theme in `path` would be used.
+  Optional. The author of the theme. If not provided, the name of the VS
+  Code theme in `path` will be used.
 
 ## Value
 
-This function is called for its side effects. It would return a
-character with the path of the file `out_tm`.
+This function is called for its side effects: it writes a `*.tmTheme`
+file to `outfile` and returns the path.
+
+## See also
+
+Other functions for creating themes:
+[`convert_tm_to_vs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_tm_to_vs_theme.md)
 
 ## Examples
 
@@ -49,9 +54,6 @@ vstheme <- system.file("ext/test-simple-color-theme.json",
 path <- convert_vs_to_tm_theme(vstheme)
 #> ! VSCode theme "Skeletor Syntax" does not have author, use the `author` argument.
 #> ℹ Using `author = "rstudiothemes R package"`.
-
-path
-#> [1] "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\RtmpaMxEaB\\file2180559b3cf5.tmTheme"
 
 readLines(path) |>
   head(50) |>
