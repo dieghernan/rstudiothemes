@@ -28,22 +28,20 @@ To see themes available now:
 
 ``` r
 list_rstudiothemes(list_installed = FALSE)
-#>  [1] "cobalt2"                      "CRAN"                        
-#>  [3] "Dracula2025"                  "GitHub Dark"                 
-#>  [5] "GitHub Light"                 "JellyFish Theme"             
-#>  [7] "Matrix"                       "Night Owl"                   
-#>  [9] "Nord"                         "OKSolar Blue"                
-#> [11] "OKSolar Dark"                 "OKSolar Green"               
-#> [13] "OKSolar Light"                "OKSolar Purple"              
-#> [15] "OKSolar Red"                  "OKSolar Sky"                 
-#> [17] "Overflow Dark"                "Overflow Dark High Contrast" 
-#> [19] "Overflow Light"               "Overflow Light High Contrast"
-#> [21] "Panda Syntax"                 "rOpenSpain"                  
-#> [23] "Selenized Black"              "Selenized Dark"              
-#> [25] "Selenized Light"              "Selenized White"             
-#> [27] "Skeletor Syntax"              "SynthWave 84"                
-#> [29] "Tokyo Night"                  "Tokyo Night Light"           
-#> [31] "Tokyo Night Storm"            "Winter is Coming Dark Blue"
+#>  [1] "ayu Dark"                   "ayu Light"                 
+#>  [3] "cobalt2"                    "CRAN"                      
+#>  [5] "Dracula2025"                "GitHub Dark"               
+#>  [7] "GitHub Light"               "JellyFish Theme"           
+#>  [9] "Matrix"                     "Night Owl"                 
+#> [11] "Night Owl Light"            "Nord"                      
+#> [13] "OKSolar Dark"               "OKSolar Light"             
+#> [15] "OKSolar Sky"                "Overflow Dark"             
+#> [17] "Overflow Light"             "Panda Syntax"              
+#> [19] "Selenized Dark"             "Selenized Light"           
+#> [21] "Skeletor Syntax"            "SynthWave 84"              
+#> [23] "Tokyo Night"                "Tokyo Night Light"         
+#> [25] "Tokyo Night Storm"          "Winter is Coming Dark Blue"
+#> [27] "Winter is Coming Light"
 ```
 
 ## Trying Themes
