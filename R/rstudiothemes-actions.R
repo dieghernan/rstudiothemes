@@ -16,12 +16,12 @@
 #' `list_rstudiothemes(list_installed = FALSE)` only works in RStudio;
 #' it returns `NULL` when called from other IDEs.
 #'
-#' @section Ported Themes: 
+#' @section Ported Themes:
 #' \pkg{rstudiothemes} includes RStudio themes based on the
 #' following Visual Studio Code themes:
 #'
 #' ```{r child="man/chunks/themes.Rmd"}
-#' 
+#'
 #' ```
 #' @author  Garrick Aden-Buie <https://github.com/gadenbuie>
 #'

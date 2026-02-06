@@ -58,17 +58,50 @@ available themes
 \item \code{try_rstudiothemes()}: Try each \pkg{rstudiothemes} RStudio theme
 
 }}
-\section{Palettes}{
- \pkg{rstudiothemes} includes RStudio themes based on the
-following color palettes.
+\section{Ported Themes}{
 
-\if{html}{\out{<div class="sourceCode r">}}\preformatted{# \{r child="man/fragments/palettes.Rmd"\}
-TODO
-}\if{html}{\out{</div>}}
+\pkg{rstudiothemes} includes RStudio themes based on the
+following Visual Studio Code themes:
+\itemize{
+\item \href{https://marketplace.visualstudio.com/items?itemName=teabyii.ayu}{Ayu} by
+teabyii.
+\item \href{https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2}{Cobalt2 Theme Official}
+by Wes Bos.
+\item CRAN by dieghernan, based on CRAN (R-Project) web theme, produced with
+Pandoc
+\item \href{https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula}{Dracula Theme Official}
+by \url{https://draculatheme.com/}.
+\item \href{https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme}{GitHub Dark/Light}
+by GitHub.
+\item \href{https://marketplace.visualstudio.com/items?itemName=PawelBorkar.jellyfish}{JellyFish Theme}
+by Pawel Borkar.
+\item \href{https://marketplace.visualstudio.com/items?itemName=UstymUkhman.matrix-theme}{Matrix Theme}
+by UstymUkhman,
+\item \href{https://marketplace.visualstudio.com/items?itemName=sdras.night-owl}{Night Owl Dark/Light}
+(~~no italics~~) by sarah.drasner.
+\item \href{https://marketplace.visualstudio.com/items?itemName=arcticicestudio.nord-visual-studio-code}{Nord}
+by arcticicestudio.
+\item \href{https://marketplace.visualstudio.com/items?itemName=dieghernan.oksolar-theme}{OKSolar Theme}
+by dieghernan.
+\item \href{https://marketplace.visualstudio.com/items?itemName=dieghernan.overflow-theme}{Overflow Theme}
+by dieghernan.
+\item \href{https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda}{Panda Theme}
+by Panda Theme.
+\item \href{https://marketplace.visualstudio.com/items?itemName=dieghernan.selenized-theme}{Selenized Themes}
+by dieghernan.
+\item \href{https://marketplace.visualstudio.com/items?itemName=dieghernan.skeletor-syntax}{Skeletor Syntax}
+by dieghernan.
+\item \href{https://marketplace.visualstudio.com/items?itemName=RobbOwen.synthwave-vscode}{SynthWave '84}
+by Robb Owen.
+\item \href{https://marketplace.visualstudio.com/items?itemName=enkia.tokyo-night}{Tokyo Night}
+by enkia.
+\item \href{https://marketplace.visualstudio.com/items?itemName=johnpapa.winteriscoming}{Winter is Coming Theme}
+by John Papa.
+}
 }
 
 \examples{
-list_rstudiothemes()
+list_rstudiothemes(list_installed = FALSE)
 }
 \references{
 Aden-Buie G (2026). \emph{rsthemes: Full Themes for RStudio v1.2+}. R package
