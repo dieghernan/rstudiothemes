@@ -1448,3 +1448,5 @@
 .rstudio-themes-flat .gwt-TabLayoutPanelContentContainer, .rstudio-themes-dark-grey .gwt-TabLayoutPanelContentContainer, .rstudio-themes-default .gwt-TabLayoutPanelContentContainer { scrollbar-width: auto; scrollbar-color: #003156 #000530; }
 
 .editor_dark .ace_editor_theme .GOC5OMXBBJ, .editor_dark .GOC5OMXBP3C { color: #FFFFFF; }
+
+.rstudio-themes-flat .breadcrumb table .rstudio-HyperlinkLabel, .rstudio-themes-dark-grey .breadcrumb table .rstudio-HyperlinkLabel, .rstudio-themes-default .breadcrumb table .rstudio-HyperlinkLabel { color: #FFFFFF !important; }

@@ -147,6 +147,7 @@ read_vs_theme <- function(path) {
   # Token colors
 
   token_list <- vs$tokenColors
+  token_list <- token_list[lengths(token_list) > 0]
   it <- seq_along(token_list)
 
   token_df <- lapply(it, function(i) {

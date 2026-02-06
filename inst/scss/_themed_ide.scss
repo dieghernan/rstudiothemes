@@ -70,7 +70,7 @@ $bgfg2: mix($bg, $fg, 70%);
 		background: $bgaccent1 !important;
 	}
 
-	// Breadcrumbs
+
 	.rstheme_toolbarWrapper {
 		background: $bgfg1;
 		color: $fg;
@@ -267,4 +267,11 @@ $bgfg2: mix($bg, $fg, 70%);
     color: $fg;
 }
 
-
+.rstudio-themes-flat,
+.rstudio-themes-dark-grey,
+.rstudio-themes-default {
+	// Breadcrumbs
+	.breadcrumb table .rstudio-HyperlinkLabel {
+	  	color: $fg !important;
+	}
+}

@@ -14,7 +14,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.5.2 (2025-10-31)",
+  "runtimePlatform": "R version 4.5.2 (2025-10-31 ucrt)",
   "author": [
     {
       "@type": "Person",
@@ -205,7 +205,7 @@
     "SystemRequirements": null
   },
   "keywords": ["r-package", "rstudio-themes", "textmate-themes", "vscode-themes"],
-  "fileSize": "1982.228KB",
+  "fileSize": "1798.17KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",

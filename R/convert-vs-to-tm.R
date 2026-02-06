@@ -54,6 +54,9 @@ convert_vs_to_tm_theme <- function(
 
   if (is.null(name)) {
     name <- unlist(for_top_df[for_top_df$name == "name", ]$value)
+    if (length(name) < 1) {
+      cli::cli_abort("Unnamed theme, please use {.arg name} argument.")
+    }
   }
 
   if (is.null(author)) {
@@ -188,7 +191,7 @@ convert_vs_to_tm_theme <- function(
 
 tmtheme_settings_df <- function(vs_df) {
   # Mapping
-  maps <- mapping_db
+  maps <- read.csv(system.file("csv/mapping.csv", package = "rstudiothemes"))
 
   end <- dplyr::inner_join(
     maps,

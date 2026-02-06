@@ -1,0 +1,356 @@
+## code to `download_themes`
+
+devtools::load_all()
+
+remove_rstudiothemes()
+
+# Ayu -----
+url <- paste0(
+  "https://raw.githubusercontent.com/ayu-theme/vscode-ayu",
+  "/refs/heads/master/ayu-light.json"
+)
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/Ayu_Light.rstheme",
+  name = "ayu Light",
+  apply = TRUE,
+  force = TRUE,
+  output_style = "compact"
+)
+
+url <- paste0(
+  "https://raw.githubusercontent.com/ayu-theme/vscode-ayu",
+  "/refs/heads/master/ayu-dark.json"
+)
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/Ayu_Dark.rstheme",
+  name = "ayu Dark",
+  apply = TRUE,
+  force = TRUE,
+  output_style = "compact"
+)
+
+
+# cobalt -----
+
+url <- paste0(
+  "https://raw.githubusercontent.com/wesbos/",
+  "cobalt2-vscode/refs/heads/master/theme/cobalt2.json"
+)
+
+dest <- file.path("inst", "rsthemes", basename(url))
+dest <- gsub("json$|tmtheme$", "rstheme", dest, ignore.case = TRUE)
+
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  url,
+  dest,
+  name = "cobalt2",
+  apply = TRUE,
+  force = TRUE,
+  output_style = "compact"
+)
+
+
+# cran -------------------------------------------------------------------
+url <- paste0(
+  "https://raw.githubusercontent.com/dieghernan/pretty-themes/",
+  "refs/heads/main/dist/tmTheme/cran.tmTheme"
+)
+
+dest <- file.path("inst", "rsthemes", basename(url))
+dest <- gsub("json$|tmtheme$", "rstheme", dest, ignore.case = TRUE)
+
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  url,
+  dest,
+  apply = TRUE,
+  force = TRUE,
+  name = "CRAN",
+  output_style = "compact"
+)
+
+read_tm_theme(url)
+
+
+# dracula (build) --------------------------------------------------------
+source("./data-raw/compile_dracula.R")
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  "./data-raw/vscode_themes/dracula.json",
+  "inst/rsthemes/Dracula2025.rstheme",
+  name = "Dracula2025",
+  apply = TRUE,
+  force = TRUE,
+  output_style = "compact"
+)
+
+# github (build) -----------------------------------------------------------
+# https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme
+source("./data-raw/compile_github.R")
+
+dd <- convert_to_rstudio_theme(
+  "data-raw/vscode_themes/dark.json",
+  "inst/rsthemes/GitHub_Dark.rstheme",
+  name = "GitHub Dark",
+  output_style = "compact",
+  apply = TRUE,
+  force = TRUE
+)
+
+dd <- convert_to_rstudio_theme(
+  "data-raw/vscode_themes/light.json",
+  "inst/rsthemes/GitHub_Light.rstheme",
+  name = "GitHub Light",
+  apply = TRUE,
+  force = TRUE,
+  output_style = "compact"
+)
+
+
+# JellyFish -------------------------------------------------------------------
+
+dd <- convert_to_rstudio_theme(
+  "data-raw/vscode_themes/JellyFish Theme-color-theme.json",
+  "inst/rsthemes/JellyFish_Theme.rstheme",
+  name = "JellyFish Theme",
+  apply = TRUE,
+  force = TRUE,
+  output_style = "compact"
+)
+
+
+# Matrix -------------------------------------------------------------------
+# url <- file.path(
+#   "https://raw.githubusercontent.com/UstymUkhman/matrix-theme/refs/heads/",
+#   "master/themes/Matrix-color-theme.json"
+# )
+# Generate rstheme
+
+dd <- convert_to_rstudio_theme(
+  "data-raw/vscode_themes/Matrix-color-theme.json",
+  "inst/rsthemes/Matrix.rstheme",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+# Night Owl -------------------------------------------------------------------
+url <- paste0(
+  "https://raw.githubusercontent.com/sdras/night-owl-vscode-theme/",
+  "refs/heads/main/themes/Night%20Owl-Light-color-theme-noitalic.json"
+)
+
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/Night_Owl_Light.rstheme",
+  name = "Night Owl Light",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+url <- paste0(
+  "https://raw.githubusercontent.com/sdras/night-owl-vscode-theme/",
+  "refs/heads/main/themes/Night%20Owl-color-theme-noitalic.json"
+)
+
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/Night_Owl_Dark.rstheme",
+  name = "Night Owl",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+
+# Nord -------------------------------------------------------------------
+url <- file.path(
+  "https://raw.githubusercontent.com/nordtheme/visual-studio-code/refs/heads/",
+  "develop/themes/nord-color-theme.json"
+)
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/Nord.rstheme",
+  name = "Nord",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+# OKSolar -------------------------------------------------------------------
+url <- file.path(
+  "https://raw.githubusercontent.com/dieghernan/oksolar-theme/refs/heads/",
+  "main/dist/vscode/themes/oksolar-light-color-theme.json"
+)
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/OKSolar_Light.rstheme",
+  name = "OKSolar Light",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+url <- file.path(
+  "https://raw.githubusercontent.com/dieghernan/oksolar-theme/refs/heads/",
+  "main/dist/vscode/themes/oksolar-dark-color-theme.json"
+)
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/OKSolar_Dark.rstheme",
+  name = "OKSolar Dark",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+url <- file.path(
+  "https://raw.githubusercontent.com/dieghernan/oksolar-theme/refs/heads/",
+  "main/dist/vscode/themes/oksolar-sky-color-theme.json"
+)
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/OKSolar_Sky.rstheme",
+  name = "OKSolar Sky",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+# Overflow -------------------------------------------------------------------
+url <- file.path(
+  "https://raw.githubusercontent.com/dieghernan/overflow-theme/refs/heads/",
+  "main/dist/vscode/themes/overflow-light-color-theme.json"
+)
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/Overflow_Light.rstheme",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+url <- file.path(
+  "https://raw.githubusercontent.com/dieghernan/overflow-theme/refs/heads/",
+  "main/dist/vscode/themes/overflow-dark-color-theme.json"
+)
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/Overflow_Dark.rstheme",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+# Panda -------------------------------------------------------------------
+url <- file.path(
+  "https://raw.githubusercontent.com/siamak/panda-syntax-vscode/refs/heads/",
+  "main/dist/Panda.json"
+)
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/Panda_Syntax.rstheme",
+  name = "Panda Syntax",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+# Selenized -------------------------------------------------------------------
+url <- file.path(
+  "https://raw.githubusercontent.com/dieghernan/selenized-theme/refs/heads/",
+  "main/dist/vscode/themes/selenized-light-color-theme.json"
+)
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/Selenized_Light.rstheme",
+  name = "Selenized Light",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+url <- file.path(
+  "https://raw.githubusercontent.com/dieghernan/selenized-theme/refs/heads/",
+  "main/dist/vscode/themes/selenized-dark-color-theme.json"
+)
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/Selenized_Dark.rstheme",
+  name = "Selenized Dark",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+# Skeletor -------------------------------------------------------------------
+url <- file.path(
+  "https://raw.githubusercontent.com/dieghernan/skeletor-syntax/refs/heads/",
+  "main/dist/vscode/themes/skeletor-syntax-color-theme.json"
+)
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/Skeletor_Syntax.rstheme",
+  name = "Skeletor Syntax",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+# SynthWave '84 --------------------------------------------------------------
+
+# url <- file.path(
+#   "https://raw.githubusercontent.com/robb0wen/synthwave-vscode/refs/heads/",
+#   "master/themes/synthwave-color-theme.json"
+# )
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  "data-raw/vscode_themes/synthwave-color-theme.json",
+  "inst/rsthemes/SynthWave84.rstheme",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+# Tokyo Night --------------------------------------------------------------
+
+# url <- file.path(
+#   "https://raw.githubusercontent.com/tokyo-night/tokyo-night-vscode-theme/refs/heads/",
+#   "master/themes/tokyo-night-color-theme.json"
+# )
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  "data-raw/vscode_themes/tokyo-night-color-theme.json",
+  "inst/rsthemes/Tokio_Night.rstheme",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+# url <- file.path(
+#   "https://raw.githubusercontent.com/tokyo-night/tokyo-night-vscode-theme/refs/heads/",
+#   "master/themes/tokyo-night-light-color-theme.json"
+# )
+
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  "data-raw/vscode_themes/tokyo-night-light-color-theme.json",
+  "inst/rsthemes/Tokio_Night_Light.rstheme",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
