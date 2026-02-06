@@ -118,12 +118,45 @@ available themes</p></li>
 <li><p><code>try_rstudiothemes()</code>: Try each <span class="pkg">rstudiothemes</span> RStudio theme</p></li>
 </ul></div>
     <div class="section level2">
-    <h2 id="palettes">Palettes<a class="anchor" aria-label="anchor" href="#palettes"></a></h2>
-    <p><span class="pkg">rstudiothemes</span> includes RStudio themes based on the
-following color palettes.</p>
-<p></p><div class="sourceCode r"><pre><code><span><span class="co"># {r child="man/fragments/palettes.Rmd"}</span></span>
-<span><span class="va">TODO</span></span></code></pre><p></p></div>
-    </div>
+    <h2 id="ported-themes">Ported Themes<a class="anchor" aria-label="anchor" href="#ported-themes"></a></h2>
+
+
+<p><span class="pkg">rstudiothemes</span> includes RStudio themes based on the
+following Visual Studio Code themes:</p><ul><li><p><a href="https://marketplace.visualstudio.com/items?itemName=teabyii.ayu" class="external-link">Ayu</a> by
+teabyii.</p></li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2" class="external-link">Cobalt2 Theme Official</a>
+by Wes Bos.</p></li>
+<li><p>CRAN by dieghernan, based on CRAN (R-Project) web theme, produced with
+Pandoc</p></li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula" class="external-link">Dracula Theme Official</a>
+by <a href="https://draculatheme.com/" class="external-link">https://draculatheme.com/</a>.</p></li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme" class="external-link">GitHub Dark/Light</a>
+by GitHub.</p></li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=PawelBorkar.jellyfish" class="external-link">JellyFish Theme</a>
+by Pawel Borkar.</p></li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=UstymUkhman.matrix-theme" class="external-link">Matrix Theme</a>
+by UstymUkhman,</p></li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=sdras.night-owl" class="external-link">Night Owl Dark/Light</a>
+(~~no italics~~) by sarah.drasner.</p></li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=arcticicestudio.nord-visual-studio-code" class="external-link">Nord</a>
+by arcticicestudio.</p></li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=dieghernan.oksolar-theme" class="external-link">OKSolar Theme</a>
+by dieghernan.</p></li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=dieghernan.overflow-theme" class="external-link">Overflow Theme</a>
+by dieghernan.</p></li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda" class="external-link">Panda Theme</a>
+by Panda Theme.</p></li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=dieghernan.selenized-theme" class="external-link">Selenized Themes</a>
+by dieghernan.</p></li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=dieghernan.skeletor-syntax" class="external-link">Skeletor Syntax</a>
+by dieghernan.</p></li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=RobbOwen.synthwave-vscode" class="external-link">SynthWave '84</a>
+by Robb Owen.</p></li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=enkia.tokyo-night" class="external-link">Tokyo Night</a>
+by enkia.</p></li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=johnpapa.winteriscoming" class="external-link">Winter is Coming Theme</a>
+by John Papa.</p></li>
+</ul></div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
     <p>Aden-Buie G (2026). <em>rsthemes: Full Themes for RStudio v1.2+</em>. R package
@@ -137,11 +170,21 @@ version 0.5.1,commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">list_rstudiothemes</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Detected GUI: "RTerm".</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #BB0000;">✖</span> `rstudiothemes::list_rstudiothemes()` only works in RStudio, not in RTerm.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> → Bye</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">list_rstudiothemes</span><span class="op">(</span>list_installed <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "ayu Dark"                   "ayu Light"                 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [3] "Dracula2025"                "GitHub Dark"               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [5] "GitHub Light"               "JellyFish Theme"           </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [7] "Matrix"                     "Night Owl"                 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [9] "Night Owl Light"            "Nord"                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [11] "OKSolar Dark"               "OKSolar Light"             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [13] "OKSolar Sky"                "Overflow Dark"             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [15] "Overflow Light"             "Panda Syntax"              </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [17] "Selenized Dark"             "Selenized Light"           </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [19] "Skeletor Syntax"            "SynthWave 84"              </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [21] "Tokyo Night"                "Tokyo Night Light"         </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [23] "Tokyo Night Storm"          "Winter is Coming Dark Blue"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [25] "Winter is Coming Light"     "cobalt2"                   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [27] "CRAN"                      </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

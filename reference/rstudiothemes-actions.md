@@ -65,13 +65,75 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 
 - `try_rstudiothemes()`: Try each rstudiothemes RStudio theme
 
-## Palettes
+## Ported Themes
 
-rstudiothemes includes RStudio themes based on the following color
-palettes.
+rstudiothemes includes RStudio themes based on the following Visual
+Studio Code themes:
 
-    # {r child="man/fragments/palettes.Rmd"}
-    TODO
+- [Ayu](https://marketplace.visualstudio.com/items?itemName=teabyii.ayu)
+  by teabyii.
+
+- [Cobalt2 Theme
+  Official](https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2)
+  by Wes Bos.
+
+- CRAN by dieghernan, based on CRAN (R-Project) web theme, produced with
+  Pandoc
+
+- [Dracula Theme
+  Official](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
+  by <https://draculatheme.com/>.
+
+- [GitHub
+  Dark/Light](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)
+  by GitHub.
+
+- [JellyFish
+  Theme](https://marketplace.visualstudio.com/items?itemName=PawelBorkar.jellyfish)
+  by Pawel Borkar.
+
+- [Matrix
+  Theme](https://marketplace.visualstudio.com/items?itemName=UstymUkhman.matrix-theme)
+  by UstymUkhman,
+
+- [Night Owl
+  Dark/Light](https://marketplace.visualstudio.com/items?itemName=sdras.night-owl)
+  (\~~no italics\~~) by sarah.drasner.
+
+- [Nord](https://marketplace.visualstudio.com/items?itemName=arcticicestudio.nord-visual-studio-code)
+  by arcticicestudio.
+
+- [OKSolar
+  Theme](https://marketplace.visualstudio.com/items?itemName=dieghernan.oksolar-theme)
+  by dieghernan.
+
+- [Overflow
+  Theme](https://marketplace.visualstudio.com/items?itemName=dieghernan.overflow-theme)
+  by dieghernan.
+
+- [Panda
+  Theme](https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda)
+  by Panda Theme.
+
+- [Selenized
+  Themes](https://marketplace.visualstudio.com/items?itemName=dieghernan.selenized-theme)
+  by dieghernan.
+
+- [Skeletor
+  Syntax](https://marketplace.visualstudio.com/items?itemName=dieghernan.skeletor-syntax)
+  by dieghernan.
+
+- [SynthWave
+  '84](https://marketplace.visualstudio.com/items?itemName=RobbOwen.synthwave-vscode)
+  by Robb Owen.
+
+- [Tokyo
+  Night](https://marketplace.visualstudio.com/items?itemName=enkia.tokyo-night)
+  by enkia.
+
+- [Winter is Coming
+  Theme](https://marketplace.visualstudio.com/items?itemName=johnpapa.winteriscoming)
+  by John Papa.
 
 ## References
 
@@ -86,9 +148,19 @@ Garrick Aden-Buie <https://github.com/gadenbuie>
 ## Examples
 
 ``` r
-list_rstudiothemes()
-#> ℹ Detected GUI: "RTerm".
-#> ✖ `rstudiothemes::list_rstudiothemes()` only works in RStudio, not in RTerm.
-#> → Bye
-#> NULL
+list_rstudiothemes(list_installed = FALSE)
+#>  [1] "ayu Dark"                   "ayu Light"                 
+#>  [3] "Dracula2025"                "GitHub Dark"               
+#>  [5] "GitHub Light"               "JellyFish Theme"           
+#>  [7] "Matrix"                     "Night Owl"                 
+#>  [9] "Night Owl Light"            "Nord"                      
+#> [11] "OKSolar Dark"               "OKSolar Light"             
+#> [13] "OKSolar Sky"                "Overflow Dark"             
+#> [15] "Overflow Light"             "Panda Syntax"              
+#> [17] "Selenized Dark"             "Selenized Light"           
+#> [19] "Skeletor Syntax"            "SynthWave 84"              
+#> [21] "Tokyo Night"                "Tokyo Night Light"         
+#> [23] "Tokyo Night Storm"          "Winter is Coming Dark Blue"
+#> [25] "Winter is Coming Light"     "cobalt2"                   
+#> [27] "CRAN"                      
 ```
