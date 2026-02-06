@@ -76,7 +76,9 @@ and select the installed theme.
 You can convert a VS Code or TextMate theme file into an RStudio theme:
 
 ``` r
-convert_to_rstudio_theme("<path/to/vscode-theme.json>", apply = TRUE, force = TRUE)
+convert_to_rstudio_theme("<path/to/vscode-theme.json>",
+  apply = TRUE, force = TRUE
+)
 ```
 
 This function will convert and install the theme immediately, optionally
