@@ -18,8 +18,11 @@ dd <- convert_to_rstudio_theme(
   url,
   dest,
   name = "cobalt2",
-  apply = TRUE
+  apply = TRUE,
+  force = TRUE,
+  output_style = "compact"
 )
+
 
 # cran -------------------------------------------------------------------
 url <- paste0(
@@ -33,8 +36,14 @@ dest <- gsub("json$|tmtheme$", "rstheme", dest, ignore.case = TRUE)
 # Generate rstheme
 dd <- convert_to_rstudio_theme(
   url,
-  dest
+  dest,
+  apply = TRUE,
+  force = TRUE,
+  name = "CRAN",
+  output_style = "compact"
 )
+
+read_tm_theme(url)
 
 # dracula (build) --------------------------------------------------------
 
@@ -51,10 +60,14 @@ cd ../..
 
 # Generate rstheme
 dd <- convert_to_rstudio_theme(
-  "./data-raw/theme-dracula/theme/dracula.json",
+  "./data-raw//themes/dracula.json",
   "inst/rsthemes/Dracula2025.rstheme",
-  name = "Dracula2025"
+  name = "Dracula2025",
+  apply = TRUE,
+  force = TRUE,
+  output_style = "compact"
 )
+
 
 # Remove on terminal
 "
@@ -67,20 +80,29 @@ rm -rf ./data-raw/theme-dracula
 dd <- convert_to_rstudio_theme(
   "data-raw/themes/dark.json",
   "inst/rsthemes/GitHub_Dark.rstheme",
-  name = "GitHub Dark"
+  name = "GitHub Dark",
+  output_style = "compact",
+  apply = TRUE,
+  force = TRUE
 )
 
 dd <- convert_to_rstudio_theme(
   "data-raw/themes/light.json",
   "inst/rsthemes/GitHub_Light.rstheme",
-  name = "GitHub Light"
+  name = "GitHub Light",
+  apply = TRUE,
+  force = TRUE,
+  output_style = "compact"
 )
 # JellyFish -------------------------------------------------------------------
 
 dd <- convert_to_rstudio_theme(
   "data-raw/themes/JellyFish Theme-color-theme.json",
   "inst/rsthemes/JellyFish_Theme.rstheme",
-  name = "JellyFish Theme"
+  name = "JellyFish Theme",
+  apply = TRUE,
+  force = TRUE,
+  output_style = "compact"
 )
 
 
@@ -111,3 +133,6 @@ dd <- convert_to_rstudio_theme(
   force = TRUE,
   apply = TRUE
 )
+
+devtools::load_all()
+remove_rstudiothemes()

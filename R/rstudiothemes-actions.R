@@ -274,14 +274,21 @@ try_rstudiothemes <- function(
   }
 
   # Logic, extract in order (dark/light) and then select based in user inputs
-  all_installed <- list_rstudiothemes()
-
   if (!is.null(themes)) {
     # Validate
-    all_installed <- intersect(themes, all_installed)
+    all_installed <- intersect(themes, list_rstudiothemes())
+  } else {
+    all_installed <- list_rstudiothemes(style)
   }
 
-  try_themes <- all_installed
+  # Now sort based on style
+  try_themes <- unique(c(
+    all_installed[all_installed %in% names(list_pkg_rstudiothemes("light"))],
+    all_installed[all_installed %in% names(list_pkg_rstudiothemes("dark"))]
+  ))
+
+  # Arrange in dark/light
+
   current_theme <- rstudioapi::getThemeInfo()
 
   cli::cli_alert(c(

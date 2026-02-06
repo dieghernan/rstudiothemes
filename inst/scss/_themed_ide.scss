@@ -90,8 +90,11 @@ $bgfg2: mix($bg, $fg, 70%);
 // "tab.inactiveBackground" = bgfg1,
 // "tab.inactiveForeground" = fg,
 
+
 .rstudio-themes-dark-grey,
 .rstudio-themes-default {
+
+
 	// Background Panel
 	.gwt-TabLayoutPanelTabs,
 	.GNTYACMBNS,
@@ -148,6 +151,9 @@ $bgfg2: mix($bg, $fg, 70%);
 .rstudio-themes-dark-grey,
 .rstudio-themes-default,
 .rstudio-themes-flat {
+
+
+
 	.popupMiddleCenter,
 	.menuPopupMiddleCenter,
 	.suggestPopupMiddleCenter {
@@ -196,6 +202,10 @@ $bgfg2: mix($bg, $fg, 70%);
 			}
 		}
 	}
+
+  .gwt-MenuItem {
+    color: $fg !important;
+  }
 
 	.gwt-MenuItem.gwt-MenuItem-selected,
 	.gwt-MenuItem.gwt-MenuItem-selected > table {
@@ -251,13 +261,10 @@ $bgfg2: mix($bg, $fg, 70%);
 	}
 }
 
-// File viewer: Same color on name and details
-.editor_dark.ace_editor_theme .GOC5OMXBBJ {
-    color: inherit;
-}
-
 // Git Tab: Highlighted
-
+.editor_dark .ace_editor_theme .GOC5OMXBBJ,
 .editor_dark .GOC5OMXBP3C {
-    color: inherit;
+    color: $fg;
 }
+
+

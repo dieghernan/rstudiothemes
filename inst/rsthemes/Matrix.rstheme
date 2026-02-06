@@ -3009,6 +3009,12 @@ table.rstheme_tabLayoutCenter .gwt-Label {
   color: #101110;
 }
 
+.rstudio-themes-dark-grey .gwt-MenuItem,
+.rstudio-themes-default .gwt-MenuItem,
+.rstudio-themes-flat .gwt-MenuItem {
+  color: #00CC00 !important;
+}
+
 .rstudio-themes-dark-grey .gwt-MenuItem.gwt-MenuItem-selected,
 .rstudio-themes-dark-grey .gwt-MenuItem.gwt-MenuItem-selected > table,
 .rstudio-themes-default .gwt-MenuItem.gwt-MenuItem-selected,
@@ -3061,10 +3067,7 @@ table.rstheme_tabLayoutCenter .gwt-Label {
   scrollbar-color: #363d36 #101110;
 }
 
-.editor_dark.ace_editor_theme .GOC5OMXBBJ {
-  color: inherit;
-}
-
+.editor_dark .ace_editor_theme .GOC5OMXBBJ,
 .editor_dark .GOC5OMXBP3C {
-  color: inherit;
+  color: #00CC00;
 }
