@@ -2,6 +2,7 @@
 
 devtools::load_all()
 
+
 # cobalt ---
 
 url <- paste0(
@@ -16,7 +17,8 @@ dest <- gsub("json$|tmtheme$", "rstheme", dest, ignore.case = TRUE)
 dd <- convert_to_rstudio_theme(
   url,
   dest,
-  name = "cobalt2"
+  name = "cobalt2",
+  apply = TRUE
 )
 
 # cran -------------------------------------------------------------------
@@ -89,8 +91,23 @@ url <- file.path(
 )
 # Generate rstheme
 dd <- convert_to_rstudio_theme(
-  dest,
+  url,
   "inst/rsthemes/Nord.rstheme",
+  force = TRUE,
+  apply = TRUE
+)
+
+
+# matrix -------------------------------------------------------------------
+# url <- file.path(
+#   "https://raw.githubusercontent.com/UstymUkhman/matrix-theme/refs/heads/",
+#   "master/themes/Matrix-color-theme.json"
+# )
+# Generate rstheme
+
+dd <- convert_to_rstudio_theme(
+  "data-raw/themes/Matrix-color-theme.json",
+  "inst/rsthemes/Matrix.rstheme",
   force = TRUE,
   apply = TRUE
 )

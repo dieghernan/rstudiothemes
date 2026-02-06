@@ -250,3 +250,14 @@ $bgfg2: mix($bg, $fg, 70%);
 		scrollbar-color: $bgaccent2 $bgaccent1;
 	}
 }
+
+// File viewer: Same color on name and details
+.editor_dark.ace_editor_theme .GOC5OMXBBJ {
+    color: inherit;
+}
+
+// Git Tab: Highlighted
+
+.editor_dark .GOC5OMXBP3C {
+    color: inherit;
+}

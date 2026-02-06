@@ -2771,3 +2771,11 @@ table.rstheme_tabLayoutCenter .gwt-Label {
   scrollbar-width: auto;
   scrollbar-color: #c7cedf #f2f3f5;
 }
+
+.editor_dark.ace_editor_theme .GOC5OMXBBJ {
+  color: inherit;
+}
+
+.editor_dark .GOC5OMXBP3C {
+  color: inherit;
+}

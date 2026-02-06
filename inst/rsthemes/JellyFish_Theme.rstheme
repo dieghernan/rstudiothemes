@@ -3028,3 +3028,11 @@ table.rstheme_tabLayoutCenter .gwt-Label {
   scrollbar-width: auto;
   scrollbar-color: #003156 #000530;
 }
+
+.editor_dark.ace_editor_theme .GOC5OMXBBJ {
+  color: inherit;
+}
+
+.editor_dark .GOC5OMXBP3C {
+  color: inherit;
+}

@@ -10,15 +10,6 @@
 #' **Important**: This function only works in RStudio; it returns `NULL` when
 #' called from other IDEs.
 #'
-#' ```{r, echo=FALSE, results='asis'}
-#' v <- rstudioapi::versionInfo()
-#' c("\n", paste0(
-#'   " Function tested in **RStudio ", v$long_version,
-#'   '** "', v$release_name, '".'
-#' )) |> cat()
-#'
-#' ```
-#'
 #' @param path Path or URL to a TextMate theme (in `.tmTheme` format) or a
 #'   Visual Studio Code theme, in `.json` format.
 #' @param apply logical. Apply the theme with [rstudioapi::applyTheme()].
