@@ -32,7 +32,7 @@
 #'
 #' @name rstudiothemes-actions
 #' @examples
-#' list_rstudiothemes()
+#' list_rstudiothemes(list_installed = FALSE)
 NULL
 
 #' @describeIn rstudiothemes-actions Install RStudio themes
