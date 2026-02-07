@@ -19,12 +19,22 @@ repo:
 
 navbar:
   structure:
+    left:
+    - intro
+    - reference
+    - articles
+    - gallery
+    - tutorials
+    - news
     right:
     - search
     - github
     - donate
     - lightswitch
   components:
+    gallery:
+      text: Theme Gallery
+      href: articles/gallery.html
     donate:
       icon: fa-hand-holding-dollar
       href: https://ko-fi.com/dieghernan
@@ -58,4 +68,7 @@ authors:
   Diego Hernangómez:
     href: 'https://dieghernan.github.io/'
 
-Title: Create 'RStudio' themes from Visual Studio Code and 'TextMate' themes
+articles:
+- title: Theme Gallery
+  contents:
+  - articles/gallery
