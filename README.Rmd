@@ -115,7 +115,7 @@ Alternatively, install the `.rstheme` file via the RStudio UI:
 
 **Tools → Global Options → Appearance → Add**
 
-![](man/figures/rstudiogui.png){alt="RStudio IDE, Add-Theme UI" width=60%}
+![](man/figures/rstudiogui.png){alt="RStudio IDE, Add-Theme UI" width=80%}
 
 ### Bidirectional conversion Visual Studio Code - TextMate
 

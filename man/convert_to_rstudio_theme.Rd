@@ -65,7 +65,7 @@ use the Editor theme selector.
   \out{<div style="text-align: center">}
 
    \figure{rstudiogui.png}{options: alt="RStudio IDE, Add-Theme UI"
-       style="max-width:60\%;"}
+       style="max-width:80\%;"}
 
    \out{</div>}
 }

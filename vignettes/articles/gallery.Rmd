@@ -22,7 +22,7 @@ We also distribute all our themes in a single `.zip` file [dist/rstudiothemes.zi
 
 **Tools → Global Options → Appearance → Add**
 
-![](rstudiogui.png){alt="RStudio IDE, Add-Theme UI" width=60%}
+![](rstudiogui.png){alt="RStudio IDE, Add-Theme UI" width=80%}
 
 ## Gallery
 
