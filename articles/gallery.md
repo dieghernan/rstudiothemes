@@ -1,118 +1,113 @@
-# Theme Gallery
+# Theme Gallery2
 
 Showcase of bundled themes in **rstudiothemes**.
 
-ayu Dark ayu Light cobalt2 CRAN Dracula2025 GitHub Dark GitHub Light
-JellyFish Theme Matrix Night Owl Night Owl Light Nord OKSolar Dark
-OKSolar Light OKSolar Sky Overflow Dark Overflow Light Panda Syntax
-Selenized Dark Selenized Light Skeletor Syntax SynthWave 84 Tokyo Night
-Tokyo Night Light Tokyo Night Storm Winter is Coming Dark Blue Winter is
-Coming Light
+*Click in the image to enlarge*
 
 ![](screenshots/ayudark.png)
 
-ayu Dark
+##### ayu Dark
 
 ![](screenshots/ayulight.png)
 
-ayu Light
+##### ayu Light
 
 ![](screenshots/cobalt2.png)
 
-cobalt2
+##### cobalt2
 
 ![](screenshots/cran.png)
 
-CRAN
+##### CRAN
 
 ![](screenshots/dracula2025.png)
 
-Dracula2025
+##### Dracula2025
 
 ![](screenshots/githubdark.png)
 
-GitHub Dark
+##### GitHub Dark
 
 ![](screenshots/githublight.png)
 
-GitHub Light
+##### GitHub Light
 
 ![](screenshots/jellyfishtheme.png)
 
-JellyFish Theme
+##### JellyFish Theme
 
 ![](screenshots/matrix.png)
 
-Matrix
+##### Matrix
 
 ![](screenshots/nightowl.png)
 
-Night Owl
+##### Night Owl
 
 ![](screenshots/nightowllight.png)
 
-Night Owl Light
+##### Night Owl Light
 
 ![](screenshots/nord.png)
 
-Nord
+##### Nord
 
 ![](screenshots/oksolardark.png)
 
-OKSolar Dark
+##### OKSolar Dark
 
 ![](screenshots/oksolarlight.png)
 
-OKSolar Light
+##### OKSolar Light
 
 ![](screenshots/oksolarsky.png)
 
-OKSolar Sky
+##### OKSolar Sky
 
 ![](screenshots/overflowdark.png)
 
-Overflow Dark
+##### Overflow Dark
 
 ![](screenshots/overflowlight.png)
 
-Overflow Light
+##### Overflow Light
 
 ![](screenshots/pandasyntax.png)
 
-Panda Syntax
+##### Panda Syntax
 
 ![](screenshots/selenizeddark.png)
 
-Selenized Dark
+##### Selenized Dark
 
 ![](screenshots/selenizedlight.png)
 
-Selenized Light
+##### Selenized Light
 
 ![](screenshots/skeletorsyntax.png)
 
-Skeletor Syntax
+##### Skeletor Syntax
 
 ![](screenshots/synthwave84.png)
 
-SynthWave 84
+##### SynthWave 84
 
 ![](screenshots/tokyonight.png)
 
-Tokyo Night
+##### Tokyo Night
 
 ![](screenshots/tokyonightlight.png)
 
-Tokyo Night Light
+##### Tokyo Night Light
 
 ![](screenshots/tokyonightstorm.png)
 
-Tokyo Night Storm
+##### Tokyo Night Storm
 
 ![](screenshots/winteriscomingdarkblue.png)
 
-Winter is Coming Dark Blue
+##### Winter is Coming Dark Blue
 
 ![](screenshots/winteriscominglight.png)
 
-Winter is Coming Light
+##### Winter is Coming Light

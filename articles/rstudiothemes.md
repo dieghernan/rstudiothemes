@@ -16,7 +16,7 @@ To install all built-in RStudio themes that come with this package:
 ``` r
 install_rstudiothemes()
 
-#> ✔ Installed 31 themes
+#> ✔ Installed 27 themes
 #> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes
 #> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes
 ```
