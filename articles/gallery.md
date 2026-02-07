@@ -1,4 +1,4 @@
-# Theme Gallery2
+# Showcase
 
 Showcase of bundled themes in **rstudiothemes**.
 
