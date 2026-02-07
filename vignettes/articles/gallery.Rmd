@@ -14,9 +14,7 @@ Showcase of bundled themes in **rstudiothemes**.
 You can installed them with:
 
 ```{r demo, eval=FALSE}
-
 rstudiothemes::install_rstudiothemes()
-
 ```
 
 We also distribute all our themes in a single `.zip` file [dist/rstudiothemes.zip](https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip). Unzip and install using the
