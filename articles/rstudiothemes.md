@@ -100,5 +100,4 @@ RStudio.
 - **List installed themes:** `list_rstudiothemes(list_installed = TRUE)`
 - **Try specific categories:** filter themes by Light/Dark style
 - **Use the Add-Theme UI**: RStudio’s **Global Options → Appearance →
-  Add Theme** to manually add `.rstheme` files you’ve created or
-  converted.
+  Add** to manually add `.rstheme` files you’ve created or converted.

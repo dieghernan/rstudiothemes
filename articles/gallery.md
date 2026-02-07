@@ -13,11 +13,11 @@ We also distribute all our themes in a single `.zip` file
 Unzip and install using the [RStudio IDE
 interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
-**Tools → Global Options → Appearance**
+**Tools → Global Options → Appearance → Add**
 
-![RStudio IDE](rstudiogui.png)
+![RStudio IDE, Add-Theme UI](rstudiogui.png)
 
-RStudio IDE
+RStudio IDE, Add-Theme UI
 
 ## Gallery
 
