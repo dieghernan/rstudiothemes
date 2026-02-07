@@ -1186,7 +1186,7 @@
 .rstudio_rainbow_indent_fills .ace_line .ace_indent-guide:nth-child(7n+7) { background: linear-gradient(to left, #dc91dbbb 1px, #dc91db77 1px, #dc91db77); }
 
 /* Generated with rstudiothemes package */
-/* Rules from tmTheme */
+/* CSS rules from TextMate theme */
 .ace_cursor { color: #D8DEE9; }
 
 .ace_print-margin { background: #4C566AB3; }

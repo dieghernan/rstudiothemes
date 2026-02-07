@@ -21,15 +21,15 @@ list_rstudiothemes(style = c("all", "dark", "light"), list_installed = TRUE)
 try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 }
 \arguments{
-\item{style}{Limit to a subgroup of themes (\code{all}, \code{dark}, \code{light}).}
+\item{style}{Character. Limit themes to a specific group: \code{all}, \code{dark}, or
+\code{light}.}
 
-\item{themes}{Vector of theme names (\code{list_rstudiothemes()}).
-If provided just those themes would be tried, and \code{style} will be ignored.}
+\item{themes}{Optional character vector of theme names. If provided, only
+these themes will be used, and \code{style} will be ignored.}
 
-\item{destdir}{The destination directory for the \code{.rstheme} files. By default
-uses \code{\link[rstudioapi:addTheme]{rstudioapi::addTheme()}} to install themes, but this argument lets
-users install themes to non-standard directories, or in case the location
-of the RStudio theme directory has changed.}
+\item{destdir}{Optional directory for \code{.rstheme} files. By default uses
+\code{\link[rstudioapi:addTheme]{rstudioapi::addTheme()}}, but this argument allows installation to
+non-standard directories.}
 
 \item{list_installed}{Should the installed \pkg{rstudiothemes} themes be
 listed (default). If \code{FALSE}, the available themes in the
@@ -43,8 +43,8 @@ Adaptation of some \pkg{rsthemes} functions,
 \href{https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md}{MIT License} Copyright © rsthemes authors.
 
 \strong{Important}: These functions (except
-\code{list_rstudiothemes(list_installed = FALSE)} only works in RStudio;
-it returns \code{NULL} when called from other IDEs.
+\code{list_rstudiothemes(list_installed = FALSE)}) only work in RStudio; they
+return \code{NULL} when called from other IDEs.
 }
 \section{Functions}{
 \itemize{
@@ -52,8 +52,7 @@ it returns \code{NULL} when called from other IDEs.
 
 \item \code{remove_rstudiothemes()}: Remove \pkg{rstudiothemes} from RStudio
 
-\item \code{list_rstudiothemes()}: List installed themes (default) or
-available themes
+\item \code{list_rstudiothemes()}: List installed or available themes
 
 \item \code{try_rstudiothemes()}: Try each \pkg{rstudiothemes} RStudio theme
 
@@ -65,21 +64,21 @@ following Visual Studio Code themes:
 \itemize{
 \item Ayu by teabyii.
 \item Cobalt2 Theme Official by Wes Bos.
-\item CRAN by dieghernan, based on CRAN (R-Project) web theme, produced with
-Pandoc
-\item Dracula Theme Official by \url{https://draculatheme.com/}.
-\item GitHub Dark/Light by GitHub.
+\item CRAN by dieghernan, based on the CRAN (R Project) website theme, created
+with Pandoc
+\item Dracula Official by \url{https://draculatheme.com/}.
+\item GitHub Dark and Light by GitHub.
 \item JellyFish Theme by Pawel Borkar.
-\item Matrix Theme by UstymUkhman,
-\item Night Owl Dark/Light (no italics) by sarah.drasner.
-\item Nord by arcticicestudio.
+\item Matrix Theme by UstymUkhman.
+\item Night Owl Dark and Light (no italics) by Sarah Drasner.
+\item Nord by Arctic Ice Studio.
 \item OKSolar Theme by dieghernan.
 \item Overflow Theme by dieghernan.
 \item Panda Theme by Panda Theme.
 \item Selenized Themes by dieghernan.
 \item Skeletor Syntax by dieghernan.
 \item SynthWave '84 by Robb Owen.
-\item Tokyo Night by enkia.
+\item Tokyo Night by Enkia.
 \item Winter is Coming Theme by John Papa.
 }
 }
@@ -89,7 +88,7 @@ list_rstudiothemes(list_installed = FALSE)
 }
 \references{
 Aden-Buie G (2026). \emph{rsthemes: Full Themes for RStudio v1.2+}. R package
-version 0.5.1,commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
+version 0.5.1, commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
 \url{https://github.com/gadenbuie/rsthemes}.
 }
 \author{

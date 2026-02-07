@@ -10,10 +10,10 @@
 #' **Important**: This function only works in RStudio; it returns `NULL` when
 #' called from other IDEs.
 #'
-#' @param path Path or URL to a TextMate theme (in `.tmTheme` format) or a
-#'   Visual Studio Code theme, in `.json` format.
-#' @param apply logical. Apply the theme with [rstudioapi::applyTheme()].
-#' @param use_italics logical. Whether to use italics in the resulting theme.
+#' @param path Path or URL to a TextMate theme (`.tmTheme` format) or a Visual
+#'   Studio Code theme (`.json` format).
+#' @param apply Logical. Apply the theme with [rstudioapi::applyTheme()].
+#' @param use_italics Logical. Whether to use italics in the resulting theme.
 #'   By default `TRUE`, but some themes may look better without italics.
 #'
 #' @inheritParams rstudioapi::addTheme
@@ -44,7 +44,8 @@
 #'    \out{</div>}
 #' }
 #'
-#' See more in <https://docs.posit.co/ide/user/ide/guide/ui/appearance.html>.
+#' For more information, see
+#' <https://docs.posit.co/ide/user/ide/guide/ui/appearance.html>.
 #'
 #' @family functions for creating themes
 #'
@@ -57,7 +58,6 @@
 #'     package = "rstudiothemes"
 #'   )
 #'
-#'
 #'   # Apply the theme for 10 seconds to demonstrate the effect
 #'
 #'   current_theme <- rstudioapi::getThemeInfo()$editor
@@ -68,7 +68,6 @@
 #'     name = "A testing theme",
 #'     apply = TRUE, force = TRUE
 #'   )
-#'
 #'
 #'   Sys.sleep(10)
 #'
@@ -200,7 +199,7 @@ convert_to_rstudio_theme <- function(
     end_df$fontstyle <- NA
   }
 
-  new_css <- c("/* Rules from tmTheme */", "")
+  new_css <- c("/* CSS rules from TextMate theme */", "")
 
   for (cssrule in end_df$rstheme) {
     thisval <- end_df[end_df$rstheme == cssrule, ]
@@ -221,7 +220,7 @@ convert_to_rstudio_theme <- function(
       newr_clean <- newr[!is.na(newr)]
       if (length(newr_clean) == 0) {
         next
-      } # Empty model
+      } # Skip empty rules
       specs <- paste0(names(newr_clean), ": ", newr_clean, ";", collapse = " ")
       thisrule <- paste0(cssrule, " {", specs, "}")
       new_css <- c(new_css, thisrule, "")
@@ -230,7 +229,7 @@ convert_to_rstudio_theme <- function(
 
   ## Build ----
 
-  # Create initial compilation
+  # Create initial RStudio theme compilation
   uuid <- generate_uuid()
   tmp <- file.path(tempdir(), uuid)
   dir.create(tmp, recursive = TRUE, showWarnings = FALSE)
@@ -241,8 +240,8 @@ convert_to_rstudio_theme <- function(
     force = TRUE
   )
 
-  # Read lines of the auto-generated rstheme (CSS)
-  # and append new CSS rules and additional variables
+  # Read lines of the auto-generated RStudio theme (CSS)
+  # and append new CSS rules and additional Sass variables
   tmpfile <- list.files(tmp, full.names = TRUE)
   themelines <- readLines(tmpfile)
 
@@ -265,6 +264,7 @@ convert_to_rstudio_theme <- function(
 
   additional <- c("")
 
+  # Map high-level colors to Sass variable names
   hl_sass <- dplyr::tibble(
     section = "colors",
     name = c(
@@ -338,7 +338,7 @@ create_ace_cascade <- function(tmcols_scopes) {
   # Exclude scopes containing spaces (pseudo-CSS)
   full <- full[!grepl(" ", full$scope, fixed = TRUE), ]
 
-  # Compute hierarchy levels
+  # Classify scopes by hierarchy level
 
   level <- vapply(
     full$scope,
@@ -359,14 +359,14 @@ create_ace_cascade <- function(tmcols_scopes) {
   lev2 <- full[level == 2, ]
   lev1 <- full[level == 1, ]
 
-  # Ensure single value for scope
+  # Ensure single value for each scope at level 3
   lev3 <- more_freq_rule(lev3)
 
-  # Enrich level-2 scopes with level-3 info
+  # Enrich level-2 scopes with color information from level-3
 
   lev2_xtra <- lev3
 
-  # Limit fontStyle inheritance for propagated entries
+  # Limit fontStyle inheritance for color information from higher levels
   lev2_xtra$fontStyle <- NA
 
   lev2_xtra$scope <- vapply(
@@ -387,11 +387,11 @@ create_ace_cascade <- function(tmcols_scopes) {
   )
 
   lev2_end <- more_freq_rule(lev2_end)
-  # Enrich level-1 scopes with level-2 info
+  # Enrich level-1 scopes with color information from level-2
 
   lev1_xtra <- lev2_end
 
-  # Limit fontStyle inheritance
+  # Limit fontStyle inheritance for color information from higher levels
   lev1_xtra$fontStyle <- NA
 
   lev1_xtra$scope <- vapply(

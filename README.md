@@ -80,7 +80,8 @@ rstudiothemes::list_rstudiothemes(list_installed = FALSE)
 
 We also distribute all our themes in a single `.zip` file at
 <https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip>.
-Unzip and install using the RStudio IDE interface, see next section.
+Unzip and install using the [RStudio IDE
+interface](https://support.posit.co/hc/en-us/articles/115011846747-Using-Themes-in-the-RStudio-IDE).
 
 ## Installation
 

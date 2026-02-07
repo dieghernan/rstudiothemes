@@ -4,10 +4,10 @@
 #'
 #' @family helpers
 #'
-#' @param hint Optional. Character (or object coercible with [as.character()])
-#'   that may be used as a random seed.
+#' @param hint Optional. A character string (or object coercible with
+#'   [as.character()]) to be used as a random seed.
 #'
-#' @return
+#' @returns
 #' A character string representing a valid UUID that can be validated with
 #' `uuid::UUIDvalidate()`.
 #'

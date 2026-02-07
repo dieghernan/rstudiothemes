@@ -70,7 +70,6 @@ $bgfg2: mix($bg, $fg, 70%);
 		background: $bgaccent1 !important;
 	}
 
-
 	.rstheme_toolbarWrapper {
 		background: $bgfg1;
 		color: $fg;
@@ -90,11 +89,8 @@ $bgfg2: mix($bg, $fg, 70%);
 // "tab.inactiveBackground" = bgfg1,
 // "tab.inactiveForeground" = fg,
 
-
 .rstudio-themes-dark-grey,
 .rstudio-themes-default {
-
-
 	// Background Panel
 	.gwt-TabLayoutPanelTabs,
 	.GNTYACMBNS,
@@ -151,9 +147,6 @@ $bgfg2: mix($bg, $fg, 70%);
 .rstudio-themes-dark-grey,
 .rstudio-themes-default,
 .rstudio-themes-flat {
-
-
-
 	.popupMiddleCenter,
 	.menuPopupMiddleCenter,
 	.suggestPopupMiddleCenter {
@@ -203,9 +196,9 @@ $bgfg2: mix($bg, $fg, 70%);
 		}
 	}
 
-  .gwt-MenuItem {
-    color: $fg !important;
-  }
+	.gwt-MenuItem {
+		color: $fg !important;
+	}
 
 	.gwt-MenuItem.gwt-MenuItem-selected,
 	.gwt-MenuItem.gwt-MenuItem-selected > table {
@@ -264,7 +257,7 @@ $bgfg2: mix($bg, $fg, 70%);
 // Git Tab: Highlighted
 .editor_dark .ace_editor_theme .GOC5OMXBBJ,
 .editor_dark .GOC5OMXBP3C {
-    color: $fg;
+	color: $fg;
 }
 
 .rstudio-themes-flat,
@@ -272,6 +265,6 @@ $bgfg2: mix($bg, $fg, 70%);
 .rstudio-themes-default {
 	// Breadcrumbs
 	.breadcrumb table .rstudio-HyperlinkLabel {
-	  	color: $fg !important;
+		color: $fg !important;
 	}
 }

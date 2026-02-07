@@ -1,7 +1,7 @@
 Package: rstudiothemes
 Title: Create 'RStudio' Themes from Visual Studio Code and 'TextMate'
     Themes
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: c(
     person("Diego", "Hernangómez", , "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0001-8457-4658")),

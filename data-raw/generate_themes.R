@@ -90,7 +90,6 @@ dd <- convert_to_rstudio_theme(
 )
 
 # github (build) -----------------------------------------------------------
-# https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme
 # source("./data-raw/compile_github.R")
 
 dd <- convert_to_rstudio_theme(
@@ -331,10 +330,6 @@ dd <- convert_to_rstudio_theme(
 
 # Tokyo Night --------------------------------------------------------------
 
-# url <- file.path(
-#   "https://raw.githubusercontent.com/tokyo-night/tokyo-night-vscode-theme/refs/heads/",
-#   "master/themes/tokyo-night-color-theme.json"
-# )
 # Generate rstheme
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/tokyo-night-color-theme.json",
@@ -344,10 +339,6 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-# url <- file.path(
-#   "https://raw.githubusercontent.com/tokyo-night/tokyo-night-vscode-theme/refs/heads/",
-#   "master/themes/tokyo-night-light-color-theme.json"
-# )
 
 # Generate rstheme
 dd <- convert_to_rstudio_theme(
@@ -387,8 +378,8 @@ dd <- convert_to_rstudio_theme(
 )
 
 url <- file.path(
-  "https://raw.githubusercontent.com/johnpapa/vscode-winteriscoming/refs/heads/",
-  "master/themes/WinterIsComing-light-color-no-italics-theme.json"
+  "https://raw.githubusercontent.com/johnpapa/vscode-winteriscoming/refs/",
+  "heads/master/themes/WinterIsComing-light-color-no-italics-theme.json"
 )
 dd <- convert_to_rstudio_theme(
   url,
@@ -401,6 +392,8 @@ dd <- convert_to_rstudio_theme(
 
 # Create dist release
 allt <- list.files("inst/rsthemes/", full.names = TRUE)
+
+unlink("pkgdown/assets/dist/rstudiothemes.zip", force = TRUE)
 
 zip::zip("pkgdown/assets/dist/rstudiothemes.zip", allt, mode = "cherry-pick")
 

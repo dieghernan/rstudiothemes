@@ -10,8 +10,8 @@ Heavily based on an unreleased version of \code{ids::uuid()}.
 generate_uuid(hint = NULL)
 }
 \arguments{
-\item{hint}{Optional. Character (or object coercible with \code{\link[=as.character]{as.character()}})
-that may be used as a random seed.}
+\item{hint}{Optional. A character string (or object coercible with
+\code{\link[=as.character]{as.character()}}) to be used as a random seed.}
 }
 \value{
 A character string representing a valid UUID that can be validated with

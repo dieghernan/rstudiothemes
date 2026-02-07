@@ -11,9 +11,32 @@ knitr::opts_chunk$set(
 
 Showcase of bundled themes in **rstudiothemes**.
 
+We also distribute all our themes in a single `.zip` file at <https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip>. Unzip and install using the [RStudio IDE interface](https://support.posit.co/hc/en-us/articles/115011846747-Using-Themes-in-the-RStudio-IDE).
 
-*Click in the image to enlarge*
+*Click the image to enlarge*
 <!--- pkgdown only ---->
+
+<style>
+
+.lightbox-caption em{
+  font-style: normal;
+  font-size: 300%;
+  font-weight: 800;
+  font-family: 'Inter Tight';
+  text-shadow: 0 0 6px black;
+  color: white;
+}
+.lightbox-caption {
+  position: absolute !important;
+  top: 20%;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  opacity:0.6;
+}
+
+</style>
+
 
 ```{r setup, echo=FALSE}
 library(rstudiothemes)
@@ -50,7 +73,9 @@ for (i in seq_along(themes)) {
 
   cat(
     paste0(
-      "<div class=\"card-img-overlay\" data-toggle=\"lightbox\" data-gallery=\"rstudiothemes\" data-src=\"", th_url[i], "\" data-caption=\"", themes[i], "\" >"
+      "<div class=\"card-img-overlay\" data-toggle=\"lightbox\" ",
+      "data-gallery=\"rstudiothemes\" data-src=\"",
+      th_url[i], "\" data-caption=\"", themes[i], "\" >"
     )
   )
   cat(c(paste0("<h5 class=\"like_h\">", themes[i], "</h5>")))

@@ -85,8 +85,7 @@ applying it (with `apply = TRUE`).
 2.  Convert and install it with `convert_to_rstudio_theme()`.
 3.  Apply it with `rstudioapi::applyTheme()` or via RStudio UI.
 
-This workflow lets you bring your preferred editor theme into RStudio
-seamlessly.
+This workflow lets you easily bring your preferred editor theme into RStudio.
 
 ## Tips and Tricks
 

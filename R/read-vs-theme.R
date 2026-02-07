@@ -43,7 +43,7 @@ read_vs_theme <- function(path) {
   }
 
   if (!file.exists(local_file)) {
-    cli::cli_abort("File {.path {local_file}} does not exists.")
+    cli::cli_abort("File {.path {local_file}} does not exist.")
   }
 
   # 1. Read vscode and prepare
@@ -51,7 +51,7 @@ read_vs_theme <- function(path) {
 
   vs <- rapply(vs, col2hex, how = "list")
 
-  # Remove trailings / double whitespace
+  # Remove trailing and double whitespace
 
   vs <- rapply(
     vs,
@@ -64,7 +64,7 @@ read_vs_theme <- function(path) {
     how = "list"
   )
 
-  # High level inputs
+  # High-level inputs
   name <- paste0(unlist(vs$name)[1], collapse = ", ")
   type <- paste0(unlist(vs$type)[1], collapse = ", ")
   author <- paste0(unlist(vs$author), collapse = ", ")
@@ -76,6 +76,7 @@ read_vs_theme <- function(path) {
   top_df$section <- "highlevel"
   top_df$name <- c("name", "author", "type")
 
+  # Process semantic token colors if present
   semantic_df <- NULL
   if ("semanticTokenColors" %in% names(vs)) {
     semantic_list <- vs$semanticTokenColors
@@ -87,22 +88,22 @@ read_vs_theme <- function(path) {
 
       nm <- paste0("Semantic: ", names(this_tok))
 
-      # Split in individual pieces (some jsons provides it collapsed)
+      # Split into individual pieces (some JSONs provide them collapsed)
       scopes <- names(this_tok)
       scopes <- paste0(scopes, collapse = ",")
       scopes <- unlist(strsplit(scopes, ","))
 
-      # Some issues for cobalt2
+      # Handle case where token has no named values
       vals <- unlist(this_tok[[1]])
       if (any(is.null(names(vals)))) {
         vals <- vals[1]
         names(vals) <- "foreground"
       }
 
-      # To df
+      # Convert to data frame
       df_vals <- as.data.frame(t(vals))
 
-      # If italic then
+      # Convert italic attribute to fontStyle
       if ("italic" %in% names(df_vals)) {
         if (identical(df_vals$italic, "TRUE")) {
           df_vals$fontStyle <- "italic"
@@ -124,7 +125,7 @@ read_vs_theme <- function(path) {
     semantic_df$section <- "semanticTokenColors"
   }
 
-  # Colors (Settings)
+  # High-level color settings
   settings_list <- vs$colors
 
   it <- seq_along(settings_list)
@@ -144,8 +145,7 @@ read_vs_theme <- function(path) {
   settings_df <- dplyr::bind_rows(settings_df)
   settings_df$section <- "colors"
 
-  # Token colors
-
+  # Process token colors
   token_list <- vs$tokenColors
   token_list <- token_list[lengths(token_list) > 0]
   it <- seq_along(token_list)
@@ -158,7 +158,7 @@ read_vs_theme <- function(path) {
       nm <- paste0("tokenColors ", i)
     }
 
-    # Split in individual pieces (some jsons provides it collapsed)
+    # Split into individual pieces (some JSONs provide them collapsed)
     scopes <- sort(unlist(this_tok$scope))
     scopes <- paste0(scopes, collapse = ",")
     scopes <- unlist(strsplit(scopes, ","))
@@ -169,7 +169,7 @@ read_vs_theme <- function(path) {
     )
 
     this_set <- unlist(this_tok$settings)
-    # Settings as df
+    # Convert settings to data frame
     sett <- dplyr::as_tibble(t(this_set))
 
     this_tok_df <- dplyr::bind_cols(this_tok_df, sett)
@@ -180,10 +180,10 @@ read_vs_theme <- function(path) {
   token_df <- dplyr::bind_rows(token_df)
   token_df$section <- "tokenColors"
 
-  #  Final df
+  # Combine all data frames
   final_df <- dplyr::bind_rows(top_df, settings_df, semantic_df, token_df)
 
-  # Complete columns if doesn't exist
+  # Add missing columns if they do not exist
   if (!"background" %in% names(final_df)) {
     final_df$background <- NA
   }

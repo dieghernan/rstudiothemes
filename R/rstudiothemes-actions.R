@@ -13,8 +13,8 @@
 #' ```
 #'
 #' **Important**: These functions (except
-#' `list_rstudiothemes(list_installed = FALSE)` only works in RStudio;
-#' it returns `NULL` when called from other IDEs.
+#' `list_rstudiothemes(list_installed = FALSE)`) only work in RStudio; they
+#' return `NULL` when called from other IDEs.
 #'
 #' @section Ported Themes:
 #' \pkg{rstudiothemes} includes RStudio themes based on the
@@ -23,11 +23,11 @@
 #' ```{r child="man/chunks/themes.Rmd"}
 #'
 #' ```
-#' @author  Garrick Aden-Buie <https://github.com/gadenbuie>
+#' @author Garrick Aden-Buie <https://github.com/gadenbuie>
 #'
 #' @references
 #'   Aden-Buie G (2026). _rsthemes: Full Themes for RStudio v1.2+_. R package
-#'   version 0.5.1,commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
+#'   version 0.5.1, commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
 #'   <https://github.com/gadenbuie/rsthemes>.
 #'
 #' @name rstudiothemes-actions
@@ -36,13 +36,13 @@
 NULL
 
 #' @describeIn rstudiothemes-actions Install RStudio themes
-#' @param style Limit to a subgroup of themes (`all`, `dark`, `light`).
-#' @param destdir The destination directory for the `.rstheme` files. By default
-#'   uses [rstudioapi::addTheme()] to install themes, but this argument lets
-#'   users install themes to non-standard directories, or in case the location
-#'   of the RStudio theme directory has changed.
-#' @param themes Vector of theme names (`list_rstudiothemes()`).
-#'   If provided just those themes would be tried, and `style` will be ignored.
+#' @param style Character. Limit themes to a specific group: `all`, `dark`, or
+#'   `light`.
+#' @param destdir Optional directory for `.rstheme` files. By default uses
+#'   [rstudioapi::addTheme()], but this argument allows installation to
+#'   non-standard directories.
+#' @param themes Optional character vector of theme names. If provided, only
+#'   these themes will be used, and `style` will be ignored.
 #'
 #' @export
 install_rstudiothemes <- function(
@@ -126,8 +126,7 @@ remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
 
 # ncov end
 
-#' @describeIn rstudiothemes-actions List installed themes (default) or
-#'   available themes
+#' @describeIn rstudiothemes-actions List installed or available themes
 #' @param list_installed Should the installed \pkg{rstudiothemes} themes be
 #'   listed (default). If `FALSE`, the available themes in the
 #'   \pkg{rstudiothemes} package are listed instead.
@@ -273,7 +272,7 @@ try_rstudiothemes <- function(
     return(NULL)
   }
 
-  # Logic, extract in order (dark/light) and then select based in user inputs
+  # Logic: extract in order (dark/light) and then select based on user inputs
   if (!is.null(themes)) {
     # Validate
     all_installed <- intersect(themes, list_rstudiothemes())

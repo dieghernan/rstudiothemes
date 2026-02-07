@@ -15,8 +15,8 @@ convert_to_rstudio_theme(
 )
 }
 \arguments{
-\item{path}{Path or URL to a TextMate theme (in \code{.tmTheme} format) or a
-Visual Studio Code theme, in \code{.json} format.}
+\item{path}{Path or URL to a TextMate theme (\code{.tmTheme} format) or a Visual
+Studio Code theme (\code{.json} format).}
 
 \item{outfile}{Path where the resulting file will be written. By default
 a temporary file (\code{\link[=tempfile]{tempfile()}}).}
@@ -24,7 +24,7 @@ a temporary file (\code{\link[=tempfile]{tempfile()}}).}
 \item{name}{Optional. The name of the theme. If not provided, the name of
 the theme in \code{path} will be used.}
 
-\item{use_italics}{logical. Whether to use italics in the resulting theme.
+\item{use_italics}{Logical. Whether to use italics in the resulting theme.
 By default \code{TRUE}, but some themes may look better without italics.}
 
 \item{output_style}{Bracketing and formatting style of the CSS output.
@@ -34,7 +34,7 @@ Possible styles: \code{"nested"}, \code{"expanded"}, \code{"compact"}, and
 \item{force}{Whether to force the operation and overwrite an existing file
 with the same name.\cr Default: \code{FALSE}.}
 
-\item{apply}{logical. Apply the theme with \code{\link[rstudioapi:applyTheme]{rstudioapi::applyTheme()}}.}
+\item{apply}{Logical. Apply the theme with \code{\link[rstudioapi:applyTheme]{rstudioapi::applyTheme()}}.}
 }
 \value{
 This function is called for its side effects. It writes a new
@@ -70,14 +70,14 @@ use the Editor theme selector.
    \out{</div>}
 }
 
-See more in \url{https://docs.posit.co/ide/user/ide/guide/ui/appearance.html}.
+For more information, see
+\url{https://docs.posit.co/ide/user/ide/guide/ui/appearance.html}.
 }
 \examples{
 if (on_rstudio() && interactive()) {
   vstheme <- system.file("ext/skeletor-syntax-color-theme.json",
     package = "rstudiothemes"
   )
-
 
   # Apply the theme for 10 seconds to demonstrate the effect
 
@@ -89,7 +89,6 @@ if (on_rstudio() && interactive()) {
     name = "A testing theme",
     apply = TRUE, force = TRUE
   )
-
 
   Sys.sleep(10)
 

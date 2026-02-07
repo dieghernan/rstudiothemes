@@ -4,7 +4,7 @@
 #' Detect whether the current R session is running in RStudio; used to
 #' decide if themes can be applied to the IDE.
 #'
-#' @return
+#' @returns
 #' Logical; `TRUE` if running in RStudio, otherwise `FALSE`.
 #'
 #' @family helpers

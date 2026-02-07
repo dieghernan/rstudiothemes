@@ -13,15 +13,15 @@ read_tm_theme(path)
 A \link[tibble:tbl_df-class]{tibble} with the data of the theme.
 }
 \description{
-Read a \code{.tmTheme} file (which is XML) representing a TextMate or
-Sublime Text theme.
+Read a \code{.tmTheme} file (XML format) representing a TextMate or Sublime Text
+theme.
 }
 \examples{
 
 the_theme <- system.file("ext/test-color-theme.json",
   package = "rstudiothemes"
 ) |>
-  # Generate the theme
+  # Convert the Visual Studio Code theme to TextMate format
   convert_vs_to_tm_theme()
 
 # Check

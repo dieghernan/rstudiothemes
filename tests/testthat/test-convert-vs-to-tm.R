@@ -80,3 +80,15 @@ test_that("Online", {
   read_tm <- read_tm_theme(thef)
   expect_s3_class(read_tm, "tbl_df")
 })
+
+
+test_that("Unnamed", {
+  skip_on_cran()
+
+  fpath <- system.file(
+    "ext/test-unnamed-color-theme.json",
+    package = "rstudiothemes"
+  )
+
+  expect_snapshot(error = TRUE, res <- convert_vs_to_tm_theme(fpath))
+})

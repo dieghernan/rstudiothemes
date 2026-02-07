@@ -1,8 +1,8 @@
 #' Read and parse a TextMate theme
 #'
 #' @description
-#' Read a `.tmTheme` file (which is XML) representing a TextMate or
-#' Sublime Text theme.
+#' Read a `.tmTheme` file (XML format) representing a TextMate or Sublime Text
+#' theme.
 #'
 #' @param path Path or URL to a TextMate theme, in `.tmTheme` format.
 #'
@@ -18,7 +18,7 @@
 #' the_theme <- system.file("ext/test-color-theme.json",
 #'   package = "rstudiothemes"
 #' ) |>
-#'   # Generate the theme
+#'   # Convert the Visual Studio Code theme to TextMate format
 #'   convert_vs_to_tm_theme()
 #'
 #' # Check
@@ -52,7 +52,7 @@ read_tm_theme <- function(path) {
   }
 
   if (!file.exists(local_file)) {
-    cli::cli_abort("File {.path {local_file}} does not exists.")
+    cli::cli_abort("File {.path {local_file}} does not exist.")
   }
 
   tm <- xml2::read_xml(local_file)
@@ -74,7 +74,7 @@ read_tm_theme <- function(path) {
 
   # 1. High-level inputs -----
   specs <- tm$plist$dict
-  # Not use the array, this is where the colors are
+  # Do not use the array; this is where the colors are
   highlev <- specs[names(specs) != "array"]
 
   # Strong assumption: structure should be a list of consecutive
@@ -94,10 +94,10 @@ read_tm_theme <- function(path) {
     value = unname(hl_values)[l_merged]
   )
 
-  # 2. Colors (settings) ----
+  # 2. High-level color settings ----
   array <- specs[names(specs) == "array"][[1]]
 
-  # Identify high-level settings (key and dict)
+  # Identify high-level color settings (key and dict structure)
 
   id_settings <- vapply(
     array,
@@ -113,12 +113,12 @@ read_tm_theme <- function(path) {
 
   settings_list <- array[id_settings][1]$dict$dict
 
-  # Same assumptions apply
+  # Extract keys and values with the same assumptions as high-level inputs
 
   sett_keys <- unlist(settings_list[names(settings_list) == "key"])
   sett_values <- unlist(settings_list[names(settings_list) == "string"])
 
-  # Ensure same length
+  # Ensure matching length
   l_set_merged <- seq_len(min(length(sett_keys), length(sett_values)))
 
   settings_df <- dplyr::tibble(
@@ -148,18 +148,18 @@ read_tm_theme <- function(path) {
     )
   }
 
-  # 3. Tokens ----
+  # 3. Token color scopes ----
   token_list <- array[!id_settings]
   it <- seq_along(token_list)
 
   token_df <- lapply(it, function(i) {
-    # Same assumptions
+    # Use the same assumptions as high-level inputs
 
     this_tok <- token_list[i][[1]]
 
     tok_keys <- unlist(this_tok[names(this_tok) == "key"])
 
-    # Remove settings from keys
+    # Exclude settings key
     tok_keys <- tok_keys[!tok_keys == "settings"]
     tok_values_init <- this_tok[names(this_tok) == "string"]
     tok_values <- lapply(tok_values_init, function(y) {
@@ -171,7 +171,7 @@ read_tm_theme <- function(path) {
     })
     tok_values <- unlist(tok_values)
 
-    # Ensure same length
+    # Ensure matching length
     t_set_merged <- seq_len(min(length(tok_keys), length(tok_values)))
     tok_keys <- tok_keys[t_set_merged]
     tok_values <- tok_values[t_set_merged]
@@ -187,7 +187,7 @@ read_tm_theme <- function(path) {
       scope = scopes
     )
 
-    # Dictionary
+    # Extract color specifications from dictionary
     dict <- lapply(this_tok$dict, function(x) {
       if (length(x) == 0) {
         return("NULL")
@@ -195,11 +195,11 @@ read_tm_theme <- function(path) {
       x
     })
 
-    # Spec df
+    # Convert specifications to data frame
     if (length(dict) == 0) {
       df_spec <- dplyr::tibble(foreground = "")
     } else {
-      # Spec df
+      # Convert specifications to data frame
       nm <- names(dict)
       val <- unlist(dict[nm == "string"])
       names(val) <- unlist(dict[nm == "key"])
@@ -213,10 +213,10 @@ read_tm_theme <- function(path) {
 
   token_df <- dplyr::bind_rows(token_df)
 
-  # Final data frame
+  # Combine all data frames
   final_df <- dplyr::bind_rows(top_df, settings_df, token_df)
 
-  # Ensure required columns exist
+  # Add missing columns if they do not exist
   if (!"background" %in% names(final_df)) {
     final_df$background <- NA
   }
@@ -242,10 +242,10 @@ read_tm_theme <- function(path) {
 
   final_df <- final_df[, nms]
 
-  # Convert blank strings to NA
+  # Convert empty strings to NA
   final_df[final_df == ""] <- NA
 
-  # Filter undefined entries
+  # Filter out rows with no style information
   undef <- is.na(final_df$value) &
     is.na(final_df$foreground) &
     is.na(final_df$background) &

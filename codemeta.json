@@ -8,7 +8,7 @@
   "codeRepository": "https://github.com/dieghernan/rstudiothemes",
   "issueTracker": "https://github.com/dieghernan/rstudiothemes/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.0.0.9000",
+  "version": "0.1.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -205,7 +205,7 @@
     "SystemRequirements": null
   },
   "keywords": ["r-package", "rstudio-themes", "textmate-themes", "vscode-themes"],
-  "fileSize": "1834.97KB",
+  "fileSize": "1803.291KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",

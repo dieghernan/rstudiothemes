@@ -8,7 +8,7 @@
 #' @inheritParams convert_vs_to_tm_theme
 #'
 #' @returns
-#' This function is called for its side effects. It would write a new `.json`
+#' This function is called for its side effects. It writes a new `.json`
 #' file in `outfile` and returns the path.
 #'
 #' @family functions for creating themes
@@ -220,7 +220,7 @@ convert_tm_to_vs_theme <- function(
   }
 
   jsonlite::write_json(vs_l, path = outfile, auto_unbox = TRUE, pretty = TRUE)
-  # Add a small comment...
+  # Add a comment with package information
   lns <- readLines(outfile)
   lns <- c(
     lns[1],

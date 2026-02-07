@@ -13,7 +13,7 @@ col2hex <- function(x) {
 
   # Handle alpha channel if present
   if (res[4] < 255) {
-    # Hex
+    # Convert to hexadecimal with alpha
     hex <- rgb(
       red = res[1],
       green = res[2],
@@ -22,7 +22,7 @@ col2hex <- function(x) {
       maxColorValue = 255
     )
   } else {
-    # No needed
+    # Not needed
     hex <- rgb(red = res[1], green = res[2], blue = res[3], maxColorValue = 255)
   }
 
@@ -105,7 +105,7 @@ match_arg_pretty <- function(arg, choices) {
       l_choices <- length(choices)
       msg <- paste0("{.str ", choices[-l_choices], "}", collapse = ", ")
       msg <- paste0(msg, " or {.str ", choices[l_choices], "}")
-      # Add one of at the begining
+      # Add 'one of' at the beginning
       msg <- paste0("one of ", msg)
     }
 

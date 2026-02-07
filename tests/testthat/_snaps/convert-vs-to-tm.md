@@ -20,7 +20,7 @@
       convert_vs_to_tm_theme("a.json")
     Condition
       Error in `read_vs_theme()`:
-      ! File 'a.json' does not exists.
+      ! File 'a.json' does not exist.
 
 # Theme creation
 
@@ -576,4 +576,12 @@
       thef <- convert_vs_to_tm_theme(path)
     Message
       i Downloading from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test-color-theme.json>
+
+# Unnamed
+
+    Code
+      res <- convert_vs_to_tm_theme(fpath)
+    Condition
+      Error in `convert_vs_to_tm_theme()`:
+      ! Unnamed theme, please use `name` argument.
 

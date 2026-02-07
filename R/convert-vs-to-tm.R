@@ -11,8 +11,8 @@
 #'   a temporary file ([tempfile()]).
 #' @param name Optional. The name of the theme. If not provided, the name of
 #'   the theme in `path` will be used.
-#' @param author Optional. The author of the theme. If not provided, the name of
-#'   the theme in `path` will be used.
+#' @param author Optional. The author of the theme. If not provided, the author
+#'   from `path` will be used, or a default value will be assigned.
 #'
 #' @returns
 #' This function is called for its side effects: it writes a `.tmTheme`
@@ -130,7 +130,7 @@ convert_vs_to_tm_theme <- function(
   # Prepare the array with these setting
   array_list <- list(dict = list(key = list("settings"), dict = settings_list))
 
-  # Prepare scopes
+  # Prepare token color scopes
   for (i in seq_len(nrow(scopes_df))) {
     this <- as.list(scopes_df[i, ])
     name <- unlist(this$name)
@@ -152,7 +152,7 @@ convert_vs_to_tm_theme <- function(
       )
     )
 
-    # Prepare settings dictionary
+    # Prepare settings dictionary for this scope
     mat <- t(scopes_df[i, c("foreground", "background", "fontStyle")])
 
     set_scope_l <- NULL
