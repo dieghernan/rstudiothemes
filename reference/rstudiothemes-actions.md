@@ -53,6 +53,21 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
   Number of seconds to wait between themes. Set to 0 to be prompted to
   continue after each theme.
 
+## Value
+
+- `install_rstudiothemes()` and `remove_rstudiothemes()` return `NULL`
+  invisibly.
+
+&nbsp;
+
+- `list_rstudiothemes()` returns a character vector of theme names.
+
+&nbsp;
+
+- `try_rstudiothemes()` has side effects of starting a widget that
+  allows users to try different themes. The widget can be exited by
+  following the prompts, which will restore the original theme.
+
 ## Functions
 
 - `install_rstudiothemes()`: Install RStudio themes
