@@ -63,40 +63,24 @@ available themes
 \pkg{rstudiothemes} includes RStudio themes based on the
 following Visual Studio Code themes:
 \itemize{
-\item \href{https://marketplace.visualstudio.com/items?itemName=teabyii.ayu}{Ayu} by
-teabyii.
-\item \href{https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2}{Cobalt2 Theme Official}
-by Wes Bos.
+\item Ayu by teabyii.
+\item Cobalt2 Theme Official by Wes Bos.
 \item CRAN by dieghernan, based on CRAN (R-Project) web theme, produced with
 Pandoc
-\item \href{https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula}{Dracula Theme Official}
-by \url{https://draculatheme.com/}.
-\item \href{https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme}{GitHub Dark/Light}
-by GitHub.
-\item \href{https://marketplace.visualstudio.com/items?itemName=PawelBorkar.jellyfish}{JellyFish Theme}
-by Pawel Borkar.
-\item \href{https://marketplace.visualstudio.com/items?itemName=UstymUkhman.matrix-theme}{Matrix Theme}
-by UstymUkhman,
-\item \href{https://marketplace.visualstudio.com/items?itemName=sdras.night-owl}{Night Owl Dark/Light}
-(~~no italics~~) by sarah.drasner.
-\item \href{https://marketplace.visualstudio.com/items?itemName=arcticicestudio.nord-visual-studio-code}{Nord}
-by arcticicestudio.
-\item \href{https://marketplace.visualstudio.com/items?itemName=dieghernan.oksolar-theme}{OKSolar Theme}
-by dieghernan.
-\item \href{https://marketplace.visualstudio.com/items?itemName=dieghernan.overflow-theme}{Overflow Theme}
-by dieghernan.
-\item \href{https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda}{Panda Theme}
-by Panda Theme.
-\item \href{https://marketplace.visualstudio.com/items?itemName=dieghernan.selenized-theme}{Selenized Themes}
-by dieghernan.
-\item \href{https://marketplace.visualstudio.com/items?itemName=dieghernan.skeletor-syntax}{Skeletor Syntax}
-by dieghernan.
-\item \href{https://marketplace.visualstudio.com/items?itemName=RobbOwen.synthwave-vscode}{SynthWave '84}
-by Robb Owen.
-\item \href{https://marketplace.visualstudio.com/items?itemName=enkia.tokyo-night}{Tokyo Night}
-by enkia.
-\item \href{https://marketplace.visualstudio.com/items?itemName=johnpapa.winteriscoming}{Winter is Coming Theme}
-by John Papa.
+\item Dracula Theme Official by \url{https://draculatheme.com/}.
+\item GitHub Dark/Light by GitHub.
+\item JellyFish Theme by Pawel Borkar.
+\item Matrix Theme by UstymUkhman,
+\item Night Owl Dark/Light (~~no italics~~) by sarah.drasner.
+\item Nord by arcticicestudio.
+\item OKSolar Theme by dieghernan.
+\item Overflow Theme by dieghernan.
+\item Panda Theme by Panda Theme.
+\item Selenized Themes by dieghernan.
+\item Skeletor Syntax by dieghernan.
+\item SynthWave '84 by Robb Owen.
+\item Tokyo Night by enkia.
+\item Winter is Coming Theme by John Papa.
 }
 }
 

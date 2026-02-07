@@ -28,6 +28,7 @@ dd <- convert_to_rstudio_theme(
   name = "ayu Dark",
   apply = TRUE,
   force = TRUE,
+  output_style = "compact"
 )
 
 
@@ -44,7 +45,7 @@ dest <- gsub("json$|tmtheme$", "rstheme", dest, ignore.case = TRUE)
 # Generate rstheme
 dd <- convert_to_rstudio_theme(
   url,
-  dest,
+  "inst/rsthemes/Cobalt2.rstheme",
   name = "cobalt2",
   apply = TRUE,
   force = TRUE,
@@ -64,7 +65,7 @@ dest <- gsub("json$|tmtheme$", "rstheme", dest, ignore.case = TRUE)
 # Generate rstheme
 dd <- convert_to_rstudio_theme(
   url,
-  dest,
+  "inst/rsthemes/CRAN.rstheme",
   apply = TRUE,
   force = TRUE,
   name = "CRAN",
