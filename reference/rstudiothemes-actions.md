@@ -70,70 +70,40 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 rstudiothemes includes RStudio themes based on the following Visual
 Studio Code themes:
 
-- [Ayu](https://marketplace.visualstudio.com/items?itemName=teabyii.ayu)
-  by teabyii.
+- Ayu by teabyii.
 
-- [Cobalt2 Theme
-  Official](https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2)
-  by Wes Bos.
+- Cobalt2 Theme Official by Wes Bos.
 
 - CRAN by dieghernan, based on CRAN (R-Project) web theme, produced with
   Pandoc
 
-- [Dracula Theme
-  Official](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
-  by <https://draculatheme.com/>.
+- Dracula Theme Official by <https://draculatheme.com/>.
 
-- [GitHub
-  Dark/Light](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)
-  by GitHub.
+- GitHub Dark/Light by GitHub.
 
-- [JellyFish
-  Theme](https://marketplace.visualstudio.com/items?itemName=PawelBorkar.jellyfish)
-  by Pawel Borkar.
+- JellyFish Theme by Pawel Borkar.
 
-- [Matrix
-  Theme](https://marketplace.visualstudio.com/items?itemName=UstymUkhman.matrix-theme)
-  by UstymUkhman,
+- Matrix Theme by UstymUkhman,
 
-- [Night Owl
-  Dark/Light](https://marketplace.visualstudio.com/items?itemName=sdras.night-owl)
-  (\~~no italics\~~) by sarah.drasner.
+- Night Owl Dark/Light (\~~no italics\~~) by sarah.drasner.
 
-- [Nord](https://marketplace.visualstudio.com/items?itemName=arcticicestudio.nord-visual-studio-code)
-  by arcticicestudio.
+- Nord by arcticicestudio.
 
-- [OKSolar
-  Theme](https://marketplace.visualstudio.com/items?itemName=dieghernan.oksolar-theme)
-  by dieghernan.
+- OKSolar Theme by dieghernan.
 
-- [Overflow
-  Theme](https://marketplace.visualstudio.com/items?itemName=dieghernan.overflow-theme)
-  by dieghernan.
+- Overflow Theme by dieghernan.
 
-- [Panda
-  Theme](https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda)
-  by Panda Theme.
+- Panda Theme by Panda Theme.
 
-- [Selenized
-  Themes](https://marketplace.visualstudio.com/items?itemName=dieghernan.selenized-theme)
-  by dieghernan.
+- Selenized Themes by dieghernan.
 
-- [Skeletor
-  Syntax](https://marketplace.visualstudio.com/items?itemName=dieghernan.skeletor-syntax)
-  by dieghernan.
+- Skeletor Syntax by dieghernan.
 
-- [SynthWave
-  '84](https://marketplace.visualstudio.com/items?itemName=RobbOwen.synthwave-vscode)
-  by Robb Owen.
+- SynthWave '84 by Robb Owen.
 
-- [Tokyo
-  Night](https://marketplace.visualstudio.com/items?itemName=enkia.tokyo-night)
-  by enkia.
+- Tokyo Night by enkia.
 
-- [Winter is Coming
-  Theme](https://marketplace.visualstudio.com/items?itemName=johnpapa.winteriscoming)
-  by John Papa.
+- Winter is Coming Theme by John Papa.
 
 ## References
 
