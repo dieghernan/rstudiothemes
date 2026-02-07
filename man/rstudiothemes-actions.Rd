@@ -38,6 +38,22 @@ listed (default). If \code{FALSE}, the available themes in the
 \item{delay}{Number of seconds to wait between themes. Set to 0 to be
 prompted to continue after each theme.}
 }
+\value{
+\itemize{
+\item \code{install_rstudiothemes()} and \code{remove_rstudiothemes()} return \code{NULL}
+invisibly.
+}
+
+\itemize{
+\item \code{list_rstudiothemes()} returns a character vector of theme names.
+}
+
+\itemize{
+\item \code{try_rstudiothemes()} has side effects of starting a widget that allows
+users to try different themes. The widget can be exited by following the
+prompts, which will restore the original theme.
+}
+}
 \description{
 Adaptation of some \pkg{rsthemes} functions,
 \href{https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md}{MIT License} Copyright © rsthemes authors.

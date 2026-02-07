@@ -205,7 +205,7 @@
     "SystemRequirements": null
   },
   "keywords": ["r-package", "rstudio-themes", "textmate-themes", "vscode-themes"],
-  "fileSize": "1804.031KB",
+  "fileSize": "1804.889KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
@@ -226,5 +226,6 @@
   ],
   "releaseNotes": "https://github.com/dieghernan/rstudiothemes/blob/main/NEWS.md",
   "readme": "https://github.com/dieghernan/rstudiothemes/blob/main/README.md",
-  "contIntegration": ["https://github.com/dieghernan/rstudiothemes/actions/workflows/check-full.yaml", "https://github.com/dieghernan/rstudiothemes/actions/workflows/rhub.yaml", "https://app.codecov.io/gh/dieghernan/rstudiothemes"]
+  "contIntegration": ["https://github.com/dieghernan/rstudiothemes/actions/workflows/check-full.yaml", "https://github.com/dieghernan/rstudiothemes/actions/workflows/rhub.yaml", "https://app.codecov.io/gh/dieghernan/rstudiothemes"],
+  "developmentStatus": "https://www.repostatus.org/#active"
 }

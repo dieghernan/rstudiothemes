@@ -43,6 +43,9 @@ NULL
 #'   non-standard directories.
 #' @param themes Optional character vector of theme names. If provided, only
 #'   these themes will be used, and `style` will be ignored.
+#' @return
+#' * `install_rstudiothemes()` and `remove_rstudiothemes()` return `NULL`
+#' invisibly.
 #'
 #' @export
 install_rstudiothemes <- function(
@@ -130,6 +133,10 @@ remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
 #' @param list_installed Should the installed \pkg{rstudiothemes} themes be
 #'   listed (default). If `FALSE`, the available themes in the
 #'   \pkg{rstudiothemes} package are listed instead.
+#'
+#' @return
+#' * `list_rstudiothemes()` returns a character vector of theme names.
+#'
 #' @export
 list_rstudiothemes <- function(
   style = c("all", "dark", "light"),
@@ -249,6 +256,12 @@ list_pkg_rstudiothemes <- function(
 #' @describeIn rstudiothemes-actions Try each \pkg{rstudiothemes} RStudio theme
 #' @param delay Number of seconds to wait between themes. Set to 0 to be
 #'   prompted to continue after each theme.
+#'
+#' @return
+#' * `try_rstudiothemes()` has side effects of starting a widget that allows
+#'   users to try different themes. The widget can be exited by following the
+#'   prompts, which will restore the original theme.
+#'
 #' @export
 try_rstudiothemes <- function(
   style = c("all", "dark", "light"),
