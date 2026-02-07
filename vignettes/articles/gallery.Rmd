@@ -25,9 +25,8 @@ png_name <- paste0(gsub(" ", "", tolower(themes)))
 pths <- file.path("screenshots", paste0(png_name, ".png"))
 
 th_url <- file.path(
-"https://dieghernan.github.io/rstudiothemes/articles/",
-pths
-
+  "https://dieghernan.github.io/rstudiothemes/articles/",
+  pths
 )
 ```
 
@@ -50,8 +49,10 @@ for (i in seq_along(themes)) {
   )), sep = "\n")
 
   cat(
-  paste0(
-  "<div class=\"card-img-overlay\" data-toggle=\"lightbox\" data-gallery=\"rstudiothemes\" data-src=\"", th_url[i],"\" data-caption=\"", themes[i],"\" >"))
+    paste0(
+      "<div class=\"card-img-overlay\" data-toggle=\"lightbox\" data-gallery=\"rstudiothemes\" data-src=\"", th_url[i], "\" data-caption=\"", themes[i], "\" >"
+    )
+  )
   cat(c(paste0("<h5 class=\"like_h\">", themes[i], "</h5>")))
   cat("</div>")
   cat("</div>")
