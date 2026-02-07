@@ -65,8 +65,6 @@ rstudioapi::applyTheme("Winter is Coming Dark Blue")
 
 ![Screenshot of theme Winter is Coming Dark Blue](winteriscoming.png)
 
-Screenshot of theme Winter is Coming Dark Blue
-
 Alternatively, go to **Tools → Global Options → Appearance** in RStudio
 and select the installed theme.
 

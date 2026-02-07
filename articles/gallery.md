@@ -17,8 +17,6 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 ![RStudio IDE, Add-Theme UI](rstudiogui.png)
 
-RStudio IDE, Add-Theme UI
-
 ## Gallery
 
 **Click the images to enlarge**
