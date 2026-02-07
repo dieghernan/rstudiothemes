@@ -126,13 +126,11 @@ rstudiothemes::convert_to_rstudio_theme("<path/to/file>", apply = TRUE, force = 
 
 Alternatively, install the `.rstheme` file via the RStudio UI:
 
-**Tools → Global Options → Appearance**
+**Tools → Global Options → Appearance → Add**
 
 <figure>
-<img src="man/figures/rstudiogui.png"
-alt="Example on how to update themes on RStudio IDE" />
-<figcaption aria-hidden="true">Example on how to update themes on
-RStudio IDE</figcaption>
+<img src="man/figures/rstudiogui.png" alt="RStudio IDE, Add-Theme UI" />
+<figcaption aria-hidden="true">RStudio IDE, Add-Theme UI</figcaption>
 </figure>
 
 ### Bidirectional conversion Visual Studio Code - TextMate
