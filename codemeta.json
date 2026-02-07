@@ -8,7 +8,7 @@
   "codeRepository": "https://github.com/dieghernan/rstudiothemes",
   "issueTracker": "https://github.com/dieghernan/rstudiothemes/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.1.0",
+  "version": "0.1.0.9000",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -205,7 +205,7 @@
     "SystemRequirements": null
   },
   "keywords": ["r-package", "rstudio-themes", "textmate-themes", "vscode-themes"],
-  "fileSize": "1803.291KB",
+  "fileSize": "1804.031KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
@@ -218,7 +218,10 @@
         }
       ],
       "name": "{rstudiothemes}: Create {RStudio} Themes from {Visual Studio Code} and {TextMate} Themes",
-      "url": "https://dieghernan.github.io/rstudiothemes/"
+      "identifier": "10.5281/zenodo.18519156",
+      "url": "https://dieghernan.github.io/rstudiothemes/",
+      "@id": "https://doi.org/10.5281/zenodo.18519156",
+      "sameAs": "https://doi.org/10.5281/zenodo.18519156"
     }
   ],
   "releaseNotes": "https://github.com/dieghernan/rstudiothemes/blob/main/NEWS.md",

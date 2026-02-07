@@ -7,13 +7,13 @@ title <- gsub("RStudio", "{RStudio}", title, fixed = TRUE)
 title <- gsub("TextMate", "{TextMate}", title, fixed = TRUE)
 
 pkg <- meta$Package
-doi <- paste0("10.32614/CRAN.package.", pkg)
+doi <- "10.5281/zenodo.18519156"
 
 bibentry(
   "Manual",
   header = paste0("To cite '", pkg, "' in publications use:"),
   title = paste0("{", pkg, "}: ", gsub("'", "", title)),
-#  doi = doi,
+  doi = doi,
   author = c(person("Diego", "Hernangómez")),
   year = year,
   version = meta$Version,
