@@ -63,6 +63,10 @@ rstudiothemes::list_rstudiothemes(list_installed = FALSE)
 #> [27] "Winter is Coming Light"
 ```
 
+We also distribute all our themes in a single `.zip` file at
+<https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip>.
+Unzip and install using the RStudio IDE interface, see next section.
+
 ## Installation
 
 You can install **rstudiothemes** using either of these methods:
@@ -122,10 +126,10 @@ allowing you to convert themes in both directions if needed.
 **rstudiothemes** does not provide a built-in theme editor, but you can
 create your own themes from scratch using the following tools:
 
-- TextMate `*tmTheme`: <https://tmtheme-editor.linuxbox.ninja/>. Also
+- TextMate `.tmTheme`: <https://tmtheme-editor.linuxbox.ninja/>. Also
   see the official RStudio documentation on [creating
   themes](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html).
-- Visual Studio Code `*json`: See the official documentation on
+- Visual Studio Code `.json`: See the official documentation on
   [creating color
   themes](https://code.visualstudio.com/api/extension-guides/color-theme).
 
