@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   articles/gallery: gallery.html
   rstudiothemes: rstudiothemes.html
-last_built: 2026-02-07T22:02Z
+last_built: 2026-02-07T22:06Z
 urls:
   reference: https://dieghernan.github.io/rstudiothemes/reference
   article: https://dieghernan.github.io/rstudiothemes/articles
