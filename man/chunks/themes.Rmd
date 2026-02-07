@@ -6,7 +6,7 @@
 -   GitHub Dark/Light by GitHub.
 -   JellyFish Theme by Pawel Borkar.
 -   Matrix Theme by UstymUkhman,
--   Night Owl Dark/Light (~~no italics~~) by sarah.drasner.
+-   Night Owl Dark/Light (no italics) by sarah.drasner.
 -   Nord by arcticicestudio.
 -   OKSolar Theme by dieghernan.
 -   Overflow Theme by dieghernan.

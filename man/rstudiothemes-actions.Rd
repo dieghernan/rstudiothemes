@@ -71,7 +71,7 @@ Pandoc
 \item GitHub Dark/Light by GitHub.
 \item JellyFish Theme by Pawel Borkar.
 \item Matrix Theme by UstymUkhman,
-\item Night Owl Dark/Light (~~no italics~~) by sarah.drasner.
+\item Night Owl Dark/Light (no italics) by sarah.drasner.
 \item Nord by arcticicestudio.
 \item OKSolar Theme by dieghernan.
 \item Overflow Theme by dieghernan.

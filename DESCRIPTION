@@ -35,7 +35,8 @@ Suggests:
 VignetteBuilder: 
     knitr
 Config/Needs/coverage: covr
-Config/Needs/website: dieghernan/gitdevr, ragg, styler, gadenbuie/rsthemes
+Config/Needs/website: dieghernan/gitdevr, ragg, styler,
+    gadenbuie/rsthemes, rmarkdown
 Config/testthat/edition: 3
 Config/testthat/parallel: true
 Encoding: UTF-8

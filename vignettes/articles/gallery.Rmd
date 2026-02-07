@@ -1,0 +1,115 @@
+---
+title: "Theme Gallery"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Showcase of bundled themes in **rstudiothemes**.
+
+<!--- pkgdown only ---->
+
+<style>
+  .like_h {
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: 'Inter Tight';
+    text-shadow: 0 0 6px black;
+    color: white;
+  }
+
+</style>
+
+```{r setup, echo=FALSE}
+library(rstudiothemes)
+
+themes <- list_rstudiothemes(list_installed = FALSE)
+
+png_name <- paste0(gsub(" ", "", tolower(themes)))
+
+pths <- file.path("screenshots", paste0(png_name, ".png"))
+```
+
+<div class="container py-4">
+<!-- Dropdown -->
+
+```{r dropdown, echo=FALSE, results='asis'}
+# Create drowndown
+cat(paste0(
+  "<select id=\"carouselSelector\" class=\"form-select mb-3\" ",
+  "style=\"max-width: 300px;\">"
+))
+cat()
+for (i in seq_along(themes)) {
+  cat(paste0("<option value=\"", png_name[i], "\">", themes[i], "</option>\n"))
+}
+cat("</select>")
+```
+
+<!-- Carousel -->
+<div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+<div class="carousel-inner">
+
+```{r create_themes, echo=FALSE, results='asis'}
+for (i in seq_along(themes)) {
+  if (i == 1) {
+    cat(c(paste0(
+      "\n<div class=\"carousel-item active\" id=\"",
+      png_name[i], "\">"
+    )), sep = "\n")
+  } else {
+    cat(c(paste0(
+      "\n<div class=\"carousel-item\" id=\"",
+      png_name[i], "\">"
+    )), sep = "\n")
+  }
+
+  cat(c(paste0(
+    "<img src=\"", pths[i], "\" class=\"d-block w-100\" alt=\"\">"
+  )), sep = "\n")
+
+  cat("<div class=\"carousel-caption d-block pb-0\">", sep = "\n")
+  cat(c(paste0("<p class=\"like_h\">", themes[i], "</p>")))
+  cat("</div>\n</div>\n", sep = "\n")
+}
+```
+</div>
+<!-- Controls -->
+<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+</div>
+</div>
+
+<script>
+  const carouselElement = document.getElementById('myCarousel');
+  const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement);
+  const selector = document.getElementById('carouselSelector');
+
+  // Build an array of slide IDs in order
+  const slideIds = Array.from(
+    carouselElement.querySelectorAll('.carousel-item')
+  ).map(item => item.id);
+
+  // Dropdown → go to slide
+  selector.addEventListener('change', () => {
+    const id = selector.value;
+    const index = slideIds.indexOf(id);
+    if (index !== -1) {
+      carousel.to(index);
+    }
+  });
+
+  // Carousel → update dropdown
+  carouselElement.addEventListener('slid.bs.carousel', (e) => {
+    selector.value = slideIds[e.to];
+  });
+</script>

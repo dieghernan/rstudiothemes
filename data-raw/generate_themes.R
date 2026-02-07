@@ -2,6 +2,10 @@
 
 devtools::load_all()
 
+# Current theme
+
+current_theme <- rstudioapi::getThemeInfo()$editor
+
 remove_rstudiothemes()
 
 # Ayu -----
@@ -394,3 +398,19 @@ dd <- convert_to_rstudio_theme(
   apply = TRUE,
   output_style = "compact"
 )
+
+# Create dist release
+allt <- list.files("inst/rsthemes/", full.names = TRUE)
+
+zip::zip("pkgdown/assets/dist/rstudiothemes.zip", allt, mode = "cherry-pick")
+
+# Remove and re-install
+devtools::load_all()
+remove_rstudiothemes()
+install_rstudiothemes()
+
+# Restore
+
+rstudioapi::applyTheme(current_theme)
+
+cli::cli_alert_success("OK, bye ;)")
