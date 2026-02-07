@@ -50,7 +50,12 @@ home:
 
 reference:
 - title: Create themes
-  contents: starts_with("convert")
+- subtitle: RStudio themes
+  contents: convert_to_rstudio_theme
+- subtitle: Visual Code Studio and TextMate themes
+  contents:
+  - convert_vs_to_tm_theme
+  - convert_tm_to_vs_theme
 
 - title: Read themes
   contents: starts_with("read")

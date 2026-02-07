@@ -36,6 +36,25 @@ dd <- convert_to_rstudio_theme(
 )
 
 
+# catpuccin -----
+# source("./data-raw/compile_catppucin.R")
+
+dd <- convert_to_rstudio_theme(
+  "data-raw/vscode_themes/mocha.json",
+  "inst/rsthemes/Catppuccin_Mocha.rstheme",
+  apply = TRUE,
+  force = TRUE,
+  output_style = "compact"
+)
+
+dd <- convert_to_rstudio_theme(
+  "data-raw/vscode_themes/latte.json",
+  "inst/rsthemes/Catppuccin_Latte.rstheme",
+  apply = TRUE,
+  force = TRUE,
+  output_style = "compact"
+)
+
 # cobalt -----
 
 url <- paste0(
@@ -119,6 +138,22 @@ dd <- convert_to_rstudio_theme(
   name = "JellyFish Theme",
   apply = TRUE,
   force = TRUE,
+  output_style = "compact"
+)
+
+
+# Matcha -------------------------------------------------------------------
+url <- paste0(
+  "https://raw.githubusercontent.com/lucafalasco/matcha/",
+  "refs/heads/master/themes/matcha-color-theme.json"
+)
+
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/Matcha.rstheme",
+  name = "Matcha",
+  force = TRUE,
+  apply = TRUE,
   output_style = "compact"
 )
 

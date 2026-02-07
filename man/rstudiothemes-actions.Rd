@@ -79,12 +79,14 @@ return \code{NULL} when called from other IDEs.
 following Visual Studio Code themes:
 \itemize{
 \item Ayu by teabyii.
+\item Catppuccin by \url{https://catppuccin.com/}.
 \item Cobalt2 Theme Official by Wes Bos.
 \item CRAN by dieghernan, based on the CRAN (R Project) website theme, created
 with Pandoc
 \item Dracula Official by \url{https://draculatheme.com/}.
 \item GitHub Dark and Light by GitHub.
 \item JellyFish Theme by Pawel Borkar.
+\item Matcha by Luca Falasco.
 \item Matrix Theme by UstymUkhman.
 \item Night Owl Dark and Light (no italics) by Sarah Drasner.
 \item Nord by Arctic Ice Studio.

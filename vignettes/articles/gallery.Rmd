@@ -32,9 +32,13 @@ We also distribute all our themes in a single `.zip` file at <https://dieghernan
   right: 0;
   left: 0;
   z-index: 1;
-  opacity:0.4;
+  opacity:0.2;
 }
-
+.like_h {
+  text-shadow: 0 0 8px black;
+  opacity: 0.7;
+  color: white;
+}
 </style>
 
 
@@ -52,14 +56,6 @@ th_url <- file.path(
   pths
 )
 ```
-
-
-<style>
-  .like_h {
-    text-shadow: 0 0 6px black;
-    color: white;
-  }
-</style>
 
 <div class="row row-cols-1 row-cols-md-2 g-1">
 

@@ -5,6 +5,7 @@
 -   [Cobalt2 Theme
     Official](https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2)
     by Wes Bos.
+-   Catppuccin by <https://catppuccin.com/>.
 -   CRAN by dieghernan, based on CRAN (R-Project) web theme, produced with
     Pandoc
 -   [Dracula Theme
@@ -16,6 +17,7 @@
 -   [JellyFish
     Theme](https://marketplace.visualstudio.com/items?itemName=PawelBorkar.jellyfish)
     by Pawel Borkar.
+-   Matcha by Luca Falasco.
 -   [Matrix
     Theme](https://marketplace.visualstudio.com/items?itemName=UstymUkhman.matrix-theme)
     by UstymUkhman,
@@ -48,4 +50,3 @@
 -   [Winter is Coming
     Theme](https://marketplace.visualstudio.com/items?itemName=johnpapa.winteriscoming)
     by John Papa.
-
