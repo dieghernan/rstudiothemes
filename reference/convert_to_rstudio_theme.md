@@ -116,5 +116,5 @@ if (on_rstudio() && interactive()) {
   rstudioapi::applyTheme(current_theme)
   rstudioapi::removeTheme("A testing theme")
 }
-#> ℹ Detected GUI: "RTerm".
+#> ! Detected GUI: "RTerm".
 ```
