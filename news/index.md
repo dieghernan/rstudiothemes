@@ -8,6 +8,11 @@
   reached a stable, usable state and is being actively
   developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active).
 
+#### New themes
+
+- Catppuccin by <https://catppuccin.com/>.
+- Matcha by Luca Falasco.
+
 ## rstudiothemes 0.1.0
 
 *Working in **RStudio 2026.01.0+392** “Apple Blossom”*

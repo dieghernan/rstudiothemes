@@ -29,19 +29,20 @@ To see themes available now:
 ``` r
 list_rstudiothemes(list_installed = FALSE)
 #>  [1] "ayu Dark"                   "ayu Light"                 
-#>  [3] "cobalt2"                    "CRAN"                      
-#>  [5] "Dracula2025"                "GitHub Dark"               
-#>  [7] "GitHub Light"               "JellyFish Theme"           
-#>  [9] "Matrix"                     "Night Owl"                 
-#> [11] "Night Owl Light"            "Nord"                      
-#> [13] "OKSolar Dark"               "OKSolar Light"             
-#> [15] "OKSolar Sky"                "Overflow Dark"             
-#> [17] "Overflow Light"             "Panda Syntax"              
-#> [19] "Selenized Dark"             "Selenized Light"           
-#> [21] "Skeletor Syntax"            "SynthWave 84"              
-#> [23] "Tokyo Night"                "Tokyo Night Light"         
-#> [25] "Tokyo Night Storm"          "Winter is Coming Dark Blue"
-#> [27] "Winter is Coming Light"
+#>  [3] "Catppuccin Latte"           "Catppuccin Mocha"          
+#>  [5] "cobalt2"                    "CRAN"                      
+#>  [7] "Dracula2025"                "GitHub Dark"               
+#>  [9] "GitHub Light"               "JellyFish Theme"           
+#> [11] "Matcha"                     "Matrix"                    
+#> [13] "Night Owl"                  "Night Owl Light"           
+#> [15] "Nord"                       "OKSolar Dark"              
+#> [17] "OKSolar Light"              "OKSolar Sky"               
+#> [19] "Overflow Dark"              "Overflow Light"            
+#> [21] "Panda Syntax"               "Selenized Dark"            
+#> [23] "Selenized Light"            "Skeletor Syntax"           
+#> [25] "SynthWave 84"               "Tokyo Night"               
+#> [27] "Tokyo Night Light"          "Tokyo Night Storm"         
+#> [29] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
 
 ## Trying Themes

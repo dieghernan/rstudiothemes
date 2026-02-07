@@ -17,6 +17,14 @@ interface](https://support.posit.co/hc/en-us/articles/115011846747-Using-Themes-
 
 ##### ayu Light
 
+![](screenshots/catppuccinlatte.png)
+
+##### Catppuccin Latte
+
+![](screenshots/catppuccinmocha.png)
+
+##### Catppuccin Mocha
+
 ![](screenshots/cobalt2.png)
 
 ##### cobalt2
@@ -40,6 +48,10 @@ interface](https://support.posit.co/hc/en-us/articles/115011846747-Using-Themes-
 ![](screenshots/jellyfishtheme.png)
 
 ##### JellyFish Theme
+
+![](screenshots/matcha.png)
+
+##### Matcha
 
 ![](screenshots/matrix.png)
 
