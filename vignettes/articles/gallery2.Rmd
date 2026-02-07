@@ -41,7 +41,7 @@ for (i in seq_along(themes)) {
     "<img src=\"", pths[i], "\" class=\"card-img\" alt=\"\">"
   )), sep = "\n")
 
-  cat("<div class=\"card-img-overlay\">")
+  cat(paste0("<div class=\"card-img-overlay\" data-toggle=\"lightbox\" data-gallery=\"rstudiothemes\" data-src=\"", pths[i],"\" >"))
   cat(c(paste0("<h5 class=\"like_h\">", themes[i], "</h5>")))
   cat("</div>")
   cat("</div>")
