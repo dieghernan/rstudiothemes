@@ -11,9 +11,16 @@ rstudiothemes::install_rstudiothemes()
 
 We also distribute all our themes in a single `.zip` file
 [dist/rstudiothemes.zip](https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip).
-
 Unzip and install using the [RStudio IDE
 interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
+
+**Tools → Global Options → Appearance**
+
+![RStudio IDE](rstudiogui.png)
+
+RStudio IDE
+
+## Gallery
 
 **Click the images to enlarge**
 
