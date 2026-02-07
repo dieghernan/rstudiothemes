@@ -40,8 +40,6 @@ rstudioapi::applyTheme("Winter is Coming Dark Blue")
 ![Screenshot of theme Winter is Coming Dark
 Blue](reference/figures/winteriscoming.png)
 
-Screenshot of theme Winter is Coming Dark Blue
-
 Available themes include popular choices such as Tokyo Night, Night Owl,
 Winter is Coming, SynthWave 84, Nord, and many others:
 
@@ -111,8 +109,6 @@ Alternatively, install the `.rstheme` file via the RStudio UI:
 **Tools → Global Options → Appearance → Add**
 
 ![RStudio IDE, Add-Theme UI](reference/figures/rstudiogui.png)
-
-RStudio IDE, Add-Theme UI
 
 ### Bidirectional conversion Visual Studio Code - TextMate
 
