@@ -2,6 +2,8 @@
 
 Showcase of bundled themes in **rstudiothemes**.
 
+*Click in the image to enlarge*
+
 ![](screenshots/ayudark.png)
 
 ##### ayu Dark
