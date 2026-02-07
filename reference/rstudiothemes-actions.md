@@ -85,7 +85,7 @@ Studio Code themes:
 
 - Matrix Theme by UstymUkhman,
 
-- Night Owl Dark/Light (\~~no italics\~~) by sarah.drasner.
+- Night Owl Dark/Light (no italics) by sarah.drasner.
 
 - Nord by arcticicestudio.
 
