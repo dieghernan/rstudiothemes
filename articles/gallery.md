@@ -2,7 +2,12 @@
 
 Showcase of bundled themes in **rstudiothemes**.
 
-*Click in the image to enlarge*
+We also distribute all our themes in a single `.zip` file at
+<https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip>.
+Unzip and install using the [RStudio IDE
+interface](https://support.posit.co/hc/en-us/articles/115011846747-Using-Themes-in-the-RStudio-IDE).
+
+*Click the image to enlarge*
 
 ![](screenshots/ayudark.png)
 

@@ -5,8 +5,8 @@ License](https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md)
 Copyright © rsthemes authors.
 
 **Important**: These functions (except
-`list_rstudiothemes(list_installed = FALSE)` only works in RStudio; it
-returns `NULL` when called from other IDEs.
+`list_rstudiothemes(list_installed = FALSE)`) only work in RStudio; they
+return `NULL` when called from other IDEs.
 
 ## Usage
 
@@ -28,20 +28,19 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 
 - style:
 
-  Limit to a subgroup of themes (`all`, `dark`, `light`).
+  Character. Limit themes to a specific group: `all`, `dark`, or
+  `light`.
 
 - themes:
 
-  Vector of theme names (`list_rstudiothemes()`). If provided just those
-  themes would be tried, and `style` will be ignored.
+  Optional character vector of theme names. If provided, only these
+  themes will be used, and `style` will be ignored.
 
 - destdir:
 
-  The destination directory for the `.rstheme` files. By default uses
-  [`rstudioapi::addTheme()`](https://rstudio.github.io/rstudioapi/reference/addTheme.html)
-  to install themes, but this argument lets users install themes to
-  non-standard directories, or in case the location of the RStudio theme
-  directory has changed.
+  Optional directory for `.rstheme` files. By default uses
+  [`rstudioapi::addTheme()`](https://rstudio.github.io/rstudioapi/reference/addTheme.html),
+  but this argument allows installation to non-standard directories.
 
 - list_installed:
 
@@ -60,8 +59,7 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 
 - `remove_rstudiothemes()`: Remove rstudiothemes from RStudio
 
-- `list_rstudiothemes()`: List installed themes (default) or available
-  themes
+- `list_rstudiothemes()`: List installed or available themes
 
 - `try_rstudiothemes()`: Try each rstudiothemes RStudio theme
 
@@ -74,20 +72,20 @@ Studio Code themes:
 
 - Cobalt2 Theme Official by Wes Bos.
 
-- CRAN by dieghernan, based on CRAN (R-Project) web theme, produced with
-  Pandoc
+- CRAN by dieghernan, based on the CRAN (R Project) website theme,
+  created with Pandoc
 
-- Dracula Theme Official by <https://draculatheme.com/>.
+- Dracula Official by <https://draculatheme.com/>.
 
-- GitHub Dark/Light by GitHub.
+- GitHub Dark and Light by GitHub.
 
 - JellyFish Theme by Pawel Borkar.
 
-- Matrix Theme by UstymUkhman,
+- Matrix Theme by UstymUkhman.
 
-- Night Owl Dark/Light (no italics) by sarah.drasner.
+- Night Owl Dark and Light (no italics) by Sarah Drasner.
 
-- Nord by arcticicestudio.
+- Nord by Arctic Ice Studio.
 
 - OKSolar Theme by dieghernan.
 
@@ -101,14 +99,14 @@ Studio Code themes:
 
 - SynthWave '84 by Robb Owen.
 
-- Tokyo Night by enkia.
+- Tokyo Night by Enkia.
 
 - Winter is Coming Theme by John Papa.
 
 ## References
 
 Aden-Buie G (2026). *rsthemes: Full Themes for RStudio v1.2+*. R package
-version 0.5.1,commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
+version 0.5.1, commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
 <https://github.com/gadenbuie/rsthemes>.
 
 ## Author

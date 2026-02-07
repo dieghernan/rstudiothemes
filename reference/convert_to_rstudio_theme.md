@@ -27,8 +27,8 @@ convert_to_rstudio_theme(
 
 - path:
 
-  Path or URL to a TextMate theme (in `.tmTheme` format) or a Visual
-  Studio Code theme, in `.json` format.
+  Path or URL to a TextMate theme (`.tmTheme` format) or a Visual Studio
+  Code theme (`.json` format).
 
 - outfile:
 
@@ -42,7 +42,7 @@ convert_to_rstudio_theme(
 
 - use_italics:
 
-  logical. Whether to use italics in the resulting theme. By default
+  Logical. Whether to use italics in the resulting theme. By default
   `TRUE`, but some themes may look better without italics.
 
 - output_style:
@@ -58,7 +58,7 @@ convert_to_rstudio_theme(
 
 - apply:
 
-  logical. Apply the theme with
+  Logical. Apply the theme with
   [`rstudioapi::applyTheme()`](https://rstudio.github.io/rstudioapi/reference/applyTheme.html).
 
 ## Value
@@ -80,7 +80,7 @@ use the Editor theme selector.
 
 ![Install a theme from RStudio GUI](figures/rstudiogui.png)
 
-See more in
+For more information, see
 <https://docs.posit.co/ide/user/ide/guide/ui/appearance.html>.
 
 ## See also
@@ -100,7 +100,6 @@ if (on_rstudio() && interactive()) {
     package = "rstudiothemes"
   )
 
-
   # Apply the theme for 10 seconds to demonstrate the effect
 
   current_theme <- rstudioapi::getThemeInfo()$editor
@@ -111,7 +110,6 @@ if (on_rstudio() && interactive()) {
     name = "A testing theme",
     apply = TRUE, force = TRUE
   )
-
 
   Sys.sleep(10)
 

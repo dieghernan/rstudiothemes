@@ -32,8 +32,8 @@ convert_vs_to_tm_theme(
 
 - author:
 
-  Optional. The author of the theme. If not provided, the name of the
-  theme in `path` will be used.
+  Optional. The author of the theme. If not provided, the author from
+  `path` will be used, or a default value will be assigned.
 
 ## Value
 

@@ -91,8 +91,8 @@ applying it (with `apply = TRUE`).
     [`rstudioapi::applyTheme()`](https://rstudio.github.io/rstudioapi/reference/applyTheme.html)
     or via RStudio UI.
 
-This workflow lets you bring your preferred editor theme into RStudio
-seamlessly.
+This workflow lets you easily bring your preferred editor theme into
+RStudio.
 
 ## Tips and Tricks
 

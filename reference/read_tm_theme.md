@@ -1,6 +1,6 @@
 # Read and parse a TextMate theme
 
-Read a `.tmTheme` file (which is XML) representing a TextMate or Sublime
+Read a `.tmTheme` file (XML format) representing a TextMate or Sublime
 Text theme.
 
 ## Usage
@@ -31,7 +31,7 @@ Other functions for reading themes:
 the_theme <- system.file("ext/test-color-theme.json",
   package = "rstudiothemes"
 ) |>
-  # Generate the theme
+  # Convert the Visual Studio Code theme to TextMate format
   convert_vs_to_tm_theme()
 
 # Check

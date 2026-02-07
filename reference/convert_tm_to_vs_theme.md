@@ -32,13 +32,13 @@ convert_tm_to_vs_theme(
 
 - author:
 
-  Optional. The author of the theme. If not provided, the name of the
-  theme in `path` will be used.
+  Optional. The author of the theme. If not provided, the author from
+  `path` will be used, or a default value will be assigned.
 
 ## Value
 
-This function is called for its side effects. It would write a new
-`.json` file in `outfile` and returns the path.
+This function is called for its side effects. It writes a new `.json`
+file in `outfile` and returns the path.
 
 ## See also
 

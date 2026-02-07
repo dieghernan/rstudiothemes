@@ -18,9 +18,9 @@ Heavily based on an unreleased version of
 
 - hint:
 
-  Optional. Character (or object coercible with
-  [`as.character()`](https://rdrr.io/r/base/character.html)) that may be
-  used as a random seed.
+  Optional. A character string (or object coercible with
+  [`as.character()`](https://rdrr.io/r/base/character.html)) to be used
+  as a random seed.
 
 ## Value
 

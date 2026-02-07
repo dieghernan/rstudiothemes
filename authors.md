@@ -22,7 +22,7 @@ Studio Code and TextMate Themes*.
       title = {{rstudiothemes}: Create {RStudio} Themes from {Visual Studio Code} and {TextMate} Themes},
       author = {Diego Hernangómez},
       year = {2026},
-      version = {0.0.0.9000},
+      version = {0.1.0},
       url = {https://dieghernan.github.io/rstudiothemes/},
       abstract = {Create and install RStudio themes derived from Visual Studio Code and TextMate themes. Provides functions to convert between TextMate and Visual Studio Code themes, as well as ports of several Visual Studio Code themes.},
     }
