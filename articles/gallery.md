@@ -123,10 +123,6 @@ enlarge.
 
 ##### SynthWave 84
 
-![](screenshots/tokyonight.png)
-
-##### Tokyo Night
-
 ![](screenshots/tokyonightlight.png)
 
 ##### Tokyo Night Light
@@ -134,6 +130,10 @@ enlarge.
 ![](screenshots/tokyonightstorm.png)
 
 ##### Tokyo Night Storm
+
+![](screenshots/tokyonight.png)
+
+##### Tokyo Night
 
 ![](screenshots/winteriscomingdarkblue.png)
 

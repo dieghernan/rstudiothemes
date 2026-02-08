@@ -58,7 +58,7 @@ read_tm_theme(the_theme)
 #>  3 highlevel colorSpaceName    NA    sRGB        NA         NA         NA       
 #>  4 highlevel semanticClass     NA    theme.dark… NA         NA         NA       
 #>  5 highlevel comment           NA    Generated … NA         NA         NA       
-#>  6 highlevel uuid              NA    39323639-3… NA         NA         NA       
+#>  6 highlevel uuid              NA    39376365-3… NA         NA         NA       
 #>  7 colors    background        NA    NA          #1A1B26    NA         NA       
 #>  8 colors    foreground        NA    NA          #A9B1D6    NA         NA       
 #>  9 colors    selection         NA    NA          #515C7E4D  NA         NA       

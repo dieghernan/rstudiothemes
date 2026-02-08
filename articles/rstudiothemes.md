@@ -16,7 +16,7 @@ To install all built-in RStudio themes that come with this package:
 ``` r
 install_rstudiothemes()
 
-#> ✔ Installed 27 themes
+#> ✔ Installed 30 themes
 #> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes
 #> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes
 ```
@@ -27,6 +27,7 @@ Coming, Dracula, etc.) to your RStudio themes directory.
 To see themes available now:
 
 ``` r
+
 list_rstudiothemes(list_installed = FALSE)
 #>  [1] "ayu Dark"                   "ayu Light"                 
 #>  [3] "Catppuccin Latte"           "Catppuccin Mocha"          
@@ -40,8 +41,8 @@ list_rstudiothemes(list_installed = FALSE)
 #> [19] "Overflow Dark"              "Overflow Light"            
 #> [21] "Panda Syntax"               "Selenized Dark"            
 #> [23] "Selenized Light"            "Skeletor Syntax"           
-#> [25] "SynthWave 84"               "Tokyo Night"               
-#> [27] "Tokyo Night Light"          "Tokyo Night Storm"         
+#> [25] "SynthWave 84"               "Tokyo Night Light"         
+#> [27] "Tokyo Night Storm"          "Tokyo Night"               
 #> [29] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
 
