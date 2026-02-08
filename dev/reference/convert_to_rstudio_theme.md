@@ -78,7 +78,7 @@ of `.tmTheme` files. The `.rstheme` format is specific to RStudio.
 To switch editor themes, go to `Tools > Global Options > Appearance` and
 use the Editor theme selector.
 
-![Install a theme from RStudio GUI](figures/rstudiogui.png)
+![RStudio IDE, Add-Theme UI](figures/rstudiogui.png)
 
 For more information, see
 <https://docs.posit.co/ide/user/ide/guide/ui/appearance.html>.
@@ -116,5 +116,5 @@ if (on_rstudio() && interactive()) {
   rstudioapi::applyTheme(current_theme)
   rstudioapi::removeTheme("A testing theme")
 }
-#> ℹ Detected GUI: "RTerm".
+#> ! Detected GUI: "X11".
 ```

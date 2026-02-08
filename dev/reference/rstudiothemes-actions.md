@@ -53,6 +53,21 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
   Number of seconds to wait between themes. Set to 0 to be prompted to
   continue after each theme.
 
+## Value
+
+- `install_rstudiothemes()` and `remove_rstudiothemes()` return `NULL`
+  invisibly.
+
+&nbsp;
+
+- `list_rstudiothemes()` returns a character vector of theme names.
+
+&nbsp;
+
+- `try_rstudiothemes()` has side effects of starting a widget that
+  allows users to try different themes. The widget can be exited by
+  following the prompts, which will restore the original theme.
+
 ## Functions
 
 - `install_rstudiothemes()`: Install RStudio themes
@@ -70,6 +85,8 @@ Studio Code themes:
 
 - Ayu by teabyii.
 
+- Catppuccin by <https://catppuccin.com/>.
+
 - Cobalt2 Theme Official by Wes Bos.
 
 - CRAN by dieghernan, based on the CRAN (R Project) website theme,
@@ -80,6 +97,8 @@ Studio Code themes:
 - GitHub Dark and Light by GitHub.
 
 - JellyFish Theme by Pawel Borkar.
+
+- Matcha by Luca Falasco.
 
 - Matrix Theme by UstymUkhman.
 
@@ -118,17 +137,18 @@ Garrick Aden-Buie <https://github.com/gadenbuie>
 ``` r
 list_rstudiothemes(list_installed = FALSE)
 #>  [1] "ayu Dark"                   "ayu Light"                 
-#>  [3] "Dracula2025"                "GitHub Dark"               
-#>  [5] "GitHub Light"               "JellyFish Theme"           
-#>  [7] "Matrix"                     "Night Owl"                 
-#>  [9] "Night Owl Light"            "Nord"                      
-#> [11] "OKSolar Dark"               "OKSolar Light"             
-#> [13] "OKSolar Sky"                "Overflow Dark"             
-#> [15] "Overflow Light"             "Panda Syntax"              
-#> [17] "Selenized Dark"             "Selenized Light"           
-#> [19] "Skeletor Syntax"            "SynthWave 84"              
-#> [21] "Tokyo Night"                "Tokyo Night Light"         
-#> [23] "Tokyo Night Storm"          "Winter is Coming Dark Blue"
-#> [25] "Winter is Coming Light"     "cobalt2"                   
-#> [27] "CRAN"                      
+#>  [3] "Catppuccin Latte"           "Catppuccin Mocha"          
+#>  [5] "Dracula2025"                "GitHub Dark"               
+#>  [7] "GitHub Light"               "JellyFish Theme"           
+#>  [9] "Matcha"                     "Matrix"                    
+#> [11] "Night Owl"                  "Night Owl Light"           
+#> [13] "Nord"                       "OKSolar Dark"              
+#> [15] "OKSolar Light"              "OKSolar Sky"               
+#> [17] "Overflow Dark"              "Overflow Light"            
+#> [19] "Panda Syntax"               "Selenized Dark"            
+#> [21] "Selenized Light"            "Skeletor Syntax"           
+#> [23] "SynthWave 84"               "Tokyo Night"               
+#> [25] "Tokyo Night Light"          "Tokyo Night Storm"         
+#> [27] "Winter is Coming Dark Blue" "Winter is Coming Light"    
+#> [29] "cobalt2"                    "CRAN"                      
 ```

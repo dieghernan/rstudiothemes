@@ -30,7 +30,7 @@ function to install them into your RStudio environment:
 ``` r
 rstudiothemes::install_rstudiothemes()
 
-#> ✔ Installed 27 themes
+#> ✔ Installed 30 themes
 #> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes
 #> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes
 
@@ -40,33 +40,32 @@ rstudioapi::applyTheme("Winter is Coming Dark Blue")
 ![Screenshot of theme Winter is Coming Dark
 Blue](reference/figures/winteriscoming.png)
 
-Screenshot of theme Winter is Coming Dark Blue
-
 Available themes include popular choices such as Tokyo Night, Night Owl,
 Winter is Coming, SynthWave 84, Nord, and many others:
 
 ``` r
 rstudiothemes::list_rstudiothemes(list_installed = FALSE)
 #>  [1] "ayu Dark"                   "ayu Light"                 
-#>  [3] "cobalt2"                    "CRAN"                      
-#>  [5] "Dracula2025"                "GitHub Dark"               
-#>  [7] "GitHub Light"               "JellyFish Theme"           
-#>  [9] "Matrix"                     "Night Owl"                 
-#> [11] "Night Owl Light"            "Nord"                      
-#> [13] "OKSolar Dark"               "OKSolar Light"             
-#> [15] "OKSolar Sky"                "Overflow Dark"             
-#> [17] "Overflow Light"             "Panda Syntax"              
-#> [19] "Selenized Dark"             "Selenized Light"           
-#> [21] "Skeletor Syntax"            "SynthWave 84"              
-#> [23] "Tokyo Night"                "Tokyo Night Light"         
-#> [25] "Tokyo Night Storm"          "Winter is Coming Dark Blue"
-#> [27] "Winter is Coming Light"
+#>  [3] "Catppuccin Latte"           "Catppuccin Mocha"          
+#>  [5] "cobalt2"                    "CRAN"                      
+#>  [7] "Dracula2025"                "GitHub Dark"               
+#>  [9] "GitHub Light"               "JellyFish Theme"           
+#> [11] "Matcha"                     "Matrix"                    
+#> [13] "Night Owl"                  "Night Owl Light"           
+#> [15] "Nord"                       "OKSolar Dark"              
+#> [17] "OKSolar Light"              "OKSolar Sky"               
+#> [19] "Overflow Dark"              "Overflow Light"            
+#> [21] "Panda Syntax"               "Selenized Dark"            
+#> [23] "Selenized Light"            "Skeletor Syntax"           
+#> [25] "SynthWave 84"               "Tokyo Night"               
+#> [27] "Tokyo Night Light"          "Tokyo Night Storm"         
+#> [29] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
 
 We also distribute all our themes in a single `.zip` file at
 <https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip>.
 Unzip and install using the [RStudio IDE
-interface](https://support.posit.co/hc/en-us/articles/115011846747-Using-Themes-in-the-RStudio-IDE).
+interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 ## Installation
 
@@ -107,12 +106,9 @@ rstudiothemes::convert_to_rstudio_theme("<path/to/file>", apply = TRUE, force = 
 
 Alternatively, install the `.rstheme` file via the RStudio UI:
 
-**Tools → Global Options → Appearance**
+**Tools → Global Options → Appearance → Add**
 
-![Example on how to update themes on RStudio
-IDE](reference/figures/rstudiogui.png)
-
-Example on how to update themes on RStudio IDE
+![RStudio IDE, Add-Theme UI](reference/figures/rstudiogui.png)
 
 ### Bidirectional conversion Visual Studio Code - TextMate
 

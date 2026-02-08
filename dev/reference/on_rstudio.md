@@ -22,6 +22,6 @@ Other helpers:
 
 ``` r
 on_rstudio()
-#> ℹ Detected GUI: "RTerm".
+#> ! Detected GUI: "X11".
 #> [1] FALSE
 ```
