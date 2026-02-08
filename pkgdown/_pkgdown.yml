@@ -80,3 +80,7 @@ articles:
 - title: Theme Gallery
   contents:
   - articles/gallery
+
+- title: internal
+  contents:
+  - starts_with("test")
