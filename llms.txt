@@ -190,3 +190,5 @@ Based on functions of the **rsthemes** package.
 ### Theme Gallery
 
 - [Showcase](https://dieghernan.github.io/rstudiothemes/articles/gallery.md):
+
+  Explore our built-in themes

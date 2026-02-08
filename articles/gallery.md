@@ -19,7 +19,9 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 ## Gallery
 
-**Click the images to enlarge**
+Gallery created with [Lightbox for Bootstrap
+5](https://trvswgnr.github.io/bs5-lightbox/). Click the images to
+enlarge.
 
 ![](screenshots/ayudark.png)
 
