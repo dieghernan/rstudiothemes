@@ -31,9 +31,11 @@ Suggests:
     quarto,
     testthat (>= 3.0.0),
     uuid
-VignetteBuilder: quarto
+VignetteBuilder: 
+    quarto
 Config/Needs/coverage: covr
-Config/Needs/website: dieghernan/gitdevr, ragg, styler, gadenbuie/rsthemes, rmarkdown, quarto
+Config/Needs/website: dieghernan/gitdevr, ragg, styler,
+    gadenbuie/rsthemes, rmarkdown, quarto
 Config/testthat/edition: 3
 Config/testthat/parallel: true
 Encoding: UTF-8
