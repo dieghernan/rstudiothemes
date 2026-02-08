@@ -29,11 +29,11 @@ Imports:
     xml2
 Suggests:
     knitr,
+    quarto,
     rmarkdown,
     testthat (>= 3.0.0),
     uuid
-VignetteBuilder: 
-    knitr
+VignetteBuilder: knitr, quarto
 Config/Needs/coverage: covr
 Config/Needs/website: dieghernan/gitdevr, ragg, styler,
     gadenbuie/rsthemes, rmarkdown

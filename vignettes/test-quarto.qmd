@@ -1,0 +1,16 @@
+---
+title: "A test of a quarto vignette"
+vignette: >
+  %\VignetteIndexEntry{A test of a quarto vignette}
+  %\VignetteEngine{quarto::html}
+  %\VignetteEncoding{UTF-8}
+knitr:
+  opts_chunk:
+    collapse: true
+    comment: '#>'
+---
+
+```{r}
+#| label: setup
+library(rstudiothemes)
+```
