@@ -1,29 +1,31 @@
 ---
 title: "Showcase"
-description: Explore our built-in themes
+description: A preview of out built-in themes
+knitr:
+  opts_chunk:
+    collapse: true
+    comment: '#>'
 ---
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
 
 Showcase of bundled themes in **rstudiothemes**.
 
 You can installed them with:
 
-```{r demo, eval=FALSE}
+```{r}
+#| label: demo
+#| eval: false
+
 rstudiothemes::install_rstudiothemes()
 ```
 
-We also distribute all our themes in a single `.zip` file [dist/rstudiothemes.zip](https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip). Unzip and install using the
-[RStudio IDE interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
+We also distribute all our themes in a single `.zip` file
+[dist/rstudiothemes.zip](https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip).
+Unzip and install using the [RStudio IDE
+interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 **Tools → Global Options → Appearance → Add**
 
-![](rstudiogui.png){alt="RStudio IDE, Add-Theme UI" width=80%}
+![](rstudiogui.png){alt="RStudio IDE, Add-Theme UI" width="80%"}
 
 ## Gallery
 
@@ -32,8 +34,12 @@ Gallery created with [Lightbox for Bootstrap
 
 <!--- Work with pkgdown --->
 
-<style>
+```{r}
+#| label: style
+#| echo: false
+#| output: asis
 
+cat("<style>
 .lightbox-caption em{
   font-style: normal;
   font-size: 300%;
@@ -56,9 +62,15 @@ Gallery created with [Lightbox for Bootstrap
   color: white;
 }
 </style>
+")
 
 
-```{r setup, echo=FALSE}
+```
+
+```{r}
+#| label: setup
+#| echo: false
+
 library(rstudiothemes)
 
 themes <- list_rstudiothemes(list_installed = FALSE)
@@ -73,9 +85,12 @@ th_url <- file.path(
 )
 ```
 
-<div class="row row-cols-1 row-cols-md-2 g-1">
+::: {.row .row-cols-1 .row-cols-md-2 .g-1}
+```{r}
+#| label: card_layout
+#| echo: false
+#| output: asis
 
-```{r card_layout, echo=FALSE, results='asis'}
 for (i in seq_along(themes)) {
   cat("<div class=\"col\">")
   cat("<div class=\"card bg-dark text-white\">")
@@ -96,9 +111,15 @@ for (i in seq_along(themes)) {
   cat("</div>")
 }
 ```
+:::
 
+```{r}
+#| label: script
+#| echo: false
+#| output: asis
 
-</div>
+cat("<script 
+src=\"https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.5/dist/index.bundle.min.js\"
+></script>")
 
-
-<script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.5/dist/index.bundle.min.js"></script>
+```

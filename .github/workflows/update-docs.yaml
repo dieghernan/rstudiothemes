@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   update-docs:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
@@ -61,7 +61,7 @@ jobs:
 
     - name: Update docs
       run: |
-        
+
         pkgdev::update_docs(opt_dir = c("man/figures", "img", "vignettes"))
 
       shell: Rscript {0}

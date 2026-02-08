@@ -1,5 +1,7 @@
 # rstudiothemes (development version)
 
+
+-   Migrate vignettes and articles to Quarto (#9).
 -   Add DOI:
     [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18519155.svg)](https://doi.org/10.5281/zenodo.18519155).
 -   Repo status is active: [![Project Status: Active – The project has reached a
