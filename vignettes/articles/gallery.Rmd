@@ -1,5 +1,6 @@
 ---
 title: "Showcase"
+description: Explore our built-in themes
 ---
 
 ```{r, include = FALSE}
@@ -26,7 +27,8 @@ We also distribute all our themes in a single `.zip` file [dist/rstudiothemes.zi
 
 ## Gallery
 
-**Click the images to enlarge**
+Gallery created with [Lightbox for Bootstrap
+5](https://trvswgnr.github.io/bs5-lightbox/). Click the images to enlarge.
 
 <!--- Work with pkgdown --->
 

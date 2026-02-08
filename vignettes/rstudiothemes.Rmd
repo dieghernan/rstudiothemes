@@ -1,6 +1,7 @@
 ---
 title: "Get started with rstudiothemes"
 output: rmarkdown::html_vignette
+description: First steps with the rstudiothemes package
 vignette: >
   %\VignetteIndexEntry{Get started with rstudiothemes}
   %\VignetteEngine{knitr::rmarkdown}
