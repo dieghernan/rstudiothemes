@@ -81,6 +81,7 @@ articles:
   contents:
   - articles/gallery
 
-- title: internal
+- title: Tests
   contents:
   - starts_with("test")
+  - starts_with("articles/test")

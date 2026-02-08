@@ -35,8 +35,7 @@ Suggests:
     uuid
 VignetteBuilder: knitr, quarto
 Config/Needs/coverage: covr
-Config/Needs/website: dieghernan/gitdevr, ragg, styler,
-    gadenbuie/rsthemes, rmarkdown
+Config/Needs/website: dieghernan/gitdevr, ragg, styler, gadenbuie/rsthemes, rmarkdown, quarto
 Config/testthat/edition: 3
 Config/testthat/parallel: true
 Encoding: UTF-8

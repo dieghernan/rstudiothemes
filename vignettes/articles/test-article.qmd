@@ -1,0 +1,125 @@
+---
+title: "Showcase"
+description: A preview of out built-in themes
+knitr:
+  opts_chunk:
+    collapse: true
+    comment: '#>'
+---
+
+Showcase of bundled themes in **rstudiothemes**.
+
+You can installed them with:
+
+```{r}
+#| label: demo
+#| eval: false
+
+rstudiothemes::install_rstudiothemes()
+```
+
+We also distribute all our themes in a single `.zip` file
+[dist/rstudiothemes.zip](https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip).
+Unzip and install using the [RStudio IDE
+interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
+
+**Tools → Global Options → Appearance → Add**
+
+![](rstudiogui.png){alt="RStudio IDE, Add-Theme UI" width="80%"}
+
+## Gallery
+
+Gallery created with [Lightbox for Bootstrap
+5](https://trvswgnr.github.io/bs5-lightbox/). Click the images to enlarge.
+
+<!--- Work with pkgdown --->
+
+```{r}
+#| label: style
+#| echo: false
+#| output: asis
+
+cat("<style>
+.lightbox-caption em{
+  font-style: normal;
+  font-size: 300%;
+  font-weight: 800;
+  font-family: 'Inter Tight';
+  text-shadow: 0 0 10px black;
+  color: white;
+}
+.lightbox-caption {
+  position: absolute !important;
+  top: 20%;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  opacity:0.2;
+}
+.like_h {
+  text-shadow: 0 0 8px black;
+  opacity: 0.7;
+  color: white;
+}
+</style>
+")
+
+
+```
+
+```{r}
+#| label: setup
+#| echo: false
+
+library(rstudiothemes)
+
+themes <- list_rstudiothemes(list_installed = FALSE)
+
+png_name <- paste0(gsub(" ", "", tolower(themes)))
+
+pths <- file.path("screenshots", paste0(png_name, ".png"))
+
+th_url <- file.path(
+  "https://dieghernan.github.io/rstudiothemes/articles/",
+  pths
+)
+```
+
+::: {.row .row-cols-1 .row-cols-md-2 .g-1}
+```{r}
+#| label: card_layout
+#| echo: false
+#| output: asis
+
+for (i in seq_along(themes)) {
+  cat("<div class=\"col\">")
+  cat("<div class=\"card bg-dark text-white\">")
+  cat(c(paste0(
+    "<img src=\"", pths[i], "\" class=\"card-img\" alt=\"\">"
+  )), sep = "\n")
+
+  cat(
+    paste0(
+      "<div class=\"card-img-overlay\" data-toggle=\"lightbox\" ",
+      "data-gallery=\"rstudiothemes\" data-src=\"",
+      th_url[i], "\" data-caption=\"", themes[i], "\" >"
+    )
+  )
+  cat(c(paste0("<h5 class=\"like_h\">", themes[i], "</h5>")))
+  cat("</div>")
+  cat("</div>")
+  cat("</div>")
+}
+```
+:::
+
+```{r}
+#| label: script
+#| echo: false
+#| output: asis
+
+cat("<script 
+src=\"https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.5/dist/index.bundle.min.js\"
+></script>")
+
+```
