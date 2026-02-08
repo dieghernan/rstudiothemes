@@ -14,8 +14,8 @@ template:
       creator: "@dhernangomez"
       card: summary_large_image
 
-development:
-  mode: auto
+# development:
+#  mode: auto
 
 repo:
   branch: main
@@ -80,8 +80,3 @@ articles:
 - title: Theme Gallery
   contents:
   - articles/gallery
-
-- title: Tests
-  contents:
-  - starts_with("test")
-  - starts_with("articles/test")
