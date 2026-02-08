@@ -147,14 +147,16 @@
 <code class="sourceCode R"><span><span class="fu">rstudioapi</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/rstudioapi/reference/applyTheme.html" class="external-link">applyTheme</a></span><span class="op">(</span><span class="st">"Winter is Coming Dark Blue"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <p><img src="winteriscoming.png" alt="Screenshot of theme Winter is Coming Dark Blue"></p>
-<p>Alternatively, go to <strong>Tools → Global Options → Appearance</strong> in RStudio and select the installed theme.</p>
+<p>Alternatively, go to <strong>Tools &gt; Global Options &gt; Appearance</strong> in RStudio and select the installed theme.</p>
 </section><section class="level2"><h2 id="converting-your-own-themes">Converting Your Own Themes<a class="anchor" aria-label="anchor" href="#converting-your-own-themes"></a>
 </h2>
 <p>You can convert a VS Code or TextMate theme file into an RStudio theme:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme</a></span><span class="op">(</span><span class="st">"&lt;path/to/vscode-theme.json&gt;"</span>,</span>
-<span>  apply <span class="op">=</span> <span class="cn">TRUE</span>, force <span class="op">=</span> <span class="cn">TRUE</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme</a></span><span class="op">(</span></span>
+<span>  <span class="st">"&lt;path/to/vscode-theme.json&gt;"</span>,</span>
+<span>  apply <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  force <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 </div>
 <p>This function will convert and install the theme immediately, optionally applying it (with <code>apply = TRUE</code>).</p>
@@ -175,7 +177,7 @@
 <li>
 <strong>Try specific categories:</strong> filter themes by Light/Dark style</li>
 <li>
-<strong>Use the Add-Theme UI</strong>: RStudio’s <strong>Global Options → Appearance → Add</strong> to manually add <code>.rstheme</code> files you’ve created or converted.</li>
+<strong>Use the Add-Theme UI</strong>: RStudio’s <strong>Global Options &gt; Appearance &gt; Add</strong> to manually add <code>.rstheme</code> files you’ve created or converted.</li>
 </ul></section><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
