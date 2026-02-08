@@ -23,7 +23,7 @@ We also distribute all our themes in a single `.zip` file
 Unzip and install using the [RStudio IDE
 interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
-**Tools → Global Options → Appearance → Add**
+**Tools \> Global Options \> Appearance \> Add**
 
 ![](rstudiogui.png){alt="RStudio IDE, Add-Theme UI" width="80%"}
 
@@ -54,7 +54,7 @@ cat("<style>
   right: 0;
   left: 0;
   z-index: 1;
-  opacity:0.2;
+  opacity:0.35;
 }
 .like_h {
   text-shadow: 0 0 8px black;
@@ -118,8 +118,7 @@ for (i in seq_along(themes)) {
 #| echo: false
 #| output: asis
 
-cat("<script 
+cat("<script
 src=\"https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.5/dist/index.bundle.min.js\"
 ></script>")
-
 ```

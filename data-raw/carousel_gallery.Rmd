@@ -99,7 +99,7 @@ for (i in seq_along(themes)) {
     carouselElement.querySelectorAll('.carousel-item')
   ).map(item => item.id);
 
-  // Dropdown → go to slide
+  // Dropdown > go to slide
   selector.addEventListener('change', () => {
     const id = selector.value;
     const index = slideIds.indexOf(id);
@@ -108,7 +108,7 @@ for (i in seq_along(themes)) {
     }
   });
 
-  // Carousel → update dropdown
+  // Carousel > update dropdown
   carouselElement.addEventListener('slid.bs.carousel', (e) => {
     selector.value = slideIds[e.to];
   });
