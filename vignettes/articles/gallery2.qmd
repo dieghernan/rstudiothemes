@@ -1,0 +1,88 @@
+---
+title: "Showcase"
+description: A preview of out built-in themes
+lightbox: 
+  match: auto
+  desc-position: top
+  effect: fade
+knitr:
+  opts_chunk:
+    collapse: true
+    comment: '#>'
+---
+
+Showcase of bundled themes in **rstudiothemes**.
+
+You can installed them with:
+
+```{r}
+#| label: demo
+#| eval: false
+
+rstudiothemes::install_rstudiothemes()
+```
+
+We also distribute all our themes in a single `.zip` file
+[dist/rstudiothemes.zip](https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip).
+Unzip and install using the [RStudio IDE
+interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
+
+**Tools \> Global Options \> Appearance \> Add**
+
+![](rstudiogui.png){.nolightbox fig-alt="RStudio IDE, Add-Theme UI" width="80%"}
+
+## Lightbox Gallery
+
+Click the images to enlarge.
+
+![](screenshots/ayudark.png){group="my-gallery" description="ally-dark"}
+
+![](screenshots/synthwave84.png){group="my-gallery" description="Trying alt"}
+
+
+```{r}
+#| label: setup
+#| echo: false
+
+library(rstudiothemes)
+
+themes <- list_rstudiothemes(list_installed = FALSE)
+
+png_name <- paste0(gsub(" ", "", tolower(themes)))
+
+pths <- file.path("screenshots", paste0(png_name, ".png"))
+
+th_url <- file.path(
+  "https://dieghernan.github.io/rstudiothemes/articles/",
+  pths
+)
+```
+
+::: {.row .row-cols-1 .row-cols-md-2 .g-1}
+```{r}
+#| label: card_layout
+#| echo: false
+#| output: asis
+
+for (i in seq_along(themes)) {
+  cat("<div class=\"col\">")
+  cat("<div class=\"card bg-dark text-white\">")
+  cat(c(paste0("![](", pths[i],"){ .lightbox .card-img ",
+               
+               "group=\"rstudiothemes\" description=\"",
+               themes[i], "\" }"), "\n"))
+  
+
+  cat(
+    paste0(
+      "<div class=\"not-card-img-overlay\">"
+    )
+  )
+  cat(c(paste0("<h5 class=\"like_h\">", themes[i], "</h5>")))
+  cat("</div>")
+  cat("</div>")
+  cat("</div>")
+}
+```
+:::
+
