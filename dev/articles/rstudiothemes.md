@@ -16,7 +16,7 @@ To install all built-in RStudio themes that come with this package:
 ``` r
 install_rstudiothemes()
 
-#> ✔ Installed 27 themes
+#> ✔ Installed 30 themes
 #> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes
 #> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes
 ```
@@ -27,6 +27,7 @@ Coming, Dracula, etc.) to your RStudio themes directory.
 To see themes available now:
 
 ``` r
+
 list_rstudiothemes(list_installed = FALSE)
 #>  [1] "ayu Dark"                   "ayu Light"                 
 #>  [3] "Catppuccin Latte"           "Catppuccin Mocha"          
@@ -65,16 +66,18 @@ rstudioapi::applyTheme("Winter is Coming Dark Blue")
 
 ![Screenshot of theme Winter is Coming Dark Blue](winteriscoming.png)
 
-Alternatively, go to **Tools → Global Options → Appearance** in RStudio
-and select the installed theme.
+Alternatively, go to **Tools \> Global Options \> Appearance** in
+RStudio and select the installed theme.
 
 ## Converting Your Own Themes
 
 You can convert a VS Code or TextMate theme file into an RStudio theme:
 
 ``` r
-convert_to_rstudio_theme("<path/to/vscode-theme.json>",
-  apply = TRUE, force = TRUE
+convert_to_rstudio_theme(
+  "<path/to/vscode-theme.json>",
+  apply = TRUE,
+  force = TRUE
 )
 ```
 
@@ -97,5 +100,5 @@ RStudio.
 
 - **List installed themes:** `list_rstudiothemes(list_installed = TRUE)`
 - **Try specific categories:** filter themes by Light/Dark style
-- **Use the Add-Theme UI**: RStudio’s **Global Options → Appearance →
+- **Use the Add-Theme UI**: RStudio’s **Global Options \> Appearance \>
   Add** to manually add `.rstheme` files you’ve created or converted.

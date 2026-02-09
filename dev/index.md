@@ -106,7 +106,7 @@ rstudiothemes::convert_to_rstudio_theme("<path/to/file>", apply = TRUE, force = 
 
 Alternatively, install the `.rstheme` file via the RStudio UI:
 
-**Tools → Global Options → Appearance → Add**
+**Tools \> Global Options \> Appearance \> Add**
 
 ![RStudio IDE, Add-Theme UI](reference/figures/rstudiogui.png)
 

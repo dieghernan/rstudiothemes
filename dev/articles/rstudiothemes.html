@@ -19,9 +19,9 @@
 <link href="../deps/Roboto-0.4.10/font.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Get started with rstudiothemes">
-<meta name="description" content="First steps with the rstudiothemes package">
-<meta property="og:description" content="First steps with the rstudiothemes package">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><script src="rstudiothemes_files/libs/quarto-html/popper.min.js"></script><script src="rstudiothemes_files/libs/quarto-html/tippy.umd.min.js"></script><link href="rstudiothemes_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="rstudiothemes_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Get started with rstudiothemes">
 <meta property="og:image" content="https://dieghernan.github.io/rstudiothemes/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@dhernangomez">
@@ -77,44 +77,45 @@
 
 
   </div>
-</nav><div class="container template-article">
-
-
-
-
+</nav><div class="container template-quarto">
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Get started with rstudiothemes</h1>
-            
-      
-      <small class="dont-index">Source: <a href="https://github.com/dieghernan/rstudiothemes/blob/main/vignettes/rstudiothemes.Rmd" class="external-link"><code>vignettes/rstudiothemes.Rmd</code></a></small>
-      <div class="d-none name"><code>rstudiothemes.Rmd</code></div>
+
+
+
+
+      <small class="dont-index">Source: <a href="https://github.com/dieghernan/rstudiothemes/blob/main/vignettes/rstudiothemes.qmd" class="external-link"><code>vignettes/rstudiothemes.qmd</code></a></small>
+      <div class="d-none name"><code></code></div>
     </div>
 
-    
-    
-<p>The <strong>rstudiothemes</strong> package provides tools to convert
-<strong>Visual Studio Code</strong> and <strong>TextMate</strong> themes
-into RStudio’s <code>.rstheme</code> format and install them in your
-RStudio IDE. It also includes a set of ready-to-use themes.</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+
+
+
+
+
+    <p>The <strong>rstudiothemes</strong> package provides tools to convert <strong>Visual Studio Code</strong> and <strong>TextMate</strong> themes into RStudio’s <code>.rstheme</code> format and install them in your RStudio IDE. It also includes a set of ready-to-use themes.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dieghernan.github.io/rstudiothemes/">rstudiothemes</a></span><span class="op">)</span></span></code></pre></div>
-<div class="section level2">
-<h2 id="installing-built-in-themes">Installing Built-In Themes<a class="anchor" aria-label="anchor" href="#installing-built-in-themes"></a>
+</div>
+<section class="level2"><h2 id="installing-built-in-themes">Installing Built-In Themes<a class="anchor" aria-label="anchor" href="#installing-built-in-themes"></a>
 </h2>
-<p>To install all built-in RStudio themes that come with this
-package:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<p>To install all built-in RStudio themes that come with this package:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/rstudiothemes-actions.html">install_rstudiothemes</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">#&gt; ✔ Installed 27 themes</span></span>
+<span><span class="co">#&gt; ✔ Installed 30 themes</span></span>
 <span><span class="co">#&gt; ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes</span></span>
 <span><span class="co">#&gt; ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes</span></span></code></pre></div>
-<p>This will add many popular themes (e.g., Tokyo Night, Nord, Winter is
-Coming, Dracula, etc.) to your RStudio themes directory.</p>
+</div>
+<p>This will add many popular themes (e.g., Tokyo Night, Nord, Winter is Coming, Dracula, etc.) to your RStudio themes directory.</p>
 <p>To see themes available now:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/rstudiothemes-actions.html">list_rstudiothemes</a></span><span class="op">(</span>list_installed <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="fu"><a href="../reference/rstudiothemes-actions.html">list_rstudiothemes</a></span><span class="op">(</span>list_installed <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="co">#&gt;  [1] "ayu Dark"                   "ayu Light"                 </span></span>
 <span><span class="co">#&gt;  [3] "Catppuccin Latte"           "Catppuccin Mocha"          </span></span>
 <span><span class="co">#&gt;  [5] "cobalt2"                    "CRAN"                      </span></span>
@@ -131,71 +132,139 @@ Coming, Dracula, etc.) to your RStudio themes directory.</p>
 <span><span class="co">#&gt; [27] "Tokyo Night Storm"          "Tokyo Night"               </span></span>
 <span><span class="co">#&gt; [29] "Winter is Coming Dark Blue" "Winter is Coming Light"</span></span></code></pre></div>
 </div>
-<div class="section level2">
-<h2 id="trying-themes">Trying Themes<a class="anchor" aria-label="anchor" href="#trying-themes"></a>
+</section><section class="level2"><h2 id="trying-themes">Trying Themes<a class="anchor" aria-label="anchor" href="#trying-themes"></a>
 </h2>
 <p>You can quickly preview themes directly from R:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/rstudiothemes-actions.html">try_rstudiothemes</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>Pass a subset of styles (e.g., <code>"dark"</code> or
-<code>"light"</code>) if needed.</p>
 </div>
-<div class="section level2">
-<h2 id="applying-a-theme">Applying a Theme<a class="anchor" aria-label="anchor" href="#applying-a-theme"></a>
+<p>Pass a subset of styles (e.g., <code>"dark"</code> or <code>"light"</code>) if needed.</p>
+</section><section class="level2"><h2 id="applying-a-theme">Applying a Theme<a class="anchor" aria-label="anchor" href="#applying-a-theme"></a>
 </h2>
 <p>After installing themes, apply one using the RStudio API:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">rstudioapi</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/rstudioapi/reference/applyTheme.html" class="external-link">applyTheme</a></span><span class="op">(</span><span class="st">"Winter is Coming Dark Blue"</span><span class="op">)</span></span></code></pre></div>
+</div>
 <p><img src="winteriscoming.png" alt="Screenshot of theme Winter is Coming Dark Blue"></p>
-<p>Alternatively, go to <strong>Tools → Global Options →
-Appearance</strong> in RStudio and select the installed theme.</p>
-</div>
-<div class="section level2">
-<h2 id="converting-your-own-themes">Converting Your Own Themes<a class="anchor" aria-label="anchor" href="#converting-your-own-themes"></a>
+<p>Alternatively, go to <strong>Tools &gt; Global Options &gt; Appearance</strong> in RStudio and select the installed theme.</p>
+</section><section class="level2"><h2 id="converting-your-own-themes">Converting Your Own Themes<a class="anchor" aria-label="anchor" href="#converting-your-own-themes"></a>
 </h2>
-<p>You can convert a VS Code or TextMate theme file into an RStudio
-theme:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme</a></span><span class="op">(</span><span class="st">"&lt;path/to/vscode-theme.json&gt;"</span>,</span>
-<span>  apply <span class="op">=</span> <span class="cn">TRUE</span>, force <span class="op">=</span> <span class="cn">TRUE</span></span>
+<p>You can convert a VS Code or TextMate theme file into an RStudio theme:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme</a></span><span class="op">(</span></span>
+<span>  <span class="st">"&lt;path/to/vscode-theme.json&gt;"</span>,</span>
+<span>  apply <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  force <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p>This function will convert and install the theme immediately,
-optionally applying it (with <code>apply = TRUE</code>).</p>
 </div>
-<div class="section level2">
-<h2 id="workflow-example-from-vs-code-theme-to-rstudio">Workflow Example: From VS Code Theme to RStudio<a class="anchor" aria-label="anchor" href="#workflow-example-from-vs-code-theme-to-rstudio"></a>
+<p>This function will convert and install the theme immediately, optionally applying it (with <code>apply = TRUE</code>).</p>
+</section><section class="level2"><h2 id="workflow-example-from-vs-code-theme-to-rstudio">Workflow Example: From VS Code Theme to RStudio<a class="anchor" aria-label="anchor" href="#workflow-example-from-vs-code-theme-to-rstudio"></a>
 </h2>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li>Choose a theme <code>.json</code> from VS Code.</li>
-<li>Convert and install it with
-<code><a href="../reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme()</a></code>.</li>
-<li>Apply it with <code><a href="https://rstudio.github.io/rstudioapi/reference/applyTheme.html" class="external-link">rstudioapi::applyTheme()</a></code> or via RStudio
-UI.</li>
+<li>Convert and install it with <code><a href="../reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme()</a></code>.</li>
+<li>Apply it with <code><a href="https://rstudio.github.io/rstudioapi/reference/applyTheme.html" class="external-link">rstudioapi::applyTheme()</a></code> or via RStudio UI.</li>
 </ol>
-<p>This workflow lets you easily bring your preferred editor theme into
-RStudio.</p>
-</div>
-<div class="section level2">
-<h2 id="tips-and-tricks">Tips and Tricks<a class="anchor" aria-label="anchor" href="#tips-and-tricks"></a>
+<p>This workflow lets you easily bring your preferred editor theme into RStudio.</p>
+</section><section class="level2"><h2 id="tips-and-tricks">Tips and Tricks<a class="anchor" aria-label="anchor" href="#tips-and-tricks"></a>
 </h2>
 <ul>
 <li>
-<strong>List installed themes:</strong>
-<code>list_rstudiothemes(list_installed = TRUE)</code>
+<strong>List installed themes:</strong> <code>list_rstudiothemes(list_installed = TRUE)</code>
 </li>
 <li>
-<strong>Try specific categories:</strong> filter themes by
-Light/Dark style</li>
+<strong>Try specific categories:</strong> filter themes by Light/Dark style</li>
 <li>
-<strong>Use the Add-Theme UI</strong>: RStudio’s <strong>Global
-Options → Appearance → Add</strong> to manually add
-<code>.rstheme</code> files you’ve created or converted.</li>
-</ul>
-</div>
-  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+<strong>Use the Add-Theme UI</strong>: RStudio’s <strong>Global Options &gt; Appearance &gt; Add</strong> to manually add <code>.rstheme</code> files you’ve created or converted.</li>
+</ul></section><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config);
+    }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script></main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
 </div>
-
 
 
     <footer><div class="pkgdown-footer-left">

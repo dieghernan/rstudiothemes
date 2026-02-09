@@ -19,8 +19,10 @@
 <link href="../deps/Roboto-0.4.10/font.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><script src="test-article_files/libs/quarto-html/popper.min.js"></script><script src="test-article_files/libs/quarto-html/tippy.umd.min.js"></script><link href="test-article_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="test-article_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><script src="gallery2_files/libs/quarto-html/popper.min.js"></script><script src="gallery2_files/libs/quarto-html/tippy.umd.min.js"></script><link href="gallery2_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="gallery2_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<script src="gallery2_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script><link href="gallery2_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="gallery2_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Showcase">
 <meta property="og:image" content="https://dieghernan.github.io/rstudiothemes/logo.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -85,7 +87,7 @@
 
 
 
-      <small class="dont-index">Source: <a href="https://github.com/dieghernan/rstudiothemes/blob/main/vignettes/articles/test-article.qmd" class="external-link"><code>vignettes/articles/test-article.qmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/dieghernan/rstudiothemes/blob/main/vignettes/articles/gallery2.qmd" class="external-link"><code>vignettes/articles/gallery2.qmd</code></a></small>
       <div class="d-none name"><code></code></div>
     </div>
 
@@ -101,39 +103,18 @@
 <code class="sourceCode R"><span><span class="fu">rstudiothemes</span><span class="fu">::</span><span class="fu"><a href="../reference/rstudiothemes-actions.html">install_rstudiothemes</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
 <p>We also distribute all our themes in a single <code>.zip</code> file <a href="https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip">dist/rstudiothemes.zip</a>. Unzip and install using the <a href="https://docs.posit.co/ide/user/ide/guide/ui/appearance.html" class="external-link">RStudio IDE interface</a>.</p>
-<p><strong>Tools → Global Options → Appearance → Add</strong></p>
-<p><img src="rstudiogui.png" style="width:80.0%" alt="RStudio IDE, Add-Theme UI"></p>
-<section class="level2"><h2 id="gallery">Gallery<a class="anchor" aria-label="anchor" href="#gallery"></a>
+<p><strong>Tools &gt; Global Options &gt; Appearance &gt; Add</strong></p>
+<p><img src="rstudiogui.png" class="nolightbox" style="width:80.0%" alt="RStudio IDE, Add-Theme UI"></p>
+<section class="level2"><h2 id="lightbox-gallery">Lightbox Gallery<a class="anchor" aria-label="anchor" href="#lightbox-gallery"></a>
 </h2>
-<p>Gallery created with <a href="https://trvswgnr.github.io/bs5-lightbox/" class="external-link">Lightbox for Bootstrap 5</a>. Click the images to enlarge.</p>
-<!--- Work with pkgdown --->
-<style>
-.lightbox-caption em{
-  font-style: normal;
-  font-size: 300%;
-  font-weight: 800;
-  font-family: 'Inter Tight';
-  text-shadow: 0 0 10px black;
-  color: white;
-}
-.lightbox-caption {
-  position: absolute !important;
-  top: 20%;
-  right: 0;
-  left: 0;
-  z-index: 1;
-  opacity:0.2;
-}
-.like_h {
-  text-shadow: 0 0 8px black;
-  opacity: 0.7;
-  color: white;
-}
-</style>
+<p>Click the images to enlarge.</p>
+<p><a href="screenshots/ayudark.png" class="lightbox" data-gallery="my-gallery" data-glightbox="description: .lightbox-desc-1;"><img src="screenshots/ayudark.png"></a></p>
+<p><a href="screenshots/synthwave84.png" class="lightbox" data-gallery="my-gallery" data-glightbox="description: .lightbox-desc-2;"><img src="screenshots/synthwave84.png"></a></p>
 <div class="row row-cols-1 row-cols-md-2 g-1">
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/ayudark.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/ayudark.png" data-caption="ayu Dark">
+<a href="screenshots/ayudark.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-3;"><img src="screenshots/ayudark.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 ayu Dark
 </h5>
@@ -142,7 +123,8 @@ ayu Dark
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/ayulight.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/ayulight.png" data-caption="ayu Light">
+<a href="screenshots/ayulight.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-4;"><img src="screenshots/ayulight.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 ayu Light
 </h5>
@@ -151,7 +133,8 @@ ayu Light
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/catppuccinlatte.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/catppuccinlatte.png" data-caption="Catppuccin Latte">
+<a href="screenshots/catppuccinlatte.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-5;"><img src="screenshots/catppuccinlatte.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Catppuccin Latte
 </h5>
@@ -160,7 +143,8 @@ Catppuccin Latte
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/catppuccinmocha.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/catppuccinmocha.png" data-caption="Catppuccin Mocha">
+<a href="screenshots/catppuccinmocha.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-6;"><img src="screenshots/catppuccinmocha.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Catppuccin Mocha
 </h5>
@@ -169,7 +153,8 @@ Catppuccin Mocha
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/cobalt2.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/cobalt2.png" data-caption="cobalt2">
+<a href="screenshots/cobalt2.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-7;"><img src="screenshots/cobalt2.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 cobalt2
 </h5>
@@ -178,7 +163,8 @@ cobalt2
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/cran.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/cran.png" data-caption="CRAN">
+<a href="screenshots/cran.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-8;"><img src="screenshots/cran.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 CRAN
 </h5>
@@ -187,7 +173,8 @@ CRAN
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/dracula2025.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/dracula2025.png" data-caption="Dracula2025">
+<a href="screenshots/dracula2025.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-9;"><img src="screenshots/dracula2025.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Dracula2025
 </h5>
@@ -196,7 +183,8 @@ Dracula2025
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/githubdark.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/githubdark.png" data-caption="GitHub Dark">
+<a href="screenshots/githubdark.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-10;"><img src="screenshots/githubdark.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 GitHub Dark
 </h5>
@@ -205,7 +193,8 @@ GitHub Dark
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/githublight.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/githublight.png" data-caption="GitHub Light">
+<a href="screenshots/githublight.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-11;"><img src="screenshots/githublight.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 GitHub Light
 </h5>
@@ -214,7 +203,8 @@ GitHub Light
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/jellyfishtheme.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/jellyfishtheme.png" data-caption="JellyFish Theme">
+<a href="screenshots/jellyfishtheme.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-12;"><img src="screenshots/jellyfishtheme.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 JellyFish Theme
 </h5>
@@ -223,7 +213,8 @@ JellyFish Theme
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/matcha.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/matcha.png" data-caption="Matcha">
+<a href="screenshots/matcha.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-13;"><img src="screenshots/matcha.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Matcha
 </h5>
@@ -232,7 +223,8 @@ Matcha
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/matrix.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/matrix.png" data-caption="Matrix">
+<a href="screenshots/matrix.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-14;"><img src="screenshots/matrix.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Matrix
 </h5>
@@ -241,7 +233,8 @@ Matrix
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/nightowl.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/nightowl.png" data-caption="Night Owl">
+<a href="screenshots/nightowl.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-15;"><img src="screenshots/nightowl.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Night Owl
 </h5>
@@ -250,7 +243,8 @@ Night Owl
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/nightowllight.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/nightowllight.png" data-caption="Night Owl Light">
+<a href="screenshots/nightowllight.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-16;"><img src="screenshots/nightowllight.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Night Owl Light
 </h5>
@@ -259,7 +253,8 @@ Night Owl Light
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/nord.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/nord.png" data-caption="Nord">
+<a href="screenshots/nord.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-17;"><img src="screenshots/nord.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Nord
 </h5>
@@ -268,7 +263,8 @@ Nord
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/oksolardark.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/oksolardark.png" data-caption="OKSolar Dark">
+<a href="screenshots/oksolardark.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-18;"><img src="screenshots/oksolardark.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 OKSolar Dark
 </h5>
@@ -277,7 +273,8 @@ OKSolar Dark
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/oksolarlight.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/oksolarlight.png" data-caption="OKSolar Light">
+<a href="screenshots/oksolarlight.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-19;"><img src="screenshots/oksolarlight.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 OKSolar Light
 </h5>
@@ -286,7 +283,8 @@ OKSolar Light
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/oksolarsky.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/oksolarsky.png" data-caption="OKSolar Sky">
+<a href="screenshots/oksolarsky.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-20;"><img src="screenshots/oksolarsky.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 OKSolar Sky
 </h5>
@@ -295,7 +293,8 @@ OKSolar Sky
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/overflowdark.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/overflowdark.png" data-caption="Overflow Dark">
+<a href="screenshots/overflowdark.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-21;"><img src="screenshots/overflowdark.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Overflow Dark
 </h5>
@@ -304,7 +303,8 @@ Overflow Dark
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/overflowlight.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/overflowlight.png" data-caption="Overflow Light">
+<a href="screenshots/overflowlight.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-22;"><img src="screenshots/overflowlight.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Overflow Light
 </h5>
@@ -313,7 +313,8 @@ Overflow Light
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/pandasyntax.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/pandasyntax.png" data-caption="Panda Syntax">
+<a href="screenshots/pandasyntax.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-23;"><img src="screenshots/pandasyntax.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Panda Syntax
 </h5>
@@ -322,7 +323,8 @@ Panda Syntax
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/selenizeddark.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/selenizeddark.png" data-caption="Selenized Dark">
+<a href="screenshots/selenizeddark.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-24;"><img src="screenshots/selenizeddark.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Selenized Dark
 </h5>
@@ -331,7 +333,8 @@ Selenized Dark
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/selenizedlight.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/selenizedlight.png" data-caption="Selenized Light">
+<a href="screenshots/selenizedlight.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-25;"><img src="screenshots/selenizedlight.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Selenized Light
 </h5>
@@ -340,7 +343,8 @@ Selenized Light
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/skeletorsyntax.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/skeletorsyntax.png" data-caption="Skeletor Syntax">
+<a href="screenshots/skeletorsyntax.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-26;"><img src="screenshots/skeletorsyntax.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Skeletor Syntax
 </h5>
@@ -349,7 +353,8 @@ Skeletor Syntax
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/synthwave84.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/synthwave84.png" data-caption="SynthWave 84">
+<a href="screenshots/synthwave84.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-27;"><img src="screenshots/synthwave84.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 SynthWave 84
 </h5>
@@ -358,7 +363,8 @@ SynthWave 84
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/tokyonightlight.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/tokyonightlight.png" data-caption="Tokyo Night Light">
+<a href="screenshots/tokyonightlight.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-28;"><img src="screenshots/tokyonightlight.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Tokyo Night Light
 </h5>
@@ -367,7 +373,8 @@ Tokyo Night Light
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/tokyonightstorm.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/tokyonightstorm.png" data-caption="Tokyo Night Storm">
+<a href="screenshots/tokyonightstorm.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-29;"><img src="screenshots/tokyonightstorm.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Tokyo Night Storm
 </h5>
@@ -376,7 +383,8 @@ Tokyo Night Storm
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/tokyonight.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/tokyonight.png" data-caption="Tokyo Night">
+<a href="screenshots/tokyonight.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-30;"><img src="screenshots/tokyonight.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Tokyo Night
 </h5>
@@ -385,7 +393,8 @@ Tokyo Night
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/winteriscomingdarkblue.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/winteriscomingdarkblue.png" data-caption="Winter is Coming Dark Blue">
+<a href="screenshots/winteriscomingdarkblue.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-31;"><img src="screenshots/winteriscomingdarkblue.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Winter is Coming Dark Blue
 </h5>
@@ -394,7 +403,8 @@ Winter is Coming Dark Blue
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<img src="screenshots/winteriscominglight.png" class="card-img" alt=""><div class="card-img-overlay" data-toggle="lightbox" data-gallery="rstudiothemes" data-src="https://dieghernan.github.io/rstudiothemes/articles//screenshots/winteriscominglight.png" data-caption="Winter is Coming Light">
+<a href="screenshots/winteriscominglight.png" class="lightbox" data-gallery="rstudiothemes" data-glightbox="description: .lightbox-desc-32;"><img src="screenshots/winteriscominglight.png" class="card-img"></a>
+<div class="not-card-img-overlay">
 <h5 class="like_h">
 Winter is Coming Light
 </h5>
@@ -402,7 +412,105 @@ Winter is Coming Light
 </div>
 </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.5/dist/index.bundle.min.js"></script></section><script id="quarto-html-after-body" type="application/javascript">
+<div class="hidden" aria-hidden="true">
+<div class="glightbox-desc lightbox-desc-1">
+<p>ally-dark</p>
+</div>
+<div class="glightbox-desc lightbox-desc-2">
+<p>Trying alt</p>
+</div>
+<div class="glightbox-desc lightbox-desc-3">
+<p>ayu Dark</p>
+</div>
+<div class="glightbox-desc lightbox-desc-4">
+<p>ayu Light</p>
+</div>
+<div class="glightbox-desc lightbox-desc-5">
+<p>Catppuccin Latte</p>
+</div>
+<div class="glightbox-desc lightbox-desc-6">
+<p>Catppuccin Mocha</p>
+</div>
+<div class="glightbox-desc lightbox-desc-7">
+<p>cobalt2</p>
+</div>
+<div class="glightbox-desc lightbox-desc-8">
+<p>CRAN</p>
+</div>
+<div class="glightbox-desc lightbox-desc-9">
+<p>Dracula2025</p>
+</div>
+<div class="glightbox-desc lightbox-desc-10">
+<p>GitHub Dark</p>
+</div>
+<div class="glightbox-desc lightbox-desc-11">
+<p>GitHub Light</p>
+</div>
+<div class="glightbox-desc lightbox-desc-12">
+<p>JellyFish Theme</p>
+</div>
+<div class="glightbox-desc lightbox-desc-13">
+<p>Matcha</p>
+</div>
+<div class="glightbox-desc lightbox-desc-14">
+<p>Matrix</p>
+</div>
+<div class="glightbox-desc lightbox-desc-15">
+<p>Night Owl</p>
+</div>
+<div class="glightbox-desc lightbox-desc-16">
+<p>Night Owl Light</p>
+</div>
+<div class="glightbox-desc lightbox-desc-17">
+<p>Nord</p>
+</div>
+<div class="glightbox-desc lightbox-desc-18">
+<p>OKSolar Dark</p>
+</div>
+<div class="glightbox-desc lightbox-desc-19">
+<p>OKSolar Light</p>
+</div>
+<div class="glightbox-desc lightbox-desc-20">
+<p>OKSolar Sky</p>
+</div>
+<div class="glightbox-desc lightbox-desc-21">
+<p>Overflow Dark</p>
+</div>
+<div class="glightbox-desc lightbox-desc-22">
+<p>Overflow Light</p>
+</div>
+<div class="glightbox-desc lightbox-desc-23">
+<p>Panda Syntax</p>
+</div>
+<div class="glightbox-desc lightbox-desc-24">
+<p>Selenized Dark</p>
+</div>
+<div class="glightbox-desc lightbox-desc-25">
+<p>Selenized Light</p>
+</div>
+<div class="glightbox-desc lightbox-desc-26">
+<p>Skeletor Syntax</p>
+</div>
+<div class="glightbox-desc lightbox-desc-27">
+<p>SynthWave 84</p>
+</div>
+<div class="glightbox-desc lightbox-desc-28">
+<p>Tokyo Night Light</p>
+</div>
+<div class="glightbox-desc lightbox-desc-29">
+<p>Tokyo Night Storm</p>
+</div>
+<div class="glightbox-desc lightbox-desc-30">
+<p>Tokyo Night</p>
+</div>
+<div class="glightbox-desc lightbox-desc-31">
+<p>Winter is Coming Dark Blue</p>
+</div>
+<div class="glightbox-desc lightbox-desc-32">
+<p>Winter is Coming Light</p>
+</div>
+</div>
+</section><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -485,7 +593,38 @@ Winter is Coming Light
       }
     }
   });
-  </script></main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+  </script><script>var lightboxQuarto = GLightbox({"closeEffect":"fade","descPosition":"top","loop":false,"openEffect":"fade","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      }
+    });
+
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+
+  };
+
+})();
+          </script></main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
 </div>
 
