@@ -1,10 +1,39 @@
 ---
 title: "Showcase"
 description: A preview of out built-in themes
-lightbox: 
+lightbox:
   match: auto
   desc-position: top
   effect: fade
+format:
+  html:
+    include-before-body:
+      text: |
+        <style>
+          .gslide-description p,
+          div.gslide-description .gslide-desc,
+          .gslide-desc {
+            font-size: 300%;
+            font-weight: 800;
+            font-family: 'Inter Tight';
+            text-shadow: 0 0 10px black;
+            color: white !important;
+            text-align:center;
+            opacity: 0.75;
+          }
+
+          .glightbox-mobile .glightbox-container .gslide-description,
+          .glightbox-mobile .glightbox-container .gslide-desc {
+            font-size: 1.25rem;
+          }
+
+          .like_h {
+            text-shadow: 0 0 8px black;
+            opacity: 0.7;
+            color: white;
+            font-size: 1.25rem;
+          }
+        </style>
 knitr:
   opts_chunk:
     collapse: true
@@ -34,12 +63,16 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 ```{r}
 #| label: style
 #| echo: false
+#| eval: false
 #| output: asis
 
 cat("
 <style>
-.gslide-description p {
-  font-size: 400%;
+
+.gslide-description p,
+div.gslide-description .gslide-desc,
+.gslide-desc {
+  font-size: 300%;
   font-weight: 800;
   font-family: 'Inter Tight';
   text-shadow: 0 0 10px black;
@@ -47,15 +80,19 @@ cat("
   text-align:center;
   opacity: 0.75;
 }
-.glightbox-mobile .glightbox-container .gslide-description {
-  font-size: 50%;
+
+.glightbox-mobile .glightbox-container .gslide-description,
+.glightbox-mobile .glightbox-container .gslide-desc {
+  font-size: 1.25rem;
 }
+
 .like_h {
   text-shadow: 0 0 8px black;
   opacity: 0.7;
   color: white;
   font-size: 1.25rem;
 }
+
 </style>
 ")
 ```
