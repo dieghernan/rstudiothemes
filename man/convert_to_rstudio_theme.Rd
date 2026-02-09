@@ -2,7 +2,7 @@
 % Please edit documentation in R/convert-to-rs.R
 \name{convert_to_rstudio_theme}
 \alias{convert_to_rstudio_theme}
-\title{Convert a TextMate or VS Code theme to an RStudio theme}
+\title{Convert a TextMate or VS Code/Positron theme to an RStudio theme}
 \usage{
 convert_to_rstudio_theme(
   path,

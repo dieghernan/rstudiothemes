@@ -192,8 +192,8 @@
     },
     "SystemRequirements": null
   },
-  "keywords": ["r-package", "rstudio-themes", "textmate-themes", "vscode-themes"],
-  "fileSize": "1967.934KB",
+  "keywords": ["r-package", "rstudio-themes", "textmate-themes", "vscode-themes", "positron-themes"],
+  "fileSize": "1966.546KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",

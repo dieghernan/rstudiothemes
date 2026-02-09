@@ -2,7 +2,7 @@
 % Please edit documentation in R/convert-vs-to-tm.R
 \name{convert_vs_to_tm_theme}
 \alias{convert_vs_to_tm_theme}
-\title{Convert a Visual Studio Code theme into a TextMate theme}
+\title{Convert a Visual Studio Code/Positron theme into a TextMate theme}
 \usage{
 convert_vs_to_tm_theme(
   path,
@@ -12,7 +12,8 @@ convert_vs_to_tm_theme(
 )
 }
 \arguments{
-\item{path}{Path or URL to a Visual Studio Code theme, in \code{.json} format.}
+\item{path}{Path or URL to a Visual Studio Code/Positron theme, in \code{.json}
+format.}
 
 \item{outfile}{Path where the resulting file will be written. By default
 a temporary file (\code{\link[=tempfile]{tempfile()}}).}
@@ -28,8 +29,8 @@ This function is called for its side effects: it writes a \code{.tmTheme}
 file to \code{outfile} and returns the path.
 }
 \description{
-Read a \code{.json} file representing a Visual Studio Code theme and write
-the equivalent TextMate theme (\code{.tmTheme}).
+Read a \code{.json} file representing a Visual Studio Code/Positron theme and
+write the equivalent TextMate theme (\code{.tmTheme}).
 }
 \examples{
 

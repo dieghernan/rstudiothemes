@@ -2,7 +2,7 @@
 % Please edit documentation in R/convert-tm-to-vs.R
 \name{convert_tm_to_vs_theme}
 \alias{convert_tm_to_vs_theme}
-\title{Convert a TextMate theme into a Visual Studio Code theme}
+\title{Convert a TextMate theme into a Visual Studio Code/Positron theme}
 \usage{
 convert_tm_to_vs_theme(
   path,

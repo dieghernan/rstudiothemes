@@ -14,8 +14,8 @@ template:
       creator: "@dhernangomez"
       card: summary_large_image
 
-development:
-  mode: auto
+# development:
+#   mode: auto
 
 repo:
   branch: main
@@ -45,8 +45,8 @@ navbar:
 
 home:
   title: >
-    rstudiothemes | Create RStudio themes from Visual Studio Code and TextMate
-    themes
+    rstudiothemes | Create RStudio themes from Visual Studio Code/Positron and
+    TextMate themes
 
 reference:
 - title: Create themes

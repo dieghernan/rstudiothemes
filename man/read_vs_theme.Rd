@@ -2,18 +2,19 @@
 % Please edit documentation in R/read-vs-theme.R
 \name{read_vs_theme}
 \alias{read_vs_theme}
-\title{Read and parse a Visual Studio Code theme}
+\title{Read and parse a Visual Studio Code/Positron theme}
 \usage{
 read_vs_theme(path)
 }
 \arguments{
-\item{path}{Path or URL to a Visual Studio Code theme, in \code{.json} format.}
+\item{path}{Path or URL to a Visual Studio Code/Positron theme, in \code{.json}
+format.}
 }
 \value{
 A \link[tibble:tbl_df-class]{tibble} with the data of the theme.
 }
 \description{
-Read a \code{.json} file representing a Visual Studio Code theme.
+Read a \code{.json} file representing a Visual Studio Code/Positron theme.
 }
 \examples{
 

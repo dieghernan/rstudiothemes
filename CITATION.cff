@@ -47,6 +47,7 @@ keywords:
 - rstudio-themes
 - textmate-themes
 - vscode-themes
+- positron-themes
 references:
 - type: software
   title: 'R: A Language and Environment for Statistical Computing'
