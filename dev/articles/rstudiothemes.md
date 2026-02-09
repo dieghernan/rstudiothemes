@@ -27,7 +27,6 @@ Coming, Dracula, etc.) to your RStudio themes directory.
 To see themes available now:
 
 ``` r
-
 list_rstudiothemes(list_installed = FALSE)
 #>  [1] "ayu Dark"                   "ayu Light"                 
 #>  [3] "Catppuccin Latte"           "Catppuccin Mocha"          
