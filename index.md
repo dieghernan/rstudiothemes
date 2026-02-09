@@ -57,8 +57,8 @@ rstudiothemes::list_rstudiothemes(list_installed = FALSE)
 #> [19] "Overflow Dark"              "Overflow Light"            
 #> [21] "Panda Syntax"               "Selenized Dark"            
 #> [23] "Selenized Light"            "Skeletor Syntax"           
-#> [25] "SynthWave 84"               "Tokyo Night Light"         
-#> [27] "Tokyo Night Storm"          "Tokyo Night"               
+#> [25] "SynthWave 84"               "Tokyo Night"               
+#> [27] "Tokyo Night Light"          "Tokyo Night Storm"         
 #> [29] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
 
@@ -101,14 +101,18 @@ RStudio format. Here’s how:
     function to convert and install it:
 
 ``` r
-rstudiothemes::convert_to_rstudio_theme("<path/to/file>", apply = TRUE, force = TRUE)
+rstudiothemes::convert_to_rstudio_theme(
+  "<path/to/file>",
+  apply = TRUE,
+  force = TRUE
+)
 ```
 
 Alternatively, install the `.rstheme` file via the RStudio UI:
 
 **Tools \> Global Options \> Appearance \> Add**
 
-![RStudio IDE, Add-Theme UI](reference/figures/rstudiogui.png)
+![](reference/figures/rstudiogui.png)
 
 ### Bidirectional conversion Visual Studio Code/Positron - TextMate
 
