@@ -13,7 +13,7 @@ format:
           .gslide-description p,
           div.gslide-description .gslide-desc,
           .gslide-desc {
-            font-size: 300%;
+            font-size: 150%;
             font-weight: 800;
             font-family: 'Inter Tight';
             text-shadow: 0 0 10px black;
@@ -60,48 +60,9 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 ![](rstudiogui.png){.nolightbox fig-alt="RStudio IDE, Add-Theme UI" width="80%"}
 
-```{r}
-#| label: style
-#| echo: false
-#| eval: false
-#| output: asis
-
-cat("
-<style>
-
-.gslide-description p,
-div.gslide-description .gslide-desc,
-.gslide-desc {
-  font-size: 300%;
-  font-weight: 800;
-  font-family: 'Inter Tight';
-  text-shadow: 0 0 10px black;
-  color: white !important;
-  text-align:center;
-  opacity: 0.75;
-}
-
-.glightbox-mobile .glightbox-container .gslide-description,
-.glightbox-mobile .glightbox-container .gslide-desc {
-  font-size: 1.25rem;
-}
-
-.like_h {
-  text-shadow: 0 0 8px black;
-  opacity: 0.7;
-  color: white;
-  font-size: 1.25rem;
-}
-
-</style>
-")
-```
-
-
 ## Lightbox Gallery
 
 Click the images to enlarge.
-
 
 ```{r}
 #| label: setup
