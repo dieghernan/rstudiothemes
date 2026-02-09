@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# rstudiothemes <a href="https://dieghernan.github.io/rstudiothemes/"><img src="man/figures/logo.png" align="right" height="139"/></a>
+# rstudiothemes <a href="https://dieghernan.github.io/rstudiothemes/"><img src="man/figures/logo.png" alt="rstudiothemes website" align="right" height="139"/></a>
 
 <!-- badges: start -->
 
@@ -111,14 +111,18 @@ format. Here's how:
 2.  Use the `convert_to_rstudio_theme()` function to convert and install it:
 
 ```{r, eval=FALSE}
-rstudiothemes::convert_to_rstudio_theme("<path/to/file>", apply = TRUE, force = TRUE)
+rstudiothemes::convert_to_rstudio_theme(
+  "<path/to/file>",
+  apply = TRUE,
+  force = TRUE
+)
 ```
 
 Alternatively, install the `.rstheme` file via the RStudio UI:
 
 **Tools \> Global Options \> Appearance \> Add**
 
-![](man/figures/rstudiogui.png){alt="RStudio IDE, Add-Theme UI" width="80%"}
+![](man/figures/rstudiogui.png){fig-alt="RStudio IDE, Add-Theme UI" width="80%"}
 
 ### Bidirectional conversion Visual Studio Code/Positron - TextMate
 

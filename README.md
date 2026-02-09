@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# rstudiothemes <a href="https://dieghernan.github.io/rstudiothemes/"><img src="man/figures/logo.png" align="right" height="139"/></a>
+# rstudiothemes <a href="https://dieghernan.github.io/rstudiothemes/"><img src="man/figures/logo.png" alt="rstudiothemes website" align="right" height="139"/></a>
 
 <!-- badges: start -->
 
@@ -74,8 +74,8 @@ rstudiothemes::list_rstudiothemes(list_installed = FALSE)
 #> [19] "Overflow Dark"              "Overflow Light"            
 #> [21] "Panda Syntax"               "Selenized Dark"            
 #> [23] "Selenized Light"            "Skeletor Syntax"           
-#> [25] "SynthWave 84"               "Tokyo Night Light"         
-#> [27] "Tokyo Night Storm"          "Tokyo Night"               
+#> [25] "SynthWave 84"               "Tokyo Night"               
+#> [27] "Tokyo Night Light"          "Tokyo Night Storm"         
 #> [29] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
 
@@ -117,7 +117,11 @@ RStudio format. Here’s how:
     it:
 
 ``` r
-rstudiothemes::convert_to_rstudio_theme("<path/to/file>", apply = TRUE, force = TRUE)
+rstudiothemes::convert_to_rstudio_theme(
+  "<path/to/file>",
+  apply = TRUE,
+  force = TRUE
+)
 ```
 
 Alternatively, install the `.rstheme` file via the RStudio UI:
@@ -125,7 +129,7 @@ Alternatively, install the `.rstheme` file via the RStudio UI:
 **Tools \> Global Options \> Appearance \> Add**
 
 <img src="man/figures/rstudiogui.png" style="width:80.0%"
-alt="RStudio IDE, Add-Theme UI" />
+data-fig-alt="RStudio IDE, Add-Theme UI" />
 
 ### Bidirectional conversion Visual Studio Code/Positron - TextMate
 

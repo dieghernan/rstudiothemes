@@ -39,3 +39,5 @@
 ^\.vscode$
 ^\.covrignore$
 ^vignettes/*_files$
+^README\.qmd$
+^inst/README\.qmd$
