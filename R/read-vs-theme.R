@@ -1,9 +1,10 @@
-#' Read and parse a Visual Studio Code theme
+#' Read and parse a Visual Studio Code/Positron theme
 #'
 #' @description
-#' Read a `.json` file representing a Visual Studio Code theme.
+#' Read a `.json` file representing a Visual Studio Code/Positron theme.
 #'
-#' @param path Path or URL to a Visual Studio Code theme, in `.json` format.
+#' @param path Path or URL to a Visual Studio Code/Positron theme, in `.json`
+#'   format.
 #'
 #' @inherit read_tm_theme return
 #'

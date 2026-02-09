@@ -1,4 +1,4 @@
-#' Convert a TextMate or VS Code theme to an RStudio theme
+#' Convert a TextMate or VS Code/Positron theme to an RStudio theme
 #'
 #' @description
 #' Read a `.tmTheme` or `.json` file that defines a TextMate or Visual

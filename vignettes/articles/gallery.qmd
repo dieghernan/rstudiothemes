@@ -1,6 +1,10 @@
 ---
 title: "Showcase"
 description: A preview of out built-in themes
+lightbox: 
+  match: auto
+  desc-position: top
+  effect: fade
 knitr:
   opts_chunk:
     collapse: true
@@ -25,47 +29,42 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 **Tools \> Global Options \> Appearance \> Add**
 
-![](rstudiogui.png){alt="RStudio IDE, Add-Theme UI" width="80%"}
-
-## Gallery
-
-Gallery created with [Lightbox for Bootstrap
-5](https://trvswgnr.github.io/bs5-lightbox/). Click the images to enlarge.
-
-<!--- Work with pkgdown --->
+![](rstudiogui.png){.nolightbox fig-alt="RStudio IDE, Add-Theme UI" width="80%"}
 
 ```{r}
 #| label: style
 #| echo: false
 #| output: asis
 
-cat("<style>
-.lightbox-caption em{
-  font-style: normal;
-  font-size: 300%;
+cat("
+<style>
+.gslide-description p {
+  font-size: 400%;
   font-weight: 800;
   font-family: 'Inter Tight';
   text-shadow: 0 0 10px black;
-  color: white;
+  color: white !important;
+  text-align:center;
+  opacity: 0.75;
 }
-.lightbox-caption {
-  position: absolute !important;
-  top: 20%;
-  right: 0;
-  left: 0;
-  z-index: 1;
-  opacity:0.35;
+.glightbox-mobile .glightbox-container .gslide-description {
+  font-size: 50%;
 }
 .like_h {
   text-shadow: 0 0 8px black;
   opacity: 0.7;
   color: white;
+  font-size: 1.25rem;
 }
 </style>
 ")
-
-
 ```
+
+
+## Lightbox Gallery
+
+Click the images to enlarge.
+
 
 ```{r}
 #| label: setup
@@ -94,17 +93,12 @@ th_url <- file.path(
 for (i in seq_along(themes)) {
   cat("<div class=\"col\">")
   cat("<div class=\"card bg-dark text-white\">")
-  cat(c(paste0(
-    "<img src=\"", pths[i], "\" class=\"card-img\" alt=\"\">"
-  )), sep = "\n")
-
-  cat(
-    paste0(
-      "<div class=\"card-img-overlay\" data-toggle=\"lightbox\" ",
-      "data-gallery=\"rstudiothemes\" data-src=\"",
-      th_url[i], "\" data-caption=\"", themes[i], "\" >"
-    )
-  )
+  cat(paste0(
+    "![](", pths[i], "){ .lightbox .card-img ",
+    "group=\"rstudiothemes\" description=\"",
+    themes[i], "\" }"
+  ))
+  cat("<div class=\"card-img-overlay bottom-100\">")
   cat(c(paste0("<h5 class=\"like_h\">", themes[i], "</h5>")))
   cat("</div>")
   cat("</div>")
@@ -112,13 +106,3 @@ for (i in seq_along(themes)) {
 }
 ```
 :::
-
-```{r}
-#| label: script
-#| echo: false
-#| output: asis
-
-cat("<script
-src=\"https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.5/dist/index.bundle.min.js\"
-></script>")
-```
