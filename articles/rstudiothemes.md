@@ -1,9 +1,9 @@
 # Get started with rstudiothemes
 
 The **rstudiothemes** package provides tools to convert **Visual Studio
-Code** and **TextMate** themes into RStudio’s `.rstheme` format and
-install them in your RStudio IDE. It also includes a set of ready-to-use
-themes.
+Code/Positron** and **TextMate** themes into RStudio’s `.rstheme` format
+and install them in your RStudio IDE. It also includes a set of
+ready-to-use themes.
 
 ``` r
 library(rstudiothemes)
@@ -27,7 +27,6 @@ Coming, Dracula, etc.) to your RStudio themes directory.
 To see themes available now:
 
 ``` r
-
 list_rstudiothemes(list_installed = FALSE)
 #>  [1] "ayu Dark"                   "ayu Light"                 
 #>  [3] "Catppuccin Latte"           "Catppuccin Mocha"          
@@ -66,12 +65,13 @@ rstudioapi::applyTheme("Winter is Coming Dark Blue")
 
 ![Screenshot of theme Winter is Coming Dark Blue](winteriscoming.png)
 
-Alternatively, go to **Tools \> Global Options \> Appearance** in
+Alternatively, go to **Tools \> Global Options \> Appearance \> Add** in
 RStudio and select the installed theme.
 
 ## Converting Your Own Themes
 
-You can convert a VS Code or TextMate theme file into an RStudio theme:
+You can convert a Visual Studio Code/Positron or TextMate theme file
+into an RStudio theme:
 
 ``` r
 convert_to_rstudio_theme(

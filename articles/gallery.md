@@ -17,128 +17,186 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 ![RStudio IDE, Add-Theme UI](rstudiogui.png)
 
-## Gallery
+## Lightbox Gallery
 
-Gallery created with [Lightbox for Bootstrap
-5](https://trvswgnr.github.io/bs5-lightbox/). Click the images to
-enlarge.
+Click the images to enlarge.
 
-![](screenshots/ayudark.png)
+[![](screenshots/ayudark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/ayudark.png)
 
 ##### ayu Dark
 
-![](screenshots/ayulight.png)
+[![](screenshots/ayulight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/ayulight.png)
 
 ##### ayu Light
 
-![](screenshots/catppuccinlatte.png)
+[![](screenshots/catppuccinlatte.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/catppuccinlatte.png)
 
 ##### Catppuccin Latte
 
-![](screenshots/catppuccinmocha.png)
+[![](screenshots/catppuccinmocha.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/catppuccinmocha.png)
 
 ##### Catppuccin Mocha
 
-![](screenshots/cobalt2.png)
+[![](screenshots/cobalt2.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/cobalt2.png)
 
 ##### cobalt2
 
-![](screenshots/cran.png)
+[![](screenshots/cran.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/cran.png)
 
 ##### CRAN
 
-![](screenshots/dracula2025.png)
+[![](screenshots/dracula2025.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/dracula2025.png)
 
 ##### Dracula2025
 
-![](screenshots/githubdark.png)
+[![](screenshots/githubdark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/githubdark.png)
 
 ##### GitHub Dark
 
-![](screenshots/githublight.png)
+[![](screenshots/githublight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/githublight.png)
 
 ##### GitHub Light
 
-![](screenshots/jellyfishtheme.png)
+[![](screenshots/jellyfishtheme.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/jellyfishtheme.png)
 
 ##### JellyFish Theme
 
-![](screenshots/matcha.png)
+[![](screenshots/matcha.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/matcha.png)
 
 ##### Matcha
 
-![](screenshots/matrix.png)
+[![](screenshots/matrix.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/matrix.png)
 
 ##### Matrix
 
-![](screenshots/nightowl.png)
+[![](screenshots/nightowl.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/nightowl.png)
 
 ##### Night Owl
 
-![](screenshots/nightowllight.png)
+[![](screenshots/nightowllight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/nightowllight.png)
 
 ##### Night Owl Light
 
-![](screenshots/nord.png)
+[![](screenshots/nord.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/nord.png)
 
 ##### Nord
 
-![](screenshots/oksolardark.png)
+[![](screenshots/oksolardark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/oksolardark.png)
 
 ##### OKSolar Dark
 
-![](screenshots/oksolarlight.png)
+[![](screenshots/oksolarlight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/oksolarlight.png)
 
 ##### OKSolar Light
 
-![](screenshots/oksolarsky.png)
+[![](screenshots/oksolarsky.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/oksolarsky.png)
 
 ##### OKSolar Sky
 
-![](screenshots/overflowdark.png)
+[![](screenshots/overflowdark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/overflowdark.png)
 
 ##### Overflow Dark
 
-![](screenshots/overflowlight.png)
+[![](screenshots/overflowlight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/overflowlight.png)
 
 ##### Overflow Light
 
-![](screenshots/pandasyntax.png)
+[![](screenshots/pandasyntax.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/pandasyntax.png)
 
 ##### Panda Syntax
 
-![](screenshots/selenizeddark.png)
+[![](screenshots/selenizeddark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/selenizeddark.png)
 
 ##### Selenized Dark
 
-![](screenshots/selenizedlight.png)
+[![](screenshots/selenizedlight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/selenizedlight.png)
 
 ##### Selenized Light
 
-![](screenshots/skeletorsyntax.png)
+[![](screenshots/skeletorsyntax.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/skeletorsyntax.png)
 
 ##### Skeletor Syntax
 
-![](screenshots/synthwave84.png)
+[![](screenshots/synthwave84.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/synthwave84.png)
 
 ##### SynthWave 84
 
-![](screenshots/tokyonightlight.png)
+[![](screenshots/tokyonightlight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/tokyonightlight.png)
 
 ##### Tokyo Night Light
 
-![](screenshots/tokyonightstorm.png)
+[![](screenshots/tokyonightstorm.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/tokyonightstorm.png)
 
 ##### Tokyo Night Storm
 
-![](screenshots/tokyonight.png)
+[![](screenshots/tokyonight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/tokyonight.png)
 
 ##### Tokyo Night
 
-![](screenshots/winteriscomingdarkblue.png)
+[![](screenshots/winteriscomingdarkblue.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/winteriscomingdarkblue.png)
 
 ##### Winter is Coming Dark Blue
 
-![](screenshots/winteriscominglight.png)
+[![](screenshots/winteriscominglight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/winteriscominglight.png)
 
 ##### Winter is Coming Light
+
+ayu Dark
+
+ayu Light
+
+Catppuccin Latte
+
+Catppuccin Mocha
+
+cobalt2
+
+CRAN
+
+Dracula2025
+
+GitHub Dark
+
+GitHub Light
+
+JellyFish Theme
+
+Matcha
+
+Matrix
+
+Night Owl
+
+Night Owl Light
+
+Nord
+
+OKSolar Dark
+
+OKSolar Light
+
+OKSolar Sky
+
+Overflow Dark
+
+Overflow Light
+
+Panda Syntax
+
+Selenized Dark
+
+Selenized Light
+
+Skeletor Syntax
+
+SynthWave 84
+
+Tokyo Night Light
+
+Tokyo Night Storm
+
+Tokyo Night
+
+Winter is Coming Dark Blue
+
+Winter is Coming Light

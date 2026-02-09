@@ -1,7 +1,7 @@
-# Convert a Visual Studio Code theme into a TextMate theme
+# Convert a Visual Studio Code/Positron theme into a TextMate theme
 
-Read a `.json` file representing a Visual Studio Code theme and write
-the equivalent TextMate theme (`.tmTheme`).
+Read a `.json` file representing a Visual Studio Code/Positron theme and
+write the equivalent TextMate theme (`.tmTheme`).
 
 ## Usage
 
@@ -18,7 +18,7 @@ convert_vs_to_tm_theme(
 
 - path:
 
-  Path or URL to a Visual Studio Code theme, in `.json` format.
+  Path or URL to a Visual Studio Code/Positron theme, in `.json` format.
 
 - outfile:
 
