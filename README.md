@@ -2,8 +2,7 @@
 
 <!-- README.md is generated from README.qmd. Please edit that file -->
 
-# rstudiothemes [<img src="man/figures/logo.png" alt="rstudiothemes website"
-data-align="right" height="139" />](https://dieghernan.github.io/rstudiothemes/)
+# rstudiothemes <a href="https://dieghernan.github.io/rstudiothemes"><img src="man/figures/logo.png" alt="rstudiothemes website" align="right" height="139"/></a>
 
 <!-- badges: start -->
 
