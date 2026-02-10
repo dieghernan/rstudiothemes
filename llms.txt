@@ -57,7 +57,7 @@ rstudiothemes::list_rstudiothemes(list_installed = FALSE)
 #> [19] "Overflow Dark"              "Overflow Light"            
 #> [21] "Panda Syntax"               "Selenized Dark"            
 #> [23] "Selenized Light"            "Skeletor Syntax"           
-#> [25] "SynthWave 84"               "Tokyo Night"               
+#> [25] "SynthWave 84"               "Tokio Night Dark"          
 #> [27] "Tokyo Night Light"          "Tokyo Night Storm"         
 #> [29] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
