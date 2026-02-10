@@ -41,3 +41,5 @@
 ^vignettes/*_files$
 ^README\.qmd$
 ^inst/README\.qmd$
+^README_files$
+^README\.html$

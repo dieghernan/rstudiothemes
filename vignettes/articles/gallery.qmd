@@ -70,7 +70,6 @@ library(rstudiothemes)
 themes <- sort(list_rstudiothemes(list_installed = FALSE))
 png_name <- paste0(gsub(" ", "", tolower(themes)))
 pths <- file.path("screenshots", paste0(png_name, ".png"))
-
 ```
 
 ::: {.row .row-cols-1 .row-cols-sm-2 .g-1}
@@ -98,6 +97,5 @@ for (i in seq_along(themes)) {
   cat("</div>")
   cat("</div>")
 }
-
 ```
 :::

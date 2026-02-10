@@ -368,21 +368,13 @@ dd <- convert_to_rstudio_theme(
 # Generate rstheme
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/tokyo-night-color-theme.json",
-  "inst/rsthemes/Tokio_Night.rstheme",
+  "inst/rsthemes/Tokio_Night_Dark.rstheme",
+  name = "Tokio Night Dark",
   force = TRUE,
   apply = TRUE,
   output_style = "compact"
 )
 
-
-# Generate rstheme
-dd <- convert_to_rstudio_theme(
-  "data-raw/vscode_themes/tokyo-night-light-color-theme.json",
-  "inst/rsthemes/Tokio_Night_Light.rstheme",
-  force = TRUE,
-  apply = TRUE,
-  output_style = "compact"
-)
 
 # Generate rstheme
 dd <- convert_to_rstudio_theme(

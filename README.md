@@ -1,7 +1,9 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# rstudiothemes <a href="https://dieghernan.github.io/rstudiothemes/"><img src="man/figures/logo.png" alt="rstudiothemes website" align="right" height="139"/></a>
+<!-- README.md is generated from README.qmd. Please edit that file -->
+
+# rstudiothemes [<img src="man/figures/logo.png" alt="rstudiothemes website"
+data-align="right" height="139" />](https://dieghernan.github.io/rstudiothemes/)
 
 <!-- badges: start -->
 
@@ -74,7 +76,7 @@ rstudiothemes::list_rstudiothemes(list_installed = FALSE)
 #> [19] "Overflow Dark"              "Overflow Light"            
 #> [21] "Panda Syntax"               "Selenized Dark"            
 #> [23] "Selenized Light"            "Skeletor Syntax"           
-#> [25] "SynthWave 84"               "Tokyo Night"               
+#> [25] "SynthWave 84"               "Tokio Night Dark"          
 #> [27] "Tokyo Night Light"          "Tokyo Night Storm"         
 #> [29] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
