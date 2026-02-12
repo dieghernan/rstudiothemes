@@ -55,7 +55,13 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 **Tools \> Global Options \> Appearance \> Add**
 
+::: {#fig-ui}
+
 ![](rstudiogui.png){.nolightbox fig-alt="RStudio IDE, Add-Theme UI" width="80%"}
+
+RStudio IDE, Add-Theme UI
+
+:::
 
 ## Lightbox Gallery
 
