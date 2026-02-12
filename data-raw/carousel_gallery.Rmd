@@ -2,7 +2,8 @@
 title: "Theme Gallery"
 ---
 
-```{r, include = FALSE}
+```{r}
+#| include: false
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -24,7 +25,9 @@ Showcase of bundled themes in **rstudiothemes**.
 
 </style>
 
-```{r setup, echo=FALSE}
+```{r}
+#| label: setup
+#| echo: false
 library(rstudiothemes)
 
 themes <- list_rstudiothemes(list_installed = FALSE)
@@ -37,7 +40,10 @@ pths <- file.path("screenshots", paste0(png_name, ".png"))
 <div class="container py-4">
 <!-- Dropdown -->
 
-```{r dropdown, echo=FALSE, results='asis'}
+```{r}
+#| label: dropdown
+#| echo: false
+#| results: asis
 # Create drowndown
 cat(paste0(
   "<select id=\"carouselSelector\" class=\"form-select mb-3\" ",
@@ -55,7 +61,10 @@ cat("</select>")
 
 <div class="carousel-inner">
 
-```{r create_themes, echo=FALSE, results='asis'}
+```{r}
+#| label: create_themes
+#| echo: false
+#| results: asis
 for (i in seq_along(themes)) {
   if (i == 1) {
     cat(c(paste0(
