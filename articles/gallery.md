@@ -19,7 +19,7 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 Figure 1: RStudio IDE, Add-Theme UI
 
-## Lightbox Gallery
+## Lightbox gallery
 
 Click the images to enlarge.
 
