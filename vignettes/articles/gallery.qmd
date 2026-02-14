@@ -63,7 +63,7 @@ RStudio IDE, Add-Theme UI
 
 :::
 
-## Lightbox Gallery
+## Lightbox gallery
 
 Click the images to enlarge.
 

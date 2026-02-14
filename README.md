@@ -38,7 +38,7 @@ themes in `.rstheme` format since [version
 - Organize and manage custom themes in a reproducible way.
 - Integrates with **R** tooling for easier installation and testing.
 
-## Built-in Themes
+## Built-in themes
 
 This package includes ports of several popular Visual Studio
 Code/Positron themes, ready to use in RStudio. Simply use the
