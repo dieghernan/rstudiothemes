@@ -36,7 +36,7 @@ navbar:
     - lightswitch
   components:
     gallery:
-      text: Theme Gallery
+      text: Showcase
       href: articles/gallery.html
     donate:
       icon: fa-hand-holding-dollar
