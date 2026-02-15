@@ -368,8 +368,8 @@ dd <- convert_to_rstudio_theme(
 # Generate rstheme
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/tokyo-night-color-theme.json",
-  "inst/rsthemes/Tokio_Night_Dark.rstheme",
-  name = "Tokio Night Dark",
+  "inst/rsthemes/Tokyo_Night_Dark.rstheme",
+  name = "Tokyo Night Dark",
   force = TRUE,
   apply = TRUE,
   output_style = "compact"
@@ -379,7 +379,7 @@ dd <- convert_to_rstudio_theme(
 # Generate rstheme
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/tokyo-night-light-color-theme.json",
-  "inst/rsthemes/Tokio_Night_Light.rstheme",
+  "inst/rsthemes/Tokyo_Night_Light.rstheme",
   force = TRUE,
   apply = TRUE,
   output_style = "compact"
@@ -387,7 +387,7 @@ dd <- convert_to_rstudio_theme(
 
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/tokyo-night-storm-color-theme.json",
-  "inst/rsthemes/Tokio_Night_Storm.rstheme",
+  "inst/rsthemes/Tokyo_Night_Storm.rstheme",
   force = TRUE,
   apply = TRUE,
   output_style = "compact"
