@@ -1,0 +1,25 @@
+codecov:
+  branch: main
+  bot: dieghernan-codecov
+  require_ci_to_pass: false
+
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 5
+        paths:
+        - R/
+        - tests/
+    patch:
+      default:
+        target: auto
+        threshold: 1
+ignore:
+- data-raw/
+- inst/
+- vignettes/
+
+github_checks:
+  annotations: true
