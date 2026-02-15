@@ -142,10 +142,10 @@ Syntax](screenshots/skeletorsyntax.png)](https://dieghernan.github.io/rstudiothe
 
 ##### SynthWave 84
 
-[![Tokio Night
-Dark](screenshots/tokionightdark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/tokionightdark.png)
+[![Tokyo Night
+Dark](screenshots/tokyonightdark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/tokyonightdark.png)
 
-##### Tokio Night Dark
+##### Tokyo Night Dark
 
 [![Tokyo Night
 Light](screenshots/tokyonightlight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/tokyonightlight.png)
@@ -217,7 +217,7 @@ Skeletor Syntax
 
 SynthWave 84
 
-Tokio Night Dark
+Tokyo Night Dark
 
 Tokyo Night Light
 
