@@ -1,6 +1,7 @@
 *.html
 *.R
-
 /.quarto/
 **/*.quarto_ipynb
 *_files
+_quarto.yaml
+_quarto.yml

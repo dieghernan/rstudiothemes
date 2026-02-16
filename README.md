@@ -6,8 +6,7 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/dieghernan/rstudiothemes/actions/workflows/check-full.yaml/badge.svg)](https://github.com/dieghernan/rstudiothemes/actions/workflows/check-full.yaml)
-[![R-hub](https://github.com/dieghernan/rstudiothemes/actions/workflows/rhub.yaml/badge.svg)](https://github.com/dieghernan/rstudiothemes/actions/workflows/rhub.yaml)
+[![R-CMD-check](https://github.com/dieghernan/rstudiothemes/actions/workflows/check-full.yml/badge.svg)](https://github.com/dieghernan/rstudiothemes/actions/workflows/check-full.yml)
 [![codecov](https://codecov.io/gh/dieghernan/rstudiothemes/branch/main/graph/badge.svg?token=Us9sfPntdX)](https://app.codecov.io/gh/dieghernan/rstudiothemes)
 [![CodeFactor](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes/badge?s=db1aa5e9aa335100151678939d0b23ee5cb86b71)](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes)
 [![r-universe](https://dieghernan.r-universe.dev/badges/rstudiothemes)](https://dieghernan.r-universe.dev/rstudiothemes)
