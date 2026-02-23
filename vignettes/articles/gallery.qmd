@@ -5,6 +5,7 @@ lightbox:
   match: auto
   desc-position: bottom
   effect: fade
+  loop: true
 format:
   html:
     include-before-body:
