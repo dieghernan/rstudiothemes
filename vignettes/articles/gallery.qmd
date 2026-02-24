@@ -30,6 +30,8 @@ format:
             opacity: 0.7;
             color: var(--brand-white);
             font-size: 1.25rem;
+            font-weight: 800;
+            font-family: 'Inter Tight';
           }
         </style>
 knitr:
@@ -97,7 +99,7 @@ for (i in seq_along(themes)) {
     "\" }"
   ))
   cat("<div class=\"card-img-overlay bottom-100\">")
-  cat(c(paste0("<h5 class=\"like_h\">", themes[i], "</h5>")))
+  cat(c(paste0("<p class=\"like_h\">", themes[i], "</p>")))
   cat("</div>")
   cat("</div>")
   cat("</div>")
@@ -105,21 +107,22 @@ for (i in seq_along(themes)) {
 ```
 :::
 
-### Snapshots session info
+## Screenshots notice
 
--   RStudio 2026.01.1+403 "Apple Blossom" Release for Windows.
+Previews may differ of the actual display in your device. These screenshots were
+taken under the following conditions:
 
--   Active RStudio Display setup and options:
+-   RStudio Version
 
-    -   [x] Show line numbers
-    -   [x] Show margin
-        -   Margin column: `80`.
-    -   [x] Show whitespace characters
-    -   [x] Blinking cursor
-    -   Indentation guides: `Gray lines`.
+    > RStudio 2026.01.1+403 "Apple Blossom" Release
+    > (0e924abb984501b0d66b204ea06b60fc7813275a, 2026-02-04) for windows
+    > Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 
-    **Syntax**
+-   RStudio Display settings:
 
-    -   [x] Highlight R functions calls
-    -   [x] Enable preview of named and hexadecimal colors
-    -   [ ] Use rainbow parentheses.
+::: {#fig-opts}
+![](rstudiooptions.png){.nolightbox fig-alt="RStudio Options for Screenshots"
+width="80%"}
+
+RStudio Options used for screenshots
+:::

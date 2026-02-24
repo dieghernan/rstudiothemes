@@ -12,20 +12,13 @@
 Updates on bundled RStudio themes.
 
 -   Added mapping of indent guides to rsthemes.
-
 -   `"Tokyo Night Light"`: Adjusted invisible (aka whitespaces) and ruler color.
-
 -   `"Matrix"`: Add ruler color.
-
 -   New themes
-
     -   `"Catppuccin Latte"` and `"Catppuccin Mocha"` by
         <https://catppuccin.com/>.
-
     -   `"Matcha"` by Luca Falasco.
-
     -   `"Andromeda"` by Eliver Lara.
-
     -   `"One Dark Pro"` by binaryify.
 
 # rstudiothemes 0.1.0

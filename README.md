@@ -129,8 +129,12 @@ Alternatively, install the `.rstheme` file via the RStudio UI:
 
 **Tools \> Global Options \> Appearance \> Add**
 
+<div class="text-center">
+
 <img src="man/figures/rstudiogui.png" style="width:80.0%"
 data-fig-alt="RStudio IDE, Add-Theme UI" />
+
+</div>
 
 ### Bidirectional conversion Visual Studio Code/Positron - TextMate
 
