@@ -176,31 +176,22 @@ Light](screenshots/winteriscominglight.png)](https://dieghernan.github.io/rstudi
 
 ##### Winter is Coming Light
 
-### Snapshots session info
+### Screenshots notices
 
-RStudio 2026.01.1+403 “Apple Blossom” Release for Windows.
+Previews may differ of the actual display in your device. These
+screenshots were taken under the following conditions:
 
-Active RStudio Display setup and options:
+- RStudio Version
 
-Show line numbers
+  > RStudio 2026.01.1+403 “Apple Blossom” Release
+  > (0e924abb984501b0d66b204ea06b60fc7813275a, 2026-02-04) for windows
+  > Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 
-Show margin
+- RStudio Display settings:
 
-- Margin column: `80`.
+![RStudio Options for Screenshots](rstudiooptions.png)
 
-Show whitespace characters
-
-Blinking cursor
-
-Indentation guides: `Gray lines`.
-
-**Syntax**
-
-Highlight R functions calls
-
-Enable preview of named and hexadecimal colors
-
-Use rainbow parentheses.
+Figure 2: RStudio Options used for screenshots
 
 Andromeda
 
