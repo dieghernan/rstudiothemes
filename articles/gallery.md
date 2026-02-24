@@ -176,6 +176,32 @@ Light](screenshots/winteriscominglight.png)](https://dieghernan.github.io/rstudi
 
 ##### Winter is Coming Light
 
+### Snapshots session info
+
+RStudio 2026.01.1+403 “Apple Blossom” Release for Windows.
+
+Active RStudio Display setup and options:
+
+Show line numbers
+
+Show margin
+
+- Margin column: `80`.
+
+Show whitespace characters
+
+Blinking cursor
+
+Indentation guides: `Gray lines`.
+
+**Syntax**
+
+Highlight R functions calls
+
+Enable preview of named and hexadecimal colors
+
+Use rainbow parentheses.
+
 Andromeda
 
 ayu Dark
