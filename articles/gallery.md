@@ -176,7 +176,7 @@ Light](screenshots/winteriscominglight.png)](https://dieghernan.github.io/rstudi
 
 Winter is Coming Light
 
-### Screenshots notices
+## Screenshots notice
 
 Previews may differ of the actual display in your device. These
 screenshots were taken under the following conditions:
