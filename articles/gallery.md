@@ -23,6 +23,10 @@ Figure 1: RStudio IDE, Add-Theme UI
 
 Click the images to enlarge.
 
+[![Andromeda](screenshots/andromeda.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/andromeda.png)
+
+##### Andromeda
+
 [![ayu
 Dark](screenshots/ayudark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/ayudark.png)
 
@@ -107,6 +111,11 @@ Sky](screenshots/oksolarsky.png)](https://dieghernan.github.io/rstudiothemes/art
 
 ##### OKSolar Sky
 
+[![One Dark
+Pro](screenshots/onedarkpro.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/onedarkpro.png)
+
+##### One Dark Pro
+
 [![Overflow
 Dark](screenshots/overflowdark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/overflowdark.png)
 
@@ -167,6 +176,8 @@ Light](screenshots/winteriscominglight.png)](https://dieghernan.github.io/rstudi
 
 ##### Winter is Coming Light
 
+Andromeda
+
 ayu Dark
 
 ayu Light
@@ -202,6 +213,8 @@ OKSolar Dark
 OKSolar Light
 
 OKSolar Sky
+
+One Dark Pro
 
 Overflow Dark
 

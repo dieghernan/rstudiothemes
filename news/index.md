@@ -28,6 +28,10 @@ Updates on bundled RStudio themes.
 
   - `"Matcha"` by Luca Falasco.
 
+  - `"Andromeda"` by Eliver Lara.
+
+  - `"One Dark Pro"` by binaryify.
+
 ## rstudiothemes 0.1.0
 
 *Working in **RStudio 2026.01.0+392** “Apple Blossom”*

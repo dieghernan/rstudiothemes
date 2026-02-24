@@ -85,6 +85,8 @@ Studio Code themes:
 
 - Ayu by teabyii.
 
+- Andromeda by Eliver Lara.
+
 - Catppuccin by <https://catppuccin.com/>.
 
 - Cobalt2 Theme Official by Wes Bos.
@@ -107,6 +109,8 @@ Studio Code themes:
 - Nord by Arctic Ice Studio.
 
 - OKSolar Theme by dieghernan.
+
+- One Dark Pro by binaryify.
 
 - Overflow Theme by dieghernan.
 
@@ -136,19 +140,20 @@ Garrick Aden-Buie <https://github.com/gadenbuie>
 
 ``` r
 list_rstudiothemes(list_installed = FALSE)
-#>  [1] "ayu Dark"                   "ayu Light"                 
-#>  [3] "CRAN"                       "Catppuccin Latte"          
-#>  [5] "Catppuccin Mocha"           "cobalt2"                   
-#>  [7] "Dracula2025"                "GitHub Dark"               
-#>  [9] "GitHub Light"               "JellyFish Theme"           
-#> [11] "Matcha"                     "Matrix"                    
-#> [13] "Night Owl"                  "Night Owl Light"           
-#> [15] "Nord"                       "OKSolar Dark"              
-#> [17] "OKSolar Light"              "OKSolar Sky"               
-#> [19] "Overflow Dark"              "Overflow Light"            
-#> [21] "Panda Syntax"               "Selenized Dark"            
-#> [23] "Selenized Light"            "Skeletor Syntax"           
-#> [25] "SynthWave 84"               "Tokyo Night"               
-#> [27] "Tokyo Night Light"          "Tokyo Night Storm"         
-#> [29] "Winter is Coming Dark Blue" "Winter is Coming Light"    
+#>  [1] "Andromeda"                  "ayu Dark"                  
+#>  [3] "ayu Light"                  "CRAN"                      
+#>  [5] "Catppuccin Latte"           "Catppuccin Mocha"          
+#>  [7] "cobalt2"                    "Dracula2025"               
+#>  [9] "GitHub Dark"                "GitHub Light"              
+#> [11] "JellyFish Theme"            "Matcha"                    
+#> [13] "Matrix"                     "Night Owl"                 
+#> [15] "Night Owl Light"            "Nord"                      
+#> [17] "OKSolar Dark"               "OKSolar Light"             
+#> [19] "OKSolar Sky"                "One Dark Pro"              
+#> [21] "Overflow Dark"              "Overflow Light"            
+#> [23] "Panda Syntax"               "Selenized Dark"            
+#> [25] "Selenized Light"            "Skeletor Syntax"           
+#> [27] "SynthWave 84"               "Tokyo Night"               
+#> [29] "Tokyo Night Light"          "Tokyo Night Storm"         
+#> [31] "Winter is Coming Dark Blue" "Winter is Coming Light"    
 ```
