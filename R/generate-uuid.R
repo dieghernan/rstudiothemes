@@ -9,7 +9,7 @@
 #'
 #' @returns
 #' A character string representing a valid UUID that can be validated with
-#' `uuid::UUIDvalidate()`.
+#' [uuid::UUIDvalidate()].
 #'
 #' @details
 #' This helper function assigns a

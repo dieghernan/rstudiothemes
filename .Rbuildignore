@@ -46,3 +46,4 @@
 ^\.quarto$
 ^vignettes/_quarto\.yaml$
 ^vignettes/_quarto\.yml$
+^dev$

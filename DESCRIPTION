@@ -22,10 +22,13 @@ Imports:
     cli,
     colorspace,
     dplyr,
+    grDevices,
     jsonlite,
     rstudioapi,
     sass,
     tidyr,
+    tools,
+    utils,
     xml2
 Suggests:
     knitr,

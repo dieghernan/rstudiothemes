@@ -88,14 +88,15 @@ test_that("Dev testing install_themes", {
     install_rstudiothemes("light"),
     paste("Installed", lg, "themes")
   )
+
   expect_identical(list_rstudiothemes(), list_rstudiothemes("light"))
-  expect_identical(lg, list_rstudiothemes("light"))
+  expect_identical(lg, length(list_rstudiothemes("light")))
   # But...
   remove_rstudiothemes()
-  install_rstudiothemes("light", c("Selenized Black", "Skeletor Syntax"))
+  install_rstudiothemes("light", c("Selenized Dark", "Skeletor Syntax"))
   expect_null(list_rstudiothemes("light"))
   expect_identical(
     list_rstudiothemes(),
-    c("Selenized Black", "Skeletor Syntax")
+    c("Selenized Dark", "Skeletor Syntax")
   )
 })

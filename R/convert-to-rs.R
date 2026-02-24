@@ -130,11 +130,35 @@ convert_to_rstudio_theme <- function(
 
   # Top-level colors
   tb_hlp_top <- dplyr::tibble(
-    name = c("caret", "invisibles"),
-    rstheme = c(".ace_cursor", ".ace_print-margin")
+    name = "caret",
+    rstheme = ".ace_cursor"
   )
 
+  # Adjustment for ruler (tmTheme does not specify this well)
+  # Priority: invisibles > guide > gutter and different to bg
+  ruler_map <- c("invisibles", "guide", "gutter")
+  bg_col <- tmcols[tmcols$section == "colors" & tmcols$name == "background", ]
+  tm_sub <- tmcols[tmcols$name %in% ruler_map, ]
+  tm_sub <- tm_sub[tm_sub$foreground != bg_col$foreground, ]
+  ruler_map <- ensure_null(ruler_map[ruler_map %in% tm_sub$name][1])
+
+  if (!is.null(ruler_map)) {
+    tb_hlp_top <- dplyr::bind_rows(
+      tb_hlp_top,
+      data.frame(name = ruler_map, rstheme = ".ace_print-margin")
+    )
+  }
+
   tmcols_top <- dplyr::inner_join(tmcols, tb_hlp_top, by = "name")
+
+  # Add indent guide
+  if ("guide" %in% tmcols$name) {
+    indent_guide <- tmcols[tmcols$name == "guide", ]
+    indent_guide$rstheme <- ".ace_indent-guide"
+
+    tmcols_top <- dplyr::bind_rows(tmcols_top, indent_guide[1, ])
+  }
+
   keepvals <- c("rstheme", "foreground", "background", "fontStyle")
   rstheme_top <- tmcols_top[, keepvals]
 
@@ -203,11 +227,14 @@ convert_to_rstudio_theme <- function(
 
   for (cssrule in end_df$rstheme) {
     thisval <- end_df[end_df$rstheme == cssrule, ]
-    if (cssrule == ".ace_print-margin") {
+    if (cssrule %in% c(".ace_print-margin")) {
+      thisrule <- paste0(cssrule, " {background: ", thisval$foreground, ";}")
+      new_css <- c(new_css, thisrule, "")
+    } else if (cssrule %in% c(".ace_indent-guide")) {
       thisrule <- paste0(
-        ".ace_print-margin {background: ",
+        ".ace_line .ace_indent-guide { background: linear-gradient(to left, ",
         thisval$foreground,
-        ";}"
+        " 1px, transparent 1px, transparent); }"
       )
       new_css <- c(new_css, thisrule, "")
     } else {

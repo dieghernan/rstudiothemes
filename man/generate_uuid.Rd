@@ -15,7 +15,7 @@ generate_uuid(hint = NULL)
 }
 \value{
 A character string representing a valid UUID that can be validated with
-\code{uuid::UUIDvalidate()}.
+\code{\link[uuid:UUIDgenerate]{uuid::UUIDvalidate()}}.
 }
 \description{
 Generate version 4 (pseudo-random) Universally Unique Identifiers (UUIDs).

@@ -6,12 +6,23 @@
 -   Repo status is active: [![Project Status: Active - The project has reached a
     stable, usable state and is being actively
     developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active).
--   `"Tokyo Night Light"`: Adjusted invisibles and ruler color.
 
-### New themes
+## Bundled RStudio themes
 
--   Catppuccin by <https://catppuccin.com/>.
--   Matcha by Luca Falasco.
+Updates on bundled RStudio themes.
+
+-   Added mapping of indent guides to rsthemes.
+
+-   `"Tokyo Night Light"`: Adjusted invisible (aka whitespaces) and ruler color.
+
+-   `"Matrix"`: Add ruler color.
+
+-   New themes
+
+    -   `"Catppuccin Latte"` and `"Catppuccin Mocha"` by
+        <https://catppuccin.com/>.
+
+    -   `"Matcha"` by Luca Falasco.
 
 # rstudiothemes 0.1.0
 

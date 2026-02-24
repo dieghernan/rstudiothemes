@@ -92,10 +92,10 @@ install_rstudiothemes <- function(
     "Installed {length(theme_files)} theme{?s}"
   )
   cli::cli_alert_info(
-    "Use {.fn rstudiothemes::list_rstudiothemes} to list installed themes"
+    "Use {.run rstudiothemes::list_rstudiothemes()} to list installed themes"
   )
   cli::cli_alert_info(
-    "Use {.fn rstudiothemes::try_rstudiothemes} to try all installed themes"
+    "Use {.run rstudiothemes::try_rstudiothemes()} to try all installed themes"
   )
 }
 
@@ -220,7 +220,7 @@ list_pkg_rstudiothemes <- function(
       )
       cli::cli_alert_info(
         paste0(
-          "Use {.fn rstudiothemes::list_rstudiothemes} to check the ",
+          "Use {.run rstudiothemes::list_rstudiothemes()} to check the ",
           "available names"
         )
       )
@@ -337,7 +337,7 @@ cli_how2install <- function() {
   cli::cli_alert_danger("No {.pkg rstudiothemes} themes are installed.")
   cli::cli_alert_info(
     paste0(
-      "Use {.fn rstudiothemes::install_rstudiothemes} to install",
+      "Use {.run rstudiothemes::install_rstudiothemes()} to install",
       " our themes"
     )
   )

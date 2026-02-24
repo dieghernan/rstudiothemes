@@ -1193,6 +1193,8 @@
 
 .ace_print-margin { background: #5A6378A6; }
 
+.ace_line .ace_indent-guide { background: linear-gradient(to left, #5A637842 1px, transparent 1px, transparent); }
+
 .ace_class { color: #59C2FF; }
 
 .ace_class.ace_defaultLibrary { color: #39BAE6; }

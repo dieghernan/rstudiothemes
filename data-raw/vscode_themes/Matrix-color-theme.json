@@ -160,7 +160,7 @@
 		"editorUnnecessaryCode.border": "#420000",
 		"editorUnnecessaryCode.opacity": "#00000080",
 		"editorWarning.foreground": "#cccc00",
-		"editorWhitespace.foreground": "#0c0c0c80",
+		"editorWhitespace.foreground": "#00660080",
 		"editorWidget.background": "#000000",
 		"editorWidget.foreground": "#00cc00",
 		"errorForeground": "#b40000",
