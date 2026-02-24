@@ -79,6 +79,7 @@ return \code{NULL} when called from other IDEs.
 following Visual Studio Code themes:
 \itemize{
 \item Ayu by teabyii.
+\item Andromeda by Eliver Lara.
 \item Catppuccin by \url{https://catppuccin.com/}.
 \item Cobalt2 Theme Official by Wes Bos.
 \item CRAN by dieghernan, based on the CRAN (R Project) website theme, created
@@ -91,6 +92,7 @@ with Pandoc
 \item Night Owl Dark and Light (no italics) by Sarah Drasner.
 \item Nord by Arctic Ice Studio.
 \item OKSolar Theme by dieghernan.
+\item One Dark Pro by binaryify.
 \item Overflow Theme by dieghernan.
 \item Panda Theme by Panda Theme.
 \item Selenized Themes by dieghernan.

@@ -1,4 +1,5 @@
 -   Ayu by teabyii.
+-   Andromeda by Eliver Lara.
 -   Catppuccin by <https://catppuccin.com/>.
 -   Cobalt2 Theme Official by Wes Bos.
 -   CRAN by dieghernan, based on the CRAN (R Project) website theme, created
@@ -11,6 +12,7 @@
 -   Night Owl Dark and Light (no italics) by Sarah Drasner.
 -   Nord by Arctic Ice Studio.
 -   OKSolar Theme by dieghernan.
+-   One Dark Pro by binaryify.
 -   Overflow Theme by dieghernan.
 -   Panda Theme by Panda Theme.
 -   Selenized Themes by dieghernan.

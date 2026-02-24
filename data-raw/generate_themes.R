@@ -36,6 +36,21 @@ dd <- convert_to_rstudio_theme(
 )
 
 
+# Andromeda -----
+
+url <- paste0(
+  "https://raw.githubusercontent.com/EliverLara/Andromeda/refs/heads/",
+  "master/themes/Andromeda-color-theme.json"
+)
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/Andromeda.rstheme",
+  apply = TRUE,
+  force = TRUE,
+  output_style = "compact"
+)
+
+
 # catpuccin -----
 # source("./data-raw/compile_catppucin.R")
 
@@ -256,6 +271,21 @@ dd <- convert_to_rstudio_theme(
   url,
   "inst/rsthemes/OKSolar_Sky.rstheme",
   name = "OKSolar Sky",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+# One Dark Pro ---------------------------------------
+
+url <- paste0(
+  "https://raw.githubusercontent.com/Binaryify/OneDark-Pro/",
+  "refs/heads/master/themes/OneDark-Pro.json"
+)
+
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/One_Dark_Pro.rstheme",
   force = TRUE,
   apply = TRUE,
   output_style = "compact"
