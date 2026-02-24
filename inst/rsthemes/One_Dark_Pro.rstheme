@@ -1621,8 +1621,6 @@
 
 .ace_variable { color: #E06C75; }
 
-.ace_variable:dart { color: #D19A66; }
-
 .ace_variable.ace_c { color: #ABB2BF; }
 
 .ace_variable.ace_constant { color: #D19A66; }
@@ -1650,6 +1648,8 @@
 .ace_variable.ace_parameter { font-style: italic; }
 
 .ace_variable.ace_parameter.ace_function { color: #ABB2BF; }
+
+.ace_variable:dart { color: #D19A66; }
 
 .ace_wikiword { color: #D19A66; }
 

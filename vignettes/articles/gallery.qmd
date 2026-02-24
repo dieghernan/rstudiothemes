@@ -57,11 +57,9 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 **Tools \> Global Options \> Appearance \> Add**
 
 ::: {#fig-ui}
-
 ![](rstudiogui.png){.nolightbox fig-alt="RStudio IDE, Add-Theme UI" width="80%"}
 
 RStudio IDE, Add-Theme UI
-
 :::
 
 ## Lightbox gallery
@@ -106,3 +104,22 @@ for (i in seq_along(themes)) {
 }
 ```
 :::
+
+### Snapshots session info
+
+-   RStudio 2026.01.1+403 "Apple Blossom" Release for Windows.
+
+-   Active RStudio Display setup and options:
+
+    -   [x] Show line numbers
+    -   [x] Show margin
+        -   Margin column: `80`.
+    -   [x] Show whitespace characters
+    -   [x] Blinking cursor
+    -   Indentation guides: `Gray lines`.
+
+    **Syntax**
+
+    -   [x] Highlight R functions calls
+    -   [x] Enable preview of named and hexadecimal colors
+    -   [ ] Use rainbow parentheses.
