@@ -8,7 +8,6 @@
   "tokenColors": [
     {
       "settings": {
-        "background": "#2B2836",
         "foreground": "#DCE7FD"
       }
     },
@@ -433,7 +432,6 @@
     "tab.inactiveForeground": "#DCE7FD",
     "terminal.background": "#2B2836",
     "terminal.border": "#483D5D",
-    "terminal.cursor": "#BD93F9",
     "terminal.foreground": "#DCE7FD",
     "terminalCursor.background": "#2B2836",
     "terminalCursor.foreground": "#BD93F9",

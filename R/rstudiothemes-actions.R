@@ -332,7 +332,6 @@ try_rstudiothemes <- function(
   # nocov end
 }
 
-
 cli_how2install <- function() {
   cli::cli_alert_danger("No {.pkg rstudiothemes} themes are installed.")
   cli::cli_alert_info(

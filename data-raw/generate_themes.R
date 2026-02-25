@@ -35,9 +35,7 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-
 # Andromeda -----
-
 url <- paste0(
   "https://raw.githubusercontent.com/EliverLara/Andromeda/refs/heads/",
   "master/themes/Andromeda-color-theme.json"
@@ -49,7 +47,6 @@ dd <- convert_to_rstudio_theme(
   force = TRUE,
   output_style = "compact"
 )
-
 
 # catpuccin -----
 # source("./data-raw/compile_catppucin.R")
@@ -71,7 +68,6 @@ dd <- convert_to_rstudio_theme(
 )
 
 # cobalt -----
-
 url <- paste0(
   "https://raw.githubusercontent.com/wesbos/",
   "cobalt2-vscode/refs/heads/master/theme/cobalt2.json"

@@ -15,7 +15,7 @@
 
 .ace_marker-layer .ace_step { background: #c6dbae; }
 
-.ace_marker-layer .ace_bracket { margin: -1px 0 0 -1px; border: 1px solid #F1E9D2; }
+.ace_marker-layer .ace_bracket { margin: -1px 0 0 -1px; border: 1px solid rgba(58, 98, 111, 0.2); }
 
 .ace_marker-layer .ace_active-line { background: #F1E9D2; }
 
@@ -25,7 +25,7 @@
 
 .ace_fold { background-color: #2B90D8; border-color: #657377; }
 
-.ace_invisible { color: #F1E9D2; }
+.ace_invisible { color: rgba(58, 98, 111, 0.2); }
 
 .ace_keyword { color: #819500; }
 
@@ -1171,7 +1171,7 @@
 /* CSS rules from TextMate theme */
 .ace_cursor { color: #819500; }
 
-.ace_print-margin { background: #F1E9D2; }
+.ace_print-margin { background: #3A626F33; }
 
 .ace_line .ace_indent-guide { background: linear-gradient(to left, #8FAAAB 1px, transparent 1px, transparent); }
 
@@ -1277,9 +1277,13 @@
 
 .ace_punctuation.ace_definition.ace_anchor { color: #819500; font-weight: bold; }
 
+.ace_punctuation.ace_definition.ace_tag { color: #657377; }
+
 .ace_punctuation.ace_section { color: #819500; }
 
 .ace_punctuation.ace_section.ace_embedded { color: #819500; font-weight: bold; }
+
+.ace_punctuation.ace_separator { color: #657377; }
 
 .ace_storage { color: #819500; }
 
@@ -1312,6 +1316,8 @@
 .ace_variable.ace_other.ace_anchor { color: #819500; font-weight: bold; }
 
 .ace_variable.ace_other.ace_constant { color: #259D94; }
+
+.ace_variable.ace_other.ace_object { color: #657377; }
 
 .ace_variable.ace_other.ace_property { color: #AC8300; }
 

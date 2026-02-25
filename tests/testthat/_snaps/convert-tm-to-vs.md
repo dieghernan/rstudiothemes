@@ -37,7 +37,6 @@
         "tokenColors": [
           {
             "settings": {
-              "background": "#2B2836",
               "foreground": "#DCE7FD"
             }
           },
@@ -440,7 +439,6 @@
           "tab.inactiveForeground": "#DCE7FD",
           "terminal.background": "#2B2836",
           "terminal.border": "#483D5D",
-          "terminal.cursor": "#BD93F9",
           "terminal.foreground": "#DCE7FD",
           "terminalCursor.background": "#2B2836",
           "terminalCursor.foreground": "#BD93F9",
@@ -557,7 +555,6 @@
           "tab.inactiveForeground": "#F8F8F2",
           "terminal.background": "#272822",
           "terminal.border": "#51524B",
-          "terminal.cursor": "#F8F8F0",
           "terminal.foreground": "#F8F8F2",
           "terminalCursor.background": "#272822",
           "terminalCursor.foreground": "#F8F8F0",
@@ -673,7 +670,6 @@
           "tab.inactiveForeground": "#F8F8F2",
           "terminal.background": "#272822",
           "terminal.border": "#51524B",
-          "terminal.cursor": "#F8F8F0",
           "terminal.foreground": "#F8F8F2",
           "terminalCursor.background": "#272822",
           "terminalCursor.foreground": "#F8F8F0",

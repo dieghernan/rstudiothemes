@@ -122,7 +122,7 @@
 		"editorHoverWidget.foreground": "#00cc00",
 		"editorHoverWidget.statusBarBackground": "#080808",
 		"editorIndentGuide.activeBackground1": "#080808",
-		"editorIndentGuide.background1": "#080808",
+		"editorIndentGuide.background1": "#00660080",
 		"editorInfo.border": "#00cc00",
 		"editorInfo.foreground": "#00cc00",
 		"editorLightBulb.foreground": "#ddffdd",

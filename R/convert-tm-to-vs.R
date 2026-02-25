@@ -92,6 +92,9 @@ convert_tm_to_vs_theme <- function(
 
   mapping <- read.csv(system.file("csv/mapping.csv", package = "rstudiothemes"))
 
+  # Deprecate editorIndentGuide.background (use editorIndentGuide.background1)
+  mapping <- mapping[mapping$vscode != "editorIndentGuide.background", ]
+
   high_level <- theme_db[theme_db$section == "colors", c("name", "foreground")]
   names(high_level) <- c("tm", "color")
   df <- merge(high_level, mapping, by = "tm", all = FALSE)
@@ -175,7 +178,6 @@ convert_tm_to_vs_theme <- function(
     # Create list for tokens
     tok[[1]] <- list(
       settings = list(
-        background = col_l$editor.background,
         foreground = col_l$editor.foreground
       )
     )
@@ -281,7 +283,6 @@ additional_cols <- function(bg, fg, comment, selection, accent) {
     # Integrated Terminal Colors
     "terminal.background" = bg,
     "terminal.foreground" = fg,
-    "terminal.cursor" = accent,
     "terminalCursor.background" = bg,
     "terminalCursor.foreground" = accent,
     "terminal.border" = bgaccent2,

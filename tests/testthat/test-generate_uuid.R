@@ -10,7 +10,6 @@ test_that("Random seed", {
   expect_false(identical(a, b))
 })
 
-
 test_that("Fixed seed", {
   skip_if_not_installed("uuid")
 
