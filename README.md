@@ -8,12 +8,12 @@
 
 [![R-CMD-check](https://github.com/dieghernan/rstudiothemes/actions/workflows/check-full.yaml/badge.svg)](https://github.com/dieghernan/rstudiothemes/actions/workflows/check-full.yaml)
 [![codecov](https://codecov.io/gh/dieghernan/rstudiothemes/branch/main/graph/badge.svg?token=Us9sfPntdX)](https://app.codecov.io/gh/dieghernan/rstudiothemes)
-[![CodeFactor](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes/badge?s=db1aa5e9aa335100151678939d0b23ee5cb86b71)](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes)
 [![r-universe](https://dieghernan.r-universe.dev/badges/rstudiothemes)](https://dieghernan.r-universe.dev/rstudiothemes)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18519155.svg)](https://doi.org/10.5281/zenodo.18519155)
+[![CodeFactor](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes/badge?s=db1aa5e9aa335100151678939d0b23ee5cb86b71)](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes)
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18519155.svg)](https://doi.org/10.5281/zenodo.18519155)
 
 <!-- badges: end -->
 
@@ -47,7 +47,7 @@ environment:
 ``` r
 rstudiothemes::install_rstudiothemes()
 
-#> ✔ Installed 30 themes
+#> ✔ Installed 32 themes
 #> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes
 #> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes
 
@@ -91,14 +91,21 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 ## Installation
 
-You can install **rstudiothemes** using either of these methods:
+Install **rstudiothemes** from **CRAN** with:
+
+``` r
+install.packages("rstudiothemes")
+```
+
+You can install the developing version of **rstudiothemes** with:
 
 ``` r
 # install.packages("pak")
 pak::pak("dieghernan/rstudiothemes")
 ```
 
-Or, install it from r-universe:
+Alternatively, you can install **rstudiothemes** using the
+[r-universe](https://dieghernan.r-universe.dev/rstudiothemes):
 
 ``` r
 # Install rstudiothemes in R:

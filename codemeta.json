@@ -2,13 +2,13 @@
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "rstudiothemes",
-  "description": "Create and install 'RStudio' themes derived from Visual Studio Code and 'TextMate' themes. Provides functions to convert between 'TextMate' and Visual Studio Code themes, as well as ports of several Visual Studio Code themes.",
-  "name": "rstudiothemes: Create 'RStudio' Themes from Visual Studio Code and 'TextMate'\n    Themes",
+  "description": "Create and install 'RStudio' themes derived from Visual Studio Code, Positron and 'TextMate' themes. Provides functions to convert between 'TextMate' and Visual Studio Code or Positron themes, as well as ports of several Visual Studio Code themes.",
+  "name": "rstudiothemes: Create 'RStudio' Themes from Visual Studio Code, Positron and\n    'TextMate' Themes",
   "relatedLink": "https://dieghernan.github.io/rstudiothemes/",
   "codeRepository": "https://github.com/dieghernan/rstudiothemes",
   "issueTracker": "https://github.com/dieghernan/rstudiothemes/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.1.0.9000",
+  "version": "1.0.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -220,7 +220,7 @@
     "SystemRequirements": null
   },
   "keywords": ["r-package", "rstudio-themes", "textmate-themes", "vscode-themes", "positron-themes"],
-  "fileSize": "2005.774KB",
+  "fileSize": "2006.046KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
@@ -232,7 +232,7 @@
           "familyName": "Hernangómez"
         }
       ],
-      "name": "{rstudiothemes}: Create {RStudio} Themes from {Visual Studio Code} and {TextMate} Themes",
+      "name": "{rstudiothemes}: Create {RStudio} Themes from {Visual Studio Code}, {Positron} and {TextMate} Themes",
       "identifier": "10.5281/zenodo.18519156",
       "url": "https://dieghernan.github.io/rstudiothemes/",
       "@id": "https://doi.org/10.5281/zenodo.18519156",

@@ -22,16 +22,16 @@
           "givenName": "Garrick"
         }
       ],
-      "description": "Create and install 'RStudio' themes derived from Visual Studio Code and 'TextMate' themes. Provides functions to convert between 'TextMate' and Visual Studio Code themes, as well as ports of several Visual Studio Code themes.",
+      "description": "Create and install 'RStudio' themes derived from Visual Studio Code, Positron and 'TextMate' themes. Provides functions to convert between 'TextMate' and Visual Studio Code or Positron themes, as well as ports of several Visual Studio Code themes.",
       "license": "https://spdx.org/licenses/MIT",
-      "name": "rstudiothemes: Create 'RStudio' Themes from Visual Studio Code and 'TextMate'\n    Themes",
+      "name": "rstudiothemes: Create 'RStudio' Themes from Visual Studio Code, Positron and\n    'TextMate' Themes",
       "programmingLanguage": {
         "type": "ComputerLanguage",
         "name": "R",
         "url": "https://r-project.org"
       },
       "runtimePlatform": "R version 4.5.2 (2025-10-31 ucrt)",
-      "version": "0.1.0.9000"
+      "version": "1.0.0"
     },
     {
       "id": "https://doi.org/10.5281/zenodo.18519156",
@@ -41,7 +41,7 @@
         "familyName": "Hernangómez",
         "givenName": "Diego"
       },
-      "name": "{rstudiothemes}: Create {RStudio} Themes from {Visual Studio Code} and {TextMate} Themes"
+      "name": "{rstudiothemes}: Create {RStudio} Themes from {Visual Studio Code}, {Positron} and {TextMate} Themes"
     }
   ]
 }
