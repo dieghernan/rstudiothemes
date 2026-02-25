@@ -43,7 +43,7 @@ convert_to_rstudio_theme(
 - use_italics:
 
   Logical. Whether to use italics in the resulting theme. By default
-  `TRUE`, but some themes may look better without italics.
+  `TRUE`; however, some themes may look better without italics.
 
 - output_style:
 

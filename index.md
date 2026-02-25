@@ -115,7 +115,7 @@ Alternatively, install the `.rstheme` file via the RStudio UI:
 
 ![](reference/figures/rstudiogui.png)
 
-### Bidirectional conversion Visual Studio Code/Positron - TextMate
+### Bidirectional conversion between Visual Studio Code/Positron and TextMate themes
 
 The package also includes the conversion functions
 [`convert_vs_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_vs_to_tm_theme.md)

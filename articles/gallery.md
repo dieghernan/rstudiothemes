@@ -2,7 +2,7 @@
 
 Showcase of bundled themes in **rstudiothemes**.
 
-You can installed them with:
+You can install them with:
 
 ``` r
 rstudiothemes::install_rstudiothemes()
