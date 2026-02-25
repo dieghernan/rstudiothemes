@@ -30,7 +30,7 @@ function to install them into your RStudio environment:
 ``` r
 rstudiothemes::install_rstudiothemes()
 
-#> ✔ Installed 30 themes
+#> ✔ Installed 32 themes
 #> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes
 #> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes
 
@@ -70,14 +70,21 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 ## Installation
 
-You can install **rstudiothemes** using either of these methods:
+Install **rstudiothemes** from **CRAN** with:
+
+``` r
+install.packages("rstudiothemes")
+```
+
+You can install the developing version of **rstudiothemes** with:
 
 ``` r
 # install.packages("pak")
 pak::pak("dieghernan/rstudiothemes")
 ```
 
-Or, install it from r-universe:
+Alternatively, you can install **rstudiothemes** using the
+[r-universe](https://dieghernan.r-universe.dev/rstudiothemes):
 
 ``` r
 # Install rstudiothemes in R:
@@ -191,8 +198,8 @@ These are helper functions that we make available to others.
 
 - [`rstudiothemes`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-package.md)
   [`rstudiothemes-package`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-package.md)
-  : rstudiothemes: Create 'RStudio' Themes from Visual Studio Code and
-  'TextMate' Themes
+  : rstudiothemes: Create 'RStudio' Themes from Visual Studio Code,
+  Positron and 'TextMate' Themes
 
 # Articles
 

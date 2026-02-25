@@ -1,6 +1,6 @@
 # Changelog
 
-## rstudiothemes (development version)
+## rstudiothemes 1.0.0
 
 - Migrate vignettes and articles to Quarto
   ([\#9](https://github.com/dieghernan/rstudiothemes/issues/9)).

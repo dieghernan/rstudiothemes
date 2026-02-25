@@ -46,5 +46,5 @@ These are helper functions that we make available to others.
 
 - [`rstudiothemes`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-package.md)
   [`rstudiothemes-package`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-package.md)
-  : rstudiothemes: Create 'RStudio' Themes from Visual Studio Code and
-  'TextMate' Themes
+  : rstudiothemes: Create 'RStudio' Themes from Visual Studio Code,
+  Positron and 'TextMate' Themes
