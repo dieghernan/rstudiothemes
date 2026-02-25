@@ -67,7 +67,6 @@ readLines(path) |>
 #>   "tokenColors": [
 #>     {
 #>       "settings": {
-#>         "background": "#2B2836",
 #>         "foreground": "#DCE7FD"
 #>       }
 #>     },
@@ -107,4 +106,5 @@ readLines(path) |>
 #>       }
 #>     },
 #>     {
+#>       "name": "attr-value",
 ```
