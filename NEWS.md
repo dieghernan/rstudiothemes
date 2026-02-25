@@ -11,10 +11,11 @@
 
 Updates on bundled RStudio themes.
 
--   Added mapping of indent guides to rsthemes.
--   `"Tokyo Night Light"`: Adjusted invisible (aka whitespaces) and ruler color.
--   `"Matrix"`: Add ruler color.
--   New themes
+-   Added mapping of indent guides to RStudio themes.
+-   `"Tokyo Night Light"`: Adjusted invisible elements (whitespaces) and ruler
+    color.
+-   `"Matrix"`: Added ruler color.
+-   New themes:
     -   `"Catppuccin Latte"` and `"Catppuccin Mocha"` by
         <https://catppuccin.com/>.
     -   `"Matcha"` by Luca Falasco.
@@ -23,6 +24,6 @@ Updates on bundled RStudio themes.
 
 # rstudiothemes 0.1.0
 
-*Working in **RStudio 2026.01.0+392** "Apple Blossom"*
+*Compatible with RStudio 2026.01.0+392 "Apple Blossom".*
 
 -   First working version.

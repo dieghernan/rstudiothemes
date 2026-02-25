@@ -15,6 +15,7 @@ following locations:
         `a_file.qmd` and `a_file.qmd.orig`), review only the `.orig` file, as
         the other file is generated from it.
 -   The `README.qmd` or `README.Rmd` file.
+-   The `NEWS.md` file.
 
 Additionally, ensure language and concepts consistency across files. Do not
 modify any working code.

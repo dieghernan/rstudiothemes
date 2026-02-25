@@ -15,7 +15,7 @@
 
 .ace_marker-layer .ace_step { background: #c6dbae; }
 
-.ace_marker-layer .ace_bracket { margin: -1px 0 0 -1px; border: 1px solid #E6E6E6; }
+.ace_marker-layer .ace_bracket { margin: -1px 0 0 -1px; border: 1px solid #D2D2D2; }
 
 .ace_marker-layer .ace_active-line { background: #E6E6E6; }
 
@@ -25,7 +25,7 @@
 
 .ace_fold { background-color: #6b72e6; border-color: #0C0D0E; }
 
-.ace_invisible { color: #E6E6E6; }
+.ace_invisible { color: #D2D2D2; }
 
 .ace_keyword { color: #0C0D0E; }
 
@@ -1173,7 +1173,9 @@
 /* CSS rules from TextMate theme */
 .ace_cursor { color: #B75301; }
 
-.ace_print-margin { background: #E6E6E6; }
+.ace_print-margin { background: #D2D2D2; }
+
+.ace_line .ace_indent-guide { background: linear-gradient(to left, #B7530166 1px, transparent 1px, transparent); }
 
 .ace_comment { color: #666F78; }
 

@@ -54,8 +54,12 @@ rstudiothemes::install_rstudiothemes()
 rstudioapi::applyTheme("Winter is Coming Dark Blue")
 ```
 
+<div class="text-center">
+
 <img src="man/figures/winteriscoming.png"
 alt="Screenshot of theme Winter is Coming Dark Blue" />
+
+</div>
 
 Available themes include popular choices such as Tokyo Night, Night Owl,
 Winter is Coming, SynthWave 84, Nord, and many others:
@@ -136,7 +140,7 @@ data-fig-alt="RStudio IDE, Add-Theme UI" />
 
 </div>
 
-### Bidirectional conversion Visual Studio Code/Positron - TextMate
+### Bidirectional conversion between Visual Studio Code/Positron and TextMate themes
 
 The package also includes the conversion functions
 `convert_vs_to_tm_theme()` and `convert_tm_to_vs_theme()`, allowing you

@@ -77,6 +77,8 @@
                 <string>#C0CAF5</string>
                 <key>invisibles</key>
                 <string>#363B54</string>
+                <key>guide</key>
+                <string>#232433</string>
                 <key>ansiBlack</key>
                 <string>#363B54</string>
                 <key>ansiRed</key>
@@ -525,8 +527,6 @@
                 <string>#E0AF68</string>
               </dict>
             </dict>
-            <dict>
-              <key>name</key>
 
 # Simple Theme creation
 

@@ -1199,6 +1199,8 @@
 
 .ace_print-margin { background: #3B4261; }
 
+.ace_line .ace_indent-guide { background: linear-gradient(to left, #2D324A 1px, transparent 1px, transparent); }
+
 .ace_comment { color: #5F6996; font-style: italic; }
 
 .ace_comment.ace_block { color: #5F6996; }

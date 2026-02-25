@@ -172,8 +172,7 @@
         "editorLineNumber.foreground": "#9da0ab",
         "editorLineNumber.activeForeground": "#363c4d",
         "editor.lineHighlightBackground": "#dcdee3",
-        // "editorWhitespace.foreground": "#e6e7ed", modified for rule, DHH
-        "editorWhitespace.foreground": "#c1c2c7",
+        "editorWhitespace.foreground": "#e6e7ed",
 
 
         "editorMarkerNavigation.background": "#d6d8df",

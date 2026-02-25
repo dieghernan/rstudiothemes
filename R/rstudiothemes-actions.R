@@ -127,7 +127,7 @@ remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
   cli::cli_alert_success("Uninstalled {length(themes)} themes")
 }
 
-# ncov end
+# nocov end
 
 #' @describeIn rstudiothemes-actions List installed or available themes
 #' @param list_installed Should the installed \pkg{rstudiothemes} themes be
@@ -146,7 +146,7 @@ list_rstudiothemes <- function(
     return(names(list_pkg_rstudiothemes(style = style)))
   }
 
-  # ncov start
+  # nocov start
 
   # Only works in RStudio
   if (!on_rstudio()) {

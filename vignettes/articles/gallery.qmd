@@ -1,6 +1,6 @@
 ---
 title: "Showcase"
-description: A preview of out built-in themes
+description: A preview of our built-in themes
 lightbox:
   match: auto
   desc-position: bottom
@@ -42,7 +42,7 @@ knitr:
 
 Showcase of bundled themes in **rstudiothemes**.
 
-You can installed them with:
+You can install them with:
 
 ```{r}
 #| label: demo

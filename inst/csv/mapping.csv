@@ -18,6 +18,7 @@ rangeHighlight,editor.rangeHighlightBackground,NA
 caret,editorCursor.foreground,.ace_cursor
 invisibles,editorWhitespace.foreground,NA
 guide,editorIndentGuide.background,NA
+guide,editorIndentGuide.background1,NA
 ansiBlack,terminal.ansiBlack,NA
 ansiRed,terminal.ansiRed,NA
 ansiGreen,terminal.ansiGreen,NA

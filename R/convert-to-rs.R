@@ -14,7 +14,7 @@
 #'   Studio Code theme (`.json` format).
 #' @param apply Logical. Apply the theme with [rstudioapi::applyTheme()].
 #' @param use_italics Logical. Whether to use italics in the resulting theme.
-#'   By default `TRUE`, but some themes may look better without italics.
+#'   By default `TRUE`; however, some themes may look better without italics.
 #'
 #' @inheritParams rstudioapi::addTheme
 #' @inheritParams sass::sass_options
