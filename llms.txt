@@ -58,8 +58,8 @@ rstudiothemes::list_rstudiothemes(list_installed = FALSE)
 #> [21] "Overflow Dark"              "Overflow Light"            
 #> [23] "Panda Syntax"               "Selenized Dark"            
 #> [25] "Selenized Light"            "Skeletor Syntax"           
-#> [27] "SynthWave 84"               "Tokyo Night"               
-#> [29] "Tokyo Night Light"          "Tokyo Night Storm"         
+#> [27] "SynthWave 84"               "Tokyo Night Light"         
+#> [29] "Tokyo Night Storm"          "Tokyo Night"               
 #> [31] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
 
@@ -70,31 +70,11 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 ## Installation
 
-Install **rstudiothemes** from **CRAN** with:
+Install **rstudiothemes** from
+[**CRAN**](https://CRAN.R-project.org/package=rstudiothemes):
 
 ``` r
 install.packages("rstudiothemes")
-```
-
-You can install the developing version of **rstudiothemes** with:
-
-``` r
-# install.packages("pak")
-pak::pak("dieghernan/rstudiothemes")
-```
-
-Alternatively, you can install **rstudiothemes** using the
-[r-universe](https://dieghernan.r-universe.dev/rstudiothemes):
-
-``` r
-# Install rstudiothemes in R:
-install.packages(
-  "rstudiothemes",
-  repos = c(
-    "https://dieghernan.r-universe.dev",
-    "https://cloud.r-project.org"
-  )
-)
 ```
 
 ## Migrating an existing theme
@@ -149,6 +129,28 @@ Contributions are welcome! To contribute to this project:
 1.  Open an issue to discuss your ideas or proposed changes.
 2.  Fork the repository and create a feature branch.
 3.  Submit a pull request with clear commit messages and descriptions.
+
+## Citation
+
+Hernangómez D (2026). *rstudiothemes: Create RStudio Themes from Visual
+Studio Code, Positron and TextMate Themes*.
+[doi:10.32614/CRAN.package.rstudiothemes](https://doi.org/10.32614/CRAN.package.rstudiothemes),
+<https://dieghernan.github.io/rstudiothemes/>.
+
+A BibTeX entry for LaTeX users:
+
+``` R
+@Manual{R-rstudiothemes,
+  title = {{rstudiothemes}: Create {RStudio} Themes from {Visual Studio Code}, {Positron} and
+{TextMate} Themes},
+  doi = {10.32614/CRAN.package.rstudiothemes},
+  author = {Diego Hernangómez},
+  year = {2026},
+  version = {1.0.0},
+  url = {https://dieghernan.github.io/rstudiothemes/},
+  abstract = {Create and install RStudio themes derived from Visual Studio Code, Positron and TextMate themes. Provides functions to convert between TextMate and Visual Studio Code or Positron themes, as well as ports of several Visual Studio Code themes.},
+}
+```
 
 # Package index
 

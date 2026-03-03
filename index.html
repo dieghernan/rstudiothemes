@@ -133,31 +133,18 @@
 <span><span class="co">#&gt; [21] "Overflow Dark"              "Overflow Light"            </span></span>
 <span><span class="co">#&gt; [23] "Panda Syntax"               "Selenized Dark"            </span></span>
 <span><span class="co">#&gt; [25] "Selenized Light"            "Skeletor Syntax"           </span></span>
-<span><span class="co">#&gt; [27] "SynthWave 84"               "Tokyo Night"               </span></span>
-<span><span class="co">#&gt; [29] "Tokyo Night Light"          "Tokyo Night Storm"         </span></span>
+<span><span class="co">#&gt; [27] "SynthWave 84"               "Tokyo Night Light"         </span></span>
+<span><span class="co">#&gt; [29] "Tokyo Night Storm"          "Tokyo Night"               </span></span>
 <span><span class="co">#&gt; [31] "Winter is Coming Dark Blue" "Winter is Coming Light"</span></span></code></pre></div>
 <p>We also distribute all our themes in a single <code>.zip</code> file at <a href="https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip" class="uri">https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip</a>. Unzip and install using the <a href="https://docs.posit.co/ide/user/ide/guide/ui/appearance.html" class="external-link">RStudio IDE interface</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>Install <strong>rstudiothemes</strong> from <strong>CRAN</strong> with:</p>
+<p>Install <strong>rstudiothemes</strong> from <a href="https://CRAN.R-project.org/package=rstudiothemes" class="external-link"><strong>CRAN</strong></a>:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rstudiothemes"</span><span class="op">)</span></span></code></pre></div>
-<p>You can install the developing version of <strong>rstudiothemes</strong> with:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
-<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"dieghernan/rstudiothemes"</span><span class="op">)</span></span></code></pre></div>
-<p>Alternatively, you can install <strong>rstudiothemes</strong> using the <a href="https://dieghernan.r-universe.dev/rstudiothemes" class="external-link">r-universe</a>:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Install rstudiothemes in R:</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span></span>
-<span>  <span class="st">"rstudiothemes"</span>,</span>
-<span>  repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
-<span>    <span class="st">"https://dieghernan.r-universe.dev"</span>,</span>
-<span>    <span class="st">"https://cloud.r-project.org"</span></span>
-<span>  <span class="op">)</span></span>
-<span><span class="op">)</span></span></code></pre></div>
+
 </div>
 <div class="section level2">
 <h2 id="migrating-an-existing-theme">Migrating an existing theme<a class="anchor" aria-label="anchor" href="#migrating-an-existing-theme"></a>
@@ -202,6 +189,24 @@
 <li>Fork the repository and create a feature branch.</li>
 <li>Submit a pull request with clear commit messages and descriptions.</li>
 </ol>
+</div>
+<div class="section level2">
+<h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
+</h2>
+<p>
+Hernangómez D (2026). <em>rstudiothemes: Create RStudio Themes from Visual Studio Code, Positron and TextMate Themes</em>. <a href="https://doi.org/10.32614/CRAN.package.rstudiothemes" class="external-link">doi:10.32614/CRAN.package.rstudiothemes</a>, <a href="https://dieghernan.github.io/rstudiothemes/">https://dieghernan.github.io/rstudiothemes/</a>.
+</p>
+<p>A BibTeX entry for LaTeX users:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="sc">@</span>Manual{R<span class="sc">-</span>rstudiothemes,</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  title <span class="ot">=</span> {{rstudiothemes}<span class="sc">:</span> Create {RStudio} Themes from {Visual Studio Code}, {Positron} and</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>{TextMate} Themes},</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>  doi <span class="ot">=</span> {<span class="fl">10.32614</span><span class="sc">/</span>CRAN.package.rstudiothemes},</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>  author <span class="ot">=</span> {Diego Hernangómez},</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>  year <span class="ot">=</span> {<span class="dv">2026</span>},</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>  version <span class="ot">=</span> {<span class="dv">1</span>.<span class="fl">0.0</span>},</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>  url <span class="ot">=</span> {https<span class="sc">:</span><span class="er">//</span>dieghernan.github.io<span class="sc">/</span>rstudiothemes<span class="sc">/</span>},</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>  abstract <span class="ot">=</span> {Create and install RStudio themes derived from Visual Studio Code, Positron and TextMate themes. Provides functions to convert between TextMate and Visual Studio Code or Positron themes, as well as ports of several Visual Studio Code themes.},</span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
