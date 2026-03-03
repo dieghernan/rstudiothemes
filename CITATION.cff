@@ -10,7 +10,10 @@ license: MIT
 title: 'rstudiothemes: Create ''RStudio'' Themes from Visual Studio Code, Positron
   and ''TextMate'' Themes'
 version: 1.0.0
-doi: 10.5281/zenodo.18519156
+doi: 10.32614/CRAN.package.rstudiothemes
+identifiers:
+- type: doi
+  value: 10.32614/CRAN.package.rstudiothemes
 abstract: Create and install 'RStudio' themes derived from Visual Studio Code, Positron
   and 'TextMate' themes. Provides functions to convert between 'TextMate' and Visual
   Studio Code or Positron themes, as well as ports of several Visual Studio Code themes.
@@ -28,7 +31,7 @@ preferred-citation:
     given-names: Diego
     email: diego.hernangomezherrero@gmail.com
     orcid: https://orcid.org/0000-0001-8457-4658
-  doi: 10.5281/zenodo.18519156
+  doi: 10.32614/CRAN.package.rstudiothemes
   year: '2026'
   version: 1.0.0
   url: https://dieghernan.github.io/rstudiothemes/
@@ -36,6 +39,7 @@ preferred-citation:
     and TextMate themes. Provides functions to convert between TextMate and Visual
     Studio Code or Positron themes, as well as ports of several Visual Studio Code
     themes.
+repository: https://CRAN.R-project.org/package=rstudiothemes
 repository-code: https://github.com/dieghernan/rstudiothemes
 url: https://dieghernan.github.io/rstudiothemes/
 contact:

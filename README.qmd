@@ -16,14 +16,17 @@ knitr:
 
 <!-- badges: start -->
 
+[![CRAN-status](https://www.r-pkg.org/badges/version/rstudiothemes)](https://CRAN.R-project.org/package=rstudiothemes)
+[![CRAN-results](https://badges.cranchecks.info/worst/rstudiothemes.svg)](https://cran.r-project.org/web/checks/check_results_rstudiothemes.html)
+[![Downloads](https://cranlogs.r-pkg.org/badges/rstudiothemes)](https://CRAN.R-project.org/package=rstudiothemes)
+[![r-universe](https://dieghernan.r-universe.dev/badges/rstudiothemes)](https://dieghernan.r-universe.dev/rstudiothemes)
 [![R-CMD-check](https://github.com/dieghernan/rstudiothemes/actions/workflows/check-full.yaml/badge.svg)](https://github.com/dieghernan/rstudiothemes/actions/workflows/check-full.yaml)
 [![codecov](https://codecov.io/gh/dieghernan/rstudiothemes/branch/main/graph/badge.svg?token=Us9sfPntdX)](https://app.codecov.io/gh/dieghernan/rstudiothemes)
-[![r-universe](https://dieghernan.r-universe.dev/badges/rstudiothemes)](https://dieghernan.r-universe.dev/rstudiothemes)
 [![CodeFactor](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes/badge?s=db1aa5e9aa335100151678939d0b23ee5cb86b71)](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes)
+[![DOI](https://img.shields.io/badge/DOI-%2010.32614/CRAN.package.rstudiothemes%20-blue)](https://doi.org/10.32614/CRAN.package.rstudiothemes)
 [![Project Status: Active - The project has reached a stable, usable state and
 is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18519155.svg)](https://doi.org/10.5281/zenodo.18519155)
 
 <!-- badges: end -->
 
@@ -82,12 +85,17 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 ## Installation
 
-Install **rstudiothemes** from **CRAN** with:
+Install **rstudiothemes** from
+[**CRAN**](https://CRAN.R-project.org/package=rstudiothemes):
 
 ```{r}
 #| eval: false
 install.packages("rstudiothemes")
 ```
+
+::: pkgdown-devel
+Check the docs of the developing version in
+<https://dieghernan.github.io/rstudiothemes/dev/>
 
 You can install the developing version of **rstudiothemes** with:
 
@@ -109,6 +117,7 @@ install.packages(
   )
 )
 ```
+:::
 
 ## Migrating an existing theme
 
@@ -160,3 +169,22 @@ Contributions are welcome! To contribute to this project:
 1.  Open an issue to discuss your ideas or proposed changes.
 2.  Fork the repository and create a feature branch.
 3.  Submit a pull request with clear commit messages and descriptions.
+
+## Citation
+
+```{r}
+#| label: cit
+#| echo: false
+#| eval: true
+#| results: asis
+print(citation("rstudiothemes")[1], style = "html")
+```
+
+A BibTeX entry for LaTeX users:
+
+```{r}
+#| echo: false
+#| eval: true
+#| comment: ''
+toBibtex(citation("rstudiothemes")[1])
+```

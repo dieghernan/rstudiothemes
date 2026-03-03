@@ -8,7 +8,7 @@ title <- gsub("TextMate", "{TextMate}", title, fixed = TRUE)
 title <- gsub("Positron", "{Positron}", title, fixed = TRUE)
 
 pkg <- meta$Package
-doi <- "10.5281/zenodo.18519156"
+doi <- "10.32614/CRAN.package.rstudiothemes"
 
 bibentry(
   "Manual",

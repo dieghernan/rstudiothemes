@@ -6,14 +6,17 @@
 
 <!-- badges: start -->
 
+[![CRAN-status](https://www.r-pkg.org/badges/version/rstudiothemes)](https://CRAN.R-project.org/package=rstudiothemes)
+[![CRAN-results](https://badges.cranchecks.info/worst/rstudiothemes.svg)](https://cran.r-project.org/web/checks/check_results_rstudiothemes.html)
+[![Downloads](https://cranlogs.r-pkg.org/badges/rstudiothemes)](https://CRAN.R-project.org/package=rstudiothemes)
+[![r-universe](https://dieghernan.r-universe.dev/badges/rstudiothemes)](https://dieghernan.r-universe.dev/rstudiothemes)
 [![R-CMD-check](https://github.com/dieghernan/rstudiothemes/actions/workflows/check-full.yaml/badge.svg)](https://github.com/dieghernan/rstudiothemes/actions/workflows/check-full.yaml)
 [![codecov](https://codecov.io/gh/dieghernan/rstudiothemes/branch/main/graph/badge.svg?token=Us9sfPntdX)](https://app.codecov.io/gh/dieghernan/rstudiothemes)
-[![r-universe](https://dieghernan.r-universe.dev/badges/rstudiothemes)](https://dieghernan.r-universe.dev/rstudiothemes)
 [![CodeFactor](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes/badge?s=db1aa5e9aa335100151678939d0b23ee5cb86b71)](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes)
+[![DOI](https://img.shields.io/badge/DOI-%2010.32614/CRAN.package.rstudiothemes%20-blue)](https://doi.org/10.32614/CRAN.package.rstudiothemes)
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18519155.svg)](https://doi.org/10.5281/zenodo.18519155)
 
 <!-- badges: end -->
 
@@ -79,8 +82,8 @@ rstudiothemes::list_rstudiothemes(list_installed = FALSE)
 #> [21] "Overflow Dark"              "Overflow Light"            
 #> [23] "Panda Syntax"               "Selenized Dark"            
 #> [25] "Selenized Light"            "Skeletor Syntax"           
-#> [27] "SynthWave 84"               "Tokyo Night"               
-#> [29] "Tokyo Night Light"          "Tokyo Night Storm"         
+#> [27] "SynthWave 84"               "Tokyo Night Light"         
+#> [29] "Tokyo Night Storm"          "Tokyo Night"               
 #> [31] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
 
@@ -91,11 +94,17 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 ## Installation
 
-Install **rstudiothemes** from **CRAN** with:
+Install **rstudiothemes** from
+[**CRAN**](https://CRAN.R-project.org/package=rstudiothemes):
 
 ``` r
 install.packages("rstudiothemes")
 ```
+
+<div class="pkgdown-devel">
+
+Check the docs of the developing version in
+<https://dieghernan.github.io/rstudiothemes/dev/>
 
 You can install the developing version of **rstudiothemes** with:
 
@@ -117,6 +126,8 @@ install.packages(
   )
 )
 ```
+
+</div>
 
 ## Migrating an existing theme
 
@@ -172,3 +183,26 @@ Contributions are welcome! To contribute to this project:
 1.  Open an issue to discuss your ideas or proposed changes.
 2.  Fork the repository and create a feature branch.
 3.  Submit a pull request with clear commit messages and descriptions.
+
+## Citation
+
+<p>
+
+Hernangómez D (2026). <em>rstudiothemes: Create RStudio Themes from
+Visual Studio Code, Positron and TextMate Themes</em>.
+<a href="https://doi.org/10.32614/CRAN.package.rstudiothemes">doi:10.32614/CRAN.package.rstudiothemes</a>,
+<a href="https://dieghernan.github.io/rstudiothemes/">https://dieghernan.github.io/rstudiothemes/</a>.
+</p>
+
+A BibTeX entry for LaTeX users:
+
+    @Manual{R-rstudiothemes,
+      title = {{rstudiothemes}: Create {RStudio} Themes from {Visual Studio Code}, {Positron} and
+    {TextMate} Themes},
+      doi = {10.32614/CRAN.package.rstudiothemes},
+      author = {Diego Hernangómez},
+      year = {2026},
+      version = {1.0.0},
+      url = {https://dieghernan.github.io/rstudiothemes/},
+      abstract = {Create and install RStudio themes derived from Visual Studio Code, Positron and TextMate themes. Provides functions to convert between TextMate and Visual Studio Code or Positron themes, as well as ports of several Visual Studio Code themes.},
+    }
