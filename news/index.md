@@ -2,6 +2,8 @@
 
 ## rstudiothemes 1.0.0
 
+CRAN release: 2026-03-03
+
 - Migrate vignettes and articles to Quarto
   ([\#9](https://github.com/dieghernan/rstudiothemes/issues/9)).
 - Add DOI:
