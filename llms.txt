@@ -100,7 +100,7 @@ Alternatively, install the `.rstheme` file via the RStudio UI:
 
 **Tools \> Global Options \> Appearance \> Add**
 
-![](reference/figures/rstudiogui.png)
+![RStudio IDE, Add-Theme UI](reference/figures/rstudiogui.png)
 
 ### Bidirectional conversion between Visual Studio Code/Positron and TextMate themes
 

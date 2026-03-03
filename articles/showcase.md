@@ -181,7 +181,7 @@ About the screenshots
 Previews may differ of the actual display in your device. These
 screenshots were taken under the following conditions:
 
-RStudio Version:
+**RStudio Version**
 
     RStudio 2026.01.1+403 "Apple Blossom"
     Release (0e924abb984501b0d66b204ea06b60fc7813275a, 2026-02-04) for windows Mozilla/5.0
