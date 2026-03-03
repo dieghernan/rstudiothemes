@@ -26,7 +26,7 @@ navbar:
     - intro
     - reference
     - articles
-    - gallery
+    - showcase
     - tutorials
     - news
     right:
@@ -35,9 +35,9 @@ navbar:
     - donate
     - lightswitch
   components:
-    gallery:
+    showcase:
       text: Showcase
-      href: articles/gallery.html
+      href: articles/showcase.html
     donate:
       icon: fa-hand-holding-dollar
       href: https://ko-fi.com/dieghernan
@@ -81,4 +81,7 @@ authors:
 articles:
 - title: Theme Gallery
   contents:
-  - articles/gallery
+  - articles/showcase
+
+redirects:
+- ["articles/gallery.html", "articles/showcase.html"]

@@ -1,5 +1,6 @@
 ---
 title: "Showcase"
+subtitle: Discover our RStudio themes
 description: A preview of our built-in themes
 lightbox:
   match: auto
@@ -105,20 +106,25 @@ for (i in seq_along(themes)) {
 ```
 :::
 
-## Screenshots notice
+```{=html}
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container"><i class="callout-icon"></i></div>
+<div class="callout-title-container flex-fill">About the screenshots</div>
+</div>
+<div class="callout-body-container callout-body">
+```
 
 Previews may differ of the actual display in your device. These screenshots were
 taken under the following conditions:
 
--   RStudio Version
+RStudio Version:
 
-    ```         
-    RStudio 2026.01.1+403 "Apple Blossom" Release
-    (0e924abb984501b0d66b204ea06b60fc7813275a, 2026-02-04) for windows
-    Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
-    ```
-
--   RStudio Display settings:
+```
+RStudio 2026.01.1+403 "Apple Blossom"
+Release (0e924abb984501b0d66b204ea06b60fc7813275a, 2026-02-04) for windows Mozilla/5.0
+(Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+```
 
 ::: {#fig-opts}
 ![](rstudiooptions.png){.nolightbox fig-alt="RStudio Options for Screenshots"
@@ -126,3 +132,8 @@ width="80%"}
 
 RStudio Options used for screenshots
 :::
+
+```{=html}
+</div>
+</div>
+```
