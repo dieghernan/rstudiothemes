@@ -154,7 +154,7 @@ Alternatively, install the `.rstheme` file via the RStudio UI:
 <div class="text-center">
 
 <img src="man/figures/rstudiogui.png" style="width:80.0%"
-data-fig-alt="RStudio IDE, Add-Theme UI" />
+alt="RStudio IDE, Add-Theme UI" />
 
 </div>
 
