@@ -1,4 +1,4 @@
-# Convert a TextMate or VS Code theme to an RStudio theme
+# Convert a TextMate or VS Code/Positron theme to an RStudio theme
 
 Read a `.tmTheme` or `.json` file that defines a TextMate or Visual
 Studio Code theme and write the equivalent RStudio theme `.rstheme`.
@@ -43,7 +43,7 @@ convert_to_rstudio_theme(
 - use_italics:
 
   Logical. Whether to use italics in the resulting theme. By default
-  `TRUE`, but some themes may look better without italics.
+  `TRUE`; however, some themes may look better without italics.
 
 - output_style:
 

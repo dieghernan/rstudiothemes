@@ -1,36 +1,36 @@
 # rstudiothemes
 
-Convert **Visual Studio Code** and **TextMate** themes into **RStudio**
-custom themes.
+Convert **Visual Studio Code/Positron** and **TextMate** themes into
+**RStudio** custom themes.
 
-This package provides tools to easily convert Visual Studio Code and
-TextMate theme files (`.json` and `.tmTheme` formats) into
-RStudio-compatible `.rstheme` files. RStudio has supported custom themes
-in `.rstheme` format since [version
+This package provides tools to easily convert Visual Studio
+Code/Positron and TextMate theme files (`.json` and `.tmTheme` formats)
+into RStudio-compatible `.rstheme` files. RStudio has supported custom
+themes in `.rstheme` format since [version
 1.2+](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html).
 
 ## Features
 
-- Convert Visual Studio Code and TextMate themes into RStudio `.rstheme`
-  format.
-- Bidirectional conversion between Visual Studio Code and TextMate
-  themes.
+- Convert Visual Studio Code/Positron and TextMate themes into RStudio
+  `.rstheme` format.
+- Bidirectional conversion between Visual Studio Code/Positron and
+  TextMate themes.
+- Includes ports of popular Visual Studio Code/Positron themes ready to
+  use in RStudio.
 - Organize and manage custom themes in a reproducible way.
-- Integrates with R tooling for easier installation and testing.
-- Includes ports of popular Visual Studio Code themes ready to use in
-  RStudio.
+- Integrates with **R** tooling for easier installation and testing.
 
-## Built-in Themes
+## Built-in themes
 
-This package includes ports of several popular Visual Studio Code
-themes, ready to use in RStudio. Simply use the
+This package includes ports of several popular Visual Studio
+Code/Positron themes, ready to use in RStudio. Simply use the
 [`install_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-actions.md)
 function to install them into your RStudio environment:
 
 ``` r
 rstudiothemes::install_rstudiothemes()
 
-#> ✔ Installed 30 themes
+#> ✔ Installed 32 themes
 #> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes
 #> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes
 
@@ -45,21 +45,22 @@ Winter is Coming, SynthWave 84, Nord, and many others:
 
 ``` r
 rstudiothemes::list_rstudiothemes(list_installed = FALSE)
-#>  [1] "ayu Dark"                   "ayu Light"                 
-#>  [3] "Catppuccin Latte"           "Catppuccin Mocha"          
-#>  [5] "cobalt2"                    "CRAN"                      
-#>  [7] "Dracula2025"                "GitHub Dark"               
-#>  [9] "GitHub Light"               "JellyFish Theme"           
-#> [11] "Matcha"                     "Matrix"                    
-#> [13] "Night Owl"                  "Night Owl Light"           
-#> [15] "Nord"                       "OKSolar Dark"              
-#> [17] "OKSolar Light"              "OKSolar Sky"               
-#> [19] "Overflow Dark"              "Overflow Light"            
-#> [21] "Panda Syntax"               "Selenized Dark"            
-#> [23] "Selenized Light"            "Skeletor Syntax"           
-#> [25] "SynthWave 84"               "Tokyo Night Light"         
-#> [27] "Tokyo Night Storm"          "Tokyo Night"               
-#> [29] "Winter is Coming Dark Blue" "Winter is Coming Light"
+#>  [1] "Andromeda"                  "ayu Dark"                  
+#>  [3] "ayu Light"                  "Catppuccin Latte"          
+#>  [5] "Catppuccin Mocha"           "cobalt2"                   
+#>  [7] "CRAN"                       "Dracula2025"               
+#>  [9] "GitHub Dark"                "GitHub Light"              
+#> [11] "JellyFish Theme"            "Matcha"                    
+#> [13] "Matrix"                     "Night Owl"                 
+#> [15] "Night Owl Light"            "Nord"                      
+#> [17] "OKSolar Dark"               "OKSolar Light"             
+#> [19] "OKSolar Sky"                "One Dark Pro"              
+#> [21] "Overflow Dark"              "Overflow Light"            
+#> [23] "Panda Syntax"               "Selenized Dark"            
+#> [25] "Selenized Light"            "Skeletor Syntax"           
+#> [27] "SynthWave 84"               "Tokyo Night"               
+#> [29] "Tokyo Night Light"          "Tokyo Night Storm"         
+#> [31] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
 
 We also distribute all our themes in a single `.zip` file at
@@ -69,14 +70,25 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 ## Installation
 
-You can install **rstudiothemes** using either of these methods:
+Install **rstudiothemes** from
+[**CRAN**](https://CRAN.R-project.org/package=rstudiothemes):
+
+``` r
+install.packages("rstudiothemes")
+```
+
+Check the docs of the developing version in
+<https://dieghernan.github.io/rstudiothemes/dev/>
+
+You can install the developing version of **rstudiothemes** with:
 
 ``` r
 # install.packages("pak")
 pak::pak("dieghernan/rstudiothemes")
 ```
 
-Or, install it from r-universe:
+Alternatively, you can install **rstudiothemes** using the
+[r-universe](https://dieghernan.r-universe.dev/rstudiothemes):
 
 ``` r
 # Install rstudiothemes in R:
@@ -91,17 +103,21 @@ install.packages(
 
 ## Migrating an existing theme
 
-You can convert any Visual Studio Code or TextMate theme to RStudio
-format. Here’s how:
+You can convert any Visual Studio Code/Positron or TextMate theme to
+RStudio format. Here’s how:
 
-1.  Use your favorite Visual Studio Code or TextMate theme file or the
-    URL of an online theme.
+1.  Use your favorite Visual Studio Code/Positron or TextMate theme file
+    or the URL of an online theme.
 2.  Use the
     [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_to_rstudio_theme.md)
     function to convert and install it:
 
 ``` r
-rstudiothemes::convert_to_rstudio_theme("<path/to/file>", apply = TRUE, force = TRUE)
+rstudiothemes::convert_to_rstudio_theme(
+  "<path/to/file>",
+  apply = TRUE,
+  force = TRUE
+)
 ```
 
 Alternatively, install the `.rstheme` file via the RStudio UI:
@@ -110,7 +126,7 @@ Alternatively, install the `.rstheme` file via the RStudio UI:
 
 ![RStudio IDE, Add-Theme UI](reference/figures/rstudiogui.png)
 
-### Bidirectional conversion Visual Studio Code - TextMate
+### Bidirectional conversion between Visual Studio Code/Positron and TextMate themes
 
 The package also includes the conversion functions
 [`convert_vs_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_vs_to_tm_theme.md)
@@ -138,6 +154,28 @@ Contributions are welcome! To contribute to this project:
 2.  Fork the repository and create a feature branch.
 3.  Submit a pull request with clear commit messages and descriptions.
 
+## Citation
+
+Hernangómez D (2026). *rstudiothemes: Create RStudio Themes from Visual
+Studio Code, Positron and TextMate Themes*.
+[doi:10.32614/CRAN.package.rstudiothemes](https://doi.org/10.32614/CRAN.package.rstudiothemes),
+<https://dieghernan.github.io/rstudiothemes/>.
+
+A BibTeX entry for LaTeX users:
+
+``` R
+@Manual{R-rstudiothemes,
+  title = {{rstudiothemes}: Create {RStudio} Themes from {Visual Studio Code}, {Positron} and
+{TextMate} Themes},
+  doi = {10.32614/CRAN.package.rstudiothemes},
+  author = {Diego Hernangómez},
+  year = {2026},
+  version = {1.0.0.9000},
+  url = {https://dieghernan.github.io/rstudiothemes/},
+  abstract = {Create and install RStudio themes derived from Visual Studio Code, Positron and TextMate themes. Provides functions to convert between TextMate and Visual Studio Code or Positron themes, as well as ports of several Visual Studio Code themes.},
+}
+```
+
 # Package index
 
 ## Create themes
@@ -145,21 +183,16 @@ Contributions are welcome! To contribute to this project:
 ### RStudio themes
 
 - [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_to_rstudio_theme.md)
-  : Convert a TextMate or VS Code theme to an RStudio theme
+  : Convert a TextMate or VS Code/Positron theme to an RStudio theme
 
-### Visual Code Studio and TextMate themes
+### Visual Code Studio/Positron and TextMate themes
 
 - [`convert_vs_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_vs_to_tm_theme.md)
-  : Convert a Visual Studio Code theme into a TextMate theme
+  [`convert_positron_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_vs_to_tm_theme.md)
+  : Convert a Visual Studio Code/Positron theme into a TextMate theme
 - [`convert_tm_to_vs_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_tm_to_vs_theme.md)
-  : Convert a TextMate theme into a Visual Studio Code theme
-
-## Read themes
-
-- [`read_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_tm_theme.md)
-  : Read and parse a TextMate theme
-- [`read_vs_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_vs_theme.md)
-  : Read and parse a Visual Studio Code theme
+  [`convert_tm_to_positron_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_tm_to_vs_theme.md)
+  : Convert a TextMate theme into a Visual Studio Code/Positron theme
 
 ## Install, manage and preview our built-in themes
 
@@ -171,7 +204,19 @@ Based on functions of the **rsthemes** package.
   [`try_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-actions.md)
   : Install, list, try or remove RStudio themes
 
-## Utils
+## Other functions
+
+### Read themes
+
+- [`read_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_tm_theme.md)
+  : Read and parse a TextMate theme
+- [`read_vs_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_vs_theme.md)
+  [`read_positron_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_vs_theme.md)
+  : Read and parse a Visual Studio Code/Positron theme
+
+### Utils
+
+These are helper functions that we make available to others.
 
 - [`generate_uuid()`](https://dieghernan.github.io/rstudiothemes/dev/reference/generate_uuid.md)
   : Generate random UUIDs
@@ -182,13 +227,13 @@ Based on functions of the **rsthemes** package.
 
 - [`rstudiothemes`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-package.md)
   [`rstudiothemes-package`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-package.md)
-  : rstudiothemes: Create 'RStudio' Themes from Visual Studio Code and
-  'TextMate' Themes
+  : rstudiothemes: Create 'RStudio' Themes from Visual Studio Code,
+  Positron and 'TextMate' Themes
 
 # Articles
 
 ### Theme Gallery
 
-- [Showcase](https://dieghernan.github.io/rstudiothemes/dev/articles/gallery.md):
+- [Showcase](https://dieghernan.github.io/rstudiothemes/dev/articles/showcase.md):
 
-  A preview of out built-in themes
+  A preview of our built-in themes

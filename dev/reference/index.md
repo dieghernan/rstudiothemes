@@ -5,21 +5,16 @@
 ### RStudio themes
 
 - [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_to_rstudio_theme.md)
-  : Convert a TextMate or VS Code theme to an RStudio theme
+  : Convert a TextMate or VS Code/Positron theme to an RStudio theme
 
-### Visual Code Studio and TextMate themes
+### Visual Code Studio/Positron and TextMate themes
 
 - [`convert_vs_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_vs_to_tm_theme.md)
-  : Convert a Visual Studio Code theme into a TextMate theme
+  [`convert_positron_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_vs_to_tm_theme.md)
+  : Convert a Visual Studio Code/Positron theme into a TextMate theme
 - [`convert_tm_to_vs_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_tm_to_vs_theme.md)
-  : Convert a TextMate theme into a Visual Studio Code theme
-
-## Read themes
-
-- [`read_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_tm_theme.md)
-  : Read and parse a TextMate theme
-- [`read_vs_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_vs_theme.md)
-  : Read and parse a Visual Studio Code theme
+  [`convert_tm_to_positron_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_tm_to_vs_theme.md)
+  : Convert a TextMate theme into a Visual Studio Code/Positron theme
 
 ## Install, manage and preview our built-in themes
 
@@ -31,7 +26,19 @@ Based on functions of the **rsthemes** package.
   [`try_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-actions.md)
   : Install, list, try or remove RStudio themes
 
-## Utils
+## Other functions
+
+### Read themes
+
+- [`read_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_tm_theme.md)
+  : Read and parse a TextMate theme
+- [`read_vs_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_vs_theme.md)
+  [`read_positron_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_vs_theme.md)
+  : Read and parse a Visual Studio Code/Positron theme
+
+### Utils
+
+These are helper functions that we make available to others.
 
 - [`generate_uuid()`](https://dieghernan.github.io/rstudiothemes/dev/reference/generate_uuid.md)
   : Generate random UUIDs
@@ -42,5 +49,5 @@ Based on functions of the **rsthemes** package.
 
 - [`rstudiothemes`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-package.md)
   [`rstudiothemes-package`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-package.md)
-  : rstudiothemes: Create 'RStudio' Themes from Visual Studio Code and
-  'TextMate' Themes
+  : rstudiothemes: Create 'RStudio' Themes from Visual Studio Code,
+  Positron and 'TextMate' Themes

@@ -2,6 +2,6 @@
 
 ### Theme Gallery
 
-- [Showcase](https://dieghernan.github.io/rstudiothemes/dev/articles/gallery.md):
+- [Showcase](https://dieghernan.github.io/rstudiothemes/dev/articles/showcase.md):
 
-  A preview of out built-in themes
+  A preview of our built-in themes

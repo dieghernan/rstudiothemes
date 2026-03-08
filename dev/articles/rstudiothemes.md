@@ -1,15 +1,15 @@
 # Get started with rstudiothemes
 
 The **rstudiothemes** package provides tools to convert **Visual Studio
-Code** and **TextMate** themes into RStudio’s `.rstheme` format and
-install them in your RStudio IDE. It also includes a set of ready-to-use
-themes.
+Code/Positron** and **TextMate** themes into RStudio’s `.rstheme` format
+and install them in your RStudio IDE. It also includes a set of
+ready-to-use themes.
 
 ``` r
 library(rstudiothemes)
 ```
 
-## Installing Built-In Themes
+## Installing built-in themes
 
 To install all built-in RStudio themes that come with this package:
 
@@ -28,24 +28,25 @@ To see themes available now:
 
 ``` r
 list_rstudiothemes(list_installed = FALSE)
-#>  [1] "ayu Dark"                   "ayu Light"                 
-#>  [3] "Catppuccin Latte"           "Catppuccin Mocha"          
-#>  [5] "cobalt2"                    "CRAN"                      
-#>  [7] "Dracula2025"                "GitHub Dark"               
-#>  [9] "GitHub Light"               "JellyFish Theme"           
-#> [11] "Matcha"                     "Matrix"                    
-#> [13] "Night Owl"                  "Night Owl Light"           
-#> [15] "Nord"                       "OKSolar Dark"              
-#> [17] "OKSolar Light"              "OKSolar Sky"               
-#> [19] "Overflow Dark"              "Overflow Light"            
-#> [21] "Panda Syntax"               "Selenized Dark"            
-#> [23] "Selenized Light"            "Skeletor Syntax"           
-#> [25] "SynthWave 84"               "Tokyo Night Light"         
-#> [27] "Tokyo Night Storm"          "Tokyo Night"               
-#> [29] "Winter is Coming Dark Blue" "Winter is Coming Light"
+#>  [1] "Andromeda"                  "ayu Dark"                  
+#>  [3] "ayu Light"                  "Catppuccin Latte"          
+#>  [5] "Catppuccin Mocha"           "cobalt2"                   
+#>  [7] "CRAN"                       "Dracula2025"               
+#>  [9] "GitHub Dark"                "GitHub Light"              
+#> [11] "JellyFish Theme"            "Matcha"                    
+#> [13] "Matrix"                     "Night Owl"                 
+#> [15] "Night Owl Light"            "Nord"                      
+#> [17] "OKSolar Dark"               "OKSolar Light"             
+#> [19] "OKSolar Sky"                "One Dark Pro"              
+#> [21] "Overflow Dark"              "Overflow Light"            
+#> [23] "Panda Syntax"               "Selenized Dark"            
+#> [25] "Selenized Light"            "Skeletor Syntax"           
+#> [27] "SynthWave 84"               "Tokyo Night Light"         
+#> [29] "Tokyo Night Storm"          "Tokyo Night"               
+#> [31] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
 
-## Trying Themes
+## Trying themes
 
 You can quickly preview themes directly from R:
 
@@ -55,7 +56,7 @@ try_rstudiothemes()
 
 Pass a subset of styles (e.g., `"dark"` or `"light"`) if needed.
 
-## Applying a Theme
+## Applying a theme
 
 After installing themes, apply one using the RStudio API:
 
@@ -65,12 +66,15 @@ rstudioapi::applyTheme("Winter is Coming Dark Blue")
 
 ![Screenshot of theme Winter is Coming Dark Blue](winteriscoming.png)
 
-Alternatively, go to **Tools \> Global Options \> Appearance** in
+Figure 1: Screenshot of theme Winter is Coming Dark Blue
+
+Alternatively, go to **Tools \> Global Options \> Appearance \> Add** in
 RStudio and select the installed theme.
 
-## Converting Your Own Themes
+## Converting your own themes
 
-You can convert a VS Code or TextMate theme file into an RStudio theme:
+You can convert a Visual Studio Code/Positron or TextMate theme file
+into an RStudio theme:
 
 ``` r
 convert_to_rstudio_theme(
@@ -83,7 +87,7 @@ convert_to_rstudio_theme(
 This function will convert and install the theme immediately, optionally
 applying it (with `apply = TRUE`).
 
-## Workflow Example: From VS Code Theme to RStudio
+## Workflow example: From VS Code theme to RStudio
 
 1.  Choose a theme `.json` from VS Code.
 2.  Convert and install it with
@@ -95,7 +99,7 @@ applying it (with `apply = TRUE`).
 This workflow lets you easily bring your preferred editor theme into
 RStudio.
 
-## Tips and Tricks
+## Tips and tricks
 
 - **List installed themes:** `list_rstudiothemes(list_installed = TRUE)`
 - **Try specific categories:** filter themes by Light/Dark style
