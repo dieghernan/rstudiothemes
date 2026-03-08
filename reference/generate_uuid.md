@@ -11,8 +11,7 @@ generate_uuid(hint = NULL)
 
 ## Source
 
-Heavily based on an unreleased version of
-[`ids::uuid()`](https://rdrr.io/pkg/ids/man/uuid.html).
+Heavily based on an unreleased version of `ids::uuid()`.
 
 ## Arguments
 
@@ -50,10 +49,10 @@ Other helpers:
 ``` r
 # Random
 generate_uuid()
-#> [1] "9ec3e5c8-c404-4e17-8e4c-81bd36aa3d2a"
+#> [1] "ac96cb3e-e465-4e2e-9ec3-e5c8c404fe17"
 
 generate_uuid()
-#> [1] "04d42bbc-2145-4ebe-83ef-a1a2d8d52a86"
+#> [1] "4e4c81bd-36aa-4d2a-84d4-2bbc2145febe"
 
 # Persistent with hint param
 
