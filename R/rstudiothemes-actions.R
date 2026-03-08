@@ -24,6 +24,7 @@
 #'
 #' ```
 #' @author Garrick Aden-Buie <https://github.com/gadenbuie>
+#' @encoding UTF-8
 #'
 #' @references
 #'   Aden-Buie G (2026). _rsthemes: Full Themes for RStudio v1.2+_. R package

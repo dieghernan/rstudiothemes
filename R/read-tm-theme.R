@@ -10,7 +10,7 @@
 #' A [tibble][tibble::tbl_df()] with the data of the theme.
 #'
 #' @family functions for reading themes
-#'
+#' @encoding UTF-8
 #' @export
 #'
 #' @examples

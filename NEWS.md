@@ -1,3 +1,10 @@
+# rstudiothemes (development version)
+
+-   Added aliases to Visual Code functions for Positron:
+    -   `convert_positron_to_tm_theme()`.
+    -   `convert_tm_to_positron_theme()` .
+    -   `read_positron_theme()`.
+
 # rstudiothemes 1.0.0
 
 Initial **CRAN** release.

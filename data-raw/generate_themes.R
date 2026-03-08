@@ -3,7 +3,6 @@
 devtools::load_all()
 
 # Current theme
-
 current_theme <- rstudioapi::getThemeInfo()$editor
 
 remove_rstudiothemes()
@@ -26,6 +25,7 @@ url <- paste0(
   "https://raw.githubusercontent.com/ayu-theme/vscode-ayu",
   "/refs/heads/master/ayu-dark.json"
 )
+
 dd <- convert_to_rstudio_theme(
   url,
   "inst/rsthemes/Ayu_Dark.rstheme",
@@ -50,7 +50,6 @@ dd <- convert_to_rstudio_theme(
 
 # catpuccin -----
 # source("./data-raw/compile_catppucin.R")
-
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/mocha.json",
   "inst/rsthemes/Catppuccin_Mocha.rstheme",
@@ -86,7 +85,6 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-
 # cran -------------------------------------------------------------------
 url <- paste0(
   "https://raw.githubusercontent.com/dieghernan/pretty-themes/",
@@ -106,7 +104,6 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-
 # dracula (build) --------------------------------------------------------
 # source("./data-raw/compile_dracula.R")
 # Generate rstheme
@@ -121,7 +118,6 @@ dd <- convert_to_rstudio_theme(
 
 # github (build) -----------------------------------------------------------
 # source("./data-raw/compile_github.R")
-
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/dark.json",
   "inst/rsthemes/GitHub_Dark.rstheme",
@@ -140,9 +136,7 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-
 # JellyFish -------------------------------------------------------------------
-
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/JellyFish Theme-color-theme.json",
   "inst/rsthemes/JellyFish_Theme.rstheme",
@@ -151,7 +145,6 @@ dd <- convert_to_rstudio_theme(
   force = TRUE,
   output_style = "compact"
 )
-
 
 # Matcha -------------------------------------------------------------------
 url <- paste0(
@@ -168,14 +161,12 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-
 # Matrix -------------------------------------------------------------------
 # url <- file.path(
 #   "https://raw.githubusercontent.com/UstymUkhman/matrix-theme/refs/heads/",
 #   "master/themes/Matrix-color-theme.json"
 # )
 # Generate rstheme
-
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/Matrix-color-theme.json",
   "inst/rsthemes/Matrix.rstheme",
@@ -213,12 +204,12 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-
 # Nord -------------------------------------------------------------------
 url <- file.path(
   "https://raw.githubusercontent.com/nordtheme/visual-studio-code/refs/heads/",
   "develop/themes/nord-color-theme.json"
 )
+
 # Generate rstheme
 dd <- convert_to_rstudio_theme(
   url,
@@ -234,6 +225,7 @@ url <- file.path(
   "https://raw.githubusercontent.com/dieghernan/oksolar-theme/refs/heads/",
   "main/dist/vscode/themes/oksolar-light-color-theme.json"
 )
+
 # Generate rstheme
 dd <- convert_to_rstudio_theme(
   url,
@@ -248,6 +240,7 @@ url <- file.path(
   "https://raw.githubusercontent.com/dieghernan/oksolar-theme/refs/heads/",
   "main/dist/vscode/themes/oksolar-dark-color-theme.json"
 )
+
 # Generate rstheme
 dd <- convert_to_rstudio_theme(
   url,
@@ -262,6 +255,7 @@ url <- file.path(
   "https://raw.githubusercontent.com/dieghernan/oksolar-theme/refs/heads/",
   "main/dist/vscode/themes/oksolar-sky-color-theme.json"
 )
+
 # Generate rstheme
 dd <- convert_to_rstudio_theme(
   url,
@@ -273,7 +267,6 @@ dd <- convert_to_rstudio_theme(
 )
 
 # One Dark Pro ---------------------------------------
-
 url <- paste0(
   "https://raw.githubusercontent.com/Binaryify/OneDark-Pro/",
   "refs/heads/master/themes/OneDark-Pro.json"

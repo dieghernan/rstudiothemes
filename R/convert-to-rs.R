@@ -48,7 +48,7 @@
 #' <https://docs.posit.co/ide/user/ide/guide/ui/appearance.html>.
 #'
 #' @family functions for creating themes
-#'
+#' @encoding UTF-8
 #' @export
 #'
 #' @seealso [rstudioapi::addTheme()], [rstudioapi::applyTheme()]

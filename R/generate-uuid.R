@@ -3,6 +3,7 @@
 #' Generate version 4 (pseudo-random) Universally Unique Identifiers (UUIDs).
 #'
 #' @family helpers
+#' @encoding UTF-8
 #'
 #' @param hint Optional. A character string (or object coercible with
 #'   [as.character()]) to be used as a random seed.

@@ -3,17 +3,16 @@
 #' @description
 #' Read a `.json` file representing a Visual Studio Code/Positron theme.
 #'
+#' @encoding UTF-8
+#' @family functions for reading themes
+#' @inherit read_tm_theme return
+#' @export
+#' @rdname read_vs_theme
+#'
 #' @param path Path or URL to a Visual Studio Code/Positron theme, in `.json`
 #'   format.
 #'
-#' @inherit read_tm_theme return
-#'
-#' @family functions for reading themes
-#'
-#' @export
-#'
 #' @examples
-#'
 #' vstheme <- system.file("ext/test-color-theme.json",
 #'   package = "rstudiothemes"
 #' )
@@ -217,3 +216,9 @@ read_vs_theme <- function(path) {
 
   final_df[!undef, ]
 }
+
+#' @rdname read_vs_theme
+#' @export
+#' @description
+#' `read_positron_theme()` is an alias of `read_vs_theme()`.
+read_positron_theme <- read_vs_theme

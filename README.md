@@ -82,8 +82,8 @@ rstudiothemes::list_rstudiothemes(list_installed = FALSE)
 #> [21] "Overflow Dark"              "Overflow Light"            
 #> [23] "Panda Syntax"               "Selenized Dark"            
 #> [25] "Selenized Light"            "Skeletor Syntax"           
-#> [27] "SynthWave 84"               "Tokyo Night Light"         
-#> [29] "Tokyo Night Storm"          "Tokyo Night"               
+#> [27] "SynthWave 84"               "Tokyo Night"               
+#> [29] "Tokyo Night Light"          "Tokyo Night Storm"         
 #> [31] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
 
@@ -202,7 +202,7 @@ A BibTeX entry for LaTeX users:
       doi = {10.32614/CRAN.package.rstudiothemes},
       author = {Diego Hernangómez},
       year = {2026},
-      version = {1.0.0},
+      version = {1.0.0.9000},
       url = {https://dieghernan.github.io/rstudiothemes/},
       abstract = {Create and install RStudio themes derived from Visual Studio Code, Positron and TextMate themes. Provides functions to convert between TextMate and Visual Studio Code or Positron themes, as well as ports of several Visual Studio Code themes.},
     }

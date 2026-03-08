@@ -4,6 +4,8 @@
 #' Read a `.json` file representing a Visual Studio Code/Positron theme and
 #' write the equivalent TextMate theme (`.tmTheme`).
 #'
+#' @encoding UTF-8
+#' @rdname convert_vs_to_tm_theme
 #' @inheritParams read_vs_theme
 #' @inheritParams convert_vs_to_tm_theme
 #'
@@ -188,6 +190,13 @@ convert_vs_to_tm_theme <- function(
 
   outfile
 }
+
+
+#' @rdname convert_vs_to_tm_theme
+#' @export
+#' @description
+#' `convert_positron_to_tm_theme()` is an alias of `convert_vs_to_tm_theme()`.
+convert_positron_to_tm_theme <- convert_vs_to_tm_theme
 
 tmtheme_settings_df <- function(vs_df) {
   # Mapping

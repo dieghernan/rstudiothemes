@@ -4,16 +4,16 @@
 #' Read a `.tmTheme` file representing a TextMate theme and write the
 #' equivalent Visual Studio Code theme (`.json`).
 #'
+#' @encoding UTF-8
 #' @inheritParams read_tm_theme
 #' @inheritParams convert_vs_to_tm_theme
+#' @family functions for creating themes
+#' @export
+#' @rdname convert_tm_to_vs_theme
 #'
 #' @returns
 #' This function is called for its side effects. It writes a new `.json`
 #' file in `outfile` and returns the path.
-#'
-#' @family functions for creating themes
-#'
-#' @export
 #'
 #' @examples
 #' tmtheme <- system.file("ext/test.tmTheme",
@@ -235,6 +235,13 @@ convert_tm_to_vs_theme <- function(
 
   outfile
 }
+
+#' @rdname convert_tm_to_vs_theme
+#' @export
+#' @description
+#' `convert_tm_to_positron_theme()` is an alias of `convert_tm_to_vs_theme()`.
+#'
+convert_tm_to_positron_theme <- convert_tm_to_vs_theme
 
 get_table_value <- function(x, field, feature = "value") {
   ensure_null(x[x$name == field, ][[feature]])
