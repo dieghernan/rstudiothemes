@@ -52,7 +52,7 @@ reference:
 - title: Create themes
 - subtitle: RStudio themes
   contents: convert_to_rstudio_theme
-- subtitle: Visual Code Studio and TextMate themes
+- subtitle: Visual Code Studio/Positron and TextMate themes
   contents:
   - convert_vs_to_tm_theme
   - convert_tm_to_vs_theme
