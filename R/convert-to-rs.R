@@ -7,14 +7,14 @@
 #' Optionally, the generated theme can be installed and applied to the
 #' RStudio IDE.
 #'
-#' **Important**: This function only works in RStudio; it returns `NULL` when
+#' **Important**: This function only works in RStudio. It returns `NULL` when
 #' called from other IDEs.
 #'
 #' @param path Path or URL to a TextMate theme (`.tmTheme` format) or a Visual
 #'   Studio Code theme (`.json` format).
 #' @param apply Logical. Apply the theme with [rstudioapi::applyTheme()].
 #' @param use_italics Logical. Whether to use italics in the resulting theme.
-#'   By default `TRUE`; however, some themes may look better without italics.
+#'   By default `TRUE`. However, some themes may look better without italics.
 #'
 #' @inheritParams rstudioapi::addTheme
 #' @inheritParams sass::sass_options

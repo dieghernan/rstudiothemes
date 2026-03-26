@@ -3,7 +3,7 @@
 #' Install, list, try or remove RStudio themes
 #'
 #' @description
-#' Adaptation of some \pkg{rsthemes} functions,
+#' Adaptation of some \pkg{rsthemes} functions.
 #'
 #' ```{r, echo=FALSE, results='asis'}
 #'
@@ -13,8 +13,8 @@
 #' ```
 #'
 #' **Important**: These functions (except
-#' `list_rstudiothemes(list_installed = FALSE)`) only work in RStudio; they
-#' return `NULL` when called from other IDEs.
+#' `list_rstudiothemes(list_installed = FALSE)`) only work in RStudio, returning
+#' `NULL` when called from other IDEs.
 #'
 #' @section Ported Themes:
 #' \pkg{rstudiothemes} includes RStudio themes based on the

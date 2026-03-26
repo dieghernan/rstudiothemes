@@ -56,12 +56,12 @@ prompts, which will restore the original theme.
 }
 }
 \description{
-Adaptation of some \pkg{rsthemes} functions,
+Adaptation of some \pkg{rsthemes} functions.
 \href{https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md}{MIT License} Copyright © rsthemes authors.
 
 \strong{Important}: These functions (except
-\code{list_rstudiothemes(list_installed = FALSE)}) only work in RStudio; they
-return \code{NULL} when called from other IDEs.
+\code{list_rstudiothemes(list_installed = FALSE)}) only work in RStudio, returning
+\code{NULL} when called from other IDEs.
 }
 \section{Functions}{
 \itemize{

@@ -26,7 +26,7 @@ a temporary file (\code{\link[=tempfile]{tempfile()}}).}
 the theme in \code{path} will be used.}
 
 \item{use_italics}{Logical. Whether to use italics in the resulting theme.
-By default \code{TRUE}; however, some themes may look better without italics.}
+By default \code{TRUE}. However, some themes may look better without italics.}
 
 \item{output_style}{Bracketing and formatting style of the CSS output.
 Possible styles: \code{"nested"}, \code{"expanded"}, \code{"compact"}, and
@@ -49,7 +49,7 @@ Studio Code theme and write the equivalent RStudio theme \code{.rstheme}.
 Optionally, the generated theme can be installed and applied to the
 RStudio IDE.
 
-\strong{Important}: This function only works in RStudio; it returns \code{NULL} when
+\strong{Important}: This function only works in RStudio. It returns \code{NULL} when
 called from other IDEs.
 }
 \details{

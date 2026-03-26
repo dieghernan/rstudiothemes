@@ -74,7 +74,7 @@ read_tm_theme <- function(path) {
 
   # 1. High-level inputs -----
   specs <- tm$plist$dict
-  # Do not use the array; this is where the colors are
+  # Do not use the array, this is where the colors are
   highlev <- specs[names(specs) != "array"]
 
   # Strong assumption: structure should be a list of consecutive

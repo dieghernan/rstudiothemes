@@ -1,14 +1,14 @@
 #' Check whether the session is running in RStudio
 #'
 #' @description
-#' Detect whether the current R session is running in RStudio; used to
+#' Detect whether the current R session is running in RStudio, used to
 #' decide if themes can be applied to the IDE.
 #'
 #' @returns
-#' Logical; `TRUE` if running in RStudio, otherwise `FALSE`.
+#' Logical, `TRUE` if running in RStudio, otherwise `FALSE`.
 #'
 #' @family helpers
-#'
+#' @encoding UTF-8
 #' @export
 #'
 #' @examples
