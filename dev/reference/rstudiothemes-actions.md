@@ -1,12 +1,12 @@
 # Install, list, try or remove RStudio themes
 
-Adaptation of some rsthemes functions, [MIT
+Adaptation of some rsthemes functions. [MIT
 License](https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md)
 Copyright © rsthemes authors.
 
 **Important**: These functions (except
-`list_rstudiothemes(list_installed = FALSE)`) only work in RStudio; they
-return `NULL` when called from other IDEs.
+`list_rstudiothemes(list_installed = FALSE)`) only work in RStudio,
+returning `NULL` when called from other IDEs.
 
 ## Usage
 

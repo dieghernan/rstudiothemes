@@ -6,7 +6,7 @@ Studio Code theme and write the equivalent RStudio theme `.rstheme`.
 Optionally, the generated theme can be installed and applied to the
 RStudio IDE.
 
-**Important**: This function only works in RStudio; it returns `NULL`
+**Important**: This function only works in RStudio. It returns `NULL`
 when called from other IDEs.
 
 ## Usage
@@ -43,7 +43,7 @@ convert_to_rstudio_theme(
 - use_italics:
 
   Logical. Whether to use italics in the resulting theme. By default
-  `TRUE`; however, some themes may look better without italics.
+  `TRUE`. However, some themes may look better without italics.
 
 - output_style:
 

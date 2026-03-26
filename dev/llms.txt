@@ -6,8 +6,8 @@ Convert **Visual Studio Code/Positron** and **TextMate** themes into
 This package provides tools to easily convert Visual Studio
 Code/Positron and TextMate theme files (`.json` and `.tmTheme` formats)
 into RStudio-compatible `.rstheme` files. RStudio has supported custom
-themes in `.rstheme` format since [version
-1.2+](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html).
+themes in `.rstheme` format since RStudio 1.2 (see [theme creation
+documentation](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html)).
 
 ## Features
 

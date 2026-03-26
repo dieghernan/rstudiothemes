@@ -178,7 +178,7 @@ Winter is Coming Light
 
 About the screenshots
 
-Previews may differ of the actual display in your device. These
+Previews may differ from the actual display on your device. These
 screenshots were taken under the following conditions:
 
 **RStudio Version**
