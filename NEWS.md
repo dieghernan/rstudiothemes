@@ -9,7 +9,7 @@
 -   New themes:
 
     -   `"Positron 2026 Dark"` and `"Positron 2026 Light"` by Positron.
-    -   `"VSCode Dark"` and `"VSCode Light"` by Visual Code.
+    -   `"VSCode Dark"` and `"VSCode Light"` by Visual Studio Code.
 
 # rstudiothemes 1.0.0
 
