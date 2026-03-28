@@ -38,7 +38,6 @@
     "list.errorForeground": "#fe4450E6",
     "list.warningForeground": "#72f1b8bb",
     "activityBar.background": "#171520",
-    "activityBar.dropBackground": "#34294f66",
     "activityBar.foreground": "#ffffffCC",
     "activityBarBadge.background": "#f97e72",
     "activityBarBadge.foreground": "#2a2139",
@@ -55,7 +54,7 @@
     "tab.activeBorder": "#880088",
     "tab.inactiveBackground": "#262335",
     "editor.background": "#262335",
-	"editor.foreground": "#F8F8F2",
+    "editor.foreground": "#F8F8F2",
     "editorLineNumber.foreground": "#ffffff73",
     "editorLineNumber.activeForeground": "#ffffffcc",
     "editorCursor.background": "#241b2f",
@@ -70,8 +69,8 @@
     "editor.hoverHighlightBackground": "#463564",
     "editor.lineHighlightBorder": "#7059AB66",
     "editor.rangeHighlightBackground": "#49549539",
-    "editorIndentGuide.background": "#444251",
-    "editorIndentGuide.activeBackground": "#A148AB80",
+    "editorIndentGuide.background1": "#444251",
+    "editorIndentGuide.activeBackground1": "#A148AB80",
     "editorRuler.foreground": "#A148AB80",
     "editorCodeLens.foreground": "#ffffff7c",
     "editorBracketMatch.background": "#34294f66",
@@ -177,7 +176,10 @@
     },
     {
       "name": "Variable",
-      "scope": ["variable", "entity.name.variable"],
+      "scope": [
+        "variable",
+        "entity.name.variable"
+      ],
       "settings": {
         "foreground": "#ff7edb"
       }
@@ -199,7 +201,10 @@
     },
     {
       "name": "Storage (declaration or modifier keyword)",
-      "scope": ["storage.type", "storage.modifier"],
+      "scope": [
+        "storage.type",
+        "storage.modifier"
+      ],
       "settings": {
         "foreground": "#fede5d"
       }
@@ -255,7 +260,9 @@
     },
     {
       "name": "HTML or XML tag brackets",
-      "scope": ["punctuation.definition.tag"],
+      "scope": [
+        "punctuation.definition.tag"
+      ],
       "settings": {
         "foreground": "#36f9f6"
       }
@@ -277,7 +284,10 @@
     },
     {
       "name": "Class",
-      "scope": ["entity.name.type", "meta.attribute.class.html"],
+      "scope": [
+        "entity.name.type",
+        "meta.attribute.class.html"
+      ],
       "settings": {
         "foreground": "#fe4450"
       }
@@ -291,21 +301,29 @@
     },
     {
       "name": "Function",
-      "scope": ["entity.name.function", "variable.function"],
+      "scope": [
+        "entity.name.function",
+        "variable.function"
+      ],
       "settings": {
         "foreground": "#36f9f6"
       }
     },
     {
       "name": "JS Export",
-      "scope": ["keyword.control.export.js", "keyword.control.import.js"],
+      "scope": [
+        "keyword.control.export.js",
+        "keyword.control.import.js"
+      ],
       "settings": {
         "foreground": "#72f1b8"
       }
     },
     {
       "name": "JS Numerics",
-      "scope": ["constant.numeric.decimal.js"],
+      "scope": [
+        "constant.numeric.decimal.js"
+      ],
       "settings": {
         "foreground": "#2EE2FA"
       }
@@ -372,7 +390,10 @@
     },
     {
       "name": "Object literal key / property",
-      "scope": ["meta.object-literal.key", "support.type.property-name"],
+      "scope": [
+        "meta.object-literal.key",
+        "support.type.property-name"
+      ],
       "settings": {
         "foreground": "#ff7edb"
       }
@@ -465,14 +486,20 @@
     },
     {
       "name": "Markup heading",
-      "scope": ["markup.heading", "entity.name.section"],
+      "scope": [
+        "markup.heading",
+        "entity.name.section"
+      ],
       "settings": {
         "foreground": "#ff7edb"
       }
     },
     {
       "name": "Markup text",
-      "scope": ["text.html", "keyword.operator.assignment"],
+      "scope": [
+        "text.html",
+        "keyword.operator.assignment"
+      ],
       "settings": {
         "foreground": "#ffffffee"
       }
@@ -818,7 +845,11 @@
     },
     {
       "name": "Basic source colours",
-      "scope": ["source.dart", "source.python", "source.scala"],
+      "scope": [
+        "source.dart",
+        "source.python",
+        "source.scala"
+      ],
       "settings": {
         "foreground": "#ff7edbff"
       }

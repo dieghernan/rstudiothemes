@@ -36,13 +36,18 @@
       }
     },
     {
-      "scope": ["markup.quote.markdown"],
+      "scope": [
+        "markup.quote.markdown"
+      ],
       "settings": {
         "foreground": "#82AAFF"
       }
     },
     {
-      "scope": ["markup.bold.markdown", "punctuation.definition.bold.markdown"],
+      "scope": [
+        "markup.bold.markdown",
+        "punctuation.definition.bold.markdown"
+      ],
       "settings": {
         "fontStyle": "bold",
         "foreground": "#57cdff"
@@ -67,7 +72,9 @@
       }
     },
     {
-      "scope": ["punctuation.definition.metadata.markdown"],
+      "scope": [
+        "punctuation.definition.metadata.markdown"
+      ],
       "settings": {
         "foreground": "#f3b8c2"
       }
@@ -104,7 +111,10 @@
     },
     {
       "name": "String Quoted",
-      "scope": ["string.quoted", "variable.other.readwrite.js"],
+      "scope": [
+        "string.quoted",
+        "variable.other.readwrite.js"
+      ],
       "settings": {
         "fontStyle": "",
         "foreground": "#d3eed6"
@@ -144,7 +154,10 @@
     },
     {
       "name": "User-defined constant",
-      "scope": ["constant.character", "constant.other"],
+      "scope": [
+        "constant.character",
+        "constant.other"
+      ],
       "settings": {
         "foreground": "#82AAFF"
       }
@@ -192,7 +205,10 @@
     },
     {
       "name": "TypeScript Entity Name Type",
-      "scope": ["entity.name.type.tsx", "entity.name.type.module.tsx"],
+      "scope": [
+        "entity.name.type.tsx",
+        "entity.name.type.module.tsx"
+      ],
       "settings": {
         "foreground": "#d29ffcff"
       }
@@ -209,7 +225,9 @@
     },
     {
       "name": "Variable Property Other object property",
-      "scope": ["variable.other.object.property"],
+      "scope": [
+        "variable.other.object.property"
+      ],
       "settings": {
         "foreground": "#f7ecb5"
       }
@@ -229,7 +247,10 @@
     },
     {
       "name": "JavaScript Variable Other ReadWrite",
-      "scope": ["variable.other.readwrite.js", "variable.parameter"],
+      "scope": [
+        "variable.other.readwrite.js",
+        "variable.parameter"
+      ],
       "settings": {
         "foreground": "#d7dbe0"
       }
@@ -270,7 +291,9 @@
     },
     {
       "name": "Keywords operators",
-      "scope": ["keyword.operator"],
+      "scope": [
+        "keyword.operator"
+      ],
       "settings": {
         "foreground": "#00bff9"
       }
@@ -317,7 +340,10 @@
     },
     {
       "name": "Variables, Let and Const",
-      "scope": ["variable.other.readwrites", "meta.definition.variable"],
+      "scope": [
+        "variable.other.readwrites",
+        "meta.definition.variable"
+      ],
       "settings": {
         "fontStyle": "",
         "foreground": "#f7ecb5"
@@ -369,14 +395,19 @@
     },
     {
       "name": "Meta - Decorator",
-      "scope": ["punctuation.decorator"],
+      "scope": [
+        "punctuation.decorator"
+      ],
       "settings": {
         "foreground": "#f7ecb5"
       }
     },
     {
       "name": "Punctuation/Brackets/Tags",
-      "scope": ["punctuation.definition.block", "punctuation.definition.tag"],
+      "scope": [
+        "punctuation.definition.block",
+        "punctuation.definition.tag"
+      ],
       "settings": {
         "foreground": "#ffffff"
       }
@@ -399,7 +430,10 @@
     },
     {
       "name": "Library class/type",
-      "scope": ["support.type", "support.class"],
+      "scope": [
+        "support.type",
+        "support.class"
+      ],
       "settings": {
         "foreground": "#7fdbca"
       }
@@ -510,7 +544,9 @@
     },
     {
       "name": "[Markdown] text ",
-      "scope": ["meta.paragraph.markdown"],
+      "scope": [
+        "meta.paragraph.markdown"
+      ],
       "settings": {
         "foreground": "#ffffff"
       }

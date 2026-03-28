@@ -464,7 +464,29 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-# Create dist release
+# VSCode -------------------------------------------------------------------
+
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  "data-raw/vscode_themes/vscode_dark.json",
+  "inst/rsthemes/VSCode_Dark.rstheme",
+  name = "VSCode Dark",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  "data-raw/vscode_themes/vscode_light.json",
+  "inst/rsthemes/VSCode_Light.rstheme",
+  name = "VSCode Light",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+# Create dist release -----
 allt <- list.files("inst/rsthemes/", full.names = TRUE)
 
 unlink("pkgdown/assets/dist/rstudiothemes.zip", force = TRUE)
