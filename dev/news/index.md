@@ -3,10 +3,15 @@
 ## rstudiothemes (development version)
 
 - Added aliases to Visual Code functions for Positron:
+
   - [`convert_positron_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_vs_to_tm_theme.md).
   - [`convert_tm_to_positron_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_tm_to_vs_theme.md)
     .
   - [`read_positron_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_vs_theme.md).
+
+- New themes:
+
+  - `"Positron 2026 Dark"` and `"Positron 2026 Light"` by Positron.
 
 ## rstudiothemes 1.0.0
 

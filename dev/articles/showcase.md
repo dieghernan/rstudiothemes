@@ -131,6 +131,16 @@ Syntax](screenshots/pandasyntax.png)](https://dieghernan.github.io/rstudiothemes
 
 Panda Syntax
 
+[![Positron 2026
+Dark](screenshots/positron2026dark.png)](https://dieghernan.github.io/rstudiothemes/dev/articles/screenshots/positron2026dark.png)
+
+Positron 2026 Dark
+
+[![Positron 2026
+Light](screenshots/positron2026light.png)](https://dieghernan.github.io/rstudiothemes/dev/articles/screenshots/positron2026light.png)
+
+Positron 2026 Light
+
 [![Selenized
 Dark](screenshots/selenizeddark.png)](https://dieghernan.github.io/rstudiothemes/dev/articles/screenshots/selenizeddark.png)
 
@@ -236,6 +246,10 @@ Overflow Dark
 Overflow Light
 
 Panda Syntax
+
+Positron 2026 Dark
+
+Positron 2026 Light
 
 Selenized Dark
 

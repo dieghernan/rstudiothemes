@@ -39,11 +39,12 @@ list_rstudiothemes(list_installed = FALSE)
 #> [17] "OKSolar Dark"               "OKSolar Light"             
 #> [19] "OKSolar Sky"                "One Dark Pro"              
 #> [21] "Overflow Dark"              "Overflow Light"            
-#> [23] "Panda Syntax"               "Selenized Dark"            
-#> [25] "Selenized Light"            "Skeletor Syntax"           
-#> [27] "SynthWave 84"               "Tokyo Night Light"         
-#> [29] "Tokyo Night Storm"          "Tokyo Night"               
-#> [31] "Winter is Coming Dark Blue" "Winter is Coming Light"
+#> [23] "Panda Syntax"               "Positron 2026 Dark"        
+#> [25] "Positron 2026 Light"        "Selenized Dark"            
+#> [27] "Selenized Light"            "Skeletor Syntax"           
+#> [29] "SynthWave 84"               "Tokyo Night Light"         
+#> [31] "Tokyo Night Storm"          "Tokyo Night"               
+#> [33] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
 
 ## Trying themes
