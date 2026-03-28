@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   rstudiothemes: rstudiothemes.html
   articles/showcase: showcase.html
-last_built: 2026-03-28T19:20Z
+last_built: 2026-03-28T19:26Z
 urls:
   reference: https://dieghernan.github.io/rstudiothemes/reference
   article: https://dieghernan.github.io/rstudiothemes/articles
