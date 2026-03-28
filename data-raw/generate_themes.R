@@ -435,6 +435,35 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
+# Positron -------------------------------------------------------------------
+url <- file.path(
+  "https://raw.githubusercontent.com/posit-dev/positron/refs/heads/main",
+  "/extensions/theme-2026/themes/2026-dark.json"
+)
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/Positron_2026_Dark.rstheme",
+  name = "Positron 2026 Dark",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
+url <- file.path(
+  "https://raw.githubusercontent.com/posit-dev/positron/refs/heads/main",
+  "/extensions/theme-2026/themes/2026-light.json"
+)
+# Generate rstheme
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/Positron_2026_Light.rstheme",
+  name = "Positron 2026 Light",
+  force = TRUE,
+  apply = TRUE,
+  output_style = "compact"
+)
+
 # Create dist release
 allt <- list.files("inst/rsthemes/", full.names = TRUE)
 

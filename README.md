@@ -50,7 +50,7 @@ environment:
 ``` r
 rstudiothemes::install_rstudiothemes()
 
-#> ✔ Installed 32 themes
+#> ✔ Installed 34 themes
 #> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes
 #> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes
 
@@ -80,11 +80,12 @@ rstudiothemes::list_rstudiothemes(list_installed = FALSE)
 #> [17] "OKSolar Dark"               "OKSolar Light"             
 #> [19] "OKSolar Sky"                "One Dark Pro"              
 #> [21] "Overflow Dark"              "Overflow Light"            
-#> [23] "Panda Syntax"               "Selenized Dark"            
-#> [25] "Selenized Light"            "Skeletor Syntax"           
-#> [27] "SynthWave 84"               "Tokyo Night"               
-#> [29] "Tokyo Night Light"          "Tokyo Night Storm"         
-#> [31] "Winter is Coming Dark Blue" "Winter is Coming Light"
+#> [23] "Panda Syntax"               "Positron 2026 Dark"        
+#> [25] "Positron 2026 Light"        "Selenized Dark"            
+#> [27] "Selenized Light"            "Skeletor Syntax"           
+#> [29] "SynthWave 84"               "Tokyo Night"               
+#> [31] "Tokyo Night Light"          "Tokyo Night Storm"         
+#> [33] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
 
 We also distribute all our themes in a single `.zip` file at
