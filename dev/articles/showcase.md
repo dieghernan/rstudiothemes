@@ -176,6 +176,16 @@ Storm](screenshots/tokyonightstorm.png)](https://dieghernan.github.io/rstudiothe
 
 Tokyo Night Storm
 
+[![VSCode
+Dark](screenshots/vscodedark.png)](https://dieghernan.github.io/rstudiothemes/dev/articles/screenshots/vscodedark.png)
+
+VSCode Dark
+
+[![VSCode
+Light](screenshots/vscodelight.png)](https://dieghernan.github.io/rstudiothemes/dev/articles/screenshots/vscodelight.png)
+
+VSCode Light
+
 [![Winter is Coming Dark
 Blue](screenshots/winteriscomingdarkblue.png)](https://dieghernan.github.io/rstudiothemes/dev/articles/screenshots/winteriscomingdarkblue.png)
 
@@ -264,6 +274,10 @@ Tokyo Night
 Tokyo Night Light
 
 Tokyo Night Storm
+
+VSCode Dark
+
+VSCode Light
 
 Winter is Coming Dark Blue
 

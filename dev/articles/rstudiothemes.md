@@ -44,7 +44,8 @@ list_rstudiothemes(list_installed = FALSE)
 #> [27] "Selenized Light"            "Skeletor Syntax"           
 #> [29] "SynthWave 84"               "Tokyo Night Light"         
 #> [31] "Tokyo Night Storm"          "Tokyo Night"               
-#> [33] "Winter is Coming Dark Blue" "Winter is Coming Light"
+#> [33] "VSCode Dark"                "VSCode Light"              
+#> [35] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
 
 ## Trying themes
