@@ -145,7 +145,8 @@
     "welcomePage.tileBackground": "#2b2b2b",
     "widget.border": "#313131",
     "editorWhitespace.foreground": "#8c8c8c4d", // VSCode ported
-    "editor.selectionBackground": "#276782dd" // VSCode ported
+    "editor.selectionBackground": "#276782dd", // VSCode ported
+    "editorCursor.foreground": "#3A78B1" // Accent like activityBar bg
   },
   "tokenColors": [
     {

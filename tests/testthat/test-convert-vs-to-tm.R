@@ -2,6 +2,24 @@ test_that("Errors", {
   expect_snapshot(error = TRUE, convert_vs_to_tm_theme())
   expect_snapshot(error = TRUE, convert_vs_to_tm_theme("a.txt"))
   expect_snapshot(error = TRUE, convert_vs_to_tm_theme("a.json"))
+
+  # Theme with missing values
+  vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
+  miss <- jsonlite::read_json(vstheme)
+  miss$colors$editor.background <- NULL
+
+  tmp_path <- tempfile("corrupt", fileext = ".json")
+  jsonlite::write_json(miss, tmp_path)
+  expect_snapshot(convert_vs_to_tm_theme(tmp_path), error = TRUE)
+
+  # TODO
+  # miss2 <- jsonlite::read_json(vstheme)
+  # miss2$tokenColors <- NULL
+  # miss2$semanticTokenColors <- NULL
+  # tmp_path <- tempfile("corrupt2", fileext = ".json")
+  # jsonlite::write_json(miss2, tmp_path)
+  # aa <- read_vs_theme(tmp_path)
+  # expect_snapshot(convert_vs_to_tm_theme(tmp_path), error = TRUE)
 })
 
 

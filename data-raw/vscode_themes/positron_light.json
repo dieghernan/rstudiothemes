@@ -154,7 +154,8 @@
     "welcomePage.tileBackground": "#f3f3f3",
     "widget.border": "#e5e5e5",
     "editorWhitespace.foreground": "#60606040", // VS Ported
-    "editor.selectionBackground": "#0069cc40" // VS Ported
+    "editor.selectionBackground": "#0069cc40", // VS Ported
+    "editorCursor.foreground": "#3A78B1" // Accent like activityBar bg
   },
   "tokenColors": [
     {

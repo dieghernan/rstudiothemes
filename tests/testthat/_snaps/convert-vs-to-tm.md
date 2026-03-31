@@ -22,6 +22,14 @@
       Error in `read_vs_theme()`:
       ! File 'a.json' does not exist.
 
+---
+
+    Code
+      convert_vs_to_tm_theme(tmp_path)
+    Condition
+      Error in `tmtheme_settings_df()`:
+      ! Can't convert theme. No color detected for setting "background".
+
 # Theme creation
 
     Code

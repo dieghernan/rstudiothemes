@@ -226,6 +226,16 @@ tmtheme_settings_df <- function(vs_df) {
   # As a bare minimum we should have: background, foreground, selection,
   # invisibles, lineHighlight, and caret. If any are missing, assign defaults.
 
+  # Check minimums
+  check_vals <- c("background", "foreground", "selection") %in% end$tm
+
+  if (!all(check_vals)) {
+    miss <- c("background", "foreground", "selection")[!check_vals] # nolint
+    cli::cli_abort(
+      "Can't convert theme. No color detected for setting{?/s} {.str {miss}}."
+    )
+  }
+
   fg <- as.character(end[end$tm == "foreground", 2])
   sel <- as.character(end[end$tm == "selection", 2])
 
