@@ -6,7 +6,7 @@
 
   A preview of our built-in themes
 
-### Apps
+### Online app
 
 - [Shiny
   App](https://dieghernan.github.io/rstudiothemes/dev/articles/shinyapp.md):
