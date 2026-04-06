@@ -92,9 +92,9 @@ convert_to_rstudio_theme(
 This function will convert and install the theme immediately, optionally
 applying it (with `apply = TRUE`).
 
-## Workflow example: From VS Code theme to RStudio
+## Workflow example: From Visual Studio Code/Positron theme to RStudio
 
-1.  Choose a theme `.json` from VS Code.
+1.  Choose a theme `.json` file from Visual Studio Code/Positron.
 2.  Convert and install it with `convert_to_rstudio_theme()`.
 3.  Apply it with `rstudioapi::applyTheme()` or via RStudio UI.
 

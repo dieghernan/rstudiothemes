@@ -1,9 +1,9 @@
 # rstudiothemes (development version)
 
--   Added aliases to Visual Code functions for Positron:
+-   Added aliases to Visual Studio Code functions for Positron:
 
     -   `convert_positron_to_tm_theme()`.
-    -   `convert_tm_to_positron_theme()` .
+    -   `convert_tm_to_positron_theme()`.
     -   `read_positron_theme()`.
 
 -   New themes:
@@ -15,8 +15,8 @@
 
 Initial **CRAN** release.
 
--   Migrate vignettes and articles to Quarto (#9).
--   Add DOI:
+-   Migrated vignettes and articles to Quarto (#9).
+-   Added DOI:
     [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18519155.svg)](https://doi.org/10.5281/zenodo.18519155).
 -   Repo status is active: [![Project Status: Active - The project has reached a
     stable, usable state and is being actively
