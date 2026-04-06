@@ -82,6 +82,9 @@ articles:
 - title: Theme Gallery
   contents:
   - articles/showcase
+- title: Apps
+  contents:
+  - articles/shinyapp
 
 redirects:
 - ["articles/gallery.html", "articles/showcase.html"]
