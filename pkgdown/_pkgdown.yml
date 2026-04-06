@@ -22,22 +22,12 @@ repo:
 
 navbar:
   structure:
-    left:
-    - intro
-    - reference
-    - articles
-    - showcase
-    - tutorials
-    - news
     right:
     - search
     - github
     - donate
     - lightswitch
   components:
-    showcase:
-      text: Showcase
-      href: articles/showcase.html
     donate:
       icon: fa-hand-holding-dollar
       href: https://ko-fi.com/dieghernan
@@ -82,7 +72,7 @@ articles:
 - title: Theme Gallery
   contents:
   - articles/showcase
-- title: Apps
+- title: Online app
   contents:
   - articles/shinyapp
 
