@@ -70,9 +70,11 @@ authors:
 
 articles:
 - title: Theme Gallery
+  navbar: Theme Gallery
   contents:
   - articles/showcase
 - title: Online app
+  navbar: Online app
   contents:
   - articles/shinyapp
 
