@@ -65,7 +65,7 @@ rstudiothemes::list_rstudiothemes(list_installed = FALSE)
 #> [35] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
 
-We also distribute all our themes in a single `.zip` file at
+We also distribute all bundled themes in a single `.zip` file at
 <https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip>.
 Unzip and install using the [RStudio IDE
 interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
@@ -103,13 +103,21 @@ install.packages(
 )
 ```
 
+## Try our Shiny App
+
+We also developed a Shiny App with most of the features of
+**rstudiothemes** that allows you to convert between themes online. Try
+it out:
+
+<https://dieghernan-themeconverter.share.connect.posit.cloud/>
+
 ## Migrating an existing theme
 
 You can convert any Visual Studio Code/Positron or TextMate theme to
 RStudio format. Here’s how:
 
-1.  Use your favorite Visual Studio Code/Positron or TextMate theme file
-    or the URL of an online theme.
+1.  Use your favorite Visual Studio Code/Positron theme file, a TextMate
+    theme file, or the URL of an online theme.
 2.  Use the
     [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_to_rstudio_theme.md)
     function to convert and install it:

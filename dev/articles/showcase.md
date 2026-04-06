@@ -8,7 +8,7 @@ You can install them with:
 rstudiothemes::install_rstudiothemes()
 ```
 
-We also distribute all our themes in a single `.zip` file
+We also distribute all bundled themes in a single `.zip` file
 [dist/rstudiothemes.zip](https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip).
 Unzip and install using the [RStudio IDE
 interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
@@ -201,7 +201,7 @@ About the screenshots
 Previews may differ from the actual display on your device. These
 screenshots were taken under the following conditions:
 
-**RStudio Version**
+**RStudio version**
 
     RStudio 2026.01.1+403 "Apple Blossom"
     Release (0e924abb984501b0d66b204ea06b60fc7813275a, 2026-02-04) for windows Mozilla/5.0
