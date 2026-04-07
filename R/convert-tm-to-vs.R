@@ -141,9 +141,6 @@ convert_tm_to_vs_theme <- function(
       tokencols,
       factor(tokencols$name, levels = unique(tokencols$name))
     )
-    pp <- lapply(splitted, nrow) |>
-      unlist() |>
-      sort()
 
     res2 <- lapply(splitted, function(df) {
       df <- df[order(df$index), ]
