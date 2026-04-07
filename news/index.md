@@ -2,6 +2,8 @@
 
 ## rstudiothemes 1.1.0
 
+CRAN release: 2026-04-07
+
 - Improved JSON parsing: invalid trailing commas before `)` or `]`
   (common in VS Code themes) are now removed before parsing.
 - Added Positron aliases for Visual Studio Code theme functions:
