@@ -70,6 +70,7 @@ convert_tm_to_vs_theme <- function(
   }
 
   thejson <- list(
+    "$schema" = "vscode://schemas/color-theme",
     name = name,
     author = author,
     semanticHighlighting = TRUE,
@@ -143,10 +144,7 @@ convert_tm_to_vs_theme <- function(
     pp <- lapply(splitted, nrow) |>
       unlist() |>
       sort()
-    pp
-    df <- splitted[[
-      "Keyword Operator Comparison, imports, returns and Keyword Operator Ruby"
-    ]]
+
     res2 <- lapply(splitted, function(df) {
       df <- df[order(df$index), ]
 

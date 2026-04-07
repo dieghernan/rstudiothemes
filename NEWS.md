@@ -1,3 +1,16 @@
+# rstudiothemes (development version)
+
+-   Add new key to Visual Studio Code/Positron theme:
+
+    ``` json
+    {
+      // Created with the R package rstudiothemes (c) dieghernan.
+      // https://github.com/dieghernan/rstudiothemes
+      "$schema": "vscode://schemas/color-theme",
+      // Rest of keys ...
+    }
+    ```
+
 # rstudiothemes 1.1.0
 
 -   Improved JSON parsing: invalid trailing commas before `)` or `]` (common in

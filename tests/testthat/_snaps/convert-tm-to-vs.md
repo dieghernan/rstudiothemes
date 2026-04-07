@@ -30,6 +30,7 @@
       {
         // Created with the R package rstudiothemes (c) dieghernan.
         // https://github.com/dieghernan/rstudiothemes
+        "$schema": "vscode://schemas/color-theme",
         "name": "Testing RStudioTheme",
         "author": "rstudiothemes",
         "semanticHighlighting": true,
@@ -458,6 +459,7 @@
       {
         // Created with the R package rstudiothemes (c) dieghernan.
         // https://github.com/dieghernan/rstudiothemes
+        "$schema": "vscode://schemas/color-theme",
         "name": "Empty theme",
         "author": "dieghernan",
         "semanticHighlighting": true,
@@ -574,6 +576,7 @@
       {
         // Created with the R package rstudiothemes (c) dieghernan.
         // https://github.com/dieghernan/rstudiothemes
+        "$schema": "vscode://schemas/color-theme",
         "name": "A test theme",
         "author": "I am",
         "semanticHighlighting": true,
