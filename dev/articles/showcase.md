@@ -207,6 +207,10 @@ screenshots were taken under the following conditions:
     Release (0e924abb984501b0d66b204ea06b60fc7813275a, 2026-02-04) for windows Mozilla/5.0
     (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 
+**Code font**
+
+Fira Code: <https://fonts.google.com/specimen/Fira+Code>.
+
 ![RStudio Options for Screenshots](rstudiooptions.png)
 
 Figure 2: RStudio Options used for screenshots

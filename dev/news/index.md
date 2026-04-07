@@ -2,16 +2,32 @@
 
 ## rstudiothemes (development version)
 
-- Added aliases to Visual Studio Code functions for Positron:
+- Add new key to Visual Studio Code/Positron theme:
 
+  ``` json
+  {
+    // Created with the R package rstudiothemes (c) dieghernan.
+    // https://github.com/dieghernan/rstudiothemes
+    "$schema": "vscode://schemas/color-theme",
+    // Rest of keys ...
+  }
+  ```
+
+## rstudiothemes 1.1.0
+
+CRAN release: 2026-04-07
+
+- Improved JSON parsing: invalid trailing commas before `)` or `]`
+  (common in VS Code themes) are now removed before parsing.
+- Added Positron aliases for Visual Studio Code theme functions:
   - [`convert_positron_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_vs_to_tm_theme.md).
   - [`convert_tm_to_positron_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_tm_to_vs_theme.md).
   - [`read_positron_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_vs_theme.md).
-
 - New themes:
-
   - `"Positron Dark"` and `"Positron Light"` by Positron.
   - `"VSCode Dark"` and `"VSCode Light"` by Visual Studio Code.
+- Developed a Shiny app to facilitate online theme conversion:
+  <https://dieghernan-themeconverter.share.connect.posit.cloud/>.
 
 ## rstudiothemes 1.0.0
 
@@ -29,7 +45,7 @@ Initial **CRAN** release.
 
 ### Bundled RStudio themes
 
-Updates on bundled RStudio themes.
+Updates to bundled RStudio themes.
 
 - Added mapping of indent guides to RStudio themes.
 - `"Tokyo Night Light"`: Adjusted invisible elements (whitespaces) and

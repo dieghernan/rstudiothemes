@@ -13,7 +13,7 @@
 
     <a class="navbar-brand me-2" href="../index.html"><img src="../apple-touch-icon.png" alt="rstudiothemes logo" height="34" width="34" class="d-inline-block me-1">rstudiothemes</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.0.0.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.1.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +25,8 @@
 <li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/mapping.html">Mapping</a></li>
+    <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Theme Gallery</h6></li>
     <li><a class="dropdown-item" href="../articles/showcase.html">Showcase</a></li>
     <li><hr class="dropdown-divider"></li>
@@ -57,7 +58,19 @@
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="development version" id="rstudiothemes-development-version">rstudiothemes (development version)<a class="anchor" aria-label="anchor" href="#rstudiothemes-development-version"></a></h2>
 <ul><li>
-<p>Added aliases to Visual Studio Code functions for Positron:</p>
+<p>Add new key to Visual Studio Code/Positron theme:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>  <span class="er">//</span> <span class="er">Created</span> <span class="er">with</span> <span class="er">the</span> <span class="er">R</span> <span class="er">package</span> <span class="er">rstudiothemes</span> <span class="er">(c)</span> <span class="er">dieghernan.</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="er">//</span> <span class="er">https</span><span class="fu">:</span><span class="er">//github.com/dieghernan/rstudiothemes</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>  <span class="st">"$schema"</span><span class="er">:</span> <span class="st">"vscode://schemas/color-theme"</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>  <span class="er">//</span> <span class="er">Rest</span> <span class="er">of</span> <span class="er">keys</span> <span class="er">...</span></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+</li>
+</ul></div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="1.1.0" id="rstudiothemes-110">rstudiothemes 1.1.0<a class="anchor" aria-label="anchor" href="#rstudiothemes-110"></a></h2><p class="text-muted">CRAN release: 2026-04-07</p>
+<ul><li>Improved JSON parsing: invalid trailing commas before <code>)</code> or <code>]</code> (common in VS Code themes) are now removed before parsing.</li>
+<li>Added Positron aliases for Visual Studio Code theme functions:
 <ul><li>
 <code><a href="../reference/convert_vs_to_tm_theme.html">convert_positron_to_tm_theme()</a></code>.</li>
 <li>
@@ -65,13 +78,13 @@
 <li>
 <code><a href="../reference/read_vs_theme.html">read_positron_theme()</a></code>.</li>
 </ul></li>
-<li>
-<p>New themes:</p>
+<li>New themes:
 <ul><li>
 <code>"Positron Dark"</code> and <code>"Positron Light"</code> by Positron.</li>
 <li>
 <code>"VSCode Dark"</code> and <code>"VSCode Light"</code> by Visual Studio Code.</li>
 </ul></li>
+<li>Developed a Shiny app to facilitate online theme conversion: <a href="https://dieghernan-themeconverter.share.connect.posit.cloud/" class="external-link uri">https://dieghernan-themeconverter.share.connect.posit.cloud/</a>.</li>
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.0.0" id="rstudiothemes-100">rstudiothemes 1.0.0<a class="anchor" aria-label="anchor" href="#rstudiothemes-100"></a></h2><p class="text-muted">CRAN release: 2026-03-03</p>
@@ -81,7 +94,7 @@
 <li>Repo status is active: <a href="https://www.repostatus.org/#active" class="external-link"><img src="https://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active - The project has reached a stable, usable state and is being actively developed."></a>.</li>
 </ul><div class="section level3">
 <h3 id="bundled-rstudio-themes-1-0-0">Bundled RStudio themes<a class="anchor" aria-label="anchor" href="#bundled-rstudio-themes-1-0-0"></a></h3>
-<p>Updates on bundled RStudio themes.</p>
+<p>Updates to bundled RStudio themes.</p>
 <ul><li>Added mapping of indent guides to RStudio themes.</li>
 <li>
 <code>"Tokyo Night Light"</code>: Adjusted invisible elements (whitespaces) and ruler color.</li>

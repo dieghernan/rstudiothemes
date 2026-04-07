@@ -1,6 +1,6 @@
 # Convert a TextMate or VS Code/Positron theme to an RStudio theme
 
-Read a `.tmTheme` or `.json` file that defines a TextMate or Visual
+Convert a `.tmTheme` or `.json` file that defines a TextMate or Visual
 Studio Code theme and write the equivalent RStudio theme `.rstheme`.
 
 Optionally, the generated theme can be installed and applied to the

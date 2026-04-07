@@ -44,7 +44,7 @@
 
     <a class="navbar-brand me-2" href="../index.html"><img src="../apple-touch-icon.png" alt="rstudiothemes logo" height="34" width="34" class="d-inline-block me-1">rstudiothemes</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.0.0.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.1.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,7 +58,8 @@
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><hr class="dropdown-divider"></li>
+<li><a class="dropdown-item" href="../articles/mapping.html">Mapping</a></li>
+    <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Theme Gallery</h6></li>
     <li><a class="dropdown-item" href="../articles/showcase.html">Showcase</a></li>
     <li><hr class="dropdown-divider"></li>
@@ -151,7 +152,7 @@
 <div class="sourceCode cell-code" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/rstudiothemes-actions.html">try_rstudiothemes</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
-<p>Pass a subset of styles (e.g., <code>"dark"</code> or <code>"light"</code>) if needed.</p>
+<p>Pass a subset of styles (for example, <code>"dark"</code> or <code>"light"</code>) if needed.</p>
 </section><section class="level2"><h2 id="applying-a-theme">Applying a theme<a class="anchor" aria-label="anchor" href="#applying-a-theme"></a>
 </h2>
 <p>After installing themes, apply one using the RStudio API:</p>
@@ -167,7 +168,7 @@
 Figure 1: Screenshot of theme Winter is Coming Dark Blue
 </figcaption></figure>
 </div>
-<p>Alternatively, go to <strong>Tools &gt; Global Options &gt; Appearance &gt; Add</strong> in RStudio and select the installed theme.</p>
+<p>Alternatively, in RStudio go to <strong>Tools &gt; Global Options &gt; Appearance &gt; Add</strong> and select the installed theme.</p>
 </section><section class="level2"><h2 id="converting-your-own-themes">Converting your own themes<a class="anchor" aria-label="anchor" href="#converting-your-own-themes"></a>
 </h2>
 <p>You can convert a Visual Studio Code/Positron or TextMate theme file into an RStudio theme:</p>
@@ -187,7 +188,7 @@ Figure 1: Screenshot of theme Winter is Coming Dark Blue
 <li>Convert and install it with <code><a href="../reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme()</a></code>.</li>
 <li>Apply it with <code><a href="https://rstudio.github.io/rstudioapi/reference/applyTheme.html" class="external-link">rstudioapi::applyTheme()</a></code> or via RStudio UI.</li>
 </ol>
-<p>This workflow lets you easily bring your preferred editor theme into RStudio.</p>
+<p>This workflow lets you bring your preferred editor theme into RStudio.</p>
 </section><section class="level2"><h2 id="tips-and-tricks">Tips and tricks<a class="anchor" aria-label="anchor" href="#tips-and-tricks"></a>
 </h2>
 <ul>

@@ -1,5 +1,11 @@
 # Articles
 
+### Mapping
+
+- [Mapping](https://dieghernan.github.io/rstudiothemes/dev/articles/mapping.md):
+
+  Mapping between theme elements
+
 ### Theme Gallery
 
 - [Showcase](https://dieghernan.github.io/rstudiothemes/dev/articles/showcase.md):

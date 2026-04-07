@@ -56,7 +56,7 @@ You can quickly preview themes directly from R:
 try_rstudiothemes()
 ```
 
-Pass a subset of styles (e.g., `"dark"` or `"light"`) if needed.
+Pass a subset of styles (for example, `"dark"` or `"light"`) if needed.
 
 ## Applying a theme
 
@@ -70,8 +70,8 @@ rstudioapi::applyTheme("Winter is Coming Dark Blue")
 
 Figure 1: Screenshot of theme Winter is Coming Dark Blue
 
-Alternatively, go to **Tools \> Global Options \> Appearance \> Add** in
-RStudio and select the installed theme.
+Alternatively, in RStudio go to **Tools \> Global Options \> Appearance
+\> Add** and select the installed theme.
 
 ## Converting your own themes
 
@@ -98,8 +98,7 @@ applying it (with `apply = TRUE`).
     [`rstudioapi::applyTheme()`](https://rstudio.github.io/rstudioapi/reference/applyTheme.html)
     or via RStudio UI.
 
-This workflow lets you easily bring your preferred editor theme into
-RStudio.
+This workflow lets you bring your preferred editor theme into RStudio.
 
 ## Tips and tricks
 
