@@ -1,4 +1,3 @@
-AppleWebKit
 Ayu
 Borkar
 Bos
@@ -10,6 +9,7 @@ Drasner
 Eliver
 Enkia
 Falasco
+Fira
 IDEs
 IDentifiers
 JellyFish
@@ -33,16 +33,18 @@ UUID
 UUIDs
 UstymUkhman
 Wes
-abb
 bc
 binaryify
 cdc
 codecov
 dieghernan
+doi
 eabc
 fc
 nolightbox
+pkgdown
 rsthemes
 sm
 teabyii
 tmTheme
+vscode

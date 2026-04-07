@@ -1,7 +1,7 @@
 #' Convert a Visual Studio Code/Positron theme into a TextMate theme
 #'
 #' @description
-#' Read a `.json` file representing a Visual Studio Code/Positron theme and
+#' Convert a `.json` file representing a Visual Studio Code/Positron theme and
 #' write the equivalent TextMate theme (`.tmTheme`).
 #'
 #' @encoding UTF-8
@@ -16,7 +16,7 @@
 #' @param author Optional. The author of the theme. If not provided, the author
 #'   from `path` will be used, or a default value will be assigned.
 #'
-#' @returns
+#' @return
 #' This function is called for its side effects: it writes a `.tmTheme`
 #' file to `outfile` and returns the path.
 #'
@@ -200,7 +200,10 @@ convert_positron_to_tm_theme <- convert_vs_to_tm_theme
 
 tmtheme_settings_df <- function(vs_df) {
   # Mapping
-  maps <- read.csv(system.file("csv/mapping.csv", package = "rstudiothemes"))
+  maps <- read.csv(
+    system.file("csv/mapping.csv", package = "rstudiothemes"),
+    na.strings = c("NA", "")
+  )
 
   end <- dplyr::inner_join(
     maps,
@@ -224,7 +227,7 @@ tmtheme_settings_df <- function(vs_df) {
   )[c("tm", "color")]
 
   # As a bare minimum we should have: background, foreground, selection,
-  # invisibles, lineHighlight, and caret. If any are missing, assign defaults.
+  # invisibles, lineHighlight and caret. If any are missing, assign defaults.
 
   # Check minimums
   check_vals <- c("background", "foreground", "selection") %in% end$tm
@@ -265,6 +268,9 @@ tmtheme_settings_df <- function(vs_df) {
 
 tmtheme_scopes_df <- function(vs_df) {
   tokens_df <- vs_df[grepl("tokenColor", vs_df$section, ignore.case = TRUE), ]
+  if (nrow(tokens_df) == 0) {
+    return(tokens_df)
+  }
   tokens_df$rank <- seq_len(nrow(tokens_df))
 
   tokens_df <- tokens_df[!grepl("\\*", tokens_df$scope), ]
@@ -283,7 +289,7 @@ tmtheme_scopes_df <- function(vs_df) {
     .direction = "up"
   )
 
-  # unique by group
+  # Unique by group
   unique_g <- dplyr::slice_head(filled, n = 1)
 
   # Sort scopes
@@ -298,10 +304,10 @@ tmtheme_scopes_df <- function(vs_df) {
     c("name", "foreground", "background", "fontStyle")
   )
 
-  # Trick lintr
+  # Work around lintr
   scope <- ""
 
-  # And go
+  # Build final output
   eend <- dplyr::summarise(
     prepare,
     scope = paste0(scope, collapse = ", "),

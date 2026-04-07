@@ -47,7 +47,7 @@ read_vs_theme <- function(path) {
   }
 
   # 1. Read vscode and prepare
-  vs <- jsonlite::read_json(local_file)
+  vs <- safe_read_json(local_file)
 
   vs <- rapply(vs, col2hex, how = "list")
 
@@ -192,6 +192,10 @@ read_vs_theme <- function(path) {
     final_df$fontStyle <- NA
   }
 
+  if (!"scope" %in% names(final_df)) {
+    final_df$scope <- NA
+  }
+
   nms <- unique(c(
     "section",
     "name",
@@ -205,10 +209,10 @@ read_vs_theme <- function(path) {
 
   final_df <- final_df[, nms]
 
-  # Blanks as NAs
+  # Convert blanks to NA values
   final_df[final_df == ""] <- NA
 
-  # Filter un-defined
+  # Filter undefined rows
   undef <- is.na(final_df$value) &
     is.na(final_df$foreground) &
     is.na(final_df$background) &
@@ -222,3 +226,35 @@ read_vs_theme <- function(path) {
 #' @description
 #' `read_positron_theme()` is an alias of `read_vs_theme()`.
 read_positron_theme <- read_vs_theme
+
+#' Read JSON removing inline comments and extra trailing commas
+#' @noRd
+safe_read_json <- function(local_file) {
+  lns <- readLines(local_file, warn = FALSE)
+
+  # Flatten and clean
+  lns <- trimws(lns[lns != ""])
+  # Delete schema key
+  lns <- lns[!grepl("$schema", lns, fixed = TRUE)]
+
+  ## Split inline comments into separate lines
+  r2_split <- gsub("//", "~//", lns, fixed = TRUE)
+  r2 <- trimws(unlist(strsplit(r2_split, "~", fixed = TRUE)))
+  # Remove lines starting with double slash (inline comments)
+  r2 <- r2[!grepl("^//", r2)]
+
+  # Remove trailing commas by collapsing
+  r2 <- paste0(r2, collapse = "")
+  r2 <- gsub(",}", "}", r2, fixed = TRUE)
+  r2 <- gsub(", }", "}", r2, fixed = TRUE)
+  r2 <- gsub(", ]", "]", r2, fixed = TRUE)
+  r2 <- gsub(",]", "]", r2, fixed = TRUE)
+
+  # Finally convert and read
+  json_ok <- jsonlite::fromJSON(r2)
+  tmp_js <- tempfile(fileext = ".json")
+  jsonlite::write_json(json_ok, tmp_js)
+  ll <- jsonlite::read_json(tmp_js)
+  unlink(tmp_js)
+  ll
+}

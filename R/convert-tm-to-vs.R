@@ -1,7 +1,7 @@
 #' Convert a TextMate theme into a Visual Studio Code/Positron theme
 #'
 #' @description
-#' Read a `.tmTheme` file representing a TextMate theme and write the
+#' Convert a `.tmTheme` file representing a TextMate theme and write the
 #' equivalent Visual Studio Code theme (`.json`).
 #'
 #' @encoding UTF-8
@@ -11,7 +11,7 @@
 #' @export
 #' @rdname convert_tm_to_vs_theme
 #'
-#' @returns
+#' @return
 #' This function is called for its side effects. It writes a new `.json`
 #' file in `outfile` and returns the path.
 #'
@@ -90,7 +90,10 @@ convert_tm_to_vs_theme <- function(
   # https://github.com/microsoft/vscode-generator-code/blob/main/generators/ ...
   # /app/generate-colortheme.js
 
-  mapping <- read.csv(system.file("csv/mapping.csv", package = "rstudiothemes"))
+  mapping <- read.csv(
+    system.file("csv/mapping.csv", package = "rstudiothemes"),
+    na.strings = c("NA", "")
+  )
 
   # Deprecate editorIndentGuide.background (use editorIndentGuide.background1)
   mapping <- mapping[mapping$vscode != "editorIndentGuide.background", ]

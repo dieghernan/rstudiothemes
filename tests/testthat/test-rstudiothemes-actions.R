@@ -99,4 +99,8 @@ test_that("Dev testing install_themes", {
     list_rstudiothemes(),
     c("Selenized Dark", "Skeletor Syntax")
   )
+
+  # Install all again
+  expect_message(install_rstudiothemes())
+  rstudioapi::applyTheme(current_theme)
 })

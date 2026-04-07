@@ -335,6 +335,7 @@
     "activityBar.inactiveForeground": "#655E7F",
     "activityBarBadge.background": "#BD93F9",
     "activityBarBadge.foreground": "#2B2836",
+    "background": "#2B2836",
     "badge.background": "#BD93F9",
     "badge.foreground": "#2B2836",
     "breadcrumb.activeSelectionForeground": "#DCE7FD",

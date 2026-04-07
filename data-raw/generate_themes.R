@@ -48,7 +48,7 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-# catpuccin -----
+# catpuccin (build)-----
 # source("./data-raw/compile_catppucin.R")
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/mocha.json",
@@ -137,8 +137,13 @@ dd <- convert_to_rstudio_theme(
 )
 
 # JellyFish -------------------------------------------------------------------
+
+url <- paste0(
+  "https://raw.githubusercontent.com/pawelborkar/vscode-jellyfish/",
+  "refs/heads/star/themes/JellyFish%20Theme-color-theme.json"
+)
 dd <- convert_to_rstudio_theme(
-  "data-raw/vscode_themes/JellyFish Theme-color-theme.json",
+  url,
   "inst/rsthemes/JellyFish_Theme.rstheme",
   name = "JellyFish Theme",
   apply = TRUE,
@@ -162,13 +167,13 @@ dd <- convert_to_rstudio_theme(
 )
 
 # Matrix -------------------------------------------------------------------
-# url <- file.path(
-#   "https://raw.githubusercontent.com/UstymUkhman/matrix-theme/refs/heads/",
-#   "master/themes/Matrix-color-theme.json"
-# )
+url <- file.path(
+  "https://raw.githubusercontent.com/UstymUkhman/matrix-theme/refs/heads/",
+  "master/themes/Matrix-color-theme.json"
+)
 # Generate rstheme
 dd <- convert_to_rstudio_theme(
-  "data-raw/vscode_themes/Matrix-color-theme.json",
+  url,
   "inst/rsthemes/Matrix.rstheme",
   force = TRUE,
   apply = TRUE,
@@ -368,13 +373,16 @@ dd <- convert_to_rstudio_theme(
 
 # SynthWave '84 --------------------------------------------------------------
 
-# url <- file.path(
-#   "https://raw.githubusercontent.com/robb0wen/synthwave-vscode/refs/heads/",
-#   "master/themes/synthwave-color-theme.json"
-# )
+url <- file.path(
+  "https://raw.githubusercontent.com/robb0wen/synthwave-vscode/refs/heads/",
+  "master/themes/synthwave-color-theme.json"
+)
+
+# editor.foreground missing in SynthWave
+
 # Generate rstheme
 dd <- convert_to_rstudio_theme(
-  "data-raw/vscode_themes/synthwave-color-theme.json",
+  url,
   "inst/rsthemes/SynthWave84.rstheme",
   force = TRUE,
   apply = TRUE,
@@ -384,9 +392,14 @@ dd <- convert_to_rstudio_theme(
 
 # Tokyo Night --------------------------------------------------------------
 
+url <- paste0(
+  "https://raw.githubusercontent.com/tokyo-night/tokyo-night-vscode-theme/",
+  "refs/heads/master/themes/tokyo-night-color-theme.json"
+)
+
 # Generate rstheme
 dd <- convert_to_rstudio_theme(
-  "data-raw/vscode_themes/tokyo-night-color-theme.json",
+  url,
   "inst/rsthemes/Tokyo_Night.rstheme",
   force = TRUE,
   apply = TRUE,
@@ -395,16 +408,26 @@ dd <- convert_to_rstudio_theme(
 
 
 # Generate rstheme
+url <- paste0(
+  "https://raw.githubusercontent.com/tokyo-night/tokyo-night-vscode-theme/",
+  "refs/heads/master/themes/tokyo-night-light-color-theme.json"
+)
+
 dd <- convert_to_rstudio_theme(
-  "data-raw/vscode_themes/tokyo-night-light-color-theme.json",
+  url,
   "inst/rsthemes/Tokyo_Night_Light.rstheme",
   force = TRUE,
   apply = TRUE,
   output_style = "compact"
 )
 
+url <- paste0(
+  "https://raw.githubusercontent.com/tokyo-night/tokyo-night-vscode-theme/",
+  "refs/heads/master/themes/tokyo-night-storm-color-theme.json"
+)
+
 dd <- convert_to_rstudio_theme(
-  "data-raw/vscode_themes/tokyo-night-storm-color-theme.json",
+  url,
   "inst/rsthemes/Tokyo_Night_Storm.rstheme",
   force = TRUE,
   apply = TRUE,
@@ -412,9 +435,14 @@ dd <- convert_to_rstudio_theme(
 )
 
 # Winter is Coming ---------------------------
+url <- paste0(
+  "https://raw.githubusercontent.com/johnpapa/vscode-winteriscoming/",
+  "refs/heads/master/themes/",
+  "WinterIsComing-dark-blue-color-no-italics-theme.json"
+)
 
 dd <- convert_to_rstudio_theme(
-  "data-raw/vscode_themes/WinterIsComing-dark-blue-color-no-italics-theme.json",
+  url,
   "inst/rsthemes/Winter_is_Coming_Dark_Blue.rstheme",
   name = "Winter is Coming Dark Blue",
   force = TRUE,

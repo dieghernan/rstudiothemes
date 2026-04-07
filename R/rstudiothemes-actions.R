@@ -278,7 +278,7 @@ try_rstudiothemes <- function(
     gui <- detect_gui() # nolint
     cli::cli_alert_danger(
       paste0(
-        "{.fn rstudiothemes::try_rs_themes} only works in RStudio, ",
+        "{.fn rstudiothemes::try_rstudiothemes} only works in RStudio, ",
         "not in {gui}."
       )
     )

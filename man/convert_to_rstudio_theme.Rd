@@ -43,7 +43,7 @@ This function is called for its side effects. It writes a new
 are \code{TRUE}, it will install and apply the theme to your RStudio IDE.
 }
 \description{
-Read a \code{.tmTheme} or \code{.json} file that defines a TextMate or Visual
+Convert a \code{.tmTheme} or \code{.json} file that defines a TextMate or Visual
 Studio Code theme and write the equivalent RStudio theme \code{.rstheme}.
 
 Optionally, the generated theme can be installed and applied to the

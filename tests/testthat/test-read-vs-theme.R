@@ -42,3 +42,16 @@ test_that("Online", {
   )
   expect_s3_class(res, "tbl_df")
 })
+
+test_that("Corner case", {
+  skip_on_cran()
+
+  jelly <- system.file("ext/jellyfish.json", package = "rstudiothemes")
+
+  expect_silent(
+    df <- read_vs_theme(jelly)
+  )
+  expect_s3_class(df, "tbl_df")
+
+  expect_silent(convert_vs_to_tm_theme(jelly))
+})

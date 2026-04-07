@@ -67,7 +67,7 @@ expand_hex <- function(x) {
 #' @param arg The argument to match.
 #' @param choices The possible choices for the argument.
 #'
-#' @returns
+#' @return
 #' The matched argument.
 #'
 #' @noRd

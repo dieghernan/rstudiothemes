@@ -69,6 +69,10 @@ authors:
     href: 'https://dieghernan.github.io/'
 
 articles:
+- title: Mapping
+  navbar:
+  contents:
+  - articles/mapping
 - title: Theme Gallery
   navbar: Theme Gallery
   contents:

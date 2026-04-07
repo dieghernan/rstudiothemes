@@ -11,17 +11,7 @@ test_that("Errors", {
   tmp_path <- tempfile("corrupt", fileext = ".json")
   jsonlite::write_json(miss, tmp_path)
   expect_snapshot(convert_vs_to_tm_theme(tmp_path), error = TRUE)
-
-  # TODO
-  # miss2 <- jsonlite::read_json(vstheme)
-  # miss2$tokenColors <- NULL
-  # miss2$semanticTokenColors <- NULL
-  # tmp_path <- tempfile("corrupt2", fileext = ".json")
-  # jsonlite::write_json(miss2, tmp_path)
-  # aa <- read_vs_theme(tmp_path)
-  # expect_snapshot(convert_vs_to_tm_theme(tmp_path), error = TRUE)
 })
-
 
 test_that("Theme creation", {
   tmout <- file.path(tempdir(), "my_test.tmTheme")
@@ -84,7 +74,6 @@ test_that("Simple Theme creation", {
   unlink(tmout2)
 })
 
-
 test_that("Online", {
   skip_on_cran()
 
@@ -109,4 +98,34 @@ test_that("Unnamed", {
   )
 
   expect_snapshot(error = TRUE, res <- convert_vs_to_tm_theme(fpath))
+})
+
+test_that("Corner cases", {
+  skip_on_cran()
+
+  # Missing components, invisibles, lineHighlight, and caret
+
+  mapping <- read.csv(
+    system.file("csv/mapping.csv", package = "rstudiothemes"),
+    na.strings = c("NA", "")
+  )
+  vs_miss <- mapping[
+    mapping$tm %in% c("invisibles", "lineHighlight", "caret"),
+  ]$vscode
+
+  vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
+  miss <- jsonlite::read_json(vstheme)
+
+  miss$colors[vs_miss] <- NULL
+
+  tmp_path <- tempfile("corrupt", fileext = ".json")
+  jsonlite::write_json(miss, tmp_path)
+  expect_silent(convert_vs_to_tm_theme(tmp_path))
+
+  miss2 <- jsonlite::read_json(vstheme)
+  miss2$tokenColors <- NULL
+  miss2$semanticTokenColors <- NULL
+  tmp_path <- tempfile("corrupt2", fileext = ".json")
+  jsonlite::write_json(miss2, tmp_path)
+  expect_silent(convert_vs_to_tm_theme(tmp_path))
 })

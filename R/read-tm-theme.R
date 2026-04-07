@@ -6,7 +6,7 @@
 #'
 #' @param path Path or URL to a TextMate theme, in `.tmTheme` format.
 #'
-#' @returns
+#' @return
 #' A [tibble][tibble::tbl_df()] with the data of the theme.
 #'
 #' @family functions for reading themes
@@ -74,10 +74,10 @@ read_tm_theme <- function(path) {
 
   # 1. High-level inputs -----
   specs <- tm$plist$dict
-  # Do not use the array, this is where the colors are
+  # Do not use the array; this is where the colors are.
   highlev <- specs[names(specs) != "array"]
 
-  # Strong assumption: structure should be a list of consecutive
+  # Strong assumption: the structure should be a list of consecutive
   # <key><string><key><string>...
   hl_keys <- unlist(highlev[names(highlev) == "key"])
 

@@ -1,7 +1,7 @@
 #' Convert a TextMate or VS Code/Positron theme to an RStudio theme
 #'
 #' @description
-#' Read a `.tmTheme` or `.json` file that defines a TextMate or Visual
+#' Convert a `.tmTheme` or `.json` file that defines a TextMate or Visual
 #' Studio Code theme and write the equivalent RStudio theme `.rstheme`.
 #'
 #' Optionally, the generated theme can be installed and applied to the
@@ -20,7 +20,7 @@
 #' @inheritParams sass::sass_options
 #' @inheritParams convert_vs_to_tm_theme
 #'
-#' @returns
+#' @return
 #' This function is called for its side effects. It writes a new
 #' `.rstheme` file to `outfile` and returns the path. If `force` or `apply`
 #' are `TRUE`, it will install and apply the theme to your RStudio IDE.
@@ -117,7 +117,8 @@ convert_to_rstudio_theme <- function(
     tm_temp <- tempfile(fileext = ".tmTheme")
     path <- convert_vs_to_tm_theme(path, tm_temp, name = name)
   } else if (grepl("^http", path)) {
-    # Only tmTheme as for VS it is done implicitly on convert_vs_to_tm_theme
+    # Only tmTheme is downloaded here because VS conversion happens implicitly
+    # in convert_vs_to_tm_theme.
     tmp_file <- tempfile(fileext = ".tmTheme")
     cli::cli_alert_info("Downloading from {.url {path}}")
 
@@ -135,7 +136,7 @@ convert_to_rstudio_theme <- function(
   )
 
   # Adjustment for ruler (tmTheme does not specify this well)
-  # Priority: invisibles > guide > gutter and different to bg
+  # Priority: invisibles > guide > gutter and different from bg
   ruler_map <- c("invisibles", "guide", "gutter")
   bg_col <- tmcols[tmcols$section == "colors" & tmcols$name == "background", ]
   tm_sub <- tmcols[tmcols$name %in% ruler_map, ]

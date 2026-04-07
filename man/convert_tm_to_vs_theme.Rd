@@ -37,7 +37,7 @@ This function is called for its side effects. It writes a new \code{.json}
 file in \code{outfile} and returns the path.
 }
 \description{
-Read a \code{.tmTheme} file representing a TextMate theme and write the
+Convert a \code{.tmTheme} file representing a TextMate theme and write the
 equivalent Visual Studio Code theme (\code{.json}).
 
 \code{convert_tm_to_positron_theme()} is an alias of \code{convert_tm_to_vs_theme()}.

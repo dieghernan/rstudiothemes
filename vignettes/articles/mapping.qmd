@@ -1,0 +1,34 @@
+---
+title: "Mapping"
+subtitle: Map of elements between theme specifications
+description: Mapping between theme elements
+tbl-cap-location: bottom
+knitr:
+  opts_chunk:
+    collapse: true
+    comment: '#>'
+---
+
+Summary of the internal mapping between Visual Studio Code/Positron, TextMate
+and RStudio theme elements.
+
+Sources:
+
+- TextMate and Visual Studio Code:
+  [vscode-generator-code](https://github.com/microsoft/vscode-generator-code/blob/main/generators/app/generate-colortheme.js)
+- TextMate and RStudio:
+  <https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html>
+
+If multiple many-to-one relationships exist, priority is used to determine which
+mapping applies.
+
+::: {#tbl-map}
+```{r}
+#| echo: false
+tb <- read.csv(system.file("csv/mapping.csv", package = "rstudiothemes"))
+
+knitr::kable(tb)
+```
+
+Mapping of theme elements
+:::

@@ -8,7 +8,7 @@
 #' @param hint Optional. A character string (or object coercible with
 #'   [as.character()]) to be used as a random seed.
 #'
-#' @returns
+#' @return
 #' A character string representing a valid UUID that can be validated with
 #' [uuid::UUIDvalidate()].
 #'
