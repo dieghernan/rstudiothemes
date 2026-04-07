@@ -39,11 +39,13 @@ list_rstudiothemes(list_installed = FALSE)
 #> [17] "OKSolar Dark"               "OKSolar Light"             
 #> [19] "OKSolar Sky"                "One Dark Pro"              
 #> [21] "Overflow Dark"              "Overflow Light"            
-#> [23] "Panda Syntax"               "Selenized Dark"            
-#> [25] "Selenized Light"            "Skeletor Syntax"           
-#> [27] "SynthWave 84"               "Tokyo Night Light"         
-#> [29] "Tokyo Night Storm"          "Tokyo Night"               
-#> [31] "Winter is Coming Dark Blue" "Winter is Coming Light"
+#> [23] "Panda Syntax"               "Positron Dark"             
+#> [25] "Positron Light"             "Selenized Dark"            
+#> [27] "Selenized Light"            "Skeletor Syntax"           
+#> [29] "SynthWave 84"               "Tokyo Night Light"         
+#> [31] "Tokyo Night Storm"          "Tokyo Night"               
+#> [33] "VSCode Dark"                "VSCode Light"              
+#> [35] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
 
 ## Trying themes
@@ -54,7 +56,7 @@ You can quickly preview themes directly from R:
 try_rstudiothemes()
 ```
 
-Pass a subset of styles (e.g., `"dark"` or `"light"`) if needed.
+Pass a subset of styles (for example, `"dark"` or `"light"`) if needed.
 
 ## Applying a theme
 
@@ -68,8 +70,8 @@ rstudioapi::applyTheme("Winter is Coming Dark Blue")
 
 Figure 1: Screenshot of theme Winter is Coming Dark Blue
 
-Alternatively, go to **Tools \> Global Options \> Appearance \> Add** in
-RStudio and select the installed theme.
+Alternatively, in RStudio go to **Tools \> Global Options \> Appearance
+\> Add** and select the installed theme.
 
 ## Converting your own themes
 
@@ -87,17 +89,16 @@ convert_to_rstudio_theme(
 This function will convert and install the theme immediately, optionally
 applying it (with `apply = TRUE`).
 
-## Workflow example: From VS Code theme to RStudio
+## Workflow example: From Visual Studio Code/Positron theme to RStudio
 
-1.  Choose a theme `.json` from VS Code.
+1.  Choose a theme `.json` file from Visual Studio Code/Positron.
 2.  Convert and install it with
     [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_to_rstudio_theme.md).
 3.  Apply it with
     [`rstudioapi::applyTheme()`](https://rstudio.github.io/rstudioapi/reference/applyTheme.html)
     or via RStudio UI.
 
-This workflow lets you easily bring your preferred editor theme into
-RStudio.
+This workflow lets you bring your preferred editor theme into RStudio.
 
 ## Tips and tricks
 

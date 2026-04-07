@@ -2,10 +2,14 @@
 
 Read a `.json` file representing a Visual Studio Code/Positron theme.
 
+`read_positron_theme()` is an alias of `read_vs_theme()`.
+
 ## Usage
 
 ``` r
 read_vs_theme(path)
+
+read_positron_theme(path)
 ```
 
 ## Arguments

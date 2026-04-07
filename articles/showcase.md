@@ -8,7 +8,7 @@ You can install them with:
 rstudiothemes::install_rstudiothemes()
 ```
 
-We also distribute all our themes in a single `.zip` file
+We also distribute all bundled themes in a single `.zip` file
 [dist/rstudiothemes.zip](https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip).
 Unzip and install using the [RStudio IDE
 interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
@@ -131,6 +131,16 @@ Syntax](screenshots/pandasyntax.png)](https://dieghernan.github.io/rstudiothemes
 
 Panda Syntax
 
+[![Positron
+Dark](screenshots/positrondark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/positrondark.png)
+
+Positron Dark
+
+[![Positron
+Light](screenshots/positronlight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/positronlight.png)
+
+Positron Light
+
 [![Selenized
 Dark](screenshots/selenizeddark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/selenizeddark.png)
 
@@ -166,6 +176,16 @@ Storm](screenshots/tokyonightstorm.png)](https://dieghernan.github.io/rstudiothe
 
 Tokyo Night Storm
 
+[![VSCode
+Dark](screenshots/vscodedark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/vscodedark.png)
+
+VSCode Dark
+
+[![VSCode
+Light](screenshots/vscodelight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/vscodelight.png)
+
+VSCode Light
+
 [![Winter is Coming Dark
 Blue](screenshots/winteriscomingdarkblue.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/winteriscomingdarkblue.png)
 
@@ -178,14 +198,18 @@ Winter is Coming Light
 
 About the screenshots
 
-Previews may differ of the actual display in your device. These
+Previews may differ from the actual display on your device. These
 screenshots were taken under the following conditions:
 
-**RStudio Version**
+**RStudio version**
 
     RStudio 2026.01.1+403 "Apple Blossom"
     Release (0e924abb984501b0d66b204ea06b60fc7813275a, 2026-02-04) for windows Mozilla/5.0
     (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+
+**Code font**
+
+Fira Code: <https://fonts.google.com/specimen/Fira+Code>.
 
 ![RStudio Options for Screenshots](rstudiooptions.png)
 
@@ -237,6 +261,10 @@ Overflow Light
 
 Panda Syntax
 
+Positron Dark
+
+Positron Light
+
 Selenized Dark
 
 Selenized Light
@@ -250,6 +278,10 @@ Tokyo Night
 Tokyo Night Light
 
 Tokyo Night Storm
+
+VSCode Dark
+
+VSCode Light
 
 Winter is Coming Dark Blue
 

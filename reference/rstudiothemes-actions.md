@@ -1,12 +1,12 @@
 # Install, list, try or remove RStudio themes
 
-Adaptation of some rsthemes functions, [MIT
+Adaptation of some rsthemes functions. [MIT
 License](https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md)
 Copyright © rsthemes authors.
 
 **Important**: These functions (except
-`list_rstudiothemes(list_installed = FALSE)`) only work in RStudio; they
-return `NULL` when called from other IDEs.
+`list_rstudiothemes(list_installed = FALSE)`) only work in RStudio,
+returning `NULL` when called from other IDEs.
 
 ## Usage
 
@@ -151,9 +151,11 @@ list_rstudiothemes(list_installed = FALSE)
 #> [17] "OKSolar Dark"               "OKSolar Light"             
 #> [19] "OKSolar Sky"                "One Dark Pro"              
 #> [21] "Overflow Dark"              "Overflow Light"            
-#> [23] "Panda Syntax"               "Selenized Dark"            
-#> [25] "Selenized Light"            "Skeletor Syntax"           
-#> [27] "SynthWave 84"               "Tokyo Night"               
-#> [29] "Tokyo Night Light"          "Tokyo Night Storm"         
-#> [31] "Winter is Coming Dark Blue" "Winter is Coming Light"    
+#> [23] "Panda Syntax"               "Positron Dark"             
+#> [25] "Positron Light"             "Selenized Dark"            
+#> [27] "Selenized Light"            "Skeletor Syntax"           
+#> [29] "SynthWave 84"               "Tokyo Night"               
+#> [31] "Tokyo Night Light"          "Tokyo Night Storm"         
+#> [33] "VSCode Dark"                "VSCode Light"              
+#> [35] "Winter is Coming Dark Blue" "Winter is Coming Light"    
 ```

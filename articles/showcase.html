@@ -45,7 +45,7 @@
 
     <a class="navbar-brand me-2" href="../index.html"><img src="../apple-touch-icon.png" alt="rstudiothemes logo" height="34" width="34" class="d-inline-block me-1">rstudiothemes</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.1.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,8 +56,18 @@
       <ul class="navbar-nav me-auto">
 <li class="nav-item"><a class="nav-link" href="../articles/rstudiothemes.html">Get started</a></li>
 <li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
-<li class="nav-item"><a class="nav-link" href="../articles/index.html">Articles</a></li>
-<li class="active nav-item"><a class="nav-link" href="../articles/showcase.html">Showcase</a></li>
+<li class="active nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
+<li><a class="dropdown-item" href="../articles/mapping.html">Mapping</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Theme Gallery</h6></li>
+    <li><a class="dropdown-item" href="../articles/showcase.html">Showcase</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Online app</h6></li>
+    <li><a class="dropdown-item" href="../articles/shinyapp.html">Shiny App</a></li>
+  </ul>
+</li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
 <ul class="navbar-nav">
@@ -122,7 +132,7 @@
 <div class="sourceCode cell-code" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">rstudiothemes</span><span class="fu">::</span><span class="fu"><a href="../reference/rstudiothemes-actions.html">install_rstudiothemes</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
-<p>We also distribute all our themes in a single <code>.zip</code> file <a href="https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip">dist/rstudiothemes.zip</a>. Unzip and install using the <a href="https://docs.posit.co/ide/user/ide/guide/ui/appearance.html" class="external-link">RStudio IDE interface</a>.</p>
+<p>We also distribute all bundled themes in a single <code>.zip</code> file <a href="https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip">dist/rstudiothemes.zip</a>. Unzip and install using the <a href="https://docs.posit.co/ide/user/ide/guide/ui/appearance.html" class="external-link">RStudio IDE interface</a>.</p>
 <p><strong>Tools &gt; Global Options &gt; Appearance &gt; Add</strong></p>
 <div id="fig-ui" class="nolightbox quarto-float quarto-figure quarto-figure-center" alt="RStudio IDE, Add-Theme UI">
 <figure class="quarto-float quarto-float-fig"><div aria-describedby="fig-ui-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -368,7 +378,27 @@ Panda Syntax
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<a href="screenshots/selenizeddark.png" class="lightbox" data-glightbox="description: .lightbox-desc-24;" data-gallery="rstudiothemes"><img src="screenshots/selenizeddark.png" class="card-img" alt="Selenized Dark"></a>
+<a href="screenshots/positrondark.png" class="lightbox" data-glightbox="description: .lightbox-desc-24;" data-gallery="rstudiothemes"><img src="screenshots/positrondark.png" class="card-img" alt="Positron Dark"></a>
+<div class="card-img-overlay bottom-100">
+<p class="like_h">
+Positron Dark
+</p>
+</div>
+</div>
+</div>
+<div class="col">
+<div class="card bg-dark text-white">
+<a href="screenshots/positronlight.png" class="lightbox" data-glightbox="description: .lightbox-desc-25;" data-gallery="rstudiothemes"><img src="screenshots/positronlight.png" class="card-img" alt="Positron Light"></a>
+<div class="card-img-overlay bottom-100">
+<p class="like_h">
+Positron Light
+</p>
+</div>
+</div>
+</div>
+<div class="col">
+<div class="card bg-dark text-white">
+<a href="screenshots/selenizeddark.png" class="lightbox" data-glightbox="description: .lightbox-desc-26;" data-gallery="rstudiothemes"><img src="screenshots/selenizeddark.png" class="card-img" alt="Selenized Dark"></a>
 <div class="card-img-overlay bottom-100">
 <p class="like_h">
 Selenized Dark
@@ -378,7 +408,7 @@ Selenized Dark
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<a href="screenshots/selenizedlight.png" class="lightbox" data-glightbox="description: .lightbox-desc-25;" data-gallery="rstudiothemes"><img src="screenshots/selenizedlight.png" class="card-img" alt="Selenized Light"></a>
+<a href="screenshots/selenizedlight.png" class="lightbox" data-glightbox="description: .lightbox-desc-27;" data-gallery="rstudiothemes"><img src="screenshots/selenizedlight.png" class="card-img" alt="Selenized Light"></a>
 <div class="card-img-overlay bottom-100">
 <p class="like_h">
 Selenized Light
@@ -388,7 +418,7 @@ Selenized Light
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<a href="screenshots/skeletorsyntax.png" class="lightbox" data-glightbox="description: .lightbox-desc-26;" data-gallery="rstudiothemes"><img src="screenshots/skeletorsyntax.png" class="card-img" alt="Skeletor Syntax"></a>
+<a href="screenshots/skeletorsyntax.png" class="lightbox" data-glightbox="description: .lightbox-desc-28;" data-gallery="rstudiothemes"><img src="screenshots/skeletorsyntax.png" class="card-img" alt="Skeletor Syntax"></a>
 <div class="card-img-overlay bottom-100">
 <p class="like_h">
 Skeletor Syntax
@@ -398,7 +428,7 @@ Skeletor Syntax
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<a href="screenshots/synthwave84.png" class="lightbox" data-glightbox="description: .lightbox-desc-27;" data-gallery="rstudiothemes"><img src="screenshots/synthwave84.png" class="card-img" alt="SynthWave 84"></a>
+<a href="screenshots/synthwave84.png" class="lightbox" data-glightbox="description: .lightbox-desc-29;" data-gallery="rstudiothemes"><img src="screenshots/synthwave84.png" class="card-img" alt="SynthWave 84"></a>
 <div class="card-img-overlay bottom-100">
 <p class="like_h">
 SynthWave 84
@@ -408,7 +438,7 @@ SynthWave 84
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<a href="screenshots/tokyonight.png" class="lightbox" data-glightbox="description: .lightbox-desc-28;" data-gallery="rstudiothemes"><img src="screenshots/tokyonight.png" class="card-img" alt="Tokyo Night"></a>
+<a href="screenshots/tokyonight.png" class="lightbox" data-glightbox="description: .lightbox-desc-30;" data-gallery="rstudiothemes"><img src="screenshots/tokyonight.png" class="card-img" alt="Tokyo Night"></a>
 <div class="card-img-overlay bottom-100">
 <p class="like_h">
 Tokyo Night
@@ -418,7 +448,7 @@ Tokyo Night
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<a href="screenshots/tokyonightlight.png" class="lightbox" data-glightbox="description: .lightbox-desc-29;" data-gallery="rstudiothemes"><img src="screenshots/tokyonightlight.png" class="card-img" alt="Tokyo Night Light"></a>
+<a href="screenshots/tokyonightlight.png" class="lightbox" data-glightbox="description: .lightbox-desc-31;" data-gallery="rstudiothemes"><img src="screenshots/tokyonightlight.png" class="card-img" alt="Tokyo Night Light"></a>
 <div class="card-img-overlay bottom-100">
 <p class="like_h">
 Tokyo Night Light
@@ -428,7 +458,7 @@ Tokyo Night Light
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<a href="screenshots/tokyonightstorm.png" class="lightbox" data-glightbox="description: .lightbox-desc-30;" data-gallery="rstudiothemes"><img src="screenshots/tokyonightstorm.png" class="card-img" alt="Tokyo Night Storm"></a>
+<a href="screenshots/tokyonightstorm.png" class="lightbox" data-glightbox="description: .lightbox-desc-32;" data-gallery="rstudiothemes"><img src="screenshots/tokyonightstorm.png" class="card-img" alt="Tokyo Night Storm"></a>
 <div class="card-img-overlay bottom-100">
 <p class="like_h">
 Tokyo Night Storm
@@ -438,7 +468,27 @@ Tokyo Night Storm
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<a href="screenshots/winteriscomingdarkblue.png" class="lightbox" data-glightbox="description: .lightbox-desc-31;" data-gallery="rstudiothemes"><img src="screenshots/winteriscomingdarkblue.png" class="card-img" alt="Winter is Coming Dark Blue"></a>
+<a href="screenshots/vscodedark.png" class="lightbox" data-glightbox="description: .lightbox-desc-33;" data-gallery="rstudiothemes"><img src="screenshots/vscodedark.png" class="card-img" alt="VSCode Dark"></a>
+<div class="card-img-overlay bottom-100">
+<p class="like_h">
+VSCode Dark
+</p>
+</div>
+</div>
+</div>
+<div class="col">
+<div class="card bg-dark text-white">
+<a href="screenshots/vscodelight.png" class="lightbox" data-glightbox="description: .lightbox-desc-34;" data-gallery="rstudiothemes"><img src="screenshots/vscodelight.png" class="card-img" alt="VSCode Light"></a>
+<div class="card-img-overlay bottom-100">
+<p class="like_h">
+VSCode Light
+</p>
+</div>
+</div>
+</div>
+<div class="col">
+<div class="card bg-dark text-white">
+<a href="screenshots/winteriscomingdarkblue.png" class="lightbox" data-glightbox="description: .lightbox-desc-35;" data-gallery="rstudiothemes"><img src="screenshots/winteriscomingdarkblue.png" class="card-img" alt="Winter is Coming Dark Blue"></a>
 <div class="card-img-overlay bottom-100">
 <p class="like_h">
 Winter is Coming Dark Blue
@@ -448,7 +498,7 @@ Winter is Coming Dark Blue
 </div>
 <div class="col">
 <div class="card bg-dark text-white">
-<a href="screenshots/winteriscominglight.png" class="lightbox" data-glightbox="description: .lightbox-desc-32;" data-gallery="rstudiothemes"><img src="screenshots/winteriscominglight.png" class="card-img" alt="Winter is Coming Light"></a>
+<a href="screenshots/winteriscominglight.png" class="lightbox" data-glightbox="description: .lightbox-desc-36;" data-gallery="rstudiothemes"><img src="screenshots/winteriscominglight.png" class="card-img" alt="Winter is Coming Light"></a>
 <div class="card-img-overlay bottom-100">
 <p class="like_h">
 Winter is Coming Light
@@ -463,11 +513,13 @@ Winter is Coming Light
 <div class="callout-title-container flex-fill">About the screenshots</div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Previews may differ of the actual display in your device. These screenshots were taken under the following conditions:</p>
-<p><strong>RStudio Version</strong></p>
+<p>Previews may differ from the actual display on your device. These screenshots were taken under the following conditions:</p>
+<p><strong>RStudio version</strong></p>
 <pre><code>RStudio 2026.01.1+403 "Apple Blossom"
 Release (0e924abb984501b0d66b204ea06b60fc7813275a, 2026-02-04) for windows Mozilla/5.0
 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36</code></pre>
+<p><strong>Code font</strong></p>
+<p>Fira Code: <a href="https://fonts.google.com/specimen/Fira+Code" class="external-link uri">https://fonts.google.com/specimen/Fira+Code</a>.</p>
 <div id="fig-opts" class="nolightbox quarto-float quarto-figure quarto-figure-center" alt="RStudio Options for Screenshots">
 <figure class="quarto-float quarto-float-fig"><div aria-describedby="fig-opts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="rstudiooptions.png" class="nolightbox" style="width:80.0%" alt="RStudio Options for Screenshots">
@@ -549,30 +601,42 @@ Figure 2: RStudio Options used for screenshots
 <p>Panda Syntax</p>
 </div>
 <div class="glightbox-desc lightbox-desc-24">
-<p>Selenized Dark</p>
+<p>Positron Dark</p>
 </div>
 <div class="glightbox-desc lightbox-desc-25">
-<p>Selenized Light</p>
+<p>Positron Light</p>
 </div>
 <div class="glightbox-desc lightbox-desc-26">
-<p>Skeletor Syntax</p>
+<p>Selenized Dark</p>
 </div>
 <div class="glightbox-desc lightbox-desc-27">
-<p>SynthWave 84</p>
+<p>Selenized Light</p>
 </div>
 <div class="glightbox-desc lightbox-desc-28">
-<p>Tokyo Night</p>
+<p>Skeletor Syntax</p>
 </div>
 <div class="glightbox-desc lightbox-desc-29">
-<p>Tokyo Night Light</p>
+<p>SynthWave 84</p>
 </div>
 <div class="glightbox-desc lightbox-desc-30">
-<p>Tokyo Night Storm</p>
+<p>Tokyo Night</p>
 </div>
 <div class="glightbox-desc lightbox-desc-31">
-<p>Winter is Coming Dark Blue</p>
+<p>Tokyo Night Light</p>
 </div>
 <div class="glightbox-desc lightbox-desc-32">
+<p>Tokyo Night Storm</p>
+</div>
+<div class="glightbox-desc lightbox-desc-33">
+<p>VSCode Dark</p>
+</div>
+<div class="glightbox-desc lightbox-desc-34">
+<p>VSCode Light</p>
+</div>
+<div class="glightbox-desc lightbox-desc-35">
+<p>Winter is Coming Dark Blue</p>
+</div>
+<div class="glightbox-desc lightbox-desc-36">
 <p>Winter is Coming Light</p>
 </div>
 </div>
