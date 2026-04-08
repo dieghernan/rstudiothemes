@@ -18,7 +18,7 @@ decide if themes can be applied to the IDE.
 on_rstudio()
 }
 \seealso{
-Other helpers: 
-\code{\link{generate_uuid}()}
+Other helpers:
+\code{\link[=generate_uuid]{generate_uuid()}}
 }
 \concept{helpers}

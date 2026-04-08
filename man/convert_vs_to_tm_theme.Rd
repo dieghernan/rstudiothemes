@@ -56,8 +56,8 @@ readLines(path) |>
 
 }
 \seealso{
-Other functions for creating themes: 
-\code{\link{convert_tm_to_vs_theme}()},
-\code{\link{convert_to_rstudio_theme}()}
+Other functions for creating themes:
+\code{\link[=convert_tm_to_vs_theme]{convert_tm_to_vs_theme()}},
+\code{\link[=convert_to_rstudio_theme]{convert_to_rstudio_theme()}}
 }
 \concept{functions for creating themes}

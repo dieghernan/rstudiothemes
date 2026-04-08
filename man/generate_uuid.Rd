@@ -16,7 +16,7 @@ generate_uuid(hint = NULL)
 }
 \value{
 A character string representing a valid UUID that can be validated with
-\code{\link[uuid:UUIDgenerate]{uuid::UUIDvalidate()}}.
+\code{\link[uuid:UUIDvalidate]{uuid::UUIDvalidate()}}.
 }
 \description{
 Generate version 4 (pseudo-random) Universally Unique Identifiers (UUIDs).
@@ -47,7 +47,7 @@ IDentifiers (UUIDs)." RFC 9562. \doi{10.17487/RFC9562},
 \url{https://www.rfc-editor.org/info/rfc9562}.
 }
 \seealso{
-Other helpers: 
-\code{\link{on_rstudio}()}
+Other helpers:
+\code{\link[=on_rstudio]{on_rstudio()}}
 }
 \concept{helpers}

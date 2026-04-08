@@ -11,7 +11,7 @@ read_tm_theme(path)
 \item{path}{Path or URL to a TextMate theme, in \code{.tmTheme} format.}
 }
 \value{
-A \link[tibble:tbl_df-class]{tibble} with the data of the theme.
+A \link[tibble:tbl_df]{tibble} with the data of the theme.
 }
 \description{
 Read a \code{.tmTheme} file (XML format) representing a TextMate or Sublime Text
@@ -33,7 +33,7 @@ readLines(the_theme) |>
 read_tm_theme(the_theme)
 }
 \seealso{
-Other functions for reading themes: 
-\code{\link{read_vs_theme}()}
+Other functions for reading themes:
+\code{\link[=read_vs_theme]{read_vs_theme()}}
 }
 \concept{functions for reading themes}

@@ -100,8 +100,8 @@ if (on_rstudio() && interactive()) {
 \seealso{
 \code{\link[rstudioapi:addTheme]{rstudioapi::addTheme()}}, \code{\link[rstudioapi:applyTheme]{rstudioapi::applyTheme()}}
 
-Other functions for creating themes: 
-\code{\link{convert_tm_to_vs_theme}()},
-\code{\link{convert_vs_to_tm_theme}()}
+Other functions for creating themes:
+\code{\link[=convert_tm_to_vs_theme]{convert_tm_to_vs_theme()}},
+\code{\link[=convert_vs_to_tm_theme]{convert_vs_to_tm_theme()}}
 }
 \concept{functions for creating themes}

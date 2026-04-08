@@ -15,7 +15,7 @@ read_positron_theme(path)
 format.}
 }
 \value{
-A \link[tibble:tbl_df-class]{tibble} with the data of the theme.
+A \link[tibble:tbl_df]{tibble} with the data of the theme.
 }
 \description{
 Read a \code{.json} file representing a Visual Studio Code/Positron theme.
@@ -30,7 +30,7 @@ read_vs_theme(vstheme)
 
 }
 \seealso{
-Other functions for reading themes: 
-\code{\link{read_tm_theme}()}
+Other functions for reading themes:
+\code{\link[=read_tm_theme]{read_tm_theme()}}
 }
 \concept{functions for reading themes}
