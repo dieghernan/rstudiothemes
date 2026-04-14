@@ -45,4 +45,4 @@ Config/testthat/parallel: true
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 X-schema.org-keywords: r-package, rstudio-themes, textmate-themes,
-    vscode-themes, positron-themes
+    vscode-themes, positron-themes, cran, cran-r

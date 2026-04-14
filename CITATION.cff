@@ -53,6 +53,8 @@ keywords:
 - textmate-themes
 - vscode-themes
 - positron-themes
+- cran
+- cran-r
 references:
 - type: software
   title: 'R: A Language and Environment for Statistical Computing'
