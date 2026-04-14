@@ -3,60 +3,151 @@ name: proofread-comments
 description: Review the roxygen2 and R comments of the source of this R package
 ---
 
-## Role
+## Purpose
 
-You're an experienced R software engineer with extensive experience in
-maintaining projects that is performing a peer-review of the documentation of
-this R package.
+This skill enables the agent to act as an expert reviewer of **roxygen2
+comments** and **regular R comments** in R package source files.\
+The agent improves clarity, grammar, consistency, and style while ensuring that
+**no executable code is ever modified**.
 
-## Task
+This skill is designed to work together with the `review-comments` agent.
 
-1.  Read all the `*.R` files in the `./R/` directory and identify the following
-    types of comments:
+--------------------------------------------------------------------------------
 
-    -   **roxygen2** comments: These generate package documentation and start
-        with `#'` (note the apostrophe after the hash).
-    -   Regular **R** comments: These are code annotations for developers and
-        start with `#` (without the apostrophe).
+## What the Skill Does
 
-2.  For **roxygen2** comments, review for:
+When invoked, the agent:
 
-    -   Consistency in style, terminology, and formatting across all files.
-    -   Clarity: Ensure descriptions are concise, accurate, and easy to
-        understand.
-    -   Grammar and spelling: Check for errors and adherence to standard
-        English.
-    -   Alignment with R documentation best practices (e.g., avoid jargon unless
-        defined, use active voice).
+1.  Reviews all roxygen2 (`#'`) and regular R comments (`#`) in the provided
+    text.
+2.  Identifies issues related to:
+    -   clarity
+    -   grammar and punctuation
+    -   consistency across files
+    -   roxygen2 tag correctness
+    -   adherence to style rules
+3.  Suggests improved versions of the comments.
+4.  Classifies each issue as **Critical**, **Major**, or **Minor**.
+5.  Produces rewritten comments that follow the formatting rules below.
+6.  Waits for explicit confirmation before applying any changes to files.
 
-3.  For regular **R** comments, ensure they are clear enough for developers and
-    check for basic grammar and spelling. This review can be less thorough than
-    for roxygen2 comments, focusing on readability rather than comprehensive
-    documentation standards.
+--------------------------------------------------------------------------------
 
-    **Examples**:
+## What the Skill Must Not Do
 
-    -   Good roxygen2: `#' Calculate the mean of a numeric vector.`
-    -   Poor roxygen2: `#' This function does mean stuff and is important.`
-    -   Good regular: `# Skip invalid values to avoid errors.`
-    -   Poor regular: `# Do stuff here.`
+The agent must **never**:
 
-## Style Guide (Non-Negotiable)
+-   modify executable R code
+-   change function signatures
+-   alter indentation outside comments
+-   introduce or remove roxygen2 tags unless explicitly instructed
+-   rewrite examples in a way that changes behavior
+-   exceed 80 characters per line
+-   apply changes without user approval
 
-The following rules must be strictly applied when making changes:
+--------------------------------------------------------------------------------
 
--   Wrap any modified line at a maximum of 80 characters. If a line exceeds
-    this, break it into multiple lines.
--   Do not modify any working code, only edit comments.
--   Avoid Oxford commas (the comma before "and" in a list of three or more
-    items) and prefer a single comma instead of a semicolon where possible
-    (e.g., use "," over ";").
--   Maintain the original indentation and structure of comments.
+## Review Criteria
 
-## Expected Result
+### 1. Clarity
 
-When done, propose specific improvements (e.g., via a summary of issues found
-and suggested edits). Implement changes only after user confirmation in the
-editor (e.g., in VS Code, apply patches but never modify files without explicit
-approval). Use tools like `read_file` and `replace_string_in_file` to gather
-context and make edits, ensuring all changes are reviewed collaboratively.
+-   Comments must be easy to understand.
+-   Avoid vague or ambiguous phrasing.
+-   Ensure descriptions match the actual behavior of the function.
+
+### 2. Grammar and Style
+
+-   Correct grammar, spelling, and punctuation.
+-   Avoid the Oxford comma.
+-   Prefer commas over semicolons.
+-   Maintain a concise, professional tone.
+
+### 3. Consistency
+
+-   Terminology must be consistent across files.
+-   Parameter descriptions must match function arguments.
+-   Similar concepts should be described similarly.
+
+### 4. roxygen2-Specific Requirements
+
+-   `@param` entries must correspond to actual function parameters.
+-   `@return` must accurately describe the output.
+-   `@examples` must be syntactically correct (but not executed or altered
+    semantically).
+-   Tags must follow roxygen2 conventions.
+
+### 5. Formatting Rules
+
+-   Maximum **80 characters per line**.
+-   Preserve indentation and comment structure.
+-   Wrap lines only when necessary or when rewriting.
+
+--------------------------------------------------------------------------------
+
+## Issue Severity Levels
+
+Each finding must be labeled as:
+
+-   **Critical** — misleading, incorrect, inconsistent, or missing documentation
+-   **Major** — unclear, poorly written, or confusing text
+-   **Minor** — stylistic or optional improvements
+
+--------------------------------------------------------------------------------
+
+## Expected Output
+
+When using this skill, the agent must output:
+
+1.  A **summary** of findings.
+2.  A **detailed list of issues**, grouped by file and severity.
+3.  **Proposed improved comments**, ready to apply.
+4.  A final question asking whether to apply the changes.
+
+--------------------------------------------------------------------------------
+
+## Examples
+
+### Good roxygen2 comment
+
+``` r
+#' Normalize a numeric vector
+#'
+#' @param x Numeric vector to normalize.
+#' @return A numeric vector scaled to the [0, 1] range.
+#' @examples
+#' normalize(c(1, 2, 3))
+```
+
+### Poor roxygen2 comment
+
+``` r
+#' Normalize stuff
+#' @param x The data
+#' @return Something normalized
+```
+
+### Good regular comment
+
+``` r
+# Compute the scaling factor for normalization
+```
+
+### Poor regular comment
+
+``` r
+# do stuff here
+```
+
+## Behavior Summary
+
+When this skill is active, the agent:
+
+-   Reviews comments only
+-   Suggests improvements
+-   Classifies issues
+-   Respects strict formatting rules
+-   Never modifies code
+-   Applies changes only after explicit approval
+
+This ensures safe, consistent, high‑quality documentation improvements across
+the project.
