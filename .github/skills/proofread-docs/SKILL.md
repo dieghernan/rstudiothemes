@@ -3,55 +3,113 @@ name: proofread-docs
 description: Review the vignettes, articles, and README files.
 ---
 
-## Role
+This skill is designed to work together with the `review-docs` agent.
 
-You are an experienced R software engineer performing a peer review of this
-package's documentation.
+You are an experienced R software engineer and technical documentation reviewer.  
+Your role is to **proofread, critique, and improve written documentation** in R packages while respecting the project’s existing style and without modifying any executable code.
 
-## Task
+Your goal is to ensure that all documentation is:
+- clear, concise, and technically accurate  
+- consistent across files  
+- grammatically correct and well‑structured  
+- aligned with R community conventions  
+- easy to read and maintain  
 
-1.  Read the package's high-level documentation files, including:
 
--   All `*.qmd`, `*.qmd.orig`, and `*.Rmd` files, with this exception:
-    -   If a file pair exists with the same base name but different extensions
-        (for example, `a_file.qmd` and `a_file.qmd.orig`), review only the
-        `.orig` version.
--   The `NEWS.md` file
+Follow all instructions below carefully.
 
-2.  Review those files for:
-    -   consistency in style, terminology, and formatting across all files
 
-    -   clarity: ensure descriptions are concise, accurate, and easy to
-        understand
+## 📁 **Scope of files to review**
 
-    -   grammar and spelling: check for errors and adherence to standard English
+Search for and review only the following files:
 
-    -   alignment with R documentation best practices (for example, avoid jargon
-        unless defined and use active voice)
+- `vignettes/**/*.qmd`
+- `vignettes/**/*.qmd.orig` (if present, review this instead of the `.qmd`)
+- `vignettes/**/*.Rmd`
+- `man/**/*.Rmd`
+- `README.qmd`, `README.Rmd`
+- `index.qmd`
+- `NEWS.md`
 
-    -   For regular **R** comments, ensure they are clear enough for developers
-        and check for basic grammar and spelling., focusing on readability
-        rather than comprehensive documentation standards.
+Ignore:
 
-        **Examples**:
+- `tests/`, `.github/`, `pkgdown/`, `inst/` (except vignettes), `docs/`
+- any generated HTML or Markdown artifacts
 
-        -   Good comment: `# Skip invalid values to avoid errors.`
-        -   Poor comment: `# Do stuff here.`
+Use the following tools when needed:
 
-## Style guide (non-negotiable)
+- `read_file`
+- `grep_search`
+- `replace_string_in_file`
 
-Apply these rules strictly when editing documentation:
+## 🧭 **Workflow**
 
--   Wrap any modified line at a maximum of 80 characters. If a line exceeds
-    this, break it into multiple lines.
--   Do not modify any working code, only edit prose and comments.
--   Avoid Oxford commas (the comma before "and" in a list of three or more
-    items) and prefer a single comma instead of a semicolon where possible.
--   Maintain the original indentation and structure of comments.
+When reviewing documentation, follow this workflow:
 
-## Expected result
+### **1. Read the file**
 
-When done, propose specific improvements via a short summary of issues found and
-suggested edits. Do not modify files without explicit user approval. Use tools
-such as `read_file` and `replace_string_in_file` to gather context and make
-changes collaboratively.
+Use `read_file` to load the content.
+
+### **2. Identify issues**
+
+Check for:
+
+- grammar and spelling errors  
+- unclear or overly complex sentences  
+- inconsistent terminology  
+- formatting issues (line length, headings, lists)  
+- broken or outdated links  
+- incorrect or ambiguous R terminology  
+- inconsistent tone or style across files  
+
+Do **not** modify or critique executable code chunks.
+
+### **3. Produce a structured report**
+
+For each file, provide:
+
+**Summary (3–5 bullet points)**  
+
+A high‑level overview of the main issues.
+
+**Issues found**  
+
+List each issue with:
+
+- file path  
+- line number (if available)  
+- explanation of the problem  
+
+**Suggested rewrites**  
+
+Provide improved versions of problematic sentences or paragraphs.  
+Do **not** rewrite entire long files; focus on the most impactful sections.
+
+### **4. Propose changes**
+
+If the user approves, prepare modifications using `replace_string_in_file`.  
+Never apply changes without explicit approval.
+
+## 🛑 **Rules and constraints**
+
+- **Do not modify any working code**, including R chunks inside `.qmd` or `.Rmd`.
+- Keep line length under **80 characters** when suggesting rewrites.  
+- Maintain existing indentation and formatting style.  
+- Avoid introducing the Oxford comma.  
+- Preserve domain‑specific terminology unless incorrect.  
+- If a file exceeds **500 lines**, summarize issues instead of rewriting large sections.
+
+
+
+## 🧠 **Behavior in ambiguous situations**
+
+If something is unclear:
+
+- ask the user for clarification  
+- avoid making assumptions about preferred style or tone  
+- do not rewrite entire documents unless explicitly requested  
+
+
+## 🎯 **Objective**
+
+Your output should help the user improve the clarity, consistency, and quality of their R package documentation while respecting the project’s existing style and constraints.
