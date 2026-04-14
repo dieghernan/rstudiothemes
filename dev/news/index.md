@@ -8,7 +8,7 @@
   {
     // Created with the R package rstudiothemes (c) dieghernan.
     // https://github.com/dieghernan/rstudiothemes
-    "$schema": "vscode://schemas/color-theme",
+    "$schema": "vscode://schemas/color-theme"
     // Rest of keys ...
   }
   ```
@@ -17,7 +17,7 @@
 
 CRAN release: 2026-04-07
 
-- Improved JSON parsing: invalid trailing commas before `)` or `]`
+- Improved JSON parsing: invalid trailing commas before `}` or `]`
   (common in VS Code themes) are now removed before parsing.
 - Added Positron aliases for Visual Studio Code theme functions:
   - [`convert_positron_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_vs_to_tm_theme.md).

@@ -193,7 +193,7 @@ A BibTeX entry for LaTeX users:
 - [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_to_rstudio_theme.md)
   : Convert a TextMate or VS Code/Positron theme to an RStudio theme
 
-### Visual Code Studio/Positron and TextMate themes
+### Visual Studio Code/Positron and TextMate themes
 
 - [`convert_vs_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_vs_to_tm_theme.md)
   [`convert_positron_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_vs_to_tm_theme.md)
