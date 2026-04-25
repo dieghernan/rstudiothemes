@@ -198,7 +198,7 @@ Contributions are welcome! To contribute to this project:
 
 Hernangómez D (2026). <em>rstudiothemes: Create RStudio Themes from
 Visual Studio Code, Positron and TextMate Themes</em>.
-<a href="https://doi.org/10.32614/CRAN.package.rstudiothemes">doi:10.32614/CRAN.package.rstudiothemes</a>,
+<a href="https://doi.org/10.32614/CRAN.package.rstudiothemes">doi:10.32614/CRAN.package.rstudiothemes</a>.
 <a href="https://dieghernan.github.io/rstudiothemes/">https://dieghernan.github.io/rstudiothemes/</a>.
 </p>
 
