@@ -20,10 +20,10 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 
 <!-- badges: end -->
 
-Convert **Visual Studio Code/Positron** and **TextMate** themes into
-**RStudio** custom themes.
+Convert **Visual Studio Code**, **Positron** and **TextMate** themes
+into **RStudio** custom themes.
 
-This package provides tools to convert Visual Studio Code/Positron and
+This package provides tools to convert Visual Studio Code, Positron, and
 TextMate theme files (`.json` and `.tmTheme` formats) into
 RStudio-compatible `.rstheme` files. RStudio has supported custom themes
 in `.rstheme` format since RStudio 1.2 (see [theme creation
@@ -96,12 +96,16 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 ## Installation
 
+<div class="pkgdown-release">
+
 Install **rstudiothemes** from
 [**CRAN**](https://CRAN.R-project.org/package=rstudiothemes):
 
 ``` r
 install.packages("rstudiothemes")
 ```
+
+</div>
 
 <div class="pkgdown-devel">
 
@@ -141,7 +145,7 @@ We also provide a Shiny App with many of the features of
 ## Migrating an existing theme
 
 You can convert any Visual Studio Code/Positron or TextMate theme to
-RStudio format. Here’s how:
+RStudio format. Here is how:
 
 1.  Use a Visual Studio Code/Positron theme file, a TextMate theme file,
     or a URL to an online theme.
