@@ -59,6 +59,7 @@ Other functions for creating themes:
 ## Examples
 
 ``` r
+
 vstheme <- system.file("ext/test-simple-color-theme.json",
   package = "rstudiothemes"
 )

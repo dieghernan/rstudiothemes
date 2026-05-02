@@ -28,6 +28,7 @@ Code/Positron themes, ready to use in RStudio. Simply use the
 function to install them into your RStudio environment:
 
 ``` r
+
 rstudiothemes::install_rstudiothemes()
 
 #> ✔ Installed 36 themes
@@ -44,6 +45,7 @@ Available themes include popular choices such as Tokyo Night, Night Owl,
 Winter is Coming, SynthWave 84, Nord, and many others:
 
 ``` r
+
 rstudiothemes::list_rstudiothemes(list_installed = FALSE)
 #>  [1] "Andromeda"                  "ayu Dark"                  
 #>  [3] "ayu Light"                  "Catppuccin Latte"          
@@ -78,6 +80,7 @@ Check the docs of the developing version in
 You can install the developing version of **rstudiothemes** with:
 
 ``` r
+
 # install.packages("pak")
 pak::pak("dieghernan/rstudiothemes")
 ```
@@ -86,6 +89,7 @@ Alternatively, you can install **rstudiothemes** using the
 [r-universe](https://dieghernan.r-universe.dev/rstudiothemes):
 
 ``` r
+
 # Install rstudiothemes in R:
 install.packages(
   "rstudiothemes",
@@ -115,6 +119,7 @@ RStudio format. Here is how:
     function to convert and install it:
 
 ``` r
+
 rstudiothemes::convert_to_rstudio_theme(
   "<path/to/file>",
   apply = TRUE,
