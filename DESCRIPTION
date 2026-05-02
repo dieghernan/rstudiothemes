@@ -39,10 +39,10 @@ VignetteBuilder:
     quarto
 Config/Needs/coverage: covr
 Config/Needs/website: dieghernan/gitdevr, ragg, styler, gadenbuie/rsthemes
-Config/roxygen2/version: 8.0.0.9000
+Config/roxygen2/markdown: TRUE
+Config/roxygen2/version: 8.0.0
 Config/testthat/edition: 3
 Config/testthat/parallel: true
 Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
 X-schema.org-keywords: r-package, rstudio-themes, textmate-themes,
     vscode-themes, positron-themes, cran, cran-r
