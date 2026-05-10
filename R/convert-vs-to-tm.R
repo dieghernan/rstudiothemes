@@ -65,12 +65,10 @@ convert_vs_to_tm_theme <- function(
     orig_aut <- unlist(for_top_df[for_top_df$name == "author", ]$value)
 
     if (length(orig_aut) < 1) {
-      cli::cli_alert_warning(
-        paste0(
-          "VSCode theme {.str {name}} does not have author, ",
-          "use the {.arg author} argument."
-        )
-      )
+      cli::cli_alert_warning(paste0(
+        "VSCode theme {.str {name}} does not have author, ",
+        "use the {.arg author} argument."
+      ))
       author <- "rstudiothemes R package"
       cli::cli_alert_info("Using {.code author = {.str {author}}}.")
     } else {
@@ -103,11 +101,7 @@ convert_vs_to_tm_theme <- function(
   )
 
   # Start building the list that would be converted to tmTheme
-  the_theme <- list(
-    plist = list(
-      dict = list()
-    )
-  )
+  the_theme <- list(plist = list(dict = list()))
 
   # Top level
 
@@ -176,10 +170,7 @@ convert_vs_to_tm_theme <- function(
     }
   }
 
-  end <- c(
-    top_list,
-    list(key = list("settings"), array = array_list)
-  )
+  end <- c(top_list, list(key = list("settings"), array = array_list))
 
   # Finally write it
   the_theme$plist$dict <- end
@@ -221,10 +212,10 @@ tmtheme_settings_df <- function(vs_df) {
   end <- dplyr::grouped_df(end, "tm")
   end <- dplyr::slice_head(end, n = 1)
   end <- dplyr::ungroup(end)
-  end <- dplyr::arrange(
-    end,
-    dplyr::pick(dplyr::all_of("rank"))
-  )[c("tm", "color")]
+  end <- dplyr::arrange(end, dplyr::pick(dplyr::all_of("rank")))[c(
+    "tm",
+    "color"
+  )]
 
   # As a bare minimum we should have: background, foreground, selection,
   # invisibles, lineHighlight and caret. If any are missing, assign defaults.
@@ -316,10 +307,13 @@ tmtheme_scopes_df <- function(vs_df) {
   )
   eend$scope <- gsub("\\s+", " ", trimws(eend$scope))
 
-  eend <- dplyr::arrange(
-    eend,
-    dplyr::pick(dplyr::all_of("rank"))
-  )[c("name", "scope", "foreground", "background", "fontStyle")]
+  eend <- dplyr::arrange(eend, dplyr::pick(dplyr::all_of("rank")))[c(
+    "name",
+    "scope",
+    "foreground",
+    "background",
+    "fontStyle"
+  )]
 
   eend
 }

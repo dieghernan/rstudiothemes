@@ -2,7 +2,7 @@
 
 - Add new key to Visual Studio Code/Positron theme:
 
-  ```json
+  ``` json
   {
     // Created with the R package rstudiothemes (c) dieghernan.
     // https://github.com/dieghernan/rstudiothemes
@@ -13,8 +13,8 @@
 
 # rstudiothemes 1.1.0
 
-- Improved JSON parsing: invalid trailing commas before `}` or `]` (common in
-  VS Code themes) are now removed before parsing.
+- Improved JSON parsing: invalid trailing commas before `}` or `]` (common in VS
+  Code themes) are now removed before parsing.
 - Added Positron aliases for Visual Studio Code theme functions:
   - `convert_positron_to_tm_theme()`.
   - `convert_tm_to_positron_theme()`.
@@ -33,8 +33,8 @@ Initial **CRAN** release.
 - Added DOI:
   [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18519155.svg)](https://doi.org/10.5281/zenodo.18519155).
 - Repo status is active: [![Project Status: Active - The project has reached a
-stable, usable state and is being actively
-developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active).
+  stable, usable state and is being actively
+  developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active).
 
 ## Bundled RStudio themes
 
@@ -45,14 +45,13 @@ Updates to bundled RStudio themes.
   color.
 - `"Matrix"`: Added ruler color.
 - New themes:
-  - `"Catppuccin Latte"` and `"Catppuccin Mocha"` by
-    <https://catppuccin.com/>.
+  - `"Catppuccin Latte"` and `"Catppuccin Mocha"` by <https://catppuccin.com/>.
   - `"Matcha"` by Luca Falasco.
   - `"Andromeda"` by Eliver Lara.
   - `"One Dark Pro"` by binaryify.
 
 # rstudiothemes 0.1.0
 
-_Compatible with RStudio 2026.01.0+392 "Apple Blossom"._
+*Compatible with RStudio 2026.01.0+392 "Apple Blossom".*
 
 - First working version.

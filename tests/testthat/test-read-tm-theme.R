@@ -40,10 +40,7 @@ test_that("Test simple theme", {
 })
 
 test_that("Test minimal theme", {
-  fpath <- system.file(
-    "ext/test-minimal.tmTheme",
-    package = "rstudiothemes"
-  )
+  fpath <- system.file("ext/test-minimal.tmTheme", package = "rstudiothemes")
 
   res <- read_tm_theme(fpath)
 
@@ -52,10 +49,7 @@ test_that("Test minimal theme", {
 })
 
 test_that("Test error theme", {
-  fpath <- system.file(
-    "ext/test-error.tmTheme",
-    package = "rstudiothemes"
-  )
+  fpath <- system.file("ext/test-error.tmTheme", package = "rstudiothemes")
 
   expect_error(
     res <- read_tm_theme(fpath),
@@ -72,8 +66,6 @@ test_that("Online", {
     "rstudiothemes/refs/heads/main/inst/ext/test.tmTheme"
   )
 
-  expect_snapshot(
-    res <- read_tm_theme(path),
-  )
+  expect_snapshot(res <- read_tm_theme(path), )
   expect_s3_class(res, "tbl_df")
 })

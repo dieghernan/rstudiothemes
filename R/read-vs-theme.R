@@ -25,12 +25,10 @@ read_vs_theme <- function(path) {
   }
 
   if (tools::file_ext(path) != "json") {
-    cli::cli_abort(
-      paste0(
-        "Argument {.arg path} should be a {.str json} file",
-        " not {.str {tools::file_ext(path)}}."
-      )
-    )
+    cli::cli_abort(paste0(
+      "Argument {.arg path} should be a {.str json} file",
+      " not {.str {tools::file_ext(path)}}."
+    ))
   }
 
   # Check if the file is online
@@ -69,9 +67,7 @@ read_vs_theme <- function(path) {
   type <- paste0(unlist(vs$type)[1], collapse = ", ")
   author <- paste0(unlist(vs$author), collapse = ", ")
 
-  top_df <- dplyr::tibble(
-    value = c(name, author, type)
-  )
+  top_df <- dplyr::tibble(value = c(name, author, type))
 
   top_df$section <- "highlevel"
   top_df$name <- c("name", "author", "type")
@@ -112,10 +108,7 @@ read_vs_theme <- function(path) {
         df_vals <- df_vals[, setdiff(names(df_vals), "italic")]
       }
 
-      this_tok_df <- dplyr::tibble(
-        name = nm,
-        scope = scopes
-      )
+      this_tok_df <- dplyr::tibble(name = nm, scope = scopes)
       this_tok_df <- dplyr::bind_cols(this_tok_df, df_vals)
 
       this_tok_df
@@ -136,10 +129,7 @@ read_vs_theme <- function(path) {
     if (length(val) < 1) {
       val <- NA
     }
-    dplyr::tibble(
-      name = names(x),
-      foreground = unname(val)
-    )
+    dplyr::tibble(name = names(x), foreground = unname(val))
   })
 
   settings_df <- dplyr::bind_rows(settings_df)
@@ -163,10 +153,7 @@ read_vs_theme <- function(path) {
     scopes <- paste0(scopes, collapse = ",")
     scopes <- unlist(strsplit(scopes, ","))
 
-    this_tok_df <- dplyr::tibble(
-      name = nm,
-      scope = scopes
-    )
+    this_tok_df <- dplyr::tibble(name = nm, scope = scopes)
 
     this_set <- unlist(this_tok$settings)
     # Convert settings to data frame

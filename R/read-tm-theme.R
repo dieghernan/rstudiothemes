@@ -34,12 +34,10 @@ read_tm_theme <- function(path) {
   }
 
   if (tools::file_ext(path) != "tmTheme") {
-    cli::cli_abort(
-      paste0(
-        "Argument {.arg path} should be a {.str tmTheme} file",
-        " not {.str {tools::file_ext(path)}}."
-      )
-    )
+    cli::cli_abort(paste0(
+      "Argument {.arg path} should be a {.str tmTheme} file",
+      " not {.str {tools::file_ext(path)}}."
+    ))
   }
 
   # Check if the file is online
@@ -140,12 +138,10 @@ read_tm_theme <- function(path) {
   the_keys <- settings_df$name
   difs <- setdiff(minimal_keys, the_keys)
   if (length(difs) > 0) {
-    cli::cli_abort(
-      paste0(
-        "tmTheme in {.file {path}} invalid. {.str {difs}} ",
-        "{?value is/values are} missing."
-      )
-    )
+    cli::cli_abort(paste0(
+      "tmTheme in {.file {path}} invalid. {.str {difs}} ",
+      "{?value is/values are} missing."
+    ))
   }
 
   # 3. Token color scopes ----
@@ -181,11 +177,7 @@ read_tm_theme <- function(path) {
     scopes <- strsplit(tok_values["scope"], ",")
     scopes <- sort(trimws(unname(unlist(scopes))))
 
-    tok_df <- dplyr::tibble(
-      section = "tokenColors",
-      name = nm,
-      scope = scopes
-    )
+    tok_df <- dplyr::tibble(section = "tokenColors", name = nm, scope = scopes)
 
     # Extract color specifications from dictionary
     dict <- lapply(this_tok$dict, function(x) {

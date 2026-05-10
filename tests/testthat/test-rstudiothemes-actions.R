@@ -95,10 +95,7 @@ test_that("Dev testing install_themes", {
   remove_rstudiothemes()
   install_rstudiothemes("light", c("Selenized Dark", "Skeletor Syntax"))
   expect_null(list_rstudiothemes("light"))
-  expect_identical(
-    list_rstudiothemes(),
-    c("Selenized Dark", "Skeletor Syntax")
-  )
+  expect_identical(list_rstudiothemes(), c("Selenized Dark", "Skeletor Syntax"))
 
   # Install all again
   expect_message(install_rstudiothemes())

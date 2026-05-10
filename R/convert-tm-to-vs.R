@@ -45,12 +45,10 @@ convert_tm_to_vs_theme <- function(
     orig_aut <- get_table_value(theme_db, "author")
 
     if (is.null(orig_aut)) {
-      cli::cli_alert_warning(
-        paste0(
-          "tmTheme theme {.str {name}} does not have author, ",
-          "use the {.arg author} argument."
-        )
-      )
+      cli::cli_alert_warning(paste0(
+        "tmTheme theme {.str {name}} does not have author, ",
+        "use the {.arg author} argument."
+      ))
       author <- "rstudiothemes R package"
       cli::cli_alert_info("Using {.code author = {.str {author}}}.")
     } else {
@@ -174,11 +172,7 @@ convert_tm_to_vs_theme <- function(
 
     tok <- list()
     # Create list for tokens
-    tok[[1]] <- list(
-      settings = list(
-        foreground = col_l$editor.foreground
-      )
-    )
+    tok[[1]] <- list(settings = list(foreground = col_l$editor.foreground))
 
     ntok <- seq_len(nrow(tok_g))
 
@@ -187,11 +181,7 @@ convert_tm_to_vs_theme <- function(
       scp <- as.character(thiscope$sc)
       scp <- trimws(unlist(strsplit(scp, ",")))
 
-      thistok <- list(
-        name = thiscope$name,
-        scope = scp,
-        settings = list()
-      )
+      thistok <- list(name = thiscope$name, scope = scp, settings = list())
 
       dictt <- list()
 
@@ -253,36 +243,28 @@ get_table_scope <- function(x, scope, feature) {
 
 
 additional_cols <- function(bg, fg, comment, selection, accent) {
-  bgaccent1 <- colorspace::hex(
-    colorspace::mixcolor(
-      0.98,
-      colorspace::hex2RGB(accent),
-      colorspace::hex2RGB(bg)
-    )
-  )
+  bgaccent1 <- colorspace::hex(colorspace::mixcolor(
+    0.98,
+    colorspace::hex2RGB(accent),
+    colorspace::hex2RGB(bg)
+  ))
 
-  bgaccent2 <- colorspace::hex(
-    colorspace::mixcolor(
-      0.80,
-      colorspace::hex2RGB(accent),
-      colorspace::hex2RGB(bg)
-    )
-  )
-  bgfg1 <- colorspace::hex(
-    colorspace::mixcolor(
-      0.90,
-      colorspace::hex2RGB(fg),
-      colorspace::hex2RGB(bg)
-    )
-  )
+  bgaccent2 <- colorspace::hex(colorspace::mixcolor(
+    0.80,
+    colorspace::hex2RGB(accent),
+    colorspace::hex2RGB(bg)
+  ))
+  bgfg1 <- colorspace::hex(colorspace::mixcolor(
+    0.90,
+    colorspace::hex2RGB(fg),
+    colorspace::hex2RGB(bg)
+  ))
 
-  bgfg2 <- colorspace::hex(
-    colorspace::mixcolor(
-      0.70,
-      colorspace::hex2RGB(fg),
-      colorspace::hex2RGB(bg)
-    )
-  )
+  bgfg2 <- colorspace::hex(colorspace::mixcolor(
+    0.70,
+    colorspace::hex2RGB(fg),
+    colorspace::hex2RGB(bg)
+  ))
 
   list(
     # Integrated Terminal Colors

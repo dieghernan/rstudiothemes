@@ -37,9 +37,7 @@ test_that("Online", {
     "rstudiothemes/refs/heads/main/inst/ext/test-color-theme.json"
   )
 
-  expect_snapshot(
-    res <- read_vs_theme(path),
-  )
+  expect_snapshot(res <- read_vs_theme(path))
   expect_s3_class(res, "tbl_df")
 })
 
@@ -48,9 +46,7 @@ test_that("Corner case", {
 
   jelly <- system.file("ext/jellyfish.json", package = "rstudiothemes")
 
-  expect_silent(
-    df <- read_vs_theme(jelly)
-  )
+  expect_silent(df <- read_vs_theme(jelly))
   expect_s3_class(df, "tbl_df")
 
   expect_silent(convert_vs_to_tm_theme(jelly))

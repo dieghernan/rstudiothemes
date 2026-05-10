@@ -86,12 +86,10 @@ convert_to_rstudio_theme <- function(
   # Only works in RStudio
   if (!on_rstudio()) {
     gui <- detect_gui() # nolint
-    cli::cli_alert_danger(
-      paste0(
-        "{.fn rstudiothemes::convert_to_rstudio_theme} only works in RStudio, ",
-        "not in {gui}."
-      )
-    )
+    cli::cli_alert_danger(paste0(
+      "{.fn rstudiothemes::convert_to_rstudio_theme} only works in RStudio, ",
+      "not in {gui}."
+    ))
     cli::cli_alert("Bye")
     return(NULL)
   }
@@ -105,12 +103,10 @@ convert_to_rstudio_theme <- function(
   valid_ext <- c("tmTheme", "json")
 
   if (!ext %in% valid_ext) {
-    cli::cli_abort(
-      paste0(
-        "Argument {.arg path} should be a {.or {.str {valid_ext}}} file",
-        " not {.str {ext}}."
-      )
-    )
+    cli::cli_abort(paste0(
+      "Argument {.arg path} should be a {.or {.str {valid_ext}}} file",
+      " not {.str {ext}}."
+    ))
   }
 
   if (ext == "json") {
@@ -130,10 +126,7 @@ convert_to_rstudio_theme <- function(
   tmcols <- read_tm_theme(path)
 
   # Top-level colors
-  tb_hlp_top <- dplyr::tibble(
-    name = "caret",
-    rstheme = ".ace_cursor"
-  )
+  tb_hlp_top <- dplyr::tibble(name = "caret", rstheme = ".ace_cursor")
 
   # Adjustment for ruler (tmTheme does not specify this well)
   # Priority: invisibles > guide > gutter and different from bg
@@ -286,21 +279,14 @@ convert_to_rstudio_theme <- function(
 
   themelines <- gsub("blur(1px)", "brightness(75%)", themelines)
 
-  vtext <- paste0(
-    "/* Generated with rstudiothemes package */"
-  )
+  vtext <- paste0("/* Generated with rstudiothemes package */")
 
   additional <- c("")
 
   # Map high-level colors to Sass variable names
   hl_sass <- dplyr::tibble(
     section = "colors",
-    name = c(
-      "foreground",
-      "background",
-      "caret",
-      "selection"
-    ),
+    name = c("foreground", "background", "caret", "selection"),
     var = c("fg", "bg", "accent", "selection")
   )
 
@@ -344,14 +330,10 @@ convert_to_rstudio_theme <- function(
     } else if ("error" %in% attr(capture_log, "class")) {
       cli::cli_alert_danger(capture_log$message)
     } else {
-      cli::cli_alert_success(
-        "Theme {.arg {capture_log}} installed."
-      )
+      cli::cli_alert_success("Theme {.arg {capture_log}} installed.")
     }
     if (apply) {
-      cli::cli_alert_info(
-        "Applying {.arg {theme_name}}..."
-      )
+      cli::cli_alert_info("Applying {.arg {theme_name}}...")
       rstudioapi::applyTheme(theme_name)
     }
   }

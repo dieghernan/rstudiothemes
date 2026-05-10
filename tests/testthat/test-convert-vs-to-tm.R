@@ -17,9 +17,7 @@ test_that("Theme creation", {
   tmout <- file.path(tempdir(), "my_test.tmTheme")
   vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
 
-  expect_silent(
-    thef <- convert_vs_to_tm_theme(vstheme, outfile = tmout)
-  )
+  expect_silent(thef <- convert_vs_to_tm_theme(vstheme, outfile = tmout))
   expect_true(file.exists(thef))
   expect_identical(thef, tmout)
 
@@ -81,9 +79,7 @@ test_that("Online", {
     "https://raw.githubusercontent.com/dieghernan/",
     "rstudiothemes/refs/heads/main/inst/ext/test-color-theme.json"
   )
-  expect_snapshot(
-    thef <- convert_vs_to_tm_theme(path)
-  )
+  expect_snapshot(thef <- convert_vs_to_tm_theme(path))
   read_tm <- read_tm_theme(thef)
   expect_s3_class(read_tm, "tbl_df")
 })
