@@ -1,4 +1,4 @@
-# rstudiothemes (development version)
+# rstudiothemes 1.1.1
 
 - Add new key to Visual Studio Code/Positron theme:
 
@@ -6,7 +6,7 @@
   {
     // Created with the R package rstudiothemes (c) dieghernan.
     // https://github.com/dieghernan/rstudiothemes
-    "$schema": "vscode://schemas/color-theme"
+    "$schema": "vscode://schemas/color-theme",
     // Rest of keys ...
   }
   ```
