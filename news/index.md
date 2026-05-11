@@ -1,10 +1,23 @@
 # Changelog
 
+## rstudiothemes 1.1.1
+
+- Add new key to Visual Studio Code/Positron theme:
+
+  ``` json
+  {
+    // Created with the R package rstudiothemes (c) dieghernan.
+    // https://github.com/dieghernan/rstudiothemes
+    "$schema": "vscode://schemas/color-theme",
+    // Rest of keys ...
+  }
+  ```
+
 ## rstudiothemes 1.1.0
 
 CRAN release: 2026-04-07
 
-- Improved JSON parsing: invalid trailing commas before `)` or `]`
+- Improved JSON parsing: invalid trailing commas before `}` or `]`
   (common in VS Code themes) are now removed before parsing.
 - Added Positron aliases for Visual Studio Code theme functions:
   - [`convert_positron_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_vs_to_tm_theme.md).

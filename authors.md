@@ -16,7 +16,7 @@ Source:
 
 Hernangómez D (2026). *rstudiothemes: Create RStudio Themes from Visual
 Studio Code, Positron and TextMate Themes*.
-[doi:10.32614/CRAN.package.rstudiothemes](https://doi.org/10.32614/CRAN.package.rstudiothemes),
+[doi:10.32614/CRAN.package.rstudiothemes](https://doi.org/10.32614/CRAN.package.rstudiothemes).
 <https://dieghernan.github.io/rstudiothemes/>.
 
     @Manual{R-rstudiothemes,
@@ -24,7 +24,7 @@ Studio Code, Positron and TextMate Themes*.
       doi = {10.32614/CRAN.package.rstudiothemes},
       author = {Diego Hernangómez},
       year = {2026},
-      version = {1.1.0},
+      version = {1.1.1},
       url = {https://dieghernan.github.io/rstudiothemes/},
       abstract = {Create and install RStudio themes derived from Visual Studio Code, Positron and TextMate themes. Provides functions to convert between TextMate and Visual Studio Code or Positron themes, as well as ports of several Visual Studio Code themes.},
     }

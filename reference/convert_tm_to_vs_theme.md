@@ -70,6 +70,7 @@ readLines(path) |>
 #> {
 #>   // Created with the R package rstudiothemes (c) dieghernan.
 #>   // https://github.com/dieghernan/rstudiothemes
+#>   "$schema": "vscode://schemas/color-theme",
 #>   "name": "Testing RStudioTheme",
 #>   "author": "rstudiothemes",
 #>   "semanticHighlighting": true,
@@ -116,5 +117,4 @@ readLines(path) |>
 #>       }
 #>     },
 #>     {
-#>       "name": "attr-value",
 ```

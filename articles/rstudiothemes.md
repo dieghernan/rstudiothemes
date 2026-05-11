@@ -1,11 +1,12 @@
 # Get started with rstudiothemes
 
 The **rstudiothemes** package provides tools to convert **Visual Studio
-Code/Positron** and **TextMate** themes into RStudio’s `.rstheme` format
-and install them in your RStudio IDE. It also includes a set of
+Code**, **Positron** and **TextMate** themes into RStudio’s `.rstheme`
+format and install them in your RStudio IDE. It also includes a set of
 ready-to-use themes.
 
 ``` r
+
 library(rstudiothemes)
 ```
 
@@ -14,6 +15,7 @@ library(rstudiothemes)
 To install all built-in RStudio themes that come with this package:
 
 ``` r
+
 install_rstudiothemes()
 
 #> ✔ Installed 30 themes
@@ -27,6 +29,7 @@ Coming, Dracula, etc.) to your RStudio themes directory.
 To see themes available now:
 
 ``` r
+
 list_rstudiothemes(list_installed = FALSE)
 #>  [1] "Andromeda"                  "ayu Dark"                  
 #>  [3] "ayu Light"                  "Catppuccin Latte"          
@@ -53,6 +56,7 @@ list_rstudiothemes(list_installed = FALSE)
 You can quickly preview themes directly from R:
 
 ``` r
+
 try_rstudiothemes()
 ```
 
@@ -63,6 +67,7 @@ Pass a subset of styles (for example, `"dark"` or `"light"`) if needed.
 After installing themes, apply one using the RStudio API:
 
 ``` r
+
 rstudioapi::applyTheme("Winter is Coming Dark Blue")
 ```
 
@@ -79,6 +84,7 @@ You can convert a Visual Studio Code/Positron or TextMate theme file
 into an RStudio theme:
 
 ``` r
+
 convert_to_rstudio_theme(
   "<path/to/vscode-theme.json>",
   apply = TRUE,
@@ -102,7 +108,7 @@ This workflow lets you bring your preferred editor theme into RStudio.
 
 ## Tips and tricks
 
-- **List installed themes:** `list_rstudiothemes(list_installed = TRUE)`
-- **Try specific categories:** filter themes by Light/Dark style
-- **Use the Add-Theme UI**: RStudio’s **Global Options \> Appearance \>
+- List installed themes with `list_rstudiothemes(list_installed = TRUE)`
+- Try specific categories by filtering themes by Light/Dark style
+- Use the Add-Theme UI in RStudio’s **Global Options \> Appearance \>
   Add** to manually add `.rstheme` files you’ve created or converted.

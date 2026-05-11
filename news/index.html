@@ -13,7 +13,7 @@
 
     <a class="navbar-brand me-2" href="../index.html"><img src="../apple-touch-icon.png" alt="rstudiothemes logo" height="34" width="34" class="d-inline-block me-1">rstudiothemes</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.1.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,8 +56,20 @@
     </div>
 
     <div class="section level2">
+<h2 class="pkg-version" data-toc-text="1.1.1" id="rstudiothemes-111">rstudiothemes 1.1.1<a class="anchor" aria-label="anchor" href="#rstudiothemes-111"></a></h2>
+<ul><li>
+<p>Add new key to Visual Studio Code/Positron theme:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>  <span class="er">//</span> <span class="er">Created</span> <span class="er">with</span> <span class="er">the</span> <span class="er">R</span> <span class="er">package</span> <span class="er">rstudiothemes</span> <span class="er">(c)</span> <span class="er">dieghernan.</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="er">//</span> <span class="er">https</span><span class="fu">:</span><span class="er">//github.com/dieghernan/rstudiothemes</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>  <span class="st">"$schema"</span><span class="er">:</span> <span class="st">"vscode://schemas/color-theme"</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>  <span class="er">//</span> <span class="er">Rest</span> <span class="er">of</span> <span class="er">keys</span> <span class="er">...</span></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+</li>
+</ul></div>
+    <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.1.0" id="rstudiothemes-110">rstudiothemes 1.1.0<a class="anchor" aria-label="anchor" href="#rstudiothemes-110"></a></h2><p class="text-muted">CRAN release: 2026-04-07</p>
-<ul><li>Improved JSON parsing: invalid trailing commas before <code>)</code> or <code>]</code> (common in VS Code themes) are now removed before parsing.</li>
+<ul><li>Improved JSON parsing: invalid trailing commas before <code>}</code> or <code>]</code> (common in VS Code themes) are now removed before parsing.</li>
 <li>Added Positron aliases for Visual Studio Code theme functions:
 <ul><li>
 <code><a href="../reference/convert_vs_to_tm_theme.html">convert_positron_to_tm_theme()</a></code>.</li>

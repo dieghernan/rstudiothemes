@@ -28,6 +28,7 @@ Other functions for reading themes:
 ## Examples
 
 ``` r
+
 the_theme <- system.file("ext/test-color-theme.json",
   package = "rstudiothemes"
 ) |>
