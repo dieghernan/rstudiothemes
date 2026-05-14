@@ -2,6 +2,8 @@
 
 ## rstudiothemes 1.1.1
 
+CRAN release: 2026-05-11
+
 - Add new key to Visual Studio Code/Positron theme:
 
   ``` json
