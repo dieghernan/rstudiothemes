@@ -1,6 +1,6 @@
 # rstudiothemes 1.1.1
 
-- Add new key to Visual Studio Code/Positron theme:
+- Added package metadata comments to Visual Studio Code/Positron themes:
 
   ``` json
   {
@@ -13,8 +13,8 @@
 
 # rstudiothemes 1.1.0
 
-- Improved JSON parsing: invalid trailing commas before `}` or `]` (common in VS
-  Code themes) are now removed before parsing.
+- Improved JSON parsing: invalid trailing commas before `}` or `]` (common in
+  Visual Studio Code themes) are now removed before parsing.
 - Added Positron aliases for Visual Studio Code theme functions:
   - `convert_positron_to_tm_theme()`.
   - `convert_tm_to_positron_theme()`.
@@ -22,7 +22,7 @@
 - New themes:
   - `"Positron Dark"` and `"Positron Light"` by Positron.
   - `"VSCode Dark"` and `"VSCode Light"` by Visual Studio Code.
-- Developed a Shiny app to facilitate online theme conversion:
+- Added a Shiny app for online theme conversion:
   <https://dieghernan-themeconverter.share.connect.posit.cloud/>.
 
 # rstudiothemes 1.0.0

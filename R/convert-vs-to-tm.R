@@ -14,7 +14,7 @@
 #' @param name Optional. The name of the theme. If not provided, the name of
 #'   the theme in `path` will be used.
 #' @param author Optional. The author of the theme. If not provided, the author
-#'   from `path` will be used, or a default value will be assigned.
+#'   from `path` will be used or a default value will be assigned.
 #'
 #' @return
 #' This function is called for its side effects: it writes a `.tmTheme`
@@ -41,16 +41,16 @@ convert_vs_to_tm_theme <- function(
   name = NULL,
   author = NULL
 ) {
-  # Read and parse the VS Code theme file
+  # Read and parse the VS Code theme file.
   vs_df <- read_vs_theme(path)
 
-  # Prepare data frame for settings
+  # Prepare the settings data frame.
   settings_df <- tmtheme_settings_df(vs_df)
 
-  # Prepare data frame for scopes
+  # Prepare the scopes data frame.
   scopes_df <- tmtheme_scopes_df(vs_df)
 
-  # Top-level metadata
+  # Extract top-level metadata.
   for_top <- vs_df$section %in% c("colors", "highlevel") & !is.na(vs_df$name)
   for_top_df <- vs_df[for_top, ]
 
@@ -84,7 +84,7 @@ convert_vs_to_tm_theme <- function(
 
   comm <- "Generated with rstudiothemes R package"
 
-  # Generate uuid from md5 of the original file
+  # Generate a UUID from the MD5 hash of the original file.
   md5 <- unname(tools::md5sum(path))
   uuid <- generate_uuid(md5)
 
@@ -100,10 +100,10 @@ convert_vs_to_tm_theme <- function(
     value = c(name, author, "sRGB", semclass, comm, uuid)
   )
 
-  # Start building the list that would be converted to tmTheme
+  # Start building the list to convert to tmTheme.
   the_theme <- list(plist = list(dict = list()))
 
-  # Top level
+  # Add top-level metadata.
 
   top_list <- NULL
   for (i in seq_len(nrow(toplevel_df))) {
@@ -113,7 +113,7 @@ convert_vs_to_tm_theme <- function(
     top_list <- c(top_list, list(key = list(tm), string = list(val)))
   }
 
-  # Create settings
+  # Create settings.
   settings_list <- NULL
 
   for (i in seq_len(nrow(settings_df))) {
@@ -123,10 +123,10 @@ convert_vs_to_tm_theme <- function(
     settings_list <- c(settings_list, list(key = list(tm), string = list(col)))
   }
 
-  # Prepare the array with these setting
+  # Prepare the array with these settings.
   array_list <- list(dict = list(key = list("settings"), dict = settings_list))
 
-  # Prepare token color scopes
+  # Prepare token color scopes.
   for (i in seq_len(nrow(scopes_df))) {
     this <- as.list(scopes_df[i, ])
     name <- unlist(this$name)
@@ -148,7 +148,7 @@ convert_vs_to_tm_theme <- function(
       )
     )
 
-    # Prepare settings dictionary for this scope
+    # Prepare the settings dictionary for this scope.
     mat <- t(scopes_df[i, c("foreground", "background", "fontStyle")])
 
     set_scope_l <- NULL
@@ -172,7 +172,7 @@ convert_vs_to_tm_theme <- function(
 
   end <- c(top_list, list(key = list("settings"), array = array_list))
 
-  # Finally write it
+  # Write the final theme.
   the_theme$plist$dict <- end
   attr(the_theme$plist, "version") <- "1.0"
 
@@ -182,7 +182,6 @@ convert_vs_to_tm_theme <- function(
   outfile
 }
 
-
 #' @rdname convert_vs_to_tm_theme
 #' @export
 #' @description
@@ -190,7 +189,7 @@ convert_vs_to_tm_theme <- function(
 convert_positron_to_tm_theme <- convert_vs_to_tm_theme
 
 tmtheme_settings_df <- function(vs_df) {
-  # Mapping
+  # Mapping.
   maps <- read.csv(
     system.file("csv/mapping.csv", package = "rstudiothemes"),
     na.strings = c("NA", "")
@@ -207,7 +206,7 @@ tmtheme_settings_df <- function(vs_df) {
   end <- dplyr::distinct(end)
   end <- end[!is.na(end$color), ]
 
-  # Avoid duplicates
+  # Avoid duplicates.
   end$rank <- seq_len(nrow(end))
   end <- dplyr::grouped_df(end, "tm")
   end <- dplyr::slice_head(end, n = 1)
@@ -217,10 +216,10 @@ tmtheme_settings_df <- function(vs_df) {
     "color"
   )]
 
-  # As a bare minimum we should have: background, foreground, selection,
-  # invisibles, lineHighlight and caret. If any are missing, assign defaults.
+  # At minimum, require background, foreground, selection, invisibles,
+  # lineHighlight and caret. If any are missing, assign defaults.
 
-  # Check minimums
+  # Check required settings.
   check_vals <- c("background", "foreground", "selection") %in% end$tm
 
   if (!all(check_vals)) {
@@ -266,7 +265,7 @@ tmtheme_scopes_df <- function(vs_df) {
 
   tokens_df <- tokens_df[!grepl("\\*", tokens_df$scope), ]
 
-  # If has semanticTokenColors this has priority over other scopes
+  # Prioritize `semanticTokenColors` over other scopes when present.
   if ("semanticTokenColors" %in% tokens_df$section) {
     sem <- tokens_df[tokens_df$section == "semanticTokenColors", ]
     rest <- tokens_df[!tokens_df$section == "semanticTokenColors", ]
@@ -280,25 +279,25 @@ tmtheme_scopes_df <- function(vs_df) {
     .direction = "up"
   )
 
-  # Unique by group
+  # Keep one value per group.
   unique_g <- dplyr::slice_head(filled, n = 1)
 
-  # Sort scopes
+  # Sort scopes.
   unique_g <- dplyr::arrange(
     unique_g,
     dplyr::pick(dplyr::all_of(c("name", "scope")))
   )
 
-  # One line for scope
+  # Use one line per scope.
   prepare <- dplyr::grouped_df(
     unique_g,
     c("name", "foreground", "background", "fontStyle")
   )
 
-  # Work around lintr
+  # Work around lintr.
   scope <- ""
 
-  # Build final output
+  # Build the final output.
   eend <- dplyr::summarise(
     prepare,
     scope = paste0(scope, collapse = ", "),

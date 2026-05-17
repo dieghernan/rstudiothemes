@@ -31,7 +31,7 @@ a temporary file (\code{\link[=tempfile]{tempfile()}}).}
 the theme in \code{path} will be used.}
 
 \item{author}{Optional. The author of the theme. If not provided, the author
-from \code{path} will be used, or a default value will be assigned.}
+from \code{path} will be used or a default value will be assigned.}
 }
 \value{
 This function is called for its side effects: it writes a \code{.tmTheme}

@@ -16,7 +16,7 @@
 #' `list_rstudiothemes(list_installed = FALSE)`) only work in RStudio, returning
 #' `NULL` when called from other IDEs.
 #'
-#' @section Ported Themes:
+#' @section Ported themes:
 #' \pkg{rstudiothemes} includes RStudio themes based on the
 #' following Visual Studio Code themes:
 #'
@@ -37,16 +37,16 @@
 NULL
 
 #' @describeIn rstudiothemes-actions Install RStudio themes
-#' @param style Character. Limit themes to a specific group: `all`, `dark`, or
+#' @param style Character. Limit themes to a specific group: `all`, `dark` or
 #'   `light`.
-#' @param destdir Optional directory for `.rstheme` files. By default uses
+#' @param destdir Optional directory for `.rstheme` files. By default, it uses
 #'   [rstudioapi::addTheme()], but this argument allows installation to
 #'   non-standard directories.
 #' @param themes Optional character vector of theme names. If provided, only
 #'   these themes will be used, and `style` will be ignored.
 #' @return
-#' * `install_rstudiothemes()` and `remove_rstudiothemes()` return `NULL`
-#' invisibly.
+#' - `install_rstudiothemes()` and `remove_rstudiothemes()` return `NULL`
+#'   invisibly.
 #'
 #' @export
 install_rstudiothemes <- function(
@@ -54,7 +54,7 @@ install_rstudiothemes <- function(
   themes = NULL,
   destdir = NULL
 ) {
-  # Only works in RStudio
+  # Only works in RStudio.
   if (!on_rstudio()) {
     gui <- detect_gui() # nolint
     cli::cli_alert_danger(paste0(
@@ -99,7 +99,7 @@ install_rstudiothemes <- function(
 #' @describeIn rstudiothemes-actions Remove \pkg{rstudiothemes} from RStudio
 #' @export
 remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
-  # Only works in RStudio
+  # Only works in RStudio.
   if (!on_rstudio()) {
     gui <- detect_gui() # nolint
     cli::cli_alert_danger(paste0(
@@ -130,7 +130,7 @@ remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
 #'   \pkg{rstudiothemes} package are listed instead.
 #'
 #' @return
-#' * `list_rstudiothemes()` returns a character vector of theme names.
+#' - `list_rstudiothemes()` returns a character vector of theme names.
 #'
 #' @export
 list_rstudiothemes <- function(
@@ -143,7 +143,7 @@ list_rstudiothemes <- function(
 
   # nocov start
 
-  # Only works in RStudio
+  # Only works in RStudio.
   if (!on_rstudio()) {
     gui <- detect_gui() # nolint
     cli::cli_alert_danger(paste0(
@@ -197,13 +197,13 @@ list_pkg_rstudiothemes <- function(
 
   names(allt) <- nms
 
-  # If specific themes selected
+  # If specific themes are selected.
   if (!is.null(themes)) {
-    # Validate name
+    # Validate theme names.
 
     sel <- ensure_null(allt[intersect(themes, nms)])
 
-    # Inform if some themes not found
+    # Inform the user if some themes are not found.
     if (length(sel) < length(themes)) {
       cli::cli_alert_warning(paste0(
         "Found {no({length(sel)})} theme{?s} with ",
@@ -224,7 +224,7 @@ list_pkg_rstudiothemes <- function(
     return(allt)
   }
 
-  # Need to assess the type of theme
+  # Assess the theme type.
   dark <- vapply(
     allt,
     function(x) {
@@ -247,7 +247,7 @@ list_pkg_rstudiothemes <- function(
 #'   prompted to continue after each theme.
 #'
 #' @return
-#' * `try_rstudiothemes()` has side effects of starting a widget that allows
+#' - `try_rstudiothemes()` has side effects of starting a widget that allows
 #'   users to try different themes. The widget can be exited by following the
 #'   prompts, which will restore the original theme.
 #'
@@ -261,7 +261,7 @@ try_rstudiothemes <- function(
 
   style <- match_arg_pretty(style)
 
-  # Only works in RStudio
+  # Only works in RStudio.
   if (!on_rstudio()) {
     gui <- detect_gui() # nolint
     cli::cli_alert_danger(paste0(
@@ -272,21 +272,21 @@ try_rstudiothemes <- function(
     return(NULL)
   }
 
-  # Logic: extract in order (dark/light) and then select based on user inputs
+  # Extract themes by style (`dark`/`light`) before filtering user inputs.
   if (!is.null(themes)) {
-    # Validate
+    # Validate theme names.
     all_installed <- intersect(themes, list_rstudiothemes())
   } else {
     all_installed <- list_rstudiothemes(style)
   }
 
-  # Now sort based on style
+  # Sort by style.
   try_themes <- unique(c(
     all_installed[all_installed %in% names(list_pkg_rstudiothemes("light"))],
     all_installed[all_installed %in% names(list_pkg_rstudiothemes("dark"))]
   ))
 
-  # Arrange in dark/light
+  # Arrange in dark/light order.
 
   current_theme <- rstudioapi::getThemeInfo()
 

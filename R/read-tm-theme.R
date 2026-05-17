@@ -18,17 +18,17 @@
 #' the_theme <- system.file("ext/test-color-theme.json",
 #'   package = "rstudiothemes"
 #' ) |>
-#'   # Convert the Visual Studio Code theme to TextMate format
+#'   # Convert the Visual Studio Code theme to TextMate format.
 #'   convert_vs_to_tm_theme()
 #'
-#' # Check
+#' # Check the converted theme.
 #' readLines(the_theme) |>
 #'   head(10) |>
 #'   cat(sep = "\n")
 #'
 #' read_tm_theme(the_theme)
 read_tm_theme <- function(path) {
-  # Validate inputs
+  # Validate inputs.
   if (missing(path)) {
     cli::cli_abort("Argument {.arg path} can't be empty.")
   }
@@ -40,7 +40,7 @@ read_tm_theme <- function(path) {
     ))
   }
 
-  # Check if the file is online
+  # Check whether the file is online.
   if (grepl("^http", path)) {
     local_file <- tempfile(fileext = ".tmTheme")
     cli::cli_alert_info("Downloading from {.url {path}}")
@@ -58,7 +58,7 @@ read_tm_theme <- function(path) {
 
   tm <- rapply(tm, col2hex, how = "list")
 
-  # Remove trailing and double whitespace
+  # Remove trailing and double whitespace.
   tm <- rapply(
     tm,
     function(x) {
@@ -72,18 +72,18 @@ read_tm_theme <- function(path) {
 
   # 1. High-level inputs -----
   specs <- tm$plist$dict
-  # Do not use the array; this is where the colors are.
+  # Do not use the array because this is where the colors are.
   highlev <- specs[names(specs) != "array"]
 
   # Strong assumption: the structure should be a list of consecutive
   # <key><string><key><string>...
   hl_keys <- unlist(highlev[names(highlev) == "key"])
 
-  # Remove settings from keys
+  # Remove settings from keys.
   hl_keys <- hl_keys[!hl_keys == "settings"]
   hl_values <- unlist(highlev[names(highlev) == "string"])
 
-  # Ensure same length
+  # Ensure the same length.
   l_merged <- seq_len(min(length(hl_keys), length(hl_values)))
 
   top_df <- dplyr::tibble(
@@ -95,7 +95,7 @@ read_tm_theme <- function(path) {
   # 2. High-level color settings ----
   array <- specs[names(specs) == "array"][[1]]
 
-  # Identify high-level color settings (key and dict structure)
+  # Identify high-level color settings by key and dict structure.
 
   id_settings <- vapply(
     array,
@@ -111,12 +111,12 @@ read_tm_theme <- function(path) {
 
   settings_list <- array[id_settings][1]$dict$dict
 
-  # Extract keys and values with the same assumptions as high-level inputs
+  # Extract keys and values with the same assumptions as high-level inputs.
 
   sett_keys <- unlist(settings_list[names(settings_list) == "key"])
   sett_values <- unlist(settings_list[names(settings_list) == "string"])
 
-  # Ensure matching length
+  # Ensure a matching length.
   l_set_merged <- seq_len(min(length(sett_keys), length(sett_values)))
 
   settings_df <- dplyr::tibble(
@@ -125,7 +125,7 @@ read_tm_theme <- function(path) {
     foreground = unname(sett_values)[l_set_merged]
   )
 
-  # Validate the tmTheme here
+  # Validate the tmTheme.
   minimal_keys <- c(
     "background",
     "caret",
@@ -149,13 +149,13 @@ read_tm_theme <- function(path) {
   it <- seq_along(token_list)
 
   token_df <- lapply(it, function(i) {
-    # Use the same assumptions as high-level inputs
+    # Use the same assumptions as high-level inputs.
 
     this_tok <- token_list[i][[1]]
 
     tok_keys <- unlist(this_tok[names(this_tok) == "key"])
 
-    # Exclude settings key
+    # Exclude the settings key.
     tok_keys <- tok_keys[!tok_keys == "settings"]
     tok_values_init <- this_tok[names(this_tok) == "string"]
     tok_values <- lapply(tok_values_init, function(y) {
@@ -167,7 +167,7 @@ read_tm_theme <- function(path) {
     })
     tok_values <- unlist(tok_values)
 
-    # Ensure matching length
+    # Ensure a matching length.
     t_set_merged <- seq_len(min(length(tok_keys), length(tok_values)))
     tok_keys <- tok_keys[t_set_merged]
     tok_values <- tok_values[t_set_merged]
@@ -179,7 +179,7 @@ read_tm_theme <- function(path) {
 
     tok_df <- dplyr::tibble(section = "tokenColors", name = nm, scope = scopes)
 
-    # Extract color specifications from dictionary
+    # Extract color specifications from the dictionary.
     dict <- lapply(this_tok$dict, function(x) {
       if (length(x) == 0) {
         return("NULL")
@@ -187,11 +187,10 @@ read_tm_theme <- function(path) {
       x
     })
 
-    # Convert specifications to data frame
+    # Convert specifications to a data frame.
     if (length(dict) == 0) {
       df_spec <- dplyr::tibble(foreground = "")
     } else {
-      # Convert specifications to data frame
       nm <- names(dict)
       val <- unlist(dict[nm == "string"])
       names(val) <- unlist(dict[nm == "key"])
@@ -205,10 +204,10 @@ read_tm_theme <- function(path) {
 
   token_df <- dplyr::bind_rows(token_df)
 
-  # Combine all data frames
+  # Combine all data frames.
   final_df <- dplyr::bind_rows(top_df, settings_df, token_df)
 
-  # Add missing columns if they do not exist
+  # Add missing columns if they do not exist.
   if (!"background" %in% names(final_df)) {
     final_df$background <- NA
   }
@@ -234,10 +233,10 @@ read_tm_theme <- function(path) {
 
   final_df <- final_df[, nms]
 
-  # Convert empty strings to NA
+  # Convert empty strings to NA.
   final_df[final_df == ""] <- NA
 
-  # Filter out rows with no style information
+  # Filter out rows with no style information.
   undef <- is.na(final_df$value) &
     is.na(final_df$foreground) &
     is.na(final_df$background) &

@@ -13,7 +13,7 @@
 #'
 #' @return
 #' This function is called for its side effects. It writes a new `.json`
-#' file in `outfile` and returns the path.
+#' file to `outfile` and returns the path.
 #'
 #' @examples
 #' tmtheme <- system.file("ext/test.tmTheme",
@@ -33,7 +33,7 @@ convert_tm_to_vs_theme <- function(
 ) {
   theme_db <- read_tm_theme(path)
 
-  # Determine dark or light theme
+  # Determine whether the theme is dark or light.
   semclass <- get_table_value(theme_db, "semanticClass")
   type <- ifelse(grepl("dark", semclass, fixed = TRUE), "dark", "light")
 
@@ -56,7 +56,7 @@ convert_tm_to_vs_theme <- function(
     }
   }
 
-  # Identify high-contrast theme
+  # Identify high-contrast themes.
   hc <- any(
     grepl("_hc_", semclass, fixed = TRUE),
     grepl("contrast", name, ignore.case = TRUE)
@@ -75,7 +75,7 @@ convert_tm_to_vs_theme <- function(
     type = type
   )
 
-  # Get initial colors
+  # Get the initial colors.
   comment <- get_table_scope(theme_db, "comment", "foreground")
   fg <- get_table_value(theme_db, "foreground", "foreground")
   bg <- get_table_value(theme_db, "background", "foreground")
@@ -83,7 +83,7 @@ convert_tm_to_vs_theme <- function(
   accent <- get_table_value(theme_db, "caret", "foreground")
   init <- additional_cols(bg, fg, comment, selection, accent)
 
-  # Add mapping
+  # Add the color mapping.
 
   # Based on
   # https://github.com/microsoft/vscode-generator-code/blob/main/generators/ ...
@@ -94,35 +94,36 @@ convert_tm_to_vs_theme <- function(
     na.strings = c("NA", "")
   )
 
-  # Deprecate editorIndentGuide.background (use editorIndentGuide.background1)
+  # Deprecate editorIndentGuide.background in favor of
+  # editorIndentGuide.background1.
   mapping <- mapping[mapping$vscode != "editorIndentGuide.background", ]
 
   high_level <- theme_db[theme_db$section == "colors", c("name", "foreground")]
   names(high_level) <- c("tm", "color")
   df <- merge(high_level, mapping, by = "tm", all = FALSE)
 
-  # All high-level colors are now available
+  # Make all high-level colors available.
   high_colors <- df[, c("vscode", "color")]
 
   col_l <- unlist(high_colors$color)
   names(col_l) <- unlist(high_colors$vscode)
   col_l <- as.list(col_l)
 
-  # If high-contrast, add specific rules
+  # Add specific rules for high-contrast themes.
 
   if (hc) {
     col_l$contrastBorder <- fg
     col_l$editor.selectionForeground <- accent
   }
 
-  # Blend and sort colors
+  # Blend and sort colors.
   col_end <- modifyList(init, col_l)
   col_end <- col_end[sort(names(col_end))]
 
-  # Remove nulls
+  # Remove null values.
   col_end <- col_end[lengths(col_end) > 0]
 
-  # Token colors
+  # Prepare token colors.
   tokencols <- theme_db[
     theme_db$section == "tokenColors",
     c("name", "scope", "foreground", "background", "fontStyle")
@@ -131,9 +132,9 @@ convert_tm_to_vs_theme <- function(
   if (nrow(tokencols) > 1) {
     tokencols$index <- seq_len(nrow(tokencols))
 
-    # Split and group items with the same variables (by section)
+    # Split and group items with the same variables by section.
 
-    # Group by name and arrange
+    # Group by name and arrange.
     tokencols[is.na(tokencols)] <- "MISSING_VALUE"
     splitted <- split(
       tokencols,
@@ -168,10 +169,10 @@ convert_tm_to_vs_theme <- function(
 
     tok_g[tok_g == "MISSING_VALUE"] <- NA
 
-    # Build token list
+    # Build the token list.
 
     tok <- list()
-    # Create list for tokens
+    # Create the list of tokens.
     tok[[1]] <- list(settings = list(foreground = col_l$editor.foreground))
 
     ntok <- seq_len(nrow(tok_g))
@@ -210,7 +211,7 @@ convert_tm_to_vs_theme <- function(
   }
 
   jsonlite::write_json(vs_l, path = outfile, auto_unbox = TRUE, pretty = TRUE)
-  # Add a comment with package information
+  # Add a comment with package information.
   lns <- readLines(outfile)
   lns <- c(
     lns[1],
@@ -241,7 +242,6 @@ get_table_scope <- function(x, scope, feature) {
   ensure_null(has_scope[has_scope$scope == scope, ][[feature]])
 }
 
-
 additional_cols <- function(bg, fg, comment, selection, accent) {
   bgaccent1 <- colorspace::hex(colorspace::mixcolor(
     0.98,
@@ -267,40 +267,40 @@ additional_cols <- function(bg, fg, comment, selection, accent) {
   ))
 
   list(
-    # Integrated Terminal Colors
+    # Integrated terminal colors.
     "terminal.background" = bg,
     "terminal.foreground" = fg,
     "terminalCursor.background" = bg,
     "terminalCursor.foreground" = accent,
     "terminal.border" = bgaccent2,
 
-    # Base Colors
+    # Base colors.
     "focusBorder" = accent,
     "foreground" = fg,
 
-    # Button Control
+    # Button control.
     "button.background" = accent,
     "button.foreground" = bg,
     "button.secondaryBackground" = bgaccent1,
     "button.secondaryForeground" = fg,
 
-    # Dropdown Control
+    # Dropdown control.
     "dropdown.background" = bgfg1,
     "dropdown.foreground" = fg,
 
-    # Input Control
+    # Input control.
     "input.background" = bgfg1,
     "input.foreground" = fg,
     "input.placeholderForeground" = comment,
 
-    # Badge
+    # Badge.
     "badge.background" = accent,
     "badge.foreground" = bg,
 
-    # Progress Bar
+    # Progress bar.
     "progressBar.background" = accent,
 
-    # List and Trees
+    # List and trees.
     "list.activeSelectionBackground" = selection,
     "list.activeSelectionForeground" = fg,
     "list.dropBackground" = selection,
@@ -309,7 +309,7 @@ additional_cols <- function(bg, fg, comment, selection, accent) {
     "list.highlightForeground" = accent,
     "list.focusBackground" = selection,
 
-    # Activity Bar
+    # Activity bar.
 
     "activityBar.activeBackground" = bgaccent2,
     "activityBar.inactiveForeground" = comment,
@@ -318,21 +318,21 @@ additional_cols <- function(bg, fg, comment, selection, accent) {
     "activityBarBadge.background" = accent,
     "activityBarBadge.foreground" = bg,
 
-    # Side Bar
+    # Side bar.
     "sideBar.background" = bgfg1,
     "sideBar.foreground" = fg,
     "sideBarSectionHeader.background" = bg,
     "sideBarTitle.foreground" = fg,
     "sideBarTitle.background" = bgaccent1,
 
-    # Editor Group & Tabs
+    # Editor group and tabs.
     "editorGroupHeader.tabsBackground" = bgaccent1,
     "tab.activeBackground" = bgaccent2,
     "tab.activeForeground" = accent,
     "tab.inactiveBackground" = bgfg1,
     "tab.inactiveForeground" = fg,
 
-    # Editor Colors
+    # Editor colors.
     "editor.background" = bg,
     "editor.foreground" = fg,
     "editor.lineHighlightBorder" = selection,
@@ -353,7 +353,7 @@ additional_cols <- function(bg, fg, comment, selection, accent) {
     "editorSuggestWidget.selectedIconForeground" = accent,
     "editorWidget.background" = bgaccent1,
 
-    # Peek View Colors
+    # Peek view colors.
     "peekView.border" = selection,
     "peekViewEditor.background" = bg,
     "peekViewResult.fileForeground" = fg,
@@ -363,39 +363,39 @@ additional_cols <- function(bg, fg, comment, selection, accent) {
     "peekViewTitleDescription.foreground" = comment,
     "peekViewTitleLabel.foreground" = fg,
 
-    # Panel Colors
+    # Panel colors.
 
     "panel.background" = bgfg1,
     "panelTitle.activeForeground" = fg,
     "panelTitle.inactiveForeground" = comment,
 
-    # Status Bar Colors
+    # Status bar colors.
     "statusBar.background" = bgaccent2,
     "statusBar.foreground" = fg,
     "statusBar.noFolderForeground" = fg,
     "statusBar.noFolderBackground" = selection,
     "statusBarItem.remoteForeground" = bg,
 
-    # Title Bar Colors (MacOS Only)
+    # Title bar colors (macOS only).
     "titleBar.activeForeground" = fg,
     "titleBar.activeBackground" = bgaccent1,
     "titleBar.inactiveForeground" = comment,
 
-    # Setting Editor
+    # Settings editor.
     "settings.checkboxForeground" = fg,
     "settings.dropdownForeground" = fg,
     "settings.headerForeground" = fg,
     "settings.numberInputForeground" = fg,
     "settings.textInputForeground" = fg,
 
-    # Breadcrumbs
+    # Breadcrumbs.
 
     "breadcrumb.activeSelectionForeground" = fg,
     "breadcrumb.background" = bgfg1,
     "breadcrumb.focusForeground" = fg,
     "breadcrumb.foreground" = comment,
 
-    # Misc
+    # Miscellaneous.
     "gitDecoration.ignoredResourceForeground" = comment,
     "scrollbarSlider.background" = bgaccent2,
     "scrollbarSlider.activeBackground" = bgfg2,

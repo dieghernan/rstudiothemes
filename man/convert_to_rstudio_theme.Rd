@@ -65,7 +65,7 @@ and use the Editor theme selector.
 \if{html}{
   \out{<div style="text-align: center">}
 
-   \figure{rstudiogui.png}{options: alt="RStudio IDE, Add-Theme UI"
+   \figure{rstudiogui.png}{options: alt="RStudio IDE, Add Theme UI"
        style="max-width:80\%;"}
 
    \out{</div>}
@@ -80,7 +80,7 @@ if (on_rstudio() && interactive()) {
     package = "rstudiothemes"
   )
 
-  # Apply the theme for 10 seconds to demonstrate the effect
+  # Apply the theme for 10 seconds to demonstrate the effect.
 
   current_theme <- rstudioapi::getThemeInfo()$editor
 

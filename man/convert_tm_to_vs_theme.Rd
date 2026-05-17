@@ -30,11 +30,11 @@ a temporary file (\code{\link[=tempfile]{tempfile()}}).}
 the theme in \code{path} will be used.}
 
 \item{author}{Optional. The author of the theme. If not provided, the author
-from \code{path} will be used, or a default value will be assigned.}
+from \code{path} will be used or a default value will be assigned.}
 }
 \value{
 This function is called for its side effects. It writes a new \code{.json}
-file in \code{outfile} and returns the path.
+file to \code{outfile} and returns the path.
 }
 \description{
 Convert a \code{.tmTheme} file representing a TextMate theme and write the

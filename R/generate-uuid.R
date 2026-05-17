@@ -25,12 +25,12 @@
 #' <https://www.rfc-editor.org/info/rfc9562>.
 #'
 #' @examples
-#' # Random
+#' # Random UUID.
 #' generate_uuid()
 #'
 #' generate_uuid()
 #'
-#' # Persistent with hint param
+#' # Persistent UUID with `hint`.
 #'
 #' hint <- "something as seed"
 #'
@@ -47,12 +47,12 @@ generate_uuid <- function(hint = NULL) {
     raw_n <- as.raw(sample.int(256L, 16, replace = TRUE) - 1L)
   }
 
-  #  From ids::uuid() (dev version)
+  # From ids::uuid() (development version).
   bytes <- matrix(raw_n, 16, 1)
 
-  ## (a) set the high nibble of the 7th byte equal to 4 and
+  ## (a) Set the high nibble of the 7th byte equal to 4 and
   bytes[7, ] <- as.raw(0x40) | (bytes[7, ] & as.raw(0xf))
-  ## (b) set the two most significant bits of the 9th byte to 10'B,
+  ## (b) Set the two most significant bits of the 9th byte to 10'B,
   ##     so the high nibble will be one of {8,9,a,b}.
   bytes[9, ] <- as.raw(0x80) | (bytes[9, ] & as.raw(0x3f))
 
@@ -62,6 +62,6 @@ generate_uuid <- function(hint = NULL) {
   d <- apply(bytes[9:10, , drop = FALSE], 2, paste, collapse = "")
   e <- apply(bytes[11:16, , drop = FALSE], 2, paste, collapse = "")
 
-  #  Result
+  # Result.
   paste(a, b, c, d, e, sep = "-")
 }

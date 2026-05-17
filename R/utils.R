@@ -1,9 +1,9 @@
-# Convert values to HEX color strings
+# Convert values to hex color strings.
 col2hex <- function(x) {
   x <- trimws(x)
   x <- expand_hex(x)
 
-  # Try to interpret the input as a color and convert
+  # Try to interpret the input as a color and convert it.
   res <- try(col2rgb(x, alpha = TRUE), silent = TRUE)
   if (inherits(res, "try-error")) {
     return(x)
@@ -11,9 +11,9 @@ col2hex <- function(x) {
 
   res <- t(res)
 
-  # Handle alpha channel if present
+  # Handle the alpha channel when present.
   if (res[4] < 255) {
-    # Convert to hexadecimal with alpha
+    # Convert to hexadecimal with alpha.
     hex <- rgb(
       red = res[1],
       green = res[2],
@@ -22,14 +22,14 @@ col2hex <- function(x) {
       maxColorValue = 255
     )
   } else {
-    # Not needed
+    # Use an opaque color when no alpha channel is present.
     hex <- rgb(red = res[1], green = res[2], blue = res[3], maxColorValue = 255)
   }
 
   toupper(hex)
 }
 
-# Determine theme type based on brightness
+# Determine theme type based on brightness.
 dark_or_light <- function(x) {
   theme_type <- "dark"
 
@@ -49,7 +49,7 @@ dark_or_light <- function(x) {
   theme_type
 }
 
-# Compatibility helper for R <= 4.4
+# Compatibility helper for R <= 4.4.
 expand_hex <- function(x) {
   if (all(grepl("^#", x), nchar(x) %in% c(4, 5))) {
     rem <- gsub("#", "", x, fixed = TRUE)
@@ -60,7 +60,6 @@ expand_hex <- function(x) {
 
   x
 }
-
 
 #' Match argument with pretty error message
 #'
@@ -94,18 +93,18 @@ match_arg_pretty <- function(arg, choices) {
   }
 
   lmatch <- match(arg, choices)
-  # Compute approximate match hint
+  # Compute the approximate match hint.
   aproxmatch <- pmatch(arg, choices)[1]
 
   if (length(arg) > 1 || is.na(lmatch)) {
-    # Create error message
+    # Create the error message.
     if (length(choices) == 1) {
       msg <- paste0("{.str ", choices, "}")
     } else {
       l_choices <- length(choices)
       msg <- paste0("{.str ", choices[-l_choices], "}", collapse = ", ")
       msg <- paste0(msg, " or {.str ", choices[l_choices], "}")
-      # Add 'one of' at the beginning
+      # Add "one of" at the beginning.
       msg <- paste0("one of ", msg)
     }
 

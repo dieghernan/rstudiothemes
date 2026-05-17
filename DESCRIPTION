@@ -1,6 +1,6 @@
 Package: rstudiothemes
-Title: Create 'RStudio' Themes from Visual Studio Code, Positron and
-    'TextMate' Themes
+Title: Create and Install 'RStudio' Themes from 'Visual Studio Code',
+    'Positron' and 'TextMate' Themes
 Version: 1.1.1
 Authors@R: c(
     person("Diego", "Hernangómez", , "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"),
@@ -8,10 +8,10 @@ Authors@R: c(
     person("Garrick", "Aden-Buie", , "garrick@adenbuie.com", role = "cph",
            comment = "for the rsthemes::try_rsthemes() function")
   )
-Description: Create and install 'RStudio' themes derived from Visual
-    Studio Code, Positron and 'TextMate' themes. Provides functions to
-    convert between 'TextMate' and Visual Studio Code or Positron themes,
-    as well as ports of several Visual Studio Code themes.
+Description: Create and install 'RStudio' themes derived from 'Visual
+    Studio Code', 'Positron' and 'TextMate' themes. Provides functions to
+    convert between 'TextMate' and 'Visual Studio Code' or 'Positron'
+    themes, as well as ports of several 'Visual Studio Code' themes.
 License: MIT + file LICENSE
 URL: https://dieghernan.github.io/rstudiothemes/,
     https://github.com/dieghernan/rstudiothemes
@@ -35,7 +35,7 @@ Suggests:
     quarto,
     testthat (>= 3.0.0),
     uuid
-VignetteBuilder: 
+VignetteBuilder:
     quarto
 Config/Needs/coverage: covr
 Config/Needs/website: dieghernan/gitdevr, ragg, styler, gadenbuie/rsthemes

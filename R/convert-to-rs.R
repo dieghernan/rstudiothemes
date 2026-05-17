@@ -38,7 +38,7 @@
 #' \if{html}{
 #'   \out{<div style="text-align: center">}
 #'
-#'    \figure{rstudiogui.png}{options: alt="RStudio IDE, Add-Theme UI"
+#'    \figure{rstudiogui.png}{options: alt="RStudio IDE, Add Theme UI"
 #'        style="max-width:80\%;"}
 #'
 #'    \out{</div>}
@@ -58,7 +58,7 @@
 #'     package = "rstudiothemes"
 #'   )
 #'
-#'   # Apply the theme for 10 seconds to demonstrate the effect
+#'   # Apply the theme for 10 seconds to demonstrate the effect.
 #'
 #'   current_theme <- rstudioapi::getThemeInfo()$editor
 #'
@@ -83,7 +83,7 @@ convert_to_rstudio_theme <- function(
   force = FALSE,
   apply = FALSE
 ) {
-  # Only works in RStudio
+  # Only works in RStudio.
   if (!on_rstudio()) {
     gui <- detect_gui() # nolint
     cli::cli_alert_danger(paste0(
@@ -94,7 +94,7 @@ convert_to_rstudio_theme <- function(
     return(NULL)
   }
 
-  # Validate inputs
+  # Validate inputs.
   if (missing(path)) {
     cli::cli_abort("Argument {.arg path} can't be empty.")
   }
@@ -113,8 +113,8 @@ convert_to_rstudio_theme <- function(
     tm_temp <- tempfile(fileext = ".tmTheme")
     path <- convert_vs_to_tm_theme(path, tm_temp, name = name)
   } else if (grepl("^http", path)) {
-    # Only tmTheme is downloaded here because VS conversion happens implicitly
-    # in convert_vs_to_tm_theme.
+    # Download only tmTheme files here because Visual Studio Code conversion
+    # happens implicitly in convert_vs_to_tm_theme().
     tmp_file <- tempfile(fileext = ".tmTheme")
     cli::cli_alert_info("Downloading from {.url {path}}")
 
@@ -125,11 +125,12 @@ convert_to_rstudio_theme <- function(
 
   tmcols <- read_tm_theme(path)
 
-  # Top-level colors
+  # Map top-level colors.
   tb_hlp_top <- dplyr::tibble(name = "caret", rstheme = ".ace_cursor")
 
-  # Adjustment for ruler (tmTheme does not specify this well)
-  # Priority: invisibles > guide > gutter and different from bg
+  # Adjust the ruler because tmTheme does not specify this well.
+  # Prioritize invisibles, then guide, then gutter when they differ from
+  # background.
   ruler_map <- c("invisibles", "guide", "gutter")
   bg_col <- tmcols[tmcols$section == "colors" & tmcols$name == "background", ]
   tm_sub <- tmcols[tmcols$name %in% ruler_map, ]
@@ -145,7 +146,7 @@ convert_to_rstudio_theme <- function(
 
   tmcols_top <- dplyr::inner_join(tmcols, tb_hlp_top, by = "name")
 
-  # Add indent guide
+  # Add the indent guide.
   if ("guide" %in% tmcols$name) {
     indent_guide <- tmcols[tmcols$name == "guide", ]
     indent_guide$rstheme <- ".ace_indent-guide"
@@ -156,21 +157,21 @@ convert_to_rstudio_theme <- function(
   keepvals <- c("rstheme", "foreground", "background", "fontStyle")
   rstheme_top <- tmcols_top[, keepvals]
 
-  # Map tmTheme scopes to ACE editor CSS rules
+  # Map tmTheme scopes to ACE editor CSS rules.
   tmcols_scopes <- tmcols[
     !is.na(tmcols$scope),
     c("scope", "foreground", "background", "fontStyle")
   ]
 
-  # Remove empty specifications
+  # Remove empty specifications.
   empty_row <- is.na(tmcols_scopes$foreground) &
     is.na(tmcols_scopes$background) &
     is.na(tmcols_scopes$fontStyle)
 
   tmcols_scopes <- tmcols_scopes[!empty_row, ]
 
-  # Modify some scopes to adapt to the ACE editor
-  ## Convert link-like scopes to href
+  # Modify some scopes to adapt to the ACE editor.
+  ## Convert link-like scopes to href.
 
   tmcols_scopes[
     grepl(
@@ -180,25 +181,25 @@ convert_to_rstudio_theme <- function(
     ),
   ]$scope <- "markup.href"
 
-  ## Additional markup heading
+  ## Add an additional markup heading.
   heading <- tmcols_scopes[
     grepl("markup.heading", tmcols_scopes$scope, fixed = TRUE),
   ]
   heading$scope <- "heading"
   tmcols_scopes <- rbind(tmcols_scopes, heading)
 
-  ## Meta tags
+  ## Meta tags.
   metan <- c("entity.name.tag.html", "meta.tag")
   tmcols_scopes[tmcols_scopes$scope %in% metan, ]$scope <- "meta.tag"
 
-  # Add XML pseudo-scope
+  # Add the XML pseudo-scope.
   xmlpe <- tmcols_scopes[tmcols_scopes$scope == "comment", ]
   xmlpe$scope <- "xml-pe"
   tmcols_scopes <- rbind(tmcols_scopes, xmlpe)
 
   tmcols_scopes_end <- create_ace_cascade(tmcols_scopes)
 
-  # Final adjustments
+  # Apply final adjustments.
   end_df <- dplyr::bind_rows(rstheme_top, tmcols_scopes_end)
 
   end_df$fontweight <- ifelse(
@@ -241,7 +242,7 @@ convert_to_rstudio_theme <- function(
       newr_clean <- newr[!is.na(newr)]
       if (length(newr_clean) == 0) {
         next
-      } # Skip empty rules
+      } # Skip empty rules.
       specs <- paste0(names(newr_clean), ": ", newr_clean, ";", collapse = " ")
       thisrule <- paste0(cssrule, " {", specs, "}")
       new_css <- c(new_css, thisrule, "")
@@ -250,7 +251,7 @@ convert_to_rstudio_theme <- function(
 
   ## Build ----
 
-  # Create initial RStudio theme compilation
+  # Create the initial RStudio theme compilation.
   uuid <- generate_uuid()
   tmp <- file.path(tempdir(), uuid)
   dir.create(tmp, recursive = TRUE, showWarnings = FALSE)
@@ -261,12 +262,12 @@ convert_to_rstudio_theme <- function(
     force = TRUE
   )
 
-  # Read lines of the auto-generated RStudio theme (CSS)
-  # and append new CSS rules and additional Sass variables
+  # Read the auto-generated RStudio theme (CSS) and append new CSS rules
+  # and additional Sass variables.
   tmpfile <- list.files(tmp, full.names = TRUE)
   themelines <- readLines(tmpfile)
 
-  # Replace theme name if requested
+  # Replace the theme name if requested.
   if (!is.null(name)) {
     themelines[grepl("rs-theme-name", themelines, fixed = TRUE)] <- paste(
       "/* rs-theme-name:",
@@ -283,7 +284,7 @@ convert_to_rstudio_theme <- function(
 
   additional <- c("")
 
-  # Map high-level colors to Sass variable names
+  # Map high-level colors to Sass variable names.
   hl_sass <- dplyr::tibble(
     section = "colors",
     name = c("foreground", "background", "caret", "selection"),
@@ -304,7 +305,7 @@ convert_to_rstudio_theme <- function(
 
   themelines <- c(themelines, vtext, "", new_css, additional)
 
-  # Write
+  # Write the theme.
   sass::sass(
     themelines,
     output = outfile,
@@ -312,7 +313,7 @@ convert_to_rstudio_theme <- function(
     options = sass::sass_options(output_style = output_style)
   )
 
-  # Install theme
+  # Install the theme.
   if (any(apply, force)) {
     cli::cli_alert_info("Installing rstheme {.str {theme_name}}.")
 
@@ -345,10 +346,10 @@ create_ace_cascade <- function(tmcols_scopes) {
   full <- tmcols_scopes
   full <- dplyr::distinct(full, .keep_all = FALSE)
 
-  # Exclude scopes containing spaces (pseudo-CSS)
+  # Exclude scopes containing spaces (pseudo-CSS).
   full <- full[!grepl(" ", full$scope, fixed = TRUE), ]
 
-  # Classify scopes by hierarchy level
+  # Classify scopes by hierarchy level.
 
   level <- vapply(
     full$scope,
@@ -369,14 +370,14 @@ create_ace_cascade <- function(tmcols_scopes) {
   lev2 <- full[level == 2, ]
   lev1 <- full[level == 1, ]
 
-  # Ensure single value for each scope at level 3
+  # Ensure a single value for each scope at level 3.
   lev3 <- more_freq_rule(lev3)
 
-  # Enrich level-2 scopes with color information from level-3
+  # Enrich level-2 scopes with color information from level 3.
 
   lev2_xtra <- lev3
 
-  # Limit fontStyle inheritance for color information from higher levels
+  # Limit fontStyle inheritance for color information from level 2.
   lev2_xtra$fontStyle <- NA
 
   lev2_xtra$scope <- vapply(
@@ -397,11 +398,11 @@ create_ace_cascade <- function(tmcols_scopes) {
   )
 
   lev2_end <- more_freq_rule(lev2_end)
-  # Enrich level-1 scopes with color information from level-2
+  # Enrich level-1 scopes with color information from level 2.
 
   lev1_xtra <- lev2_end
 
-  # Limit fontStyle inheritance for color information from higher levels
+  # Limit fontStyle inheritance for color information from higher levels.
   lev1_xtra$fontStyle <- NA
 
   lev1_xtra$scope <- vapply(

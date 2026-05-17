@@ -35,30 +35,30 @@ navbar:
 
 home:
   title: >
-    rstudiothemes | Create RStudio themes from Visual Studio Code/Positron and
-    TextMate themes
+    rstudiothemes | Create and install RStudio themes from Visual Studio
+    Code, Positron and TextMate themes
 
 reference:
 - title: Create themes
 - subtitle: RStudio themes
   contents: convert_to_rstudio_theme
-- subtitle: Visual Studio Code/Positron and TextMate themes
+- subtitle: Visual Studio Code, Positron and TextMate themes
   contents:
   - convert_vs_to_tm_theme
   - convert_tm_to_vs_theme
 
-- title: Install, manage and preview our built-in themes
+- title: Install, manage and preview built-in themes
   desc: >
-    Based on functions of the **rsthemes** package.
+    Adapted from functions in the **rsthemes** package.
   contents:
   - rstudiothemes-actions
 
 - title: Other functions
 - subtitle: Read themes
   contents: starts_with("read")
-- subtitle: Utils
+- subtitle: Utilities
   desc: >
-    These are helper functions that we make available to others.
+    Helper functions made available for reuse.
   contents: has_concept("helpers")
 
 - title: About the package
@@ -69,12 +69,12 @@ authors:
     href: 'https://dieghernan.github.io/'
 
 articles:
-- title: Mapping
+- title: Theme element mapping
   navbar:
   contents:
   - articles/mapping
-- title: Theme Gallery
-  navbar: Theme Gallery
+- title: Theme gallery
+  navbar: Theme gallery
   contents:
   - articles/showcase
 - title: Online app

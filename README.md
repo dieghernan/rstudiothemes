@@ -23,7 +23,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 Convert **Visual Studio Code**, **Positron** and **TextMate** themes
 into **RStudio** custom themes.
 
-This package provides tools to convert Visual Studio Code, Positron, and
+This package provides tools to convert Visual Studio Code, Positron and
 TextMate theme files (`.json` and `.tmTheme` formats) into
 RStudio-compatible `.rstheme` files. RStudio has supported custom themes
 in `.rstheme` format since RStudio 1.2 (see [theme creation
@@ -65,7 +65,7 @@ alt="Screenshot of theme Winter is Coming Dark Blue" />
 </div>
 
 Available themes include popular choices such as Tokyo Night, Night Owl,
-Winter is Coming, SynthWave 84, Nord, and many others:
+Winter is Coming, SynthWave 84, Nord and many others:
 
 ``` r
 rstudiothemes::list_rstudiothemes(list_installed = FALSE)
@@ -135,9 +135,9 @@ install.packages(
 
 </div>
 
-## Try our Shiny App
+## Try our Shiny app
 
-We also provide a Shiny App with many of the features of
+We also provide a Shiny app with many of the features of
 **rstudiothemes** that lets you convert themes online. Try it out:
 
 <https://dieghernan-themeconverter.share.connect.posit.cloud/>
@@ -160,17 +160,17 @@ rstudiothemes::convert_to_rstudio_theme(
 )
 ```
 
-Alternatively, in RStudio go to **Tools \> Global Options \> Appearance
+Alternatively, in RStudio, go to **Tools \> Global Options \> Appearance
 \> Add** and select the installed theme.
 
 <div class="text-center">
 
 <img src="man/figures/rstudiogui.png" style="width:80.0%"
-alt="RStudio IDE, Add-Theme UI" />
+alt="RStudio IDE, Add Theme UI" />
 
 </div>
 
-### Bidirectional conversion between Visual Studio Code/Positron and TextMate themes
+### Bidirectional theme conversion
 
 The package also includes the conversion functions
 `convert_vs_to_tm_theme()` and `convert_tm_to_vs_theme()`, allowing you
@@ -181,8 +181,8 @@ to convert themes in both directions if needed.
 **rstudiothemes** does not provide a built-in theme editor, but you can
 create your own themes from scratch using the following tools:
 
-- TextMate `.tmTheme`: <https://tmtheme-editor.linuxbox.ninja/>. Also
-  see the official RStudio documentation on [creating
+- TextMate `.tmTheme`: Use <https://tmtheme-editor.linuxbox.ninja/>.
+  Also see the official RStudio documentation on [creating
   themes](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html).
 - Visual Studio Code `.json`: See the official documentation on
   [creating color
@@ -200,8 +200,8 @@ Contributions are welcome! To contribute to this project:
 
 <p>
 
-Hernangómez D (2026). <em>rstudiothemes: Create RStudio Themes from
-Visual Studio Code, Positron and TextMate Themes</em>.
+Hernangómez D (2026). <em>rstudiothemes: Create and Install RStudio
+Themes from Visual Studio Code, Positron and TextMate Themes</em>.
 <a href="https://doi.org/10.32614/CRAN.package.rstudiothemes">doi:10.32614/CRAN.package.rstudiothemes</a>.
 <a href="https://dieghernan.github.io/rstudiothemes/">https://dieghernan.github.io/rstudiothemes/</a>.
 </p>
@@ -209,8 +209,8 @@ Visual Studio Code, Positron and TextMate Themes</em>.
 A BibTeX entry for LaTeX users:
 
     @Manual{R-rstudiothemes,
-      title = {{rstudiothemes}: Create {RStudio} Themes from {Visual Studio Code}, {Positron} and
-    {TextMate} Themes},
+      title = {{rstudiothemes}: Create and Install {RStudio} Themes from {Visual Studio Code},
+    {Positron} and {TextMate} Themes},
       doi = {10.32614/CRAN.package.rstudiothemes},
       author = {Diego Hernangómez},
       year = {2026},

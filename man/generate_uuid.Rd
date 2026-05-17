@@ -27,12 +27,12 @@ This helper function assigns a
 of generated themes.
 }
 \examples{
-# Random
+# Random UUID.
 generate_uuid()
 
 generate_uuid()
 
-# Persistent with hint param
+# Persistent UUID with `hint`.
 
 hint <- "something as seed"
 

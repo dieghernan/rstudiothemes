@@ -25,9 +25,9 @@ on_rstudio <- function() {
   FALSE
 }
 
-# Helper functions
+# Helper functions.
 detect_gui <- function() {
-  # Return the platform GUI string, but override when VS Code is detected
+  # Return the platform GUI string, but override it when VS Code is detected.
   gui <- .Platform$GUI
   if (on_vscode()) {
     gui <- "Visual Studio Code"
@@ -37,6 +37,6 @@ detect_gui <- function() {
 }
 
 on_vscode <- function() {
-  # Detect Visual Studio Code by checking the TERM_PROGRAM environment variable
+  # Detect Visual Studio Code through the TERM_PROGRAM environment variable.
   Sys.getenv("TERM_PROGRAM") == "vscode"
 }

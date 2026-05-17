@@ -1,6 +1,6 @@
 ---
-title: "Shiny App"
-description: A Shiny App for converting themes online
+title: "Shiny app"
+description: A Shiny app for converting themes online
 knitr:
   opts_chunk:
     collapse: true

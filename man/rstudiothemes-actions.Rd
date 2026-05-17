@@ -22,13 +22,13 @@ list_rstudiothemes(style = c("all", "dark", "light"), list_installed = TRUE)
 try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 }
 \arguments{
-\item{style}{Character. Limit themes to a specific group: \code{all}, \code{dark}, or
+\item{style}{Character. Limit themes to a specific group: \code{all}, \code{dark} or
 \code{light}.}
 
 \item{themes}{Optional character vector of theme names. If provided, only
 these themes will be used, and \code{style} will be ignored.}
 
-\item{destdir}{Optional directory for \code{.rstheme} files. By default uses
+\item{destdir}{Optional directory for \code{.rstheme} files. By default, it uses
 \code{\link[rstudioapi:addTheme]{rstudioapi::addTheme()}}, but this argument allows installation to
 non-standard directories.}
 
@@ -74,7 +74,7 @@ Adaptation of some \pkg{rsthemes} functions.
 \item \code{try_rstudiothemes()}: Try each \pkg{rstudiothemes} RStudio theme
 
 }}
-\section{Ported Themes}{
+\section{Ported themes}{
 
 \pkg{rstudiothemes} includes RStudio themes based on the
 following Visual Studio Code themes:

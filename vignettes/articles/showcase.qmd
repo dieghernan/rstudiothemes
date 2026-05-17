@@ -39,7 +39,7 @@ knitr:
     comment: '#>'
 ---
 
-Showcase of bundled themes in **rstudiothemes**.
+This article showcases the bundled themes in **rstudiothemes**.
 
 You can install them with:
 
@@ -52,15 +52,15 @@ rstudiothemes::install_rstudiothemes()
 
 We also distribute all bundled themes in a single `.zip` file
 [dist/rstudiothemes.zip](https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip).
-Unzip and install using the [RStudio IDE
+Unzip the file and install the themes using the [RStudio IDE
 interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 **Tools \> Global Options \> Appearance \> Add**
 
 ::: {#fig-ui}
-![](rstudiogui.png){.nolightbox fig-alt="RStudio IDE, Add-Theme UI" width="80%"}
+![](rstudiogui.png){.nolightbox fig-alt="RStudio IDE, Add Theme UI" width="80%"}
 
-RStudio IDE, Add-Theme UI
+RStudio IDE, Add Theme UI
 :::
 
 ## Lightbox gallery
@@ -134,7 +134,7 @@ Fira Code: <https://fonts.google.com/specimen/Fira+Code>.
 ![](rstudiooptions.png){.nolightbox fig-alt="RStudio Options for Screenshots"
 width="80%"}
 
-RStudio Options used for screenshots
+RStudio options used for screenshots
 :::
 
 ```{=html}
