@@ -43,7 +43,7 @@ convert_positron_to_tm_theme(
 - author:
 
   Optional. The author of the theme. If not provided, the author from
-  `path` will be used, or a default value will be assigned.
+  `path` will be used or a default value will be assigned.
 
 ## Value
 

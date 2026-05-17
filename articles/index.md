@@ -1,12 +1,12 @@
 # Articles
 
-### Mapping
+### Theme element mapping
 
 - [Mapping](https://dieghernan.github.io/rstudiothemes/articles/mapping.md):
 
   Mapping between theme elements
 
-### Theme Gallery
+### Theme gallery
 
 - [Showcase](https://dieghernan.github.io/rstudiothemes/articles/showcase.md):
 
@@ -15,6 +15,6 @@
 ### Online app
 
 - [Shiny
-  App](https://dieghernan.github.io/rstudiothemes/articles/shinyapp.md):
+  app](https://dieghernan.github.io/rstudiothemes/articles/shinyapp.md):
 
-  A Shiny App for converting themes online
+  A Shiny app for converting themes online

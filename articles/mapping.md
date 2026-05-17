@@ -1,7 +1,7 @@
 # Mapping
 
-Summary of the internal mapping between Visual Studio Code/Positron,
-TextMate and RStudio theme elements.
+This article summarizes the internal mapping between Visual Studio
+Code/Positron, TextMate and RStudio theme elements.
 
 Sources:
 
@@ -10,8 +10,8 @@ Sources:
 - TextMate and RStudio:
   <https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html>
 
-If multiple many-to-one relationships exist, priority is used to
-determine which mapping applies.
+When multiple many-to-one relationships exist, priority determines which
+mapping applies.
 
 | priority | tm | vscode | rstheme |
 |---:|:---|:---|:---|

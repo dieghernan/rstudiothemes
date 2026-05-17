@@ -28,8 +28,7 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 
 - style:
 
-  Character. Limit themes to a specific group: `all`, `dark`, or
-  `light`.
+  Character. Limit themes to a specific group: `all`, `dark` or `light`.
 
 - themes:
 
@@ -38,7 +37,7 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 
 - destdir:
 
-  Optional directory for `.rstheme` files. By default uses
+  Optional directory for `.rstheme` files. By default, it uses
   [`rstudioapi::addTheme()`](https://rstudio.github.io/rstudioapi/reference/addTheme.html),
   but this argument allows installation to non-standard directories.
 
@@ -78,7 +77,7 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 
 - `try_rstudiothemes()`: Try each rstudiothemes RStudio theme
 
-## Ported Themes
+## Ported themes
 
 rstudiothemes includes RStudio themes based on the following Visual
 Studio Code themes:

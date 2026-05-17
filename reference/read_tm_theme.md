@@ -32,10 +32,10 @@ Other functions for reading themes:
 the_theme <- system.file("ext/test-color-theme.json",
   package = "rstudiothemes"
 ) |>
-  # Convert the Visual Studio Code theme to TextMate format
+  # Convert the Visual Studio Code theme to TextMate format.
   convert_vs_to_tm_theme()
 
-# Check
+# Check the converted theme.
 readLines(the_theme) |>
   head(10) |>
   cat(sep = "\n")

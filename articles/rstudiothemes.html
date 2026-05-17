@@ -13,8 +13,8 @@
 <link rel="manifest" href="../site.webmanifest">
 <!-- katex math --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script><script src="../katex-auto.js"></script><script src="../lightswitch.js"></script><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/Inter-0.4.10/font.css" rel="stylesheet">
+<link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/Inter-0.4.10/font.css" rel="stylesheet">
 <link href="../deps/Inter_Tight-0.4.10/font.css" rel="stylesheet">
 <link href="../deps/Fira_Code-0.4.10/font.css" rel="stylesheet">
 <link href="../deps/Roboto-0.4.10/font.css" rel="stylesheet">
@@ -59,11 +59,11 @@
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
 <li><a class="dropdown-item" href="../articles/mapping.html">Mapping</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Theme Gallery</h6></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Theme gallery</h6></li>
     <li><a class="dropdown-item" href="../articles/showcase.html">Showcase</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Online app</h6></li>
-    <li><a class="dropdown-item" href="../articles/shinyapp.html">Shiny App</a></li>
+    <li><a class="dropdown-item" href="../articles/shinyapp.html">Shiny app</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -116,11 +116,11 @@
 <div class="sourceCode cell-code" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/rstudiothemes-actions.html">install_rstudiothemes</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">#&gt; ✔ Installed 30 themes</span></span>
+<span><span class="co">#&gt; ✔ Installed 36 themes</span></span>
 <span><span class="co">#&gt; ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes</span></span>
 <span><span class="co">#&gt; ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes</span></span></code></pre></div>
 </div>
-<p>This will add many popular themes (e.g., Tokyo Night, Nord, Winter is Coming, Dracula, etc.) to your RStudio themes directory.</p>
+<p>This will add many popular themes, including Tokyo Night, Nord, Winter is Coming and Dracula, to your RStudio themes directory.</p>
 <p>To see themes available now:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="downlit sourceCode r">
@@ -167,7 +167,7 @@
 Figure 1: Screenshot of theme Winter is Coming Dark Blue
 </figcaption></figure>
 </div>
-<p>Alternatively, in RStudio go to <strong>Tools &gt; Global Options &gt; Appearance &gt; Add</strong> and select the installed theme.</p>
+<p>Alternatively, in RStudio, go to <strong>Tools &gt; Global Options &gt; Appearance &gt; Add</strong> and select the installed theme.</p>
 </section><section class="level2"><h2 id="converting-your-own-themes">Converting your own themes<a class="anchor" aria-label="anchor" href="#converting-your-own-themes"></a>
 </h2>
 <p>You can convert a Visual Studio Code/Positron or TextMate theme file into an RStudio theme:</p>
@@ -182,19 +182,18 @@ Figure 1: Screenshot of theme Winter is Coming Dark Blue
 <p>This function will convert and install the theme immediately, optionally applying it (with <code>apply = TRUE</code>).</p>
 </section><section class="level2"><h2 id="workflow-example-from-visual-studio-codepositron-theme-to-rstudio">Workflow example: From Visual Studio Code/Positron theme to RStudio<a class="anchor" aria-label="anchor" href="#workflow-example-from-visual-studio-codepositron-theme-to-rstudio"></a>
 </h2>
-<ol type="1">
+<ul>
 <li>Choose a theme <code>.json</code> file from Visual Studio Code/Positron.</li>
 <li>Convert and install it with <code><a href="../reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme()</a></code>.</li>
-<li>Apply it with <code><a href="https://rstudio.github.io/rstudioapi/reference/applyTheme.html" class="external-link">rstudioapi::applyTheme()</a></code> or via RStudio UI.</li>
-</ol>
+<li>Apply it with <code><a href="https://rstudio.github.io/rstudioapi/reference/applyTheme.html" class="external-link">rstudioapi::applyTheme()</a></code> or the RStudio UI.</li>
+</ul>
 <p>This workflow lets you bring your preferred editor theme into RStudio.</p>
 </section><section class="level2"><h2 id="tips-and-tricks">Tips and tricks<a class="anchor" aria-label="anchor" href="#tips-and-tricks"></a>
 </h2>
 <ul>
-<li>List installed themes with <code>list_rstudiothemes(list_installed = TRUE)</code>
-</li>
-<li>Try specific categories by filtering themes by Light/Dark style</li>
-<li>Use the Add-Theme UI in RStudio’s <strong>Global Options &gt; Appearance &gt; Add</strong> to manually add <code>.rstheme</code> files you’ve created or converted.</li>
+<li>List installed themes with <code>list_rstudiothemes(list_installed = TRUE)</code>.</li>
+<li>Filter themes by <code>"light"</code> or <code>"dark"</code> style.</li>
+<li>Use the Add Theme UI in RStudio’s <strong>Global Options &gt; Appearance &gt; Add</strong> to manually add <code>.rstheme</code> files you’ve created or converted.</li>
 </ul></section><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);

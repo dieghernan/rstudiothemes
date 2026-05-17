@@ -7,7 +7,7 @@
 - [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_to_rstudio_theme.md)
   : Convert a TextMate or VS Code/Positron theme to an RStudio theme
 
-### Visual Studio Code/Positron and TextMate themes
+### Visual Studio Code, Positron and TextMate themes
 
 - [`convert_vs_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_vs_to_tm_theme.md)
   [`convert_positron_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_vs_to_tm_theme.md)
@@ -16,9 +16,9 @@
   [`convert_tm_to_positron_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_tm_to_vs_theme.md)
   : Convert a TextMate theme into a Visual Studio Code/Positron theme
 
-## Install, manage and preview our built-in themes
+## Install, manage and preview built-in themes
 
-Based on functions of the **rsthemes** package.
+Adapted from functions in the **rsthemes** package.
 
 - [`install_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-actions.md)
   [`remove_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-actions.md)
@@ -36,9 +36,9 @@ Based on functions of the **rsthemes** package.
   [`read_positron_theme()`](https://dieghernan.github.io/rstudiothemes/reference/read_vs_theme.md)
   : Read and parse a Visual Studio Code/Positron theme
 
-### Utils
+### Utilities
 
-These are helper functions that we make available to others.
+Helper functions made available for reuse.
 
 - [`generate_uuid()`](https://dieghernan.github.io/rstudiothemes/reference/generate_uuid.md)
   : Generate random UUIDs
@@ -49,5 +49,5 @@ These are helper functions that we make available to others.
 
 - [`rstudiothemes`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-package.md)
   [`rstudiothemes-package`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-package.md)
-  : rstudiothemes: Create 'RStudio' Themes from Visual Studio Code,
-  Positron and 'TextMate' Themes
+  : rstudiothemes: Create and Install 'RStudio' Themes from 'Visual
+  Studio Code', 'Positron' and 'TextMate' Themes
