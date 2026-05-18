@@ -55,7 +55,6 @@ generate_uuid()
 #> [1] "4e4c81bd-36aa-4d2a-84d4-2bbc2145febe"
 
 # Persistent UUID with `hint`.
-
 hint <- "something as seed"
 
 generate_uuid(hint)

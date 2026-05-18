@@ -1,6 +1,6 @@
 # Articles
 
-### Theme element mapping
+### Theme mapping
 
 - [Mapping](https://dieghernan.github.io/rstudiothemes/articles/mapping.md):
 

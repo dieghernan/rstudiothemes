@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>rstudiothemes | Create and install RStudio themes from Visual Studio Code, Positron and TextMate themes
+<title>rstudiothemes | Create and install custom RStudio themes from Visual Studio Code, Positron and TextMate themes
  • rstudiothemes</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 <link rel="icon" type="”image/svg+xml”" href="favicon.svg">
@@ -21,10 +21,10 @@
 <link href="deps/Roboto-0.4.10/font.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="rstudiothemes | Create and install RStudio themes from Visual Studio Code, Positron and TextMate themes
+<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="rstudiothemes | Create and install custom RStudio themes from Visual Studio Code, Positron and TextMate themes
 ">
-<meta name="description" content="Create and install RStudio themes derived from Visual Studio Code, Positron and TextMate themes. Provides functions to convert between TextMate and Visual Studio Code or Positron themes, as well as ports of several Visual Studio Code themes.">
-<meta property="og:description" content="Create and install RStudio themes derived from Visual Studio Code, Positron and TextMate themes. Provides functions to convert between TextMate and Visual Studio Code or Positron themes, as well as ports of several Visual Studio Code themes.">
+<meta name="description" content="Create and install custom RStudio editor themes derived from Visual Studio Code, Positron and TextMate themes. Provides functions to convert between TextMate and Visual Studio Code or Positron themes, and includes ports of several popular Visual Studio Code themes.">
+<meta property="og:description" content="Create and install custom RStudio editor themes derived from Visual Studio Code, Positron and TextMate themes. Provides functions to convert between TextMate and Visual Studio Code or Positron themes, and includes ports of several popular Visual Studio Code themes.">
 <meta property="og:image" content="https://dieghernan.github.io/rstudiothemes/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@dhernangomez">
@@ -75,7 +75,7 @@
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="search.json">
 </form></li>
 <li class="nav-item"><a class="external-link nav-link" href="https://github.com/dieghernan/rstudiothemes/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
-<li class="nav-item"><a class="external-link nav-link" href="https://ko-fi.com/dieghernan" aria-label="Buy me a coffee"><span class="fa fa-hand-holding-dollar"></span></a></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://ko-fi.com/dieghernan" aria-label="Support the project on Ko-fi"><span class="fa fa-hand-holding-dollar"></span></a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-lightswitch" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" aria-label="Light switch"><span class="fa fa-sun"></span></button>
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-lightswitch">
@@ -100,23 +100,23 @@
 <!-- badges: start -->
 
 <!-- badges: end -->
-<p>Convert <strong>Visual Studio Code</strong>, <strong>Positron</strong> and <strong>TextMate</strong> themes into <strong>RStudio</strong> custom themes.</p>
-<p>This package provides tools to convert Visual Studio Code, Positron and TextMate theme files (<code>.json</code> and <code>.tmTheme</code> formats) into RStudio-compatible <code>.rstheme</code> files. RStudio has supported custom themes in <code>.rstheme</code> format since RStudio 1.2 (see <a href="https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html" class="external-link">theme creation documentation</a>).</p>
+<p>Convert <strong>Visual Studio Code</strong>, <strong>Positron</strong> and <strong>TextMate</strong> themes into custom <strong>RStudio</strong> themes.</p>
+<p>This package provides tools to convert <strong>Visual Studio Code</strong>, <strong>Positron</strong> and <strong>TextMate</strong> theme files (<code>.json</code> and <code>.tmTheme</code> formats) into <strong>RStudio</strong>-compatible <code>.rstheme</code> files. <strong>RStudio</strong> has supported custom themes in <code>.rstheme</code> format since RStudio 1.2 (see <a href="https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html" class="external-link">theme creation documentation</a>).</p>
 <div class="section level2">
 <h2 id="features">Features<a class="anchor" aria-label="anchor" href="#features"></a>
 </h2>
 <ul>
-<li>Convert Visual Studio Code/Positron and TextMate themes into RStudio <code>.rstheme</code> format.</li>
-<li>Bidirectional conversion between Visual Studio Code/Positron and TextMate themes.</li>
-<li>Includes ports of popular Visual Studio Code/Positron themes ready to use in RStudio.</li>
+<li>Convert <strong>Visual Studio Code</strong>, <strong>Positron</strong> and <strong>TextMate</strong> themes into <strong>RStudio</strong> <code>.rstheme</code> format.</li>
+<li>Convert themes bidirectionally between <strong>Visual Studio Code</strong> or <strong>Positron</strong> and <strong>TextMate</strong> formats.</li>
+<li>Install ports of popular <strong>Visual Studio Code</strong> and <strong>Positron</strong> themes ready to use in <strong>RStudio</strong>.</li>
 <li>Organize and manage custom themes in a reproducible way.</li>
-<li>Integrates with <strong>R</strong> tooling for easier installation and testing.</li>
+<li>Integrate with <strong>R</strong> tooling for easier installation and testing.</li>
 </ul>
 </div>
 <div class="section level2">
 <h2 id="built-in-themes">Built-in themes<a class="anchor" aria-label="anchor" href="#built-in-themes"></a>
 </h2>
-<p>This package includes ports of several popular Visual Studio Code/Positron themes, ready to use in RStudio. Simply use the <code><a href="reference/rstudiothemes-actions.html">install_rstudiothemes()</a></code> function to install them into your RStudio environment:</p>
+<p>This package includes ports of several popular <strong>Visual Studio Code</strong> and <strong>Positron</strong> themes, ready to use in <strong>RStudio</strong>. Use <code><a href="reference/rstudiothemes-actions.html">install_rstudiothemes()</a></code> to install them into your <strong>RStudio</strong> environment:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">rstudiothemes</span><span class="fu">::</span><span class="fu"><a href="reference/rstudiothemes-actions.html">install_rstudiothemes</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
@@ -149,7 +149,7 @@
 <span><span class="co">#&gt; [31] "Tokyo Night Light"          "Tokyo Night Storm"         </span></span>
 <span><span class="co">#&gt; [33] "VSCode Dark"                "VSCode Light"              </span></span>
 <span><span class="co">#&gt; [35] "Winter is Coming Dark Blue" "Winter is Coming Light"</span></span></code></pre></div>
-<p>We also distribute all bundled themes in a single <code>.zip</code> file at <a href="https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip" class="uri">https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip</a>. Unzip and install using the <a href="https://docs.posit.co/ide/user/ide/guide/ui/appearance.html" class="external-link">RStudio IDE interface</a>.</p>
+<p>All bundled themes are also distributed in a single <code>.zip</code> file at <a href="https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip" class="uri">https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip</a>. Unzip and install them using the <a href="https://docs.posit.co/ide/user/ide/guide/ui/appearance.html" class="external-link"><strong>RStudio</strong> IDE interface</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -164,15 +164,15 @@
 <div class="section level2">
 <h2 id="try-our-shiny-app">Try our Shiny app<a class="anchor" aria-label="anchor" href="#try-our-shiny-app"></a>
 </h2>
-<p>We also provide a Shiny app with many of the features of <strong>rstudiothemes</strong> that lets you convert themes online. Try it out:</p>
+<p>We also provide a <strong>Shiny</strong> app with many <strong>rstudiothemes</strong> features, so you can convert themes online:</p>
 <p><a href="https://dieghernan-themeconverter.share.connect.posit.cloud/" class="external-link uri">https://dieghernan-themeconverter.share.connect.posit.cloud/</a></p>
 </div>
 <div class="section level2">
 <h2 id="migrating-an-existing-theme">Migrating an existing theme<a class="anchor" aria-label="anchor" href="#migrating-an-existing-theme"></a>
 </h2>
-<p>You can convert any Visual Studio Code/Positron or TextMate theme to RStudio format. Here is how:</p>
+<p>You can convert any <strong>Visual Studio Code</strong>, <strong>Positron</strong> or <strong>TextMate</strong> theme to <strong>RStudio</strong> format. Here is how:</p>
 <ol style="list-style-type: decimal">
-<li>Use a Visual Studio Code/Positron theme file, a TextMate theme file, or a URL to an online theme.</li>
+<li>Use a <strong>Visual Studio Code</strong>, <strong>Positron</strong> or <strong>TextMate</strong> theme file, or a URL to an online theme.</li>
 <li>Use the <code><a href="reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme()</a></code> function to convert and install it:</li>
 </ol>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
@@ -181,23 +181,24 @@
 <span>  apply <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  force <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p>Alternatively, in RStudio, go to <strong>Tools &gt; Global Options &gt; Appearance &gt; Add</strong> and select the installed theme.</p>
+<p>Alternatively, in <strong>RStudio</strong>, go to <strong>Tools &gt; Global Options &gt; Appearance &gt; Add</strong> and select the installed theme.</p>
 <div class="text-center">
 <p><img src="reference/figures/rstudiogui.png" style="width:80.0%" alt="RStudio IDE, Add Theme UI"></p>
 </div>
 <div class="section level3">
 <h3 id="bidirectional-theme-conversion">Bidirectional theme conversion<a class="anchor" aria-label="anchor" href="#bidirectional-theme-conversion"></a>
 </h3>
-<p>The package also includes the conversion functions <code><a href="reference/convert_vs_to_tm_theme.html">convert_vs_to_tm_theme()</a></code> and <code><a href="reference/convert_tm_to_vs_theme.html">convert_tm_to_vs_theme()</a></code>, allowing you to convert themes in both directions if needed.</p>
+<p>The package also includes <code><a href="reference/convert_vs_to_tm_theme.html">convert_vs_to_tm_theme()</a></code> and <code><a href="reference/convert_tm_to_vs_theme.html">convert_tm_to_vs_theme()</a></code>, which convert themes in both directions.</p>
 </div>
 </div>
 <div class="section level2">
 <h2 id="creating-themes-from-scratch">Creating themes from scratch<a class="anchor" aria-label="anchor" href="#creating-themes-from-scratch"></a>
 </h2>
-<p><strong>rstudiothemes</strong> does not provide a built-in theme editor, but you can create your own themes from scratch using the following tools:</p>
+<p><strong>rstudiothemes</strong> does not provide a built-in theme editor, but you can create themes from scratch with these tools:</p>
 <ul>
-<li>TextMate <code>.tmTheme</code>: Use <a href="https://tmtheme-editor.linuxbox.ninja/" class="external-link uri">https://tmtheme-editor.linuxbox.ninja/</a>. Also see the official RStudio documentation on <a href="https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html" class="external-link">creating themes</a>.</li>
-<li>Visual Studio Code <code>.json</code>: See the official documentation on <a href="https://code.visualstudio.com/api/extension-guides/color-theme" class="external-link">creating color themes</a>.</li>
+<li>TextMate <code>.tmTheme</code>: Use <a href="https://tmtheme-editor.linuxbox.ninja/" class="external-link uri">https://tmtheme-editor.linuxbox.ninja/</a>. Also see the official <strong>RStudio</strong> documentation on <a href="https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html" class="external-link">creating themes</a>.</li>
+<li>
+<strong>Visual Studio Code</strong> <code>.json</code>: See the official <strong>Visual Studio Code</strong> documentation on <a href="https://code.visualstudio.com/api/extension-guides/color-theme" class="external-link">creating color themes</a>.</li>
 </ul>
 </div>
 <div class="section level2">
@@ -214,18 +215,18 @@
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
 </h2>
 <p>
-Hernangómez D (2026). <em>rstudiothemes: Create and Install RStudio Themes from Visual Studio Code, Positron and TextMate Themes</em>. <a href="https://doi.org/10.32614/CRAN.package.rstudiothemes" class="external-link">doi:10.32614/CRAN.package.rstudiothemes</a>. <a href="https://dieghernan.github.io/rstudiothemes/">https://dieghernan.github.io/rstudiothemes/</a>.
+Hernangómez D (2026). <em>rstudiothemes: Create and Install Custom RStudio Themes from Visual Studio Code, Positron and TextMate Themes</em>. <a href="https://doi.org/10.32614/CRAN.package.rstudiothemes" class="external-link">doi:10.32614/CRAN.package.rstudiothemes</a>. <a href="https://dieghernan.github.io/rstudiothemes/">https://dieghernan.github.io/rstudiothemes/</a>.
 </p>
 <p>A BibTeX entry for LaTeX users:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="sc">@</span>Manual{R<span class="sc">-</span>rstudiothemes,</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  title <span class="ot">=</span> {{rstudiothemes}<span class="sc">:</span> Create and Install {RStudio} Themes from {Visual Studio Code},</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>{Positron} and {TextMate} Themes},</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  title <span class="ot">=</span> {{rstudiothemes}<span class="sc">:</span> Create and Install Custom {RStudio} Themes from Visual Studio</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>Code, {Positron} and {TextMate} Themes},</span>
 <span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>  doi <span class="ot">=</span> {<span class="fl">10.32614</span><span class="sc">/</span>CRAN.package.rstudiothemes},</span>
 <span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>  author <span class="ot">=</span> {Diego Hernangómez},</span>
 <span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>  year <span class="ot">=</span> {<span class="dv">2026</span>},</span>
 <span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>  version <span class="ot">=</span> {<span class="dv">1</span>.<span class="fl">1.1</span>},</span>
 <span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>  url <span class="ot">=</span> {https<span class="sc">:</span><span class="er">//</span>dieghernan.github.io<span class="sc">/</span>rstudiothemes<span class="sc">/</span>},</span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>  abstract <span class="ot">=</span> {Create and install RStudio themes derived from Visual Studio Code, Positron and TextMate themes. Provides functions to convert between TextMate and Visual Studio Code or Positron themes, as well as ports of several Visual Studio Code themes.},</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>  abstract <span class="ot">=</span> {Create and install custom RStudio editor themes derived from Visual Studio Code, Positron and TextMate themes. Provides functions to convert between TextMate and Visual Studio Code or Positron themes, and includes ports of several popular Visual Studio Code themes.},</span>
 <span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 </div>

@@ -1,6 +1,6 @@
 # Showcase
 
-This article showcases the bundled themes in **rstudiothemes**.
+This article showcases the themes bundled with **rstudiothemes**.
 
 You can install them with:
 
@@ -9,9 +9,9 @@ You can install them with:
 rstudiothemes::install_rstudiothemes()
 ```
 
-We also distribute all bundled themes in a single `.zip` file
+All bundled themes are also distributed in a single `.zip` file
 [dist/rstudiothemes.zip](https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip).
-Unzip the file and install the themes using the [RStudio IDE
+Unzip the file and install the themes using the [**RStudio** IDE
 interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 **Tools \> Global Options \> Appearance \> Add**
@@ -199,7 +199,7 @@ Winter is Coming Light
 
 About the screenshots
 
-Previews may differ from the actual display on your device. These
+Previews may differ from the actual display on your device. The
 screenshots were taken under the following conditions:
 
 **RStudio version**

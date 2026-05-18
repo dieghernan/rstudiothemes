@@ -4,7 +4,8 @@
 
 CRAN release: 2026-05-11
 
-- Added package metadata comments to Visual Studio Code/Positron themes:
+- Added package metadata comments to **Visual Studio Code** and
+  **Positron** themes:
 
   ``` json
   {
@@ -19,16 +20,17 @@ CRAN release: 2026-05-11
 
 CRAN release: 2026-04-07
 
-- Improved JSON parsing: invalid trailing commas before `}` or `]`
-  (common in Visual Studio Code themes) are now removed before parsing.
-- Added Positron aliases for Visual Studio Code theme functions:
+- Improved JSON parsing: invalid trailing commas before `}` or `]`,
+  which are common in **Visual Studio Code** themes, are now removed
+  before parsing.
+- Added **Positron** aliases for **Visual Studio Code** theme functions:
   - [`convert_positron_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_vs_to_tm_theme.md).
   - [`convert_tm_to_positron_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_tm_to_vs_theme.md).
   - [`read_positron_theme()`](https://dieghernan.github.io/rstudiothemes/reference/read_vs_theme.md).
 - New themes:
-  - `"Positron Dark"` and `"Positron Light"` by Positron.
-  - `"VSCode Dark"` and `"VSCode Light"` by Visual Studio Code.
-- Added a Shiny app for online theme conversion:
+  - `"Positron Dark"` and `"Positron Light"` by **Positron**.
+  - `"VSCode Dark"` and `"VSCode Light"` by **Visual Studio Code**.
+- Added a **Shiny** app for online theme conversion:
   <https://dieghernan-themeconverter.share.connect.posit.cloud/>.
 
 ## rstudiothemes 1.0.0
@@ -41,8 +43,8 @@ Initial **CRAN** release.
   ([\#9](https://github.com/dieghernan/rstudiothemes/issues/9)).
 - Added DOI:
   [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18519155.svg)](https://doi.org/10.5281/zenodo.18519155).
-- Repo status is active: [![Project Status: Active - The project has
-  reached a stable, usable state and is being actively
+- Repository status is active: [![Project Status: Active - The project
+  has reached a stable, usable state and is being actively
   developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active).
 
 ### Bundled RStudio themes
