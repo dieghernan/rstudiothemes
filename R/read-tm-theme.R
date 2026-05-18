@@ -58,7 +58,7 @@ read_tm_theme <- function(path) {
 
   tm <- rapply(tm, col2hex, how = "list")
 
-  # Remove trailing and double whitespace.
+  # Remove trailing and repeated whitespace.
   tm <- rapply(
     tm,
     function(x) {
@@ -95,8 +95,7 @@ read_tm_theme <- function(path) {
   # 2. High-level color settings ----
   array <- specs[names(specs) == "array"][[1]]
 
-  # Identify high-level color settings by key and dict structure.
-
+  # Identify high-level color settings by key and dictionary structure.
   id_settings <- vapply(
     array,
     function(x) {
@@ -112,7 +111,6 @@ read_tm_theme <- function(path) {
   settings_list <- array[id_settings][1]$dict$dict
 
   # Extract keys and values with the same assumptions as high-level inputs.
-
   sett_keys <- unlist(settings_list[names(settings_list) == "key"])
   sett_values <- unlist(settings_list[names(settings_list) == "string"])
 
@@ -150,7 +148,6 @@ read_tm_theme <- function(path) {
 
   token_df <- lapply(it, function(i) {
     # Use the same assumptions as high-level inputs.
-
     this_tok <- token_list[i][[1]]
 
     tok_keys <- unlist(this_tok[names(this_tok) == "key"])

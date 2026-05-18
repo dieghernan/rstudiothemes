@@ -31,18 +31,18 @@ navbar:
     donate:
       icon: fa-hand-holding-dollar
       href: https://ko-fi.com/dieghernan
-      aria-label: Buy me a coffee
+      aria-label: Support the project on Ko-fi
 
 home:
   title: >
-    rstudiothemes | Create and install RStudio themes from Visual Studio
-    Code, Positron and TextMate themes
+    rstudiothemes | Create and install custom RStudio themes from Visual
+    Studio Code, Positron and TextMate themes
 
 reference:
-- title: Create themes
+- title: Create RStudio themes
 - subtitle: RStudio themes
   contents: convert_to_rstudio_theme
-- subtitle: Visual Studio Code, Positron and TextMate themes
+- subtitle: Visual Studio Code, Positron and TextMate conversion
   contents:
   - convert_vs_to_tm_theme
   - convert_tm_to_vs_theme
@@ -58,7 +58,7 @@ reference:
   contents: starts_with("read")
 - subtitle: Utilities
   desc: >
-    Helper functions made available for reuse.
+    Helper functions available for reuse.
   contents: has_concept("helpers")
 
 - title: About the package
@@ -69,7 +69,7 @@ authors:
     href: 'https://dieghernan.github.io/'
 
 articles:
-- title: Theme element mapping
+- title: Theme mapping
   navbar:
   contents:
   - articles/mapping

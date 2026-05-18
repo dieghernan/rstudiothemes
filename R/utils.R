@@ -29,7 +29,7 @@ col2hex <- function(x) {
   toupper(hex)
 }
 
-# Determine theme type based on brightness.
+# Determine the theme type from brightness.
 dark_or_light <- function(x) {
   theme_type <- "dark"
 
@@ -61,13 +61,13 @@ expand_hex <- function(x) {
   x
 }
 
-#' Match argument with pretty error message
+#' Match an argument with a pretty error message
 #'
-#' @param arg The argument to match.
-#' @param choices The possible choices for the argument.
+#' @param arg Argument to match.
+#' @param choices Allowed values for `arg`.
 #'
 #' @return
-#' The matched argument.
+#' The matched argument value.
 #'
 #' @noRd
 match_arg_pretty <- function(arg, choices) {
@@ -112,7 +112,7 @@ match_arg_pretty <- function(arg, choices) {
     bad_arg <- paste0("{.str ", arg, "}", collapse = " or ")
     msg <- paste0(msg, bad_arg, ".")
 
-    # Maybe it's a close match suggestion?
+    # Build a close-match suggestion when available.
     reg_msg <- NULL
     if (!is.na(aproxmatch)) {
       aprox <- choices[aproxmatch]

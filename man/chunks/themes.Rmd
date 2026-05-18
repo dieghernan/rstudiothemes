@@ -3,7 +3,7 @@
 -   Catppuccin by <https://catppuccin.com/>.
 -   Cobalt2 Theme Official by Wes Bos.
 -   CRAN by dieghernan, based on the CRAN (R Project) website theme, created
-    with Pandoc
+    with Pandoc.
 -   Dracula Official by <https://draculatheme.com/>.
 -   GitHub Dark and Light by GitHub.
 -   JellyFish Theme by Pawel Borkar.

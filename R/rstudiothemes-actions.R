@@ -3,7 +3,7 @@
 #' Install, list, try or remove RStudio themes
 #'
 #' @description
-#' Adaptation of some \pkg{rsthemes} functions.
+#' Adapted from selected \pkg{rsthemes} functions.
 #'
 #' ```{r, echo=FALSE, results='asis'}
 #'
@@ -45,8 +45,8 @@ NULL
 #' @param themes Optional character vector of theme names. If provided, only
 #'   these themes will be used, and `style` will be ignored.
 #' @return
-#' - `install_rstudiothemes()` and `remove_rstudiothemes()` return `NULL`
-#'   invisibly.
+#' `install_rstudiothemes()` and `remove_rstudiothemes()` return `NULL`
+#' invisibly.
 #'
 #' @export
 install_rstudiothemes <- function(
@@ -130,7 +130,7 @@ remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
 #'   \pkg{rstudiothemes} package are listed instead.
 #'
 #' @return
-#' - `list_rstudiothemes()` returns a character vector of theme names.
+#' `list_rstudiothemes()` returns a character vector of theme names.
 #'
 #' @export
 list_rstudiothemes <- function(
@@ -200,7 +200,6 @@ list_pkg_rstudiothemes <- function(
   # If specific themes are selected.
   if (!is.null(themes)) {
     # Validate theme names.
-
     sel <- ensure_null(allt[intersect(themes, nms)])
 
     # Inform the user if some themes are not found.
@@ -247,9 +246,9 @@ list_pkg_rstudiothemes <- function(
 #'   prompted to continue after each theme.
 #'
 #' @return
-#' - `try_rstudiothemes()` has side effects of starting a widget that allows
-#'   users to try different themes. The widget can be exited by following the
-#'   prompts, which will restore the original theme.
+#' `try_rstudiothemes()` has side effects: it starts a widget that allows users
+#' to try different themes. The widget can be exited by following the prompts,
+#' which restores the original theme.
 #'
 #' @export
 try_rstudiothemes <- function(
@@ -287,7 +286,6 @@ try_rstudiothemes <- function(
   ))
 
   # Arrange in dark/light order.
-
   current_theme <- rstudioapi::getThemeInfo()
 
   cli::cli_alert(c(

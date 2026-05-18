@@ -12,8 +12,9 @@ knitr:
 ---
 
 The **rstudiothemes** package provides tools to convert **Visual Studio Code**,
-**Positron** and **TextMate** themes into RStudio's `.rstheme` format and
-install them in your RStudio IDE. It also includes a set of ready-to-use themes.
+**Positron** and **TextMate** themes into **RStudio**'s `.rstheme` format and
+install them in your **RStudio** IDE. It also includes a set of ready-to-use
+themes.
 
 ```{r}
 #| label: setup
@@ -22,7 +23,7 @@ library(rstudiothemes)
 
 ## Installing built-in themes
 
-To install all built-in RStudio themes that come with this package:
+To install all built-in **RStudio** themes that come with this package:
 
 ```{r}
 #| eval: false
@@ -34,10 +35,10 @@ install_rstudiothemes()
 #> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes
 ```
 
-This will add many popular themes, including Tokyo Night, Nord, Winter is Coming
-and Dracula, to your RStudio themes directory.
+This adds many popular themes, including Tokyo Night, Nord, Winter is Coming and
+Dracula, to your **RStudio** themes directory.
 
-To see themes available now:
+To list the themes available in the package:
 
 ```{r}
 list_rstudiothemes(list_installed = FALSE)
@@ -57,7 +58,7 @@ Pass a subset of styles (for example, `"dark"` or `"light"`) if needed.
 
 ## Applying a theme
 
-After installing themes, apply one using the RStudio API:
+After installing themes, apply one using the **RStudio** API:
 
 ```{r}
 #| eval: false
@@ -71,13 +72,13 @@ rstudioapi::applyTheme("Winter is Coming Dark Blue")
 Screenshot of theme Winter is Coming Dark Blue
 :::
 
-Alternatively, in RStudio, go to **Tools \> Global Options \> Appearance \>
+Alternatively, in **RStudio**, go to **Tools \> Global Options \> Appearance \>
 Add** and select the installed theme.
 
 ## Converting your own themes
 
-You can convert a Visual Studio Code/Positron or TextMate theme file into an
-RStudio theme:
+You can convert a **Visual Studio Code**, **Positron** or **TextMate** theme
+file into an **RStudio** theme:
 
 ```{r}
 #| eval: false
@@ -89,20 +90,21 @@ convert_to_rstudio_theme(
 )
 ```
 
-This function will convert and install the theme immediately, optionally
-applying it (with `apply = TRUE`).
+This function converts and installs the theme immediately, optionally applying
+it with `apply = TRUE`.
 
-## Workflow example: From Visual Studio Code/Positron theme to RStudio
+## Workflow example: From Visual Studio Code or Positron to RStudio
 
-- Choose a theme `.json` file from Visual Studio Code/Positron.
+- Choose a theme `.json` file from **Visual Studio Code** or **Positron**.
 - Convert and install it with `convert_to_rstudio_theme()`.
-- Apply it with `rstudioapi::applyTheme()` or the RStudio UI.
+- Apply it with `rstudioapi::applyTheme()` or the **RStudio** UI.
 
-This workflow lets you bring your preferred editor theme into RStudio.
+This workflow lets you bring your preferred editor theme into **RStudio**.
 
 ## Tips and tricks
 
 - List installed themes with `list_rstudiothemes(list_installed = TRUE)`.
 - Filter themes by `"light"` or `"dark"` style.
-- Use the Add Theme UI in RStudio's **Global Options \> Appearance \> Add** to
-  manually add `.rstheme` files you've created or converted.
+- Use the Add Theme UI in **RStudio**'s
+  **Global Options \> Appearance \> Add** to manually add `.rstheme` files you
+  have created or converted.

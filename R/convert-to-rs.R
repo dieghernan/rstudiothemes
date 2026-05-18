@@ -1,8 +1,8 @@
-#' Convert a TextMate or VS Code/Positron theme to an RStudio theme
+#' Convert a TextMate, Visual Studio Code or Positron theme to an RStudio theme
 #'
 #' @description
 #' Convert a `.tmTheme` or `.json` file that defines a TextMate or Visual
-#' Studio Code theme and write the equivalent RStudio theme `.rstheme`.
+#' Studio Code theme and write the equivalent RStudio theme (`.rstheme`).
 #'
 #' Optionally, the generated theme can be installed and applied to the
 #' RStudio IDE.
@@ -59,7 +59,6 @@
 #'   )
 #'
 #'   # Apply the theme for 10 seconds to demonstrate the effect.
-#'
 #'   current_theme <- rstudioapi::getThemeInfo()$editor
 #'
 #'   # Current theme name:
@@ -350,7 +349,6 @@ create_ace_cascade <- function(tmcols_scopes) {
   full <- full[!grepl(" ", full$scope, fixed = TRUE), ]
 
   # Classify scopes by hierarchy level.
-
   level <- vapply(
     full$scope,
     function(x) {
@@ -374,7 +372,6 @@ create_ace_cascade <- function(tmcols_scopes) {
   lev3 <- more_freq_rule(lev3)
 
   # Enrich level-2 scopes with color information from level 3.
-
   lev2_xtra <- lev3
 
   # Limit fontStyle inheritance for color information from level 2.

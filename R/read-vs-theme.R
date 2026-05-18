@@ -1,7 +1,7 @@
-#' Read and parse a Visual Studio Code/Positron theme
+#' Read and parse a Visual Studio Code or Positron theme
 #'
 #' @description
-#' Read a `.json` file representing a Visual Studio Code/Positron theme.
+#' Read a `.json` file representing a Visual Studio Code or Positron theme.
 #'
 #' @encoding UTF-8
 #' @family functions for reading themes
@@ -9,7 +9,7 @@
 #' @export
 #' @rdname read_vs_theme
 #'
-#' @param path Path or URL to a Visual Studio Code/Positron theme, in `.json`
+#' @param path Path or URL to a Visual Studio Code or Positron theme, in `.json`
 #'   format.
 #'
 #' @examples
@@ -44,13 +44,12 @@ read_vs_theme <- function(path) {
     cli::cli_abort("File {.path {local_file}} does not exist.")
   }
 
-  # Read the VS Code theme and prepare it.
+  # Read and prepare the Visual Studio Code or Positron theme.
   vs <- safe_read_json(local_file)
 
   vs <- rapply(vs, col2hex, how = "list")
 
-  # Remove trailing and double whitespace.
-
+  # Remove trailing and repeated whitespace.
   vs <- rapply(
     vs,
     function(x) {

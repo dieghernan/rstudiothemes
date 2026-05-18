@@ -40,23 +40,17 @@ listed (default). If \code{FALSE}, the available themes in the
 prompted to continue after each theme.}
 }
 \value{
-\itemize{
-\item \code{install_rstudiothemes()} and \code{remove_rstudiothemes()} return \code{NULL}
+\code{install_rstudiothemes()} and \code{remove_rstudiothemes()} return \code{NULL}
 invisibly.
-}
 
-\itemize{
-\item \code{list_rstudiothemes()} returns a character vector of theme names.
-}
+\code{list_rstudiothemes()} returns a character vector of theme names.
 
-\itemize{
-\item \code{try_rstudiothemes()} has side effects of starting a widget that allows
-users to try different themes. The widget can be exited by following the
-prompts, which will restore the original theme.
-}
+\code{try_rstudiothemes()} has side effects: it starts a widget that allows users
+to try different themes. The widget can be exited by following the prompts,
+which restores the original theme.
 }
 \description{
-Adaptation of some \pkg{rsthemes} functions.
+Adapted from selected \pkg{rsthemes} functions.
 \href{https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md}{MIT License} Copyright © rsthemes authors.
 
 \strong{Important}: These functions (except
@@ -84,7 +78,7 @@ following Visual Studio Code themes:
 \item Catppuccin by \url{https://catppuccin.com/}.
 \item Cobalt2 Theme Official by Wes Bos.
 \item CRAN by dieghernan, based on the CRAN (R Project) website theme, created
-with Pandoc
+with Pandoc.
 \item Dracula Official by \url{https://draculatheme.com/}.
 \item GitHub Dark and Light by GitHub.
 \item JellyFish Theme by Pawel Borkar.

@@ -27,7 +27,7 @@ on_rstudio <- function() {
 
 # Helper functions.
 detect_gui <- function() {
-  # Return the platform GUI string, but override it when VS Code is detected.
+  # Return the platform GUI string, but override it for Visual Studio Code.
   gui <- .Platform$GUI
   if (on_vscode()) {
     gui <- "Visual Studio Code"

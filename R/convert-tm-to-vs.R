@@ -1,4 +1,4 @@
-#' Convert a TextMate theme into a Visual Studio Code/Positron theme
+#' Convert a TextMate theme into a Visual Studio Code or Positron theme
 #'
 #' @description
 #' Convert a `.tmTheme` file representing a TextMate theme and write the
@@ -84,7 +84,6 @@ convert_tm_to_vs_theme <- function(
   init <- additional_cols(bg, fg, comment, selection, accent)
 
   # Add the color mapping.
-
   # Based on
   # https://github.com/microsoft/vscode-generator-code/blob/main/generators/ ...
   # /app/generate-colortheme.js
@@ -133,7 +132,6 @@ convert_tm_to_vs_theme <- function(
     tokencols$index <- seq_len(nrow(tokencols))
 
     # Split and group items with the same variables by section.
-
     # Group by name and arrange.
     tokencols[is.na(tokencols)] <- "MISSING_VALUE"
     splitted <- split(
@@ -170,7 +168,6 @@ convert_tm_to_vs_theme <- function(
     tok_g[tok_g == "MISSING_VALUE"] <- NA
 
     # Build the token list.
-
     tok <- list()
     # Create the list of tokens.
     tok[[1]] <- list(settings = list(foreground = col_l$editor.foreground))
@@ -310,7 +307,6 @@ additional_cols <- function(bg, fg, comment, selection, accent) {
     "list.focusBackground" = selection,
 
     # Activity bar.
-
     "activityBar.activeBackground" = bgaccent2,
     "activityBar.inactiveForeground" = comment,
     "activityBar.foreground" = accent,
@@ -364,7 +360,6 @@ additional_cols <- function(bg, fg, comment, selection, accent) {
     "peekViewTitleLabel.foreground" = fg,
 
     # Panel colors.
-
     "panel.background" = bgfg1,
     "panelTitle.activeForeground" = fg,
     "panelTitle.inactiveForeground" = comment,
@@ -389,7 +384,6 @@ additional_cols <- function(bg, fg, comment, selection, accent) {
     "settings.textInputForeground" = fg,
 
     # Breadcrumbs.
-
     "breadcrumb.activeSelectionForeground" = fg,
     "breadcrumb.background" = bgfg1,
     "breadcrumb.focusForeground" = fg,

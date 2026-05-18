@@ -3,7 +3,7 @@
 \encoding{UTF-8}
 \name{convert_to_rstudio_theme}
 \alias{convert_to_rstudio_theme}
-\title{Convert a TextMate or VS Code/Positron theme to an RStudio theme}
+\title{Convert a TextMate, Visual Studio Code or Positron theme to an RStudio theme}
 \usage{
 convert_to_rstudio_theme(
   path,
@@ -44,7 +44,7 @@ are \code{TRUE}, it will install and apply the theme to your RStudio IDE.
 }
 \description{
 Convert a \code{.tmTheme} or \code{.json} file that defines a TextMate or Visual
-Studio Code theme and write the equivalent RStudio theme \code{.rstheme}.
+Studio Code theme and write the equivalent RStudio theme (\code{.rstheme}).
 
 Optionally, the generated theme can be installed and applied to the
 RStudio IDE.
@@ -81,7 +81,6 @@ if (on_rstudio() && interactive()) {
   )
 
   # Apply the theme for 10 seconds to demonstrate the effect.
-
   current_theme <- rstudioapi::getThemeInfo()$editor
 
   # Current theme name:

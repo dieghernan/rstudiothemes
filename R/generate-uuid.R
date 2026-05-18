@@ -31,7 +31,6 @@
 #' generate_uuid()
 #'
 #' # Persistent UUID with `hint`.
-#'
 #' hint <- "something as seed"
 #'
 #' generate_uuid(hint)

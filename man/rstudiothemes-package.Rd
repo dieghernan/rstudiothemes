@@ -4,11 +4,11 @@
 \name{rstudiothemes-package}
 \alias{rstudiothemes}
 \alias{rstudiothemes-package}
-\title{rstudiothemes: Create and Install 'RStudio' Themes from 'Visual Studio Code', 'Positron' and 'TextMate' Themes}
+\title{rstudiothemes: Create and Install Custom 'RStudio' Themes from 'Visual Studio Code', 'Positron' and 'TextMate' Themes}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-Create and install 'RStudio' themes derived from 'Visual Studio Code', 'Positron' and 'TextMate' themes. Provides functions to convert between 'TextMate' and 'Visual Studio Code' or 'Positron' themes, as well as ports of several 'Visual Studio Code' themes.
+Create and install custom 'RStudio' editor themes derived from 'Visual Studio Code', 'Positron' and 'TextMate' themes. Provides functions to convert between 'TextMate' and 'Visual Studio Code' or 'Positron' themes, and includes ports of several popular 'Visual Studio Code' themes.
 }
 \seealso{
 Useful links:

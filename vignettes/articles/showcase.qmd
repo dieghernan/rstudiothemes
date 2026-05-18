@@ -39,7 +39,7 @@ knitr:
     comment: '#>'
 ---
 
-This article showcases the bundled themes in **rstudiothemes**.
+This article showcases the themes bundled with **rstudiothemes**.
 
 You can install them with:
 
@@ -50,9 +50,9 @@ You can install them with:
 rstudiothemes::install_rstudiothemes()
 ```
 
-We also distribute all bundled themes in a single `.zip` file
+All bundled themes are also distributed in a single `.zip` file
 [dist/rstudiothemes.zip](https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip).
-Unzip the file and install the themes using the [RStudio IDE
+Unzip the file and install the themes using the [**RStudio** IDE
 interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 **Tools \> Global Options \> Appearance \> Add**
@@ -115,7 +115,7 @@ for (i in seq_along(themes)) {
 <div class="callout-body-container callout-body">
 ```
 
-Previews may differ from the actual display on your device. These screenshots
+Previews may differ from the actual display on your device. The screenshots
 were taken under the following conditions:
 
 **RStudio version**

@@ -1,8 +1,8 @@
-#' Convert a Visual Studio Code/Positron theme into a TextMate theme
+#' Convert a Visual Studio Code or Positron theme into a TextMate theme
 #'
 #' @description
-#' Convert a `.json` file representing a Visual Studio Code/Positron theme and
-#' write the equivalent TextMate theme (`.tmTheme`).
+#' Convert a `.json` file representing a Visual Studio Code or Positron theme
+#' and write the equivalent TextMate theme (`.tmTheme`).
 #'
 #' @encoding UTF-8
 #' @rdname convert_vs_to_tm_theme
@@ -41,7 +41,7 @@ convert_vs_to_tm_theme <- function(
   name = NULL,
   author = NULL
 ) {
-  # Read and parse the VS Code theme file.
+  # Read and parse the Visual Studio Code theme file.
   vs_df <- read_vs_theme(path)
 
   # Prepare the settings data frame.
@@ -104,7 +104,6 @@ convert_vs_to_tm_theme <- function(
   the_theme <- list(plist = list(dict = list()))
 
   # Add top-level metadata.
-
   top_list <- NULL
   for (i in seq_len(nrow(toplevel_df))) {
     this <- toplevel_df[i, ]
