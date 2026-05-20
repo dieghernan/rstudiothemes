@@ -65,7 +65,7 @@ vstheme <- system.file("ext/test-simple-color-theme.json",
   package = "rstudiothemes"
 )
 path <- convert_vs_to_tm_theme(vstheme)
-#> ! VSCode theme "Skeletor Syntax" does not have author, use the `author` argument.
+#> ! Visual Studio Code theme "Skeletor Syntax" does not have an author. Use the `author` argument.
 #> ℹ Using `author = "rstudiothemes R package"`.
 
 readLines(path) |>
@@ -85,7 +85,7 @@ readLines(path) |>
 #>     <key>comment</key>
 #>     <string>Generated with rstudiothemes R package</string>
 #>     <key>uuid</key>
-#>     <string>65316264-3362-4031-a334-396431643737</string>
+#>     <string>65623931-3630-4063-b063-653630303437</string>
 #>     <key>settings</key>
 #>     <array>
 #>       <dict>

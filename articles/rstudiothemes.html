@@ -57,7 +57,9 @@
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="../articles/mapping.html">Mapping</a></li>
+<li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Theme mapping</h6></li>
+    <li><a class="dropdown-item" href="../articles/mapping.html">Theme mapping</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Theme gallery</h6></li>
     <li><a class="dropdown-item" href="../articles/showcase.html">Showcase</a></li>
@@ -117,8 +119,8 @@
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/rstudiothemes-actions.html">install_rstudiothemes</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">#&gt; ✔ Installed 36 themes</span></span>
-<span><span class="co">#&gt; ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes</span></span>
-<span><span class="co">#&gt; ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes</span></span></code></pre></div>
+<span><span class="co">#&gt; ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes.</span></span>
+<span><span class="co">#&gt; ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes.</span></span></code></pre></div>
 </div>
 <p>This adds many popular themes, including Tokyo Night, Nord, Winter is Coming and Dracula, to your <strong>RStudio</strong> themes directory.</p>
 <p>To list the themes available in the package:</p>
@@ -159,12 +161,12 @@
 <div class="sourceCode cell-code" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">rstudioapi</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/rstudioapi/reference/applyTheme.html" class="external-link">applyTheme</a></span><span class="op">(</span><span class="st">"Winter is Coming Dark Blue"</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="fig-winter" class="quarto-float quarto-figure quarto-figure-center" alt="Screenshot of theme Winter is Coming Dark Blue">
+<div id="fig-winter" class="quarto-float quarto-figure quarto-figure-center" alt="Winter is Coming Dark Blue theme">
 <figure class="quarto-float quarto-float-fig"><div aria-describedby="fig-winter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="winteriscoming.png" alt="Screenshot of theme Winter is Coming Dark Blue">
+<img src="winteriscoming.png" alt="Winter is Coming Dark Blue theme">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-winter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 1: Screenshot of theme Winter is Coming Dark Blue
+Figure 1: Screenshot of the Winter is Coming Dark Blue theme
 </figcaption></figure>
 </div>
 <p>Alternatively, in <strong>RStudio</strong>, go to <strong>Tools &gt; Global Options &gt; Appearance &gt; Add</strong> and select the installed theme.</p>
@@ -179,7 +181,7 @@ Figure 1: Screenshot of theme Winter is Coming Dark Blue
 <span>  force <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 </div>
-<p>This function converts and installs the theme immediately, optionally applying it with <code>apply = TRUE</code>.</p>
+<p>This function converts and installs the theme immediately. Set <code>apply = TRUE</code> to apply it after installation.</p>
 </section><section class="level2"><h2 id="workflow-example-from-visual-studio-code-or-positron-to-rstudio">Workflow example: From Visual Studio Code or Positron to RStudio<a class="anchor" aria-label="anchor" href="#workflow-example-from-visual-studio-code-or-positron-to-rstudio"></a>
 </h2>
 <ul>
@@ -187,7 +189,7 @@ Figure 1: Screenshot of theme Winter is Coming Dark Blue
 <li>Convert and install it with <code><a href="../reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme()</a></code>.</li>
 <li>Apply it with <code><a href="https://rstudio.github.io/rstudioapi/reference/applyTheme.html" class="external-link">rstudioapi::applyTheme()</a></code> or the <strong>RStudio</strong> UI.</li>
 </ul>
-<p>This workflow lets you bring your preferred editor theme into <strong>RStudio</strong>.</p>
+<p>This workflow brings your preferred editor theme into <strong>RStudio</strong>.</p>
 </section><section class="level2"><h2 id="tips-and-tricks">Tips and tricks<a class="anchor" aria-label="anchor" href="#tips-and-tricks"></a>
 </h2>
 <ul>

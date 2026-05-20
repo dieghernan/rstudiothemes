@@ -42,8 +42,8 @@ convert_to_rstudio_theme(
 
 - use_italics:
 
-  Logical. Whether to use italics in the resulting theme. By default
-  `TRUE`. However, some themes may look better without italics.
+  Logical. Whether to use italics in the resulting theme. The default is
+  `TRUE`, although some themes may look better without italics.
 
 - output_style:
 
@@ -65,7 +65,7 @@ convert_to_rstudio_theme(
 
 This function is called for its side effects. It writes a new `.rstheme`
 file to `outfile` and returns the path. If `force` or `apply` are
-`TRUE`, it will install and apply the theme to your RStudio IDE.
+`TRUE`, it installs and applies the theme to your RStudio IDE.
 
 ## Details
 
@@ -104,7 +104,7 @@ if (on_rstudio() && interactive()) {
   # Apply the theme for 10 seconds to demonstrate the effect.
   current_theme <- rstudioapi::getThemeInfo()$editor
 
-  # Current theme name:
+  # Current theme name.
   current_theme
   new_rs_theme <- convert_to_rstudio_theme(vstheme,
     name = "A testing theme",

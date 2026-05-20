@@ -35,7 +35,9 @@ called from other IDEs."><meta property="og:image" content="https://dieghernan.g
 <li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/mapping.html">Mapping</a></li>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Theme mapping</h6></li>
+    <li><a class="dropdown-item" href="../articles/mapping.html">Theme mapping</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Theme gallery</h6></li>
     <li><a class="dropdown-item" href="../articles/showcase.html">Showcase</a></li>
@@ -109,7 +111,8 @@ the theme in <code>path</code> will be used.</p></dd>
 
 <dt id="arg-use-italics">use_italics<a class="anchor" aria-label="anchor" href="#arg-use-italics"></a></dt>
 <dd><p>Logical. Whether to use italics in the resulting theme.
-By default <code>TRUE</code>. However, some themes may look better without italics.</p></dd>
+The default is <code>TRUE</code>, although some themes may look better without
+italics.</p></dd>
 
 
 <dt id="arg-output-style">output_style<a class="anchor" aria-label="anchor" href="#arg-output-style"></a></dt>
@@ -131,7 +134,7 @@ with the same name.<br> Default: <code>FALSE</code>.</p></dd>
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     <p>This function is called for its side effects. It writes a new
 <code>.rstheme</code> file to <code>outfile</code> and returns the path. If <code>force</code> or <code>apply</code>
-are <code>TRUE</code>, it will install and apply the theme to your RStudio IDE.</p>
+are <code>TRUE</code>, it installs and applies the theme to your RStudio IDE.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -164,7 +167,7 @@ and use the Editor theme selector.</p>
 <span class="r-in"><span>  <span class="co"># Apply the theme for 10 seconds to demonstrate the effect.</span></span></span>
 <span class="r-in"><span>  <span class="va">current_theme</span> <span class="op">&lt;-</span> <span class="fu">rstudioapi</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/rstudioapi/reference/getThemeInfo.html" class="external-link">getThemeInfo</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">editor</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span>  <span class="co"># Current theme name:</span></span></span>
+<span class="r-in"><span>  <span class="co"># Current theme name.</span></span></span>
 <span class="r-in"><span>  <span class="va">current_theme</span></span></span>
 <span class="r-in"><span>  <span class="va">new_rs_theme</span> <span class="op">&lt;-</span> <span class="fu">convert_to_rstudio_theme</span><span class="op">(</span><span class="va">vstheme</span>,</span></span>
 <span class="r-in"><span>    name <span class="op">=</span> <span class="st">"A testing theme"</span>,</span></span>

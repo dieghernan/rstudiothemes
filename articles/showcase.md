@@ -1,6 +1,6 @@
 # Showcase
 
-This article showcases the themes bundled with **rstudiothemes**.
+This article previews the themes bundled with **rstudiothemes**.
 
 You can install them with:
 
@@ -16,9 +16,9 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 **Tools \> Global Options \> Appearance \> Add**
 
-![RStudio IDE, Add Theme UI](rstudiogui.png)
+![RStudio IDE Add Theme UI](rstudiogui.png)
 
-Figure 1: RStudio IDE, Add Theme UI
+Figure 1: RStudio IDE Add Theme UI
 
 ## Lightbox gallery
 
@@ -199,8 +199,8 @@ Winter is Coming Light
 
 About the screenshots
 
-Previews may differ from the actual display on your device. The
-screenshots were taken under the following conditions:
+Previews may differ from the display on your device. The screenshots
+were taken under the following conditions:
 
 **RStudio version**
 

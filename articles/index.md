@@ -2,19 +2,27 @@
 
 ### Theme mapping
 
-- [Mapping](https://dieghernan.github.io/rstudiothemes/articles/mapping.md):
+See how theme elements map between Visual Studio Code, Positron,
+TextMate and RStudio formats.
 
-  Mapping between theme elements
+- [Theme
+  mapping](https://dieghernan.github.io/rstudiothemes/articles/mapping.md):
+
+  Map elements between theme specifications
 
 ### Theme gallery
 
+Preview the built-in RStudio themes.
+
 - [Showcase](https://dieghernan.github.io/rstudiothemes/articles/showcase.md):
 
-  A preview of our built-in themes
+  Preview the built-in themes
 
 ### Online app
+
+Convert themes online with the Shiny app.
 
 - [Shiny
   app](https://dieghernan.github.io/rstudiothemes/articles/shinyapp.md):
 
-  A Shiny app for converting themes online
+  Convert themes online with a Shiny app

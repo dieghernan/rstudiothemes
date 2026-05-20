@@ -19,8 +19,8 @@ To install all built-in **RStudio** themes that come with this package:
 install_rstudiothemes()
 
 #> ✔ Installed 36 themes
-#> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes
-#> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes
+#> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes.
+#> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes.
 ```
 
 This adds many popular themes, including Tokyo Night, Nord, Winter is
@@ -71,9 +71,9 @@ After installing themes, apply one using the **RStudio** API:
 rstudioapi::applyTheme("Winter is Coming Dark Blue")
 ```
 
-![Screenshot of theme Winter is Coming Dark Blue](winteriscoming.png)
+![Winter is Coming Dark Blue theme](winteriscoming.png)
 
-Figure 1: Screenshot of theme Winter is Coming Dark Blue
+Figure 1: Screenshot of the Winter is Coming Dark Blue theme
 
 Alternatively, in **RStudio**, go to **Tools \> Global Options \>
 Appearance \> Add** and select the installed theme.
@@ -92,8 +92,8 @@ convert_to_rstudio_theme(
 )
 ```
 
-This function converts and installs the theme immediately, optionally
-applying it with `apply = TRUE`.
+This function converts and installs the theme immediately. Set
+`apply = TRUE` to apply it after installation.
 
 ## Workflow example: From Visual Studio Code or Positron to RStudio
 
@@ -105,8 +105,7 @@ applying it with `apply = TRUE`.
   [`rstudioapi::applyTheme()`](https://rstudio.github.io/rstudioapi/reference/applyTheme.html)
   or the **RStudio** UI.
 
-This workflow lets you bring your preferred editor theme into
-**RStudio**.
+This workflow brings your preferred editor theme into **RStudio**.
 
 ## Tips and tricks
 

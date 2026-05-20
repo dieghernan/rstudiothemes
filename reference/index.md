@@ -1,6 +1,6 @@
 # Package index
 
-## Create RStudio themes
+## Create and convert themes
 
 ### RStudio themes
 
@@ -17,9 +17,10 @@
   [`convert_tm_to_positron_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_tm_to_vs_theme.md)
   : Convert a TextMate theme into a Visual Studio Code or Positron theme
 
-## Install, manage and preview built-in themes
+## Install, manage and preview themes
 
-Adapted from functions in the **rsthemes** package.
+Install, remove, list and preview the bundled RStudio themes. These
+functions are adapted from the **rsthemes** package.
 
 - [`install_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-actions.md)
   [`remove_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-actions.md)
