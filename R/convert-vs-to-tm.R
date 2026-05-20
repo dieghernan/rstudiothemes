@@ -57,7 +57,7 @@ convert_vs_to_tm_theme <- function(
   if (is.null(name)) {
     name <- unlist(for_top_df[for_top_df$name == "name", ]$value)
     if (length(name) < 1) {
-      cli::cli_abort("Unnamed theme, please use {.arg name} argument.")
+      cli::cli_abort("Unnamed theme. Please use the {.arg name} argument.")
     }
   }
 
@@ -66,8 +66,8 @@ convert_vs_to_tm_theme <- function(
 
     if (length(orig_aut) < 1) {
       cli::cli_alert_warning(paste0(
-        "VSCode theme {.str {name}} does not have author, ",
-        "use the {.arg author} argument."
+        "Visual Studio Code theme {.str {name}} does not have an author. ",
+        "Use the {.arg author} argument."
       ))
       author <- "rstudiothemes R package"
       cli::cli_alert_info("Using {.code author = {.str {author}}}.")
@@ -224,7 +224,7 @@ tmtheme_settings_df <- function(vs_df) {
   if (!all(check_vals)) {
     miss <- c("background", "foreground", "selection")[!check_vals] # nolint
     cli::cli_abort(
-      "Can't convert theme. No color detected for setting{?/s} {.str {miss}}."
+      "Cannot convert theme. No color detected for setting{?/s} {.str {miss}}."
     )
   }
 

@@ -10,6 +10,6 @@ Marketplace](https://marketplace.visualstudio.com/search?target=VSCode&category=
 
 ## Legal disclaimer
 
-All modifications have been made in good faith. I do not claim any rights to the
-original theme files in this directory, and these files are not intended for
-redistribution or public use.
+All modifications have been made in good faith. The **rstudiothemes** authors
+do not claim any rights to the original theme files in this directory, and these
+files are not intended for redistribution or public use.

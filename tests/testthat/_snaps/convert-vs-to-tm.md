@@ -4,7 +4,7 @@
       convert_vs_to_tm_theme()
     Condition
       Error in `read_vs_theme()`:
-      ! Argument `path` can't be empty.
+      ! Argument `path` cannot be empty.
 
 ---
 
@@ -12,7 +12,7 @@
       convert_vs_to_tm_theme("a.txt")
     Condition
       Error in `read_vs_theme()`:
-      ! Argument `path` should be a "json" file not "txt".
+      ! Argument `path` should be a "json" file, not "txt".
 
 ---
 
@@ -28,7 +28,7 @@
       convert_vs_to_tm_theme(tmp_path)
     Condition
       Error in `tmtheme_settings_df()`:
-      ! Can't convert theme. No color detected for setting "background".
+      ! Cannot convert theme. No color detected for setting "background".
 
 # Theme creation
 
@@ -583,7 +583,7 @@
     Code
       thef <- convert_vs_to_tm_theme(path)
     Message
-      i Downloading from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test-color-theme.json>
+      i Downloading from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test-color-theme.json>.
 
 # Unnamed
 
@@ -591,5 +591,5 @@
       res <- convert_vs_to_tm_theme(fpath)
     Condition
       Error in `convert_vs_to_tm_theme()`:
-      ! Unnamed theme, please use `name` argument.
+      ! Unnamed theme. Please use the `name` argument.
 

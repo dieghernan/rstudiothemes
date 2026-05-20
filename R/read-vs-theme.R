@@ -21,20 +21,20 @@
 read_vs_theme <- function(path) {
   # Validate inputs.
   if (missing(path)) {
-    cli::cli_abort("Argument {.arg path} can't be empty.")
+    cli::cli_abort("Argument {.arg path} cannot be empty.")
   }
 
   if (tools::file_ext(path) != "json") {
     cli::cli_abort(paste0(
       "Argument {.arg path} should be a {.str json} file",
-      " not {.str {tools::file_ext(path)}}."
+      ", not {.str {tools::file_ext(path)}}."
     ))
   }
 
   # Check whether the file is online.
   if (grepl("^http", path)) {
     local_file <- tempfile(fileext = ".json")
-    cli::cli_alert_info("Downloading from {.url {path}}")
+    cli::cli_alert_info("Downloading from {.url {path}}.")
     download.file(path, local_file, quiet = TRUE, mode = "wb")
   } else {
     local_file <- path
@@ -214,6 +214,7 @@ read_vs_theme <- function(path) {
 read_positron_theme <- read_vs_theme
 
 #' Read JSON after removing inline comments and extra trailing commas
+#'
 #' @noRd
 safe_read_json <- function(local_file) {
   lns <- readLines(local_file, warn = FALSE)
@@ -223,7 +224,7 @@ safe_read_json <- function(local_file) {
   # Delete the schema key.
   lns <- lns[!grepl("$schema", lns, fixed = TRUE)]
 
-  ## Split inline comments into separate lines.
+  # Split inline comments into separate lines.
   r2_split <- gsub("//", "~//", lns, fixed = TRUE)
   r2 <- trimws(unlist(strsplit(r2_split, "~", fixed = TRUE)))
   # Remove lines starting with double slash.

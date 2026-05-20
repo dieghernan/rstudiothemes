@@ -30,20 +30,20 @@
 read_tm_theme <- function(path) {
   # Validate inputs.
   if (missing(path)) {
-    cli::cli_abort("Argument {.arg path} can't be empty.")
+    cli::cli_abort("Argument {.arg path} cannot be empty.")
   }
 
   if (tools::file_ext(path) != "tmTheme") {
     cli::cli_abort(paste0(
       "Argument {.arg path} should be a {.str tmTheme} file",
-      " not {.str {tools::file_ext(path)}}."
+      ", not {.str {tools::file_ext(path)}}."
     ))
   }
 
   # Check whether the file is online.
   if (grepl("^http", path)) {
     local_file <- tempfile(fileext = ".tmTheme")
-    cli::cli_alert_info("Downloading from {.url {path}}")
+    cli::cli_alert_info("Downloading from {.url {path}}.")
     download.file(path, local_file, quiet = TRUE, mode = "wb")
   } else {
     local_file <- path
@@ -137,7 +137,7 @@ read_tm_theme <- function(path) {
   difs <- setdiff(minimal_keys, the_keys)
   if (length(difs) > 0) {
     cli::cli_abort(paste0(
-      "tmTheme in {.file {path}} invalid. {.str {difs}} ",
+      "tmTheme in {.file {path}} is invalid. {.str {difs}} ",
       "{?value is/values are} missing."
     ))
   }

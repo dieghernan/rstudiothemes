@@ -4,7 +4,7 @@
       convert_tm_to_vs_theme()
     Condition
       Error in `read_tm_theme()`:
-      ! Argument `path` can't be empty.
+      ! Argument `path` cannot be empty.
 
 ---
 
@@ -12,7 +12,7 @@
       convert_tm_to_vs_theme("a.txt")
     Condition
       Error in `read_tm_theme()`:
-      ! Argument `path` should be a "tmTheme" file not "txt".
+      ! Argument `path` should be a "tmTheme" file, not "txt".
 
 ---
 
@@ -690,5 +690,5 @@
     Code
       res <- convert_tm_to_vs_theme(path)
     Message
-      i Downloading from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test.tmTheme>
+      i Downloading from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test.tmTheme>.
 

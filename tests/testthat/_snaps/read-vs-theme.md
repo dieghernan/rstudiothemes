@@ -4,7 +4,7 @@
       read_vs_theme()
     Condition
       Error in `read_vs_theme()`:
-      ! Argument `path` can't be empty.
+      ! Argument `path` cannot be empty.
 
 ---
 
@@ -12,7 +12,7 @@
       read_vs_theme("a.txt")
     Condition
       Error in `read_vs_theme()`:
-      ! Argument `path` should be a "json" file not "txt".
+      ! Argument `path` should be a "json" file, not "txt".
 
 ---
 
@@ -27,5 +27,5 @@
     Code
       res <- read_vs_theme(path)
     Message
-      i Downloading from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test-color-theme.json>
+      i Downloading from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test-color-theme.json>.
 

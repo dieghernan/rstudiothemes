@@ -1,7 +1,7 @@
 ---
-title: "Mapping"
-subtitle: Map of elements between theme specifications
-description: Mapping between theme elements
+title: "Theme mapping"
+subtitle: Map elements between theme specifications
+description: Map elements between theme specifications
 tbl-cap-location: bottom
 knitr:
   opts_chunk:
@@ -19,7 +19,7 @@ Sources:
 - **TextMate** and **RStudio**:
   <https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html>
 
-When multiple many-to-one relationships exist, priority determines which
+When multiple many-to-one relationships exist, priority determines the
 mapping applies.
 
 ::: {#tbl-map}

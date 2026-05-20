@@ -46,8 +46,8 @@ convert_tm_to_vs_theme <- function(
 
     if (is.null(orig_aut)) {
       cli::cli_alert_warning(paste0(
-        "tmTheme theme {.str {name}} does not have author, ",
-        "use the {.arg author} argument."
+        "tmTheme theme {.str {name}} does not have an author. ",
+        "Use the {.arg author} argument."
       ))
       author <- "rstudiothemes R package"
       cli::cli_alert_info("Using {.code author = {.str {author}}}.")
@@ -83,8 +83,7 @@ convert_tm_to_vs_theme <- function(
   accent <- get_table_value(theme_db, "caret", "foreground")
   init <- additional_cols(bg, fg, comment, selection, accent)
 
-  # Add the color mapping.
-  # Based on
+  # Add the color mapping, based on
   # https://github.com/microsoft/vscode-generator-code/blob/main/generators/ ...
   # /app/generate-colortheme.js
 
@@ -131,8 +130,7 @@ convert_tm_to_vs_theme <- function(
   if (nrow(tokencols) > 1) {
     tokencols$index <- seq_len(nrow(tokencols))
 
-    # Split and group items with the same variables by section.
-    # Group by name and arrange.
+    # Split items with the same variables by section, then group by name.
     tokencols[is.na(tokencols)] <- "MISSING_VALUE"
     splitted <- split(
       tokencols,
@@ -167,9 +165,8 @@ convert_tm_to_vs_theme <- function(
 
     tok_g[tok_g == "MISSING_VALUE"] <- NA
 
-    # Build the token list.
     tok <- list()
-    # Create the list of tokens.
+    # Build the token list.
     tok[[1]] <- list(settings = list(foreground = col_l$editor.foreground))
 
     ntok <- seq_len(nrow(tok_g))

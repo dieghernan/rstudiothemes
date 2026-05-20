@@ -14,7 +14,8 @@
 #'   Studio Code theme (`.json` format).
 #' @param apply Logical. Apply the theme with [rstudioapi::applyTheme()].
 #' @param use_italics Logical. Whether to use italics in the resulting theme.
-#'   By default `TRUE`. However, some themes may look better without italics.
+#'   The default is `TRUE`, although some themes may look better without
+#'   italics.
 #'
 #' @inheritParams rstudioapi::addTheme
 #' @inheritParams sass::sass_options
@@ -23,7 +24,7 @@
 #' @return
 #' This function is called for its side effects. It writes a new
 #' `.rstheme` file to `outfile` and returns the path. If `force` or `apply`
-#' are `TRUE`, it will install and apply the theme to your RStudio IDE.
+#' are `TRUE`, it installs and applies the theme to your RStudio IDE.
 #'
 #' @details
 #' RStudio supports custom editor themes in two formats: `.tmTheme` and
@@ -61,7 +62,7 @@
 #'   # Apply the theme for 10 seconds to demonstrate the effect.
 #'   current_theme <- rstudioapi::getThemeInfo()$editor
 #'
-#'   # Current theme name:
+#'   # Current theme name.
 #'   current_theme
 #'   new_rs_theme <- convert_to_rstudio_theme(vstheme,
 #'     name = "A testing theme",
@@ -82,20 +83,20 @@ convert_to_rstudio_theme <- function(
   force = FALSE,
   apply = FALSE
 ) {
-  # Only works in RStudio.
+  # Require RStudio.
   if (!on_rstudio()) {
     gui <- detect_gui() # nolint
     cli::cli_alert_danger(paste0(
       "{.fn rstudiothemes::convert_to_rstudio_theme} only works in RStudio, ",
       "not in {gui}."
     ))
-    cli::cli_alert("Bye")
+    cli::cli_alert("Bye.")
     return(NULL)
   }
 
   # Validate inputs.
   if (missing(path)) {
-    cli::cli_abort("Argument {.arg path} can't be empty.")
+    cli::cli_abort("Argument {.arg path} cannot be empty.")
   }
 
   ext <- tools::file_ext(path)
@@ -104,7 +105,7 @@ convert_to_rstudio_theme <- function(
   if (!ext %in% valid_ext) {
     cli::cli_abort(paste0(
       "Argument {.arg path} should be a {.or {.str {valid_ext}}} file",
-      " not {.str {ext}}."
+      ", not {.str {ext}}."
     ))
   }
 
@@ -115,7 +116,7 @@ convert_to_rstudio_theme <- function(
     # Download only tmTheme files here because Visual Studio Code conversion
     # happens implicitly in convert_vs_to_tm_theme().
     tmp_file <- tempfile(fileext = ".tmTheme")
-    cli::cli_alert_info("Downloading from {.url {path}}")
+    cli::cli_alert_info("Downloading from {.url {path}}.")
 
     download.file(path, tmp_file, mode = "wb", quiet = TRUE)
 
@@ -314,7 +315,7 @@ convert_to_rstudio_theme <- function(
 
   # Install the theme.
   if (any(apply, force)) {
-    cli::cli_alert_info("Installing rstheme {.str {theme_name}}.")
+    cli::cli_alert_info("Installing RStudio theme {.str {theme_name}}.")
 
     capture_log <- tryCatch(
       rstudioapi::addTheme(outfile, force = force),
@@ -333,7 +334,7 @@ convert_to_rstudio_theme <- function(
       cli::cli_alert_success("Theme {.arg {capture_log}} installed.")
     }
     if (apply) {
-      cli::cli_alert_info("Applying {.arg {theme_name}}...")
+      cli::cli_alert_info("Applying {.arg {theme_name}}.")
       rstudioapi::applyTheme(theme_name)
     }
   }

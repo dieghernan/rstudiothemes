@@ -1,7 +1,7 @@
 ---
 title: "Showcase"
 subtitle: Discover our RStudio themes
-description: A preview of our built-in themes
+description: Preview the built-in themes
 lightbox:
   match: auto
   desc-position: bottom
@@ -39,7 +39,7 @@ knitr:
     comment: '#>'
 ---
 
-This article showcases the themes bundled with **rstudiothemes**.
+This article previews the themes bundled with **rstudiothemes**.
 
 You can install them with:
 
@@ -58,9 +58,9 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 **Tools \> Global Options \> Appearance \> Add**
 
 ::: {#fig-ui}
-![](rstudiogui.png){.nolightbox fig-alt="RStudio IDE, Add Theme UI" width="80%"}
+![](rstudiogui.png){.nolightbox fig-alt="RStudio IDE Add Theme UI" width="80%"}
 
-RStudio IDE, Add Theme UI
+RStudio IDE Add Theme UI
 :::
 
 ## Lightbox gallery
@@ -115,8 +115,8 @@ for (i in seq_along(themes)) {
 <div class="callout-body-container callout-body">
 ```
 
-Previews may differ from the actual display on your device. The screenshots
-were taken under the following conditions:
+Previews may differ from the display on your device. The screenshots were taken
+under the following conditions:
 
 **RStudio version**
 

@@ -1,7 +1,20 @@
-# Forzar que todos los archivos de texto se normalicen a LF al hacer commit
+# Force all text files to be normalized to LF on commit.
 * text=auto eol=lf
 
-# (Opcional) Asegurar que archivos binarios no se toquen
-*.jpg binary
-*.png binary
+# Keep binary assets untouched by Git line-ending normalization.
+*.7z binary
+*.bmp binary
 *.gif binary
+*.gz binary
+*.ico binary
+*.jpeg binary
+*.jpg binary
+*.pdf binary
+*.png binary
+*.rda binary
+*.rds binary
+*.RData binary
+*.tif binary
+*.tiff binary
+*.webp binary
+*.zip binary

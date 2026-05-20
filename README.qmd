@@ -35,9 +35,9 @@ Convert **Visual Studio Code**, **Positron** and **TextMate** themes into custom
 
 This package provides tools to convert **Visual Studio Code**, **Positron** and
 **TextMate** theme files (`.json` and `.tmTheme` formats) into
-**RStudio**-compatible `.rstheme` files. **RStudio** has supported custom themes
-in `.rstheme` format since RStudio 1.2 (see [theme creation
-documentation](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html)).
+**RStudio**-compatible `.rstheme` files. **RStudio** has supported custom
+themes in `.rstheme` format since RStudio 1.2. See the [theme creation
+documentation](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html).
 
 ## Features
 
@@ -60,14 +60,14 @@ This package includes ports of several popular **Visual Studio Code** and
 rstudiothemes::install_rstudiothemes()
 
 #> ✔ Installed 36 themes
-#> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes
-#> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes
+#> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes.
+#> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes.
 
 rstudioapi::applyTheme("Winter is Coming Dark Blue")
 ```
 
 ::: text-center
-![](man/figures/winteriscoming.png){alt="Screenshot of theme Winter is Coming Dark Blue"}
+![](man/figures/winteriscoming.png){alt="Winter is Coming Dark Blue theme"}
 :::
 
 Available themes include popular choices such as Tokyo Night, Night Owl, Winter
@@ -121,10 +121,10 @@ install.packages(
 ```
 :::
 
-## Try our Shiny app
+## Try the Shiny app
 
-We also provide a **Shiny** app with many **rstudiothemes** features, so you can
-convert themes online:
+The online **Shiny** app includes many **rstudiothemes** features, so you can
+convert themes in a browser:
 
 <https://dieghernan-themeconverter.share.connect.posit.cloud/>
 
@@ -133,8 +133,8 @@ convert themes online:
 You can convert any **Visual Studio Code**, **Positron** or **TextMate** theme
 to **RStudio** format. Here is how:
 
-1.  Use a **Visual Studio Code**, **Positron** or **TextMate** theme file, or a
-    URL to an online theme.
+1.  Start with a **Visual Studio Code**, **Positron** or **TextMate** theme
+    file, or a URL to an online theme.
 2.  Use the `convert_to_rstudio_theme()` function to convert and install it:
 
 ```{r}
@@ -149,13 +149,14 @@ Alternatively, in **RStudio**, go to **Tools \> Global Options \> Appearance \>
 Add** and select the installed theme.
 
 ::: text-center
-![](man/figures/rstudiogui.png){alt="RStudio IDE, Add Theme UI" width="80%"}
+![](man/figures/rstudiogui.png){alt="RStudio IDE Add Theme UI" width="80%"}
 :::
 
 ### Bidirectional theme conversion
 
 The package also includes `convert_vs_to_tm_theme()` and
-`convert_tm_to_vs_theme()`, which convert themes in both directions.
+`convert_tm_to_vs_theme()` for conversion between **Visual Studio Code**,
+**Positron** and **TextMate** formats.
 
 ## Creating themes from scratch
 

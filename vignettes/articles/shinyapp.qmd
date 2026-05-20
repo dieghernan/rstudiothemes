@@ -1,13 +1,13 @@
 ---
 title: "Shiny app"
-description: A Shiny app for converting themes online
+description: Convert themes online with a Shiny app
 knitr:
   opts_chunk:
     collapse: true
     comment: '#>'
 ---
 
-Online: <https://dieghernan-themeconverter.share.connect.posit.cloud/>
+Use the online app: <https://dieghernan-themeconverter.share.connect.posit.cloud/>.
 
 ```{=html}
 <style>

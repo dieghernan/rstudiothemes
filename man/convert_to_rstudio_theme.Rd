@@ -26,7 +26,8 @@ a temporary file (\code{\link[=tempfile]{tempfile()}}).}
 the theme in \code{path} will be used.}
 
 \item{use_italics}{Logical. Whether to use italics in the resulting theme.
-By default \code{TRUE}. However, some themes may look better without italics.}
+The default is \code{TRUE}, although some themes may look better without
+italics.}
 
 \item{output_style}{Bracketing and formatting style of the CSS output.
 Possible styles: \code{"nested"}, \code{"expanded"}, \code{"compact"}, and
@@ -40,7 +41,7 @@ with the same name.\cr Default: \code{FALSE}.}
 \value{
 This function is called for its side effects. It writes a new
 \code{.rstheme} file to \code{outfile} and returns the path. If \code{force} or \code{apply}
-are \code{TRUE}, it will install and apply the theme to your RStudio IDE.
+are \code{TRUE}, it installs and applies the theme to your RStudio IDE.
 }
 \description{
 Convert a \code{.tmTheme} or \code{.json} file that defines a TextMate or Visual
@@ -83,7 +84,7 @@ if (on_rstudio() && interactive()) {
   # Apply the theme for 10 seconds to demonstrate the effect.
   current_theme <- rstudioapi::getThemeInfo()$editor
 
-  # Current theme name:
+  # Current theme name.
   current_theme
   new_rs_theme <- convert_to_rstudio_theme(vstheme,
     name = "A testing theme",

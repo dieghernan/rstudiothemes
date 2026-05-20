@@ -8,7 +8,7 @@
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-Create and install custom 'RStudio' editor themes derived from 'Visual Studio Code', 'Positron' and 'TextMate' themes. Provides functions to convert between 'TextMate' and 'Visual Studio Code' or 'Positron' themes, and includes ports of several popular 'Visual Studio Code' themes.
+Create and install custom 'RStudio' editor themes from 'Visual Studio Code', 'Positron' and 'TextMate' themes. Convert themes between 'TextMate' and 'Visual Studio Code' or 'Positron' formats, and install bundled ports of popular 'Visual Studio Code' and 'Positron' themes.
 }
 \seealso{
 Useful links:
