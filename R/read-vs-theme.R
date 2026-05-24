@@ -3,14 +3,15 @@
 #' @description
 #' Read a `.json` file representing a Visual Studio Code or Positron theme.
 #'
-#' @encoding UTF-8
-#' @family functions for reading themes
-#' @inherit read_tm_theme return
-#' @export
-#' @rdname read_vs_theme
-#'
 #' @param path Path or URL to a Visual Studio Code or Positron theme, in `.json`
 #'   format.
+#'
+#' @inherit read_tm_theme return
+#'
+#' @family functions for reading themes
+#' @encoding UTF-8
+#' @rdname read_vs_theme
+#' @export
 #'
 #' @examples
 #' vstheme <- system.file("ext/test-color-theme.json",
@@ -21,28 +22,17 @@
 read_vs_theme <- function(path) {
   # Validate inputs.
   if (missing(path)) {
-    cli::cli_abort("Argument {.arg path} cannot be empty.")
+    cli::cli_abort("The {.arg path} argument is required.")
   }
 
   if (tools::file_ext(path) != "json") {
     cli::cli_abort(paste0(
-      "Argument {.arg path} should be a {.str json} file",
+      "The {.arg path} argument must be a {.str json} file",
       ", not {.str {tools::file_ext(path)}}."
     ))
   }
 
-  # Check whether the file is online.
-  if (grepl("^http", path)) {
-    local_file <- tempfile(fileext = ".json")
-    cli::cli_alert_info("Downloading from {.url {path}}.")
-    download.file(path, local_file, quiet = TRUE, mode = "wb")
-  } else {
-    local_file <- path
-  }
-
-  if (!file.exists(local_file)) {
-    cli::cli_abort("File {.path {local_file}} does not exist.")
-  }
+  local_file <- local_theme_file(path, "json")
 
   # Read and prepare the Visual Studio Code or Positron theme.
   vs <- safe_read_json(local_file)
@@ -50,16 +40,7 @@ read_vs_theme <- function(path) {
   vs <- rapply(vs, col2hex, how = "list")
 
   # Remove trailing and repeated whitespace.
-  vs <- rapply(
-    vs,
-    function(x) {
-      x <- gsub("  ", " ", x, fixed = TRUE)
-      x <- gsub("  ", " ", x, fixed = TRUE)
-
-      trimws(x)
-    },
-    how = "list"
-  )
+  vs <- rapply(vs, normalize_theme_text, how = "list")
 
   # Extract high-level inputs.
   name <- paste0(unlist(vs$name)[1], collapse = ", ")
@@ -207,13 +188,14 @@ read_vs_theme <- function(path) {
   final_df[!undef, ]
 }
 
-#' @rdname read_vs_theme
-#' @export
 #' @description
 #' `read_positron_theme()` is an alias of `read_vs_theme()`.
+#'
+#' @rdname read_vs_theme
+#' @export
 read_positron_theme <- read_vs_theme
 
-#' Read JSON after removing inline comments and extra trailing commas
+#' Read JSON after removing inline comments and extra trailing commas.
 #'
 #' @noRd
 safe_read_json <- function(local_file) {
@@ -221,13 +203,13 @@ safe_read_json <- function(local_file) {
 
   # Flatten and clean the JSON lines.
   lns <- trimws(lns[lns != ""])
-  # Delete the schema key.
+  # Remove the schema key.
   lns <- lns[!grepl("$schema", lns, fixed = TRUE)]
 
   # Split inline comments into separate lines.
   r2_split <- gsub("//", "~//", lns, fixed = TRUE)
   r2 <- trimws(unlist(strsplit(r2_split, "~", fixed = TRUE)))
-  # Remove lines starting with double slash.
+  # Remove lines that start with a double slash.
   r2 <- r2[!grepl("^//", r2)]
 
   # Remove trailing commas by collapsing the JSON.

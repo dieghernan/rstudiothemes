@@ -9,15 +9,15 @@ type: software
 license: MIT
 title: 'rstudiothemes: Create and Install Custom ''RStudio'' Themes from ''Visual
   Studio Code'', ''Positron'' and ''TextMate'' Themes'
-version: 1.1.1
+version: 1.1.1.9000
 doi: 10.32614/CRAN.package.rstudiothemes
 identifiers:
 - type: doi
   value: 10.32614/CRAN.package.rstudiothemes
-abstract: Create and install custom 'RStudio' editor themes from 'Visual Studio Code',
-  'Positron' and 'TextMate' themes. Convert themes between 'TextMate' and 'Visual
-  Studio Code' or 'Positron' formats, and install bundled ports of popular 'Visual
-  Studio Code' and 'Positron' themes.
+abstract: Create, convert and install custom 'RStudio' editor themes using 'Visual
+  Studio Code', 'Positron' and 'TextMate' themes. Convert themes between 'TextMate',
+  'Visual Studio Code' and 'Positron' formats, and install bundled ports of popular
+  'Visual Studio Code' and 'Positron' themes.
 authors:
 - family-names: Hernangómez
   given-names: Diego
@@ -34,12 +34,12 @@ preferred-citation:
     orcid: https://orcid.org/0000-0001-8457-4658
   doi: 10.32614/CRAN.package.rstudiothemes
   year: '2026'
-  version: 1.1.1
+  version: 1.1.1.9000
   url: https://dieghernan.github.io/rstudiothemes/
-  abstract: Create and install custom RStudio editor themes from Visual Studio Code,
-    Positron and TextMate themes. Convert themes between TextMate and Visual Studio
-    Code or Positron formats, and install bundled ports of popular Visual Studio Code
-    and Positron themes.
+  abstract: Create, convert and install custom RStudio editor themes using Visual
+    Studio Code, Positron and TextMate themes. Convert themes between TextMate, Visual
+    Studio Code and Positron formats, and install bundled ports of popular Visual
+    Studio Code and Positron themes.
 repository: https://CRAN.R-project.org/package=rstudiothemes
 repository-code: https://github.com/dieghernan/rstudiothemes
 url: https://dieghernan.github.io/rstudiothemes/

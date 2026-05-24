@@ -18,7 +18,6 @@ Read a \code{.tmTheme} file (XML format) representing a TextMate or Sublime Text
 theme.
 }
 \examples{
-
 the_theme <- system.file("ext/test-color-theme.json",
   package = "rstudiothemes"
 ) |>

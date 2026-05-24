@@ -23,15 +23,15 @@
 #' ```{r child="man/chunks/themes.Rmd"}
 #'
 #' ```
-#' @author Garrick Aden-Buie <https://github.com/gadenbuie>
-#' @encoding UTF-8
-#'
 #' @references
 #'   Aden-Buie G (2026). _rsthemes: Full Themes for RStudio v1.2+_. R package
 #'   version 0.5.1, commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
 #'   <https://github.com/gadenbuie/rsthemes>.
 #'
+#' @author Garrick Aden-Buie <https://github.com/gadenbuie>
+#' @encoding UTF-8
 #' @name rstudiothemes-actions
+#'
 #' @examples
 #' list_rstudiothemes(list_installed = FALSE)
 NULL
@@ -44,6 +44,7 @@ NULL
 #'   non-standard directories.
 #' @param themes Optional character vector of theme names. If provided, only
 #'   these themes will be used, and `style` will be ignored.
+#'
 #' @return
 #' `install_rstudiothemes()` and `remove_rstudiothemes()` return `NULL`
 #' invisibly.
@@ -55,13 +56,7 @@ install_rstudiothemes <- function(
   destdir = NULL
 ) {
   # Require RStudio.
-  if (!on_rstudio()) {
-    gui <- detect_gui() # nolint
-    cli::cli_alert_danger(paste0(
-      "{.fn rstudiothemes::install_rstudiothemes} only works in RStudio, ",
-      "not in {gui}."
-    ))
-    cli::cli_alert("Bye.")
+  if (!require_rstudio("install_rstudiothemes")) {
     return(NULL)
   }
 
@@ -73,7 +68,7 @@ install_rstudiothemes <- function(
 
   if (!is.null(destdir)) {
     cli::cli_alert(
-      "Installing {length(theme_files)} theme{?s} to {.file {destdir}}."
+      "Installing {length(theme_files)} theme{?s} in {.file {destdir}}."
     )
     destdir <- path.expand(destdir)
 
@@ -92,7 +87,7 @@ install_rstudiothemes <- function(
     "Use {.run rstudiothemes::list_rstudiothemes()} to list installed themes."
   )
   cli::cli_alert_info(
-    "Use {.run rstudiothemes::try_rstudiothemes()} to try all installed themes."
+    "Use {.run rstudiothemes::try_rstudiothemes()} to preview installed themes."
   )
 }
 
@@ -100,13 +95,7 @@ install_rstudiothemes <- function(
 #' @export
 remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
   # Require RStudio.
-  if (!on_rstudio()) {
-    gui <- detect_gui() # nolint
-    cli::cli_alert_danger(paste0(
-      "{.fn rstudiothemes::remove_rstudiothemes} only works in RStudio, ",
-      "not in {gui}."
-    ))
-    cli::cli_alert("Bye.")
+  if (!require_rstudio("remove_rstudiothemes")) {
     return(NULL)
   }
 
@@ -142,15 +131,8 @@ list_rstudiothemes <- function(
   }
 
   # nocov start
-
   # Require RStudio.
-  if (!on_rstudio()) {
-    gui <- detect_gui() # nolint
-    cli::cli_alert_danger(paste0(
-      "{.fn rstudiothemes::list_rstudiothemes} only works in RStudio, ",
-      "not in {gui}."
-    ))
-    cli::cli_alert("Bye.")
+  if (!require_rstudio("list_rstudiothemes")) {
     return(NULL)
   }
 
@@ -197,16 +179,15 @@ list_pkg_rstudiothemes <- function(
 
   names(allt) <- nms
 
-  # If specific themes are selected.
+  # Validate specific theme selections.
   if (!is.null(themes)) {
-    # Validate theme names.
     sel <- ensure_null(allt[intersect(themes, nms)])
 
     # Inform the user if some themes are not found.
     if (length(sel) < length(themes)) {
       cli::cli_alert_warning(paste0(
-        "Found {no({length(sel)})} theme{?s} with ",
-        "{qty(length(themes))} name{?s} {.str {themes}}."
+        "Found {no({length(sel)})} matching theme{?s} for ",
+        "{length(themes)} requested name{?s}: {.str {themes}}."
       ))
       cli::cli_alert_info(paste0(
         "Use {.run rstudiothemes::list_rstudiothemes()} to check the ",
@@ -261,17 +242,11 @@ try_rstudiothemes <- function(
   style <- match_arg_pretty(style)
 
   # Require RStudio.
-  if (!on_rstudio()) {
-    gui <- detect_gui() # nolint
-    cli::cli_alert_danger(paste0(
-      "{.fn rstudiothemes::try_rstudiothemes} only works in RStudio, ",
-      "not in {gui}."
-    ))
-    cli::cli_alert("Bye.")
+  if (!require_rstudio("try_rstudiothemes")) {
     return(NULL)
   }
 
-  # Extract themes by style (`dark`/`light`) before filtering user inputs.
+  # Extract themes by style (`dark` or `light`) before filtering user inputs.
   if (!is.null(themes)) {
     # Validate theme names.
     all_installed <- intersect(themes, list_rstudiothemes())
@@ -289,10 +264,10 @@ try_rstudiothemes <- function(
   current_theme <- rstudioapi::getThemeInfo()
 
   cli::cli_alert(c(
-    "Trying {.strong {length(try_themes)}}",
-    "{cli::qty(length(try_themes))} theme{?s} from {.pkg rstudiothemes}."
+    "Trying {.strong {length(try_themes)}} ",
+    "{cli::qty(length(try_themes))}theme{?s} from {.pkg rstudiothemes}."
   ))
-  cli::cli_alert("At the prompt, choose from:")
+  cli::cli_alert("At the prompt, choose one of:")
   cli::cli_bullets(c(
     "*" = "{.kbd n} or {.kbd {' '}} (empty) to try the {.strong next} theme.",
     "*" = "{.kbd k} to {.strong keep} that theme.",
@@ -311,7 +286,7 @@ try_rstudiothemes <- function(
       if (tolower(res) == "q") break
     }
   }
-  cli::cli_alert_success("Restoring \"{.strong {current_theme$editor}}\".")
+  cli::cli_alert_success("Restoring {.strong {current_theme$editor}}.")
   rstudioapi::applyTheme(current_theme$editor)
 
   # nocov end
@@ -320,7 +295,7 @@ try_rstudiothemes <- function(
 cli_how2install <- function() {
   cli::cli_alert_danger("No {.pkg rstudiothemes} themes are installed.")
   cli::cli_alert_info(paste0(
-    "Use {.run rstudiothemes::install_rstudiothemes()} to install",
-    " our themes."
+    "Use {.run rstudiothemes::install_rstudiothemes()} to install ",
+    "the package themes."
   ))
 }

@@ -1,3 +1,7 @@
+# rstudiothemes (development version)
+
+- Updated internal refactoring and function documentation with AI assistance to improve maintainability, consistency and readability.
+
 # rstudiothemes 1.1.1
 
 - Added package metadata comments to generated **Visual Studio Code** and **Positron** themes.

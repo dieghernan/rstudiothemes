@@ -216,7 +216,7 @@ A BibTeX entry for LaTeX users:
       doi = {10.32614/CRAN.package.rstudiothemes},
       author = {Diego Hernangómez},
       year = {2026},
-      version = {1.1.1},
+      version = {1.1.1.9000},
       url = {https://dieghernan.github.io/rstudiothemes/},
-      abstract = {Create and install custom RStudio editor themes from Visual Studio Code, Positron and TextMate themes. Convert themes between TextMate and Visual Studio Code or Positron formats, and install bundled ports of popular Visual Studio Code and Positron themes.},
+      abstract = {Create, convert and install custom RStudio editor themes using Visual Studio Code, Positron and TextMate themes. Convert themes between TextMate, Visual Studio Code and Positron formats, and install bundled ports of popular Visual Studio Code and Positron themes.},
     }

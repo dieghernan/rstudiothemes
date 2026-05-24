@@ -25,6 +25,16 @@ test_that("Check list_pkg_rstudiothemes", {
   # NULL
   expect_snapshot(nn <- list_pkg_rstudiothemes(themes = c("a", "b")))
   expect_null(nn)
+
+  expect_snapshot(nn <- list_pkg_rstudiothemes(themes = "a"))
+
+  # Check plural
+  expect_snapshot(
+    sel_single <- list_pkg_rstudiothemes(
+      style = "dark",
+      themes = c("XXX", "Selenized Light", "Selenized Dark")
+    )
+  )
 })
 
 test_that("Check list_rstudiothemes", {

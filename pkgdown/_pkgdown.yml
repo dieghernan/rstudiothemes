@@ -43,10 +43,11 @@ home:
 
 reference:
 - title: Create and convert themes
-- subtitle: RStudio themes
-  contents: convert_to_rstudio_theme
-- subtitle: Visual Studio Code, Positron and TextMate conversion
+  desc: >
+    Convert themes between RStudio, Visual Studio Code, Positron and TextMate
+    formats.
   contents:
+  - convert_to_rstudio_theme
   - convert_vs_to_tm_theme
   - convert_tm_to_vs_theme
 
@@ -57,15 +58,19 @@ reference:
   contents:
   - rstudiothemes-actions
 
-- title: Other functions
-- subtitle: Read themes
-  contents: starts_with("read")
-- subtitle: Utilities
+- title: Read themes
+  desc: >
+    Read Visual Studio Code, Positron and TextMate theme files as tabular data.
+  contents:
+  - read_tm_theme
+  - read_vs_theme
+
+- title: Helpers
   desc: >
     Helper functions available for reuse.
   contents: has_concept("helpers")
 
-- title: About the package
+- title: Package overview
   contents: rstudiothemes-package
 
 authors:
@@ -86,10 +91,10 @@ articles:
   navbar: Theme gallery
   contents:
   - articles/showcase
-- title: Online app
+- title: Online converter
   desc: >
     Convert themes online with the Shiny app.
-  navbar: Online app
+  navbar: Online converter
   contents:
   - articles/shinyapp
 

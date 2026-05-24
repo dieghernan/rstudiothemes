@@ -44,7 +44,6 @@ and write the equivalent TextMate theme (\code{.tmTheme}).
 \code{convert_positron_to_tm_theme()} is an alias of \code{convert_vs_to_tm_theme()}.
 }
 \examples{
-
 vstheme <- system.file("ext/test-simple-color-theme.json",
   package = "rstudiothemes"
 )

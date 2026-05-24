@@ -2,8 +2,10 @@
 #'
 #' Generate version 4 (pseudo-random) Universally Unique Identifiers (UUIDs).
 #'
-#' @family helpers
-#' @encoding UTF-8
+#' @details
+#' This helper function assigns a
+#' [UUID](https://www.rfc-editor.org/rfc/rfc9562.html) for identifying versions
+#' of generated themes.
 #'
 #' @param hint Optional. A character string (or object coercible with
 #'   [as.character()]) to be used as a random seed.
@@ -12,17 +14,15 @@
 #' A character string representing a valid UUID that can be validated with
 #' [uuid::UUIDvalidate()].
 #'
-#' @details
-#' This helper function assigns a
-#' [UUID](https://www.rfc-editor.org/rfc/rfc9562.html) for identifying versions
-#' of generated themes.
-#'
+#' @family helpers
 #' @source Heavily based on an unreleased version of `ids::uuid()`.
-#'
 #' @references
 #' Davis KR, Peabody B, Leach P (2024). "Universally Unique
 #' IDentifiers (UUIDs)." RFC 9562. \doi{10.17487/RFC9562},
 #' <https://www.rfc-editor.org/info/rfc9562>.
+#'
+#' @encoding UTF-8
+#' @export
 #'
 #' @examples
 #' # Random UUID.
@@ -36,8 +36,6 @@
 #' generate_uuid(hint)
 #'
 #' generate_uuid(hint)
-#'
-#' @export
 generate_uuid <- function(hint = NULL) {
   if (!is.null(hint)) {
     hint_n <- paste(rep(as.character(hint), 16), collapse = " ")
@@ -49,10 +47,10 @@ generate_uuid <- function(hint = NULL) {
   # From ids::uuid() (development version).
   bytes <- matrix(raw_n, 16, 1)
 
-  ## (a) Set the high nibble of the 7th byte equal to 4 and
+  ## (a) Set the high nibble of the 7th byte equal to 4.
   bytes[7, ] <- as.raw(0x40) | (bytes[7, ] & as.raw(0xf))
   ## (b) Set the two most significant bits of the 9th byte to 10'B,
-  ##     so the high nibble will be one of {8,9,a,b}.
+  ##     so the high nibble is one of {8,9,a,b}.
   bytes[9, ] <- as.raw(0x80) | (bytes[9, ] & as.raw(0x3f))
 
   a <- apply(bytes[1:4, , drop = FALSE], 2, paste, collapse = "")
@@ -61,6 +59,6 @@ generate_uuid <- function(hint = NULL) {
   d <- apply(bytes[9:10, , drop = FALSE], 2, paste, collapse = "")
   e <- apply(bytes[11:16, , drop = FALSE], 2, paste, collapse = "")
 
-  # Result.
+  # Return the UUID.
   paste(a, b, c, d, e, sep = "-")
 }

@@ -4,16 +4,17 @@
 #' Convert a `.tmTheme` file representing a TextMate theme and write the
 #' equivalent Visual Studio Code theme (`.json`).
 #'
-#' @encoding UTF-8
 #' @inheritParams read_tm_theme
 #' @inheritParams convert_vs_to_tm_theme
-#' @family functions for creating themes
-#' @export
-#' @rdname convert_tm_to_vs_theme
 #'
 #' @return
 #' This function is called for its side effects. It writes a new `.json`
 #' file to `outfile` and returns the path.
+#'
+#' @family functions for creating themes
+#' @encoding UTF-8
+#' @rdname convert_tm_to_vs_theme
+#' @export
 #'
 #' @examples
 #' tmtheme <- system.file("ext/test.tmTheme",
@@ -46,11 +47,11 @@ convert_tm_to_vs_theme <- function(
 
     if (is.null(orig_aut)) {
       cli::cli_alert_warning(paste0(
-        "tmTheme theme {.str {name}} does not have an author. ",
+        "TextMate theme {.str {name}} does not list an author. ",
         "Use the {.arg author} argument."
       ))
       author <- "rstudiothemes R package"
-      cli::cli_alert_info("Using {.code author = {.str {author}}}.")
+      cli::cli_alert_info("Using default {.code author = {.str {author}}}.")
     } else {
       author <- orig_aut
     }
@@ -75,130 +76,29 @@ convert_tm_to_vs_theme <- function(
     type = type
   )
 
-  # Get the initial colors.
-  comment <- get_table_scope(theme_db, "comment", "foreground")
-  fg <- get_table_value(theme_db, "foreground", "foreground")
-  bg <- get_table_value(theme_db, "background", "foreground")
-  selection <- get_table_value(theme_db, "selection", "foreground")
-  accent <- get_table_value(theme_db, "caret", "foreground")
-  init <- additional_cols(bg, fg, comment, selection, accent)
-
-  # Add the color mapping, based on
-  # https://github.com/microsoft/vscode-generator-code/blob/main/generators/ ...
-  # /app/generate-colortheme.js
-
-  mapping <- read.csv(
-    system.file("csv/mapping.csv", package = "rstudiothemes"),
-    na.strings = c("NA", "")
-  )
-
-  # Deprecate editorIndentGuide.background in favor of
-  # editorIndentGuide.background1.
-  mapping <- mapping[mapping$vscode != "editorIndentGuide.background", ]
-
-  high_level <- theme_db[theme_db$section == "colors", c("name", "foreground")]
-  names(high_level) <- c("tm", "color")
-  df <- merge(high_level, mapping, by = "tm", all = FALSE)
-
-  # Make all high-level colors available.
-  high_colors <- df[, c("vscode", "color")]
-
-  col_l <- unlist(high_colors$color)
-  names(col_l) <- unlist(high_colors$vscode)
-  col_l <- as.list(col_l)
+  # Get initial and mapped colors.
+  init <- tmtheme_default_vs_colors(theme_db)
+  col_l <- tmtheme_mapped_vs_colors(theme_db)
 
   # Add specific rules for high-contrast themes.
-
   if (hc) {
-    col_l$contrastBorder <- fg
-    col_l$editor.selectionForeground <- accent
+    col_l$contrastBorder <- get_table_value(
+      theme_db,
+      "foreground",
+      "foreground"
+    )
+    col_l$editor.selectionForeground <- get_table_value(
+      theme_db,
+      "caret",
+      "foreground"
+    )
   }
 
   # Blend and sort colors.
-  col_end <- modifyList(init, col_l)
-  col_end <- col_end[sort(names(col_end))]
+  col_end <- tmtheme_vs_colors(init, col_l)
+  tok <- tmtheme_vs_token_colors(theme_db, col_l$editor.foreground)
 
-  # Remove null values.
-  col_end <- col_end[lengths(col_end) > 0]
-
-  # Prepare token colors.
-  tokencols <- theme_db[
-    theme_db$section == "tokenColors",
-    c("name", "scope", "foreground", "background", "fontStyle")
-  ]
-
-  if (nrow(tokencols) > 1) {
-    tokencols$index <- seq_len(nrow(tokencols))
-
-    # Split items with the same variables by section, then group by name.
-    tokencols[is.na(tokencols)] <- "MISSING_VALUE"
-    splitted <- split(
-      tokencols,
-      factor(tokencols$name, levels = unique(tokencols$name))
-    )
-
-    res2 <- lapply(splitted, function(df) {
-      df <- df[order(df$index), ]
-
-      df2 <- split(
-        df,
-        list(df$name, df$foreground, df$background, df$fontStyle)
-      )
-
-      res <- lapply(df2, function(other_df) {
-        df_end <- unique(other_df[, c(
-          "name",
-          "foreground",
-          "background",
-          "fontStyle"
-        )])
-        df_end$sc <- paste0(other_df$scope, collapse = ", ")
-        df_end$minr <- paste0(other_df$index, collapse = ", ")
-        df_end
-      })
-
-      end_df <- do.call("rbind", res)
-      end_df[order(end_df$minr), ]
-    })
-
-    tok_g <- do.call("rbind", res2)
-
-    tok_g[tok_g == "MISSING_VALUE"] <- NA
-
-    tok <- list()
-    # Build the token list.
-    tok[[1]] <- list(settings = list(foreground = col_l$editor.foreground))
-
-    ntok <- seq_len(nrow(tok_g))
-
-    for (i in ntok) {
-      thiscope <- tok_g[i, ]
-      scp <- as.character(thiscope$sc)
-      scp <- trimws(unlist(strsplit(scp, ",")))
-
-      thistok <- list(name = thiscope$name, scope = scp, settings = list())
-
-      dictt <- list()
-
-      fg <- unlist(thiscope$foreground)
-      bg <- unlist(thiscope$background)
-      fnt <- unlist(thiscope$fontStyle)
-      if (!is.na(fg)) {
-        dictt <- c(dictt, list(foreground = fg))
-      }
-      if (!is.na(bg)) {
-        dictt <- c(dictt, list(background = bg))
-      }
-      if (!is.na(fnt)) {
-        dictt <- c(dictt, list(fontStyle = fnt))
-      }
-      if (length(dictt) > 0) {
-        thistok$settings <- dictt
-
-        tok[[i + 1]] <- thistok
-      }
-    }
-
+  if (!is.null(tok)) {
     vs_l <- c(thejson, list(tokenColors = tok), list(colors = col_end))
   } else {
     vs_l <- c(thejson, list(colors = col_end))
@@ -219,11 +119,11 @@ convert_tm_to_vs_theme <- function(
   outfile
 }
 
-#' @rdname convert_tm_to_vs_theme
-#' @export
 #' @description
 #' `convert_tm_to_positron_theme()` is an alias of `convert_tm_to_vs_theme()`.
 #'
+#' @rdname convert_tm_to_vs_theme
+#' @export
 convert_tm_to_positron_theme <- convert_tm_to_vs_theme
 
 get_table_value <- function(x, field, feature = "value") {
@@ -234,6 +134,127 @@ get_table_scope <- function(x, scope, feature) {
   has_scope <- x[!is.na(x$scope), ]
 
   ensure_null(has_scope[has_scope$scope == scope, ][[feature]])
+}
+
+tmtheme_default_vs_colors <- function(theme_db) {
+  comment <- get_table_scope(theme_db, "comment", "foreground")
+  fg <- get_table_value(theme_db, "foreground", "foreground")
+  bg <- get_table_value(theme_db, "background", "foreground")
+  selection <- get_table_value(theme_db, "selection", "foreground")
+  accent <- get_table_value(theme_db, "caret", "foreground")
+
+  additional_cols(bg, fg, comment, selection, accent)
+}
+
+tmtheme_mapped_vs_colors <- function(theme_db) {
+  mapping <- theme_mapping()
+
+  # Deprecated in favor of editorIndentGuide.background1.
+  mapping <- mapping[mapping$vscode != "editorIndentGuide.background", ]
+
+  high_level <- theme_db[theme_db$section == "colors", c("name", "foreground")]
+  names(high_level) <- c("tm", "color")
+  df <- merge(high_level, mapping, by = "tm", all = FALSE)
+  high_colors <- df[, c("vscode", "color")]
+
+  col_l <- unlist(high_colors$color)
+  names(col_l) <- unlist(high_colors$vscode)
+  as.list(col_l)
+}
+
+tmtheme_vs_colors <- function(default_colors, mapped_colors) {
+  colors <- modifyList(default_colors, mapped_colors)
+  colors <- colors[sort(names(colors))]
+
+  colors[lengths(colors) > 0]
+}
+
+tmtheme_vs_token_colors <- function(theme_db, foreground) {
+  tokencols <- theme_db[
+    theme_db$section == "tokenColors",
+    c("name", "scope", "foreground", "background", "fontStyle")
+  ]
+
+  if (nrow(tokencols) <= 1) {
+    return(NULL)
+  }
+
+  tokencols$index <- seq_len(nrow(tokencols))
+  tok_g <- group_tmtheme_token_colors(tokencols)
+
+  tok <- list()
+  tok[[1]] <- list(settings = list(foreground = foreground))
+
+  for (i in seq_len(nrow(tok_g))) {
+    token <- tmtheme_vs_token(tok_g[i, ])
+
+    if (!is.null(token)) {
+      tok[[i + 1]] <- token
+    }
+  }
+
+  tok
+}
+
+group_tmtheme_token_colors <- function(tokencols) {
+  tokencols[is.na(tokencols)] <- "MISSING_VALUE"
+  splitted <- split(
+    tokencols,
+    factor(tokencols$name, levels = unique(tokencols$name))
+  )
+
+  grouped <- lapply(splitted, function(df) {
+    df <- df[order(df$index), ]
+    df2 <- split(df, list(df$name, df$foreground, df$background, df$fontStyle))
+
+    by_style <- lapply(df2, function(other_df) {
+      df_end <- unique(other_df[, c(
+        "name",
+        "foreground",
+        "background",
+        "fontStyle"
+      )])
+      df_end$sc <- paste0(other_df$scope, collapse = ", ")
+      df_end$minr <- paste0(other_df$index, collapse = ", ")
+      df_end
+    })
+
+    end_df <- do.call("rbind", by_style)
+    end_df[order(end_df$minr), ]
+  })
+
+  tok_g <- do.call("rbind", grouped)
+  tok_g[tok_g == "MISSING_VALUE"] <- NA
+  tok_g
+}
+
+tmtheme_vs_token <- function(token_row) {
+  settings <- list()
+
+  fg <- unlist(token_row$foreground)
+  bg <- unlist(token_row$background)
+  fnt <- unlist(token_row$fontStyle)
+  if (!is.na(fg)) {
+    settings <- c(settings, list(foreground = fg))
+  }
+  if (!is.na(bg)) {
+    settings <- c(settings, list(background = bg))
+  }
+  if (!is.na(fnt)) {
+    settings <- c(settings, list(fontStyle = fnt))
+  }
+  if (length(settings) == 0) {
+    return(NULL)
+  }
+
+  scp <- as.character(token_row$sc)
+  scp <- trimws(unlist(strsplit(scp, ",")))
+
+  list(
+    name = token_row$name,
+    scope = scp,
+    settings = settings
+  )
 }
 
 additional_cols <- function(bg, fg, comment, selection, accent) {

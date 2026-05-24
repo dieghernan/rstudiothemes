@@ -55,7 +55,7 @@ test_that("Test error theme", {
 
   expect_error(
     res <- convert_tm_to_vs_theme(fpath),
-    regexp = '"lineHighlight" and "selection" values are'
+    regexp = 'Required setting "lineHighlight" and "selection" are missing'
   )
 })
 
