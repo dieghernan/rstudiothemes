@@ -1,6 +1,6 @@
 # Showcase
 
-Showcase of bundled themes in **rstudiothemes**.
+This article previews the themes bundled with **rstudiothemes**.
 
 You can install them with:
 
@@ -9,16 +9,16 @@ You can install them with:
 rstudiothemes::install_rstudiothemes()
 ```
 
-We also distribute all bundled themes in a single `.zip` file
+All bundled themes are also distributed in a single `.zip` file
 [dist/rstudiothemes.zip](https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip).
-Unzip and install using the [RStudio IDE
+Unzip the file and install the themes using the [**RStudio** IDE
 interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 **Tools \> Global Options \> Appearance \> Add**
 
-![RStudio IDE, Add-Theme UI](rstudiogui.png)
+![RStudio IDE Add Theme UI](rstudiogui.png)
 
-Figure 1: RStudio IDE, Add-Theme UI
+Figure 1: RStudio IDE Add Theme UI
 
 ## Lightbox gallery
 
@@ -199,8 +199,8 @@ Winter is Coming Light
 
 About the screenshots
 
-Previews may differ from the actual display on your device. These
-screenshots were taken under the following conditions:
+Previews may differ from the display on your device. The screenshots
+were taken under the following conditions:
 
 **RStudio version**
 
@@ -214,7 +214,7 @@ Fira Code: <https://fonts.google.com/specimen/Fira+Code>.
 
 ![RStudio Options for Screenshots](rstudiooptions.png)
 
-Figure 2: RStudio Options used for screenshots
+Figure 2: RStudio options used for screenshots
 
 Andromeda
 

@@ -1,6 +1,6 @@
 # Install, list, try or remove RStudio themes
 
-Adaptation of some rsthemes functions. [MIT
+Adapted from selected rsthemes functions. [MIT
 License](https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md)
 Copyright © rsthemes authors.
 
@@ -28,8 +28,7 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 
 - style:
 
-  Character. Limit themes to a specific group: `all`, `dark`, or
-  `light`.
+  Character. Limit themes to a specific group: `all`, `dark` or `light`.
 
 - themes:
 
@@ -38,7 +37,7 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 
 - destdir:
 
-  Optional directory for `.rstheme` files. By default uses
+  Optional directory for `.rstheme` files. By default, it uses
   [`rstudioapi::addTheme()`](https://rstudio.github.io/rstudioapi/reference/addTheme.html),
   but this argument allows installation to non-standard directories.
 
@@ -55,18 +54,14 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 
 ## Value
 
-- `install_rstudiothemes()` and `remove_rstudiothemes()` return `NULL`
-  invisibly.
+`install_rstudiothemes()` and `remove_rstudiothemes()` return `NULL`
+invisibly.
 
-&nbsp;
+`list_rstudiothemes()` returns a character vector of theme names.
 
-- `list_rstudiothemes()` returns a character vector of theme names.
-
-&nbsp;
-
-- `try_rstudiothemes()` has side effects of starting a widget that
-  allows users to try different themes. The widget can be exited by
-  following the prompts, which will restore the original theme.
+`try_rstudiothemes()` has side effects: it starts a widget that allows
+users to try different themes. The widget can be exited by following the
+prompts, which restores the original theme.
 
 ## Functions
 
@@ -78,7 +73,7 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 
 - `try_rstudiothemes()`: Try each rstudiothemes RStudio theme
 
-## Ported Themes
+## Ported themes
 
 rstudiothemes includes RStudio themes based on the following Visual
 Studio Code themes:
@@ -92,7 +87,7 @@ Studio Code themes:
 - Cobalt2 Theme Official by Wes Bos.
 
 - CRAN by dieghernan, based on the CRAN (R Project) website theme,
-  created with Pandoc
+  created with Pandoc.
 
 - Dracula Official by <https://draculatheme.com/>.
 

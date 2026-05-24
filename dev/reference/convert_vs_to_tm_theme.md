@@ -1,7 +1,7 @@
-# Convert a Visual Studio Code/Positron theme into a TextMate theme
+# Convert a Visual Studio Code or Positron theme into a TextMate theme
 
-Convert a `.json` file representing a Visual Studio Code/Positron theme
-and write the equivalent TextMate theme (`.tmTheme`).
+Convert a `.json` file representing a Visual Studio Code or Positron
+theme and write the equivalent TextMate theme (`.tmTheme`).
 
 `convert_positron_to_tm_theme()` is an alias of
 `convert_vs_to_tm_theme()`.
@@ -28,7 +28,8 @@ convert_positron_to_tm_theme(
 
 - path:
 
-  Path or URL to a Visual Studio Code/Positron theme, in `.json` format.
+  Path or URL to a Visual Studio Code or Positron theme, in `.json`
+  format.
 
 - outfile:
 
@@ -43,7 +44,7 @@ convert_positron_to_tm_theme(
 - author:
 
   Optional. The author of the theme. If not provided, the author from
-  `path` will be used, or a default value will be assigned.
+  `path` will be used or a default value will be assigned.
 
 ## Value
 
@@ -59,13 +60,12 @@ Other functions for creating themes:
 ## Examples
 
 ``` r
-
 vstheme <- system.file("ext/test-simple-color-theme.json",
   package = "rstudiothemes"
 )
 path <- convert_vs_to_tm_theme(vstheme)
-#> ! VSCode theme "Skeletor Syntax" does not have author, use the `author` argument.
-#> ℹ Using `author = "rstudiothemes R package"`.
+#> ! Visual Studio Code theme "Skeletor Syntax" does not list an author. Use the `author` argument.
+#> ℹ Using default `author = "rstudiothemes R package"`.
 
 readLines(path) |>
   head(50) |>
@@ -84,7 +84,7 @@ readLines(path) |>
 #>     <key>comment</key>
 #>     <string>Generated with rstudiothemes R package</string>
 #>     <key>uuid</key>
-#>     <string>65316264-3362-4031-a334-396431643737</string>
+#>     <string>65623931-3630-4063-b063-653630303437</string>
 #>     <key>settings</key>
 #>     <array>
 #>       <dict>

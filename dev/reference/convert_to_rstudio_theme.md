@@ -1,7 +1,7 @@
-# Convert a TextMate or VS Code/Positron theme to an RStudio theme
+# Convert a TextMate, Visual Studio Code or Positron theme to an RStudio theme
 
 Convert a `.tmTheme` or `.json` file that defines a TextMate or Visual
-Studio Code theme and write the equivalent RStudio theme `.rstheme`.
+Studio Code theme and write the equivalent RStudio theme (`.rstheme`).
 
 Optionally, the generated theme can be installed and applied to the
 RStudio IDE.
@@ -42,8 +42,8 @@ convert_to_rstudio_theme(
 
 - use_italics:
 
-  Logical. Whether to use italics in the resulting theme. By default
-  `TRUE`. However, some themes may look better without italics.
+  Logical. Whether to use italics in the resulting theme. The default is
+  `TRUE`, although some themes may look better without italics.
 
 - output_style:
 
@@ -65,7 +65,7 @@ convert_to_rstudio_theme(
 
 This function is called for its side effects. It writes a new `.rstheme`
 file to `outfile` and returns the path. If `force` or `apply` are
-`TRUE`, it will install and apply the theme to your RStudio IDE.
+`TRUE`, it installs and applies the theme to your RStudio IDE.
 
 ## Details
 
@@ -79,7 +79,7 @@ To switch editor themes, go to
 `Tools > Global Options > Appearance > Add` and use the Editor theme
 selector.
 
-![RStudio IDE, Add-Theme UI](figures/rstudiogui.png)
+![RStudio IDE, Add Theme UI](figures/rstudiogui.png)
 
 For more information, see
 <https://docs.posit.co/ide/user/ide/guide/ui/appearance.html>.
@@ -101,11 +101,10 @@ if (on_rstudio() && interactive()) {
     package = "rstudiothemes"
   )
 
-  # Apply the theme for 10 seconds to demonstrate the effect
-
+  # Apply the theme for 10 seconds to demonstrate the effect.
   current_theme <- rstudioapi::getThemeInfo()$editor
 
-  # Current theme name:
+  # Current theme name.
   current_theme
   new_rs_theme <- convert_to_rstudio_theme(vstheme,
     name = "A testing theme",

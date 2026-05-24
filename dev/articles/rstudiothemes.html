@@ -13,8 +13,8 @@
 <link rel="manifest" href="../site.webmanifest">
 <!-- katex math --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script><script src="../katex-auto.js"></script><script src="../lightswitch.js"></script><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/Inter-0.4.10/font.css" rel="stylesheet">
+<link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/Inter-0.4.10/font.css" rel="stylesheet">
 <link href="../deps/Inter_Tight-0.4.10/font.css" rel="stylesheet">
 <link href="../deps/Fira_Code-0.4.10/font.css" rel="stylesheet">
 <link href="../deps/Roboto-0.4.10/font.css" rel="stylesheet">
@@ -44,7 +44,7 @@
 
     <a class="navbar-brand me-2" href="../index.html"><img src="../apple-touch-icon.png" alt="rstudiothemes logo" height="34" width="34" class="d-inline-block me-1">rstudiothemes</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.1.0.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.1.1.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,13 +58,15 @@
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="../articles/mapping.html">Mapping</a></li>
+<li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Theme mapping</h6></li>
+    <li><a class="dropdown-item" href="../articles/mapping.html">Theme mapping</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Theme Gallery</h6></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Theme gallery</h6></li>
     <li><a class="dropdown-item" href="../articles/showcase.html">Showcase</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Online app</h6></li>
-    <li><a class="dropdown-item" href="../articles/shinyapp.html">Shiny App</a></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Online converter</h6></li>
+    <li><a class="dropdown-item" href="../articles/shinyapp.html">Shiny app</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -74,7 +76,7 @@
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
 </form></li>
 <li class="nav-item"><a class="external-link nav-link" href="https://github.com/dieghernan/rstudiothemes/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
-<li class="nav-item"><a class="external-link nav-link" href="https://ko-fi.com/dieghernan" aria-label="Buy me a coffee"><span class="fa fa-hand-holding-dollar"></span></a></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://ko-fi.com/dieghernan" aria-label="Support the project on Ko-fi"><span class="fa fa-hand-holding-dollar"></span></a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-lightswitch" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" aria-label="Light switch"><span class="fa fa-sun"></span></button>
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-lightswitch">
@@ -105,24 +107,24 @@
 
 
 
-    <p>The <strong>rstudiothemes</strong> package provides tools to convert <strong>Visual Studio Code</strong>, <strong>Positron</strong> and <strong>TextMate</strong> themes into RStudio’s <code>.rstheme</code> format and install them in your RStudio IDE. It also includes a set of ready-to-use themes.</p>
+    <p>The <strong>rstudiothemes</strong> package provides tools to convert <strong>Visual Studio Code</strong>, <strong>Positron</strong> and <strong>TextMate</strong> themes into <strong>RStudio</strong>’s <code>.rstheme</code> format and install them in your <strong>RStudio</strong> IDE. It also includes a set of ready-to-use themes.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dieghernan.github.io/rstudiothemes/">rstudiothemes</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <section class="level2"><h2 id="installing-built-in-themes">Installing built-in themes<a class="anchor" aria-label="anchor" href="#installing-built-in-themes"></a>
 </h2>
-<p>To install all built-in RStudio themes that come with this package:</p>
+<p>To install all built-in <strong>RStudio</strong> themes that come with this package:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/rstudiothemes-actions.html">install_rstudiothemes</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">#&gt; ✔ Installed 30 themes</span></span>
-<span><span class="co">#&gt; ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes</span></span>
-<span><span class="co">#&gt; ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes</span></span></code></pre></div>
+<span><span class="co">#&gt; ✔ Installed 36 themes</span></span>
+<span><span class="co">#&gt; ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes.</span></span>
+<span><span class="co">#&gt; ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes.</span></span></code></pre></div>
 </div>
-<p>This will add many popular themes (e.g., Tokyo Night, Nord, Winter is Coming, Dracula, etc.) to your RStudio themes directory.</p>
-<p>To see themes available now:</p>
+<p>This adds many popular themes, including Tokyo Night, Nord, Winter is Coming and Dracula, to your <strong>RStudio</strong> themes directory.</p>
+<p>To list the themes available in the package:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/rstudiothemes-actions.html">list_rstudiothemes</a></span><span class="op">(</span>list_installed <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
@@ -155,23 +157,23 @@
 <p>Pass a subset of styles (for example, <code>"dark"</code> or <code>"light"</code>) if needed.</p>
 </section><section class="level2"><h2 id="applying-a-theme">Applying a theme<a class="anchor" aria-label="anchor" href="#applying-a-theme"></a>
 </h2>
-<p>After installing themes, apply one using the RStudio API:</p>
+<p>After installing themes, apply one using the <strong>RStudio</strong> API:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">rstudioapi</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/rstudioapi/reference/applyTheme.html" class="external-link">applyTheme</a></span><span class="op">(</span><span class="st">"Winter is Coming Dark Blue"</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="fig-winter" class="quarto-float quarto-figure quarto-figure-center" alt="Screenshot of theme Winter is Coming Dark Blue">
+<div id="fig-winter" class="quarto-float quarto-figure quarto-figure-center" alt="Winter is Coming Dark Blue theme">
 <figure class="quarto-float quarto-float-fig"><div aria-describedby="fig-winter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="winteriscoming.png" alt="Screenshot of theme Winter is Coming Dark Blue">
+<img src="winteriscoming.png" alt="Winter is Coming Dark Blue theme">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-winter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 1: Screenshot of theme Winter is Coming Dark Blue
+Figure 1: Screenshot of the Winter is Coming Dark Blue theme
 </figcaption></figure>
 </div>
-<p>Alternatively, in RStudio go to <strong>Tools &gt; Global Options &gt; Appearance &gt; Add</strong> and select the installed theme.</p>
+<p>Alternatively, in <strong>RStudio</strong>, go to <strong>Tools &gt; Global Options &gt; Appearance &gt; Add</strong> and select the installed theme.</p>
 </section><section class="level2"><h2 id="converting-your-own-themes">Converting your own themes<a class="anchor" aria-label="anchor" href="#converting-your-own-themes"></a>
 </h2>
-<p>You can convert a Visual Studio Code/Positron or TextMate theme file into an RStudio theme:</p>
+<p>You can convert a <strong>Visual Studio Code</strong>, <strong>Positron</strong> or <strong>TextMate</strong> theme file into an <strong>RStudio</strong> theme:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme</a></span><span class="op">(</span></span>
@@ -180,22 +182,21 @@ Figure 1: Screenshot of theme Winter is Coming Dark Blue
 <span>  force <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 </div>
-<p>This function will convert and install the theme immediately, optionally applying it (with <code>apply = TRUE</code>).</p>
-</section><section class="level2"><h2 id="workflow-example-from-visual-studio-codepositron-theme-to-rstudio">Workflow example: From Visual Studio Code/Positron theme to RStudio<a class="anchor" aria-label="anchor" href="#workflow-example-from-visual-studio-codepositron-theme-to-rstudio"></a>
+<p>This function converts and installs the theme immediately. Set <code>apply = TRUE</code> to apply it after installation.</p>
+</section><section class="level2"><h2 id="workflow-example-from-visual-studio-code-or-positron-to-rstudio">Workflow example: From Visual Studio Code or Positron to RStudio<a class="anchor" aria-label="anchor" href="#workflow-example-from-visual-studio-code-or-positron-to-rstudio"></a>
 </h2>
-<ol type="1">
-<li>Choose a theme <code>.json</code> file from Visual Studio Code/Positron.</li>
+<ul>
+<li>Choose a theme <code>.json</code> file from <strong>Visual Studio Code</strong> or <strong>Positron</strong>.</li>
 <li>Convert and install it with <code><a href="../reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme()</a></code>.</li>
-<li>Apply it with <code><a href="https://rstudio.github.io/rstudioapi/reference/applyTheme.html" class="external-link">rstudioapi::applyTheme()</a></code> or via RStudio UI.</li>
-</ol>
-<p>This workflow lets you bring your preferred editor theme into RStudio.</p>
+<li>Apply it with <code><a href="https://rstudio.github.io/rstudioapi/reference/applyTheme.html" class="external-link">rstudioapi::applyTheme()</a></code> or the <strong>RStudio</strong> UI.</li>
+</ul>
+<p>This workflow brings your preferred editor theme into <strong>RStudio</strong>.</p>
 </section><section class="level2"><h2 id="tips-and-tricks">Tips and tricks<a class="anchor" aria-label="anchor" href="#tips-and-tricks"></a>
 </h2>
 <ul>
-<li>List installed themes with <code>list_rstudiothemes(list_installed = TRUE)</code>
-</li>
-<li>Try specific categories by filtering themes by Light/Dark style</li>
-<li>Use the Add-Theme UI in RStudio’s <strong>Global Options &gt; Appearance &gt; Add</strong> to manually add <code>.rstheme</code> files you’ve created or converted.</li>
+<li>List installed themes with <code>list_rstudiothemes(list_installed = TRUE)</code>.</li>
+<li>Filter themes by <code>"light"</code> or <code>"dark"</code> style.</li>
+<li>Use the Add Theme UI in <strong>RStudio</strong>’s <strong>Global Options &gt; Appearance &gt; Add</strong> to manually add <code>.rstheme</code> files you have created or converted.</li>
 </ul></section><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);

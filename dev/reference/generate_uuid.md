@@ -47,15 +47,14 @@ Other helpers:
 ## Examples
 
 ``` r
-# Random
+# Random UUID.
 generate_uuid()
 #> [1] "ac96cb3e-e465-4e2e-9ec3-e5c8c404fe17"
 
 generate_uuid()
 #> [1] "4e4c81bd-36aa-4d2a-84d4-2bbc2145febe"
 
-# Persistent with hint param
-
+# Persistent UUID with `hint`.
 hint <- "something as seed"
 
 generate_uuid(hint)
