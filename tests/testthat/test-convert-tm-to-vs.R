@@ -81,3 +81,26 @@ test_that("Online", {
   df_json <- read_vs_theme(res)
   expect_s3_class(df_json, "tbl_df")
 })
+
+test_that("No author, high contrast", {
+  tmout <- file.path(tempdir(), "my_test_author.json")
+  tmtheme <- system.file("ext/test-hc-dark.tmTheme", package = "rstudiothemes")
+
+  expect_true(file.exists(tmtheme))
+
+  expect_snapshot(
+    thef <- convert_tm_to_vs_theme(tmtheme, outfile = tmout)
+  )
+  expect_identical(thef, tmout)
+  ss <- read_vs_theme(tmout)
+  expect_identical(ss[ss$name == "type", ]$value, "hc-black")
+  unlink(tmout)
+  # Light
+  tmtheme <- system.file("ext/test-hc-light.tmTheme", package = "rstudiothemes")
+
+  expect_snapshot(
+    thef <- convert_tm_to_vs_theme(tmtheme, outfile = tmout)
+  )
+  ss <- read_vs_theme(tmout)
+  expect_identical(ss[ss$name == "type", ]$value, "hc-light")
+})

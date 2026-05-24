@@ -84,3 +84,11 @@ test_that("Ensure NULL", {
   expect_identical(ensure_null(c(1, 2)), c(1, 2))
   expect_identical(letters, letters)
 })
+
+test_that("on_rstudio", {
+  skip_if(on_rstudio(), "Tests for no RStudio")
+
+  expect_false(on_rstudio())
+  expect_message(s <- require_rstudio("test"), "can only run in RStudio")
+  expect_false(s)
+})

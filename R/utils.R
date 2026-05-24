@@ -158,7 +158,7 @@ theme_mapping <- function() {
 
 require_rstudio <- function(caller) {
   if (on_rstudio()) {
-    return(TRUE)
+    return(TRUE) # nocov
   }
 
   gui <- detect_gui() # nolint
