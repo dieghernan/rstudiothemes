@@ -18,7 +18,7 @@
       dark_or_light("not_a_color")
     Condition
       Error in `dark_or_light()`:
-      ! Invalid color name "not_a_color".
+      ! Color "not_a_color" is not valid.
 
 # Pretty match
 

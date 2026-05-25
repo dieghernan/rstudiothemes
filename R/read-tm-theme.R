@@ -14,7 +14,6 @@
 #' @export
 #'
 #' @examples
-#'
 #' the_theme <- system.file("ext/test-color-theme.json",
 #'   package = "rstudiothemes"
 #' ) |>
@@ -30,28 +29,17 @@
 read_tm_theme <- function(path) {
   # Validate inputs.
   if (missing(path)) {
-    cli::cli_abort("Argument {.arg path} cannot be empty.")
+    cli::cli_abort("The {.arg path} argument is required.")
   }
 
   if (tools::file_ext(path) != "tmTheme") {
     cli::cli_abort(paste0(
-      "Argument {.arg path} should be a {.str tmTheme} file",
+      "The {.arg path} argument must be a {.str tmTheme} file",
       ", not {.str {tools::file_ext(path)}}."
     ))
   }
 
-  # Check whether the file is online.
-  if (grepl("^http", path)) {
-    local_file <- tempfile(fileext = ".tmTheme")
-    cli::cli_alert_info("Downloading from {.url {path}}.")
-    download.file(path, local_file, quiet = TRUE, mode = "wb")
-  } else {
-    local_file <- path
-  }
-
-  if (!file.exists(local_file)) {
-    cli::cli_abort("File {.path {local_file}} does not exist.")
-  }
+  local_file <- local_theme_file(path, "tmTheme")
 
   tm <- xml2::read_xml(local_file)
   tm <- xml2::as_list(tm)
@@ -59,20 +47,11 @@ read_tm_theme <- function(path) {
   tm <- rapply(tm, col2hex, how = "list")
 
   # Remove trailing and repeated whitespace.
-  tm <- rapply(
-    tm,
-    function(x) {
-      x <- gsub("  ", " ", x, fixed = TRUE)
-      x <- gsub("  ", " ", x, fixed = TRUE)
-
-      trimws(x)
-    },
-    how = "list"
-  )
+  tm <- rapply(tm, normalize_theme_text, how = "list")
 
   # 1. High-level inputs -----
   specs <- tm$plist$dict
-  # Do not use the array because this is where the colors are.
+  # Skip the array because it contains color settings.
   highlev <- specs[names(specs) != "array"]
 
   # Strong assumption: the structure should be a list of consecutive
@@ -123,7 +102,7 @@ read_tm_theme <- function(path) {
     foreground = unname(sett_values)[l_set_merged]
   )
 
-  # Validate the tmTheme.
+  # Validate the TextMate theme.
   minimal_keys <- c(
     "background",
     "caret",
@@ -137,8 +116,8 @@ read_tm_theme <- function(path) {
   difs <- setdiff(minimal_keys, the_keys)
   if (length(difs) > 0) {
     cli::cli_abort(paste0(
-      "tmTheme in {.file {path}} is invalid. {.str {difs}} ",
-      "{?value is/values are} missing."
+      "TextMate theme in {.file {path}} is invalid. ",
+      "Required setting{?/s} {.str {difs}} {?is/are} missing."
     ))
   }
 
@@ -147,7 +126,7 @@ read_tm_theme <- function(path) {
   it <- seq_along(token_list)
 
   token_df <- lapply(it, function(i) {
-    # Use the same assumptions as high-level inputs.
+    # Use the same assumptions as the high-level inputs.
     this_tok <- token_list[i][[1]]
 
     tok_keys <- unlist(this_tok[names(this_tok) == "key"])

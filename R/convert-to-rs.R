@@ -10,22 +10,6 @@
 #' **Important**: This function only works in RStudio. It returns `NULL` when
 #' called from other IDEs.
 #'
-#' @param path Path or URL to a TextMate theme (`.tmTheme` format) or a Visual
-#'   Studio Code theme (`.json` format).
-#' @param apply Logical. Apply the theme with [rstudioapi::applyTheme()].
-#' @param use_italics Logical. Whether to use italics in the resulting theme.
-#'   The default is `TRUE`, although some themes may look better without
-#'   italics.
-#'
-#' @inheritParams rstudioapi::addTheme
-#' @inheritParams sass::sass_options
-#' @inheritParams convert_vs_to_tm_theme
-#'
-#' @return
-#' This function is called for its side effects. It writes a new
-#' `.rstheme` file to `outfile` and returns the path. If `force` or `apply`
-#' are `TRUE`, it installs and applies the theme to your RStudio IDE.
-#'
 #' @details
 #' RStudio supports custom editor themes in two formats: `.tmTheme` and
 #' `.rstheme`. The `.tmTheme` format originated with TextMate and has become a
@@ -39,7 +23,7 @@
 #' \if{html}{
 #'   \out{<div style="text-align: center">}
 #'
-#'    \figure{rstudiogui.png}{options: alt="RStudio IDE, Add Theme UI"
+#'    \figure{rstudiogui.png}{options: alt="RStudio IDE add theme UI"
 #'        style="max-width:80\%;"}
 #'
 #'    \out{</div>}
@@ -48,11 +32,26 @@
 #' For more information, see
 #' <https://docs.posit.co/ide/user/ide/guide/ui/appearance.html>.
 #'
+#' @param path Path or URL to a TextMate theme (`.tmTheme` format) or a Visual
+#'   Studio Code theme (`.json` format).
+#' @param use_italics Logical. Whether to use italics in the resulting theme.
+#'   The default is `TRUE`, although some themes may look better without
+#'   italics.
+#' @inheritParams rstudioapi::addTheme
+#' @inheritParams sass::sass_options
+#' @inheritParams convert_vs_to_tm_theme
+#' @param apply Logical. Apply the theme with [rstudioapi::applyTheme()].
+#'
+#' @return
+#' This function is called for its side effects. It writes a new
+#' `.rstheme` file to `outfile` and returns the path. If `force` or `apply`
+#' are `TRUE`, it installs and applies the theme to your RStudio IDE.
+#'
 #' @family functions for creating themes
 #' @encoding UTF-8
+#' @seealso [rstudioapi::addTheme()], [rstudioapi::applyTheme()]
 #' @export
 #'
-#' @seealso [rstudioapi::addTheme()], [rstudioapi::applyTheme()]
 #' @examples
 #' if (on_rstudio() && interactive()) {
 #'   vstheme <- system.file("ext/skeletor-syntax-color-theme.json",
@@ -84,19 +83,13 @@ convert_to_rstudio_theme <- function(
   apply = FALSE
 ) {
   # Require RStudio.
-  if (!on_rstudio()) {
-    gui <- detect_gui() # nolint
-    cli::cli_alert_danger(paste0(
-      "{.fn rstudiothemes::convert_to_rstudio_theme} only works in RStudio, ",
-      "not in {gui}."
-    ))
-    cli::cli_alert("Bye.")
+  if (!require_rstudio("convert_to_rstudio_theme")) {
     return(NULL)
   }
 
   # Validate inputs.
   if (missing(path)) {
-    cli::cli_abort("Argument {.arg path} cannot be empty.")
+    cli::cli_abort("The {.arg path} argument is required.")
   }
 
   ext <- tools::file_ext(path)
@@ -104,7 +97,7 @@ convert_to_rstudio_theme <- function(
 
   if (!ext %in% valid_ext) {
     cli::cli_abort(paste0(
-      "Argument {.arg path} should be a {.or {.str {valid_ext}}} file",
+      "The {.arg path} argument must be a {.or {.str {valid_ext}}} file",
       ", not {.str {ext}}."
     ))
   }
@@ -113,14 +106,9 @@ convert_to_rstudio_theme <- function(
     tm_temp <- tempfile(fileext = ".tmTheme")
     path <- convert_vs_to_tm_theme(path, tm_temp, name = name)
   } else if (grepl("^http", path)) {
-    # Download only tmTheme files here because Visual Studio Code conversion
+    # Download only TextMate files here because Visual Studio Code conversion
     # happens implicitly in convert_vs_to_tm_theme().
-    tmp_file <- tempfile(fileext = ".tmTheme")
-    cli::cli_alert_info("Downloading from {.url {path}}.")
-
-    download.file(path, tmp_file, mode = "wb", quiet = TRUE)
-
-    path <- tmp_file
+    path <- local_theme_file(path, "tmTheme")
   }
 
   tmcols <- read_tm_theme(path)
@@ -128,7 +116,7 @@ convert_to_rstudio_theme <- function(
   # Map top-level colors.
   tb_hlp_top <- dplyr::tibble(name = "caret", rstheme = ".ace_cursor")
 
-  # Adjust the ruler because tmTheme does not specify this well.
+  # Adjust the ruler because TextMate themes do not specify it well.
   # Prioritize invisibles, then guide, then gutter when they differ from
   # background.
   ruler_map <- c("invisibles", "guide", "gutter")
@@ -172,7 +160,6 @@ convert_to_rstudio_theme <- function(
 
   # Modify some scopes to adapt to the ACE editor.
   ## Convert link-like scopes to href.
-
   tmcols_scopes[
     grepl(
       "markup[\\S]*link|link[\\S]*markdown",
@@ -250,7 +237,6 @@ convert_to_rstudio_theme <- function(
   }
 
   ## Build ----
-
   # Create the initial RStudio theme compilation.
   uuid <- generate_uuid()
   tmp <- file.path(tempdir(), uuid)
@@ -331,10 +317,10 @@ convert_to_rstudio_theme <- function(
     } else if ("error" %in% attr(capture_log, "class")) {
       cli::cli_alert_danger(capture_log$message)
     } else {
-      cli::cli_alert_success("Theme {.arg {capture_log}} installed.")
+      cli::cli_alert_success("Installed theme {.arg {capture_log}}.")
     }
     if (apply) {
-      cli::cli_alert_info("Applying {.arg {theme_name}}.")
+      cli::cli_alert_info("Applying theme {.arg {theme_name}}.")
       rstudioapi::applyTheme(theme_name)
     }
   }

@@ -55,7 +55,7 @@ test_that("Test error theme", {
 
   expect_error(
     res <- convert_tm_to_vs_theme(fpath),
-    regexp = '"lineHighlight" and "selection" values are'
+    regexp = 'Required setting "lineHighlight" and "selection" are missing'
   )
 })
 
@@ -80,4 +80,49 @@ test_that("Online", {
   expect_snapshot(res <- convert_tm_to_vs_theme(path), )
   df_json <- read_vs_theme(res)
   expect_s3_class(df_json, "tbl_df")
+})
+
+test_that("No author, high contrast", {
+  tmout <- file.path(tempdir(), "my_test_author.json")
+  tmtheme <- system.file("ext/test-hc-dark.tmTheme", package = "rstudiothemes")
+
+  expect_true(file.exists(tmtheme))
+
+  expect_snapshot(
+    thef <- convert_tm_to_vs_theme(tmtheme, outfile = tmout)
+  )
+  expect_identical(thef, tmout)
+  ss <- read_vs_theme(tmout)
+  expect_identical(ss[ss$name == "type", ]$value, "hc-black")
+  unlink(tmout)
+  # Light
+  tmtheme <- system.file("ext/test-hc-light.tmTheme", package = "rstudiothemes")
+
+  expect_snapshot(
+    thef <- convert_tm_to_vs_theme(tmtheme, outfile = tmout)
+  )
+  ss <- read_vs_theme(tmout)
+  expect_identical(ss[ss$name == "type", ]$value, "hc-light")
+})
+
+test_that("TextMate token conversion handles backgrounds and empty settings", {
+  token <- data.frame(
+    name = "Token",
+    sc = "source.r, keyword",
+    foreground = NA_character_,
+    background = "#111111",
+    fontStyle = NA_character_
+  )
+
+  expect_identical(
+    tmtheme_vs_token(token)$settings,
+    list(background = "#111111")
+  )
+  expect_identical(
+    tmtheme_vs_token(token)$scope,
+    c("source.r", "keyword")
+  )
+
+  token$background <- NA_character_
+  expect_null(tmtheme_vs_token(token))
 })

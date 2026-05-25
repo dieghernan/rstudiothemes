@@ -4,7 +4,7 @@
       read_tm_theme()
     Condition
       Error in `read_tm_theme()`:
-      ! Argument `path` cannot be empty.
+      ! The `path` argument is required.
 
 ---
 
@@ -12,7 +12,7 @@
       read_tm_theme("a.txt")
     Condition
       Error in `read_tm_theme()`:
-      ! Argument `path` should be a "tmTheme" file, not "txt".
+      ! The `path` argument must be a "tmTheme" file, not "txt".
 
 ---
 
@@ -20,15 +20,15 @@
       read_tm_theme("a.json")
     Condition
       Error in `read_tm_theme()`:
-      ! Argument `path` should be a "tmTheme" file, not "json".
+      ! The `path` argument must be a "tmTheme" file, not "json".
 
 # Test simple theme
 
     Code
       fpath <- convert_vs_to_tm_theme(vstheme)
     Message
-      ! Visual Studio Code theme "Skeletor Syntax" does not have an author. Use the `author` argument.
-      i Using `author = "rstudiothemes R package"`.
+      ! Visual Studio Code theme "Skeletor Syntax" does not list an author. Use the `author` argument.
+      i Using default `author = "rstudiothemes R package"`.
 
 # Test minimal theme
 
@@ -51,5 +51,5 @@
     Code
       res <- read_tm_theme(path)
     Message
-      i Downloading from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test.tmTheme>.
+      i Downloading theme from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test.tmTheme>.
 

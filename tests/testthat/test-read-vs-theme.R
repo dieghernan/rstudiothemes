@@ -42,12 +42,28 @@ test_that("Online", {
 })
 
 test_that("Corner case", {
-  skip_on_cran()
-
   jelly <- system.file("ext/jellyfish.json", package = "rstudiothemes")
 
   expect_silent(df <- read_vs_theme(jelly))
   expect_s3_class(df, "tbl_df")
 
   expect_silent(convert_vs_to_tm_theme(jelly))
+})
+
+test_that("Empty Visual Studio Code color values are kept as missing", {
+  theme <- tempfile(fileext = ".json")
+  writeLines(
+    c(
+      "{",
+      '  "name": "Null color",',
+      '  "colors": { "editor.background": null },',
+      '  "tokenColors": []',
+      "}"
+    ),
+    theme
+  )
+
+  parsed <- read_vs_theme(theme)
+
+  expect_false("editor.background" %in% parsed$name)
 })

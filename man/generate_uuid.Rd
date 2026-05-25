@@ -38,7 +38,6 @@ hint <- "something as seed"
 generate_uuid(hint)
 
 generate_uuid(hint)
-
 }
 \references{
 Davis KR, Peabody B, Leach P (2024). "Universally Unique

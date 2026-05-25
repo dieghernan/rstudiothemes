@@ -7,7 +7,7 @@
 \alias{remove_rstudiothemes}
 \alias{list_rstudiothemes}
 \alias{try_rstudiothemes}
-\title{Install, list, try or remove RStudio themes}
+\title{Install, list, preview or remove RStudio themes}
 \usage{
 install_rstudiothemes(
   style = c("all", "dark", "light"),
@@ -32,9 +32,9 @@ these themes will be used, and \code{style} will be ignored.}
 \code{\link[rstudioapi:addTheme]{rstudioapi::addTheme()}}, but this argument allows installation to
 non-standard directories.}
 
-\item{list_installed}{Should the installed \pkg{rstudiothemes} themes be
-listed (default). If \code{FALSE}, the available themes in the
-\pkg{rstudiothemes} package are listed instead.}
+\item{list_installed}{Should the installed \CRANpkg{rstudiothemes} themes
+be listed (default). If \code{FALSE}, the available themes in the
+\CRANpkg{rstudiothemes} package are listed instead.}
 
 \item{delay}{Number of seconds to wait between themes. Set to 0 to be
 prompted to continue after each theme.}
@@ -61,17 +61,19 @@ Adapted from selected \pkg{rsthemes} functions.
 \itemize{
 \item \code{install_rstudiothemes()}: Install RStudio themes
 
-\item \code{remove_rstudiothemes()}: Remove \pkg{rstudiothemes} from RStudio
+\item \code{remove_rstudiothemes()}: Remove \CRANpkg{rstudiothemes} from
+RStudio
 
 \item \code{list_rstudiothemes()}: List installed or available themes
 
-\item \code{try_rstudiothemes()}: Try each \pkg{rstudiothemes} RStudio theme
+\item \code{try_rstudiothemes()}: Preview each \CRANpkg{rstudiothemes}
+RStudio theme
 
 }}
 \section{Ported themes}{
 
-\pkg{rstudiothemes} includes RStudio themes based on the
-following Visual Studio Code themes:
+\CRANpkg{rstudiothemes} includes RStudio themes based on the following
+Visual Studio Code themes:
 \itemize{
 \item Ayu by teabyii.
 \item Andromeda by Eliver Lara.

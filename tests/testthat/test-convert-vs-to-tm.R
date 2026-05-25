@@ -86,8 +86,6 @@ test_that("Online", {
 
 
 test_that("Unnamed", {
-  skip_on_cran()
-
   fpath <- system.file(
     "ext/test-unnamed-color-theme.json",
     package = "rstudiothemes"
@@ -96,9 +94,19 @@ test_that("Unnamed", {
   expect_snapshot(error = TRUE, res <- convert_vs_to_tm_theme(fpath))
 })
 
-test_that("Corner cases", {
-  skip_on_cran()
+test_that("Unnamed themes require an explicit name", {
+  fpath <- system.file(
+    "ext/test-unnamed-color-theme.json",
+    package = "rstudiothemes"
+  )
 
+  expect_error(
+    convert_vs_to_tm_theme(fpath),
+    regexp = "Theme name not found"
+  )
+})
+
+test_that("Corner cases", {
   # Missing components, invisibles, lineHighlight, and caret
 
   mapping <- read.csv(
@@ -124,4 +132,23 @@ test_that("Corner cases", {
   tmp_path <- tempfile("corrupt2", fileext = ".json")
   jsonlite::write_json(miss2, tmp_path)
   expect_silent(convert_vs_to_tm_theme(tmp_path))
+})
+
+test_that("TextMate scope builders skip empty settings", {
+  scope_row <- dplyr::tibble(
+    name = NA_character_,
+    scope = "source.r",
+    foreground = NA_character_,
+    background = NA_character_,
+    fontStyle = NA_character_
+  )
+
+  expect_null(tmtheme_scope_settings(scope_row))
+  expect_null(tmtheme_scope_item(scope_row))
+
+  scope_row$foreground <- "#FFFFFF"
+  item <- tmtheme_scope_item(scope_row)
+
+  expect_identical(item$dict[[1]][[1]], "name")
+  expect_identical(item$dict[[2]][[1]], "")
 })

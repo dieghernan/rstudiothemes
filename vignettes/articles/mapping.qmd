@@ -9,8 +9,8 @@ knitr:
     comment: '#>'
 ---
 
-This article summarizes the internal mapping between **Visual Studio Code**,
-**Positron**, **TextMate** and **RStudio** theme elements.
+This article summarizes how **rstudiothemes** maps theme elements between
+**Visual Studio Code**, **Positron**, **TextMate** and **RStudio**.
 
 Sources:
 
@@ -19,8 +19,8 @@ Sources:
 - **TextMate** and **RStudio**:
   <https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html>
 
-When multiple many-to-one relationships exist, priority determines the
-mapping applies.
+When several source elements map to the same target element, priority
+determines which mapping applies.
 
 ::: {#tbl-map}
 ```{r}
@@ -30,5 +30,5 @@ tb <- read.csv(system.file("csv/mapping.csv", package = "rstudiothemes"))
 knitr::kable(tb)
 ```
 
-Mapping of theme elements
+Mapping between theme elements
 :::

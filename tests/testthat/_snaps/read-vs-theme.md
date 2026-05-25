@@ -4,7 +4,7 @@
       read_vs_theme()
     Condition
       Error in `read_vs_theme()`:
-      ! Argument `path` cannot be empty.
+      ! The `path` argument is required.
 
 ---
 
@@ -12,20 +12,20 @@
       read_vs_theme("a.txt")
     Condition
       Error in `read_vs_theme()`:
-      ! Argument `path` should be a "json" file, not "txt".
+      ! The `path` argument must be a "json" file, not "txt".
 
 ---
 
     Code
       read_vs_theme("a.json")
     Condition
-      Error in `read_vs_theme()`:
-      ! File 'a.json' does not exist.
+      Error in `local_theme_file()`:
+      ! File 'a.json' was not found.
 
 # Online
 
     Code
       res <- read_vs_theme(path)
     Message
-      i Downloading from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test-color-theme.json>.
+      i Downloading theme from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test-color-theme.json>.
 

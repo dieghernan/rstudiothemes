@@ -1,5 +1,4 @@
 test_that("Check list_pkg_rstudiothemes", {
-  skip_on_cran()
   expect_silent(all <- list_pkg_rstudiothemes())
   expect_silent(lg <- list_pkg_rstudiothemes(style = "light"))
   expect_silent(dk <- list_pkg_rstudiothemes(style = "dark"))
@@ -25,11 +24,37 @@ test_that("Check list_pkg_rstudiothemes", {
   # NULL
   expect_snapshot(nn <- list_pkg_rstudiothemes(themes = c("a", "b")))
   expect_null(nn)
+
+  expect_snapshot(nn <- list_pkg_rstudiothemes(themes = "a"))
+
+  # Check plural
+  expect_snapshot(
+    sel_single <- list_pkg_rstudiothemes(
+      style = "dark",
+      themes = c("XXX", "Selenized Light", "Selenized Dark")
+    )
+  )
+})
+
+test_that("Package theme listing filters available themes", {
+  all <- list_pkg_rstudiothemes()
+  light <- list_pkg_rstudiothemes(style = "light")
+  dark <- list_pkg_rstudiothemes(style = "dark")
+
+  expect_true(length(all) > length(dark))
+  expect_true(length(dark) > length(light))
+
+  selected <- suppressMessages(list_pkg_rstudiothemes(
+    style = "light",
+    themes = c("Selenized Dark", "Selenized Light")
+  ))
+  expect_identical(c("Selenized Dark", "Selenized Light"), names(selected))
+
+  missing <- suppressMessages(list_pkg_rstudiothemes(themes = c("a", "b")))
+  expect_null(missing)
 })
 
 test_that("Check list_rstudiothemes", {
-  skip_on_cran()
-
   expect_identical(
     list_rstudiothemes(list_installed = FALSE),
     names(list_pkg_rstudiothemes())
@@ -47,9 +72,14 @@ test_that("Check list_rstudiothemes", {
 })
 
 test_that("How to install", {
-  skip_on_cran()
-
   expect_snapshot(cli_how2install())
+})
+
+test_that("Install hint emits cli messages", {
+  msg <- capture.output(cli_how2install(), type = "message")
+
+  expect_match(paste(msg, collapse = "\n"), "No .* themes are installed")
+  expect_match(paste(msg, collapse = "\n"), "install")
 })
 
 test_that("Dev testing install_themes", {

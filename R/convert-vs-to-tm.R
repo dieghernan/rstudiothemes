@@ -4,11 +4,7 @@
 #' Convert a `.json` file representing a Visual Studio Code or Positron theme
 #' and write the equivalent TextMate theme (`.tmTheme`).
 #'
-#' @encoding UTF-8
-#' @rdname convert_vs_to_tm_theme
 #' @inheritParams read_vs_theme
-#' @inheritParams convert_vs_to_tm_theme
-#'
 #' @param outfile Path where the resulting file will be written. By default
 #'   a temporary file ([tempfile()]).
 #' @param name Optional. The name of the theme. If not provided, the name of
@@ -21,11 +17,11 @@
 #' file to `outfile` and returns the path.
 #'
 #' @family functions for creating themes
-#'
+#' @encoding UTF-8
+#' @rdname convert_vs_to_tm_theme
 #' @export
 #'
 #' @examples
-#'
 #' vstheme <- system.file("ext/test-simple-color-theme.json",
 #'   package = "rstudiothemes"
 #' )
@@ -57,7 +53,7 @@ convert_vs_to_tm_theme <- function(
   if (is.null(name)) {
     name <- unlist(for_top_df[for_top_df$name == "name", ]$value)
     if (length(name) < 1) {
-      cli::cli_abort("Unnamed theme. Please use the {.arg name} argument.")
+      cli::cli_abort("Theme name not found. Use the {.arg name} argument.")
     }
   }
 
@@ -66,11 +62,11 @@ convert_vs_to_tm_theme <- function(
 
     if (length(orig_aut) < 1) {
       cli::cli_alert_warning(paste0(
-        "Visual Studio Code theme {.str {name}} does not have an author. ",
+        "Visual Studio Code theme {.str {name}} does not list an author. ",
         "Use the {.arg author} argument."
       ))
       author <- "rstudiothemes R package"
-      cli::cli_alert_info("Using {.code author = {.str {author}}}.")
+      cli::cli_alert_info("Using default {.code author = {.str {author}}}.")
     } else {
       author <- paste0(orig_aut, ", rstudiothemes R package")
     }
@@ -100,79 +96,8 @@ convert_vs_to_tm_theme <- function(
     value = c(name, author, "sRGB", semclass, comm, uuid)
   )
 
-  # Start building the list to convert to tmTheme.
-  the_theme <- list(plist = list(dict = list()))
-
-  # Add top-level metadata.
-  top_list <- NULL
-  for (i in seq_len(nrow(toplevel_df))) {
-    this <- toplevel_df[i, ]
-    tm <- as.character(this$tm)
-    val <- as.character(this$value)
-    top_list <- c(top_list, list(key = list(tm), string = list(val)))
-  }
-
-  # Create settings.
-  settings_list <- NULL
-
-  for (i in seq_len(nrow(settings_df))) {
-    this <- settings_df[i, ]
-    tm <- as.character(this$tm)
-    col <- as.character(this$color)
-    settings_list <- c(settings_list, list(key = list(tm), string = list(col)))
-  }
-
-  # Prepare the array with these settings.
-  array_list <- list(dict = list(key = list("settings"), dict = settings_list))
-
-  # Prepare token color scopes.
-  for (i in seq_len(nrow(scopes_df))) {
-    this <- as.list(scopes_df[i, ])
-    name <- unlist(this$name)
-
-    if (length(name) == 0 || is.na(name)) {
-      name <- ""
-    }
-
-    scope <- unlist(this$scope)
-
-    onl <- list(
-      dict = list(
-        key = list("name"),
-        string = list(name),
-        key = list("scope"),
-        string = list(scope),
-        key = list("settings"),
-        dict = list()
-      )
-    )
-
-    # Prepare the settings dictionary for this scope.
-    mat <- t(scopes_df[i, c("foreground", "background", "fontStyle")])
-
-    set_scope_l <- NULL
-    for (f in seq_len(nrow(mat))) {
-      val <- mat[f, ]
-      if (!is.na(val)) {
-        thisset <- list(
-          key = list(names(val)),
-          string = list(as.character(val))
-        )
-
-        set_scope_l <- c(set_scope_l, thisset)
-      }
-    }
-
-    if (!is.null(set_scope_l)) {
-      onl$dict$dict <- set_scope_l
-      array_list <- c(array_list, onl)
-    }
-  }
-
-  end <- c(top_list, list(key = list("settings"), array = array_list))
-
   # Write the final theme.
-  the_theme$plist$dict <- end
+  the_theme <- build_tmtheme_document(toplevel_df, settings_df, scopes_df)
   attr(the_theme$plist, "version") <- "1.0"
 
   the_theme <- xml2::as_xml_document(the_theme)
@@ -181,18 +106,16 @@ convert_vs_to_tm_theme <- function(
   outfile
 }
 
-#' @rdname convert_vs_to_tm_theme
-#' @export
 #' @description
 #' `convert_positron_to_tm_theme()` is an alias of `convert_vs_to_tm_theme()`.
+#'
+#' @rdname convert_vs_to_tm_theme
+#' @export
 convert_positron_to_tm_theme <- convert_vs_to_tm_theme
 
 tmtheme_settings_df <- function(vs_df) {
-  # Mapping.
-  maps <- read.csv(
-    system.file("csv/mapping.csv", package = "rstudiothemes"),
-    na.strings = c("NA", "")
-  )
+  # Map Visual Studio Code colors to TextMate settings.
+  maps <- theme_mapping()
 
   end <- dplyr::inner_join(
     maps,
@@ -215,16 +138,17 @@ tmtheme_settings_df <- function(vs_df) {
     "color"
   )]
 
-  # At minimum, require background, foreground, selection, invisibles,
-  # lineHighlight and caret. If any are missing, assign defaults.
-
-  # Check required settings.
+  # Require the settings needed to derive the remaining defaults.
   check_vals <- c("background", "foreground", "selection") %in% end$tm
 
   if (!all(check_vals)) {
     miss <- c("background", "foreground", "selection")[!check_vals] # nolint
     cli::cli_abort(
-      "Cannot convert theme. No color detected for setting{?/s} {.str {miss}}."
+      paste0(
+        "Cannot convert theme because no color was detected for ",
+        "{cli::qty(length(miss))}",
+        "setting{?/s} {.str {miss}}."
+      )
     )
   }
 
@@ -314,4 +238,83 @@ tmtheme_scopes_df <- function(vs_df) {
   )]
 
   eend
+}
+
+build_tmtheme_document <- function(toplevel_df, settings_df, scopes_df) {
+  top_list <- plist_entries(toplevel_df, "tm", "value")
+  settings_list <- plist_entries(settings_df, "tm", "color")
+  array_list <- list(dict = list(key = list("settings"), dict = settings_list))
+
+  scope_items <- lapply(seq_len(nrow(scopes_df)), function(i) {
+    tmtheme_scope_item(scopes_df[i, ])
+  })
+  scope_items <- Filter(Negate(is.null), scope_items)
+  scope_items <- unlist(scope_items, recursive = FALSE)
+
+  list(
+    plist = list(
+      dict = c(
+        top_list,
+        list(key = list("settings"), array = c(array_list, scope_items))
+      )
+    )
+  )
+}
+
+plist_entries <- function(df, key_col, value_col) {
+  entries <- lapply(seq_len(nrow(df)), function(i) {
+    plist_key_string(df[[key_col]][i], df[[value_col]][i])
+  })
+
+  unlist(entries, recursive = FALSE)
+}
+
+plist_key_string <- function(key, value) {
+  list(
+    key = list(as.character(key)),
+    string = list(as.character(value))
+  )
+}
+
+tmtheme_scope_item <- function(scope_row) {
+  scope_settings <- tmtheme_scope_settings(scope_row)
+
+  if (is.null(scope_settings)) {
+    return(NULL)
+  }
+
+  name <- as.character(scope_row$name)
+  if (length(name) == 0 || is.na(name)) {
+    name <- ""
+  }
+
+  list(
+    dict = c(
+      plist_key_string("name", name),
+      plist_key_string("scope", scope_row$scope),
+      list(key = list("settings"), dict = scope_settings)
+    )
+  )
+}
+
+tmtheme_scope_settings <- function(scope_row) {
+  settings <- unlist(
+    scope_row[c("foreground", "background", "fontStyle")],
+    use.names = TRUE
+  )
+  settings <- settings[!is.na(settings)]
+
+  if (length(settings) == 0) {
+    return(NULL)
+  }
+
+  entries <- mapply(
+    plist_key_string,
+    names(settings),
+    unname(settings),
+    SIMPLIFY = FALSE,
+    USE.NAMES = FALSE
+  )
+
+  unlist(entries, recursive = FALSE)
 }

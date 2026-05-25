@@ -22,7 +22,7 @@
           "givenName": "Garrick"
         }
       ],
-      "description": "Create and install custom 'RStudio' editor themes from 'Visual Studio Code', 'Positron' and 'TextMate' themes. Convert themes between 'TextMate' and 'Visual Studio Code' or 'Positron' formats, and install bundled ports of popular 'Visual Studio Code' and 'Positron' themes.",
+      "description": "Create, convert and install custom 'RStudio' editor themes from 'Visual Studio Code', 'Positron' and 'TextMate' themes. Convert themes between 'TextMate', 'Visual Studio Code' and 'Positron' formats, and install bundled ports of popular themes for use in 'RStudio'.",
       "license": "https://spdx.org/licenses/MIT",
       "name": "rstudiothemes: Create and Install Custom 'RStudio' Themes from 'Visual Studio\n    Code', 'Positron' and 'TextMate' Themes",
       "programmingLanguage": {
@@ -37,7 +37,7 @@
         "url": "https://cran.r-project.org"
       },
       "runtimePlatform": "R version 4.6.0 (2026-04-24 ucrt)",
-      "version": "1.1.1"
+      "version": "1.1.1.9000"
     },
     {
       "id": "https://doi.org/10.32614/CRAN.package.rstudiothemes",

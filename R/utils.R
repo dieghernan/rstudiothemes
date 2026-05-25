@@ -37,7 +37,7 @@ dark_or_light <- function(x) {
   rgb_values <- try(t(col2rgb(x)), silent = TRUE)
 
   if (inherits(rgb_values, "try-error")) {
-    cli::cli_abort("Invalid color name {.str {x}}.")
+    cli::cli_abort("Color {.str {x}} is not valid.")
   }
 
   bright <- sum(rgb_values * c(0.299, 0.587, 0.114))
@@ -140,4 +140,49 @@ ensure_null <- function(x) {
   }
 
   x_init
+}
+
+normalize_theme_text <- function(x) {
+  x <- gsub("  ", " ", x, fixed = TRUE)
+  x <- gsub("  ", " ", x, fixed = TRUE)
+
+  trimws(x)
+}
+
+theme_mapping <- function() {
+  read.csv(
+    system.file("csv/mapping.csv", package = "rstudiothemes"),
+    na.strings = c("NA", "")
+  )
+}
+
+require_rstudio <- function(caller) {
+  if (on_rstudio()) {
+    return(TRUE) # nocov
+  }
+
+  gui <- detect_gui() # nolint
+  cli::cli_alert_danger(paste0(
+    "{.fn rstudiothemes::{caller}} can only run in RStudio, ",
+    "not in {gui}."
+  ))
+  cli::cli_alert("No changes made.")
+
+  FALSE
+}
+
+local_theme_file <- function(path, fileext) {
+  if (grepl("^http", path)) {
+    local_file <- tempfile(fileext = paste0(".", fileext))
+    cli::cli_alert_info("Downloading theme from {.url {path}}.")
+    download.file(path, local_file, quiet = TRUE, mode = "wb")
+  } else {
+    local_file <- path
+  }
+
+  if (!file.exists(local_file)) {
+    cli::cli_abort("File {.path {local_file}} was not found.")
+  }
+
+  local_file
 }

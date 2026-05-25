@@ -4,7 +4,7 @@
       convert_tm_to_vs_theme()
     Condition
       Error in `read_tm_theme()`:
-      ! Argument `path` cannot be empty.
+      ! The `path` argument is required.
 
 ---
 
@@ -12,15 +12,15 @@
       convert_tm_to_vs_theme("a.txt")
     Condition
       Error in `read_tm_theme()`:
-      ! Argument `path` should be a "tmTheme" file, not "txt".
+      ! The `path` argument must be a "tmTheme" file, not "txt".
 
 ---
 
     Code
       convert_tm_to_vs_theme("a.tmTheme")
     Condition
-      Error in `read_tm_theme()`:
-      ! File 'a.tmTheme' does not exist.
+      Error in `local_theme_file()`:
+      ! File 'a.tmTheme' was not found.
 
 # Theme creation
 
@@ -690,5 +690,18 @@
     Code
       res <- convert_tm_to_vs_theme(path)
     Message
-      i Downloading from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test.tmTheme>.
+      i Downloading theme from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test.tmTheme>.
+
+# No author, high contrast
+
+    Code
+      thef <- convert_tm_to_vs_theme(tmtheme, outfile = tmout)
+    Message
+      ! TextMate theme "Overflow Dark High Contrast" does not list an author. Use the `author` argument.
+      i Using default `author = "rstudiothemes R package"`.
+
+---
+
+    Code
+      thef <- convert_tm_to_vs_theme(tmtheme, outfile = tmout)
 

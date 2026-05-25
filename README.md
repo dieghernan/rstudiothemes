@@ -26,8 +26,8 @@ into custom **RStudio** themes.
 This package provides tools to convert **Visual Studio Code**,
 **Positron** and **TextMate** theme files (`.json` and `.tmTheme`
 formats) into **RStudio**-compatible `.rstheme` files. **RStudio** has
-supported custom themes in `.rstheme` format since RStudio 1.2. See the
-[theme creation
+supported custom themes in `.rstheme` format since **RStudio** 1.2. See
+the [theme creation
 documentation](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html).
 
 ## Features
@@ -38,8 +38,8 @@ documentation](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creati
   **Positron** and **TextMate** formats.
 - Install ports of popular **Visual Studio Code** and **Positron**
   themes ready to use in **RStudio**.
-- Organize and manage custom themes in a reproducible way.
-- Integrate with **R** tooling for easier installation and testing.
+- Manage custom themes in a reproducible way.
+- Work with standard **R** tooling for installation and testing.
 
 ## Built-in themes
 
@@ -53,7 +53,7 @@ rstudiothemes::install_rstudiothemes()
 
 #> ✔ Installed 36 themes
 #> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes.
-#> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes.
+#> ℹ Use `rstudiothemes::try_rstudiothemes()` to preview installed themes.
 
 rstudioapi::applyTheme("Winter is Coming Dark Blue")
 ```
@@ -66,7 +66,7 @@ alt="Winter is Coming Dark Blue theme" />
 </div>
 
 Available themes include popular choices such as Tokyo Night, Night Owl,
-Winter is Coming, SynthWave 84, Nord and many others:
+Winter is Coming, SynthWave 84, Nord and many more:
 
 ``` r
 rstudiothemes::list_rstudiothemes(list_installed = FALSE)
@@ -136,17 +136,17 @@ install.packages(
 
 </div>
 
-## Try the Shiny app
+## Try the online converter
 
-The online **Shiny** app includes many **rstudiothemes** features, so
-you can convert themes in a browser:
+The online **Shiny** app includes many **rstudiothemes** features and
+lets you convert themes in a browser:
 
 <https://dieghernan-themeconverter.share.connect.posit.cloud/>
 
 ## Migrating an existing theme
 
 You can convert any **Visual Studio Code**, **Positron** or **TextMate**
-theme to **RStudio** format. Here is how:
+theme to **RStudio** format with this workflow:
 
 1.  Start with a **Visual Studio Code**, **Positron** or **TextMate**
     theme file, or a URL to an online theme.
@@ -167,7 +167,7 @@ Appearance \> Add** and select the installed theme.
 <div class="text-center">
 
 <img src="man/figures/rstudiogui.png" style="width:80.0%"
-alt="RStudio IDE Add Theme UI" />
+alt="RStudio IDE add theme UI" />
 
 </div>
 
@@ -182,8 +182,8 @@ Code**, **Positron** and **TextMate** formats.
 **rstudiothemes** does not provide a built-in theme editor, but you can
 create themes from scratch with these tools:
 
-- TextMate `.tmTheme`: Use <https://tmtheme-editor.linuxbox.ninja/>.
-  Also see the official **RStudio** documentation on [creating
+- TextMate `.tmTheme`: Use <https://tmtheme-editor.linuxbox.ninja/>. See
+  also the official **RStudio** documentation on [creating
   themes](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html).
 - **Visual Studio Code** `.json`: See the official **Visual Studio
   Code** documentation on [creating color
@@ -216,7 +216,7 @@ A BibTeX entry for LaTeX users:
       doi = {10.32614/CRAN.package.rstudiothemes},
       author = {Diego Hernangómez},
       year = {2026},
-      version = {1.1.1},
+      version = {1.1.1.9000},
       url = {https://dieghernan.github.io/rstudiothemes/},
-      abstract = {Create and install custom RStudio editor themes from Visual Studio Code, Positron and TextMate themes. Convert themes between TextMate and Visual Studio Code or Positron formats, and install bundled ports of popular Visual Studio Code and Positron themes.},
+      abstract = {Create, convert and install custom RStudio editor themes from Visual Studio Code, Positron and TextMate themes. Convert themes between TextMate, Visual Studio Code and Positron formats, and install bundled ports of popular themes for use in RStudio.},
     }
