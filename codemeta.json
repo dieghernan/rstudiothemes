@@ -2,7 +2,7 @@
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "rstudiothemes",
-  "description": "Create, convert and install custom 'RStudio' editor themes using 'Visual Studio Code', 'Positron' and 'TextMate' themes. Convert themes between 'TextMate', 'Visual Studio Code' and 'Positron' formats, and install bundled ports of popular 'Visual Studio Code' and 'Positron' themes.",
+  "description": "Create, convert and install custom 'RStudio' editor themes from 'Visual Studio Code', 'Positron' and 'TextMate' themes. Convert themes between 'TextMate', 'Visual Studio Code' and 'Positron' formats, and install bundled ports of popular themes for use in 'RStudio'.",
   "name": "rstudiothemes: Create and Install Custom 'RStudio' Themes from 'Visual Studio\n    Code', 'Positron' and 'TextMate' Themes",
   "relatedLink": ["https://dieghernan.github.io/rstudiothemes/", "https://CRAN.R-project.org/package=rstudiothemes"],
   "codeRepository": "https://github.com/dieghernan/rstudiothemes",
@@ -226,7 +226,7 @@
     "SystemRequirements": null
   },
   "keywords": ["r-package", "rstudio-themes", "textmate-themes", "vscode-themes", "positron-themes", "cran", "cran-r"],
-  "fileSize": "2245.712KB",
+  "fileSize": "2250.901KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",

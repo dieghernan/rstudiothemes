@@ -104,3 +104,25 @@ test_that("No author, high contrast", {
   ss <- read_vs_theme(tmout)
   expect_identical(ss[ss$name == "type", ]$value, "hc-light")
 })
+
+test_that("TextMate token conversion handles backgrounds and empty settings", {
+  token <- data.frame(
+    name = "Token",
+    sc = "source.r, keyword",
+    foreground = NA_character_,
+    background = "#111111",
+    fontStyle = NA_character_
+  )
+
+  expect_identical(
+    tmtheme_vs_token(token)$settings,
+    list(background = "#111111")
+  )
+  expect_identical(
+    tmtheme_vs_token(token)$scope,
+    c("source.r", "keyword")
+  )
+
+  token$background <- NA_character_
+  expect_null(tmtheme_vs_token(token))
+})

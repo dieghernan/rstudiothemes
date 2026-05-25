@@ -35,17 +35,17 @@ navbar:
 
 home:
   title: >
-    rstudiothemes | Create and install custom RStudio themes from Visual
-    Studio Code, Positron and TextMate themes
+    rstudiothemes | Create custom RStudio themes from Visual Studio Code,
+    Positron and TextMate themes
   description: >
-    Convert Visual Studio Code, Positron and TextMate themes into custom
-    RStudio themes.
+    Create, convert and install custom RStudio editor themes from Visual Studio
+    Code, Positron and TextMate themes.
 
 reference:
 - title: Create and convert themes
   desc: >
-    Convert themes between RStudio, Visual Studio Code, Positron and TextMate
-    formats.
+    Convert Visual Studio Code, Positron and TextMate themes to RStudio, or
+    convert themes between Visual Studio Code, Positron and TextMate formats.
   contents:
   - convert_to_rstudio_theme
   - convert_vs_to_tm_theme
@@ -67,10 +67,12 @@ reference:
 
 - title: Helpers
   desc: >
-    Helper functions available for reuse.
+    Helper functions for environment checks and generated theme identifiers.
   contents: has_concept("helpers")
 
 - title: Package overview
+  desc: >
+    Learn what the package does and where to start.
   contents: rstudiothemes-package
 
 authors:

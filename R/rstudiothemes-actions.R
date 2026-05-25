@@ -1,6 +1,6 @@
 # nocov start
 
-#' Install, list, try or remove RStudio themes
+#' Install, list, preview or remove RStudio themes
 #'
 #' @description
 #' Adapted from selected \pkg{rsthemes} functions.
@@ -17,8 +17,8 @@
 #' `NULL` when called from other IDEs.
 #'
 #' @section Ported themes:
-#' \pkg{rstudiothemes} includes RStudio themes based on the
-#' following Visual Studio Code themes:
+#' \CRANpkg{rstudiothemes} includes RStudio themes based on the following
+#' Visual Studio Code themes:
 #'
 #' ```{r child="man/chunks/themes.Rmd"}
 #'
@@ -91,7 +91,8 @@ install_rstudiothemes <- function(
   )
 }
 
-#' @describeIn rstudiothemes-actions Remove \pkg{rstudiothemes} from RStudio
+#' @describeIn rstudiothemes-actions Remove \CRANpkg{rstudiothemes} from
+#'   RStudio
 #' @export
 remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
   # Require RStudio.
@@ -114,9 +115,9 @@ remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
 # nocov end
 
 #' @describeIn rstudiothemes-actions List installed or available themes
-#' @param list_installed Should the installed \pkg{rstudiothemes} themes be
-#'   listed (default). If `FALSE`, the available themes in the
-#'   \pkg{rstudiothemes} package are listed instead.
+#' @param list_installed Should the installed \CRANpkg{rstudiothemes} themes
+#'   be listed (default). If `FALSE`, the available themes in the
+#'   \CRANpkg{rstudiothemes} package are listed instead.
 #'
 #' @return
 #' `list_rstudiothemes()` returns a character vector of theme names.
@@ -222,7 +223,8 @@ list_pkg_rstudiothemes <- function(
   allt[!dark]
 }
 
-#' @describeIn rstudiothemes-actions Try each \pkg{rstudiothemes} RStudio theme
+#' @describeIn rstudiothemes-actions Preview each \CRANpkg{rstudiothemes}
+#'   RStudio theme
 #' @param delay Number of seconds to wait between themes. Set to 0 to be
 #'   prompted to continue after each theme.
 #'

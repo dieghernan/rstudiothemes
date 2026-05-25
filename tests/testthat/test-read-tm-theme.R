@@ -69,3 +69,42 @@ test_that("Online", {
   expect_snapshot(res <- read_tm_theme(path), )
   expect_s3_class(res, "tbl_df")
 })
+
+test_that("TextMate token parser handles empty token fields", {
+  fpath <- tempfile(fileext = ".tmTheme")
+  writeLines(
+    c(
+      '<?xml version="1.0" encoding="UTF-8"?>',
+      '<plist version="1.0">',
+      "<dict>",
+      "<key>name</key><string>Empty token</string>",
+      "<key>settings</key>",
+      "<array>",
+      "<dict><key>settings</key><dict>",
+      "<key>background</key><string>#000000</string>",
+      "<key>caret</key><string>#FFFFFF</string>",
+      "<key>foreground</key><string>#FFFFFF</string>",
+      "<key>invisibles</key><string>#333333</string>",
+      "<key>lineHighlight</key><string>#111111</string>",
+      "<key>selection</key><string>#222222</string>",
+      "</dict></dict>",
+      "<dict><key>name</key><string/>",
+      "<key>scope</key><string>source.r</string></dict>",
+      "<dict><key>name</key><string>Empty setting</string>",
+      "<key>scope</key><string>keyword</string>",
+      "<key>settings</key><dict><key>foreground</key><string/></dict></dict>",
+      "</array>",
+      "</dict>",
+      "</plist>"
+    ),
+    fpath
+  )
+
+  parsed <- read_tm_theme(fpath)
+
+  expect_true("keyword" %in% parsed$scope)
+  expect_identical(
+    parsed[which(parsed$scope == "keyword"), ]$foreground,
+    "NULL"
+  )
+})

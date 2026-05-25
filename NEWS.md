@@ -1,6 +1,6 @@
 # rstudiothemes (development version)
 
-- Updated internal refactoring and function documentation with AI assistance to improve maintainability, consistency and readability.
+- Documentation has been refreshed with AI assistance to make package guidance, function references and maintenance notes clearer and more consistent.
 
 # rstudiothemes 1.1.1
 
@@ -20,7 +20,7 @@
 - Added a **Shiny** app for online theme conversion: <https://dieghernan-themeconverter.share.connect.posit.cloud/>.
 - Added `"Positron Dark"` and `"Positron Light"` by **Positron**.
 - Added `"VSCode Dark"` and `"VSCode Light"` by **Visual Studio Code**.
-- Improved JSON parsing by removing invalid trailing commas before `}` or `]`, which are common in **Visual Studio Code** themes.
+- Improved JSON parsing by removing invalid trailing commas before `}` or `]`, a common pattern in **Visual Studio Code** themes.
 - `convert_positron_to_tm_theme()` is a new **Positron** alias for `convert_vs_to_tm_theme()`.
 - `convert_tm_to_positron_theme()` is a new **Positron** alias for `convert_tm_to_vs_theme()`.
 - `read_positron_theme()` is a new **Positron** alias for `read_vs_theme()`.
