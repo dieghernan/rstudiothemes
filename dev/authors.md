@@ -26,5 +26,5 @@ Themes from Visual Studio Code, Positron and TextMate Themes*.
       year = {2026},
       version = {1.1.1.9000},
       url = {https://dieghernan.github.io/rstudiothemes/},
-      abstract = {Create, convert and install custom RStudio editor themes using Visual Studio Code, Positron and TextMate themes. Convert themes between TextMate, Visual Studio Code and Positron formats, and install bundled ports of popular Visual Studio Code and Positron themes.},
+      abstract = {Create, convert and install custom RStudio editor themes from Visual Studio Code, Positron and TextMate themes. Convert themes between TextMate, Visual Studio Code and Positron formats, and install bundled ports of popular themes for use in RStudio.},
     }

@@ -63,10 +63,10 @@
     <li><a class="dropdown-item" href="../articles/mapping.html">Theme mapping</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Theme gallery</h6></li>
-    <li><a class="dropdown-item" href="../articles/showcase.html">Showcase</a></li>
+    <li><a class="dropdown-item" href="../articles/showcase.html">Theme gallery</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Online converter</h6></li>
-    <li><a class="dropdown-item" href="../articles/shinyapp.html">Shiny app</a></li>
+    <li><a class="dropdown-item" href="../articles/shinyapp.html">Online converter</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -121,9 +121,9 @@
 <span></span>
 <span><span class="co">#&gt; ✔ Installed 36 themes</span></span>
 <span><span class="co">#&gt; ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes.</span></span>
-<span><span class="co">#&gt; ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes.</span></span></code></pre></div>
+<span><span class="co">#&gt; ℹ Use `rstudiothemes::try_rstudiothemes()` to preview installed themes.</span></span></code></pre></div>
 </div>
-<p>This adds many popular themes, including Tokyo Night, Nord, Winter is Coming and Dracula, to your <strong>RStudio</strong> themes directory.</p>
+<p>This adds popular themes such as Tokyo Night, Nord, Winter is Coming and Dracula to your <strong>RStudio</strong> themes directory.</p>
 <p>To list the themes available in the package:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="downlit sourceCode r">
@@ -149,7 +149,7 @@
 </div>
 </section><section class="level2"><h2 id="trying-themes">Trying themes<a class="anchor" aria-label="anchor" href="#trying-themes"></a>
 </h2>
-<p>You can quickly preview themes directly from R:</p>
+<p>You can quickly preview themes from R:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/rstudiothemes-actions.html">try_rstudiothemes</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
@@ -182,15 +182,15 @@ Figure 1: Screenshot of the Winter is Coming Dark Blue theme
 <span>  force <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 </div>
-<p>This function converts and installs the theme immediately. Set <code>apply = TRUE</code> to apply it after installation.</p>
-</section><section class="level2"><h2 id="workflow-example-from-visual-studio-code-or-positron-to-rstudio">Workflow example: From Visual Studio Code or Positron to RStudio<a class="anchor" aria-label="anchor" href="#workflow-example-from-visual-studio-code-or-positron-to-rstudio"></a>
+<p>This function converts and installs the theme. Set <code>apply = TRUE</code> to apply it after installation.</p>
+</section><section class="level2"><h2 id="workflow-example-from-visual-studio-code-or-positron-to-rstudio">Workflow example: from Visual Studio Code or Positron to RStudio<a class="anchor" aria-label="anchor" href="#workflow-example-from-visual-studio-code-or-positron-to-rstudio"></a>
 </h2>
 <ul>
 <li>Choose a theme <code>.json</code> file from <strong>Visual Studio Code</strong> or <strong>Positron</strong>.</li>
 <li>Convert and install it with <code><a href="../reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme()</a></code>.</li>
 <li>Apply it with <code><a href="https://rstudio.github.io/rstudioapi/reference/applyTheme.html" class="external-link">rstudioapi::applyTheme()</a></code> or the <strong>RStudio</strong> UI.</li>
 </ul>
-<p>This workflow brings your preferred editor theme into <strong>RStudio</strong>.</p>
+<p>This workflow brings your preferred editor theme to <strong>RStudio</strong>.</p>
 </section><section class="level2"><h2 id="tips-and-tricks">Tips and tricks<a class="anchor" aria-label="anchor" href="#tips-and-tricks"></a>
 </h2>
 <ul>

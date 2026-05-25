@@ -1,7 +1,8 @@
 # Theme mapping
 
-This article summarizes the internal mapping between **Visual Studio
-Code**, **Positron**, **TextMate** and **RStudio** theme elements.
+This article summarizes how **rstudiothemes** maps theme elements
+between **Visual Studio Code**, **Positron**, **TextMate** and
+**RStudio**.
 
 Sources:
 
@@ -10,8 +11,8 @@ Sources:
 - **TextMate** and **RStudio**:
   <https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html>
 
-When multiple many-to-one relationships exist, priority determines the
-mapping applies.
+When several source elements map to the same target element, priority
+determines which mapping applies.
 
 | priority | tm | vscode | rstheme |
 |---:|:---|:---|:---|
@@ -62,4 +63,4 @@ mapping applies.
 | 4 | invalid | editorBracketHighlight.unexpectedBracket.foreground |  |
 | 1 | markup.heading |  | .ace_heading |
 
-Table 1: Mapping of theme elements
+Table 1: Mapping between theme elements

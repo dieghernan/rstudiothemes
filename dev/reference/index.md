@@ -2,8 +2,9 @@
 
 ## Create and convert themes
 
-Convert themes between RStudio, Visual Studio Code, Positron and
-TextMate formats.
+Convert Visual Studio Code, Positron and TextMate themes to RStudio, or
+convert themes between Visual Studio Code, Positron and TextMate
+formats.
 
 - [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_to_rstudio_theme.md)
   : Convert a TextMate, Visual Studio Code or Positron theme to an
@@ -24,7 +25,7 @@ functions are adapted from the **rsthemes** package.
   [`remove_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-actions.md)
   [`list_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-actions.md)
   [`try_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-actions.md)
-  : Install, list, try or remove RStudio themes
+  : Install, list, preview or remove RStudio themes
 
 ## Read themes
 
@@ -39,7 +40,7 @@ data.
 
 ## Helpers
 
-Helper functions available for reuse.
+Helper functions for environment checks and generated theme identifiers.
 
 - [`generate_uuid()`](https://dieghernan.github.io/rstudiothemes/dev/reference/generate_uuid.md)
   : Generate random UUIDs
@@ -47,6 +48,8 @@ Helper functions available for reuse.
   : Check whether the session is running in RStudio
 
 ## Package overview
+
+Learn what the package does and where to start.
 
 - [`rstudiothemes`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-package.md)
   [`rstudiothemes-package`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-package.md)

@@ -20,11 +20,11 @@ install_rstudiothemes()
 
 #> ✔ Installed 36 themes
 #> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes.
-#> ℹ Use `rstudiothemes::try_rstudiothemes()` to try all installed themes.
+#> ℹ Use `rstudiothemes::try_rstudiothemes()` to preview installed themes.
 ```
 
-This adds many popular themes, including Tokyo Night, Nord, Winter is
-Coming and Dracula, to your **RStudio** themes directory.
+This adds popular themes such as Tokyo Night, Nord, Winter is Coming and
+Dracula to your **RStudio** themes directory.
 
 To list the themes available in the package:
 
@@ -53,7 +53,7 @@ list_rstudiothemes(list_installed = FALSE)
 
 ## Trying themes
 
-You can quickly preview themes directly from R:
+You can quickly preview themes from R:
 
 ``` r
 
@@ -92,10 +92,10 @@ convert_to_rstudio_theme(
 )
 ```
 
-This function converts and installs the theme immediately. Set
-`apply = TRUE` to apply it after installation.
+This function converts and installs the theme. Set `apply = TRUE` to
+apply it after installation.
 
-## Workflow example: From Visual Studio Code or Positron to RStudio
+## Workflow example: from Visual Studio Code or Positron to RStudio
 
 - Choose a theme `.json` file from **Visual Studio Code** or
   **Positron**.
@@ -105,7 +105,7 @@ This function converts and installs the theme immediately. Set
   [`rstudioapi::applyTheme()`](https://rstudio.github.io/rstudioapi/reference/applyTheme.html)
   or the **RStudio** UI.
 
-This workflow brings your preferred editor theme into **RStudio**.
+This workflow brings your preferred editor theme to **RStudio**.
 
 ## Tips and tricks
 

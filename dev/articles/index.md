@@ -14,7 +14,8 @@ TextMate and RStudio formats.
 
 Preview the built-in RStudio themes.
 
-- [Showcase](https://dieghernan.github.io/rstudiothemes/dev/articles/showcase.md):
+- [Theme
+  gallery](https://dieghernan.github.io/rstudiothemes/dev/articles/showcase.md):
 
   Preview the built-in themes
 
@@ -22,7 +23,7 @@ Preview the built-in RStudio themes.
 
 Convert themes online with the Shiny app.
 
-- [Shiny
-  app](https://dieghernan.github.io/rstudiothemes/dev/articles/shinyapp.md):
+- [Online
+  converter](https://dieghernan.github.io/rstudiothemes/dev/articles/shinyapp.md):
 
-  Convert themes online with a Shiny app
+  Convert themes online with the Shiny app

@@ -79,7 +79,7 @@ To switch editor themes, go to
 `Tools > Global Options > Appearance > Add` and use the Editor theme
 selector.
 
-![RStudio IDE, Add Theme UI](figures/rstudiogui.png)
+![RStudio IDE add theme UI](figures/rstudiogui.png)
 
 For more information, see
 <https://docs.posit.co/ide/user/ide/guide/ui/appearance.html>.

@@ -1,4 +1,4 @@
-# Install, list, try or remove RStudio themes
+# Install, list, preview or remove RStudio themes
 
 Adapted from selected rsthemes functions. [MIT
 License](https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md)
@@ -43,9 +43,11 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 
 - list_installed:
 
-  Should the installed rstudiothemes themes be listed (default). If
-  `FALSE`, the available themes in the rstudiothemes package are listed
-  instead.
+  Should the installed
+  [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
+  themes be listed (default). If `FALSE`, the available themes in the
+  [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
+  package are listed instead.
 
 - delay:
 
@@ -67,16 +69,21 @@ prompts, which restores the original theme.
 
 - `install_rstudiothemes()`: Install RStudio themes
 
-- `remove_rstudiothemes()`: Remove rstudiothemes from RStudio
+- `remove_rstudiothemes()`: Remove
+  [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes) from
+  RStudio
 
 - `list_rstudiothemes()`: List installed or available themes
 
-- `try_rstudiothemes()`: Try each rstudiothemes RStudio theme
+- `try_rstudiothemes()`: Preview each
+  [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
+  RStudio theme
 
 ## Ported themes
 
-rstudiothemes includes RStudio themes based on the following Visual
-Studio Code themes:
+[rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
+includes RStudio themes based on the following Visual Studio Code
+themes:
 
 - Ayu by teabyii.
 
