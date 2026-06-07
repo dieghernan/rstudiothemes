@@ -3,7 +3,7 @@
     Code
       on_rstudio()
     Message
-      ! Detected GUI: "Positron".
+      ! Detected GUI "Positron".
     Output
       [1] FALSE
 
@@ -19,7 +19,7 @@
     Code
       on_rstudio()
     Message
-      ! Detected GUI: "RTerm".
+      ! Detected GUI "RTerm".
     Output
       [1] FALSE
 
@@ -28,7 +28,7 @@
     Code
       on_rstudio()
     Message
-      ! Detected GUI: "Visual Studio Code".
+      ! Detected GUI "Visual Studio Code".
     Output
       [1] FALSE
 

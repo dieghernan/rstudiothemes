@@ -1,13 +1,14 @@
 #' Generate random UUIDs
 #'
+#' @description
 #' Generate version 4 (pseudo-random) Universally Unique Identifiers (UUIDs).
 #'
 #' @details
-#' This helper function generates a [UUID][uuid::UUIDvalidate()] for
-#' identifying versions of generated themes.
+#' This helper generates a [UUID][uuid::UUIDvalidate()] for identifying
+#' generated theme versions.
 #'
-#' @param hint Optional. A character string (or object coercible via
-#'   [as.character()]) to be used as a random seed.
+#' @param hint Optional character string, or object coercible with
+#'   [as.character()], to use as a random seed.
 #'
 #' @return
 #' A character string representing a valid UUID that can be validated with
@@ -43,13 +44,13 @@ generate_uuid <- function(hint = NULL) {
     raw_n <- as.raw(sample.int(256L, 16, replace = TRUE) - 1L)
   }
 
-  # From ids::uuid() (development version).
+  # Adapted from ids::uuid() (development version).
   bytes <- matrix(raw_n, 16, 1)
 
-  ## (a) Set the high nibble of the 7th byte equal to 4.
+  ## Set the high nibble of the 7th byte to 4.
   bytes[7, ] <- as.raw(0x40) | (bytes[7, ] & as.raw(0xf))
-  ## (b) Set the two most significant bits of the 9th byte to 10'B,
-  ##     so the high nibble is one of {8,9,a,b}.
+  ## Set the two most significant bits of the 9th byte to 10'B, so the high
+  ## nibble is one of {8, 9, a, b}.
   bytes[9, ] <- as.raw(0x80) | (bytes[9, ] & as.raw(0x3f))
 
   a <- apply(bytes[1:4, , drop = FALSE], 2, paste, collapse = "")

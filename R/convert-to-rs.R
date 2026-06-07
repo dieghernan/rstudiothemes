@@ -1,4 +1,4 @@
-#' Convert a TextMate, Visual Studio Code or Positron theme to an RStudio theme
+#' Convert a TextMate, Visual Studio Code or Positron theme to RStudio
 #'
 #' @description
 #' Convert a `.tmTheme` or `.json` file that defines a TextMate or Visual
@@ -11,7 +11,7 @@
 #' called from other IDEs.
 #'
 #' @details
-#' RStudio supports custom editor themes in two formats: `.tmTheme` and
+#' RStudio supports custom editor themes in two formats, `.tmTheme` and
 #' `.rstheme`. The `.tmTheme` format originated with TextMate and has become a
 #' common theme format.
 #' [This tmTheme editor](https://tmtheme-editor.linuxbox.ninja/) hosts a large
@@ -34,9 +34,8 @@
 #'
 #' @param path Path or URL to a TextMate theme (`.tmTheme` format) or a Visual
 #'   Studio Code theme (`.json` format).
-#' @param use_italics Logical. Whether to use italics in the resulting theme.
-#'   The default is `TRUE`, although some themes may look better without
-#'   italics.
+#' @param use_italics Logical. Use italics in the resulting theme. The default
+#'   is `TRUE`, although some themes may look better without italics.
 #' @inheritParams rstudioapi::addTheme
 #' @inheritParams sass::sass_options
 #' @inheritParams convert_vs_to_tm_theme
@@ -45,11 +44,11 @@
 #' @return
 #' This function is called for its side effects. It writes a new
 #' `.rstheme` file to `outfile` and returns the path. If `force` or `apply`
-#' are `TRUE`, it installs and applies the theme to your RStudio IDE.
+#' is `TRUE`, it installs the theme and applies it to your RStudio IDE.
 #'
 #' @family functions for creating themes
-#' @encoding UTF-8
 #' @seealso [rstudioapi::addTheme()], [rstudioapi::applyTheme()]
+#' @encoding UTF-8
 #' @export
 #'
 #' @examples
@@ -158,7 +157,7 @@ convert_to_rstudio_theme <- function(
 
   tmcols_scopes <- tmcols_scopes[!empty_row, ]
 
-  # Modify some scopes to adapt to the ACE editor.
+  # Modify selected scopes to adapt them to the ACE editor.
   ## Convert link-like scopes to href.
   tmcols_scopes[
     grepl(
@@ -248,7 +247,7 @@ convert_to_rstudio_theme <- function(
     force = TRUE
   )
 
-  # Read the auto-generated RStudio theme (CSS) and append new CSS rules
+  # Read the auto-generated RStudio theme CSS and append new CSS rules
   # and additional Sass variables.
   tmpfile <- list.files(tmp, full.names = TRUE)
   themelines <- readLines(tmpfile)
@@ -317,10 +316,10 @@ convert_to_rstudio_theme <- function(
     } else if ("error" %in% attr(capture_log, "class")) {
       cli::cli_alert_danger(capture_log$message)
     } else {
-      cli::cli_alert_success("Installed theme {.arg {capture_log}}.")
+      cli::cli_alert_success("Installed theme {.str {capture_log}}.")
     }
     if (apply) {
-      cli::cli_alert_info("Applying theme {.arg {theme_name}}.")
+      cli::cli_alert_info("Applying theme {.str {theme_name}}.")
       rstudioapi::applyTheme(theme_name)
     }
   }

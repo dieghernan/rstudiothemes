@@ -11,11 +11,10 @@ read_tm_theme(path)
 \item{path}{Path or URL to a TextMate theme, in \code{.tmTheme} format.}
 }
 \value{
-A \link[tibble:tbl_df]{tibble} with the data of the theme.
+A \link[tibble:tbl_df]{tibble} with the theme data.
 }
 \description{
-Read a \code{.tmTheme} file (XML format) representing a TextMate or Sublime Text
-theme.
+Read a \code{.tmTheme} XML file representing a TextMate or Sublime Text theme.
 }
 \examples{
 the_theme <- system.file("ext/test-color-theme.json",

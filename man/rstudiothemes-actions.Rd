@@ -25,7 +25,7 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 \item{style}{Theme group: \code{"all"}, \code{"dark"}, or \code{"light"}.}
 
 \item{themes}{Optional character vector of theme names. If provided, only
-these themes will be used, and \code{style} will be ignored.}
+these themes are used and \code{style} is ignored.}
 
 \item{destdir}{Optional directory for \code{.rstheme} files. By default, it uses
 \code{\link[rstudioapi:addTheme]{rstudioapi::addTheme()}}, but this argument allows installation to
@@ -46,15 +46,15 @@ invisibly.
 
 \code{try_rstudiothemes()} has side effects: it starts a widget that allows users
 to try different themes. The widget can be exited by following the prompts,
-which restores the original theme.
+which restore the original theme.
 }
 \description{
 Adapted from selected \pkg{rsthemes} functions.
 \href{https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md}{MIT License} Copyright © rsthemes authors.
 
-\strong{Important}: These functions (except
-\code{list_rstudiothemes(list_installed = FALSE)}) only work in RStudio, returning
-\code{NULL} when called from other IDEs.
+\strong{Important}: These functions only work in RStudio and return \code{NULL} when
+called from other IDEs. The exception is
+\code{list_rstudiothemes(list_installed = FALSE)}.
 }
 \section{Functions}{
 \itemize{

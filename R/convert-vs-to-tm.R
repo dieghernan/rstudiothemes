@@ -1,4 +1,4 @@
-#' Convert a Visual Studio Code or Positron theme into a TextMate theme
+#' Convert a Visual Studio Code or Positron theme to TextMate
 #'
 #' @description
 #' Convert a `.json` file representing a Visual Studio Code or Positron theme
@@ -8,8 +8,8 @@
 #' @param outfile Path where the resulting file will be written. Defaults to a
 #'   temporary file via [tempfile()].
 #' @param name Theme name. If `NULL`, uses the name from the input file.
-#' @param author Theme author. If `NULL`, attempts to extract from the input
-#'   file, otherwise defaults to "rstudiothemes R package".
+#' @param author Theme author. If `NULL`, it attempts to extract the author
+#'   from the input file, otherwise defaults to "rstudiothemes R package".
 #'
 #' @return
 #' This function is called for its side effects. It writes a `.tmTheme` file to
@@ -61,8 +61,8 @@ convert_vs_to_tm_theme <- function(
 
     if (length(orig_aut) < 1) {
       cli::cli_alert_warning(paste0(
-        "Visual Studio Code theme {.str {name}} does not list an author. ",
-        "Use the {.arg author} argument."
+        "The Visual Studio Code theme {.str {name}} does not list an ",
+        "author. Use the {.arg author} argument."
       ))
       author <- "rstudiothemes R package"
       cli::cli_alert_info("Using default {.code author = {.str {author}}}.")
@@ -127,7 +127,7 @@ tmtheme_settings_df <- function(vs_df) {
   end <- dplyr::distinct(end)
   end <- end[!is.na(end$color), ]
 
-  # Avoid duplicates.
+  # Keep the first mapped value for each TextMate color.
   end$rank <- seq_len(nrow(end))
   end <- dplyr::grouped_df(end, "tm")
   end <- dplyr::slice_head(end, n = 1)
@@ -210,7 +210,7 @@ tmtheme_scopes_df <- function(vs_df) {
     dplyr::pick(dplyr::all_of(c("name", "scope")))
   )
 
-  # Use one line per scope.
+  # Collapse equivalent scopes into one line per style group.
   prepare <- dplyr::grouped_df(
     unique_g,
     c("name", "foreground", "background", "fontStyle")

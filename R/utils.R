@@ -1,5 +1,5 @@
 # Convert color values to hex strings (#RRGGBB or #RRGGBBAA format).
-# Handles color names, RGB triples, and hex inputs; returns uppercase hex.
+# Handle color names, RGB triples and hex inputs, then return uppercase hex.
 col2hex <- function(x) {
   x <- trimws(x)
   x <- expand_hex(x)
@@ -62,7 +62,7 @@ expand_hex <- function(x) {
   x
 }
 
-#' Match an argument with a pretty error message
+#' Match an argument with a clear error message
 #'
 #' @param arg Argument to match.
 #' @param choices Allowed values for `arg`.

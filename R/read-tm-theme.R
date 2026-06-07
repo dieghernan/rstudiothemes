@@ -1,13 +1,12 @@
 #' Read and parse a TextMate theme
 #'
 #' @description
-#' Read a `.tmTheme` file (XML format) representing a TextMate or Sublime Text
-#' theme.
+#' Read a `.tmTheme` XML file representing a TextMate or Sublime Text theme.
 #'
 #' @param path Path or URL to a TextMate theme, in `.tmTheme` format.
 #'
 #' @return
-#' A [tibble][tibble::tbl_df()] with the data of the theme.
+#' A [tibble][tibble::tbl_df()] with the theme data.
 #'
 #' @family functions for reading themes
 #' @encoding UTF-8
@@ -49,12 +48,12 @@ read_tm_theme <- function(path) {
   # Remove trailing and repeated whitespace.
   tm <- rapply(tm, normalize_theme_text, how = "list")
 
-  # 1. High-level inputs -----
+  # 1. High-level inputs ----
   specs <- tm$plist$dict
   # Skip the array because it contains color settings.
   highlev <- specs[names(specs) != "array"]
 
-  # Assumption: structure is a consecutive list of <key><string> pairs
+  # Assume the structure is a consecutive list of <key><string> pairs
   # representing metadata like name, author, colorSpaceName, etc.
   hl_keys <- unlist(highlev[names(highlev) == "key"])
 

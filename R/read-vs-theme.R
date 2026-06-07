@@ -1,10 +1,10 @@
-#' Read and parse a Visual Studio Code or Positron theme from JSON format
+#' Read and parse a Visual Studio Code or Positron theme
 #'
 #' @description
 #' Read a `.json` file representing a Visual Studio Code or Positron theme.
 #'
-#' @param path Path or URL to a Visual Studio Code or Positron theme (`.json`
-#'   format).
+#' @param path Path or URL to a Visual Studio Code or Positron theme, in
+#'   `.json` format.
 #'
 #' @inherit read_tm_theme return
 #'
@@ -197,8 +197,8 @@ read_positron_theme <- read_vs_theme
 
 #' Read and clean JSON data from a theme file
 #'
-#' Helper function that reads JSON while removing inline comments and extra
-#' trailing commas, then parses and cleans the result.
+#' Read JSON after removing inline comments and extra trailing commas, then
+#' parse and clean the result.
 #'
 #' @param local_file Path to a JSON file.
 #'

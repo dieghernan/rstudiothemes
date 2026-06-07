@@ -11,8 +11,8 @@ Heavily based on an unreleased version of \code{ids::uuid()}.
 generate_uuid(hint = NULL)
 }
 \arguments{
-\item{hint}{Optional. A character string (or object coercible via
-\code{\link[=as.character]{as.character()}}) to be used as a random seed.}
+\item{hint}{Optional character string, or object coercible with
+\code{\link[=as.character]{as.character()}}, to use as a random seed.}
 }
 \value{
 A character string representing a valid UUID that can be validated with
@@ -22,8 +22,8 @@ A character string representing a valid UUID that can be validated with
 Generate version 4 (pseudo-random) Universally Unique Identifiers (UUIDs).
 }
 \details{
-This helper function generates a \link[uuid:UUIDvalidate]{UUID} for
-identifying versions of generated themes.
+This helper generates a \link[uuid:UUIDvalidate]{UUID} for identifying
+generated theme versions.
 }
 \examples{
 # Random UUID.

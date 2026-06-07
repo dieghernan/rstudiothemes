@@ -697,7 +697,7 @@
     Code
       thef <- convert_tm_to_vs_theme(tmtheme, outfile = tmout)
     Message
-      ! TextMate theme "Overflow Dark High Contrast" does not list an author. Use the `author` argument.
+      ! The TextMate theme "Overflow Dark High Contrast" does not list an author. Use the `author` argument.
       i Using default `author = "rstudiothemes R package"`.
 
 ---

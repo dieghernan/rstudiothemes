@@ -1,4 +1,4 @@
-#' Convert a TextMate theme into a Visual Studio Code or Positron theme
+#' Convert a TextMate theme to Visual Studio Code or Positron
 #'
 #' @description
 #' Convert a `.tmTheme` file representing a TextMate theme and write the
@@ -8,8 +8,8 @@
 #' @inheritParams convert_vs_to_tm_theme
 #'
 #' @return
-#' This function is called for its side effects. It writes a new `.json`
-#' file to `outfile` and returns the path.
+#' This function is called for its side effects. It writes a new `.json` file
+#' to `outfile` and returns the path.
 #'
 #' @family functions for creating themes
 #' @encoding UTF-8
@@ -47,7 +47,7 @@ convert_tm_to_vs_theme <- function(
 
     if (is.null(orig_aut)) {
       cli::cli_alert_warning(paste0(
-        "TextMate theme {.str {name}} does not list an author. ",
+        "The TextMate theme {.str {name}} does not list an author. ",
         "Use the {.arg author} argument."
       ))
       author <- "rstudiothemes R package"
@@ -105,7 +105,7 @@ convert_tm_to_vs_theme <- function(
   }
 
   jsonlite::write_json(vs_l, path = outfile, auto_unbox = TRUE, pretty = TRUE)
-  # Add a comment with package information.
+  # Add package information.
   lns <- readLines(outfile)
   lns <- c(
     lns[1],
@@ -149,7 +149,7 @@ tmtheme_default_vs_colors <- function(theme_db) {
 tmtheme_mapped_vs_colors <- function(theme_db) {
   mapping <- theme_mapping()
 
-  # Deprecated in favor of editorIndentGuide.background1.
+  # Use editorIndentGuide.background1 instead of the deprecated setting.
   mapping <- mapping[mapping$vscode != "editorIndentGuide.background", ]
 
   high_level <- theme_db[theme_db$section == "colors", c("name", "foreground")]

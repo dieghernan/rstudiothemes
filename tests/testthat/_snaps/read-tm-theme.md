@@ -27,7 +27,7 @@
     Code
       fpath <- convert_vs_to_tm_theme(vstheme)
     Message
-      ! Visual Studio Code theme "Skeletor Syntax" does not list an author. Use the `author` argument.
+      ! The Visual Studio Code theme "Skeletor Syntax" does not list an author. Use the `author` argument.
       i Using default `author = "rstudiothemes R package"`.
 
 # Test minimal theme

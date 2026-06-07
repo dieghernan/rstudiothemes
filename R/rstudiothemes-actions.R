@@ -12,9 +12,9 @@
 #'
 #' ```
 #'
-#' **Important**: These functions (except
-#' `list_rstudiothemes(list_installed = FALSE)`) only work in RStudio, returning
-#' `NULL` when called from other IDEs.
+#' **Important**: These functions only work in RStudio and return `NULL` when
+#' called from other IDEs. The exception is
+#' `list_rstudiothemes(list_installed = FALSE)`.
 #'
 #' @section Ported themes:
 #' \CRANpkg{rstudiothemes} includes RStudio themes based on the following
@@ -43,7 +43,7 @@ NULL
 #'   [rstudioapi::addTheme()], but this argument allows installation to
 #'   non-standard directories.
 #' @param themes Optional character vector of theme names. If provided, only
-#'   these themes will be used, and `style` will be ignored.
+#'   these themes are used and `style` is ignored.
 #'
 #' @return
 #' `install_rstudiothemes()` and `remove_rstudiothemes()` return `NULL`
@@ -190,8 +190,8 @@ list_pkg_rstudiothemes <- function(
     # Inform the user if some themes are not found.
     if (length(sel) < length(themes)) {
       cli::cli_alert_warning(paste0(
-        "Found {no({length(sel)})} matching theme{?s} for ",
-        "{length(themes)} requested name{?s}: {.str {themes}}."
+        "Found {no({length(sel)})} matching theme{?s} among ",
+        "{length(themes)} requested name{?s}, {.str {themes}}."
       ))
       cli::cli_alert_info(paste0(
         "Use {.run rstudiothemes::list_rstudiothemes()} to check the ",
@@ -234,7 +234,7 @@ list_pkg_rstudiothemes <- function(
 #' @return
 #' `try_rstudiothemes()` has side effects: it starts a widget that allows users
 #' to try different themes. The widget can be exited by following the prompts,
-#' which restores the original theme.
+#' which restore the original theme.
 #'
 #' @export
 try_rstudiothemes <- function(

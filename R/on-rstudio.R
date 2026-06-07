@@ -1,8 +1,8 @@
 #' Check whether the session is running in RStudio
 #'
 #' @description
-#' Detect whether the current R session is running in RStudio, used to
-#' decide if themes can be applied to the IDE.
+#' Detect whether the current R session is running in RStudio, which is used to
+#' decide whether themes can be applied to the IDE.
 #'
 #' @return
 #' `TRUE` if running in RStudio, `FALSE` otherwise.
@@ -20,7 +20,7 @@ on_rstudio <- function() {
     return(TRUE)
   }
 
-  cli::cli_alert_warning("Detected GUI: {.str {gui}}.")
+  cli::cli_alert_warning("Detected GUI {.str {gui}}.")
 
   FALSE
 }

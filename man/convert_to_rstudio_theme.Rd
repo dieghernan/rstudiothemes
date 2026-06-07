@@ -3,7 +3,7 @@
 \encoding{UTF-8}
 \name{convert_to_rstudio_theme}
 \alias{convert_to_rstudio_theme}
-\title{Convert a TextMate, Visual Studio Code or Positron theme to an RStudio theme}
+\title{Convert a TextMate, Visual Studio Code or Positron theme to RStudio}
 \usage{
 convert_to_rstudio_theme(
   path,
@@ -24,9 +24,8 @@ temporary file via \code{\link[=tempfile]{tempfile()}}.}
 
 \item{name}{Theme name. If \code{NULL}, uses the name from the input file.}
 
-\item{use_italics}{Logical. Whether to use italics in the resulting theme.
-The default is \code{TRUE}, although some themes may look better without
-italics.}
+\item{use_italics}{Logical. Use italics in the resulting theme. The default
+is \code{TRUE}, although some themes may look better without italics.}
 
 \item{output_style}{Bracketing and formatting style of the CSS output.
 Possible styles: \code{"nested"}, \code{"expanded"}, \code{"compact"}, and
@@ -40,7 +39,7 @@ with the same name.\cr Default: \code{FALSE}.}
 \value{
 This function is called for its side effects. It writes a new
 \code{.rstheme} file to \code{outfile} and returns the path. If \code{force} or \code{apply}
-are \code{TRUE}, it installs and applies the theme to your RStudio IDE.
+is \code{TRUE}, it installs the theme and applies it to your RStudio IDE.
 }
 \description{
 Convert a \code{.tmTheme} or \code{.json} file that defines a TextMate or Visual
@@ -53,7 +52,7 @@ RStudio IDE.
 called from other IDEs.
 }
 \details{
-RStudio supports custom editor themes in two formats: \code{.tmTheme} and
+RStudio supports custom editor themes in two formats, \code{.tmTheme} and
 \code{.rstheme}. The \code{.tmTheme} format originated with TextMate and has become a
 common theme format.
 \href{https://tmtheme-editor.linuxbox.ninja/}{This tmTheme editor} hosts a large

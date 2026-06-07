@@ -4,7 +4,7 @@
 \name{convert_tm_to_vs_theme}
 \alias{convert_tm_to_vs_theme}
 \alias{convert_tm_to_positron_theme}
-\title{Convert a TextMate theme into a Visual Studio Code or Positron theme}
+\title{Convert a TextMate theme to Visual Studio Code or Positron}
 \usage{
 convert_tm_to_vs_theme(
   path,
@@ -28,12 +28,12 @@ temporary file via \code{\link[=tempfile]{tempfile()}}.}
 
 \item{name}{Theme name. If \code{NULL}, uses the name from the input file.}
 
-\item{author}{Theme author. If \code{NULL}, attempts to extract from the input
-file, otherwise defaults to "rstudiothemes R package".}
+\item{author}{Theme author. If \code{NULL}, it attempts to extract the author
+from the input file, otherwise defaults to "rstudiothemes R package".}
 }
 \value{
-This function is called for its side effects. It writes a new \code{.json}
-file to \code{outfile} and returns the path.
+This function is called for its side effects. It writes a new \code{.json} file
+to \code{outfile} and returns the path.
 }
 \description{
 Convert a \code{.tmTheme} file representing a TextMate theme and write the
