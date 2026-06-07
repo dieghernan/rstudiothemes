@@ -17,7 +17,7 @@ Heavily based on an unreleased version of `ids::uuid()`.
 
 - hint:
 
-  Optional. A character string (or object coercible with
+  Optional. A character string (or object coercible via
   [`as.character()`](https://rdrr.io/r/base/character.html)) to be used
   as a random seed.
 
@@ -28,8 +28,8 @@ A character string representing a valid UUID that can be validated with
 
 ## Details
 
-This helper function assigns a
-[UUID](https://www.rfc-editor.org/rfc/rfc9562.html) for identifying
+This helper function generates a
+[UUID](https://rdrr.io/pkg/uuid/man/UUIDgenerate.html) for identifying
 versions of generated themes.
 
 ## References

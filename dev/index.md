@@ -108,7 +108,7 @@ lets you convert themes in a browser:
 
 <https://dieghernan-themeconverter.share.connect.posit.cloud/>
 
-## Migrating an existing theme
+## Converting an existing theme
 
 You can convert any **Visual Studio Code**, **Positron** or **TextMate**
 theme to **RStudio** format with this workflow:

@@ -28,28 +28,27 @@ convert_positron_to_tm_theme(
 
 - path:
 
-  Path or URL to a Visual Studio Code or Positron theme, in `.json`
-  format.
+  Path or URL to a Visual Studio Code or Positron theme (`.json`
+  format).
 
 - outfile:
 
-  Path where the resulting file will be written. By default a temporary
-  file ([`tempfile()`](https://rdrr.io/r/base/tempfile.html)).
+  Path where the resulting file will be written. Defaults to a temporary
+  file via [`tempfile()`](https://rdrr.io/r/base/tempfile.html).
 
 - name:
 
-  Optional. The name of the theme. If not provided, the name of the
-  theme in `path` will be used.
+  Theme name. If `NULL`, uses the name from the input file.
 
 - author:
 
-  Optional. The author of the theme. If not provided, the author from
-  `path` will be used or a default value will be assigned.
+  Theme author. If `NULL`, attempts to extract from the input file,
+  otherwise defaults to "rstudiothemes R package".
 
 ## Value
 
-This function is called for its side effects: it writes a `.tmTheme`
-file to `outfile` and returns the path.
+This function is called for its side effects. It writes a `.tmTheme`
+file to `outfile` and returns the file path.
 
 ## See also
 

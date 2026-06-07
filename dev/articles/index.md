@@ -2,8 +2,8 @@
 
 ### Theme mapping
 
-See how theme elements map between Visual Studio Code, Positron,
-TextMate and RStudio formats.
+See how theme elements map between **Visual Studio Code**, **Positron**,
+**TextMate** and **RStudio** formats.
 
 - [Theme
   mapping](https://dieghernan.github.io/rstudiothemes/dev/articles/mapping.md):
@@ -12,7 +12,7 @@ TextMate and RStudio formats.
 
 ### Theme gallery
 
-Preview the built-in RStudio themes.
+Preview the built-in **RStudio** themes.
 
 - [Theme
   gallery](https://dieghernan.github.io/rstudiothemes/dev/articles/showcase.md):

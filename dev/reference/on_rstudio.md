@@ -11,7 +11,7 @@ on_rstudio()
 
 ## Value
 
-Logical, `TRUE` if running in RStudio, otherwise `FALSE`.
+`TRUE` if running in RStudio, `FALSE` otherwise.
 
 ## See also
 

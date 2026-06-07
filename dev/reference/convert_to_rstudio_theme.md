@@ -32,13 +32,12 @@ convert_to_rstudio_theme(
 
 - outfile:
 
-  Path where the resulting file will be written. By default a temporary
-  file ([`tempfile()`](https://rdrr.io/r/base/tempfile.html)).
+  Path where the resulting file will be written. Defaults to a temporary
+  file via [`tempfile()`](https://rdrr.io/r/base/tempfile.html).
 
 - name:
 
-  Optional. The name of the theme. If not provided, the name of the
-  theme in `path` will be used.
+  Theme name. If `NULL`, uses the name from the input file.
 
 - use_italics:
 
