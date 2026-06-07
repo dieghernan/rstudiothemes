@@ -23,14 +23,13 @@ convert_tm_to_positron_theme(
 \arguments{
 \item{path}{Path or URL to a TextMate theme, in \code{.tmTheme} format.}
 
-\item{outfile}{Path where the resulting file will be written. By default
-a temporary file (\code{\link[=tempfile]{tempfile()}}).}
+\item{outfile}{Path where the resulting file will be written. Defaults to a
+temporary file via \code{\link[=tempfile]{tempfile()}}.}
 
-\item{name}{Optional. The name of the theme. If not provided, the name of
-the theme in \code{path} will be used.}
+\item{name}{Theme name. If \code{NULL}, uses the name from the input file.}
 
-\item{author}{Optional. The author of the theme. If not provided, the author
-from \code{path} will be used or a default value will be assigned.}
+\item{author}{Theme author. If \code{NULL}, attempts to extract from the input
+file, otherwise defaults to "rstudiothemes R package".}
 }
 \value{
 This function is called for its side effects. It writes a new \code{.json}

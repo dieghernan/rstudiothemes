@@ -5,16 +5,15 @@
 #' and write the equivalent TextMate theme (`.tmTheme`).
 #'
 #' @inheritParams read_vs_theme
-#' @param outfile Path where the resulting file will be written. By default
-#'   a temporary file ([tempfile()]).
-#' @param name Optional. The name of the theme. If not provided, the name of
-#'   the theme in `path` will be used.
-#' @param author Optional. The author of the theme. If not provided, the author
-#'   from `path` will be used or a default value will be assigned.
+#' @param outfile Path where the resulting file will be written. Defaults to a
+#'   temporary file via [tempfile()].
+#' @param name Theme name. If `NULL`, uses the name from the input file.
+#' @param author Theme author. If `NULL`, attempts to extract from the input
+#'   file, otherwise defaults to "rstudiothemes R package".
 #'
 #' @return
-#' This function is called for its side effects: it writes a `.tmTheme`
-#' file to `outfile` and returns the path.
+#' This function is called for its side effects. It writes a `.tmTheme` file to
+#' `outfile` and returns the file path.
 #'
 #' @family functions for creating themes
 #' @encoding UTF-8

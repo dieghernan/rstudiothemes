@@ -1,22 +1,22 @@
 -   Ayu by teabyii.
--   Andromeda by Eliver Lara.
--   Catppuccin by <https://catppuccin.com/>.
--   Cobalt2 Theme Official by Wes Bos.
--   CRAN by dieghernan, based on the CRAN (R Project) website theme, created
-    with Pandoc.
--   Dracula Official by <https://draculatheme.com/>.
--   GitHub Dark and Light by GitHub.
+-   Andromeda Theme by Eliver Lara.
+-   Catppuccin Theme by [Catppuccin](https://catppuccin.com/).
+-   Cobalt2 Theme by Wes Bos.
+-   CRAN Theme by dieghernan, based on the CRAN (R Project) website theme,
+    created with Pandoc.
+-   Dracula Theme by [Dracula](https://draculatheme.com/).
+-   GitHub Dark and Light Themes by GitHub.
 -   JellyFish Theme by Pawel Borkar.
--   Matcha by Luca Falasco.
+-   Matcha Theme by Luca Falasco.
 -   Matrix Theme by UstymUkhman.
--   Night Owl Dark and Light (no italics) by Sarah Drasner.
--   Nord by Arctic Ice Studio.
+-   Night Owl Dark and Light Themes (no italics) by Sarah Drasner.
+-   Nord Theme by Arctic Ice Studio.
 -   OKSolar Theme by dieghernan.
--   One Dark Pro by binaryify.
+-   One Dark Pro Theme by binaryify.
 -   Overflow Theme by dieghernan.
 -   Panda Theme by Panda Theme.
 -   Selenized Themes by dieghernan.
--   Skeletor Syntax by dieghernan.
--   SynthWave '84 by Robb Owen.
--   Tokyo Night by Enkia.
+-   Skeletor Syntax Theme by dieghernan.
+-   SynthWave '84 Theme by Robb Owen.
+-   Tokyo Night Theme by Enkia.
 -   Winter is Coming Theme by John Papa.

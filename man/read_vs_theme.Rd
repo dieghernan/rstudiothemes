@@ -4,15 +4,15 @@
 \name{read_vs_theme}
 \alias{read_vs_theme}
 \alias{read_positron_theme}
-\title{Read and parse a Visual Studio Code or Positron theme}
+\title{Read and parse a Visual Studio Code or Positron theme from JSON format}
 \usage{
 read_vs_theme(path)
 
 read_positron_theme(path)
 }
 \arguments{
-\item{path}{Path or URL to a Visual Studio Code or Positron theme, in \code{.json}
-format.}
+\item{path}{Path or URL to a Visual Studio Code or Positron theme (\code{.json}
+format).}
 }
 \value{
 A \link[tibble:tbl_df]{tibble} with the data of the theme.

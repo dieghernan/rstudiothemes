@@ -19,11 +19,10 @@ convert_to_rstudio_theme(
 \item{path}{Path or URL to a TextMate theme (\code{.tmTheme} format) or a Visual
 Studio Code theme (\code{.json} format).}
 
-\item{outfile}{Path where the resulting file will be written. By default
-a temporary file (\code{\link[=tempfile]{tempfile()}}).}
+\item{outfile}{Path where the resulting file will be written. Defaults to a
+temporary file via \code{\link[=tempfile]{tempfile()}}.}
 
-\item{name}{Optional. The name of the theme. If not provided, the name of
-the theme in \code{path} will be used.}
+\item{name}{Theme name. If \code{NULL}, uses the name from the input file.}
 
 \item{use_italics}{Logical. Whether to use italics in the resulting theme.
 The default is \code{TRUE}, although some themes may look better without

@@ -8,7 +8,7 @@
 on_rstudio()
 }
 \value{
-Logical, \code{TRUE} if running in RStudio, otherwise \code{FALSE}.
+\code{TRUE} if running in RStudio, \code{FALSE} otherwise.
 }
 \description{
 Detect whether the current R session is running in RStudio, used to

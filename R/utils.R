@@ -1,4 +1,5 @@
-# Convert values to hex color strings.
+# Convert color values to hex strings (#RRGGBB or #RRGGBBAA format).
+# Handles color names, RGB triples, and hex inputs; returns uppercase hex.
 col2hex <- function(x) {
   x <- trimws(x)
   x <- expand_hex(x)

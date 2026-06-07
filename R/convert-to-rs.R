@@ -116,9 +116,9 @@ convert_to_rstudio_theme <- function(
   # Map top-level colors.
   tb_hlp_top <- dplyr::tibble(name = "caret", rstheme = ".ace_cursor")
 
-  # Adjust the ruler because TextMate themes do not specify it well.
-  # Prioritize invisibles, then guide, then gutter when they differ from
-  # background.
+  # Adjust ruler color based on theme specification preferences.
+  # TextMate themes don't standardize ruler color, so we prioritize
+  # invisibles > guide > gutter for visibility contrast against background.
   ruler_map <- c("invisibles", "guide", "gutter")
   bg_col <- tmcols[tmcols$section == "colors" & tmcols$name == "background", ]
   tm_sub <- tmcols[tmcols$name %in% ruler_map, ]

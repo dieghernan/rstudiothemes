@@ -22,8 +22,7 @@ list_rstudiothemes(style = c("all", "dark", "light"), list_installed = TRUE)
 try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 }
 \arguments{
-\item{style}{Character. Limit themes to a specific group: \code{all}, \code{dark} or
-\code{light}.}
+\item{style}{Theme group: \code{"all"}, \code{"dark"}, or \code{"light"}.}
 
 \item{themes}{Optional character vector of theme names. If provided, only
 these themes will be used, and \code{style} will be ignored.}
@@ -59,15 +58,13 @@ Adapted from selected \pkg{rsthemes} functions.
 }
 \section{Functions}{
 \itemize{
-\item \code{install_rstudiothemes()}: Install RStudio themes
+\item \code{install_rstudiothemes()}: Install RStudio themes.
 
-\item \code{remove_rstudiothemes()}: Remove \CRANpkg{rstudiothemes} from
-RStudio
+\item \code{remove_rstudiothemes()}: Remove \CRANpkg{rstudiothemes} themes from RStudio.
 
-\item \code{list_rstudiothemes()}: List installed or available themes
+\item \code{list_rstudiothemes()}: List installed or available themes.
 
-\item \code{try_rstudiothemes()}: Preview each \CRANpkg{rstudiothemes}
-RStudio theme
+\item \code{try_rstudiothemes()}: Preview each \CRANpkg{rstudiothemes} RStudio theme.
 
 }}
 \section{Ported themes}{
@@ -76,26 +73,26 @@ RStudio theme
 Visual Studio Code themes:
 \itemize{
 \item Ayu by teabyii.
-\item Andromeda by Eliver Lara.
-\item Catppuccin by \url{https://catppuccin.com/}.
-\item Cobalt2 Theme Official by Wes Bos.
-\item CRAN by dieghernan, based on the CRAN (R Project) website theme, created
-with Pandoc.
-\item Dracula Official by \url{https://draculatheme.com/}.
-\item GitHub Dark and Light by GitHub.
+\item Andromeda Theme by Eliver Lara.
+\item Catppuccin Theme by \href{https://catppuccin.com/}{Catppuccin}.
+\item Cobalt2 Theme by Wes Bos.
+\item CRAN Theme by dieghernan, based on the CRAN (R Project) website theme,
+created with Pandoc.
+\item Dracula Theme by \href{https://draculatheme.com/}{Dracula}.
+\item GitHub Dark and Light Themes by GitHub.
 \item JellyFish Theme by Pawel Borkar.
-\item Matcha by Luca Falasco.
+\item Matcha Theme by Luca Falasco.
 \item Matrix Theme by UstymUkhman.
-\item Night Owl Dark and Light (no italics) by Sarah Drasner.
-\item Nord by Arctic Ice Studio.
+\item Night Owl Dark and Light Themes (no italics) by Sarah Drasner.
+\item Nord Theme by Arctic Ice Studio.
 \item OKSolar Theme by dieghernan.
-\item One Dark Pro by binaryify.
+\item One Dark Pro Theme by binaryify.
 \item Overflow Theme by dieghernan.
 \item Panda Theme by Panda Theme.
 \item Selenized Themes by dieghernan.
-\item Skeletor Syntax by dieghernan.
-\item SynthWave '84 by Robb Owen.
-\item Tokyo Night by Enkia.
+\item Skeletor Syntax Theme by dieghernan.
+\item SynthWave '84 Theme by Robb Owen.
+\item Tokyo Night Theme by Enkia.
 \item Winter is Coming Theme by John Papa.
 }
 }

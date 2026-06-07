@@ -54,8 +54,8 @@ read_tm_theme <- function(path) {
   # Skip the array because it contains color settings.
   highlev <- specs[names(specs) != "array"]
 
-  # Strong assumption: the structure should be a list of consecutive
-  # <key><string><key><string>...
+  # Assumption: structure is a consecutive list of <key><string> pairs
+  # representing metadata like name, author, colorSpaceName, etc.
   hl_keys <- unlist(highlev[names(highlev) == "key"])
 
   # Remove settings from keys.

@@ -36,9 +36,9 @@
 #' list_rstudiothemes(list_installed = FALSE)
 NULL
 
-#' @describeIn rstudiothemes-actions Install RStudio themes
-#' @param style Character. Limit themes to a specific group: `all`, `dark` or
-#'   `light`.
+#' @describeIn rstudiothemes-actions
+#' Install RStudio themes.
+#' @param style Theme group: `"all"`, `"dark"`, or `"light"`.
 #' @param destdir Optional directory for `.rstheme` files. By default, it uses
 #'   [rstudioapi::addTheme()], but this argument allows installation to
 #'   non-standard directories.
@@ -91,8 +91,9 @@ install_rstudiothemes <- function(
   )
 }
 
-#' @describeIn rstudiothemes-actions Remove \CRANpkg{rstudiothemes} from
-#'   RStudio
+#' @describeIn rstudiothemes-actions
+#' Remove \CRANpkg{rstudiothemes} themes from RStudio.
+#'
 #' @export
 remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
   # Require RStudio.
@@ -114,7 +115,9 @@ remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
 
 # nocov end
 
-#' @describeIn rstudiothemes-actions List installed or available themes
+#' @describeIn rstudiothemes-actions
+#' List installed or available themes.
+#'
 #' @param list_installed Should the installed \CRANpkg{rstudiothemes} themes
 #'   be listed (default). If `FALSE`, the available themes in the
 #'   \CRANpkg{rstudiothemes} package are listed instead.
@@ -223,8 +226,8 @@ list_pkg_rstudiothemes <- function(
   allt[!dark]
 }
 
-#' @describeIn rstudiothemes-actions Preview each \CRANpkg{rstudiothemes}
-#'   RStudio theme
+#' @describeIn rstudiothemes-actions
+#' Preview each \CRANpkg{rstudiothemes} RStudio theme.
 #' @param delay Number of seconds to wait between themes. Set to 0 to be
 #'   prompted to continue after each theme.
 #'

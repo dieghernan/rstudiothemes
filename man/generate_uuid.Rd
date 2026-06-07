@@ -11,7 +11,7 @@ Heavily based on an unreleased version of \code{ids::uuid()}.
 generate_uuid(hint = NULL)
 }
 \arguments{
-\item{hint}{Optional. A character string (or object coercible with
+\item{hint}{Optional. A character string (or object coercible via
 \code{\link[=as.character]{as.character()}}) to be used as a random seed.}
 }
 \value{
@@ -22,9 +22,8 @@ A character string representing a valid UUID that can be validated with
 Generate version 4 (pseudo-random) Universally Unique Identifiers (UUIDs).
 }
 \details{
-This helper function assigns a
-\href{https://www.rfc-editor.org/rfc/rfc9562.html}{UUID} for identifying versions
-of generated themes.
+This helper function generates a \link[uuid:UUIDvalidate]{UUID} for
+identifying versions of generated themes.
 }
 \examples{
 # Random UUID.

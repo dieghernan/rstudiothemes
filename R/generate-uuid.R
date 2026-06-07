@@ -3,11 +3,10 @@
 #' Generate version 4 (pseudo-random) Universally Unique Identifiers (UUIDs).
 #'
 #' @details
-#' This helper function assigns a
-#' [UUID](https://www.rfc-editor.org/rfc/rfc9562.html) for identifying versions
-#' of generated themes.
+#' This helper function generates a [UUID][uuid::UUIDvalidate()] for
+#' identifying versions of generated themes.
 #'
-#' @param hint Optional. A character string (or object coercible with
+#' @param hint Optional. A character string (or object coercible via
 #'   [as.character()]) to be used as a random seed.
 #'
 #' @return

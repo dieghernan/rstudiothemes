@@ -12,6 +12,7 @@
 [![r-universe](https://dieghernan.r-universe.dev/badges/rstudiothemes)](https://dieghernan.r-universe.dev/rstudiothemes)
 [![R-CMD-check](https://github.com/dieghernan/rstudiothemes/actions/workflows/check-full.yaml/badge.svg)](https://github.com/dieghernan/rstudiothemes/actions/workflows/check-full.yaml)
 [![codecov](https://codecov.io/gh/dieghernan/rstudiothemes/branch/main/graph/badge.svg?token=Us9sfPntdX)](https://app.codecov.io/gh/dieghernan/rstudiothemes)
+[![coveralls](https://coveralls.io/repos/github/dieghernan/rstudiothemes/badge.svg)](https://coveralls.io/github/dieghernan/rstudiothemes)
 [![CodeFactor](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes/badge?s=db1aa5e9aa335100151678939d0b23ee5cb86b71)](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes)
 [![DOI](https://img.shields.io/badge/DOI-%2010.32614/CRAN.package.rstudiothemes%20-blue)](https://doi.org/10.32614/CRAN.package.rstudiothemes)
 [![Project Status: Active - The project has reached a stable, usable
@@ -143,7 +144,7 @@ lets you convert themes in a browser:
 
 <https://dieghernan-themeconverter.share.connect.posit.cloud/>
 
-## Migrating an existing theme
+## Converting an existing theme
 
 You can convert any **Visual Studio Code**, **Positron** or **TextMate**
 theme to **RStudio** format with this workflow:

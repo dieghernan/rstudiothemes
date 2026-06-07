@@ -5,7 +5,7 @@
 #' decide if themes can be applied to the IDE.
 #'
 #' @return
-#' Logical, `TRUE` if running in RStudio, otherwise `FALSE`.
+#' `TRUE` if running in RStudio, `FALSE` otherwise.
 #'
 #' @family helpers
 #' @encoding UTF-8
