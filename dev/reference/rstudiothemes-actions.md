@@ -4,9 +4,9 @@ Adapted from selected rsthemes functions. [MIT
 License](https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md)
 Copyright © rsthemes authors.
 
-**Important**: These functions (except
-`list_rstudiothemes(list_installed = FALSE)`) only work in RStudio,
-returning `NULL` when called from other IDEs.
+**Important**: These functions only work in RStudio and return `NULL`
+when called from other IDEs. The exception is
+`list_rstudiothemes(list_installed = FALSE)`.
 
 ## Usage
 
@@ -33,7 +33,7 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 - themes:
 
   Optional character vector of theme names. If provided, only these
-  themes will be used, and `style` will be ignored.
+  themes are used and `style` is ignored.
 
 - destdir:
 
@@ -63,7 +63,7 @@ invisibly.
 
 `try_rstudiothemes()` has side effects: it starts a widget that allows
 users to try different themes. The widget can be exited by following the
-prompts, which restores the original theme.
+prompts, which restore the original theme.
 
 ## Functions
 

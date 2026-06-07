@@ -1,4 +1,4 @@
-# Convert a TextMate, Visual Studio Code or Positron theme to an RStudio theme
+# Convert a TextMate, Visual Studio Code or Positron theme to RStudio
 
 Convert a `.tmTheme` or `.json` file that defines a TextMate or Visual
 Studio Code theme and write the equivalent RStudio theme (`.rstheme`).
@@ -41,8 +41,8 @@ convert_to_rstudio_theme(
 
 - use_italics:
 
-  Logical. Whether to use italics in the resulting theme. The default is
-  `TRUE`, although some themes may look better without italics.
+  Logical. Use italics in the resulting theme. The default is `TRUE`,
+  although some themes may look better without italics.
 
 - output_style:
 
@@ -63,12 +63,12 @@ convert_to_rstudio_theme(
 ## Value
 
 This function is called for its side effects. It writes a new `.rstheme`
-file to `outfile` and returns the path. If `force` or `apply` are
-`TRUE`, it installs and applies the theme to your RStudio IDE.
+file to `outfile` and returns the path. If `force` or `apply` is `TRUE`,
+it installs the theme and applies it to your RStudio IDE.
 
 ## Details
 
-RStudio supports custom editor themes in two formats: `.tmTheme` and
+RStudio supports custom editor themes in two formats, `.tmTheme` and
 `.rstheme`. The `.tmTheme` format originated with TextMate and has
 become a common theme format. [This tmTheme
 editor](https://tmtheme-editor.linuxbox.ninja/) hosts a large collection
@@ -115,5 +115,5 @@ if (on_rstudio() && interactive()) {
   rstudioapi::applyTheme(current_theme)
   rstudioapi::removeTheme("A testing theme")
 }
-#> ! Detected GUI: "X11".
+#> ! Detected GUI "X11".
 ```

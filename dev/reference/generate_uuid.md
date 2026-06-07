@@ -17,9 +17,9 @@ Heavily based on an unreleased version of `ids::uuid()`.
 
 - hint:
 
-  Optional. A character string (or object coercible via
-  [`as.character()`](https://rdrr.io/r/base/character.html)) to be used
-  as a random seed.
+  Optional character string, or object coercible with
+  [`as.character()`](https://rdrr.io/r/base/character.html), to use as a
+  random seed.
 
 ## Value
 
@@ -28,9 +28,9 @@ A character string representing a valid UUID that can be validated with
 
 ## Details
 
-This helper function generates a
+This helper generates a
 [UUID](https://rdrr.io/pkg/uuid/man/UUIDgenerate.html) for identifying
-versions of generated themes.
+generated theme versions.
 
 ## References
 

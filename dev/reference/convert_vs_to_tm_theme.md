@@ -1,4 +1,4 @@
-# Convert a Visual Studio Code or Positron theme into a TextMate theme
+# Convert a Visual Studio Code or Positron theme to TextMate
 
 Convert a `.json` file representing a Visual Studio Code or Positron
 theme and write the equivalent TextMate theme (`.tmTheme`).
@@ -28,8 +28,8 @@ convert_positron_to_tm_theme(
 
 - path:
 
-  Path or URL to a Visual Studio Code or Positron theme (`.json`
-  format).
+  Path or URL to a Visual Studio Code or Positron theme, in `.json`
+  format.
 
 - outfile:
 
@@ -42,8 +42,8 @@ convert_positron_to_tm_theme(
 
 - author:
 
-  Theme author. If `NULL`, attempts to extract from the input file,
-  otherwise defaults to "rstudiothemes R package".
+  Theme author. If `NULL`, it attempts to extract the author from the
+  input file, otherwise defaults to "rstudiothemes R package".
 
 ## Value
 
@@ -63,7 +63,7 @@ vstheme <- system.file("ext/test-simple-color-theme.json",
   package = "rstudiothemes"
 )
 path <- convert_vs_to_tm_theme(vstheme)
-#> ! Visual Studio Code theme "Skeletor Syntax" does not list an author. Use the `author` argument.
+#> ! The Visual Studio Code theme "Skeletor Syntax" does not list an author. Use the `author` argument.
 #> ℹ Using default `author = "rstudiothemes R package"`.
 
 readLines(path) |>

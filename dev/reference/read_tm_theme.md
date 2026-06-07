@@ -1,7 +1,7 @@
 # Read and parse a TextMate theme
 
-Read a `.tmTheme` file (XML format) representing a TextMate or Sublime
-Text theme.
+Read a `.tmTheme` XML file representing a TextMate or Sublime Text
+theme.
 
 ## Usage
 
@@ -18,7 +18,7 @@ read_tm_theme(path)
 ## Value
 
 A [tibble](https://tibble.tidyverse.org/reference/tbl_df-class.html)
-with the data of the theme.
+with the theme data.
 
 ## See also
 
