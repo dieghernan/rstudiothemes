@@ -63,6 +63,8 @@ vstheme <- system.file("ext/test-simple-color-theme.json",
   package = "rstudiothemes"
 )
 path <- convert_vs_to_tm_theme(vstheme)
+#> ! The Visual Studio Code theme "Skeletor Syntax" does not list an author. Use the `author` argument.
+#> ℹ Using default `author = "rstudiothemes R package"`.
 
 readLines(path) |>
   head(50) |>
@@ -73,7 +75,7 @@ readLines(path) |>
 #>     <key>name</key>
 #>     <string>Skeletor Syntax</string>
 #>     <key>author</key>
-#>     <string>, rstudiothemes R package</string>
+#>     <string>rstudiothemes R package</string>
 #>     <key>colorSpaceName</key>
 #>     <string>sRGB</string>
 #>     <key>semanticClass</key>

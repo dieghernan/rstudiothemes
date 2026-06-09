@@ -36,7 +36,7 @@ vstheme <- system.file("ext/test-color-theme.json",
   package = "rstudiothemes"
 )
 read_vs_theme(vstheme)
-#> # A tibble: 708 × 7
+#> # A tibble: 706 × 7
 #>    section   name                  scope value   foreground background fontStyle
 #>    <chr>     <chr>                 <chr> <chr>   <chr>      <lgl>      <chr>    
 #>  1 highlevel name                  NA    Tokyo … NA         NA         NA       
@@ -49,5 +49,5 @@ read_vs_theme(vstheme)
 #>  8 colors    errorForeground       NA    NA      #515670    NA         NA       
 #>  9 colors    widget.shadow         NA    NA      #FFFFFF00  NA         NA       
 #> 10 colors    scrollbar.shadow      NA    NA      #00000033  NA         NA       
-#> # ℹ 698 more rows
+#> # ℹ 696 more rows
 ```
