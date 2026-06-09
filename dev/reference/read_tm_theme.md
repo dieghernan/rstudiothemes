@@ -50,7 +50,7 @@ readLines(the_theme) |>
 #>     <key>semanticClass</key>
 
 read_tm_theme(the_theme)
-#> # A tibble: 373 × 7
+#> # A tibble: 375 × 7
 #>    section   name              scope value       foreground background fontStyle
 #>    <chr>     <chr>             <chr> <chr>       <chr>      <lgl>      <chr>    
 #>  1 highlevel name              NA    Tokyo Night NA         NA         NA       
@@ -63,5 +63,5 @@ read_tm_theme(the_theme)
 #>  8 colors    foreground        NA    NA          #A9B1D6    NA         NA       
 #>  9 colors    selection         NA    NA          #515C7E4D  NA         NA       
 #> 10 colors    inactiveSelection NA    NA          #515C7E25  NA         NA       
-#> # ℹ 363 more rows
+#> # ℹ 365 more rows
 ```
