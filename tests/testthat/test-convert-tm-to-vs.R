@@ -77,7 +77,7 @@ test_that("Online", {
     "rstudiothemes/refs/heads/main/inst/ext/test.tmTheme"
   )
 
-  expect_snapshot(res <- convert_tm_to_vs_theme(path), )
+  expect_snapshot(res <- convert_tm_to_vs_theme(path))
   df_json <- read_vs_theme(res)
   expect_s3_class(df_json, "tbl_df")
 })

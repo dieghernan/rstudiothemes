@@ -74,7 +74,7 @@ Click the images to enlarge.
 library(rstudiothemes)
 
 themes <- sort(list_rstudiothemes(list_installed = FALSE))
-png_name <- paste0(gsub(" ", "", tolower(themes)))
+png_name <- paste0(gsub(" ", "", tolower(themes), fixed = TRUE))
 pths <- file.path("screenshots", paste0(png_name, ".png"))
 ```
 

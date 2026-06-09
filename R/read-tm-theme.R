@@ -209,7 +209,9 @@ read_tm_theme <- function(path) {
   final_df <- final_df[, nms]
 
   # Convert empty strings to NA.
+  # jarl-ignore-start nzchar: Used over a matrix, not a string.
   final_df[final_df == ""] <- NA
+  # jarl-ignore-end nzchar
 
   # Filter out rows with no style information.
   undef <- is.na(final_df$value) &

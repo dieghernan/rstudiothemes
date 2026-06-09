@@ -177,7 +177,9 @@ read_vs_theme <- function(path) {
   final_df <- final_df[, nms]
 
   # Convert blanks to NA values.
+  # jarl-ignore-start nzchar: Used over a matrix, not a string.
   final_df[final_df == ""] <- NA
+  # jarl-ignore-end nzchar
 
   # Filter undefined rows.
   undef <- is.na(final_df$value) &
@@ -210,7 +212,7 @@ safe_read_json <- function(local_file) {
   lns <- readLines(local_file, warn = FALSE)
 
   # Flatten and clean the JSON lines.
-  lns <- trimws(lns[lns != ""])
+  lns <- trimws(lns[nzchar(lns)])
   # Remove the schema key.
   lns <- lns[!grepl("$schema", lns, fixed = TRUE)]
 
