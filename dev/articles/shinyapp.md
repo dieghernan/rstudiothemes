@@ -1,6 +1,6 @@
 # Online converter
 
-Use the online converter to convert themes in a browser:
+Use the online converter to convert theme files in a browser:
 <https://dieghernan-themeconverter.share.connect.posit.cloud/>.
 
 ### Status
@@ -8,7 +8,7 @@ Use the online converter to convert themes in a browser:
 ``` shiny-text-output
 ```
 
-[ Download VSCode (.json)](_w_f554d10d463e49898705d5a7cc771473/)
+[ Download VSCode (.json)](_w_6abb9e6765f24e648e28888d61be09d7/)
 
 ### Input
 
@@ -25,7 +25,7 @@ Use the online converter to convert themes in a browser:
 ``` shiny-text-output
 ```
 
-[ Download tmTheme (.tmTheme)](_w_f554d10d463e49898705d5a7cc771473/)
+[ Download tmTheme (.tmTheme)](_w_6abb9e6765f24e648e28888d61be09d7/)
 
 ### Input
 
@@ -42,7 +42,7 @@ Use the online converter to convert themes in a browser:
 ``` shiny-text-output
 ```
 
-[ Download VSCode (.json)](_w_f554d10d463e49898705d5a7cc771473/)
+[ Download VSCode (.json)](_w_6abb9e6765f24e648e28888d61be09d7/)
 
 ### Input
 
@@ -59,7 +59,7 @@ Use the online converter to convert themes in a browser:
 ``` shiny-text-output
 ```
 
-[ Download tmTheme (.tmTheme)](_w_f554d10d463e49898705d5a7cc771473/)
+[ Download tmTheme (.tmTheme)](_w_6abb9e6765f24e648e28888d61be09d7/)
 
 ### Input
 

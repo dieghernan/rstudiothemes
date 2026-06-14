@@ -1,6 +1,8 @@
 # Install, list, preview or remove RStudio themes
 
-Adapted from selected rsthemes functions. [MIT
+Install, list, preview or remove the RStudio themes included in
+[rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes). These
+functions are adapted from selected rsthemes functions. [MIT
 License](https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md)
 Copyright © rsthemes authors.
 
@@ -28,7 +30,7 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 
 - style:
 
-  Theme group: `"all"`, `"dark"`, or `"light"`.
+  Theme group: `"all"`, `"dark"` or `"light"`.
 
 - themes:
 
@@ -69,23 +71,23 @@ prompts, which restore the original theme.
 
 - `install_rstudiothemes()`: Install RStudio themes.
 
-- `remove_rstudiothemes()`: Remove
+- `remove_rstudiothemes()`: Remove bundled
   [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
   themes from RStudio.
 
 - `list_rstudiothemes()`: List installed or available themes.
 
-- `try_rstudiothemes()`: Preview each
+- `try_rstudiothemes()`: Preview each bundled
   [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
   RStudio theme.
 
-## Ported themes
+## Bundled themes
 
 [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
 includes RStudio themes based on the following Visual Studio Code
 themes:
 
-- Ayu by teabyii.
+- Ayu Theme by teabyii.
 
 - Andromeda Theme by Eliver Lara.
 

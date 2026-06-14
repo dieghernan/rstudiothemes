@@ -2,7 +2,7 @@
 
 This article summarizes how **rstudiothemes** maps theme elements
 between **Visual Studio Code**, **Positron**, **TextMate** and
-**RStudio**.
+**RStudio** formats.
 
 Sources:
 
@@ -12,7 +12,7 @@ Sources:
   <https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html>
 
 When several source elements map to the same target element, priority
-determines which mapping applies.
+determines which mapping is used.
 
 | priority | tm | vscode | rstheme |
 |---:|:---|:---|:---|
@@ -63,4 +63,4 @@ determines which mapping applies.
 | 4 | invalid | editorBracketHighlight.unexpectedBracket.foreground |  |
 | 1 | markup.heading |  | .ace_heading |
 
-Table 1: Mapping between theme elements
+Table 1: Mapping between theme elements.

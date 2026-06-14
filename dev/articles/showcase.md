@@ -3,7 +3,7 @@
 This article previews the **RStudio** themes bundled with
 **rstudiothemes**.
 
-You can install them with:
+Install the bundled themes with:
 
 ``` r
 
@@ -19,11 +19,11 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 ![RStudio IDE add theme UI](rstudiogui.png)
 
-Figure 1: RStudio IDE add theme UI.
+Figure 1: RStudio IDE Add Theme UI.
 
 ## Lightbox gallery
 
-Click the images to enlarge.
+Click an image to enlarge it.
 
 [![Andromeda](screenshots/andromeda.png)](https://dieghernan.github.io/rstudiothemes/dev/articles/screenshots/andromeda.png)
 
@@ -201,7 +201,7 @@ Winter is Coming Light
 About the screenshots
 
 Previews may differ from the display on your device. The screenshots use
-the following setup:
+this setup:
 
 **RStudio version**
 

@@ -2,9 +2,8 @@
 
 ## rstudiothemes (development version)
 
-- Documentation has been refreshed with AI assistance to make package
-  guidance, function references and maintenance notes clearer and more
-  consistent.
+- Refreshed documentation to make package guidance, function references
+  and maintenance notes clearer and more consistent.
 
 ## rstudiothemes 1.1.1
 

@@ -12,16 +12,16 @@ See how theme elements map between **Visual Studio Code**, **Positron**,
 
 ### Theme gallery
 
-Preview the built-in **RStudio** themes.
+Preview the bundled **RStudio** themes.
 
 - [Theme
   gallery](https://dieghernan.github.io/rstudiothemes/dev/articles/showcase.md):
 
-  Preview the built-in themes
+  Preview the bundled RStudio themes
 
 ### Online converter
 
-Convert themes online with the Shiny app.
+Convert theme files online with the Shiny app.
 
 - [Online
   converter](https://dieghernan.github.io/rstudiothemes/dev/articles/shinyapp.md):

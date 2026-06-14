@@ -1,7 +1,6 @@
 # Generate random UUIDs
 
-Generate version 4 (pseudo-random) Universally Unique Identifiers
-(UUIDs).
+Generate version 4 pseudo-random Universally Unique Identifiers (UUIDs).
 
 ## Usage
 
@@ -17,7 +16,7 @@ Heavily based on an unreleased version of `ids::uuid()`.
 
 - hint:
 
-  Optional character string, or object coercible with
+  Optional character string or object coercible with
   [`as.character()`](https://rdrr.io/r/base/character.html), to use as a
   random seed.
 
