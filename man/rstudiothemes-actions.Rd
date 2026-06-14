@@ -22,7 +22,7 @@ list_rstudiothemes(style = c("all", "dark", "light"), list_installed = TRUE)
 try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 }
 \arguments{
-\item{style}{Theme group: \code{"all"}, \code{"dark"}, or \code{"light"}.}
+\item{style}{Theme group: \code{"all"}, \code{"dark"} or \code{"light"}.}
 
 \item{themes}{Optional character vector of theme names. If provided, only
 these themes are used and \code{style} is ignored.}
@@ -49,7 +49,9 @@ to try different themes. The widget can be exited by following the prompts,
 which restore the original theme.
 }
 \description{
-Adapted from selected \pkg{rsthemes} functions.
+Install, list, preview or remove the RStudio themes included in
+\CRANpkg{rstudiothemes}. These functions are adapted from selected
+\pkg{rsthemes} functions.
 \href{https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md}{MIT License} Copyright © rsthemes authors.
 
 \strong{Important}: These functions only work in RStudio and return \code{NULL} when
@@ -60,19 +62,19 @@ called from other IDEs. The exception is
 \itemize{
 \item \code{install_rstudiothemes()}: Install RStudio themes.
 
-\item \code{remove_rstudiothemes()}: Remove \CRANpkg{rstudiothemes} themes from RStudio.
+\item \code{remove_rstudiothemes()}: Remove bundled \CRANpkg{rstudiothemes} themes from RStudio.
 
 \item \code{list_rstudiothemes()}: List installed or available themes.
 
-\item \code{try_rstudiothemes()}: Preview each \CRANpkg{rstudiothemes} RStudio theme.
+\item \code{try_rstudiothemes()}: Preview each bundled \CRANpkg{rstudiothemes} RStudio theme.
 
 }}
-\section{Ported themes}{
+\section{Bundled themes}{
 
 \CRANpkg{rstudiothemes} includes RStudio themes based on the following
 Visual Studio Code themes:
 \itemize{
-\item Ayu by teabyii.
+\item Ayu Theme by teabyii.
 \item Andromeda Theme by Eliver Lara.
 \item Catppuccin Theme by \href{https://catppuccin.com/}{Catppuccin}.
 \item Cobalt2 Theme by Wes Bos.

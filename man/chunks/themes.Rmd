@@ -1,4 +1,4 @@
--   Ayu by teabyii.
+-   Ayu Theme by teabyii.
 -   Andromeda Theme by Eliver Lara.
 -   Catppuccin Theme by [Catppuccin](https://catppuccin.com/).
 -   Cobalt2 Theme by Wes Bos.

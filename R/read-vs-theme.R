@@ -1,9 +1,9 @@
-#' Read and parse a Visual Studio Code or Positron theme
+#' Read and parse a Visual Studio Code or Positron theme file
 #'
 #' @description
 #' Read a `.json` file representing a Visual Studio Code or Positron theme.
 #'
-#' @param path Path or URL to a Visual Studio Code or Positron theme, in
+#' @param path Path or URL to a Visual Studio Code or Positron theme file, in
 #'   `.json` format.
 #'
 #' @inherit read_tm_theme return
@@ -205,7 +205,7 @@ read_positron_theme <- read_vs_theme
 #' @param local_file Path to a JSON file.
 #'
 #' @return
-#' A parsed list structure from the JSON file with cleaned formatting.
+#' A parsed list structure from the JSON file, with cleaned formatting.
 #'
 #' @noRd
 safe_read_json <- function(local_file) {

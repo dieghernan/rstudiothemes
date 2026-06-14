@@ -3,7 +3,9 @@
 #' Install, list, preview or remove RStudio themes
 #'
 #' @description
-#' Adapted from selected \pkg{rsthemes} functions.
+#' Install, list, preview or remove the RStudio themes included in
+#' \CRANpkg{rstudiothemes}. These functions are adapted from selected
+#' \pkg{rsthemes} functions.
 #'
 #' ```{r, echo=FALSE, results='asis'}
 #'
@@ -16,7 +18,7 @@
 #' called from other IDEs. The exception is
 #' `list_rstudiothemes(list_installed = FALSE)`.
 #'
-#' @section Ported themes:
+#' @section Bundled themes:
 #' \CRANpkg{rstudiothemes} includes RStudio themes based on the following
 #' Visual Studio Code themes:
 #'
@@ -24,11 +26,12 @@
 #'
 #' ```
 #' @references
-#'   Aden-Buie G (2026). _rsthemes: Full Themes for RStudio v1.2+_. R package
-#'   version 0.5.1, commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
-#'   <https://github.com/gadenbuie/rsthemes>.
+#' Aden-Buie G (2026). _rsthemes: Full Themes for RStudio v1.2+_. R package
+#' version 0.5.1, commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
+#' <https://github.com/gadenbuie/rsthemes>.
 #'
 #' @author Garrick Aden-Buie <https://github.com/gadenbuie>
+#'
 #' @encoding UTF-8
 #' @name rstudiothemes-actions
 #'
@@ -38,7 +41,8 @@ NULL
 
 #' @describeIn rstudiothemes-actions
 #' Install RStudio themes.
-#' @param style Theme group: `"all"`, `"dark"`, or `"light"`.
+#'
+#' @param style Theme group: `"all"`, `"dark"` or `"light"`.
 #' @param destdir Optional directory for `.rstheme` files. By default, it uses
 #'   [rstudioapi::addTheme()], but this argument allows installation to
 #'   non-standard directories.
@@ -92,7 +96,7 @@ install_rstudiothemes <- function(
 }
 
 #' @describeIn rstudiothemes-actions
-#' Remove \CRANpkg{rstudiothemes} themes from RStudio.
+#' Remove bundled \CRANpkg{rstudiothemes} themes from RStudio.
 #'
 #' @export
 remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
@@ -190,8 +194,8 @@ list_pkg_rstudiothemes <- function(
     # Inform the user if some themes are not found.
     if (length(sel) < length(themes)) {
       cli::cli_alert_warning(paste0(
-        "Found {no({length(sel)})} matching theme{?s} among ",
-        "{length(themes)} requested name{?s}, {.str {themes}}."
+        "Matched {no({length(sel)})} theme{?s} among ",
+        "{length(themes)} requested name{?s}: {.str {themes}}."
       ))
       cli::cli_alert_info(paste0(
         "Use {.run rstudiothemes::list_rstudiothemes()} to check the ",
@@ -227,7 +231,8 @@ list_pkg_rstudiothemes <- function(
 }
 
 #' @describeIn rstudiothemes-actions
-#' Preview each \CRANpkg{rstudiothemes} RStudio theme.
+#' Preview each bundled \CRANpkg{rstudiothemes} RStudio theme.
+#'
 #' @param delay Number of seconds to wait between themes. Set to 0 to be
 #'   prompted to continue after each theme.
 #'
@@ -291,7 +296,9 @@ try_rstudiothemes <- function(
       if (tolower(res) == "q") break
     }
   }
-  cli::cli_alert_success("Restoring {.strong {current_theme$editor}}.")
+  cli::cli_alert_success(
+    "Restoring the original theme, {.strong {current_theme$editor}}."
+  )
   rstudioapi::applyTheme(current_theme$editor)
 
   # nocov end

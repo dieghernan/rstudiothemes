@@ -1,8 +1,8 @@
-#' Convert a Visual Studio Code or Positron theme to TextMate
+#' Convert a Visual Studio Code or Positron theme file to TextMate
 #'
 #' @description
 #' Convert a `.json` file representing a Visual Studio Code or Positron theme
-#' and write the equivalent TextMate theme (`.tmTheme`).
+#' and write the equivalent TextMate theme file (`.tmTheme`).
 #'
 #' @inheritParams read_vs_theme
 #' @param outfile Path where the resulting file will be written. Defaults to a
@@ -146,7 +146,7 @@ tmtheme_settings_df <- function(vs_df) {
       paste0(
         "Cannot convert theme because no color was detected for ",
         "{cli::qty(length(miss))}",
-        "setting{?/s} {.str {miss}}."
+        " required setting{?/s} {.str {miss}}."
       )
     )
   }

@@ -3,15 +3,15 @@
 \encoding{UTF-8}
 \name{read_tm_theme}
 \alias{read_tm_theme}
-\title{Read and parse a TextMate theme}
+\title{Read and parse a TextMate theme file}
 \usage{
 read_tm_theme(path)
 }
 \arguments{
-\item{path}{Path or URL to a TextMate theme, in \code{.tmTheme} format.}
+\item{path}{Path or URL to a TextMate theme file, in \code{.tmTheme} format.}
 }
 \value{
-A \link[tibble:tbl_df]{tibble} with the theme data.
+A \link[tibble:tbl_df]{tibble} containing the theme data.
 }
 \description{
 Read a \code{.tmTheme} XML file representing a TextMate or Sublime Text theme.

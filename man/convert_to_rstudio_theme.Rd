@@ -3,7 +3,7 @@
 \encoding{UTF-8}
 \name{convert_to_rstudio_theme}
 \alias{convert_to_rstudio_theme}
-\title{Convert a TextMate, Visual Studio Code or Positron theme to RStudio}
+\title{Convert a TextMate, Visual Studio Code or Positron theme file to RStudio}
 \usage{
 convert_to_rstudio_theme(
   path,
@@ -16,8 +16,8 @@ convert_to_rstudio_theme(
 )
 }
 \arguments{
-\item{path}{Path or URL to a TextMate theme (\code{.tmTheme} format) or a Visual
-Studio Code theme (\code{.json} format).}
+\item{path}{Path or URL to a TextMate theme file (\code{.tmTheme} format) or a
+Visual Studio Code theme file (\code{.json} format).}
 
 \item{outfile}{Path where the resulting file will be written. Defaults to a
 temporary file via \code{\link[=tempfile]{tempfile()}}.}
@@ -37,13 +37,13 @@ with the same name.\cr Default: \code{FALSE}.}
 \item{apply}{Logical. Apply the theme with \code{\link[rstudioapi:applyTheme]{rstudioapi::applyTheme()}}.}
 }
 \value{
-This function is called for its side effects. It writes a new
-\code{.rstheme} file to \code{outfile} and returns the path. If \code{force} or \code{apply}
-is \code{TRUE}, it installs the theme and applies it to your RStudio IDE.
+This function is called for its side effects. It writes a new \code{.rstheme}
+file to \code{outfile} and returns the path. If \code{force} or \code{apply} is \code{TRUE}, it
+installs the theme and applies it to your RStudio IDE.
 }
 \description{
 Convert a \code{.tmTheme} or \code{.json} file that defines a TextMate or Visual
-Studio Code theme and write the equivalent RStudio theme (\code{.rstheme}).
+Studio Code theme and write the equivalent RStudio \code{.rstheme} file.
 
 Optionally, the generated theme can be installed and applied to the
 RStudio IDE.
@@ -82,7 +82,7 @@ if (on_rstudio() && interactive()) {
   # Apply the theme for 10 seconds to demonstrate the effect.
   current_theme <- rstudioapi::getThemeInfo()$editor
 
-  # Current theme name.
+  # Store the current theme name.
   current_theme
   new_rs_theme <- convert_to_rstudio_theme(vstheme,
     name = "A testing theme",

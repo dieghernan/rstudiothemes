@@ -11,7 +11,7 @@ Heavily based on an unreleased version of \code{ids::uuid()}.
 generate_uuid(hint = NULL)
 }
 \arguments{
-\item{hint}{Optional character string, or object coercible with
+\item{hint}{Optional character string or object coercible with
 \code{\link[=as.character]{as.character()}}, to use as a random seed.}
 }
 \value{
@@ -19,7 +19,7 @@ A character string representing a valid UUID that can be validated with
 \code{\link[uuid:UUIDvalidate]{uuid::UUIDvalidate()}}.
 }
 \description{
-Generate version 4 (pseudo-random) Universally Unique Identifiers (UUIDs).
+Generate version 4 pseudo-random Universally Unique Identifiers (UUIDs).
 }
 \details{
 This helper generates a \link[uuid:UUIDvalidate]{UUID} for identifying

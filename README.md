@@ -21,8 +21,8 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 
 <!-- badges: end -->
 
-Convert **Visual Studio Code**, **Positron** and **TextMate** themes
-into custom **RStudio** themes.
+Convert **Visual Studio Code**, **Positron** and **TextMate** theme
+files into custom **RStudio** themes.
 
 This package provides tools to convert **Visual Studio Code**,
 **Positron** and **TextMate** theme files (`.json` and `.tmTheme`
@@ -33,16 +33,16 @@ documentation](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creati
 
 ## Features
 
-- Convert **Visual Studio Code**, **Positron** and **TextMate** themes
-  into **RStudio** `.rstheme` format.
+- Convert **Visual Studio Code**, **Positron** and **TextMate** theme
+  files into **RStudio** `.rstheme` files.
 - Convert themes bidirectionally between **Visual Studio Code** or
   **Positron** and **TextMate** formats.
-- Install ports of popular **Visual Studio Code** and **Positron**
-  themes ready to use in **RStudio**.
+- Install bundled ports of popular **Visual Studio Code** and
+  **Positron** themes ready to use in **RStudio**.
 - Manage custom themes in a reproducible way.
 - Work with standard **R** tooling for installation and testing.
 
-## Built-in themes
+## Bundled themes
 
 This package includes ports of several popular **Visual Studio Code**
 and **Positron** themes, ready to use in **RStudio**. Use
@@ -139,18 +139,18 @@ install.packages(
 
 ## Try the online converter
 
-The online **Shiny** app includes many **rstudiothemes** features and
-lets you convert themes in a browser:
+The online **Shiny** app includes many **rstudiothemes** conversion
+features and lets you convert themes in a browser:
 
 <https://dieghernan-themeconverter.share.connect.posit.cloud/>
 
 ## Converting an existing theme
 
 You can convert any **Visual Studio Code**, **Positron** or **TextMate**
-theme to **RStudio** format with this workflow:
+theme file to **RStudio** `.rstheme` format with this workflow:
 
 1.  Start with a **Visual Studio Code**, **Positron** or **TextMate**
-    theme file, or a URL to an online theme.
+    theme file or a URL to an online theme.
 2.  Use the `convert_to_rstudio_theme()` function to convert and install
     it:
 
@@ -172,7 +172,7 @@ alt="RStudio IDE add theme UI" />
 
 </div>
 
-### Bidirectional theme conversion
+### Convert between theme formats
 
 The package also includes `convert_vs_to_tm_theme()` and
 `convert_tm_to_vs_theme()` for conversion between **Visual Studio
@@ -203,8 +203,8 @@ Contributions are welcome! To contribute to this project:
 <p>
 
 Hernangómez D (2026). <em>rstudiothemes: Create and Install Custom
-RStudio Themes from Visual Studio Code, Positron and TextMate
-Themes</em>.
+RStudio Themes from Visual Studio Code, Positron and TextMate Theme
+Files</em>.
 <a href="https://doi.org/10.32614/CRAN.package.rstudiothemes">doi:10.32614/CRAN.package.rstudiothemes</a>.
 <a href="https://dieghernan.github.io/rstudiothemes/">https://dieghernan.github.io/rstudiothemes/</a>.
 </p>
@@ -213,11 +213,11 @@ A BibTeX entry for LaTeX users:
 
     @Manual{R-rstudiothemes,
       title = {{rstudiothemes}: Create and Install Custom {RStudio} Themes from Visual Studio
-    Code, {Positron} and {TextMate} Themes},
+    Code, {Positron} and {TextMate} Theme Files},
       doi = {10.32614/CRAN.package.rstudiothemes},
       author = {Diego Hernangómez},
       year = {2026},
       version = {1.1.1.9000},
       url = {https://dieghernan.github.io/rstudiothemes/},
-      abstract = {Create, convert and install custom RStudio editor themes from Visual Studio Code, Positron and TextMate themes. Convert themes between TextMate, Visual Studio Code and Positron formats, and install bundled ports of popular themes for use in RStudio.},
+      abstract = {Create, convert and install custom RStudio editor themes from Visual Studio Code, Positron and TextMate theme files. Convert themes between TextMate, Visual Studio Code and Positron formats and install bundled ports of popular themes for use in RStudio.},
     }

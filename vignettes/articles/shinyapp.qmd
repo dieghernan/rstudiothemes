@@ -7,7 +7,7 @@ knitr:
     comment: '#>'
 ---
 
-Use the online converter to convert themes in a browser:
+Use the online converter to convert theme files in a browser:
 <https://dieghernan-themeconverter.share.connect.posit.cloud/>.
 
 ```{=html}

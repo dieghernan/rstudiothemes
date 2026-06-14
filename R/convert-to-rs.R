@@ -1,8 +1,8 @@
-#' Convert a TextMate, Visual Studio Code or Positron theme to RStudio
+#' Convert a TextMate, Visual Studio Code or Positron theme file to RStudio
 #'
 #' @description
 #' Convert a `.tmTheme` or `.json` file that defines a TextMate or Visual
-#' Studio Code theme and write the equivalent RStudio theme (`.rstheme`).
+#' Studio Code theme and write the equivalent RStudio `.rstheme` file.
 #'
 #' Optionally, the generated theme can be installed and applied to the
 #' RStudio IDE.
@@ -32,8 +32,8 @@
 #' For more information, see
 #' <https://docs.posit.co/ide/user/ide/guide/ui/appearance.html>.
 #'
-#' @param path Path or URL to a TextMate theme (`.tmTheme` format) or a Visual
-#'   Studio Code theme (`.json` format).
+#' @param path Path or URL to a TextMate theme file (`.tmTheme` format) or a
+#'   Visual Studio Code theme file (`.json` format).
 #' @param use_italics Logical. Use italics in the resulting theme. The default
 #'   is `TRUE`, although some themes may look better without italics.
 #' @inheritParams rstudioapi::addTheme
@@ -42,9 +42,9 @@
 #' @param apply Logical. Apply the theme with [rstudioapi::applyTheme()].
 #'
 #' @return
-#' This function is called for its side effects. It writes a new
-#' `.rstheme` file to `outfile` and returns the path. If `force` or `apply`
-#' is `TRUE`, it installs the theme and applies it to your RStudio IDE.
+#' This function is called for its side effects. It writes a new `.rstheme`
+#' file to `outfile` and returns the path. If `force` or `apply` is `TRUE`, it
+#' installs the theme and applies it to your RStudio IDE.
 #'
 #' @family functions for creating themes
 #' @seealso [rstudioapi::addTheme()], [rstudioapi::applyTheme()]
@@ -60,7 +60,7 @@
 #'   # Apply the theme for 10 seconds to demonstrate the effect.
 #'   current_theme <- rstudioapi::getThemeInfo()$editor
 #'
-#'   # Current theme name.
+#'   # Store the current theme name.
 #'   current_theme
 #'   new_rs_theme <- convert_to_rstudio_theme(vstheme,
 #'     name = "A testing theme",
@@ -158,7 +158,7 @@ convert_to_rstudio_theme <- function(
   tmcols_scopes <- tmcols_scopes[!empty_row, ]
 
   # Modify selected scopes to adapt them to the ACE editor.
-  ## Convert link-like scopes to href.
+  # Convert link-like scopes to href.
   tmcols_scopes[
     grepl(
       "markup[\\S]*link|link[\\S]*markdown",
@@ -167,14 +167,14 @@ convert_to_rstudio_theme <- function(
     ),
   ]$scope <- "markup.href"
 
-  ## Add an additional markup heading.
+  # Add an additional markup heading.
   heading <- tmcols_scopes[
     grepl("markup.heading", tmcols_scopes$scope, fixed = TRUE),
   ]
   heading$scope <- "heading"
   tmcols_scopes <- rbind(tmcols_scopes, heading)
 
-  ## Meta tags.
+  # Normalize meta tag scopes.
   metan <- c("entity.name.tag.html", "meta.tag")
   tmcols_scopes[tmcols_scopes$scope %in% metan, ]$scope <- "meta.tag"
 
@@ -227,15 +227,16 @@ convert_to_rstudio_theme <- function(
       )
       newr_clean <- newr[!is.na(newr)]
       if (length(newr_clean) == 0) {
+        # Skip empty rules.
         next
-      } # Skip empty rules.
+      }
       specs <- paste0(names(newr_clean), ": ", newr_clean, ";", collapse = " ")
       thisrule <- paste0(cssrule, " {", specs, "}")
       new_css <- c(new_css, thisrule, "")
     }
   }
 
-  ## Build ----
+  # Build ----
   # Create the initial RStudio theme compilation.
   uuid <- generate_uuid()
   tmp <- file.path(tempdir(), uuid)
@@ -381,8 +382,8 @@ create_ace_cascade <- function(tmcols_scopes) {
   )
 
   lev2_end <- more_freq_rule(lev2_end)
-  # Enrich level-1 scopes with color information from level 2.
 
+  # Enrich level-1 scopes with color information from level 2.
   lev1_xtra <- lev2_end
 
   # Limit fontStyle inheritance for color information from higher levels.
