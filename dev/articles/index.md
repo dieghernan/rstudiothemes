@@ -1,18 +1,17 @@
 # Articles
 
-### Guides
+### Get started
 
-Learn the main workflows for installing, previewing and converting
-**RStudio** themes.
+Learn how to install, preview and convert **RStudio** themes.
 
 - [Get started with
   rstudiothemes](https://dieghernan.github.io/rstudiothemes/dev/articles/rstudiothemes.md):
 
   First steps with the rstudiothemes package
 
-### Explore themes
+### Theme guides
 
-Browse the bundled **RStudio** themes and inspect how theme elements map
+Browse bundled **RStudio** themes and understand how theme elements map
 across supported formats.
 
 - [Theme

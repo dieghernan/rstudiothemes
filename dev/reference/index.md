@@ -35,7 +35,7 @@ as tabular data for inspection or conversion workflows.
   [`read_positron_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_vs_theme.md)
   : Read and parse a Visual Studio Code or Positron theme file
 
-## Helpers
+## Helper functions
 
 Check the current IDE and generate theme identifiers.
 
