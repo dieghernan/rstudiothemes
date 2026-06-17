@@ -10,11 +10,9 @@
 #' @param hint Optional character string or object coercible with
 #'   [as.character()]. Used as a random seed.
 #'
-#' @return
+#' @returns
 #' A character string representing a valid UUID that can be validated with
 #' [uuid::UUIDvalidate()].
-#'
-#' @family helpers
 #'
 #' @source Heavily based on an unreleased version of `ids::uuid()`.
 #' @references
@@ -22,6 +20,7 @@
 #' (UUIDs)." RFC 9562. \doi{10.17487/RFC9562},
 #' <https://www.rfc-editor.org/info/rfc9562>.
 #'
+#' @family helpers
 #' @encoding UTF-8
 #' @export
 #'

@@ -5,7 +5,7 @@
 #'
 #' @param path Path or URL to a TextMate theme file, in `.tmTheme` format.
 #'
-#' @return
+#' @returns
 #' A [tibble][tibble::tbl_df()] containing the theme data.
 #'
 #' @family readers

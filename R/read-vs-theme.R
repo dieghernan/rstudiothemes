@@ -204,7 +204,7 @@ read_positron_theme <- read_vs_theme
 #'
 #' @param local_file Path to a JSON file.
 #'
-#' @return
+#' @returns
 #' A parsed list structure from the JSON file, with cleaned formatting.
 #'
 #' @noRd

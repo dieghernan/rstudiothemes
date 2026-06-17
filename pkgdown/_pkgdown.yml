@@ -64,7 +64,7 @@ reference:
 - contents:
   - has_concept("readers")
 
-- title: Helpers
+- title: Helper functions
   desc: >
     Check the current IDE and generate theme identifiers.
 
@@ -83,16 +83,15 @@ authors:
     href: 'https://dieghernan.github.io/'
 
 articles:
-- title: Guides
+- title: Get started
   desc: >
-    Learn the main workflows for installing, previewing and converting
-    **RStudio** themes.
+    Learn how to install, preview and convert **RStudio** themes.
   contents:
   - rstudiothemes
-- title: Explore themes
-  navbar: Bundled themes
+- title: Theme guides
+  navbar: Theme guides
   desc: >
-    Browse the bundled **RStudio** themes and inspect how theme elements map
+    Browse bundled **RStudio** themes and understand how theme elements map
     across supported formats.
   contents:
   - articles/showcase

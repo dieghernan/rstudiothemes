@@ -7,7 +7,7 @@
 #' @inheritParams read_tm_theme
 #' @inheritParams convert_vs_to_tm_theme
 #'
-#' @return
+#' @returns
 #' This function is called for its side effects. It writes a `.json` theme
 #' file to `outfile` and returns the path.
 #'

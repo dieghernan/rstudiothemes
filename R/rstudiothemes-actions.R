@@ -48,7 +48,7 @@ NULL
 #' @param themes Optional character vector of theme names. If provided, only
 #'   these themes are used and `style` is ignored.
 #'
-#' @return
+#' @returns
 #' `install_rstudiothemes()` and `remove_rstudiothemes()` return `NULL`
 #' invisibly.
 #'
@@ -125,7 +125,7 @@ remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
 #'   be listed (default). If `FALSE`, the available themes in the
 #'   \CRANpkg{rstudiothemes} package are listed instead.
 #'
-#' @return
+#' @returns
 #' `list_rstudiothemes()` returns a character vector of theme names.
 #'
 #' @export
@@ -235,7 +235,7 @@ list_pkg_rstudiothemes <- function(
 #' @param delay Number of seconds to wait between themes. Set to 0 to be
 #'   prompted to continue after each theme.
 #'
-#' @return
+#' @returns
 #' `try_rstudiothemes()` has side effects: it starts a widget that allows users
 #' to try different themes. The widget can be exited by following the prompts,
 #' which restore the original theme.

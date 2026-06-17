@@ -41,7 +41,7 @@
 #' @inheritParams convert_vs_to_tm_theme
 #' @param apply Logical. Apply the theme with [rstudioapi::applyTheme()].
 #'
-#' @return
+#' @returns
 #' This function is called for its side effects. It writes a `.rstheme`
 #' file to `outfile` and returns the path. If `force` or `apply` is `TRUE`, it
 #' installs the theme. If `apply` is `TRUE`, it also applies the theme to your

@@ -11,7 +11,7 @@
 #' @param author Theme author. If `NULL`, it attempts to extract the author
 #'   from the input file, otherwise it defaults to "rstudiothemes R package".
 #'
-#' @return
+#' @returns
 #' This function is called for its side effects. It writes a `.tmTheme` file to
 #' `outfile` and returns the file path.
 #'
