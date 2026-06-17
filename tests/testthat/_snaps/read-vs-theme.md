@@ -12,7 +12,7 @@
       read_vs_theme("a.txt")
     Condition
       Error in `read_vs_theme()`:
-      ! The `path` argument must be a "json" file, not "txt".
+      ! The `path` argument must be a '.json' file, not "txt".
 
 ---
 

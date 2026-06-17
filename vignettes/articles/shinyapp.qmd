@@ -1,6 +1,6 @@
 ---
 title: "Online converter"
-description: Convert themes online with the Shiny app
+description: Convert theme files with the online converter
 knitr:
   opts_chunk:
     collapse: true

@@ -7,7 +7,7 @@
 \alias{remove_rstudiothemes}
 \alias{list_rstudiothemes}
 \alias{try_rstudiothemes}
-\title{Install, list, preview or remove RStudio themes}
+\title{Manage RStudio themes}
 \usage{
 install_rstudiothemes(
   style = c("all", "dark", "light"),
@@ -72,13 +72,13 @@ called from other IDEs. The exception is
 \section{Bundled themes}{
 
 \CRANpkg{rstudiothemes} includes RStudio themes based on the following
-Visual Studio Code themes:
+editor themes:
 \itemize{
 \item Ayu Theme by teabyii.
 \item Andromeda Theme by Eliver Lara.
 \item Catppuccin Theme by \href{https://catppuccin.com/}{Catppuccin}.
 \item Cobalt2 Theme by Wes Bos.
-\item CRAN Theme by dieghernan, based on the CRAN (R Project) website theme,
+\item CRAN Theme by dieghernan, based on the CRAN (R Project) website theme
 created with Pandoc.
 \item Dracula Theme by \href{https://draculatheme.com/}{Dracula}.
 \item GitHub Dark and Light Themes by GitHub.

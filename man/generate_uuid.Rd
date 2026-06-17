@@ -12,7 +12,7 @@ generate_uuid(hint = NULL)
 }
 \arguments{
 \item{hint}{Optional character string or object coercible with
-\code{\link[=as.character]{as.character()}}, to use as a random seed.}
+\code{\link[=as.character]{as.character()}}. Used as a random seed.}
 }
 \value{
 A character string representing a valid UUID that can be validated with
@@ -39,12 +39,12 @@ generate_uuid(hint)
 generate_uuid(hint)
 }
 \references{
-Davis KR, Peabody B, Leach P (2024). "Universally Unique
-IDentifiers (UUIDs)." RFC 9562. \doi{10.17487/RFC9562},
+Davis KR, Peabody B and Leach P (2024). "Universally Unique Identifiers
+(UUIDs)." RFC 9562. \doi{10.17487/RFC9562},
 \url{https://www.rfc-editor.org/info/rfc9562}.
 }
 \seealso{
-Other helpers:
+Helper functions:
 \code{\link[=on_rstudio]{on_rstudio()}}
 }
 \concept{helpers}

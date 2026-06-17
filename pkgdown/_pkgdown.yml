@@ -35,70 +35,70 @@ navbar:
 
 home:
   title: >
-    rstudiothemes | Create custom **RStudio** themes from **Visual Studio Code**,
-    **Positron** and **TextMate** theme files
+    rstudiothemes | Create and Install Custom **RStudio** Themes
   description: >
     Create, convert and install custom **RStudio** editor themes from **Visual
     Studio Code**, **Positron** and **TextMate** theme files.
 
 reference:
-- title: Create and convert themes
+- title: Theme converters
   desc: >
-    Convert **Visual Studio Code**, **Positron** and **TextMate** theme files to
-    **RStudio** `.rstheme` files or convert themes between **Visual Studio
-    Code**, **Positron** and **TextMate** formats.
-  contents:
-  - convert_to_rstudio_theme
-  - convert_vs_to_tm_theme
-  - convert_tm_to_vs_theme
+    Convert theme files to **RStudio** `.rstheme` files or convert themes
+    between **Visual Studio Code**, **Positron** and **TextMate** formats.
 
-- title: Install, list, preview or remove themes
+- contents:
+  - has_concept("converters")
+
+- title: Bundled themes
   desc: >
-    Install, list, preview or remove the bundled **RStudio** themes. These
-    functions are adapted from the **rsthemes** package.
-  contents:
+    Install, list, preview or remove bundled **RStudio** themes.
+
+- contents:
   - rstudiothemes-actions
 
-- title: Read themes
+- title: Theme readers
   desc: >
     Read **Visual Studio Code**, **Positron** and **TextMate** theme files as
-    tabular data.
-  contents:
-  - read_tm_theme
-  - read_vs_theme
+    tabular data for inspection or conversion workflows.
+
+- contents:
+  - has_concept("readers")
 
 - title: Helpers
   desc: >
-    Helper functions for environment checks and generated theme identifiers.
-  contents: has_concept("helpers")
+    Check the current IDE and generate theme identifiers.
+
+- contents:
+  - has_concept("helpers")
 
 - title: Package overview
   desc: >
     Learn what the package does and where to start.
-  contents: rstudiothemes-package
+
+- contents:
+  - rstudiothemes-package
 
 authors:
   Diego Hernangómez:
     href: 'https://dieghernan.github.io/'
 
 articles:
-- title: Theme mapping
+- title: Guides
   desc: >
-    See how theme elements map between **Visual Studio Code**, **Positron**,
-    **TextMate** and **RStudio** formats.
-  navbar: Theme mapping
+    Learn the main workflows for installing, previewing and converting
+    **RStudio** themes.
   contents:
-  - articles/mapping
-- title: Theme gallery
+  - rstudiothemes
+- title: Explore themes
   desc: >
-    Preview the bundled **RStudio** themes.
-  navbar: Theme gallery
+    Browse the bundled **RStudio** themes and inspect how theme elements map
+    across supported formats.
   contents:
   - articles/showcase
+  - articles/mapping
 - title: Online converter
   desc: >
-    Convert theme files online with the Shiny app.
-  navbar: Online converter
+    Convert theme files in a browser with the hosted **Shiny** app.
   contents:
   - articles/shinyapp
 

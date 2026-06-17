@@ -30,7 +30,7 @@ read_vs_theme(vstheme)
 
 }
 \seealso{
-Other functions for reading themes:
+Theme readers:
 \code{\link[=read_tm_theme]{read_tm_theme()}}
 }
-\concept{functions for reading themes}
+\concept{readers}

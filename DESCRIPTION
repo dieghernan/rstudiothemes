@@ -1,6 +1,5 @@
 Package: rstudiothemes
-Title: Create and Install Custom 'RStudio' Themes from 'Visual Studio
-    Code', 'Positron' and 'TextMate' Theme Files
+Title: Create and Install Custom 'RStudio' Themes
 Version: 1.1.1.9000
 Authors@R: c(
     person("Diego", "Hernangómez", , "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"),

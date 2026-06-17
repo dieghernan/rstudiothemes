@@ -1,4 +1,4 @@
-#' Convert a TextMate, Visual Studio Code or Positron theme file to RStudio
+#' Convert a theme file to RStudio
 #'
 #' @description
 #' Convert a `.tmTheme` or `.json` file that defines a TextMate or Visual
@@ -42,11 +42,12 @@
 #' @param apply Logical. Apply the theme with [rstudioapi::applyTheme()].
 #'
 #' @return
-#' This function is called for its side effects. It writes a new `.rstheme`
+#' This function is called for its side effects. It writes a `.rstheme`
 #' file to `outfile` and returns the path. If `force` or `apply` is `TRUE`, it
-#' installs the theme and applies it to your RStudio IDE.
+#' installs the theme. If `apply` is `TRUE`, it also applies the theme to your
+#' RStudio IDE.
 #'
-#' @family functions for creating themes
+#' @family converters
 #' @seealso [rstudioapi::addTheme()], [rstudioapi::applyTheme()]
 #' @encoding UTF-8
 #' @export
@@ -60,7 +61,7 @@
 #'   # Apply the theme for 10 seconds to demonstrate the effect.
 #'   current_theme <- rstudioapi::getThemeInfo()$editor
 #'
-#'   # Store the current theme name.
+#'   # Print the current theme name.
 #'   current_theme
 #'   new_rs_theme <- convert_to_rstudio_theme(vstheme,
 #'     name = "A testing theme",
@@ -96,7 +97,7 @@ convert_to_rstudio_theme <- function(
 
   if (!ext %in% valid_ext) {
     cli::cli_abort(paste0(
-      "The {.arg path} argument must be a {.or {.str {valid_ext}}} file",
+      "The {.arg path} argument must be a {.or {.file {valid_ext}}} file",
       ", not {.str {ext}}."
     ))
   }

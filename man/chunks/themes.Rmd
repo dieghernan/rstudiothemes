@@ -2,7 +2,7 @@
 -   Andromeda Theme by Eliver Lara.
 -   Catppuccin Theme by [Catppuccin](https://catppuccin.com/).
 -   Cobalt2 Theme by Wes Bos.
--   CRAN Theme by dieghernan, based on the CRAN (R Project) website theme,
+-   CRAN Theme by dieghernan, based on the CRAN (R Project) website theme
     created with Pandoc.
 -   Dracula Theme by [Dracula](https://draculatheme.com/).
 -   GitHub Dark and Light Themes by GitHub.

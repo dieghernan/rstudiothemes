@@ -12,7 +12,7 @@
       convert_tm_to_vs_theme("a.txt")
     Condition
       Error in `read_tm_theme()`:
-      ! The `path` argument must be a "tmTheme" file, not "txt".
+      ! The `path` argument must be a '.tmTheme' file, not "txt".
 
 ---
 

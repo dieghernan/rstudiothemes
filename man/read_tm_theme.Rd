@@ -31,7 +31,7 @@ readLines(the_theme) |>
 read_tm_theme(the_theme)
 }
 \seealso{
-Other functions for reading themes:
+Theme readers:
 \code{\link[=read_vs_theme]{read_vs_theme()}}
 }
-\concept{functions for reading themes}
+\concept{readers}

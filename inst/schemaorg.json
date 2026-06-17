@@ -24,7 +24,7 @@
       ],
       "description": "Create, convert and install custom 'RStudio' editor themes from 'Visual Studio Code', 'Positron' and 'TextMate' theme files. Convert themes between 'TextMate', 'Visual Studio Code' and 'Positron' formats and install bundled ports of popular themes for use in 'RStudio'.",
       "license": "https://spdx.org/licenses/MIT",
-      "name": "rstudiothemes: Create and Install Custom 'RStudio' Themes from 'Visual Studio\n    Code', 'Positron' and 'TextMate' Theme Files",
+      "name": "rstudiothemes: Create and Install Custom 'RStudio' Themes",
       "programmingLanguage": {
         "type": "ComputerLanguage",
         "name": "R",
@@ -47,7 +47,7 @@
         "familyName": "Hernangómez",
         "givenName": "Diego"
       },
-      "name": "{rstudiothemes}: Create and Install Custom {RStudio} Themes from {Visual Studio Code}, {Positron} and {TextMate} Theme Files"
+      "name": "{rstudiothemes}: Create and Install Custom {RStudio} Themes"
     }
   ]
 }

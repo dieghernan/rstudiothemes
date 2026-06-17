@@ -8,7 +8,7 @@
 #' @return
 #' A [tibble][tibble::tbl_df()] containing the theme data.
 #'
-#' @family functions for reading themes
+#' @family readers
 #' @encoding UTF-8
 #' @export
 #'
@@ -33,7 +33,7 @@ read_tm_theme <- function(path) {
 
   if (tools::file_ext(path) != "tmTheme") {
     cli::cli_abort(paste0(
-      "The {.arg path} argument must be a {.str tmTheme} file",
+      "The {.arg path} argument must be a {.file .tmTheme} file",
       ", not {.str {tools::file_ext(path)}}."
     ))
   }

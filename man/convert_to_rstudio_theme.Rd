@@ -3,7 +3,7 @@
 \encoding{UTF-8}
 \name{convert_to_rstudio_theme}
 \alias{convert_to_rstudio_theme}
-\title{Convert a TextMate, Visual Studio Code or Positron theme file to RStudio}
+\title{Convert a theme file to RStudio}
 \usage{
 convert_to_rstudio_theme(
   path,
@@ -19,10 +19,10 @@ convert_to_rstudio_theme(
 \item{path}{Path or URL to a TextMate theme file (\code{.tmTheme} format) or a
 Visual Studio Code theme file (\code{.json} format).}
 
-\item{outfile}{Path where the resulting file will be written. Defaults to a
-temporary file via \code{\link[=tempfile]{tempfile()}}.}
+\item{outfile}{Path where the resulting file will be written. Defaults to
+a temporary file created with \code{\link[=tempfile]{tempfile()}}.}
 
-\item{name}{Theme name. If \code{NULL}, uses the name from the input file.}
+\item{name}{Theme name. If \code{NULL}, the name from the input file is used.}
 
 \item{use_italics}{Logical. Use italics in the resulting theme. The default
 is \code{TRUE}, although some themes may look better without italics.}
@@ -37,9 +37,10 @@ with the same name.\cr Default: \code{FALSE}.}
 \item{apply}{Logical. Apply the theme with \code{\link[rstudioapi:applyTheme]{rstudioapi::applyTheme()}}.}
 }
 \value{
-This function is called for its side effects. It writes a new \code{.rstheme}
+This function is called for its side effects. It writes a \code{.rstheme}
 file to \code{outfile} and returns the path. If \code{force} or \code{apply} is \code{TRUE}, it
-installs the theme and applies it to your RStudio IDE.
+installs the theme. If \code{apply} is \code{TRUE}, it also applies the theme to your
+RStudio IDE.
 }
 \description{
 Convert a \code{.tmTheme} or \code{.json} file that defines a TextMate or Visual
@@ -82,7 +83,7 @@ if (on_rstudio() && interactive()) {
   # Apply the theme for 10 seconds to demonstrate the effect.
   current_theme <- rstudioapi::getThemeInfo()$editor
 
-  # Store the current theme name.
+  # Print the current theme name.
   current_theme
   new_rs_theme <- convert_to_rstudio_theme(vstheme,
     name = "A testing theme",
@@ -98,8 +99,8 @@ if (on_rstudio() && interactive()) {
 \seealso{
 \code{\link[rstudioapi:addTheme]{rstudioapi::addTheme()}}, \code{\link[rstudioapi:applyTheme]{rstudioapi::applyTheme()}}
 
-Other functions for creating themes:
+Theme converters:
 \code{\link[=convert_tm_to_vs_theme]{convert_tm_to_vs_theme()}},
 \code{\link[=convert_vs_to_tm_theme]{convert_vs_to_tm_theme()}}
 }
-\concept{functions for creating themes}
+\concept{converters}

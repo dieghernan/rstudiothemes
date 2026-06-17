@@ -5,17 +5,17 @@
 #' and write the equivalent TextMate theme file (`.tmTheme`).
 #'
 #' @inheritParams read_vs_theme
-#' @param outfile Path where the resulting file will be written. Defaults to a
-#'   temporary file via [tempfile()].
-#' @param name Theme name. If `NULL`, uses the name from the input file.
+#' @param outfile Path where the resulting file will be written. Defaults to
+#'   a temporary file created with [tempfile()].
+#' @param name Theme name. If `NULL`, the name from the input file is used.
 #' @param author Theme author. If `NULL`, it attempts to extract the author
-#'   from the input file, otherwise defaults to "rstudiothemes R package".
+#'   from the input file, otherwise it defaults to "rstudiothemes R package".
 #'
 #' @return
 #' This function is called for its side effects. It writes a `.tmTheme` file to
 #' `outfile` and returns the file path.
 #'
-#' @family functions for creating themes
+#' @family converters
 #' @encoding UTF-8
 #' @rdname convert_vs_to_tm_theme
 #' @export
@@ -146,7 +146,7 @@ tmtheme_settings_df <- function(vs_df) {
       paste0(
         "Cannot convert theme because no color was detected for ",
         "{cli::qty(length(miss))}",
-        " required setting{?/s} {.str {miss}}."
+        " required setting{?/s}: {.str {miss}}."
       )
     )
   }

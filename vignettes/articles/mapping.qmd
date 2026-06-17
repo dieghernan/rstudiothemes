@@ -1,7 +1,7 @@
 ---
 title: "Theme mapping"
-subtitle: Map elements between theme specifications
-description: Map elements between theme specifications
+subtitle: Map theme elements between formats
+description: Map theme elements between formats
 tbl-cap-location: bottom
 knitr:
   opts_chunk:
@@ -19,8 +19,8 @@ Sources:
 - **TextMate** and **RStudio**:
   <https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html>
 
-When several source elements map to the same target element, priority
-determines which mapping is used.
+When several source elements map to the same target element, mapping priority
+determines which value is used.
 
 ::: {#tbl-map}
 ```{r}
@@ -30,5 +30,5 @@ tb <- read.csv(system.file("csv/mapping.csv", package = "rstudiothemes"))
 knitr::kable(tb)
 ```
 
-Mapping between theme elements.
+Mapping between theme elements and formats.
 :::

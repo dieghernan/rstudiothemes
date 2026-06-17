@@ -8,10 +8,10 @@
 #' @inheritParams convert_vs_to_tm_theme
 #'
 #' @return
-#' This function is called for its side effects. It writes a new `.json` theme
+#' This function is called for its side effects. It writes a `.json` theme
 #' file to `outfile` and returns the path.
 #'
-#' @family functions for creating themes
+#' @family converters
 #' @encoding UTF-8
 #' @rdname convert_tm_to_vs_theme
 #' @export

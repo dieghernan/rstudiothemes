@@ -7,8 +7,7 @@ cff-version: 1.2.0
 message: 'To cite package "rstudiothemes" in publications use:'
 type: software
 license: MIT
-title: 'rstudiothemes: Create and Install Custom ''RStudio'' Themes from ''Visual
-  Studio Code'', ''Positron'' and ''TextMate'' Theme Files'
+title: 'rstudiothemes: Create and Install Custom ''RStudio'' Themes'
 version: 1.1.1.9000
 doi: 10.32614/CRAN.package.rstudiothemes
 identifiers:
@@ -25,8 +24,7 @@ authors:
   orcid: https://orcid.org/0000-0001-8457-4658
 preferred-citation:
   type: manual
-  title: 'rstudiothemes: Create and Install Custom RStudio Themes from Visual Studio
-    Code, Positron and TextMate Theme Files'
+  title: 'rstudiothemes: Create and Install Custom RStudio Themes'
   authors:
   - family-names: Hernangómez
     given-names: Diego

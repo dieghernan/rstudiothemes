@@ -5,7 +5,7 @@
         "Selenized Light"))
     Message
       ! Matched 1 theme among 2 requested names: "XXX" and "Selenized Light".
-      i Use `rstudiothemes::list_rstudiothemes()` to check the available names.
+      i Use `rstudiothemes::list_rstudiothemes()` to check available names.
 
 ---
 
@@ -13,7 +13,7 @@
       nn <- list_pkg_rstudiothemes(themes = c("a", "b"))
     Message
       ! Matched no themes among 2 requested names: "a" and "b".
-      i Use `rstudiothemes::list_rstudiothemes()` to check the available names.
+      i Use `rstudiothemes::list_rstudiothemes()` to check available names.
 
 ---
 
@@ -21,7 +21,7 @@
       nn <- list_pkg_rstudiothemes(themes = "a")
     Message
       ! Matched no themes among 1 requested name: "a".
-      i Use `rstudiothemes::list_rstudiothemes()` to check the available names.
+      i Use `rstudiothemes::list_rstudiothemes()` to check available names.
 
 ---
 
@@ -30,7 +30,7 @@
         "Selenized Light", "Selenized Dark"))
     Message
       ! Matched 2 themes among 3 requested names: "XXX", "Selenized Light", and "Selenized Dark".
-      i Use `rstudiothemes::list_rstudiothemes()` to check the available names.
+      i Use `rstudiothemes::list_rstudiothemes()` to check available names.
 
 # How to install
 

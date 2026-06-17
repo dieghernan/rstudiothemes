@@ -4,7 +4,7 @@
 \name{rstudiothemes-package}
 \alias{rstudiothemes}
 \alias{rstudiothemes-package}
-\title{rstudiothemes: Create and Install Custom 'RStudio' Themes from 'Visual Studio Code', 'Positron' and 'TextMate' Theme Files}
+\title{rstudiothemes: Create and Install Custom 'RStudio' Themes}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 

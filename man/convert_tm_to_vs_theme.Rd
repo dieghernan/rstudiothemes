@@ -23,16 +23,16 @@ convert_tm_to_positron_theme(
 \arguments{
 \item{path}{Path or URL to a TextMate theme file, in \code{.tmTheme} format.}
 
-\item{outfile}{Path where the resulting file will be written. Defaults to a
-temporary file via \code{\link[=tempfile]{tempfile()}}.}
+\item{outfile}{Path where the resulting file will be written. Defaults to
+a temporary file created with \code{\link[=tempfile]{tempfile()}}.}
 
-\item{name}{Theme name. If \code{NULL}, uses the name from the input file.}
+\item{name}{Theme name. If \code{NULL}, the name from the input file is used.}
 
 \item{author}{Theme author. If \code{NULL}, it attempts to extract the author
-from the input file, otherwise defaults to "rstudiothemes R package".}
+from the input file, otherwise it defaults to "rstudiothemes R package".}
 }
 \value{
-This function is called for its side effects. It writes a new \code{.json} theme
+This function is called for its side effects. It writes a \code{.json} theme
 file to \code{outfile} and returns the path.
 }
 \description{
@@ -53,8 +53,8 @@ readLines(path) |>
 
 }
 \seealso{
-Other functions for creating themes:
+Theme converters:
 \code{\link[=convert_to_rstudio_theme]{convert_to_rstudio_theme()}},
 \code{\link[=convert_vs_to_tm_theme]{convert_vs_to_tm_theme()}}
 }
-\concept{functions for creating themes}
+\concept{converters}

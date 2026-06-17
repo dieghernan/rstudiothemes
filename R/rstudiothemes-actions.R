@@ -1,6 +1,6 @@
 # nocov start
 
-#' Install, list, preview or remove RStudio themes
+#' Manage RStudio themes
 #'
 #' @description
 #' Install, list, preview or remove the RStudio themes included in
@@ -20,7 +20,7 @@
 #'
 #' @section Bundled themes:
 #' \CRANpkg{rstudiothemes} includes RStudio themes based on the following
-#' Visual Studio Code themes:
+#' editor themes:
 #'
 #' ```{r child="man/chunks/themes.Rmd"}
 #'
@@ -31,7 +31,6 @@
 #' <https://github.com/gadenbuie/rsthemes>.
 #'
 #' @author Garrick Aden-Buie <https://github.com/gadenbuie>
-#'
 #' @encoding UTF-8
 #' @name rstudiothemes-actions
 #'
@@ -114,7 +113,7 @@ remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
     rstudioapi::removeTheme(theme)
   }
 
-  cli::cli_alert_success("Uninstalled {length(themes)} themes.")
+  cli::cli_alert_success("Uninstalled {length(themes)} theme{?s}.")
 }
 
 # nocov end
@@ -198,7 +197,7 @@ list_pkg_rstudiothemes <- function(
         "{length(themes)} requested name{?s}: {.str {themes}}."
       ))
       cli::cli_alert_info(paste0(
-        "Use {.run rstudiothemes::list_rstudiothemes()} to check the ",
+        "Use {.run rstudiothemes::list_rstudiothemes()} to check ",
         "available names."
       ))
     }
@@ -279,7 +278,7 @@ try_rstudiothemes <- function(
   ))
   cli::cli_alert("At the prompt, choose one of:")
   cli::cli_bullets(c(
-    "*" = "{.kbd n} or {.kbd {' '}} (empty) to try the {.strong next} theme.",
+    "*" = "{.kbd n} or {.kbd SPACE} to try the {.strong next} theme.",
     "*" = "{.kbd k} to {.strong keep} that theme.",
     "*" = "{.kbd q} to {.strong quit} and restore your original theme."
   ))

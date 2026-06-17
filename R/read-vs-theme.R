@@ -8,7 +8,7 @@
 #'
 #' @inherit read_tm_theme return
 #'
-#' @family functions for reading themes
+#' @family readers
 #' @encoding UTF-8
 #' @rdname read_vs_theme
 #' @export
@@ -27,7 +27,7 @@ read_vs_theme <- function(path) {
 
   if (tools::file_ext(path) != "json") {
     cli::cli_abort(paste0(
-      "The {.arg path} argument must be a {.str json} file",
+      "The {.arg path} argument must be a {.file .json} file",
       ", not {.str {tools::file_ext(path)}}."
     ))
   }

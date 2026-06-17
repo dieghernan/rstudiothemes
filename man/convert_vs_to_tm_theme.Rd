@@ -24,13 +24,13 @@ convert_positron_to_tm_theme(
 \item{path}{Path or URL to a Visual Studio Code or Positron theme file, in
 \code{.json} format.}
 
-\item{outfile}{Path where the resulting file will be written. Defaults to a
-temporary file via \code{\link[=tempfile]{tempfile()}}.}
+\item{outfile}{Path where the resulting file will be written. Defaults to
+a temporary file created with \code{\link[=tempfile]{tempfile()}}.}
 
-\item{name}{Theme name. If \code{NULL}, uses the name from the input file.}
+\item{name}{Theme name. If \code{NULL}, the name from the input file is used.}
 
 \item{author}{Theme author. If \code{NULL}, it attempts to extract the author
-from the input file, otherwise defaults to "rstudiothemes R package".}
+from the input file, otherwise it defaults to "rstudiothemes R package".}
 }
 \value{
 This function is called for its side effects. It writes a \code{.tmTheme} file to
@@ -54,8 +54,8 @@ readLines(path) |>
 
 }
 \seealso{
-Other functions for creating themes:
+Theme converters:
 \code{\link[=convert_tm_to_vs_theme]{convert_tm_to_vs_theme()}},
 \code{\link[=convert_to_rstudio_theme]{convert_to_rstudio_theme()}}
 }
-\concept{functions for creating themes}
+\concept{converters}

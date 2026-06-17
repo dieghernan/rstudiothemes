@@ -8,7 +8,7 @@
 #' generated theme versions.
 #'
 #' @param hint Optional character string or object coercible with
-#'   [as.character()], to use as a random seed.
+#'   [as.character()]. Used as a random seed.
 #'
 #' @return
 #' A character string representing a valid UUID that can be validated with
@@ -18,8 +18,8 @@
 #'
 #' @source Heavily based on an unreleased version of `ids::uuid()`.
 #' @references
-#' Davis KR, Peabody B, Leach P (2024). "Universally Unique
-#' IDentifiers (UUIDs)." RFC 9562. \doi{10.17487/RFC9562},
+#' Davis KR, Peabody B and Leach P (2024). "Universally Unique Identifiers
+#' (UUIDs)." RFC 9562. \doi{10.17487/RFC9562},
 #' <https://www.rfc-editor.org/info/rfc9562>.
 #'
 #' @encoding UTF-8

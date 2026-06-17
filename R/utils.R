@@ -165,7 +165,7 @@ require_rstudio <- function(caller) {
   gui <- detect_gui() # nolint
   cli::cli_alert_danger(paste0(
     "{.fn rstudiothemes::{caller}} can only run in RStudio, ",
-    "not in {gui}."
+    "not in {.str {gui}}."
   ))
   cli::cli_alert("No changes made.")
 

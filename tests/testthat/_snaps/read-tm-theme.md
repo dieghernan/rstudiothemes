@@ -12,7 +12,7 @@
       read_tm_theme("a.txt")
     Condition
       Error in `read_tm_theme()`:
-      ! The `path` argument must be a "tmTheme" file, not "txt".
+      ! The `path` argument must be a '.tmTheme' file, not "txt".
 
 ---
 
@@ -20,7 +20,7 @@
       read_tm_theme("a.json")
     Condition
       Error in `read_tm_theme()`:
-      ! The `path` argument must be a "tmTheme" file, not "json".
+      ! The `path` argument must be a '.tmTheme' file, not "json".
 
 # Test simple theme
 

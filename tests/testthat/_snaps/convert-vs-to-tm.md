@@ -12,7 +12,7 @@
       convert_vs_to_tm_theme("a.txt")
     Condition
       Error in `read_vs_theme()`:
-      ! The `path` argument must be a "json" file, not "txt".
+      ! The `path` argument must be a '.json' file, not "txt".
 
 ---
 
@@ -28,7 +28,7 @@
       convert_vs_to_tm_theme(tmp_path)
     Condition
       Error in `tmtheme_settings_df()`:
-      ! Cannot convert theme because no color was detected for required setting "background".
+      ! Cannot convert theme because no color was detected for required setting: "background".
 
 # Theme creation
 
