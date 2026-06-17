@@ -17,7 +17,7 @@ Heavily based on an unreleased version of `ids::uuid()`.
 - hint:
 
   Optional character string or object coercible with
-  [`as.character()`](https://rdrr.io/r/base/character.html), to use as a
+  [`as.character()`](https://rdrr.io/r/base/character.html). Used as a
   random seed.
 
 ## Value
@@ -33,14 +33,14 @@ generated theme versions.
 
 ## References
 
-Davis KR, Peabody B, Leach P (2024). "Universally Unique IDentifiers
+Davis KR, Peabody B and Leach P (2024). "Universally Unique Identifiers
 (UUIDs)." RFC 9562.
 [doi:10.17487/RFC9562](https://doi.org/10.17487/RFC9562) ,
 <https://www.rfc-editor.org/info/rfc9562>.
 
 ## See also
 
-Other helpers:
+Helper functions:
 [`on_rstudio()`](https://dieghernan.github.io/rstudiothemes/dev/reference/on_rstudio.md)
 
 ## Examples

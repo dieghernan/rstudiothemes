@@ -1,4 +1,4 @@
-# Convert a TextMate, Visual Studio Code or Positron theme file to RStudio
+# Convert a theme file to RStudio
 
 Convert a `.tmTheme` or `.json` file that defines a TextMate or Visual
 Studio Code theme and write the equivalent RStudio `.rstheme` file.
@@ -33,11 +33,12 @@ convert_to_rstudio_theme(
 - outfile:
 
   Path where the resulting file will be written. Defaults to a temporary
-  file via [`tempfile()`](https://rdrr.io/r/base/tempfile.html).
+  file created with
+  [`tempfile()`](https://rdrr.io/r/base/tempfile.html).
 
 - name:
 
-  Theme name. If `NULL`, uses the name from the input file.
+  Theme name. If `NULL`, the name from the input file is used.
 
 - use_italics:
 
@@ -62,9 +63,10 @@ convert_to_rstudio_theme(
 
 ## Value
 
-This function is called for its side effects. It writes a new `.rstheme`
+This function is called for its side effects. It writes a `.rstheme`
 file to `outfile` and returns the path. If `force` or `apply` is `TRUE`,
-it installs the theme and applies it to your RStudio IDE.
+it installs the theme. If `apply` is `TRUE`, it also applies the theme
+to your RStudio IDE.
 
 ## Details
 
@@ -88,7 +90,7 @@ For more information, see
 [`rstudioapi::addTheme()`](https://rstudio.github.io/rstudioapi/reference/addTheme.html),
 [`rstudioapi::applyTheme()`](https://rstudio.github.io/rstudioapi/reference/applyTheme.html)
 
-Other functions for creating themes:
+Theme converters:
 [`convert_tm_to_vs_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_tm_to_vs_theme.md),
 [`convert_vs_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_vs_to_tm_theme.md)
 
@@ -103,7 +105,7 @@ if (on_rstudio() && interactive()) {
   # Apply the theme for 10 seconds to demonstrate the effect.
   current_theme <- rstudioapi::getThemeInfo()$editor
 
-  # Store the current theme name.
+  # Print the current theme name.
   current_theme
   new_rs_theme <- convert_to_rstudio_theme(vstheme,
     name = "A testing theme",

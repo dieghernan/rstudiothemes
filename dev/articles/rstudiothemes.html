@@ -55,20 +55,7 @@
       <ul class="navbar-nav me-auto">
 <li class="active nav-item"><a class="nav-link" href="../articles/rstudiothemes.html">Get started</a></li>
 <li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
-<li class="nav-item dropdown">
-  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><hr class="dropdown-divider"></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Theme mapping</h6></li>
-    <li><a class="dropdown-item" href="../articles/mapping.html">Theme mapping</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Theme gallery</h6></li>
-    <li><a class="dropdown-item" href="../articles/showcase.html">Theme gallery</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Online converter</h6></li>
-    <li><a class="dropdown-item" href="../articles/shinyapp.html">Online converter</a></li>
-  </ul>
-</li>
+<li class="nav-item"><a class="nav-link" href="../articles/index.html">Articles</a></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
 <ul class="navbar-nav">
@@ -107,14 +94,14 @@
 
 
 
-    <p>The <strong>rstudiothemes</strong> package provides tools to convert <strong>Visual Studio Code</strong>, <strong>Positron</strong> and <strong>TextMate</strong> themes into <strong>RStudio</strong> <code>.rstheme</code> files and install them in your <strong>RStudio</strong> IDE. It also includes bundled <strong>RStudio</strong> themes.</p>
+    <p>The <strong>rstudiothemes</strong> package provides tools to convert <strong>Visual Studio Code</strong>, <strong>Positron</strong> and <strong>TextMate</strong> theme files to <strong>RStudio</strong> <code>.rstheme</code> files and install them in your <strong>RStudio</strong> IDE. It also includes bundled <strong>RStudio</strong> themes.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dieghernan.github.io/rstudiothemes/">rstudiothemes</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <section class="level2"><h2 id="installing-bundled-themes">Installing bundled themes<a class="anchor" aria-label="anchor" href="#installing-bundled-themes"></a>
 </h2>
-<p>To install all bundled <strong>RStudio</strong> themes that come with this package:</p>
+<p>To install all bundled <strong>RStudio</strong> themes:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/rstudiothemes-actions.html">install_rstudiothemes</a></span><span class="op">(</span><span class="op">)</span></span>
@@ -149,7 +136,7 @@
 </div>
 </section><section class="level2"><h2 id="trying-themes">Trying themes<a class="anchor" aria-label="anchor" href="#trying-themes"></a>
 </h2>
-<p>You can quickly preview themes from R:</p>
+<p>You can preview installed themes from an R session:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/rstudiothemes-actions.html">try_rstudiothemes</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
@@ -173,7 +160,7 @@ Figure 1: Screenshot of the Winter is Coming Dark Blue theme.
 <p>Alternatively, in <strong>RStudio</strong>, go to <strong>Tools &gt; Global Options &gt; Appearance &gt; Add</strong> and select the installed theme.</p>
 </section><section class="level2"><h2 id="converting-your-own-themes">Converting your own themes<a class="anchor" aria-label="anchor" href="#converting-your-own-themes"></a>
 </h2>
-<p>You can convert a <strong>Visual Studio Code</strong>, <strong>Positron</strong> or <strong>TextMate</strong> theme file into an <strong>RStudio</strong> theme:</p>
+<p>You can convert a <strong>Visual Studio Code</strong>, <strong>Positron</strong> or <strong>TextMate</strong> theme file to an <strong>RStudio</strong> <code>.rstheme</code> file:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme</a></span><span class="op">(</span></span>
@@ -182,7 +169,7 @@ Figure 1: Screenshot of the Winter is Coming Dark Blue theme.
 <span>  force <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 </div>
-<p>This function writes the <code>.rstheme</code> file, installs it and applies it after installation when <code>apply = TRUE</code>.</p>
+<p>This function writes the <code>.rstheme</code> file, installs it and applies it when <code>apply = TRUE</code>.</p>
 </section><section class="level2"><h2 id="workflow-example-from-visual-studio-code-or-positron-to-rstudio">Workflow example: from Visual Studio Code or Positron to RStudio<a class="anchor" aria-label="anchor" href="#workflow-example-from-visual-studio-code-or-positron-to-rstudio"></a>
 </h2>
 <ul>
@@ -196,7 +183,7 @@ Figure 1: Screenshot of the Winter is Coming Dark Blue theme.
 <ul>
 <li>List installed themes with <code>list_rstudiothemes(list_installed = TRUE)</code>.</li>
 <li>Filter themes by <code>"light"</code> or <code>"dark"</code> style.</li>
-<li>Use the Add Theme UI in <strong>RStudio</strong>’s <strong>Global Options &gt; Appearance &gt; Add</strong> to manually add <code>.rstheme</code> files that you have created or converted.</li>
+<li>Use the Add Theme UI in the <strong>RStudio</strong> IDE <strong>Global Options &gt; Appearance &gt; Add</strong> to manually add <code>.rstheme</code> files that you have created or converted.</li>
 </ul></section><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);

@@ -1,29 +1,35 @@
 # Articles
 
-### Theme mapping
+### Guides
 
-See how theme elements map between **Visual Studio Code**, **Positron**,
-**TextMate** and **RStudio** formats.
+Learn the main workflows for installing, previewing and converting
+**RStudio** themes.
 
-- [Theme
-  mapping](https://dieghernan.github.io/rstudiothemes/dev/articles/mapping.md):
+- [Get started with
+  rstudiothemes](https://dieghernan.github.io/rstudiothemes/dev/articles/rstudiothemes.md):
 
-  Map elements between theme specifications
+  First steps with the rstudiothemes package
 
-### Theme gallery
+### Explore themes
 
-Preview the bundled **RStudio** themes.
+Browse the bundled **RStudio** themes and inspect how theme elements map
+across supported formats.
 
 - [Theme
   gallery](https://dieghernan.github.io/rstudiothemes/dev/articles/showcase.md):
 
-  Preview the bundled RStudio themes
+  Preview bundled RStudio themes
+
+- [Theme
+  mapping](https://dieghernan.github.io/rstudiothemes/dev/articles/mapping.md):
+
+  Map theme elements between formats
 
 ### Online converter
 
-Convert theme files online with the Shiny app.
+Convert theme files in a browser with the hosted **Shiny** app.
 
 - [Online
   converter](https://dieghernan.github.io/rstudiothemes/dev/articles/shinyapp.md):
 
-  Convert themes online with the Shiny app
+  Convert theme files with the online converter

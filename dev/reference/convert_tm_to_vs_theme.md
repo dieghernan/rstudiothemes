@@ -33,25 +33,26 @@ convert_tm_to_positron_theme(
 - outfile:
 
   Path where the resulting file will be written. Defaults to a temporary
-  file via [`tempfile()`](https://rdrr.io/r/base/tempfile.html).
+  file created with
+  [`tempfile()`](https://rdrr.io/r/base/tempfile.html).
 
 - name:
 
-  Theme name. If `NULL`, uses the name from the input file.
+  Theme name. If `NULL`, the name from the input file is used.
 
 - author:
 
   Theme author. If `NULL`, it attempts to extract the author from the
-  input file, otherwise defaults to "rstudiothemes R package".
+  input file, otherwise it defaults to "rstudiothemes R package".
 
 ## Value
 
-This function is called for its side effects. It writes a new `.json`
-theme file to `outfile` and returns the path.
+This function is called for its side effects. It writes a `.json` theme
+file to `outfile` and returns the path.
 
 ## See also
 
-Other functions for creating themes:
+Theme converters:
 [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_to_rstudio_theme.md),
 [`convert_vs_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_vs_to_tm_theme.md)
 

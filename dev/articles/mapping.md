@@ -11,8 +11,8 @@ Sources:
 - **TextMate** and **RStudio**:
   <https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html>
 
-When several source elements map to the same target element, priority
-determines which mapping is used.
+When several source elements map to the same target element, mapping
+priority determines which value is used.
 
 | priority | tm | vscode | rstheme |
 |---:|:---|:---|:---|
@@ -63,4 +63,4 @@ determines which mapping is used.
 | 4 | invalid | editorBracketHighlight.unexpectedBracket.foreground |  |
 | 1 | markup.heading |  | .ace_heading |
 
-Table 1: Mapping between theme elements.
+Table 1: Mapping between theme elements and formats.

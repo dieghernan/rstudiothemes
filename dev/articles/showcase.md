@@ -1,6 +1,6 @@
 # Theme gallery
 
-This article previews the **RStudio** themes bundled with
+This article previews the bundled **RStudio** themes included in
 **rstudiothemes**.
 
 Install the bundled themes with:
@@ -10,7 +10,7 @@ Install the bundled themes with:
 rstudiothemes::install_rstudiothemes()
 ```
 
-All bundled themes are also distributed in a single `.zip` file:
+The bundled themes are also distributed in a single `.zip` file:
 [dist/rstudiothemes.zip](https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip).
 Unzip the file and install the themes using the [**RStudio** IDE
 interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
@@ -19,7 +19,7 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 ![RStudio IDE add theme UI](rstudiogui.png)
 
-Figure 1: RStudio IDE Add Theme UI.
+Figure 1: RStudio IDE add theme UI.
 
 ## Lightbox gallery
 

@@ -15,12 +15,12 @@ Source:
 [`inst/CITATION`](https://github.com/dieghernan/rstudiothemes/blob/main/inst/CITATION)
 
 Hernangómez D (2026). *rstudiothemes: Create and Install Custom RStudio
-Themes from Visual Studio Code, Positron and TextMate Theme Files*.
+Themes*.
 [doi:10.32614/CRAN.package.rstudiothemes](https://doi.org/10.32614/CRAN.package.rstudiothemes).
 <https://dieghernan.github.io/rstudiothemes/>.
 
     @Manual{R-rstudiothemes,
-      title = {{rstudiothemes}: Create and Install Custom {RStudio} Themes from {Visual Studio Code}, {Positron} and {TextMate} Theme Files},
+      title = {{rstudiothemes}: Create and Install Custom {RStudio} Themes},
       doi = {10.32614/CRAN.package.rstudiothemes},
       author = {Diego Hernangómez},
       year = {2026},

@@ -26,7 +26,7 @@ containing the theme data.
 
 ## See also
 
-Other functions for reading themes:
+Theme readers:
 [`read_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_tm_theme.md)
 
 ## Examples

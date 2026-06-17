@@ -34,16 +34,17 @@ convert_positron_to_tm_theme(
 - outfile:
 
   Path where the resulting file will be written. Defaults to a temporary
-  file via [`tempfile()`](https://rdrr.io/r/base/tempfile.html).
+  file created with
+  [`tempfile()`](https://rdrr.io/r/base/tempfile.html).
 
 - name:
 
-  Theme name. If `NULL`, uses the name from the input file.
+  Theme name. If `NULL`, the name from the input file is used.
 
 - author:
 
   Theme author. If `NULL`, it attempts to extract the author from the
-  input file, otherwise defaults to "rstudiothemes R package".
+  input file, otherwise it defaults to "rstudiothemes R package".
 
 ## Value
 
@@ -52,7 +53,7 @@ file to `outfile` and returns the file path.
 
 ## See also
 
-Other functions for creating themes:
+Theme converters:
 [`convert_tm_to_vs_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_tm_to_vs_theme.md),
 [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_to_rstudio_theme.md)
 

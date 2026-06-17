@@ -1,4 +1,4 @@
-# Install, list, preview or remove RStudio themes
+# Manage RStudio themes
 
 Install, list, preview or remove the RStudio themes included in
 [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes). These
@@ -84,8 +84,7 @@ prompts, which restore the original theme.
 ## Bundled themes
 
 [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
-includes RStudio themes based on the following Visual Studio Code
-themes:
+includes RStudio themes based on the following editor themes:
 
 - Ayu Theme by teabyii.
 
@@ -95,7 +94,7 @@ themes:
 
 - Cobalt2 Theme by Wes Bos.
 
-- CRAN Theme by dieghernan, based on the CRAN (R Project) website theme,
+- CRAN Theme by dieghernan, based on the CRAN (R Project) website theme
   created with Pandoc.
 
 - Dracula Theme by [Dracula](https://draculatheme.com/).

@@ -22,7 +22,7 @@ containing the theme data.
 
 ## See also
 
-Other functions for reading themes:
+Theme readers:
 [`read_vs_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_vs_theme.md)
 
 ## Examples
