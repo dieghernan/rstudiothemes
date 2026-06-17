@@ -90,6 +90,7 @@ articles:
   contents:
   - rstudiothemes
 - title: Explore themes
+  navbar: Bundled themes
   desc: >
     Browse the bundled **RStudio** themes and inspect how theme elements map
     across supported formats.
@@ -97,6 +98,7 @@ articles:
   - articles/showcase
   - articles/mapping
 - title: Online converter
+  navbar: Online converter
   desc: >
     Convert theme files in a browser with the hosted **Shiny** app.
   contents:
