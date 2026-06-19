@@ -1,9 +1,9 @@
-# rstudiothemes: Create and Install Custom 'RStudio' Themes from 'Visual Studio Code', 'Positron' and 'TextMate' Themes
+# rstudiothemes: Create and Install Custom 'RStudio' Themes
 
-Create and install custom 'RStudio' editor themes from 'Visual Studio
-Code', 'Positron' and 'TextMate' themes. Convert themes between
-'TextMate' and 'Visual Studio Code' or 'Positron' formats, and install
-bundled ports of popular 'Visual Studio Code' and 'Positron' themes.
+Create, convert and install custom 'RStudio' editor themes from 'Visual
+Studio Code', 'Positron' and 'TextMate' theme files. Convert themes
+between 'TextMate', 'Visual Studio Code' and 'Positron' formats and
+install bundled ports of popular themes for use in 'RStudio'.
 
 ## See also
 

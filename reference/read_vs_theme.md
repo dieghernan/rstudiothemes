@@ -1,4 +1,4 @@
-# Read and parse a Visual Studio Code or Positron theme
+# Read and parse a Visual Studio Code or Positron theme file
 
 Read a `.json` file representing a Visual Studio Code or Positron theme.
 
@@ -16,17 +16,17 @@ read_positron_theme(path)
 
 - path:
 
-  Path or URL to a Visual Studio Code or Positron theme, in `.json`
+  Path or URL to a Visual Studio Code or Positron theme file, in `.json`
   format.
 
 ## Value
 
 A [tibble](https://tibble.tidyverse.org/reference/tbl_df-class.html)
-with the data of the theme.
+containing the theme data.
 
 ## See also
 
-Other functions for reading themes:
+Theme readers:
 [`read_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/read_tm_theme.md)
 
 ## Examples

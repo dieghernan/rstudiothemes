@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Showcase • rstudiothemes</title>
+<title>Theme gallery • rstudiothemes</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
 <link rel="icon" type="”image/svg+xml”" href="../favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
@@ -24,7 +24,7 @@
 <link href="showcase_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <script src="showcase_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script><link href="showcase_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="showcase_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
-<!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Showcase">
+<!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Theme gallery">
 <meta property="og:image" content="https://dieghernan.github.io/rstudiothemes/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@dhernangomez">
@@ -45,7 +45,7 @@
 
     <a class="navbar-brand me-2" href="../index.html"><img src="../apple-touch-icon.png" alt="rstudiothemes logo" height="34" width="34" class="d-inline-block me-1">rstudiothemes</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.1.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.1.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,14 +60,14 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
 <li><hr class="dropdown-divider"></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Theme mapping</h6></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Theme guides</h6></li>
+    <li><a class="dropdown-item" href="../articles/showcase.html">Theme gallery</a></li>
     <li><a class="dropdown-item" href="../articles/mapping.html">Theme mapping</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Theme gallery</h6></li>
-    <li><a class="dropdown-item" href="../articles/showcase.html">Showcase</a></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Online converter</h6></li>
+    <li><a class="dropdown-item" href="../articles/shinyapp.html">Online converter</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Online app</h6></li>
-    <li><a class="dropdown-item" href="../articles/shinyapp.html">Shiny app</a></li>
+    <li><a class="dropdown-item" href="../articles/index.html">More articles...</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -94,8 +94,8 @@
 </nav><div class="container template-quarto">
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="../logo.png" class="logo" alt=""><h1>Showcase</h1>
-      <p class="subtitle">Discover our RStudio themes</p>
+      <img src="../logo.png" class="logo" alt=""><h1>Theme gallery</h1>
+      <p class="subtitle">Preview bundled RStudio themes</p>
 
 
 
@@ -128,25 +128,25 @@
     font-family: 'Inter Tight';
   }
 </style>
-<p>This article previews the themes bundled with <strong>rstudiothemes</strong>.</p>
-<p>You can install them with:</p>
+<p>This article previews the bundled <strong>RStudio</strong> themes included in <strong>rstudiothemes</strong>.</p>
+<p>Install the bundled themes with:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">rstudiothemes</span><span class="fu">::</span><span class="fu"><a href="../reference/rstudiothemes-actions.html">install_rstudiothemes</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
-<p>All bundled themes are also distributed in a single <code>.zip</code> file <a href="https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip">dist/rstudiothemes.zip</a>. Unzip the file and install the themes using the <a href="https://docs.posit.co/ide/user/ide/guide/ui/appearance.html" class="external-link"><strong>RStudio</strong> IDE interface</a>.</p>
+<p>The bundled themes are also distributed in a single <code>.zip</code> file: <a href="https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip">dist/rstudiothemes.zip</a>. Unzip the file and install the themes using the <a href="https://docs.posit.co/ide/user/ide/guide/ui/appearance.html" class="external-link"><strong>RStudio</strong> IDE interface</a>.</p>
 <p><strong>Tools &gt; Global Options &gt; Appearance &gt; Add</strong></p>
-<div id="fig-ui" class="nolightbox quarto-float quarto-figure quarto-figure-center" alt="RStudio IDE Add Theme UI">
+<div id="fig-ui" class="nolightbox quarto-float quarto-figure quarto-figure-center" alt="RStudio IDE add theme UI">
 <figure class="quarto-float quarto-float-fig"><div aria-describedby="fig-ui-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="rstudiogui.png" class="nolightbox" style="width:80.0%" alt="RStudio IDE Add Theme UI">
+<img src="rstudiogui.png" class="nolightbox" style="width:80.0%" alt="RStudio IDE add theme UI">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ui-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 1: RStudio IDE Add Theme UI
+Figure 1: RStudio IDE add theme UI.
 </figcaption></figure>
 </div>
 <section class="level2"><h2 id="lightbox-gallery">Lightbox gallery<a class="anchor" aria-label="anchor" href="#lightbox-gallery"></a>
 </h2>
-<p>Click the images to enlarge.</p>
+<p>Click an image to enlarge it.</p>
 <div class="row row-cols-1 row-cols-sm-2 g-1">
 <div class="col">
 <div class="card bg-dark text-white">
@@ -515,7 +515,7 @@ Winter is Coming Light
 <div class="callout-title-container flex-fill">About the screenshots</div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Previews may differ from the display on your device. The screenshots were taken under the following conditions:</p>
+<p>Previews may differ from the display on your device. The screenshots use this setup:</p>
 <p><strong>RStudio version</strong></p>
 <pre><code>RStudio 2026.01.1+403 "Apple Blossom"
 Release (0e924abb984501b0d66b204ea06b60fc7813275a, 2026-02-04) for windows Mozilla/5.0
@@ -527,7 +527,7 @@ Release (0e924abb984501b0d66b204ea06b60fc7813275a, 2026-02-04) for windows Mozil
 <img src="rstudiooptions.png" class="nolightbox" style="width:80.0%" alt="RStudio Options for Screenshots">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-opts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure 2: RStudio options used for screenshots
+Figure 2: RStudio options used for screenshots.
 </figcaption></figure>
 </div>
 </div>

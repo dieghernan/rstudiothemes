@@ -1,7 +1,6 @@
 # Generate random UUIDs
 
-Generate version 4 (pseudo-random) Universally Unique Identifiers
-(UUIDs).
+Generate version 4 pseudo-random Universally Unique Identifiers (UUIDs).
 
 ## Usage
 
@@ -17,9 +16,9 @@ Heavily based on an unreleased version of `ids::uuid()`.
 
 - hint:
 
-  Optional. A character string (or object coercible with
-  [`as.character()`](https://rdrr.io/r/base/character.html)) to be used
-  as a random seed.
+  Optional character string or object coercible with
+  [`as.character()`](https://rdrr.io/r/base/character.html). Used as a
+  random seed.
 
 ## Value
 
@@ -28,20 +27,20 @@ A character string representing a valid UUID that can be validated with
 
 ## Details
 
-This helper function assigns a
-[UUID](https://www.rfc-editor.org/rfc/rfc9562.html) for identifying
-versions of generated themes.
+This helper generates a
+[UUID](https://rdrr.io/pkg/uuid/man/UUIDgenerate.html) for identifying
+generated theme versions.
 
 ## References
 
-Davis KR, Peabody B, Leach P (2024). "Universally Unique IDentifiers
+Davis KR, Peabody B and Leach P (2024). "Universally Unique Identifiers
 (UUIDs)." RFC 9562.
 [doi:10.17487/RFC9562](https://doi.org/10.17487/RFC9562) ,
 <https://www.rfc-editor.org/info/rfc9562>.
 
 ## See also
 
-Other helpers:
+Helper functions:
 [`on_rstudio()`](https://dieghernan.github.io/rstudiothemes/reference/on_rstudio.md)
 
 ## Examples

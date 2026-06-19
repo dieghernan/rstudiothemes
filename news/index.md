@@ -1,5 +1,10 @@
 # Changelog
 
+## rstudiothemes 1.1.2
+
+- Refreshed documentation to make package guidance, function references
+  and maintenance notes clearer and more consistent.
+
 ## rstudiothemes 1.1.1
 
 CRAN release: 2026-05-11
@@ -25,7 +30,7 @@ CRAN release: 2026-04-07
 - Added `"Positron Dark"` and `"Positron Light"` by **Positron**.
 - Added `"VSCode Dark"` and `"VSCode Light"` by **Visual Studio Code**.
 - Improved JSON parsing by removing invalid trailing commas before `}`
-  or `]`, which are common in **Visual Studio Code** themes.
+  or `]`, a common pattern in **Visual Studio Code** themes.
 - [`convert_positron_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_vs_to_tm_theme.md)
   is a new **Positron** alias for
   [`convert_vs_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_vs_to_tm_theme.md).

@@ -1,7 +1,7 @@
 # Check whether the session is running in RStudio
 
-Detect whether the current R session is running in RStudio, used to
-decide if themes can be applied to the IDE.
+Detect whether the current R session is running in RStudio, which is
+used to decide whether themes can be applied to the IDE.
 
 ## Usage
 
@@ -11,17 +11,17 @@ on_rstudio()
 
 ## Value
 
-Logical, `TRUE` if running in RStudio, otherwise `FALSE`.
+`TRUE` if running in RStudio, `FALSE` otherwise.
 
 ## See also
 
-Other helpers:
+Helper functions:
 [`generate_uuid()`](https://dieghernan.github.io/rstudiothemes/reference/generate_uuid.md)
 
 ## Examples
 
 ``` r
 on_rstudio()
-#> ! Detected GUI: "X11".
+#> ! Detected GUI "X11".
 #> [1] FALSE
 ```

@@ -43,7 +43,7 @@
 
     <a class="navbar-brand me-2" href="../index.html"><img src="../apple-touch-icon.png" alt="rstudiothemes logo" height="34" width="34" class="d-inline-block me-1">rstudiothemes</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.1.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.1.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,14 +58,14 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
 <li><hr class="dropdown-divider"></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Theme mapping</h6></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Theme guides</h6></li>
+    <li><a class="dropdown-item" href="../articles/showcase.html">Theme gallery</a></li>
     <li><a class="dropdown-item" href="../articles/mapping.html">Theme mapping</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Theme gallery</h6></li>
-    <li><a class="dropdown-item" href="../articles/showcase.html">Showcase</a></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Online converter</h6></li>
+    <li><a class="dropdown-item" href="../articles/shinyapp.html">Online converter</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Online app</h6></li>
-    <li><a class="dropdown-item" href="../articles/shinyapp.html">Shiny app</a></li>
+    <li><a class="dropdown-item" href="../articles/index.html">More articles...</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -93,7 +93,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Theme mapping</h1>
-      <p class="subtitle">Map elements between theme specifications</p>
+      <p class="subtitle">Map theme elements between formats</p>
 
 
 
@@ -106,7 +106,7 @@
 
 
 
-    <p>This article summarizes the internal mapping between <strong>Visual Studio Code</strong>, <strong>Positron</strong>, <strong>TextMate</strong> and <strong>RStudio</strong> theme elements.</p>
+    <p>This article summarizes how <strong>rstudiothemes</strong> maps theme elements between <strong>Visual Studio Code</strong>, <strong>Positron</strong>, <strong>TextMate</strong> and <strong>RStudio</strong> formats.</p>
 <p>Sources:</p>
 <ul>
 <li>
@@ -116,7 +116,7 @@
 <strong>TextMate</strong> and <strong>RStudio</strong>: <a href="https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html" class="external-link uri">https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html</a>
 </li>
 </ul>
-<p>When multiple many-to-one relationships exist, priority determines the mapping applies.</p>
+<p>When several source elements map to the same target element, mapping priority determines which value is used.</p>
 <div id="tbl-map" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl"><div aria-describedby="tbl-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell">
@@ -417,7 +417,7 @@
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table 1: Mapping of theme elements
+Table 1: Mapping between theme elements and formats.
 </figcaption></figure>
 </div>
 

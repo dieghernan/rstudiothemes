@@ -1,7 +1,7 @@
-# Read and parse a TextMate theme
+# Read and parse a TextMate theme file
 
-Read a `.tmTheme` file (XML format) representing a TextMate or Sublime
-Text theme.
+Read a `.tmTheme` XML file representing a TextMate or Sublime Text
+theme.
 
 ## Usage
 
@@ -13,22 +13,21 @@ read_tm_theme(path)
 
 - path:
 
-  Path or URL to a TextMate theme, in `.tmTheme` format.
+  Path or URL to a TextMate theme file, in `.tmTheme` format.
 
 ## Value
 
 A [tibble](https://tibble.tidyverse.org/reference/tbl_df-class.html)
-with the data of the theme.
+containing the theme data.
 
 ## See also
 
-Other functions for reading themes:
+Theme readers:
 [`read_vs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/read_vs_theme.md)
 
 ## Examples
 
 ``` r
-
 the_theme <- system.file("ext/test-color-theme.json",
   package = "rstudiothemes"
 ) |>

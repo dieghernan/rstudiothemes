@@ -1,12 +1,14 @@
-# Install, list, try or remove RStudio themes
+# Manage RStudio themes
 
-Adapted from selected rsthemes functions. [MIT
+Install, list, preview or remove the RStudio themes included in
+[rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes). These
+functions are adapted from selected rsthemes functions. [MIT
 License](https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md)
 Copyright © rsthemes authors.
 
-**Important**: These functions (except
-`list_rstudiothemes(list_installed = FALSE)`) only work in RStudio,
-returning `NULL` when called from other IDEs.
+**Important**: These functions only work in RStudio and return `NULL`
+when called from other IDEs. The exception is
+`list_rstudiothemes(list_installed = FALSE)`.
 
 ## Usage
 
@@ -28,12 +30,12 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 
 - style:
 
-  Character. Limit themes to a specific group: `all`, `dark` or `light`.
+  Theme group: `"all"`, `"dark"` or `"light"`.
 
 - themes:
 
   Optional character vector of theme names. If provided, only these
-  themes will be used, and `style` will be ignored.
+  themes are used and `style` is ignored.
 
 - destdir:
 
@@ -43,9 +45,11 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 
 - list_installed:
 
-  Should the installed rstudiothemes themes be listed (default). If
-  `FALSE`, the available themes in the rstudiothemes package are listed
-  instead.
+  Should the installed
+  [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
+  themes be listed (default). If `FALSE`, the available themes in the
+  [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
+  package are listed instead.
 
 - delay:
 
@@ -61,51 +65,55 @@ invisibly.
 
 `try_rstudiothemes()` has side effects: it starts a widget that allows
 users to try different themes. The widget can be exited by following the
-prompts, which restores the original theme.
+prompts, which restore the original theme.
 
 ## Functions
 
-- `install_rstudiothemes()`: Install RStudio themes
+- `install_rstudiothemes()`: Install RStudio themes.
 
-- `remove_rstudiothemes()`: Remove rstudiothemes from RStudio
+- `remove_rstudiothemes()`: Remove bundled
+  [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
+  themes from RStudio.
 
-- `list_rstudiothemes()`: List installed or available themes
+- `list_rstudiothemes()`: List installed or available themes.
 
-- `try_rstudiothemes()`: Try each rstudiothemes RStudio theme
+- `try_rstudiothemes()`: Preview each bundled
+  [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
+  RStudio theme.
 
-## Ported themes
+## Bundled themes
 
-rstudiothemes includes RStudio themes based on the following Visual
-Studio Code themes:
+[rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
+includes RStudio themes based on the following editor themes:
 
-- Ayu by teabyii.
+- Ayu Theme by teabyii.
 
-- Andromeda by Eliver Lara.
+- Andromeda Theme by Eliver Lara.
 
-- Catppuccin by <https://catppuccin.com/>.
+- Catppuccin Theme by [Catppuccin](https://catppuccin.com/).
 
-- Cobalt2 Theme Official by Wes Bos.
+- Cobalt2 Theme by Wes Bos.
 
-- CRAN by dieghernan, based on the CRAN (R Project) website theme,
+- CRAN Theme by dieghernan, based on the CRAN (R Project) website theme
   created with Pandoc.
 
-- Dracula Official by <https://draculatheme.com/>.
+- Dracula Theme by [Dracula](https://draculatheme.com/).
 
-- GitHub Dark and Light by GitHub.
+- GitHub Dark and Light Themes by GitHub.
 
 - JellyFish Theme by Pawel Borkar.
 
-- Matcha by Luca Falasco.
+- Matcha Theme by Luca Falasco.
 
 - Matrix Theme by UstymUkhman.
 
-- Night Owl Dark and Light (no italics) by Sarah Drasner.
+- Night Owl Dark and Light Themes (no italics) by Sarah Drasner.
 
-- Nord by Arctic Ice Studio.
+- Nord Theme by Arctic Ice Studio.
 
 - OKSolar Theme by dieghernan.
 
-- One Dark Pro by binaryify.
+- One Dark Pro Theme by binaryify.
 
 - Overflow Theme by dieghernan.
 
@@ -113,11 +121,11 @@ Studio Code themes:
 
 - Selenized Themes by dieghernan.
 
-- Skeletor Syntax by dieghernan.
+- Skeletor Syntax Theme by dieghernan.
 
-- SynthWave '84 by Robb Owen.
+- SynthWave '84 Theme by Robb Owen.
 
-- Tokyo Night by Enkia.
+- Tokyo Night Theme by Enkia.
 
 - Winter is Coming Theme by John Papa.
 
