@@ -1,10 +1,12 @@
-# rstudiothemes (development version)
+# rstudiothemes 1.1.2
 
-- Refreshed documentation to make package guidance, function references and maintenance notes clearer and more consistent.
+- Refreshed documentation to make package guidance, function references and
+  maintenance notes clearer and more consistent.
 
 # rstudiothemes 1.1.1
 
-- Added package metadata comments to generated **Visual Studio Code** and **Positron** themes.
+- Added package metadata comments to generated **Visual Studio Code** and
+  **Positron** themes.
 
   ``` json
   {
@@ -17,21 +19,28 @@
 
 # rstudiothemes 1.1.0
 
-- Added a **Shiny** app for online theme conversion: <https://dieghernan-themeconverter.share.connect.posit.cloud/>.
+- Added a **Shiny** app for online theme conversion:
+  <https://dieghernan-themeconverter.share.connect.posit.cloud/>.
 - Added `"Positron Dark"` and `"Positron Light"` by **Positron**.
 - Added `"VSCode Dark"` and `"VSCode Light"` by **Visual Studio Code**.
-- Improved JSON parsing by removing invalid trailing commas before `}` or `]`, a common pattern in **Visual Studio Code** themes.
-- `convert_positron_to_tm_theme()` is a new **Positron** alias for `convert_vs_to_tm_theme()`.
-- `convert_tm_to_positron_theme()` is a new **Positron** alias for `convert_tm_to_vs_theme()`.
+- Improved JSON parsing by removing invalid trailing commas before `}` or `]`, a
+  common pattern in **Visual Studio Code** themes.
+- `convert_positron_to_tm_theme()` is a new **Positron** alias for
+  `convert_vs_to_tm_theme()`.
+- `convert_tm_to_positron_theme()` is a new **Positron** alias for
+  `convert_tm_to_vs_theme()`.
 - `read_positron_theme()` is a new **Positron** alias for `read_vs_theme()`.
 
 # rstudiothemes 1.0.0
 
 Initial **CRAN** release.
 
-- Added DOI: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18519155.svg)](https://doi.org/10.5281/zenodo.18519155).
+- Added DOI:
+  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18519155.svg)](https://doi.org/10.5281/zenodo.18519155).
 - Migrated vignettes and articles to Quarto (#9).
-- Repository status is active: [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active).
+- Repository status is active: [![Project Status: Active - The project has
+  reached a stable, usable state and is being actively
+  developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active).
 
 ## Bundled RStudio themes
 
@@ -39,11 +48,13 @@ Updates to bundled RStudio themes.
 
 - Added mapping of indent guides to RStudio themes.
 - Added `"Andromeda"` by Eliver Lara.
-- Added `"Catppuccin Latte"` and `"Catppuccin Mocha"` by <https://catppuccin.com/>.
+- Added `"Catppuccin Latte"` and `"Catppuccin Mocha"` by
+  <https://catppuccin.com/>.
 - Added `"Matcha"` by Luca Falasco.
 - Added ruler color for `"Matrix"`.
 - Added `"One Dark Pro"` by binaryify.
-- Adjusted invisible elements (whitespace) and ruler color for `"Tokyo Night Light"`.
+- Adjusted invisible elements (whitespace) and ruler color for
+  `"Tokyo Night Light"`.
 
 # rstudiothemes 0.1.0
 
