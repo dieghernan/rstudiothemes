@@ -1,5 +1,9 @@
 # rstudiothemes
 
+This package is stable and maintained on a best-effort basis. I
+currently prioritize CRAN compatibility, bug fixes and regressions over
+new features.
+
 Convert **Visual Studio Code**, **Positron** and **TextMate** theme
 files to custom **RStudio** themes.
 
