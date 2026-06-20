@@ -2,6 +2,8 @@
 
 ## rstudiothemes 1.1.2
 
+CRAN release: 2026-06-19
+
 - Refreshed documentation to make package guidance, function references
   and maintenance notes clearer and more consistent.
 
