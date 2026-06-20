@@ -226,7 +226,7 @@
     "SystemRequirements": null
   },
   "keywords": ["r-package", "rstudio-themes", "textmate-themes", "vscode-themes", "positron-themes", "cran", "cran-r"],
-  "fileSize": "2251.982KB",
+  "fileSize": "2251.485KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
@@ -248,5 +248,5 @@
   "releaseNotes": "https://github.com/dieghernan/rstudiothemes/blob/main/NEWS.md",
   "readme": "https://github.com/dieghernan/rstudiothemes/blob/main/README.md",
   "contIntegration": ["https://github.com/dieghernan/rstudiothemes/actions/workflows/check-full.yaml", "https://app.codecov.io/gh/dieghernan/rstudiothemes", "https://coveralls.io/github/dieghernan/rstudiothemes"],
-  "developmentStatus": "https://www.repostatus.org/#active"
+  "developmentStatus": "https://www.repostatus.org/#inactive"
 }
