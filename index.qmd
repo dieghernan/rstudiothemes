@@ -10,7 +10,7 @@ knitr:
     out.width: "100%"
 ---
 
-<!-- README.md is generated from README.qmd. Please edit that file -->
+<!-- index.md is generated from index.qmd. Please edit that file -->
 
 # rstudiothemes <a href="https://dieghernan.github.io/rstudiothemes/"><img src="man/figures/logo.png" alt="rstudiothemes website" align="right" height="139"/></a>
 
@@ -41,10 +41,21 @@ This package provides tools to convert **Visual Studio Code**, **Positron** and
 since **RStudio** 1.2. See the [RStudio theme creation
 documentation](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html).
 
-::: callout-note
+```{=html}
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container"><i class="callout-icon"></i></div>
+<div class="callout-title-container flex-fill">Note</div></div>
+<div class="callout-body-container callout-body">
+```
+
 This package is stable and maintained on a best-effort basis. I currently
 prioritize CRAN compatibility, bug fixes and regressions over new features.
-:::
+
+```{=html}
+</div>
+</div>
+```
 
 ## Features
 
