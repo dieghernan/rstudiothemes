@@ -8,7 +8,7 @@ Use the online converter to convert theme files in a browser:
 ``` shiny-text-output
 ```
 
-[ Download VSCode (.json)](_w_9a0ad22dd7d542b9a0804865a574195a/)
+[ Download VSCode (.json)](_w_26bbf9521ff94386b73f86eb80db4a6d/)
 
 ### Input
 
@@ -25,7 +25,7 @@ Use the online converter to convert theme files in a browser:
 ``` shiny-text-output
 ```
 
-[ Download tmTheme (.tmTheme)](_w_9a0ad22dd7d542b9a0804865a574195a/)
+[ Download tmTheme (.tmTheme)](_w_26bbf9521ff94386b73f86eb80db4a6d/)
 
 ### Input
 
@@ -42,7 +42,7 @@ Use the online converter to convert theme files in a browser:
 ``` shiny-text-output
 ```
 
-[ Download VSCode (.json)](_w_9a0ad22dd7d542b9a0804865a574195a/)
+[ Download VSCode (.json)](_w_26bbf9521ff94386b73f86eb80db4a6d/)
 
 ### Input
 
@@ -59,7 +59,7 @@ Use the online converter to convert theme files in a browser:
 ``` shiny-text-output
 ```
 
-[ Download tmTheme (.tmTheme)](_w_9a0ad22dd7d542b9a0804865a574195a/)
+[ Download tmTheme (.tmTheme)](_w_26bbf9521ff94386b73f86eb80db4a6d/)
 
 ### Input
 

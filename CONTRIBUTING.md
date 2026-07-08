@@ -30,16 +30,20 @@ advice.
 - Fork the package and clone onto your computer. If you haven’t done
   this before, we recommend using
   `usethis::create_from_github("dieghernan/rstudiothemes", fork = TRUE)`.
+
 - Install all development dependencies with
   `devtools::install_dev_deps()`, and then make sure the package passes
   R CMD check by running `devtools::check()`. If R CMD check doesn’t
   pass cleanly, it’s a good idea to ask for help before continuing.
+
 - Create a Git branch for your pull request (PR). We recommend using
   `usethis::pr_init("brief-description-of-change")`.
+
 - Make your changes, commit to git, and then create a PR by running
   `usethis::pr_push()`, and following the prompts in your browser. The
   title of your PR should briefly describe the change. The body of your
   PR should contain `Fixes #issue-number`.
+
 - For user-facing changes, add a bullet to the top of `NEWS.md`
   (i.e. just below the first header). Follow the style described in
   <https://style.tidyverse.org/news.html>.
@@ -50,15 +54,19 @@ advice.
   guide](https://style.tidyverse.org). You can use
   [Air](https://posit-dev.github.io/air/) to apply this style, but
   please don’t restyle code that has nothing to do with your PR.
+
 - We use [roxygen2](https://cran.r-project.org/package=roxygen2), with
   [Markdown
   syntax](https://cran.r-project.org/web/packages/roxygen2/vignettes/rd-formatting.html),
   for documentation.
+
 - We use [testthat](https://cran.r-project.org/package=testthat) for
   unit tests. Contributions with test cases included are easier to
   accept.
 
-## Thanks for contributing!
+## Code of Conduct
 
-This contributing guide is adapted from the tidyverse contributing guide
-available at <https://tidyverse.tidyverse.org/CONTRIBUTING.html>.
+Please note that the rstudiothemes project is released with a
+[Contributor Code of
+Conduct](https://dieghernan.github.io/rstudiothemes/CODE_OF_CONDUCT.md).
+By contributing to this project you agree to abide by its terms.
