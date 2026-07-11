@@ -32,17 +32,19 @@ advice.
   `usethis::create_from_github("dieghernan/rstudiothemes", fork = TRUE)`.
 
 - Install all development dependencies with
-  `devtools::install_dev_deps()`, and then make sure the package passes
-  R CMD check by running `devtools::check()`. If R CMD check doesn’t
-  pass cleanly, it’s a good idea to ask for help before continuing.
+  [`pak::local_install_dev_deps()`](https://pak.r-lib.org/reference/local_install_dev_deps.html),
+  and then make sure the package passes `R CMD check` by running
+  `devtools::check()`. If `R CMD check` doesn’t pass cleanly, it’s a
+  good idea to ask for help before continuing.
 
 - Create a Git branch for your pull request (PR). We recommend using
   `usethis::pr_init("brief-description-of-change")`.
 
-- Make your changes, commit to git, and then create a PR by running
-  `usethis::pr_push()`, and following the prompts in your browser. The
-  title of your PR should briefly describe the change. The body of your
-  PR should contain `Fixes #issue-number`.
+- Make your changes and check that the package passes `R CMD check` by
+  running `devtools::check()` again. Commit the changes to git, and then
+  create a PR by running `usethis::pr_push()`, and follow the prompts in
+  your browser. The title of your PR should briefly describe the change.
+  The body of your PR should contain `Fixes #issue-number`.
 
 - For user-facing changes, add a bullet to the top of `NEWS.md`
   (i.e. just below the first header). Follow the style described in
