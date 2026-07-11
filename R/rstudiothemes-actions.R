@@ -1,4 +1,32 @@
 # nocov start
+rstudioapi_add_theme <- function(theme, force = TRUE) {
+  rstudioapi::addTheme(theme, force = force)
+}
+
+rstudioapi_remove_theme <- function(theme) {
+  rstudioapi::removeTheme(theme)
+}
+
+rstudioapi_get_themes <- function() {
+  rstudioapi::getThemes()
+}
+
+rstudioapi_get_theme_info <- function() {
+  rstudioapi::getThemeInfo()
+}
+
+rstudioapi_apply_theme <- function(theme) {
+  rstudioapi::applyTheme(theme)
+}
+
+rstudiothemes_readline <- function(prompt) {
+  readline(prompt)
+}
+
+rstudiothemes_sleep <- function(time) {
+  Sys.sleep(time)
+}
+# nocov end
 
 #' Manage RStudio themes
 #'
@@ -82,7 +110,7 @@ install_rstudiothemes <- function(
     file.copy(theme_files, destdir, overwrite = TRUE)
   } else {
     for (theme in theme_files) {
-      suppressWarnings(rstudioapi::addTheme(theme, force = TRUE))
+      suppressWarnings(rstudioapi_add_theme(theme, force = TRUE))
     }
   }
   cli::cli_alert_success("Installed {length(theme_files)} theme{?s}.")
@@ -110,13 +138,11 @@ remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
   }
 
   for (theme in themes) {
-    rstudioapi::removeTheme(theme)
+    rstudioapi_remove_theme(theme)
   }
 
   cli::cli_alert_success("Uninstalled {length(themes)} theme{?s}.")
 }
-
-# nocov end
 
 #' @describeIn rstudiothemes-actions
 #' List installed or available themes.
@@ -137,15 +163,14 @@ list_rstudiothemes <- function(
     return(names(list_pkg_rstudiothemes(style = style)))
   }
 
-  # nocov start
   # Require RStudio.
   if (!require_rstudio("list_rstudiothemes")) {
     return(NULL)
   }
 
-  themes <- rstudioapi::getThemes()
+  themes <- rstudioapi_get_themes()
   installed_themes <- vapply(
-    rstudioapi::getThemes(),
+    rstudioapi_get_themes(),
     function(x) {
       unlist(x["name"], use.names = FALSE)
     },
@@ -161,7 +186,6 @@ list_rstudiothemes <- function(
   }
 
   unname(themes)
-  # nocov end
 }
 
 list_pkg_rstudiothemes <- function(
@@ -246,8 +270,6 @@ try_rstudiothemes <- function(
   themes = NULL,
   delay = 0
 ) {
-  # nocov start
-
   style <- match_arg_pretty(style)
 
   # Require RStudio.
@@ -270,7 +292,7 @@ try_rstudiothemes <- function(
   ))
 
   # Arrange in dark/light order.
-  current_theme <- rstudioapi::getThemeInfo()
+  current_theme <- rstudioapi_get_theme_info()
 
   cli::cli_alert(c(
     "Trying {.strong {length(try_themes)}} ",
@@ -284,11 +306,11 @@ try_rstudiothemes <- function(
   ))
   for (theme in try_themes) {
     cat("\u2022", theme, "\n")
-    rstudioapi::applyTheme(theme)
+    rstudioapi_apply_theme(theme)
     if (delay > 0) {
-      Sys.sleep(delay)
+      rstudiothemes_sleep(delay)
     } else {
-      res <- readline("[n,k,q]: ")
+      res <- rstudiothemes_readline("[n,k,q]: ")
       if (tolower(res) == "k") {
         return(invisible())
       }
@@ -298,9 +320,7 @@ try_rstudiothemes <- function(
   cli::cli_alert_success(
     "Restoring the original theme, {.strong {current_theme$editor}}."
   )
-  rstudioapi::applyTheme(current_theme$editor)
-
-  # nocov end
+  rstudioapi_apply_theme(current_theme$editor)
 }
 
 cli_how2install <- function() {

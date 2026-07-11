@@ -8,13 +8,13 @@ test_that("Errors", {
   miss <- jsonlite::read_json(vstheme)
   miss$colors$editor.background <- NULL
 
-  tmp_path <- tempfile("corrupt", fileext = ".json")
+  tmp_path <- withr::local_tempfile(fileext = ".json")
   jsonlite::write_json(miss, tmp_path)
-  expect_snapshot(convert_vs_to_tm_theme(tmp_path), error = TRUE)
+  expect_snapshot(error = TRUE, convert_vs_to_tm_theme(tmp_path))
 })
 
 test_that("Theme creation", {
-  tmout <- file.path(tempdir(), "my_test.tmTheme")
+  tmout <- theme_output_path(".tmTheme")
   vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
 
   expect_silent(thef <- convert_vs_to_tm_theme(vstheme, outfile = tmout))
@@ -24,17 +24,13 @@ test_that("Theme creation", {
   skip_on_cran()
 
   out <- readLines(tmout)
-
-  # Mask uuid from snapshot
-  remove <- min(grep(">uuid<", out, fixed = TRUE)) + 1
-  out[remove] <- "<string>(masked_uuid)</string>"
+  out <- mask_uuid_in_lines(out)
 
   expect_snapshot(cat(out[seq(1, 500)], sep = "\n"))
-  unlink(tmout)
 })
 
 test_that("Simple Theme creation", {
-  tmout <- file.path(tempdir(), "my_test_simple.tmTheme")
+  tmout <- theme_output_path(".tmTheme")
   vstheme <- system.file(
     "ext/test-simple-color-theme.json",
     package = "rstudiothemes"
@@ -45,15 +41,11 @@ test_that("Simple Theme creation", {
   expect_true(file.exists(thef))
   expect_identical(thef, tmout)
   out <- readLines(tmout)
-
-  # Mask uuid from snapshot
-  remove <- min(grep(">uuid<", out, fixed = TRUE)) + 1
-  out[remove] <- "<string>(masked_uuid)</string>"
+  out <- mask_uuid_in_lines(out)
 
   expect_snapshot(cat(out[seq(1, 15)], sep = "\n"))
-  unlink(tmout)
 
-  tmout2 <- file.path(tempdir(), "my_test_simple_params.tmTheme")
+  tmout2 <- theme_output_path(".tmTheme")
   expect_silent(convert_vs_to_tm_theme(
     vstheme,
     outfile = tmout2,
@@ -63,17 +55,15 @@ test_that("Simple Theme creation", {
 
   expect_true(file.exists(tmout2))
   out <- readLines(tmout2)
-
-  # Mask uuid from snapshot
-  remove <- min(grep(">uuid<", out, fixed = TRUE)) + 1
-  out[remove] <- "<string>(masked_uuid)</string>"
+  out <- mask_uuid_in_lines(out)
 
   expect_snapshot(cat(out[seq(1, 15)], sep = "\n"))
-  unlink(tmout2)
 })
 
 test_that("Online", {
   skip_on_cran()
+  vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
+  local_mock_theme_download(vstheme)
 
   path <- paste0(
     "https://raw.githubusercontent.com/dieghernan/",
@@ -100,10 +90,7 @@ test_that("Unnamed themes require an explicit name", {
     package = "rstudiothemes"
   )
 
-  expect_error(
-    convert_vs_to_tm_theme(fpath),
-    regexp = "Theme name not found"
-  )
+  expect_snapshot(error = TRUE, convert_vs_to_tm_theme(fpath))
 })
 
 test_that("Corner cases", {
@@ -122,14 +109,14 @@ test_that("Corner cases", {
 
   miss$colors[vs_miss] <- NULL
 
-  tmp_path <- tempfile("corrupt", fileext = ".json")
+  tmp_path <- withr::local_tempfile(fileext = ".json")
   jsonlite::write_json(miss, tmp_path)
   expect_silent(convert_vs_to_tm_theme(tmp_path))
 
   miss2 <- jsonlite::read_json(vstheme)
   miss2$tokenColors <- NULL
   miss2$semanticTokenColors <- NULL
-  tmp_path <- tempfile("corrupt2", fileext = ".json")
+  tmp_path <- withr::local_tempfile(fileext = ".json")
   jsonlite::write_json(miss2, tmp_path)
   expect_silent(convert_vs_to_tm_theme(tmp_path))
 })

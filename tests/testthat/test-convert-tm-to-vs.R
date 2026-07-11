@@ -6,7 +6,7 @@ test_that("Errors", {
 
 
 test_that("Theme creation", {
-  tmout <- file.path(tempdir(), "my_test.tmTheme")
+  tmout <- theme_output_path(".tmTheme")
   tmtheme <- system.file("ext/test.tmTheme", package = "rstudiothemes")
 
   expect_silent(thef <- convert_tm_to_vs_theme(tmtheme, outfile = tmout))
@@ -18,11 +18,10 @@ test_that("Theme creation", {
   out <- readLines(tmout)
 
   expect_snapshot(cat(out, sep = "\n"))
-  unlink(tmout)
 })
 
 test_that("Simple Theme creation", {
-  tmout <- file.path(tempdir(), "my_test_simple.json")
+  tmout <- theme_output_path(".json")
   tmtheme <- system.file("ext/test-minimal.tmTheme", package = "rstudiothemes")
 
   expect_true(file.exists(tmtheme))
@@ -33,9 +32,8 @@ test_that("Simple Theme creation", {
   out <- readLines(tmout)
 
   expect_snapshot(cat(out, sep = "\n"))
-  unlink(tmout)
 
-  tmout2 <- file.path(tempdir(), "my_test_simple_params.tmTheme")
+  tmout2 <- theme_output_path(".tmTheme")
   expect_silent(convert_tm_to_vs_theme(
     tmtheme,
     outfile = tmout2,
@@ -47,15 +45,15 @@ test_that("Simple Theme creation", {
   out <- readLines(tmout2)
 
   expect_snapshot(cat(out, sep = "\n"))
-  unlink(tmout2)
 })
 
 test_that("Test error theme", {
   fpath <- system.file("ext/test-error.tmTheme", package = "rstudiothemes")
 
-  expect_error(
-    res <- convert_tm_to_vs_theme(fpath),
-    regexp = 'Required setting "lineHighlight" and "selection" are missing'
+  expect_snapshot(
+    error = TRUE,
+    convert_tm_to_vs_theme(fpath),
+    transform = function(lines) mask_fixture_path(lines, "test-error.tmTheme")
   )
 })
 
@@ -71,6 +69,8 @@ test_that("Produce the same results", {
 
 test_that("Online", {
   skip_on_cran()
+  tmtheme <- system.file("ext/test.tmTheme", package = "rstudiothemes")
+  local_mock_theme_download(tmtheme)
 
   path <- paste0(
     "https://raw.githubusercontent.com/dieghernan/",
@@ -83,7 +83,7 @@ test_that("Online", {
 })
 
 test_that("No author, high contrast", {
-  tmout <- file.path(tempdir(), "my_test_author.json")
+  tmout <- theme_output_path(".json")
   tmtheme <- system.file("ext/test-hc-dark.tmTheme", package = "rstudiothemes")
 
   expect_true(file.exists(tmtheme))
@@ -94,7 +94,6 @@ test_that("No author, high contrast", {
   expect_identical(thef, tmout)
   ss <- read_vs_theme(tmout)
   expect_identical(ss[ss$name == "type", ]$value, "hc-black")
-  unlink(tmout)
   # Light
   tmtheme <- system.file("ext/test-hc-light.tmTheme", package = "rstudiothemes")
 

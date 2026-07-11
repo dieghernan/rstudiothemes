@@ -46,6 +46,14 @@
        [5] "author"         "comment"        "background"     "caret"         
        [9] "foreground"     "invisibles"     "lineHighlight"  "selection"     
 
+# Test error theme
+
+    Code
+      read_tm_theme(fpath)
+    Condition
+      Error in `read_tm_theme()`:
+      ! TextMate theme in '<test-error.tmTheme>' is invalid. Required setting "lineHighlight" and "selection" are missing.
+
 # Online
 
     Code

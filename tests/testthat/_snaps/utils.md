@@ -78,3 +78,19 @@
       Error:
       ! `year` should be "20", not "1" or "2".
 
+# RStudio requirement reports non-RStudio sessions
+
+    Code
+      s <- require_rstudio("test")
+    Message
+      x `rstudiothemes::test()` can only run in RStudio, not in "RTerm".
+      > No changes made.
+
+# Theme files resolve local paths and URLs
+
+    Code
+      local_theme_file("missing.json", "json")
+    Condition
+      Error in `local_theme_file()`:
+      ! File 'missing.json' was not found.
+

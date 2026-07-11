@@ -4,8 +4,16 @@ test_that("Random seed", {
   a <- generate_uuid()
   b <- generate_uuid()
 
-  expect_true(uuid::UUIDvalidate(a))
-  expect_true(uuid::UUIDvalidate(b))
+  expect_match(
+    a,
+    "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+    ignore.case = TRUE
+  )
+  expect_match(
+    b,
+    "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+    ignore.case = TRUE
+  )
 
   expect_false(identical(a, b))
 })
@@ -17,8 +25,16 @@ test_that("Fixed seed", {
   a <- generate_uuid(hint)
   b <- generate_uuid(hint)
 
-  expect_true(uuid::UUIDvalidate(a))
-  expect_true(uuid::UUIDvalidate(b))
+  expect_match(
+    a,
+    "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+    ignore.case = TRUE
+  )
+  expect_match(
+    b,
+    "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+    ignore.case = TRUE
+  )
 
   expect_identical(a, b)
 })

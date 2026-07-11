@@ -10,9 +10,6 @@ license: MIT
 title: 'rstudiothemes: Create and Install Custom ''RStudio'' Themes'
 version: 1.1.2
 doi: 10.32614/CRAN.package.rstudiothemes
-identifiers:
-- type: doi
-  value: 10.32614/CRAN.package.rstudiothemes
 abstract: Create, convert and install custom 'RStudio' editor themes from 'Visual
   Studio Code', 'Positron' and 'TextMate' theme files. Convert themes between 'TextMate',
   'Visual Studio Code' and 'Positron' formats and install bundled ports of popular
@@ -38,7 +35,6 @@ preferred-citation:
     Code, Positron and TextMate theme files. Convert themes between TextMate, Visual
     Studio Code and Positron formats and install bundled ports of popular themes for
     use in RStudio.
-repository: https://CRAN.R-project.org/package=rstudiothemes
 repository-code: https://github.com/dieghernan/rstudiothemes
 url: https://dieghernan.github.io/rstudiothemes/
 contact:
@@ -297,7 +293,6 @@ references:
   abstract: 'quarto: R Interface to ''Quarto'' Markdown Publishing System'
   notes: Suggests
   url: https://quarto-dev.github.io/quarto-r/
-  repository: https://CRAN.R-project.org/package=quarto
   authors:
   - family-names: Allaire
     given-names: JJ
@@ -308,7 +303,6 @@ references:
     email: cderv@posit.co
     orcid: https://orcid.org/0000-0003-4474-2498
   year: '2026'
-  doi: 10.32614/CRAN.package.quarto
 - type: software
   title: testthat
   abstract: 'testthat: Unit Testing for R'
@@ -338,4 +332,29 @@ references:
     email: tytso@thunk.org
   year: '2026'
   doi: 10.32614/CRAN.package.uuid
+- type: software
+  title: withr
+  abstract: 'withr: Run Code ''With'' Temporarily Modified Global State'
+  notes: Suggests
+  url: https://withr.r-lib.org
+  repository: https://CRAN.R-project.org/package=withr
+  authors:
+  - family-names: Hester
+    given-names: Jim
+  - family-names: Henry
+    given-names: Lionel
+    email: lionel@posit.co
+  - family-names: Müller
+    given-names: Kirill
+    email: krlmlr+r@mailbox.org
+  - family-names: Ushey
+    given-names: Kevin
+    email: kevinushey@gmail.com
+  - family-names: Wickham
+    given-names: Hadley
+    email: hadley@posit.co
+  - family-names: Chang
+    given-names: Winston
+  year: '2026'
+  doi: 10.32614/CRAN.package.withr
 

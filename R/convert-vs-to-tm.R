@@ -169,12 +169,6 @@ tmtheme_settings_df <- function(vs_df) {
 
     end <- dplyr::bind_rows(end, df)
   }
-  if (!"selection" %in% end$tm) {
-    df <- dplyr::tibble(tm = "selection", color = sel)
-
-    end <- dplyr::bind_rows(end, df)
-  }
-
   end
 }
 

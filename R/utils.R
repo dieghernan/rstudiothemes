@@ -159,7 +159,7 @@ theme_mapping <- function() {
 
 require_rstudio <- function(caller) {
   if (on_rstudio()) {
-    return(TRUE) # nocov
+    return(TRUE)
   }
 
   gui <- detect_gui() # nolint
@@ -176,7 +176,7 @@ local_theme_file <- function(path, fileext) {
   if (grepl("^http", path)) {
     local_file <- tempfile(fileext = paste0(".", fileext))
     cli::cli_alert_info("Downloading theme from {.url {path}}.")
-    download.file(path, local_file, quiet = TRUE, mode = "wb")
+    download_theme_file(path, local_file, quiet = TRUE, mode = "wb")
   } else {
     local_file <- path
   }
@@ -187,3 +187,9 @@ local_theme_file <- function(path, fileext) {
 
   local_file
 }
+
+# nocov start
+download_theme_file <- function(url, destfile, quiet = TRUE, mode = "wb") {
+  download.file(url, destfile, quiet = quiet, mode = mode)
+}
+# nocov end

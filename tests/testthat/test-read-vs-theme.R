@@ -14,7 +14,7 @@ test_that("Test full theme", {
   expect_identical(res[res$name == "type", ]$value, "dark")
 
   # Extract semanticTokenColors
-  expect_true("semanticTokenColors" %in% res$section)
+  expect_contains(res$section, "semanticTokenColors")
 })
 
 test_that("Test simple theme", {
@@ -31,6 +31,8 @@ test_that("Test simple theme", {
 
 test_that("Online", {
   skip_on_cran()
+  vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
+  local_mock_theme_download(vstheme)
 
   path <- paste0(
     "https://raw.githubusercontent.com/dieghernan/",
@@ -51,7 +53,7 @@ test_that("Corner case", {
 })
 
 test_that("Empty Visual Studio Code color values are kept as missing", {
-  theme <- tempfile(fileext = ".json")
+  theme <- withr::local_tempfile(fileext = ".json")
   writeLines(
     c(
       "{",
@@ -65,5 +67,5 @@ test_that("Empty Visual Studio Code color values are kept as missing", {
 
   parsed <- read_vs_theme(theme)
 
-  expect_false("editor.background" %in% parsed$name)
+  expect_length(parsed$name[parsed$name == "editor.background"], 0L)
 })

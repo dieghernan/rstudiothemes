@@ -34,7 +34,8 @@ Suggests:
     knitr,
     quarto,
     testthat (>= 3.0.0),
-    uuid
+    uuid,
+    withr
 VignetteBuilder:
     quarto
 Config/Needs/coverage: covr

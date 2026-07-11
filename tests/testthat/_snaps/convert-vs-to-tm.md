@@ -593,3 +593,11 @@
       Error in `convert_vs_to_tm_theme()`:
       ! Theme name not found. Use the `name` argument.
 
+# Unnamed themes require an explicit name
+
+    Code
+      convert_vs_to_tm_theme(fpath)
+    Condition
+      Error in `convert_vs_to_tm_theme()`:
+      ! Theme name not found. Use the `name` argument.
+

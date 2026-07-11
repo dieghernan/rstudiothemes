@@ -104,7 +104,7 @@ test_that("Internal text and mapping helpers work", {
 
   mapping <- theme_mapping()
   expect_s3_class(mapping, "data.frame")
-  expect_true(all(c("vscode", "tm") %in% names(mapping)))
+  expect_contains(names(mapping), c("vscode", "tm"))
 })
 
 test_that("RStudio requirement reports both branches", {
@@ -119,26 +119,20 @@ test_that("RStudio requirement reports non-RStudio sessions", {
     detect_gui = function() "RTerm"
   )
 
-  expect_message(
-    s <- require_rstudio("test"),
-    "can only run in RStudio"
-  )
+  expect_snapshot(s <- require_rstudio("test"))
   expect_false(on_rstudio())
   expect_false(s)
 })
 
 test_that("Theme files resolve local paths and URLs", {
-  local_file <- tempfile(fileext = ".json")
+  local_file <- withr::local_tempfile(fileext = ".json")
   writeLines("{}", local_file)
 
   expect_identical(local_theme_file(local_file, "json"), local_file)
-  expect_error(
-    local_theme_file("missing.json", "json"),
-    regexp = "was not found"
-  )
+  expect_snapshot(error = TRUE, local_theme_file("missing.json", "json"))
 
   local_mocked_bindings(
-    download.file = function(url, destfile, quiet = TRUE, mode = "wb") {
+    download_theme_file = function(url, destfile, quiet = TRUE, mode = "wb") {
       writeLines("{}", destfile)
       invisible(0)
     }

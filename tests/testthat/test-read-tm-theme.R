@@ -51,15 +51,18 @@ test_that("Test minimal theme", {
 test_that("Test error theme", {
   fpath <- system.file("ext/test-error.tmTheme", package = "rstudiothemes")
 
-  expect_error(
-    res <- read_tm_theme(fpath),
-    regexp = 'Required setting "lineHighlight" and "selection" are missing'
+  expect_snapshot(
+    error = TRUE,
+    read_tm_theme(fpath),
+    transform = function(lines) mask_fixture_path(lines, "test-error.tmTheme")
   )
 })
 
 
 test_that("Online", {
   skip_on_cran()
+  tmtheme <- system.file("ext/test.tmTheme", package = "rstudiothemes")
+  local_mock_theme_download(tmtheme)
 
   path <- paste0(
     "https://raw.githubusercontent.com/dieghernan/",
@@ -71,7 +74,7 @@ test_that("Online", {
 })
 
 test_that("TextMate token parser handles empty token fields", {
-  fpath <- tempfile(fileext = ".tmTheme")
+  fpath <- withr::local_tempfile(fileext = ".tmTheme")
   writeLines(
     c(
       '<?xml version="1.0" encoding="UTF-8"?>',
@@ -102,7 +105,7 @@ test_that("TextMate token parser handles empty token fields", {
 
   parsed <- read_tm_theme(fpath)
 
-  expect_true("keyword" %in% parsed$scope)
+  expect_contains(parsed$scope, "keyword")
   expect_identical(
     parsed[which(parsed$scope == "keyword"), ]$foreground,
     "NULL"

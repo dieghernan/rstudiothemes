@@ -40,3 +40,56 @@
       x No rstudiothemes themes are installed.
       i Use `rstudiothemes::install_rstudiothemes()` to install the package themes.
 
+# list_rstudiothemes reports when no package themes are installed
+
+    Code
+      res <- list_rstudiothemes()
+    Message
+      x No rstudiothemes themes are installed.
+      i Use `rstudiothemes::install_rstudiothemes()` to install the package themes.
+
+# try_rstudiothemes previews themes with mocked RStudio calls
+
+    Code
+      try_rstudiothemes(delay = 1)
+    Message
+      > Trying 2 themes from rstudiothemes.
+      > At the prompt, choose one of:
+      * [n] or [SPACE] to try the next theme.
+      * [k] to keep that theme.
+      * [q] to quit and restore your original theme.
+    Output
+      • Light Theme 
+      • Dark Theme 
+    Message
+      v Restoring the original theme, Original Theme.
+
+# try_rstudiothemes handles selected themes and prompt choices
+
+    Code
+      try_rstudiothemes(themes = c("Light Theme", "Dark Theme"))
+    Message
+      > Trying 2 themes from rstudiothemes.
+      > At the prompt, choose one of:
+      * [n] or [SPACE] to try the next theme.
+      * [k] to keep that theme.
+      * [q] to quit and restore your original theme.
+    Output
+      • Light Theme 
+      • Dark Theme 
+    Message
+      v Restoring the original theme, Original Theme.
+
+---
+
+    Code
+      try_rstudiothemes(themes = "Light Theme")
+    Message
+      > Trying 1 theme from rstudiothemes.
+      > At the prompt, choose one of:
+      * [n] or [SPACE] to try the next theme.
+      * [k] to keep that theme.
+      * [q] to quit and restore your original theme.
+    Output
+      • Light Theme 
+
