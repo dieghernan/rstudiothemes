@@ -22,14 +22,13 @@ Heavily based on an unreleased version of `ids::uuid()`.
 
 ## Value
 
-A character string representing a valid UUID that can be validated with
-[`uuid::UUIDvalidate()`](https://rdrr.io/pkg/uuid/man/UUIDgenerate.html).
+A character string representing a valid UUID.
 
 ## Details
 
 This helper generates a
-[UUID](https://rdrr.io/pkg/uuid/man/UUIDgenerate.html) for identifying
-generated theme versions.
+[UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) for
+identifying generated theme versions.
 
 ## References
 
