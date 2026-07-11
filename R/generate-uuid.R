@@ -4,15 +4,15 @@
 #' Generate version 4 pseudo-random Universally Unique Identifiers (UUIDs).
 #'
 #' @details
-#' This helper generates a [UUID][uuid::UUIDvalidate()] for identifying
-#' generated theme versions.
+#' This helper generates a
+#' [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) for
+#' identifying generated theme versions.
 #'
 #' @param hint Optional character string or object coercible with
 #'   [as.character()]. Used as a random seed.
 #'
 #' @returns
-#' A character string representing a valid UUID that can be validated with
-#' [uuid::UUIDvalidate()].
+#' A character string representing a valid UUID.
 #'
 #' @source Heavily based on an unreleased version of `ids::uuid()`.
 #' @references

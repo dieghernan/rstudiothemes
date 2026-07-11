@@ -15,15 +15,15 @@ generate_uuid(hint = NULL)
 \code{\link[=as.character]{as.character()}}. Used as a random seed.}
 }
 \value{
-A character string representing a valid UUID that can be validated with
-\code{\link[uuid:UUIDvalidate]{uuid::UUIDvalidate()}}.
+A character string representing a valid UUID.
 }
 \description{
 Generate version 4 pseudo-random Universally Unique Identifiers (UUIDs).
 }
 \details{
-This helper generates a \link[uuid:UUIDvalidate]{UUID} for identifying
-generated theme versions.
+This helper generates a
+\href{https://en.wikipedia.org/wiki/Universally_unique_identifier}{UUID} for
+identifying generated theme versions.
 }
 \examples{
 # Random UUID.

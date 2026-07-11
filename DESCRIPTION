@@ -34,7 +34,6 @@ Suggests:
     knitr,
     quarto,
     testthat (>= 3.0.0),
-    uuid,
     withr
 VignetteBuilder:
     quarto
