@@ -18,7 +18,7 @@ mask_fixture_path <- function(lines, filename) {
 }
 
 local_mock_theme_download <- function(source) {
-  local_mocked_bindings(
+  testthat::local_mocked_bindings(
     download_theme_file = function(url, destfile, quiet = TRUE, mode = "wb") {
       file.copy(source, destfile, overwrite = TRUE)
       invisible(0)

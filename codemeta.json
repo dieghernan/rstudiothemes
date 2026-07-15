@@ -4,7 +4,7 @@
   "identifier": "rstudiothemes",
   "description": "Create, convert and install custom 'RStudio' editor themes from 'Visual Studio Code', 'Positron' and 'TextMate' theme files. Convert themes between 'TextMate', 'Visual Studio Code' and 'Positron' formats and install bundled ports of popular themes for use in 'RStudio'.",
   "name": "rstudiothemes: Create and Install Custom 'RStudio' Themes",
-  "relatedLink": ["https://dieghernan.github.io/rstudiothemes/", "https://CRAN.R-project.org/package=rstudiothemes"],
+  "relatedLink": "https://dieghernan.github.io/rstudiothemes/",
   "codeRepository": "https://github.com/dieghernan/rstudiothemes",
   "issueTracker": "https://github.com/dieghernan/rstudiothemes/issues",
   "license": "https://spdx.org/licenses/MIT",
@@ -15,12 +15,6 @@
     "url": "https://r-project.org"
   },
   "runtimePlatform": "R version 4.6.1 (2026-06-24 ucrt)",
-  "provider": {
-    "@id": "https://cran.r-project.org",
-    "@type": "Organization",
-    "name": "Comprehensive R Archive Network (CRAN)",
-    "url": "https://cran.r-project.org"
-  },
   "author": [
     {
       "@type": "Person",
@@ -58,51 +52,23 @@
     {
       "@type": "SoftwareApplication",
       "identifier": "knitr",
-      "name": "knitr",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=knitr"
+      "name": "knitr"
     },
     {
       "@type": "SoftwareApplication",
       "identifier": "quarto",
-      "name": "quarto",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=quarto"
+      "name": "quarto"
     },
     {
       "@type": "SoftwareApplication",
       "identifier": "testthat",
       "name": "testthat",
-      "version": ">= 3.0.0",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=testthat"
+      "version": ">= 3.0.0"
     },
     {
       "@type": "SoftwareApplication",
       "identifier": "withr",
-      "name": "withr",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=withr"
+      "name": "withr"
     }
   ],
   "softwareRequirements": {
@@ -115,38 +81,17 @@
     "2": {
       "@type": "SoftwareApplication",
       "identifier": "cli",
-      "name": "cli",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=cli"
+      "name": "cli"
     },
     "3": {
       "@type": "SoftwareApplication",
       "identifier": "colorspace",
-      "name": "colorspace",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=colorspace"
+      "name": "colorspace"
     },
     "4": {
       "@type": "SoftwareApplication",
       "identifier": "dplyr",
-      "name": "dplyr",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=dplyr"
+      "name": "dplyr"
     },
     "5": {
       "@type": "SoftwareApplication",
@@ -156,50 +101,22 @@
     "6": {
       "@type": "SoftwareApplication",
       "identifier": "jsonlite",
-      "name": "jsonlite",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=jsonlite"
+      "name": "jsonlite"
     },
     "7": {
       "@type": "SoftwareApplication",
       "identifier": "rstudioapi",
-      "name": "rstudioapi",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=rstudioapi"
+      "name": "rstudioapi"
     },
     "8": {
       "@type": "SoftwareApplication",
       "identifier": "sass",
-      "name": "sass",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=sass"
+      "name": "sass"
     },
     "9": {
       "@type": "SoftwareApplication",
       "identifier": "tidyr",
-      "name": "tidyr",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=tidyr"
+      "name": "tidyr"
     },
     "10": {
       "@type": "SoftwareApplication",
@@ -214,19 +131,12 @@
     "12": {
       "@type": "SoftwareApplication",
       "identifier": "xml2",
-      "name": "xml2",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=xml2"
+      "name": "xml2"
     },
     "SystemRequirements": null
   },
   "keywords": ["r-package", "rstudio-themes", "textmate-themes", "vscode-themes", "positron-themes", "cran", "cran-r"],
-  "fileSize": "2261.568KB",
+  "fileSize": "2261.791KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
