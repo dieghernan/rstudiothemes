@@ -13,8 +13,8 @@ documentation](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creati
 Note
 
 This package is stable and maintained on a best-effort basis. I
-currently prioritize CRAN compatibility, bug fixes and regressions over
-new features.
+currently prioritize CRAN compatibility, bug fixes and regression fixes
+over new features.
 
 ## Features
 
@@ -117,8 +117,9 @@ rstudiothemes::convert_to_rstudio_theme(
 )
 ```
 
-Alternatively, in **RStudio**, go to **Tools \> Global Options \>
-Appearance \> Add** and select the installed theme.
+Alternatively, in **RStudio**, choose
+`Tools > Global Options > Appearance > Add` and select the installed
+theme.
 
 ![RStudio IDE add theme UI](reference/figures/rstudiogui.png)
 
