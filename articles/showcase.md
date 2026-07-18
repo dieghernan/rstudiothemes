@@ -15,7 +15,7 @@ The bundled themes are also distributed in a single `.zip` file:
 Unzip the file and install the themes using the [**RStudio** IDE
 interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
-**Tools \> Global Options \> Appearance \> Add**
+In **RStudio**, choose `Tools > Global Options > Appearance > Add`.
 
 ![RStudio IDE add theme UI](rstudiogui.png)
 
@@ -206,7 +206,7 @@ this setup:
 **RStudio version**
 
     RStudio 2026.01.1+403 "Apple Blossom"
-    Release (0e924abb984501b0d66b204ea06b60fc7813275a, 2026-02-04) for windows Mozilla/5.0
+    Release (0e924abb984501b0d66b204ea06b60fc7813275a, 2026-02-04) for Windows Mozilla/5.0
     (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 
 **Code font**

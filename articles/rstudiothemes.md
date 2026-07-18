@@ -75,8 +75,9 @@ rstudioapi::applyTheme("Winter is Coming Dark Blue")
 
 Figure 1: Screenshot of the Winter is Coming Dark Blue theme.
 
-Alternatively, in **RStudio**, go to **Tools \> Global Options \>
-Appearance \> Add** and select the installed theme.
+Alternatively, in **RStudio**, choose
+`Tools > Global Options > Appearance > Add` and select the installed
+theme.
 
 ## Converting your own themes
 
@@ -112,6 +113,6 @@ This workflow brings your preferred editor theme to **RStudio**.
 - List installed themes with
   `list_rstudiothemes(list_installed = TRUE)`.
 - Filter themes by `"light"` or `"dark"` style.
-- Use the Add Theme UI in the **RStudio** IDE **Global Options \>
-  Appearance \> Add** to manually add `.rstheme` files that you have
-  created or converted.
+- Use the Add Theme UI in the **RStudio** IDE
+  (`Global Options > Appearance > Add`) to manually add `.rstheme` files
+  that you have created or converted.

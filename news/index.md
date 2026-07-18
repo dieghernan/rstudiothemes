@@ -53,8 +53,9 @@ Initial **CRAN** release.
   [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18519155.svg)](https://doi.org/10.5281/zenodo.18519155).
 - Migrated vignettes and articles to Quarto
   ([\#9](https://github.com/dieghernan/rstudiothemes/issues/9)).
-- Repository status is active: [![Project Status: Active - The project
-  has reached a stable, usable state and is being actively
+- At release time, repository status was active: [![Project Status:
+  Active - The project has reached a stable, usable state and is being
+  actively
   developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active).
 
 ### Bundled RStudio themes
