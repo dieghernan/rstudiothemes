@@ -16,7 +16,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes/badge?s=db1aa5e9aa335100151678939d0b23ee5cb86b71)](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes)
 [![DOI](https://img.shields.io/badge/DOI-%2010.32614/CRAN.package.rstudiothemes%20-blue)](https://doi.org/10.32614/CRAN.package.rstudiothemes)
 [![Project Status: Inactive – The project has reached a stable, usable
-state but is no longer being actively developed; support/maintenance
+state, but is no longer being actively developed; support/maintenance
 will be provided as time
 allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
 
@@ -39,8 +39,8 @@ documentation](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creati
 <div class="callout-body-container callout-body">
 
 This package is stable and maintained on a best-effort basis. I
-currently prioritize CRAN compatibility, bug fixes and regressions over
-new features.
+currently prioritize CRAN compatibility, bug fixes and regression fixes
+over new features.
 
 </div>
 </div>
@@ -175,8 +175,9 @@ rstudiothemes::convert_to_rstudio_theme(
 )
 ```
 
-Alternatively, in **RStudio**, go to **Tools \> Global Options \>
-Appearance \> Add** and select the installed theme.
+Alternatively, in **RStudio**, choose
+`Tools > Global Options > Appearance > Add` and select the installed
+theme.
 
 <div class="text-center">
 
