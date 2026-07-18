@@ -27,6 +27,6 @@ Use the online converter to convert theme files in a browser:
 </style>
 
 <div class="embed-responsive embed-responsive-16by9 shiny-app-frame">
-<iframe src="https://dieghernan-themeconverter.share.connect.posit.cloud/" class="shiny-app embed-responsive-item">
+<iframe src="https://dieghernan-themeconverter.share.connect.posit.cloud/" class="shiny-app embed-responsive-item"></iframe>
 </div>
 ```
