@@ -29,8 +29,9 @@
     Condition
       Error in `tmtheme_settings_df()`:
       ! Cannot convert theme because no color was detected for required setting: "background".
+      x Ensure the input theme provides the required colors or pass overrides.
 
-# Theme creation
+# Theme creation - file contents snapshot
 
     Code
       cat(out[seq(1, 500)], sep = "\n")
@@ -536,7 +537,7 @@
               </dict>
             </dict>
 
-# Simple Theme creation
+# Simple Theme creation - basic file generation
 
     Code
       cat(out[seq(1, 15)], sep = "\n")
@@ -557,7 +558,7 @@
           <key>uuid</key>
       <string>(masked_uuid)</string>
 
----
+# Simple Theme creation - with metadata
 
     Code
       cat(out[seq(1, 15)], sep = "\n")

@@ -168,6 +168,7 @@ require_rstudio <- function(caller) {
     "not in {.str {gui}}."
   ))
   cli::cli_alert("No changes made.")
+  cli::cli_alert_info("No changes made.")
 
   FALSE
 }

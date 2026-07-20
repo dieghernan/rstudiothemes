@@ -37,7 +37,15 @@
     Code
       cli_how2install()
     Message
-      x No rstudiothemes themes are installed.
+      ! No rstudiothemes themes are installed.
+      i Use `rstudiothemes::install_rstudiothemes()` to install the package themes.
+
+# Install hint emits cli messages
+
+    Code
+      cli_how2install()
+    Message
+      ! No rstudiothemes themes are installed.
       i Use `rstudiothemes::install_rstudiothemes()` to install the package themes.
 
 # list_rstudiothemes reports when no package themes are installed
@@ -45,7 +53,7 @@
     Code
       res <- list_rstudiothemes()
     Message
-      x No rstudiothemes themes are installed.
+      ! No rstudiothemes themes are installed.
       i Use `rstudiothemes::install_rstudiothemes()` to install the package themes.
 
 # try_rstudiothemes previews themes with mocked RStudio calls

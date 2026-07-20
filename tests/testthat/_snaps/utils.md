@@ -85,6 +85,7 @@
     Message
       x `rstudiothemes::test()` can only run in RStudio, not in "RTerm".
       > No changes made.
+      i No changes made.
 
 # Theme files resolve local paths and URLs
 

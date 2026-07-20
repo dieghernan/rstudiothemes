@@ -115,9 +115,9 @@ read_tm_theme <- function(path) {
   the_keys <- settings_df$name
   difs <- setdiff(minimal_keys, the_keys)
   if (length(difs) > 0) {
-    cli::cli_abort(paste0(
-      "TextMate theme in {.file {path}} is invalid. ",
-      "Required setting{?/s} {.str {difs}} {?is/are} missing."
+    cli::cli_abort(c(
+      "TextMate theme in {.file {path}} is invalid.",
+      "x" = "Required setting{?/s} {.str {difs}} {?is/are} missing."
     ))
   }
 

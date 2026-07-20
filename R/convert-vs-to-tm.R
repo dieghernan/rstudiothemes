@@ -142,13 +142,17 @@ tmtheme_settings_df <- function(vs_df) {
 
   if (!all(check_vals)) {
     miss <- c("background", "foreground", "selection")[!check_vals] # nolint
-    cli::cli_abort(
+    cli::cli_abort(c(
       paste0(
         "Cannot convert theme because no color was detected for ",
-        "{cli::qty(length(miss))}",
-        " required setting{?/s}: {.str {miss}}."
+        "{cli::qty(length(miss))} required setting{?/s}: ",
+        "{.str {paste(miss, collapse = \",\")}}."
+      ),
+      "x" = paste0(
+        "Ensure the input theme provides the required ",
+        "colors or pass overrides."
       )
-    )
+    ))
   }
 
   fg <- as.character(end[end$tm == "foreground", 2])

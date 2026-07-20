@@ -324,7 +324,7 @@ try_rstudiothemes <- function(
 }
 
 cli_how2install <- function() {
-  cli::cli_alert_danger("No {.pkg rstudiothemes} themes are installed.")
+  cli::cli_alert_warning("No {.pkg rstudiothemes} themes are installed.")
   cli::cli_alert_info(paste0(
     "Use {.run rstudiothemes::install_rstudiothemes()} to install ",
     "the package themes."

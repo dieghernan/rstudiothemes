@@ -13,23 +13,29 @@ test_that("Errors", {
   expect_snapshot(error = TRUE, convert_vs_to_tm_theme(tmp_path))
 })
 
-test_that("Theme creation", {
+test_that("Theme creation - output path and return value", {
   tmout <- theme_output_path(".tmTheme")
   vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
 
   expect_silent(thef <- convert_vs_to_tm_theme(vstheme, outfile = tmout))
-  expect_true(file.exists(thef))
   expect_identical(thef, tmout)
+  expect_true(file.exists(thef))
+})
 
+test_that("Theme creation - file contents snapshot", {
   skip_on_cran()
+  tmout <- theme_output_path(".tmTheme")
+  vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
 
+  # Ensure file exists from conversion step
+  expect_silent(convert_vs_to_tm_theme(vstheme, outfile = tmout))
   out <- readLines(tmout)
   out <- mask_uuid_in_lines(out)
 
   expect_snapshot(cat(out[seq(1, 500)], sep = "\n"))
 })
 
-test_that("Simple Theme creation", {
+test_that("Simple Theme creation - basic file generation", {
   tmout <- theme_output_path(".tmTheme")
   vstheme <- system.file(
     "ext/test-simple-color-theme.json",
@@ -38,14 +44,21 @@ test_that("Simple Theme creation", {
 
   thef <- convert_vs_to_tm_theme(vstheme, outfile = tmout)
 
-  expect_true(file.exists(thef))
   expect_identical(thef, tmout)
+  expect_true(file.exists(thef))
+
   out <- readLines(tmout)
   out <- mask_uuid_in_lines(out)
-
   expect_snapshot(cat(out[seq(1, 15)], sep = "\n"))
+})
 
+test_that("Simple Theme creation - with metadata", {
   tmout2 <- theme_output_path(".tmTheme")
+  vstheme <- system.file(
+    "ext/test-simple-color-theme.json",
+    package = "rstudiothemes"
+  )
+
   expect_silent(convert_vs_to_tm_theme(
     vstheme,
     outfile = tmout2,

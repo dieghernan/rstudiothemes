@@ -691,7 +691,8 @@
       convert_tm_to_vs_theme(fpath)
     Condition
       Error in `read_tm_theme()`:
-      ! TextMate theme in '<test-error.tmTheme>' is invalid. Required setting "lineHighlight" and "selection" are missing.
+      ! TextMate theme in '<test-error.tmTheme>' is invalid.
+      x Required settings "lineHighlight" and "selection" are missing.
 
 # Online
 

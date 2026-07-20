@@ -77,10 +77,7 @@ test_that("How to install", {
 })
 
 test_that("Install hint emits cli messages", {
-  msg <- capture.output(cli_how2install(), type = "message")
-
-  expect_match(paste(msg, collapse = "\n"), "No .* themes are installed")
-  expect_match(paste(msg, collapse = "\n"), "install")
+  expect_snapshot(cli_how2install())
 })
 
 test_that("install_rstudiothemes copies themes to a custom directory", {
