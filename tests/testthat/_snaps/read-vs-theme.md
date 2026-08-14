@@ -1,4 +1,4 @@
-# Errors
+# read_vs_theme() reports invalid inputs
 
     Code
       read_vs_theme()
@@ -22,10 +22,12 @@
       Error in `local_theme_file()`:
       ! File 'a.json' was not found.
 
-# Online
+# read_vs_theme() downloads URL inputs
 
     Code
       res <- read_vs_theme(path)
     Message
       i Downloading theme from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test-color-theme.json>.
+    Code
+      invisible(res)
 

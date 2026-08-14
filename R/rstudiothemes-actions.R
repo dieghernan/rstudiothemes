@@ -217,8 +217,8 @@ list_pkg_rstudiothemes <- function(
     # Inform the user if some themes are not found.
     if (length(sel) < length(themes)) {
       cli::cli_alert_warning(paste0(
-        "Matched {no({length(sel)})} theme{?s} among ",
-        "{length(themes)} requested name{?s}: {.str {themes}}."
+        "Matched {cli::no(length(sel))} theme{?s} among ",
+        "{length(themes)} requested name{?s}: {.val {themes}}."
       ))
       cli::cli_alert_info(paste0(
         "Use {.run rstudiothemes::list_rstudiothemes()} to check ",
@@ -294,10 +294,9 @@ try_rstudiothemes <- function(
   # Arrange in dark/light order.
   current_theme <- rstudioapi_get_theme_info()
 
-  cli::cli_alert(c(
-    "Trying {.strong {length(try_themes)}} ",
-    "{cli::qty(length(try_themes))}theme{?s} from {.pkg rstudiothemes}."
-  ))
+  cli::cli_alert(
+    "Trying {length(try_themes)} theme{?s} from {.pkg rstudiothemes}."
+  )
   cli::cli_alert("At the prompt, choose one of:")
   cli::cli_bullets(c(
     "*" = "{.kbd n} or {.kbd SPACE} to try the {.strong next} theme.",
@@ -305,7 +304,7 @@ try_rstudiothemes <- function(
     "*" = "{.kbd q} to {.strong quit} and restore your original theme."
   ))
   for (theme in try_themes) {
-    cat("\u2022", theme, "\n")
+    cli::cli_bullets(c("*" = "{.val {theme}}"))
     rstudioapi_apply_theme(theme)
     if (delay > 0) {
       rstudiothemes_sleep(delay)

@@ -28,7 +28,7 @@ read_vs_theme <- function(path) {
   if (tools::file_ext(path) != "json") {
     cli::cli_abort(paste0(
       "The {.arg path} argument must be a {.file .json} file",
-      ", not {.str {tools::file_ext(path)}}."
+      ", not {.val {tools::file_ext(path)}}."
     ))
   }
 

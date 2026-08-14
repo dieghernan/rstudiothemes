@@ -17,6 +17,40 @@ mask_fixture_path <- function(lines, filename) {
   gsub(fixture, paste0("<", filename, ">"), lines, fixed = TRUE)
 }
 
+plist_top_value <- function(path, key) {
+  doc <- xml2::read_xml(path)
+  keys <- xml2::xml_find_all(doc, "/plist/dict/key")
+  key_index <- which(xml2::xml_text(keys) == key)[1]
+
+  if (is.na(key_index)) {
+    return(NULL)
+  }
+
+  xml2::xml_text(xml2::xml_find_first(
+    keys[[key_index]],
+    "following-sibling::*[1]"
+  ))
+}
+
+plist_color_value <- function(path, key) {
+  doc <- xml2::read_xml(path)
+  settings <- xml2::xml_find_first(
+    doc,
+    "/plist/dict/key[. = 'settings']/following-sibling::array[1]/dict[1]/dict"
+  )
+  keys <- xml2::xml_find_all(settings, "./key")
+  key_index <- which(xml2::xml_text(keys) == key)[1]
+
+  if (is.na(key_index)) {
+    return(NULL)
+  }
+
+  xml2::xml_text(xml2::xml_find_first(
+    keys[[key_index]],
+    "following-sibling::*[1]"
+  ))
+}
+
 local_mock_theme_download <- function(source) {
   testthat::local_mocked_bindings(
     download_theme_file = function(url, destfile, quiet = TRUE, mode = "wb") {

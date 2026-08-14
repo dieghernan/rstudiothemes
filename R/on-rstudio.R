@@ -20,7 +20,7 @@ on_rstudio <- function() {
     return(TRUE)
   }
 
-  cli::cli_alert_warning("Detected GUI {.str {gui}}.")
+  cli::cli_alert_warning("Detected GUI {.val {gui}}.")
 
   FALSE
 }

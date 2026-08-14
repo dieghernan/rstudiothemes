@@ -1,11 +1,11 @@
-test_that("Errors", {
+test_that("read_tm_theme() reports invalid inputs", {
   expect_snapshot(error = TRUE, read_tm_theme())
   expect_snapshot(error = TRUE, read_tm_theme("a.txt"))
   expect_snapshot(error = TRUE, read_tm_theme("a.json"))
 })
 
 
-test_that("Test full theme", {
+test_that("read_tm_theme() parses converted full TextMate themes", {
   vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
 
   fpath <- vstheme |> convert_vs_to_tm_theme()
@@ -21,7 +21,7 @@ test_that("Test full theme", {
   unlink(fpath)
 })
 
-test_that("Test simple theme", {
+test_that("read_tm_theme() parses converted simple TextMate themes", {
   vstheme <- system.file(
     "ext/test-simple-color-theme.json",
     package = "rstudiothemes"
@@ -39,7 +39,7 @@ test_that("Test simple theme", {
   unlink(fpath)
 })
 
-test_that("Test minimal theme", {
+test_that("read_tm_theme() parses minimal TextMate themes", {
   fpath <- system.file("ext/test-minimal.tmTheme", package = "rstudiothemes")
 
   res <- read_tm_theme(fpath)
@@ -48,7 +48,7 @@ test_that("Test minimal theme", {
   expect_snapshot(res$name)
 })
 
-test_that("Test error theme", {
+test_that("read_tm_theme() reports invalid TextMate fixtures", {
   fpath <- system.file("ext/test-error.tmTheme", package = "rstudiothemes")
 
   expect_snapshot(
@@ -59,8 +59,7 @@ test_that("Test error theme", {
 })
 
 
-test_that("Online", {
-  skip_on_cran()
+test_that("read_tm_theme() downloads URL inputs", {
   tmtheme <- system.file("ext/test.tmTheme", package = "rstudiothemes")
   local_mock_theme_download(tmtheme)
 
@@ -69,11 +68,15 @@ test_that("Online", {
     "rstudiothemes/refs/heads/main/inst/ext/test.tmTheme"
   )
 
-  expect_snapshot(res <- read_tm_theme(path))
+  res <- NULL
+  expect_snapshot({
+    res <- read_tm_theme(path)
+    invisible(res)
+  })
   expect_s3_class(res, "tbl_df")
 })
 
-test_that("TextMate token parser handles empty token fields", {
+test_that("read_tm_theme() handles empty token fields", {
   fpath <- withr::local_tempfile(fileext = ".tmTheme")
   writeLines(
     c(

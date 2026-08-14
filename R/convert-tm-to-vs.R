@@ -47,7 +47,7 @@ convert_tm_to_vs_theme <- function(
 
     if (is.null(orig_aut)) {
       cli::cli_alert_warning(paste0(
-        "The TextMate theme {.str {name}} does not list an author. ",
+        "The TextMate theme {.val {name}} does not list an author. ",
         "Use the {.arg author} argument."
       ))
       author <- "rstudiothemes R package"

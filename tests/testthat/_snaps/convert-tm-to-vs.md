@@ -1,4 +1,4 @@
-# Errors
+# convert_tm_to_vs_theme() reports invalid inputs
 
     Code
       convert_tm_to_vs_theme()
@@ -22,7 +22,7 @@
       Error in `local_theme_file()`:
       ! File 'a.tmTheme' was not found.
 
-# Theme creation
+# convert_tm_to_vs_theme() writes expected VS Code JSON
 
     Code
       cat(out, sep = "\n")
@@ -451,7 +451,7 @@
         }
       }
 
-# Simple Theme creation
+# convert_tm_to_vs_theme() handles minimal theme metadata
 
     Code
       cat(out, sep = "\n")
@@ -685,7 +685,7 @@
         }
       }
 
-# Test error theme
+# convert_tm_to_vs_theme() reports invalid TextMate fixtures
 
     Code
       convert_tm_to_vs_theme(fpath)
@@ -694,14 +694,16 @@
       ! TextMate theme in '<test-error.tmTheme>' is invalid.
       x Required settings "lineHighlight" and "selection" are missing.
 
-# Online
+# convert_tm_to_vs_theme() downloads URL inputs
 
     Code
       res <- convert_tm_to_vs_theme(path)
     Message
       i Downloading theme from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test.tmTheme>.
+    Code
+      invisible(res)
 
-# No author, high contrast
+# convert_tm_to_vs_theme() infers dark high contrast themes
 
     Code
       thef <- convert_tm_to_vs_theme(tmtheme, outfile = tmout)
@@ -709,7 +711,7 @@
       ! The TextMate theme "Overflow Dark High Contrast" does not list an author. Use the `author` argument.
       i Using default `author = "rstudiothemes R package"`.
 
----
+# convert_tm_to_vs_theme() infers light high contrast themes
 
     Code
       thef <- convert_tm_to_vs_theme(tmtheme, outfile = tmout)

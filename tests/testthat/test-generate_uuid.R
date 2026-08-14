@@ -1,4 +1,4 @@
-test_that("Random seed", {
+test_that("generate_uuid() returns distinct valid UUIDs without a hint", {
   skip_if_not_installed("uuid")
 
   a <- generate_uuid()
@@ -18,7 +18,7 @@ test_that("Random seed", {
   expect_false(identical(a, b))
 })
 
-test_that("Fixed seed", {
+test_that("generate_uuid() returns stable valid UUIDs for the same hint", {
   skip_if_not_installed("uuid")
 
   hint <- "seed"

@@ -38,7 +38,7 @@ dark_or_light <- function(x) {
   rgb_values <- try(t(col2rgb(x)), silent = TRUE)
 
   if (inherits(rgb_values, "try-error")) {
-    cli::cli_abort("Color {.str {x}} is not valid.")
+    cli::cli_abort("Color {.val {x}} is not valid.")
   }
 
   bright <- sum(rgb_values * c(0.299, 0.587, 0.114))
@@ -165,9 +165,8 @@ require_rstudio <- function(caller) {
   gui <- detect_gui() # nolint
   cli::cli_alert_danger(paste0(
     "{.fn rstudiothemes::{caller}} can only run in RStudio, ",
-    "not in {.str {gui}}."
+    "not in {.val {gui}}."
   ))
-  cli::cli_alert("No changes made.")
   cli::cli_alert_info("No changes made.")
 
   FALSE
@@ -183,7 +182,7 @@ local_theme_file <- function(path, fileext) {
   }
 
   if (!file.exists(local_file)) {
-    cli::cli_abort("File {.path {local_file}} was not found.")
+    cli::cli_abort("File {.file {local_file}} was not found.")
   }
 
   local_file

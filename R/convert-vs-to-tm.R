@@ -61,7 +61,7 @@ convert_vs_to_tm_theme <- function(
 
     if (length(orig_aut) < 1) {
       cli::cli_alert_warning(paste0(
-        "The Visual Studio Code theme {.str {name}} does not list an ",
+        "The Visual Studio Code theme {.val {name}} does not list an ",
         "author. Use the {.arg author} argument."
       ))
       author <- "rstudiothemes R package"
@@ -143,14 +143,11 @@ tmtheme_settings_df <- function(vs_df) {
   if (!all(check_vals)) {
     miss <- c("background", "foreground", "selection")[!check_vals] # nolint
     cli::cli_abort(c(
-      paste0(
-        "Cannot convert theme because no color was detected for ",
-        "{cli::qty(length(miss))} required setting{?/s}: ",
-        "{.str {paste(miss, collapse = \",\")}}."
-      ),
-      "x" = paste0(
-        "Ensure the input theme provides the required ",
-        "colors or pass overrides."
+      "Cannot convert theme because required colors are missing.",
+      "x" = "Missing {length(miss)} setting{?s}: {.val {miss}}.",
+      "i" = paste0(
+        "Ensure the input theme provides the required colors ",
+        "or pass overrides."
       )
     ))
   }

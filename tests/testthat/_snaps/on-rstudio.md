@@ -1,4 +1,4 @@
-# Positron
+# on_rstudio() returns FALSE in Positron
 
     Code
       on_rstudio()
@@ -7,14 +7,14 @@
     Output
       [1] FALSE
 
-# RStudio
+# on_rstudio() returns TRUE in RStudio
 
     Code
       on_rstudio()
     Output
       [1] TRUE
 
-# RTerm
+# on_rstudio() returns FALSE in RTerm
 
     Code
       on_rstudio()
@@ -23,7 +23,7 @@
     Output
       [1] FALSE
 
-# VS Code
+# on_rstudio() treats VS Code sessions as non-RStudio
 
     Code
       on_rstudio()

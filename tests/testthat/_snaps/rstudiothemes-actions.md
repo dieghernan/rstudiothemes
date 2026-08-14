@@ -1,4 +1,4 @@
-# Check list_pkg_rstudiothemes
+# list_pkg_rstudiothemes() filters bundled themes by style and name
 
     Code
       sel_single <- list_pkg_rstudiothemes(style = "dark", themes = c("XXX",
@@ -32,7 +32,7 @@
       ! Matched 2 themes among 3 requested names: "XXX", "Selenized Light", and "Selenized Dark".
       i Use `rstudiothemes::list_rstudiothemes()` to check available names.
 
-# How to install
+# cli_how2install() explains how to install bundled themes
 
     Code
       cli_how2install()
@@ -40,15 +40,7 @@
       ! No rstudiothemes themes are installed.
       i Use `rstudiothemes::install_rstudiothemes()` to install the package themes.
 
-# Install hint emits cli messages
-
-    Code
-      cli_how2install()
-    Message
-      ! No rstudiothemes themes are installed.
-      i Use `rstudiothemes::install_rstudiothemes()` to install the package themes.
-
-# list_rstudiothemes reports when no package themes are installed
+# list_rstudiothemes() reports when no bundled themes are installed
 
     Code
       res <- list_rstudiothemes()
@@ -56,7 +48,7 @@
       ! No rstudiothemes themes are installed.
       i Use `rstudiothemes::install_rstudiothemes()` to install the package themes.
 
-# try_rstudiothemes previews themes with mocked RStudio calls
+# try_rstudiothemes() restores the original theme
 
     Code
       try_rstudiothemes(delay = 1)
@@ -66,13 +58,11 @@
       * [n] or [SPACE] to try the next theme.
       * [k] to keep that theme.
       * [q] to quit and restore your original theme.
-    Output
-      • Light Theme 
-      • Dark Theme 
-    Message
+      * "Light Theme"
+      * "Dark Theme"
       v Restoring the original theme, Original Theme.
 
-# try_rstudiothemes handles selected themes and prompt choices
+# try_rstudiothemes() handles selected themes and prompt choices
 
     Code
       try_rstudiothemes(themes = c("Light Theme", "Dark Theme"))
@@ -82,10 +72,8 @@
       * [n] or [SPACE] to try the next theme.
       * [k] to keep that theme.
       * [q] to quit and restore your original theme.
-    Output
-      • Light Theme 
-      • Dark Theme 
-    Message
+      * "Light Theme"
+      * "Dark Theme"
       v Restoring the original theme, Original Theme.
 
 ---
@@ -98,6 +86,5 @@
       * [n] or [SPACE] to try the next theme.
       * [k] to keep that theme.
       * [q] to quit and restore your original theme.
-    Output
-      • Light Theme 
+      * "Light Theme"
 

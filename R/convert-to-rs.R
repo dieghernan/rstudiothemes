@@ -98,7 +98,7 @@ convert_to_rstudio_theme <- function(
   if (!ext %in% valid_ext) {
     cli::cli_abort(paste0(
       "The {.arg path} argument must be a {.or {.file {valid_ext}}} file",
-      ", not {.str {ext}}."
+      ", not {.val {ext}}."
     ))
   }
 
@@ -242,10 +242,10 @@ convert_to_rstudio_theme <- function(
   uuid <- generate_uuid()
   tmp <- file.path(tempdir(), uuid)
   dir.create(tmp, recursive = TRUE, showWarnings = FALSE)
-  theme_name <- rstudioapi::convertTheme(
+  theme_name <- rstudioapi_convert_theme(
     path,
     add = FALSE,
-    outputLocation = tmp,
+    output_location = tmp,
     force = TRUE
   )
 
@@ -265,7 +265,12 @@ convert_to_rstudio_theme <- function(
     theme_name <- name
   }
 
-  themelines <- gsub("blur(1px)", "brightness(75%)", themelines)
+  themelines <- gsub(
+    "blur(1px)",
+    "brightness(75%)",
+    themelines,
+    fixed = TRUE
+  )
 
   vtext <- paste0("/* Generated with rstudiothemes package */")
 
@@ -293,19 +298,19 @@ convert_to_rstudio_theme <- function(
   themelines <- c(themelines, vtext, "", new_css, additional)
 
   # Write the theme.
-  sass::sass(
+  sass_sass(
     themelines,
     output = outfile,
     cache = FALSE,
-    options = sass::sass_options(output_style = output_style)
+    options = sass_options(output_style = output_style)
   )
 
   # Install the theme.
   if (any(apply, force)) {
-    cli::cli_alert_info("Installing RStudio theme {.str {theme_name}}.")
+    cli::cli_alert_info("Installing RStudio theme {.val {theme_name}}.")
 
     capture_log <- tryCatch(
-      rstudioapi::addTheme(outfile, force = force),
+      rstudioapi_add_theme(outfile, force = force),
       error = function(e) {
         e
       },
@@ -318,16 +323,40 @@ convert_to_rstudio_theme <- function(
     } else if ("error" %in% attr(capture_log, "class")) {
       cli::cli_alert_danger(capture_log$message)
     } else {
-      cli::cli_alert_success("Installed theme {.str {capture_log}}.")
+      cli::cli_alert_success("Installed theme {.val {capture_log}}.")
     }
     if (apply) {
-      cli::cli_alert_info("Applying theme {.str {theme_name}}.")
-      rstudioapi::applyTheme(theme_name)
+      cli::cli_alert_info("Applying theme {.val {theme_name}}.")
+      rstudioapi_apply_theme(theme_name)
     }
   }
 
   outfile
 }
+
+# nocov start
+rstudioapi_convert_theme <- function(
+  path,
+  add = FALSE,
+  output_location = tempdir(),
+  force = TRUE
+) {
+  rstudioapi::convertTheme(
+    path,
+    add = add,
+    outputLocation = output_location,
+    force = force
+  )
+}
+
+sass_sass <- function(input, output, cache = FALSE, options = sass_options()) {
+  sass::sass(input, output = output, cache = cache, options = options)
+}
+
+sass_options <- function(output_style = "expanded") {
+  sass::sass_options(output_style = output_style)
+}
+# nocov end
 
 create_ace_cascade <- function(tmcols_scopes) {
   full <- tmcols_scopes

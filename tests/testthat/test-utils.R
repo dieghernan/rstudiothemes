@@ -1,4 +1,4 @@
-test_that("Test color generator", {
+test_that("col2hex() normalizes color names, hex values and alpha channels", {
   # Not parsed
   not <- "bold italic underline"
   expect_identical(not, col2hex(not))
@@ -25,7 +25,7 @@ test_that("Test color generator", {
   expect_snapshot(col2hex(hex_alpha))
 })
 
-test_that("Theme type", {
+test_that("dark_or_light() classifies colors by brightness", {
   expect_identical(dark_or_light("#fff"), "light")
   expect_identical(dark_or_light("#000"), "dark")
   expect_identical(dark_or_light("grey40"), "dark")
@@ -35,17 +35,11 @@ test_that("Theme type", {
   expect_snapshot(error = TRUE, dark_or_light("not_a_color"))
 })
 
-test_that("Pretty match", {
+test_that("match_arg_pretty() reports invalid choices with helpful errors", {
   my_fun <- function(arg_one = c(10, 1000, 3000, 5000)) {
     match_arg_pretty(arg_one)
   }
 
-  # OK, returns character
-  expect_identical(my_fun(1000), "1000")
-  expect_identical(my_fun("1000"), "1000")
-  expect_identical(my_fun(NULL), "10")
-  expect_identical(my_fun(), "10")
-  # Some errors here
   # Single value no match
   expect_snapshot(my_fun("error here"), error = TRUE)
 
@@ -63,18 +57,9 @@ test_that("Pretty match", {
 
   # Pass more options than expected
   expect_snapshot(my_fun2(c(1, 2)), error = TRUE)
-
-  # With custom options
-  my_fun3 <- function(an_arg = 20) {
-    match_arg_pretty(an_arg, c("30", "20"))
-  }
-  expect_identical(my_fun3(), "20")
-  expect_snapshot(my_fun3("3"), error = TRUE)
-  # Pass more options than expected
-  expect_snapshot(my_fun2(c(1, 2)), error = TRUE)
 })
 
-test_that("Pretty match returns exact and default matches", {
+test_that("match_arg_pretty() returns exact, default and custom matches", {
   my_fun <- function(arg_one = c(10, 1000, 3000, 5000)) {
     match_arg_pretty(arg_one)
   }
@@ -88,18 +73,18 @@ test_that("Pretty match returns exact and default matches", {
     match_arg_pretty(an_arg, c("30", "20"))
   }
   expect_identical(my_fun2(), "20")
+  expect_snapshot(my_fun2("3"), error = TRUE)
 })
 
-test_that("Ensure NULL", {
+test_that("ensure_null() collapses empty values and preserves real values", {
   expect_null(ensure_null(NULL))
   expect_null(ensure_null(c(NULL, NA)))
   expect_null(ensure_null(c(NULL, NA, "")))
   expect_null(ensure_null(c("", character(0))))
   expect_identical(ensure_null(c(1, 2)), c(1, 2))
-  expect_identical(letters, letters)
 })
 
-test_that("Internal text and mapping helpers work", {
+test_that("text normalization and mapping helpers return usable data", {
   expect_identical(normalize_theme_text("  a  b   c  "), "a b c")
 
   mapping <- theme_mapping()
@@ -107,13 +92,13 @@ test_that("Internal text and mapping helpers work", {
   expect_contains(names(mapping), c("vscode", "tm"))
 })
 
-test_that("RStudio requirement reports both branches", {
+test_that("require_rstudio() succeeds inside RStudio", {
   local_mocked_bindings(on_rstudio = function() TRUE)
 
   expect_true(require_rstudio("test"))
 })
 
-test_that("RStudio requirement reports non-RStudio sessions", {
+test_that("require_rstudio() reports non-RStudio sessions", {
   local_mocked_bindings(
     on_rstudio = function() FALSE,
     detect_gui = function() "RTerm"
@@ -124,7 +109,7 @@ test_that("RStudio requirement reports non-RStudio sessions", {
   expect_false(s)
 })
 
-test_that("Theme files resolve local paths and URLs", {
+test_that("local_theme_file() resolves local paths and downloads URLs", {
   local_file <- withr::local_tempfile(fileext = ".json")
   writeLines("{}", local_file)
 

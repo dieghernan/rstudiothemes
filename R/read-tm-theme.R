@@ -34,7 +34,7 @@ read_tm_theme <- function(path) {
   if (tools::file_ext(path) != "tmTheme") {
     cli::cli_abort(paste0(
       "The {.arg path} argument must be a {.file .tmTheme} file",
-      ", not {.str {tools::file_ext(path)}}."
+      ", not {.val {tools::file_ext(path)}}."
     ))
   }
 
@@ -117,7 +117,7 @@ read_tm_theme <- function(path) {
   if (length(difs) > 0) {
     cli::cli_abort(c(
       "TextMate theme in {.file {path}} is invalid.",
-      "x" = "Required setting{?/s} {.str {difs}} {?is/are} missing."
+      "x" = "Required setting{?s} {.val {difs}} {?is/are} missing."
     ))
   }
 

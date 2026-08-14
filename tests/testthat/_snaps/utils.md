@@ -1,4 +1,4 @@
-# Test color generator
+# col2hex() normalizes color names, hex values and alpha channels
 
     Code
       col2hex("not_a_color")
@@ -12,7 +12,7 @@
     Output
       [1] "#FF00008F"
 
-# Theme type
+# dark_or_light() classifies colors by brightness
 
     Code
       dark_or_light("not_a_color")
@@ -20,7 +20,7 @@
       Error in `dark_or_light()`:
       ! Color "not_a_color" is not valid.
 
-# Pretty match
+# match_arg_pretty() reports invalid choices with helpful errors
 
     Code
       my_fun("error here")
@@ -61,33 +61,24 @@
       Error:
       ! `year` should be "20", not "1" or "2".
 
----
+# match_arg_pretty() returns exact, default and custom matches
 
     Code
-      my_fun3("3")
+      my_fun2("3")
     Condition
       Error:
       ! `an_arg` should be one of "30" or "20", not "3".
       i Did you mean "30"?
 
----
-
-    Code
-      my_fun2(c(1, 2))
-    Condition
-      Error:
-      ! `year` should be "20", not "1" or "2".
-
-# RStudio requirement reports non-RStudio sessions
+# require_rstudio() reports non-RStudio sessions
 
     Code
       s <- require_rstudio("test")
     Message
       x `rstudiothemes::test()` can only run in RStudio, not in "RTerm".
-      > No changes made.
       i No changes made.
 
-# Theme files resolve local paths and URLs
+# local_theme_file() resolves local paths and downloads URLs
 
     Code
       local_theme_file("missing.json", "json")

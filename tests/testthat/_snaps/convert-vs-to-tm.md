@@ -1,4 +1,4 @@
-# Errors
+# convert_vs_to_tm_theme() reports invalid inputs
 
     Code
       convert_vs_to_tm_theme()
@@ -28,10 +28,11 @@
       convert_vs_to_tm_theme(tmp_path)
     Condition
       Error in `tmtheme_settings_df()`:
-      ! Cannot convert theme because no color was detected for required setting: "background".
-      x Ensure the input theme provides the required colors or pass overrides.
+      ! Cannot convert theme because required colors are missing.
+      x Missing 1 setting: "background".
+      i Ensure the input theme provides the required colors or pass overrides.
 
-# Theme creation - file contents snapshot
+# convert_vs_to_tm_theme() preserves TextMate metadata
 
     Code
       cat(out[seq(1, 500)], sep = "\n")
@@ -537,7 +538,7 @@
               </dict>
             </dict>
 
-# Simple Theme creation - basic file generation
+# convert_vs_to_tm_theme() converts simple themes
 
     Code
       cat(out[seq(1, 15)], sep = "\n")
@@ -558,7 +559,7 @@
           <key>uuid</key>
       <string>(masked_uuid)</string>
 
-# Simple Theme creation - with metadata
+# convert_vs_to_tm_theme() uses explicit name and author metadata
 
     Code
       cat(out[seq(1, 15)], sep = "\n")
@@ -579,22 +580,16 @@
           <key>uuid</key>
       <string>(masked_uuid)</string>
 
-# Online
+# convert_vs_to_tm_theme() downloads URL inputs
 
     Code
       thef <- convert_vs_to_tm_theme(path)
     Message
       i Downloading theme from <https://raw.githubusercontent.com/dieghernan/rstudiothemes/refs/heads/main/inst/ext/test-color-theme.json>.
-
-# Unnamed
-
     Code
-      res <- convert_vs_to_tm_theme(fpath)
-    Condition
-      Error in `convert_vs_to_tm_theme()`:
-      ! Theme name not found. Use the `name` argument.
+      invisible(thef)
 
-# Unnamed themes require an explicit name
+# convert_vs_to_tm_theme() requires unnamed theme overrides
 
     Code
       convert_vs_to_tm_theme(fpath)

@@ -14,10 +14,16 @@ export(read_tm_theme)
 export(read_vs_theme)
 export(remove_rstudiothemes)
 export(try_rstudiothemes)
-importFrom(cli,no)
-importFrom(cli,qty)
-importFrom(grDevices,col2rgb)
-importFrom(grDevices,rgb)
-importFrom(utils,download.file)
-importFrom(utils,modifyList)
-importFrom(utils,read.csv)
+importFrom(cli,
+  no,
+  qty
+)
+importFrom(grDevices,
+  col2rgb,
+  rgb
+)
+importFrom(utils,
+  download.file,
+  modifyList,
+  read.csv
+)
