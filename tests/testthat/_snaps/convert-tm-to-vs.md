@@ -28,7 +28,7 @@
       cat(out, sep = "\n")
     Output
       {
-        // Created with the R package rstudiothemes (c) dieghernan.
+        // Created with the rstudiothemes R package (c) dieghernan.
         // https://github.com/dieghernan/rstudiothemes
         "$schema": "vscode://schemas/color-theme",
         "name": "Testing RStudioTheme",
@@ -457,7 +457,7 @@
       cat(out, sep = "\n")
     Output
       {
-        // Created with the R package rstudiothemes (c) dieghernan.
+        // Created with the rstudiothemes R package (c) dieghernan.
         // https://github.com/dieghernan/rstudiothemes
         "$schema": "vscode://schemas/color-theme",
         "name": "Empty theme",
@@ -574,7 +574,7 @@
       cat(out, sep = "\n")
     Output
       {
-        // Created with the R package rstudiothemes (c) dieghernan.
+        // Created with the rstudiothemes R package (c) dieghernan.
         // https://github.com/dieghernan/rstudiothemes
         "$schema": "vscode://schemas/color-theme",
         "name": "A test theme",

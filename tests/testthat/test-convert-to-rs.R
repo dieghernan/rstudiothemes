@@ -36,7 +36,7 @@ test_that("convert_to_rstudio_theme() writes from TextMate input", {
   )
   expect_contains(
     captured$sass_input,
-    "/* Generated with rstudiothemes package */"
+    "/* Generated with the rstudiothemes R package */"
   )
   expect_true(any(grepl(
     "rs-theme-name: Mock theme",
