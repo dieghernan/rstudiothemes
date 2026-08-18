@@ -39,8 +39,7 @@ knitr:
     comment: '#>'
 ---
 
-This article previews the bundled **RStudio** themes included in
-**rstudiothemes**.
+This article previews bundled **RStudio** themes from **rstudiothemes**.
 
 Install the bundled themes with:
 
@@ -59,9 +58,9 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 In **RStudio**, choose `Tools > Global Options > Appearance > Add`.
 
 ::: {#fig-ui}
-![](rstudiogui.png){.nolightbox fig-alt="RStudio IDE add theme UI" width="80%"}
+![](rstudiogui.png){.nolightbox fig-alt="RStudio add theme UI" width="80%"}
 
-RStudio IDE add theme UI.
+RStudio add theme UI.
 :::
 
 ## Lightbox gallery

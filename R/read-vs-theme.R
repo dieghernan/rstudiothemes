@@ -176,7 +176,7 @@ read_vs_theme <- function(path) {
 
   final_df <- final_df[, nms]
 
-  # Convert blanks to NA values.
+  # Convert empty strings to NA.
   # jarl-ignore-start nzchar: Used over a matrix, not a string.
   final_df[final_df == ""] <- NA
   # jarl-ignore-end nzchar
@@ -191,7 +191,7 @@ read_vs_theme <- function(path) {
 }
 
 #' @description
-#' `read_positron_theme()` is an alias of `read_vs_theme()`.
+#' `read_positron_theme()` is an alias for `read_vs_theme()`.
 #'
 #' @rdname read_vs_theme
 #' @export
@@ -199,8 +199,8 @@ read_positron_theme <- read_vs_theme
 
 #' Read and clean JSON data from a theme file
 #'
-#' Read JSON after removing inline comments and extra trailing commas, then
-#' parse and clean the result.
+#' Read JSON after removing inline comments and trailing commas, then parse
+#' and clean the result.
 #'
 #' @param local_file Path to a JSON file.
 #'

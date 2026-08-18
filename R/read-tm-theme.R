@@ -54,8 +54,7 @@ read_tm_theme <- function(path) {
   highlev <- specs[names(specs) != "array"]
 
   # Assume the structure is a consecutive list of `<key><string>` pairs that
-  # represent metadata like `name`, `author`, `colorSpaceName` and similar
-  # fields.
+  # represent metadata such as `name`, `author` and `colorSpaceName`.
   hl_keys <- unlist(highlev[names(highlev) == "key"])
 
   # Remove settings from keys.

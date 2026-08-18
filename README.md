@@ -42,8 +42,8 @@ documentation](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creati
 
 - Convert **Visual Studio Code**, **Positron** and **TextMate** theme
   files to **RStudio** `.rstheme` files.
-- Convert themes bidirectionally between **Visual Studio Code** or
-  **Positron** and **TextMate** formats.
+- Convert themes bidirectionally between **TextMate** and **Visual
+  Studio Code** or **Positron** formats.
 - Install bundled ports of popular **Visual Studio Code** and
   **Positron** themes ready to use in **RStudio**.
 - List, preview and remove bundled **RStudio** themes.
@@ -147,7 +147,7 @@ install.packages(
 ## Try the online converter
 
 The online **Shiny** app includes the main **rstudiothemes** conversion
-features and lets you convert theme files in a browser:
+features and lets you convert theme files in your browser:
 
 <https://dieghernan-themeconverter.share.connect.posit.cloud/>
 

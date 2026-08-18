@@ -13,9 +13,9 @@
 #' @details
 #' RStudio supports custom editor themes in two formats, `.tmTheme` and
 #' `.rstheme`. The `.tmTheme` format originated with TextMate and has become a
-#' common theme format.
-#' [This tmTheme editor](https://tmtheme-editor.linuxbox.ninja/) hosts a large
-#' collection of `.tmTheme` files. The `.rstheme` format is specific to RStudio.
+#' common theme format. [This tmTheme
+#' editor](https://tmtheme-editor.linuxbox.ninja/) hosts a large collection of
+#' `.tmTheme` files. The `.rstheme` format is specific to RStudio.
 #'
 #' To switch editor themes, go to `Tools > Global Options > Appearance > Add`
 #' and use the Editor theme selector.
@@ -34,18 +34,18 @@
 #'
 #' @param path Path or URL to a TextMate theme file (`.tmTheme` format) or a
 #'   Visual Studio Code theme file (`.json` format).
-#' @param use_italics Logical. Use italics in the resulting theme. The default
-#'   is `TRUE`, although some themes may look better without italics.
+#' @param use_italics Logical. Use italics in the resulting theme. Defaults to
+#'   `TRUE`, although some themes may look better without italics.
 #' @inheritParams rstudioapi::addTheme
 #' @inheritParams sass::sass_options
 #' @inheritParams convert_vs_to_tm_theme
 #' @param apply Logical. Apply the theme with [rstudioapi::applyTheme()].
 #'
 #' @returns
-#' This function is called for its side effects. It writes a `.rstheme`
-#' file to `outfile` and returns the path. If `force` or `apply` is `TRUE`, it
-#' installs the theme. If `apply` is `TRUE`, it also applies the theme to your
-#' RStudio IDE.
+#' This function is called for its side effects. It writes a `.rstheme` file to
+#' `outfile` and returns the path. If `force` or `apply` is `TRUE`, it installs
+#' the theme. If `apply` is `TRUE`, it also applies the theme to your RStudio
+#' IDE.
 #'
 #' @family converters
 #' @seealso [rstudioapi::addTheme()], [rstudioapi::applyTheme()]
@@ -117,8 +117,8 @@ convert_to_rstudio_theme <- function(
   tb_hlp_top <- dplyr::tibble(name = "caret", rstheme = ".ace_cursor")
 
   # Adjust ruler color based on theme specification preferences.
-  # TextMate themes don't standardize ruler color, so we prioritize
-  # invisibles > guide > gutter for visibility contrast against background.
+  # TextMate themes don't standardize ruler color, so prioritize invisibles,
+  # then guide, then gutter for contrast against the background.
   ruler_map <- c("invisibles", "guide", "gutter")
   bg_col <- tmcols[tmcols$section == "colors" & tmcols$name == "background", ]
   tm_sub <- tmcols[tmcols$name %in% ruler_map, ]
@@ -205,7 +205,7 @@ convert_to_rstudio_theme <- function(
     end_df$fontstyle <- NA
   }
 
-  new_css <- c("/* CSS rules from TextMate theme */", "")
+  new_css <- c("/* CSS rules from the TextMate theme */", "")
 
   for (cssrule in end_df$rstheme) {
     thisval <- end_df[end_df$rstheme == cssrule, ]
@@ -272,7 +272,7 @@ convert_to_rstudio_theme <- function(
     fixed = TRUE
   )
 
-  vtext <- paste0("/* Generated with rstudiothemes package */")
+  vtext <- paste0("/* Generated with the rstudiothemes R package */")
 
   additional <- c("")
 
@@ -391,7 +391,7 @@ create_ace_cascade <- function(tmcols_scopes) {
   # Enrich level-2 scopes with color information from level 3.
   lev2_xtra <- lev3
 
-  # Limit fontStyle inheritance for color information from level 2.
+  # Do not inherit fontStyle from level 3.
   lev2_xtra$fontStyle <- NA
 
   lev2_xtra$scope <- vapply(
@@ -416,7 +416,7 @@ create_ace_cascade <- function(tmcols_scopes) {
   # Enrich level-1 scopes with color information from level 2.
   lev1_xtra <- lev2_end
 
-  # Limit fontStyle inheritance for color information from higher levels.
+  # Do not inherit fontStyle from higher levels.
   lev1_xtra$fontStyle <- NA
 
   lev1_xtra$scope <- vapply(

@@ -94,7 +94,7 @@ match_arg_pretty <- function(arg, choices) {
   }
 
   lmatch <- match(arg, choices)
-  # Compute the approximate match hint.
+  # Compute an approximate match for the error hint.
   aproxmatch <- pmatch(arg, choices)[1]
 
   if (length(arg) > 1 || is.na(lmatch)) {

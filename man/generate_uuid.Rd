@@ -5,14 +5,14 @@
 \alias{generate_uuid}
 \title{Generate random UUIDs}
 \source{
-Heavily based on an unreleased version of \code{ids::uuid()}.
+Adapted from an unreleased version of \code{ids::uuid()}.
 }
 \usage{
 generate_uuid(hint = NULL)
 }
 \arguments{
 \item{hint}{Optional character string or object coercible with
-\code{\link[=as.character]{as.character()}}. Used as a random seed.}
+\code{\link[=as.character]{as.character()}}, used as a random seed.}
 }
 \value{
 A character string representing a valid UUID.

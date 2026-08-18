@@ -8,8 +8,8 @@
 #' @param outfile Path where the resulting file will be written. Defaults to
 #'   a temporary file created with [tempfile()].
 #' @param name Theme name. If `NULL`, the name from the input file is used.
-#' @param author Theme author. If `NULL`, it attempts to extract the author
-#'   from the input file, otherwise it defaults to "rstudiothemes R package".
+#' @param author Theme author. If `NULL`, extract the author from the input
+#'   file, otherwise default to "rstudiothemes R package".
 #'
 #' @returns
 #' This function is called for its side effects. It writes a `.tmTheme` file to
@@ -106,7 +106,8 @@ convert_vs_to_tm_theme <- function(
 }
 
 #' @description
-#' `convert_positron_to_tm_theme()` is an alias of `convert_vs_to_tm_theme()`.
+#' `convert_positron_to_tm_theme()` is an alias for
+#' `convert_vs_to_tm_theme()`.
 #'
 #' @rdname convert_vs_to_tm_theme
 #' @export
@@ -211,7 +212,7 @@ tmtheme_scopes_df <- function(vs_df) {
     c("name", "foreground", "background", "fontStyle")
   )
 
-  # Work around lintr.
+  # Assign scope to avoid a lintr unused-variable warning.
   scope <- ""
 
   # Build the final output.

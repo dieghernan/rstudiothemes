@@ -24,8 +24,8 @@ a temporary file created with \code{\link[=tempfile]{tempfile()}}.}
 
 \item{name}{Theme name. If \code{NULL}, the name from the input file is used.}
 
-\item{use_italics}{Logical. Use italics in the resulting theme. The default
-is \code{TRUE}, although some themes may look better without italics.}
+\item{use_italics}{Logical. Use italics in the resulting theme. Defaults to
+\code{TRUE}, although some themes may look better without italics.}
 
 \item{output_style}{Bracketing and formatting style of the CSS output.
 Possible styles: \code{"nested"}, \code{"expanded"}, \code{"compact"}, and
@@ -37,10 +37,10 @@ with the same name.\cr Default: \code{FALSE}.}
 \item{apply}{Logical. Apply the theme with \code{\link[rstudioapi:applyTheme]{rstudioapi::applyTheme()}}.}
 }
 \value{
-This function is called for its side effects. It writes a \code{.rstheme}
-file to \code{outfile} and returns the path. If \code{force} or \code{apply} is \code{TRUE}, it
-installs the theme. If \code{apply} is \code{TRUE}, it also applies the theme to your
-RStudio IDE.
+This function is called for its side effects. It writes a \code{.rstheme} file to
+\code{outfile} and returns the path. If \code{force} or \code{apply} is \code{TRUE}, it installs
+the theme. If \code{apply} is \code{TRUE}, it also applies the theme to your RStudio
+IDE.
 }
 \description{
 Convert a \code{.tmTheme} or \code{.json} file that defines a TextMate or Visual
@@ -55,9 +55,8 @@ called from other IDEs.
 \details{
 RStudio supports custom editor themes in two formats, \code{.tmTheme} and
 \code{.rstheme}. The \code{.tmTheme} format originated with TextMate and has become a
-common theme format.
-\href{https://tmtheme-editor.linuxbox.ninja/}{This tmTheme editor} hosts a large
-collection of \code{.tmTheme} files. The \code{.rstheme} format is specific to RStudio.
+common theme format. \href{https://tmtheme-editor.linuxbox.ninja/}{This tmTheme editor} hosts a large collection of
+\code{.tmTheme} files. The \code{.rstheme} format is specific to RStudio.
 
 To switch editor themes, go to \verb{Tools > Global Options > Appearance > Add}
 and use the Editor theme selector.

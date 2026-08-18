@@ -28,8 +28,8 @@ a temporary file created with \code{\link[=tempfile]{tempfile()}}.}
 
 \item{name}{Theme name. If \code{NULL}, the name from the input file is used.}
 
-\item{author}{Theme author. If \code{NULL}, it attempts to extract the author
-from the input file, otherwise it defaults to "rstudiothemes R package".}
+\item{author}{Theme author. If \code{NULL}, extract the author from the input
+file, otherwise default to "rstudiothemes R package".}
 }
 \value{
 This function is called for its side effects. It writes a \code{.json} theme
@@ -39,7 +39,8 @@ file to \code{outfile} and returns the path.
 Convert a \code{.tmTheme} file representing a TextMate theme and write the
 equivalent Visual Studio Code theme file (\code{.json}).
 
-\code{convert_tm_to_positron_theme()} is an alias of \code{convert_tm_to_vs_theme()}.
+\code{convert_tm_to_positron_theme()} is an alias for
+\code{convert_tm_to_vs_theme()}.
 }
 \examples{
 tmtheme <- system.file("ext/test.tmTheme",

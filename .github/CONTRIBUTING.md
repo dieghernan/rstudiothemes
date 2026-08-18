@@ -1,9 +1,9 @@
 # Contributing to rstudiothemes
 
-This outlines how to propose a change to rstudiothemes. For a detailed
-discussion on contributing to this package, please see the [development
-contributing guide](https://rstd.io/tidy-contrib) and our [code review
-principles](https://code-review.tidyverse.org/).
+This document outlines how to propose a change to **rstudiothemes**. For a
+detailed discussion on contributing to this package, please see the
+[development contributing guide](https://rstd.io/tidy-contrib) and our [code
+review principles](https://code-review.tidyverse.org/).
 
 ## Fixing typos
 
@@ -16,9 +16,9 @@ comment in the first line.
 
 ## Bigger changes
 
-If you want to make a bigger change, it's a good idea to first file an issue and
-make sure someone from the team agrees that it’s needed. If you’ve found a bug,
-please file an issue that illustrates the bug with a minimal
+If you want to make a bigger change, it's a good idea to first file an issue
+and make sure someone from the team agrees that it's needed. If you've found a
+bug, please file an issue that illustrates the bug with a minimal
 [reprex](https://www.tidyverse.org/help/#reprex) (this will also help you write
 a unit test, if needed). See our guide on [how to create a great
 issue](https://code-review.tidyverse.org/issues/) for more advice.
@@ -63,7 +63,6 @@ issue](https://code-review.tidyverse.org/issues/) for more advice.
 
 ## Code of Conduct
 
-Please note that the rstudiothemes project is released with a [Contributor Code
-of Conduct](CODE_OF_CONDUCT.md). By contributing to this project you agree to
-abide by its terms.
-
+Please note that the **rstudiothemes** project is released with a [Contributor
+Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project you agree
+to abide by its terms.

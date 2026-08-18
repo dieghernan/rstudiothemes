@@ -1181,8 +1181,8 @@
 
 .rstudio_rainbow_indent_fills .ace_line .ace_indent-guide:nth-child(7n+7) { background: linear-gradient(to left, #dc91dbbb 1px, #dc91db77 1px, #dc91db77); }
 
-/* Generated with rstudiothemes package */
-/* CSS rules from TextMate theme */
+/* Generated with the rstudiothemes R package */
+/* CSS rules from the TextMate theme */
 .ace_cursor { color: #4FB4D8; }
 
 .ace_print-margin { background: #C4C5CD; }
@@ -1233,13 +1233,17 @@
 
 .ace_keyword.ace_operator { color: #7B30D0; }
 
-.ace_markup { color: #87429A; }
+.ace_markup { color: #207BB8; }
 
 .ace_markup.ace_bold { color: #4E76B5; }
 
 .ace_markup.ace_bold.ace_markdown { color: #4E76B5; font-weight: bold; }
 
+.ace_markup.ace_deleted { color: #B31D28; }
+
 .ace_markup.ace_href { color: #924205; }
+
+.ace_markup.ace_inserted { color: #22863A; }
 
 .ace_markup.ace_italic { color: #C792EA; }
 
@@ -1250,6 +1254,8 @@
 .ace_markup.ace_quote { color: #87429A; }
 
 .ace_markup.ace_quote.ace_markdown { color: #00AC8F; }
+
+.ace_markup.ace_underline { color: #207BB8; }
 
 .ace_meta { color: #C792EA; }
 

@@ -105,11 +105,11 @@ convert_tm_to_vs_theme <- function(
   }
 
   jsonlite::write_json(vs_l, path = outfile, auto_unbox = TRUE, pretty = TRUE)
-  # Add package information.
+  # Add package attribution comments.
   lns <- readLines(outfile)
   lns <- c(
     lns[1],
-    "  // Created with the R package rstudiothemes (c) dieghernan.",
+    "  // Created with the rstudiothemes R package (c) dieghernan.",
     "  // https://github.com/dieghernan/rstudiothemes",
     lns[-1]
   )
@@ -120,7 +120,8 @@ convert_tm_to_vs_theme <- function(
 }
 
 #' @description
-#' `convert_tm_to_positron_theme()` is an alias of `convert_tm_to_vs_theme()`.
+#' `convert_tm_to_positron_theme()` is an alias for
+#' `convert_tm_to_vs_theme()`.
 #'
 #' @rdname convert_tm_to_vs_theme
 #' @export

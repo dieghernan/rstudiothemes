@@ -9,12 +9,12 @@
 #' identifying generated theme versions.
 #'
 #' @param hint Optional character string or object coercible with
-#'   [as.character()]. Used as a random seed.
+#'   [as.character()], used as a random seed.
 #'
 #' @returns
 #' A character string representing a valid UUID.
 #'
-#' @source Heavily based on an unreleased version of `ids::uuid()`.
+#' @source Adapted from an unreleased version of `ids::uuid()`.
 #' @references
 #' Davis KR, Peabody B and Leach P (2024). "Universally Unique Identifiers
 #' (UUIDs)." RFC 9562. \doi{10.17487/RFC9562},

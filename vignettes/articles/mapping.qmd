@@ -19,8 +19,8 @@ Sources:
 - **TextMate** and **RStudio**:
   <https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html>
 
-When several source elements map to the same target element, mapping priority
-determines which value is used.
+When several source elements map to the same target element, mapping
+priority determines which value is used.
 
 ::: {#tbl-map}
 ```{r}

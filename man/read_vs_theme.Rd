@@ -20,7 +20,7 @@ A \link[tibble:tbl_df]{tibble} containing the theme data.
 \description{
 Read a \code{.json} file representing a Visual Studio Code or Positron theme.
 
-\code{read_positron_theme()} is an alias of \code{read_vs_theme()}.
+\code{read_positron_theme()} is an alias for \code{read_vs_theme()}.
 }
 \examples{
 vstheme <- system.file("ext/test-color-theme.json",

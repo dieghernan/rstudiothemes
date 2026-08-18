@@ -437,7 +437,7 @@ dd <- convert_to_rstudio_theme(
 # Winter is Coming ---------------------------
 url <- paste0(
   "https://raw.githubusercontent.com/johnpapa/vscode-winteriscoming/",
-  "refs/heads/master/themes/",
+  "refs/heads/main/themes/",
   "WinterIsComing-dark-blue-color-no-italics-theme.json"
 )
 
@@ -452,7 +452,7 @@ dd <- convert_to_rstudio_theme(
 
 url <- file.path(
   "https://raw.githubusercontent.com/johnpapa/vscode-winteriscoming/refs/",
-  "heads/master/themes/WinterIsComing-light-color-no-italics-theme.json"
+  "heads/main/themes/WinterIsComing-light-color-no-italics-theme.json"
 )
 dd <- convert_to_rstudio_theme(
   url,

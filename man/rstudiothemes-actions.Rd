@@ -27,13 +27,13 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 \item{themes}{Optional character vector of theme names. If provided, only
 these themes are used and \code{style} is ignored.}
 
-\item{destdir}{Optional directory for \code{.rstheme} files. By default, it uses
-\code{\link[rstudioapi:addTheme]{rstudioapi::addTheme()}}, but this argument allows installation to
-non-standard directories.}
+\item{destdir}{Optional directory for \code{.rstheme} files. By default, themes
+are installed with \code{\link[rstudioapi:addTheme]{rstudioapi::addTheme()}}. Use this argument to copy
+themes to a non-standard directory instead.}
 
-\item{list_installed}{Should the installed \CRANpkg{rstudiothemes} themes
-be listed (default). If \code{FALSE}, the available themes in the
-\CRANpkg{rstudiothemes} package are listed instead.}
+\item{list_installed}{If \code{TRUE} (default), list installed
+\CRANpkg{rstudiothemes} themes. If \code{FALSE}, list themes available in the
+package.}
 
 \item{delay}{Number of seconds to wait between themes. Set to 0 to be
 prompted to continue after each theme.}
@@ -44,9 +44,8 @@ invisibly.
 
 \code{list_rstudiothemes()} returns a character vector of theme names.
 
-\code{try_rstudiothemes()} has side effects: it starts a widget that allows users
-to try different themes. The widget can be exited by following the prompts,
-which restore the original theme.
+\code{try_rstudiothemes()} has side effects. It cycles through bundled themes,
+lets you preview each one and restores your original theme when you quit.
 }
 \description{
 Install, list, preview or remove the RStudio themes included in
@@ -66,7 +65,7 @@ called from other IDEs. The exception is
 
 \item \code{list_rstudiothemes()}: List installed or available themes.
 
-\item \code{try_rstudiothemes()}: Preview each bundled \CRANpkg{rstudiothemes} RStudio theme.
+\item \code{try_rstudiothemes()}: Preview bundled \CRANpkg{rstudiothemes} RStudio themes.
 
 }}
 \section{Bundled themes}{
