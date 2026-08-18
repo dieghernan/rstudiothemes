@@ -60,7 +60,7 @@ Initial **CRAN** release.
 
 ### Bundled RStudio themes
 
-Updates to bundled RStudio themes.
+Changes to bundled **RStudio** themes.
 
 - Added mapping of indent guides to RStudio themes.
 - Added `"Andromeda"` by Eliver Lara.

@@ -3,7 +3,7 @@
 Convert a `.tmTheme` file representing a TextMate theme and write the
 equivalent Visual Studio Code theme file (`.json`).
 
-`convert_tm_to_positron_theme()` is an alias of
+`convert_tm_to_positron_theme()` is an alias for
 `convert_tm_to_vs_theme()`.
 
 ## Usage
@@ -42,8 +42,8 @@ convert_tm_to_positron_theme(
 
 - author:
 
-  Theme author. If `NULL`, it attempts to extract the author from the
-  input file, otherwise it defaults to "rstudiothemes R package".
+  Theme author. If `NULL`, extract the author from the input file,
+  otherwise default to "rstudiothemes R package".
 
 ## Value
 
@@ -68,7 +68,7 @@ readLines(path) |>
   head(50) |>
   cat(sep = "\n")
 #> {
-#>   // Created with the R package rstudiothemes (c) dieghernan.
+#>   // Created with the rstudiothemes R package (c) dieghernan.
 #>   // https://github.com/dieghernan/rstudiothemes
 #>   "$schema": "vscode://schemas/color-theme",
 #>   "name": "Testing RStudioTheme",

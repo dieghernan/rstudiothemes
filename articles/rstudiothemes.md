@@ -24,7 +24,7 @@ install_rstudiothemes()
 ```
 
 This adds popular themes such as Tokyo Night, Nord, Winter is Coming and
-Dracula to your **RStudio** themes directory.
+Dracula2025 to your **RStudio** themes directory.
 
 To list the themes available in the package:
 
@@ -96,7 +96,7 @@ convert_to_rstudio_theme(
 This function writes the `.rstheme` file, installs it and applies it
 when `apply = TRUE`.
 
-## Workflow example: from Visual Studio Code or Positron to RStudio
+## Workflow example: from **Visual Studio Code** or **Positron** to **RStudio**
 
 - Choose a `.json` theme file from **Visual Studio Code** or
   **Positron**.

@@ -109,8 +109,8 @@ a temporary file created with <code><a href="https://rdrr.io/r/base/tempfile.htm
 
 
 <dt id="arg-use-italics">use_italics<a class="anchor" aria-label="anchor" href="#arg-use-italics"></a></dt>
-<dd><p>Logical. Use italics in the resulting theme. The default
-is <code>TRUE</code>, although some themes may look better without italics.</p></dd>
+<dd><p>Logical. Use italics in the resulting theme. Defaults to
+<code>TRUE</code>, although some themes may look better without italics.</p></dd>
 
 
 <dt id="arg-output-style">output_style<a class="anchor" aria-label="anchor" href="#arg-output-style"></a></dt>
@@ -130,18 +130,17 @@ with the same name.<br> Default: <code>FALSE</code>.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>This function is called for its side effects. It writes a <code>.rstheme</code>
-file to <code>outfile</code> and returns the path. If <code>force</code> or <code>apply</code> is <code>TRUE</code>, it
-installs the theme. If <code>apply</code> is <code>TRUE</code>, it also applies the theme to your
-RStudio IDE.</p>
+    <p>This function is called for its side effects. It writes a <code>.rstheme</code> file to
+<code>outfile</code> and returns the path. If <code>force</code> or <code>apply</code> is <code>TRUE</code>, it installs
+the theme. If <code>apply</code> is <code>TRUE</code>, it also applies the theme to your RStudio
+IDE.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>RStudio supports custom editor themes in two formats, <code>.tmTheme</code> and
 <code>.rstheme</code>. The <code>.tmTheme</code> format originated with TextMate and has become a
-common theme format.
-<a href="https://tmtheme-editor.linuxbox.ninja/" class="external-link">This tmTheme editor</a> hosts a large
-collection of <code>.tmTheme</code> files. The <code>.rstheme</code> format is specific to RStudio.</p>
+common theme format. <a href="https://tmtheme-editor.linuxbox.ninja/" class="external-link">This tmTheme editor</a> hosts a large collection of
+<code>.tmTheme</code> files. The <code>.rstheme</code> format is specific to RStudio.</p>
 <p>To switch editor themes, go to <code>Tools &gt; Global Options &gt; Appearance &gt; Add</code>
 and use the Editor theme selector.</p>
 <p></p><div style="text-align: center">   <img src="figures/rstudiogui.png" alt="RStudio IDE add theme UI" style="max-width:80%;"></div>

@@ -109,15 +109,15 @@ these themes are used and <code>style</code> is ignored.</p></dd>
 
 
 <dt id="arg-destdir">destdir<a class="anchor" aria-label="anchor" href="#arg-destdir"></a></dt>
-<dd><p>Optional directory for <code>.rstheme</code> files. By default, it uses
-<code><a href="https://rstudio.github.io/rstudioapi/reference/addTheme.html" class="external-link">rstudioapi::addTheme()</a></code>, but this argument allows installation to
-non-standard directories.</p></dd>
+<dd><p>Optional directory for <code>.rstheme</code> files. By default, themes
+are installed with <code><a href="https://rstudio.github.io/rstudioapi/reference/addTheme.html" class="external-link">rstudioapi::addTheme()</a></code>. Use this argument to copy
+themes to a non-standard directory instead.</p></dd>
 
 
 <dt id="arg-list-installed">list_installed<a class="anchor" aria-label="anchor" href="#arg-list-installed"></a></dt>
-<dd><p>Should the installed <a href="https://CRAN.R-project.org/package=rstudiothemes" class="external-link"><span class="pkg">rstudiothemes</span></a> themes
-be listed (default). If <code>FALSE</code>, the available themes in the
-<a href="https://CRAN.R-project.org/package=rstudiothemes" class="external-link"><span class="pkg">rstudiothemes</span></a> package are listed instead.</p></dd>
+<dd><p>If <code>TRUE</code> (default), list installed
+<a href="https://CRAN.R-project.org/package=rstudiothemes" class="external-link"><span class="pkg">rstudiothemes</span></a> themes. If <code>FALSE</code>, list themes available in the
+package.</p></dd>
 
 
 <dt id="arg-delay">delay<a class="anchor" aria-label="anchor" href="#arg-delay"></a></dt>
@@ -130,9 +130,8 @@ prompted to continue after each theme.</p></dd>
     <p><code>install_rstudiothemes()</code> and <code>remove_rstudiothemes()</code> return <code>NULL</code>
 invisibly.</p>
 <p><code>list_rstudiothemes()</code> returns a character vector of theme names.</p>
-<p><code>try_rstudiothemes()</code> has side effects: it starts a widget that allows users
-to try different themes. The widget can be exited by following the prompts,
-which restore the original theme.</p>
+<p><code>try_rstudiothemes()</code> has side effects. It cycles through bundled themes,
+lets you preview each one and restores your original theme when you quit.</p>
     </div>
     <div class="section level2">
     <h2 id="functions">Functions<a class="anchor" aria-label="anchor" href="#functions"></a></h2>
@@ -140,7 +139,7 @@ which restore the original theme.</p>
 <ul><li><p><code>install_rstudiothemes()</code>: Install RStudio themes.</p></li>
 <li><p><code>remove_rstudiothemes()</code>: Remove bundled <a href="https://CRAN.R-project.org/package=rstudiothemes" class="external-link"><span class="pkg">rstudiothemes</span></a> themes from RStudio.</p></li>
 <li><p><code>list_rstudiothemes()</code>: List installed or available themes.</p></li>
-<li><p><code>try_rstudiothemes()</code>: Preview each bundled <a href="https://CRAN.R-project.org/package=rstudiothemes" class="external-link"><span class="pkg">rstudiothemes</span></a> RStudio theme.</p></li>
+<li><p><code>try_rstudiothemes()</code>: Preview bundled <a href="https://CRAN.R-project.org/package=rstudiothemes" class="external-link"><span class="pkg">rstudiothemes</span></a> RStudio themes.</p></li>
 </ul></div>
     <div class="section level2">
     <h2 id="bundled-themes">Bundled themes<a class="anchor" aria-label="anchor" href="#bundled-themes"></a></h2>

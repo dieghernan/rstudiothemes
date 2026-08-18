@@ -10,14 +10,14 @@ generate_uuid(hint = NULL)
 
 ## Source
 
-Heavily based on an unreleased version of `ids::uuid()`.
+Adapted from an unreleased version of `ids::uuid()`.
 
 ## Arguments
 
 - hint:
 
   Optional character string or object coercible with
-  [`as.character()`](https://rdrr.io/r/base/character.html). Used as a
+  [`as.character()`](https://rdrr.io/r/base/character.html), used as a
   random seed.
 
 ## Value

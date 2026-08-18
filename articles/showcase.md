@@ -1,7 +1,6 @@
 # Theme gallery
 
-This article previews the bundled **RStudio** themes included in
-**rstudiothemes**.
+This article previews bundled **RStudio** themes from **rstudiothemes**.
 
 Install the bundled themes with:
 
@@ -17,9 +16,9 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 In **RStudio**, choose `Tools > Global Options > Appearance > Add`.
 
-![RStudio IDE add theme UI](rstudiogui.png)
+![RStudio add theme UI](rstudiogui.png)
 
-Figure 1: RStudio IDE add theme UI.
+Figure 1: RStudio add theme UI.
 
 ## Lightbox gallery
 

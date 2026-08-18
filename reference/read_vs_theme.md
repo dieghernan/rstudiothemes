@@ -2,7 +2,7 @@
 
 Read a `.json` file representing a Visual Studio Code or Positron theme.
 
-`read_positron_theme()` is an alias of `read_vs_theme()`.
+`read_positron_theme()` is an alias for `read_vs_theme()`.
 
 ## Usage
 

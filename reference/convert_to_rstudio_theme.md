@@ -42,7 +42,7 @@ convert_to_rstudio_theme(
 
 - use_italics:
 
-  Logical. Use italics in the resulting theme. The default is `TRUE`,
+  Logical. Use italics in the resulting theme. Defaults to `TRUE`,
   although some themes may look better without italics.
 
 - output_style:

@@ -39,17 +39,16 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 
 - destdir:
 
-  Optional directory for `.rstheme` files. By default, it uses
-  [`rstudioapi::addTheme()`](https://rstudio.github.io/rstudioapi/reference/addTheme.html),
-  but this argument allows installation to non-standard directories.
+  Optional directory for `.rstheme` files. By default, themes are
+  installed with
+  [`rstudioapi::addTheme()`](https://rstudio.github.io/rstudioapi/reference/addTheme.html).
+  Use this argument to copy themes to a non-standard directory instead.
 
 - list_installed:
 
-  Should the installed
+  If `TRUE` (default), list installed
   [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
-  themes be listed (default). If `FALSE`, the available themes in the
-  [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
-  package are listed instead.
+  themes. If `FALSE`, list themes available in the package.
 
 - delay:
 
@@ -63,9 +62,9 @@ invisibly.
 
 `list_rstudiothemes()` returns a character vector of theme names.
 
-`try_rstudiothemes()` has side effects: it starts a widget that allows
-users to try different themes. The widget can be exited by following the
-prompts, which restore the original theme.
+`try_rstudiothemes()` has side effects. It cycles through bundled
+themes, lets you preview each one and restores your original theme when
+you quit.
 
 ## Functions
 
@@ -77,9 +76,9 @@ prompts, which restore the original theme.
 
 - `list_rstudiothemes()`: List installed or available themes.
 
-- `try_rstudiothemes()`: Preview each bundled
+- `try_rstudiothemes()`: Preview bundled
   [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
-  RStudio theme.
+  RStudio themes.
 
 ## Bundled themes
 

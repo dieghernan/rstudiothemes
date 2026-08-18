@@ -1,9 +1,9 @@
 # Contributing to rstudiothemes
 
-This outlines how to propose a change to rstudiothemes. For a detailed
-discussion on contributing to this package, please see the [development
-contributing guide](https://rstd.io/tidy-contrib) and our [code review
-principles](https://code-review.tidyverse.org/).
+This document outlines how to propose a change to **rstudiothemes**. For
+a detailed discussion on contributing to this package, please see the
+[development contributing guide](https://rstd.io/tidy-contrib) and our
+[code review principles](https://code-review.tidyverse.org/).
 
 ## Fixing typos
 
@@ -68,7 +68,7 @@ advice.
 
 ## Code of Conduct
 
-Please note that the rstudiothemes project is released with a
+Please note that the **rstudiothemes** project is released with a
 [Contributor Code of
 Conduct](https://dieghernan.github.io/rstudiothemes/CODE_OF_CONDUCT.md).
 By contributing to this project you agree to abide by its terms.
