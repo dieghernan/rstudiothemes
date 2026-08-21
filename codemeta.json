@@ -226,7 +226,7 @@
     "SystemRequirements": null
   },
   "keywords": ["r-package", "rstudio-themes", "textmate-themes", "vscode-themes", "positron-themes", "cran", "cran-r"],
-  "fileSize": "2275.089KB",
+  "fileSize": "2275.155KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",

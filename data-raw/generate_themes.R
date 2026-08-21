@@ -522,4 +522,4 @@ install_rstudiothemes()
 
 rstudioapi::applyTheme(current_theme)
 
-cli::cli_alert_success("OK, bye ;)")
+cli::cli_alert_success("OK, bye.")

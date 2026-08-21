@@ -8,8 +8,8 @@
 #' @inheritParams convert_vs_to_tm_theme
 #'
 #' @returns
-#' This function is called for its side effects. It writes a `.json` theme
-#' file to `outfile` and returns the path.
+#' This function is called for its side effects. It writes a `.json` theme file
+#' to `outfile` and returns the path.
 #'
 #' @family converters
 #' @encoding UTF-8
@@ -150,7 +150,7 @@ tmtheme_default_vs_colors <- function(theme_db) {
 tmtheme_mapped_vs_colors <- function(theme_db) {
   mapping <- theme_mapping()
 
-  # Use editorIndentGuide.background1 instead of the deprecated setting.
+  # Use `editorIndentGuide.background1` instead of the deprecated setting.
   mapping <- mapping[mapping$vscode != "editorIndentGuide.background", ]
 
   high_level <- theme_db[theme_db$section == "colors", c("name", "foreground")]
@@ -316,7 +316,7 @@ additional_cols <- function(bg, fg, comment, selection, accent) {
     # Progress bar.
     "progressBar.background" = accent,
 
-    # List and trees.
+    # Lists and trees.
     "list.activeSelectionBackground" = selection,
     "list.activeSelectionForeground" = fg,
     "list.dropBackground" = selection,

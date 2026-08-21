@@ -11,7 +11,7 @@ read_vs_theme(path)
 read_positron_theme(path)
 }
 \arguments{
-\item{path}{Path or URL to a Visual Studio Code or Positron theme file, in
+\item{path}{Path or URL to a Visual Studio Code or Positron theme file in
 \code{.json} format.}
 }
 \value{

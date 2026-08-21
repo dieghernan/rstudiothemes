@@ -3,7 +3,7 @@
 #' @description
 #' Read a `.tmTheme` XML file representing a TextMate or Sublime Text theme.
 #'
-#' @param path Path or URL to a TextMate theme file, in `.tmTheme` format.
+#' @param path Path or URL to a TextMate theme file in `.tmTheme` format.
 #'
 #' @returns
 #' A [tibble][tibble::tbl_df()] containing the theme data.

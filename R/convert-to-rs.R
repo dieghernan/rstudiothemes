@@ -4,8 +4,8 @@
 #' Convert a `.tmTheme` or `.json` file that defines a TextMate or Visual
 #' Studio Code theme and write the equivalent RStudio `.rstheme` file.
 #'
-#' Optionally, the generated theme can be installed and applied to the
-#' RStudio IDE.
+#' Optionally, the generated theme can be installed and applied to the RStudio
+#' IDE.
 #'
 #' **Important**: This function only works in RStudio. It returns `NULL` when
 #' called from other IDEs.
@@ -18,7 +18,7 @@
 #' `.tmTheme` files. The `.rstheme` format is specific to RStudio.
 #'
 #' To switch editor themes, go to `Tools > Global Options > Appearance > Add`
-#' and use the Editor theme selector.
+#' and use the editor theme selector.
 #'
 #' \if{html}{
 #'   \out{<div style="text-align: center">}
@@ -107,7 +107,7 @@ convert_to_rstudio_theme <- function(
     path <- convert_vs_to_tm_theme(path, tm_temp, name = name)
   } else if (grepl("^http", path)) {
     # Download only TextMate files here because Visual Studio Code conversion
-    # happens implicitly in convert_vs_to_tm_theme().
+    # happens implicitly in `convert_vs_to_tm_theme()`.
     path <- local_theme_file(path, "tmTheme")
   }
 
@@ -145,7 +145,7 @@ convert_to_rstudio_theme <- function(
   keepvals <- c("rstheme", "foreground", "background", "fontStyle")
   rstheme_top <- tmcols_top[, keepvals]
 
-  # Map tmTheme scopes to ACE editor CSS rules.
+  # Map `.tmTheme` scopes to ACE editor CSS rules.
   tmcols_scopes <- tmcols[
     !is.na(tmcols$scope),
     c("scope", "foreground", "background", "fontStyle")
@@ -158,7 +158,7 @@ convert_to_rstudio_theme <- function(
 
   tmcols_scopes <- tmcols_scopes[!empty_row, ]
 
-  # Modify selected scopes to adapt them to the ACE editor.
+  # Modify selected scopes for the ACE editor.
   # Convert link-like scopes to href.
   tmcols_scopes[
     grepl(
@@ -249,8 +249,8 @@ convert_to_rstudio_theme <- function(
     force = TRUE
   )
 
-  # Read the auto-generated RStudio theme CSS and append new CSS rules
-  # and additional Sass variables.
+  # Read the generated RStudio theme CSS and append new CSS rules and
+  # additional Sass variables.
   tmpfile <- list.files(tmp, full.names = TRUE)
   themelines <- readLines(tmpfile)
 

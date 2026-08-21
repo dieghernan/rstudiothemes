@@ -2,10 +2,10 @@
 
 **Note:** These theme files are not intended for use in Visual Studio Code.
 
-These files are modified versions of existing **Visual Studio Code** themes. The
-modifications adapt the themes to the standard JSON format for reference or
-analysis. To use the original themes, install them directly from the [Visual
-Studio Marketplace](https://marketplace.visualstudio.com/search?target=VSCode&category=Themes&sortBy=Installs).
+These files are modified versions of existing **Visual Studio Code** themes.
+The modifications adapt the themes to the standard JSON format for reference
+and analysis. To use the original themes, install them directly from the
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/search?target=VSCode&category=Themes&sortBy=Installs).
 
 ## Legal disclaimer
 

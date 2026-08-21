@@ -21,7 +21,7 @@ convert_positron_to_tm_theme(
 )
 }
 \arguments{
-\item{path}{Path or URL to a Visual Studio Code or Positron theme file, in
+\item{path}{Path or URL to a Visual Studio Code or Positron theme file in
 \code{.json} format.}
 
 \item{outfile}{Path where the resulting file will be written. Defaults to
@@ -29,8 +29,8 @@ a temporary file created with \code{\link[=tempfile]{tempfile()}}.}
 
 \item{name}{Theme name. If \code{NULL}, the name from the input file is used.}
 
-\item{author}{Theme author. If \code{NULL}, extract the author from the input
-file, otherwise default to "rstudiothemes R package".}
+\item{author}{Theme author. If \code{NULL}, the author is extracted from the
+input file, otherwise it defaults to "rstudiothemes R package".}
 }
 \value{
 This function is called for its side effects. It writes a \code{.tmTheme} file to

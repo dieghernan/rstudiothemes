@@ -16,7 +16,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes/badge?s=db1aa5e9aa335100151678939d0b23ee5cb86b71)](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes)
 [![DOI](https://img.shields.io/badge/DOI-%2010.32614/CRAN.package.rstudiothemes%20-blue)](https://doi.org/10.32614/CRAN.package.rstudiothemes)
 [![Project Status: Inactive – The project has reached a stable, usable
-state, but is no longer being actively developed; support/maintenance
+state. It is no longer being actively developed, and support/maintenance
 will be provided as time
 allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
 
@@ -35,8 +35,8 @@ documentation](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creati
 > [!NOTE]
 >
 > This package is stable and maintained on a best-effort basis. I
-> currently prioritize CRAN compatibility, bug fixes and regression
-> fixes over new features.
+> currently prioritize CRAN compatibility, bug and regression fixes over
+> new features.
 
 ## Features
 
@@ -100,7 +100,7 @@ rstudiothemes::list_rstudiothemes(list_installed = FALSE)
 
 The bundled themes are also distributed in a single `.zip` file at
 <https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip>.
-Unzip and install them using the [**RStudio** IDE
+Unzip the file and install the themes using the [**RStudio** IDE
 interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 ## Installation
@@ -175,7 +175,7 @@ theme.
 <div class="text-center">
 
 <img src="man/figures/rstudiogui.png" style="width:80.0%"
-alt="RStudio IDE add theme UI" />
+alt="RStudio IDE Add Theme interface" />
 
 </div>
 

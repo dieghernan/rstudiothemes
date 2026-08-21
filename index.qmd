@@ -25,9 +25,9 @@ knitr:
 [![coveralls](https://coveralls.io/repos/github/dieghernan/rstudiothemes/badge.svg)](https://coveralls.io/github/dieghernan/rstudiothemes)
 [![CodeFactor](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes/badge?s=db1aa5e9aa335100151678939d0b23ee5cb86b71)](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes)
 [![DOI](https://img.shields.io/badge/DOI-%2010.32614/CRAN.package.rstudiothemes%20-blue)](https://doi.org/10.32614/CRAN.package.rstudiothemes)
-[![Project Status: Inactive – The project has reached a stable, usable state,
-but is no longer being actively developed; support/maintenance will be provided
-as time
+[![Project Status: Inactive – The project has reached a stable, usable state.
+It is no longer being actively developed, and support/maintenance will be
+provided as time
 allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
 
 <!-- badges: end -->
@@ -50,8 +50,7 @@ documentation](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creati
 ```
 
 This package is stable and maintained on a best-effort basis. I currently
-prioritize CRAN compatibility, bug fixes and regression fixes over new
-features.
+prioritize CRAN compatibility, bug and regression fixes over new features.
 
 ```{=html}
 </div>
@@ -89,8 +88,8 @@ rstudioapi::applyTheme("Winter is Coming Dark Blue")
 ![](man/figures/winteriscoming.png){alt="Winter is Coming Dark Blue theme"}
 :::
 
-Available themes include popular choices such as Tokyo Night, Night Owl, Winter
-is Coming, SynthWave 84, Nord and many more:
+Available themes include popular choices such as Tokyo Night, Night Owl,
+Winter is Coming, SynthWave 84, Nord and many more:
 
 ```{r}
 #| eval: true
@@ -98,8 +97,8 @@ rstudiothemes::list_rstudiothemes(list_installed = FALSE)
 ```
 
 The bundled themes are also distributed in a single `.zip` file at
-<https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip>. Unzip and
-install them using the [**RStudio** IDE
+<https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip>. Unzip the
+file and install the themes using the [**RStudio** IDE
 interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 ## Installation
@@ -168,7 +167,7 @@ Alternatively, in **RStudio**, choose
 `Tools > Global Options > Appearance > Add` and select the installed theme.
 
 ::: text-center
-![](man/figures/rstudiogui.png){alt="RStudio IDE add theme UI" width="80%"}
+![](man/figures/rstudiogui.png){alt="RStudio IDE Add Theme interface" width="80%"}
 :::
 
 ### Convert between theme formats

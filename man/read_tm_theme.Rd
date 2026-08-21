@@ -8,7 +8,7 @@
 read_tm_theme(path)
 }
 \arguments{
-\item{path}{Path or URL to a TextMate theme file, in \code{.tmTheme} format.}
+\item{path}{Path or URL to a TextMate theme file in \code{.tmTheme} format.}
 }
 \value{
 A \link[tibble:tbl_df]{tibble} containing the theme data.

@@ -8,8 +8,8 @@
 #' @param outfile Path where the resulting file will be written. Defaults to
 #'   a temporary file created with [tempfile()].
 #' @param name Theme name. If `NULL`, the name from the input file is used.
-#' @param author Theme author. If `NULL`, extract the author from the input
-#'   file, otherwise default to "rstudiothemes R package".
+#' @param author Theme author. If `NULL`, the author is extracted from the
+#'   input file, otherwise it defaults to "rstudiothemes R package".
 #'
 #' @returns
 #' This function is called for its side effects. It writes a `.tmTheme` file to
@@ -79,7 +79,7 @@ convert_vs_to_tm_theme <- function(
 
   comm <- "Generated with rstudiothemes R package"
 
-  # Generate a UUID from the MD5 hash of the original file.
+  # Generate a UUID from the original file's MD5 hash.
   md5 <- unname(tools::md5sum(path))
   uuid <- generate_uuid(md5)
 
@@ -197,7 +197,7 @@ tmtheme_scopes_df <- function(vs_df) {
     .direction = "up"
   )
 
-  # Keep one value per group.
+  # Keep one value for each group.
   unique_g <- dplyr::slice_head(filled, n = 1)
 
   # Sort scopes.
@@ -212,7 +212,7 @@ tmtheme_scopes_df <- function(vs_df) {
     c("name", "foreground", "background", "fontStyle")
   )
 
-  # Assign scope to avoid a lintr unused-variable warning.
+  # Assign `scope` to avoid a lintr unused-variable warning.
   scope <- ""
 
   # Build the final output.

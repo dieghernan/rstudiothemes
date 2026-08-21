@@ -46,8 +46,8 @@ IDE.
 Convert a \code{.tmTheme} or \code{.json} file that defines a TextMate or Visual
 Studio Code theme and write the equivalent RStudio \code{.rstheme} file.
 
-Optionally, the generated theme can be installed and applied to the
-RStudio IDE.
+Optionally, the generated theme can be installed and applied to the RStudio
+IDE.
 
 \strong{Important}: This function only works in RStudio. It returns \code{NULL} when
 called from other IDEs.
@@ -59,7 +59,7 @@ common theme format. \href{https://tmtheme-editor.linuxbox.ninja/}{This tmTheme 
 \code{.tmTheme} files. The \code{.rstheme} format is specific to RStudio.
 
 To switch editor themes, go to \verb{Tools > Global Options > Appearance > Add}
-and use the Editor theme selector.
+and use the editor theme selector.
 
 \if{html}{
   \out{<div style="text-align: center">}
