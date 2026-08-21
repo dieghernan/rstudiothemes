@@ -1,6 +1,6 @@
 ---
 title: "Theme gallery"
-subtitle: Preview bundled RStudio themes
+subtitle: Preview bundled **RStudio** themes
 description: Preview bundled RStudio themes
 lightbox:
   match: auto
@@ -58,9 +58,10 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 In **RStudio**, choose `Tools > Global Options > Appearance > Add`.
 
 ::: {#fig-ui}
-![](rstudiogui.png){.nolightbox fig-alt="RStudio Add Theme interface" width="80%"}
+![](rstudiogui.png){.nolightbox fig-alt="RStudio Add Theme interface"
+width="80%"}
 
-RStudio Add Theme interface.
+**RStudio** Add Theme interface.
 :::
 
 ## Lightbox gallery
@@ -118,7 +119,7 @@ for (i in seq_along(themes)) {
 Previews may differ from the display on your device. The screenshots use this
 setup:
 
-**RStudio version**
+**RStudio** version
 
 ```         
 RStudio 2026.01.1+403 "Apple Blossom"
@@ -134,7 +135,7 @@ Fira Code: <https://fonts.google.com/specimen/Fira+Code>.
 ![](rstudiooptions.png){.nolightbox fig-alt="RStudio Options for Screenshots"
 width="80%"}
 
-RStudio options used for screenshots.
+**RStudio** options used for screenshots.
 :::
 
 ```{=html}

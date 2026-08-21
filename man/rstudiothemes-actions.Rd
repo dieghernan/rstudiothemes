@@ -77,8 +77,8 @@ editor themes:
 \item Andromeda Theme by Eliver Lara.
 \item Catppuccin Theme by \href{https://catppuccin.com/}{Catppuccin}.
 \item Cobalt2 Theme by Wes Bos.
-\item CRAN Theme by dieghernan, based on the CRAN (R Project) website theme
-created with Pandoc.
+\item CRAN Theme by dieghernan, based on the \strong{CRAN} (\strong{R Project}) website
+theme created with \strong{Pandoc}.
 \item Dracula Theme by \href{https://draculatheme.com/}{Dracula}.
 \item GitHub Dark and Light Themes by GitHub.
 \item JellyFish Theme by Pawel Borkar.
