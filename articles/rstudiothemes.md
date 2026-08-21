@@ -104,7 +104,7 @@ when `apply = TRUE`.
   [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_to_rstudio_theme.md).
 - Apply it with
   [`rstudioapi::applyTheme()`](https://rstudio.github.io/rstudioapi/reference/applyTheme.html)
-  or the **RStudio** UI.
+  or the **RStudio** interface.
 
 This workflow brings your preferred editor theme to **RStudio**.
 
@@ -113,6 +113,6 @@ This workflow brings your preferred editor theme to **RStudio**.
 - List installed themes with
   `list_rstudiothemes(list_installed = TRUE)`.
 - Filter themes by `"light"` or `"dark"` style.
-- Use the Add Theme UI in the **RStudio** IDE
+- Use the Add Theme interface in the **RStudio** IDE
   (`Global Options > Appearance > Add`) to manually add `.rstheme` files
   that you have created or converted.

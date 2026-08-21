@@ -28,7 +28,7 @@ convert_tm_to_positron_theme(
 
 - path:
 
-  Path or URL to a TextMate theme file, in `.tmTheme` format.
+  Path or URL to a TextMate theme file in `.tmTheme` format.
 
 - outfile:
 
@@ -42,8 +42,8 @@ convert_tm_to_positron_theme(
 
 - author:
 
-  Theme author. If `NULL`, extract the author from the input file,
-  otherwise default to "rstudiothemes R package".
+  Theme author. If `NULL`, the author is extracted from the input file,
+  otherwise it defaults to "rstudiothemes R package".
 
 ## Value
 

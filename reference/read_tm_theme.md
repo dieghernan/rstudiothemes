@@ -13,7 +13,7 @@ read_tm_theme(path)
 
 - path:
 
-  Path or URL to a TextMate theme file, in `.tmTheme` format.
+  Path or URL to a TextMate theme file in `.tmTheme` format.
 
 ## Value
 

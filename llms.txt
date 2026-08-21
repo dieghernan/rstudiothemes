@@ -13,8 +13,8 @@ documentation](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creati
 Note
 
 This package is stable and maintained on a best-effort basis. I
-currently prioritize CRAN compatibility, bug fixes and regression fixes
-over new features.
+currently prioritize CRAN compatibility, bug and regression fixes over
+new features.
 
 ## Features
 
@@ -77,7 +77,7 @@ rstudiothemes::list_rstudiothemes(list_installed = FALSE)
 
 The bundled themes are also distributed in a single `.zip` file at
 <https://dieghernan.github.io/rstudiothemes/dist/rstudiothemes.zip>.
-Unzip and install them using the [**RStudio** IDE
+Unzip the file and install the themes using the [**RStudio** IDE
 interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 ## Installation
@@ -121,7 +121,7 @@ Alternatively, in **RStudio**, choose
 `Tools > Global Options > Appearance > Add` and select the installed
 theme.
 
-![RStudio IDE add theme UI](reference/figures/rstudiogui.png)
+![RStudio IDE Add Theme interface](reference/figures/rstudiogui.png)
 
 ### Convert between theme formats
 

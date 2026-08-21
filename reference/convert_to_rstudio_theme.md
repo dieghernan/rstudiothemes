@@ -77,7 +77,7 @@ editor](https://tmtheme-editor.linuxbox.ninja/) hosts a large collection
 of `.tmTheme` files. The `.rstheme` format is specific to RStudio.
 
 To switch editor themes, go to
-`Tools > Global Options > Appearance > Add` and use the Editor theme
+`Tools > Global Options > Appearance > Add` and use the editor theme
 selector.
 
 ![RStudio IDE add theme UI](figures/rstudiogui.png)

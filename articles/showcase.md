@@ -16,9 +16,9 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 In **RStudio**, choose `Tools > Global Options > Appearance > Add`.
 
-![RStudio add theme UI](rstudiogui.png)
+![RStudio Add Theme interface](rstudiogui.png)
 
-Figure 1: RStudio add theme UI.
+Figure 1: RStudio Add Theme interface.
 
 ## Lightbox gallery
 

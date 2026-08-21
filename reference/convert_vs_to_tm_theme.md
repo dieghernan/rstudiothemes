@@ -28,7 +28,7 @@ convert_positron_to_tm_theme(
 
 - path:
 
-  Path or URL to a Visual Studio Code or Positron theme file, in `.json`
+  Path or URL to a Visual Studio Code or Positron theme file in `.json`
   format.
 
 - outfile:
@@ -43,8 +43,8 @@ convert_positron_to_tm_theme(
 
 - author:
 
-  Theme author. If `NULL`, extract the author from the input file,
-  otherwise default to "rstudiothemes R package".
+  Theme author. If `NULL`, the author is extracted from the input file,
+  otherwise it defaults to "rstudiothemes R package".
 
 ## Value
 

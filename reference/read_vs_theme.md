@@ -16,7 +16,7 @@ read_positron_theme(path)
 
 - path:
 
-  Path or URL to a Visual Studio Code or Positron theme file, in `.json`
+  Path or URL to a Visual Studio Code or Positron theme file in `.json`
   format.
 
 ## Value
