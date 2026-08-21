@@ -93,8 +93,8 @@ includes RStudio themes based on the following editor themes:
 
 - Cobalt2 Theme by Wes Bos.
 
-- CRAN Theme by dieghernan, based on the CRAN (R Project) website theme
-  created with Pandoc.
+- CRAN Theme by dieghernan, based on the **CRAN** (**R Project**)
+  website theme created with **Pandoc**.
 
 - Dracula Theme by [Dracula](https://draculatheme.com/).
 

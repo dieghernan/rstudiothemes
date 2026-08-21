@@ -51,18 +51,18 @@ Initial **CRAN** release.
 
 - Added DOI:
   [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18519155.svg)](https://doi.org/10.5281/zenodo.18519155).
-- Migrated vignettes and articles to Quarto
+- Migrated vignettes and articles to **Quarto**
   ([\#9](https://github.com/dieghernan/rstudiothemes/issues/9)).
 - At release time, repository status was active: [![Project Status:
   Active - The project has reached a stable, usable state and is being
   actively
   developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active).
 
-### Bundled RStudio themes
+### Bundled **RStudio** themes
 
 Changes to bundled **RStudio** themes.
 
-- Added mapping of indent guides to RStudio themes.
+- Added mapping of indent guides to **RStudio** themes.
 - Added `"Andromeda"` by Eliver Lara.
 - Added `"Catppuccin Latte"` and `"Catppuccin Mocha"` by
   <https://catppuccin.com/>.
@@ -74,6 +74,6 @@ Changes to bundled **RStudio** themes.
 
 ## rstudiothemes 0.1.0
 
-*Compatible with RStudio 2026.01.0+392 “Apple Blossom”.*
+Compatible with **RStudio** 2026.01.0+392 “Apple Blossom”.
 
 - First working version.

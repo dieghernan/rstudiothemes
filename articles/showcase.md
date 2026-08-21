@@ -18,7 +18,7 @@ In **RStudio**, choose `Tools > Global Options > Appearance > Add`.
 
 ![RStudio Add Theme interface](rstudiogui.png)
 
-Figure 1: RStudio Add Theme interface.
+Figure 1: **RStudio** Add Theme interface.
 
 ## Lightbox gallery
 
@@ -202,7 +202,7 @@ About the screenshots
 Previews may differ from the display on your device. The screenshots use
 this setup:
 
-**RStudio version**
+**RStudio** version
 
     RStudio 2026.01.1+403 "Apple Blossom"
     Release (0e924abb984501b0d66b204ea06b60fc7813275a, 2026-02-04) for Windows Mozilla/5.0
@@ -214,7 +214,7 @@ Fira Code: <https://fonts.google.com/specimen/Fira+Code>.
 
 ![RStudio Options for Screenshots](rstudiooptions.png)
 
-Figure 2: RStudio options used for screenshots.
+Figure 2: **RStudio** options used for screenshots.
 
 Andromeda
 
