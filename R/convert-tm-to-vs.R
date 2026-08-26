@@ -251,11 +251,7 @@ tmtheme_vs_token <- function(token_row) {
   scp <- as.character(token_row$sc)
   scp <- trimws(unlist(strsplit(scp, ",")))
 
-  list(
-    name = token_row$name,
-    scope = scp,
-    settings = settings
-  )
+  list(name = token_row$name, scope = scp, settings = settings)
 }
 
 additional_cols <- function(bg, fg, comment, selection, accent) {

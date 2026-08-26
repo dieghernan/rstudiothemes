@@ -84,7 +84,7 @@ if (on_rstudio() && interactive()) {
 
   # Print the current theme name.
   current_theme
-  new_rs_theme <- convert_to_rstudio_theme(vstheme,
+  convert_to_rstudio_theme(vstheme,
     name = "A testing theme",
     apply = TRUE, force = TRUE
   )

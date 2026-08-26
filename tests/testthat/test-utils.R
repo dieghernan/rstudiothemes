@@ -99,10 +99,9 @@ test_that("require_rstudio() succeeds inside RStudio", {
 })
 
 test_that("require_rstudio() reports non-RStudio sessions", {
-  local_mocked_bindings(
-    on_rstudio = function() FALSE,
-    detect_gui = function() "RTerm"
-  )
+  local_mocked_bindings(on_rstudio = function() FALSE, detect_gui = function() {
+    "RTerm"
+  })
 
   expect_snapshot(s <- require_rstudio("test"))
   expect_false(on_rstudio())
@@ -116,12 +115,15 @@ test_that("local_theme_file() resolves local paths and downloads URLs", {
   expect_identical(local_theme_file(local_file, "json"), local_file)
   expect_snapshot(error = TRUE, local_theme_file("missing.json", "json"))
 
-  local_mocked_bindings(
-    download_theme_file = function(url, destfile, quiet = TRUE, mode = "wb") {
-      writeLines("{}", destfile)
-      invisible(0)
-    }
-  )
+  local_mocked_bindings(download_theme_file = function(
+    url,
+    destfile,
+    quiet = TRUE,
+    mode = "wb"
+  ) {
+    writeLines("{}", destfile)
+    invisible(0)
+  })
 
   downloaded <- local_theme_file("https://example.com/theme.json", "json")
   expect_true(file.exists(downloaded))

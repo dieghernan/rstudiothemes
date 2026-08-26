@@ -25,10 +25,7 @@ test_that("convert_vs_to_tm_theme() writes to the requested output path", {
 test_that("convert_vs_to_tm_theme() preserves TextMate metadata", {
   skip_on_cran()
   tmout <- theme_output_path(".tmTheme")
-  vstheme <- system.file(
-    "ext/test-color-theme.json",
-    package = "rstudiothemes"
-  )
+  vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
 
   # Ensure file exists from conversion step
   expect_silent(convert_vs_to_tm_theme(vstheme, outfile = tmout))
@@ -59,10 +56,7 @@ test_that("convert_vs_to_tm_theme() converts simple themes", {
   expect_identical(thef, tmout)
   expect_true(file.exists(thef))
   expect_identical(plist_top_value(tmout, "name"), "Skeletor Syntax")
-  expect_identical(
-    plist_top_value(tmout, "author"),
-    "rstudiothemes R package"
-  )
+  expect_identical(plist_top_value(tmout, "author"), "rstudiothemes R package")
   expect_identical(
     plist_top_value(tmout, "semanticClass"),
     "theme.dark.skeletor_syntax"
@@ -102,17 +96,14 @@ test_that("convert_vs_to_tm_theme() uses explicit name and author metadata", {
 })
 
 test_that("convert_vs_to_tm_theme() downloads URL inputs", {
-  vstheme <- system.file(
-    "ext/test-color-theme.json",
-    package = "rstudiothemes"
-  )
+  vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
   local_mock_theme_download(vstheme)
 
   path <- paste0(
     "https://raw.githubusercontent.com/dieghernan/",
     "rstudiothemes/refs/heads/main/inst/ext/test-color-theme.json"
   )
-  thef <- NULL
+
   expect_snapshot({
     thef <- convert_vs_to_tm_theme(path)
     invisible(thef)
@@ -143,10 +134,7 @@ test_that("convert_vs_to_tm_theme() fills optional settings", {
     mapping$tm %in% c("invisibles", "lineHighlight", "caret"),
   ]$vscode
 
-  vstheme <- system.file(
-    "ext/test-color-theme.json",
-    package = "rstudiothemes"
-  )
+  vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
   miss <- jsonlite::read_json(vstheme)
 
   miss$colors[vs_miss] <- NULL

@@ -29,10 +29,7 @@ test_that("convert_tm_to_vs_theme() writes expected VS Code JSON", {
 
 test_that("convert_tm_to_vs_theme() handles minimal theme metadata", {
   tmout <- theme_output_path(".json")
-  tmtheme <- system.file(
-    "ext/test-minimal.tmTheme",
-    package = "rstudiothemes"
-  )
+  tmtheme <- system.file("ext/test-minimal.tmTheme", package = "rstudiothemes")
 
   expect_true(file.exists(tmtheme))
 
@@ -82,10 +79,7 @@ test_that("convert_tm_to_vs_theme() reports invalid TextMate fixtures", {
 })
 
 test_that("convert_tm_to_vs_theme() matches the Skeletor snapshot", {
-  fpath <- system.file(
-    "ext/Skeletor_Syntax.tmTheme",
-    package = "rstudiothemes"
-  )
+  fpath <- system.file("ext/Skeletor_Syntax.tmTheme", package = "rstudiothemes")
   out <- convert_tm_to_vs_theme(fpath)
   expect_snapshot_file(
     out,
@@ -103,7 +97,6 @@ test_that("convert_tm_to_vs_theme() downloads URL inputs", {
     "rstudiothemes/refs/heads/main/inst/ext/test.tmTheme"
   )
 
-  res <- NULL
   expect_snapshot({
     res <- convert_tm_to_vs_theme(path)
     invisible(res)
@@ -120,9 +113,7 @@ test_that("convert_tm_to_vs_theme() infers dark high contrast themes", {
 
   expect_true(file.exists(tmtheme))
 
-  expect_snapshot(
-    thef <- convert_tm_to_vs_theme(tmtheme, outfile = tmout)
-  )
+  expect_snapshot(thef <- convert_tm_to_vs_theme(tmtheme, outfile = tmout))
   expect_identical(thef, tmout)
   ss <- read_vs_theme(tmout)
   expect_identical(ss[ss$name == "type", ]$value, "hc-black")
@@ -134,9 +125,7 @@ test_that("convert_tm_to_vs_theme() infers light high contrast themes", {
 
   expect_true(file.exists(tmtheme))
 
-  expect_snapshot(
-    thef <- convert_tm_to_vs_theme(tmtheme, outfile = tmout)
-  )
+  expect_snapshot(thef <- convert_tm_to_vs_theme(tmtheme, outfile = tmout))
   expect_identical(thef, tmout)
   ss <- read_vs_theme(tmout)
   expect_identical(ss[ss$name == "type", ]$value, "hc-light")
@@ -155,10 +144,7 @@ test_that("TextMate token conversion handles optional settings", {
     tmtheme_vs_token(token)$settings,
     list(background = "#111111")
   )
-  expect_identical(
-    tmtheme_vs_token(token)$scope,
-    c("source.r", "keyword")
-  )
+  expect_identical(tmtheme_vs_token(token)$scope, c("source.r", "keyword"))
 
   token$background <- NA_character_
   expect_null(tmtheme_vs_token(token))

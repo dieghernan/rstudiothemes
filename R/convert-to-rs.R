@@ -63,7 +63,7 @@
 #'
 #'   # Print the current theme name.
 #'   current_theme
-#'   new_rs_theme <- convert_to_rstudio_theme(vstheme,
+#'   convert_to_rstudio_theme(vstheme,
 #'     name = "A testing theme",
 #'     apply = TRUE, force = TRUE
 #'   )
@@ -265,16 +265,9 @@ convert_to_rstudio_theme <- function(
     theme_name <- name
   }
 
-  themelines <- gsub(
-    "blur(1px)",
-    "brightness(75%)",
-    themelines,
-    fixed = TRUE
-  )
+  themelines <- gsub("blur(1px)", "brightness(75%)", themelines, fixed = TRUE)
 
   vtext <- paste0("/* Generated with the rstudiothemes R package */")
-
-  additional <- c("")
 
   # Map high-level colors to Sass variable names.
   hl_sass <- dplyr::tibble(
@@ -284,7 +277,7 @@ convert_to_rstudio_theme <- function(
   )
 
   hl_vars <- dplyr::inner_join(tmcols, hl_sass, by = c("section", "name"))
-  comm <- tmcols[grepl("comment", tmcols$scope), ]$foreground
+  comm <- tmcols[grepl("comment", tmcols$scope, fixed = TRUE), ]$foreground
   sass_vars <- c(
     paste0("$", hl_vars$var, ": ", hl_vars$foreground, ";"),
     paste0("$comment: ", comm[!is.na(comm)][1], ";")

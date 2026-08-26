@@ -168,7 +168,6 @@ list_rstudiothemes <- function(
     return(NULL)
   }
 
-  themes <- rstudioapi_get_themes()
   installed_themes <- vapply(
     rstudioapi_get_themes(),
     function(x) {

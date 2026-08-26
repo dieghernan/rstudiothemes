@@ -25,7 +25,7 @@
 # read_tm_theme() parses converted simple TextMate themes
 
     Code
-      fpath <- convert_vs_to_tm_theme(vstheme)
+      invisible(convert_vs_to_tm_theme(vstheme, outfile = fpath))
     Message
       ! The Visual Studio Code theme "Skeletor Syntax" does not list an author. Use the `author` argument.
       i Using default `author = "rstudiothemes R package"`.

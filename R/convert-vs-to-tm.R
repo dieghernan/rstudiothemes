@@ -265,10 +265,7 @@ plist_entries <- function(df, key_col, value_col) {
 }
 
 plist_key_string <- function(key, value) {
-  list(
-    key = list(as.character(key)),
-    string = list(as.character(value))
-  )
+  list(key = list(as.character(key)), string = list(as.character(value)))
 }
 
 tmtheme_scope_item <- function(scope_row) {

@@ -8,17 +8,17 @@ test_that("read_tm_theme() reports invalid inputs", {
 test_that("read_tm_theme() parses converted full TextMate themes", {
   vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
 
-  fpath <- vstheme |> convert_vs_to_tm_theme()
+  tmpfile <- withr::local_tempfile(fileext = ".tmTheme")
 
-  res <- read_tm_theme(fpath)
+  vstheme |> convert_vs_to_tm_theme(outfile = tmpfile)
+
+  res <- read_tm_theme(tmpfile)
 
   expect_identical(res[res$name == "name", ]$value, "Tokyo Night")
   expect_identical(
     res[res$name == "semanticClass", ]$value,
     "theme.dark.tokyo_night"
   )
-
-  unlink(fpath)
 })
 
 test_that("read_tm_theme() parses converted simple TextMate themes", {
@@ -27,7 +27,8 @@ test_that("read_tm_theme() parses converted simple TextMate themes", {
     package = "rstudiothemes"
   )
 
-  expect_snapshot(fpath <- vstheme |> convert_vs_to_tm_theme())
+  fpath <- withr::local_tempfile(fileext = ".tmTheme")
+  expect_snapshot(invisible(convert_vs_to_tm_theme(vstheme, outfile = fpath)))
 
   res <- read_tm_theme(fpath)
 
@@ -36,7 +37,6 @@ test_that("read_tm_theme() parses converted simple TextMate themes", {
     res[res$name == "semanticClass", ]$value,
     "theme.dark.skeletor_syntax"
   )
-  unlink(fpath)
 })
 
 test_that("read_tm_theme() parses minimal TextMate themes", {
@@ -68,7 +68,6 @@ test_that("read_tm_theme() downloads URL inputs", {
     "rstudiothemes/refs/heads/main/inst/ext/test.tmTheme"
   )
 
-  res <- NULL
   expect_snapshot({
     res <- read_tm_theme(path)
     invisible(res)

@@ -73,9 +73,9 @@ expand_hex <- function(x) {
 #' @noRd
 match_arg_pretty <- function(arg, choices) {
   arg_name <- as.character(substitute(arg)) # nolint
-
+  sys_par <- sys.parent()
   if (missing(choices)) {
-    formal_args <- formals(sys.function(sys_par <- sys.parent()))
+    formal_args <- formals(sys.function(sys_par))
     choices <- eval(
       formal_args[[as.character(substitute(arg))]],
       envir = sys.frame(sys_par)

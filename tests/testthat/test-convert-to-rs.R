@@ -14,10 +14,7 @@ test_that("convert_to_rstudio_theme() reports invalid inputs", {
 test_that("convert_to_rstudio_theme() writes from TextMate input", {
   captured <- local_mock_rstudio_theme_build()
 
-  tmtheme <- system.file(
-    "ext/test-minimal.tmTheme",
-    package = "rstudiothemes"
-  )
+  tmtheme <- system.file("ext/test-minimal.tmTheme", package = "rstudiothemes")
   outfile <- theme_output_path(".rstheme")
 
   result <- convert_to_rstudio_theme(
@@ -43,11 +40,7 @@ test_that("convert_to_rstudio_theme() writes from TextMate input", {
     captured$sass_input,
     fixed = TRUE
   )))
-  expect_true(any(grepl(
-    "brightness(75%)",
-    captured$sass_input,
-    fixed = TRUE
-  )))
+  expect_true(any(grepl("brightness(75%)", captured$sass_input, fixed = TRUE)))
 })
 
 test_that("convert_to_rstudio_theme() converts VS Code JSON input first", {
@@ -55,13 +48,15 @@ test_that("convert_to_rstudio_theme() converts VS Code JSON input first", {
   local_mock_rstudio_theme_build()
 
   tmtheme <- system.file("ext/test-minimal.tmTheme", package = "rstudiothemes")
-  local_mocked_bindings(
-    convert_vs_to_tm_theme = function(path, outfile, name = NULL) {
-      converted_path <<- outfile
-      file.copy(tmtheme, outfile, overwrite = TRUE)
-      outfile
-    }
-  )
+  local_mocked_bindings(convert_vs_to_tm_theme = function(
+    path,
+    outfile,
+    name = NULL
+  ) {
+    converted_path <<- outfile
+    file.copy(tmtheme, outfile, overwrite = TRUE)
+    outfile
+  })
 
   vstheme <- system.file(
     "ext/test-simple-color-theme.json",
@@ -90,13 +85,9 @@ test_that("convert_to_rstudio_theme() installs and applies themes", {
     }
   )
 
-  tmtheme <- system.file(
-    "ext/test-minimal.tmTheme",
-    package = "rstudiothemes"
-  )
+  tmtheme <- system.file("ext/test-minimal.tmTheme", package = "rstudiothemes")
   outfile <- theme_output_path(".rstheme")
 
-  result <- NULL
   expect_snapshot({
     result <- convert_to_rstudio_theme(
       tmtheme,
@@ -114,22 +105,15 @@ test_that("convert_to_rstudio_theme() installs and applies themes", {
 
 test_that("convert_to_rstudio_theme() reports installation warnings", {
   local_mock_rstudio_theme_build()
-  local_mocked_bindings(
-    rstudioapi_add_theme = function(theme, force = TRUE) {
-      simpleWarning("Theme already exists")
-    }
-  )
+  local_mocked_bindings(rstudioapi_add_theme = function(theme, force = TRUE) {
+    simpleWarning("Theme already exists")
+  })
 
   tmtheme <- system.file("ext/test-minimal.tmTheme", package = "rstudiothemes")
   outfile <- theme_output_path(".rstheme")
 
-  result <- NULL
   expect_snapshot({
-    result <- convert_to_rstudio_theme(
-      tmtheme,
-      outfile = outfile,
-      force = TRUE
-    )
+    result <- convert_to_rstudio_theme(tmtheme, outfile = outfile, force = TRUE)
     invisible(result)
   })
   expect_identical(result, outfile)
@@ -137,22 +121,15 @@ test_that("convert_to_rstudio_theme() reports installation warnings", {
 
 test_that("convert_to_rstudio_theme() reports installation errors", {
   local_mock_rstudio_theme_build()
-  local_mocked_bindings(
-    rstudioapi_add_theme = function(theme, force = TRUE) {
-      stop("Cannot install theme")
-    }
-  )
+  local_mocked_bindings(rstudioapi_add_theme = function(theme, force = TRUE) {
+    stop("Cannot install theme", call. = FALSE)
+  })
 
   tmtheme <- system.file("ext/test-minimal.tmTheme", package = "rstudiothemes")
   outfile <- theme_output_path(".rstheme")
 
-  result <- NULL
   expect_snapshot({
-    result <- convert_to_rstudio_theme(
-      tmtheme,
-      outfile = outfile,
-      force = TRUE
-    )
+    result <- convert_to_rstudio_theme(tmtheme, outfile = outfile, force = TRUE)
     invisible(result)
   })
   expect_identical(result, outfile)

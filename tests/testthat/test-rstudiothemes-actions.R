@@ -244,9 +244,7 @@ test_that("try_rstudiothemes() handles selected themes and prompt choices", {
   expect_identical(applied, c("Light Theme", "Dark Theme", "Original Theme"))
 
   applied <- character()
-  local_mocked_bindings(
-    rstudiothemes_readline = function(prompt) "k"
-  )
+  local_mocked_bindings(rstudiothemes_readline = function(prompt) "k")
 
   expect_snapshot(try_rstudiothemes(themes = "Light Theme"))
   expect_identical(applied, "Light Theme")
@@ -266,16 +264,14 @@ test_that("RStudio theme actions work in an interactive RStudio session", {
   expect_snapshot(remove_rstudiothemes())
 
   # Clean theme list now
-  clean_list <- rstudioapi::getThemes()
+  invisible(rstudioapi::getThemes())
 
   # Length of this should be 0 now
   expect_length(list_rstudiothemes(), 0)
 
   # How many themes?
 
-  all <- length(list_pkg_rstudiothemes())
   lg <- length(list_pkg_rstudiothemes("light"))
-  dk <- length(list_pkg_rstudiothemes("dark"))
 
   # Install only light
   expect_snapshot(install_rstudiothemes("light"))

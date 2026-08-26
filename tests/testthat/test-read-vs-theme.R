@@ -30,10 +30,7 @@ test_that("read_vs_theme() handles missing type metadata", {
 })
 
 test_that("read_vs_theme() downloads URL inputs", {
-  vstheme <- system.file(
-    "ext/test-color-theme.json",
-    package = "rstudiothemes"
-  )
+  vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
   local_mock_theme_download(vstheme)
 
   path <- paste0(
@@ -41,7 +38,6 @@ test_that("read_vs_theme() downloads URL inputs", {
     "rstudiothemes/refs/heads/main/inst/ext/test-color-theme.json"
   )
 
-  res <- NULL
   expect_snapshot({
     res <- read_vs_theme(path)
     invisible(res)
