@@ -7,7 +7,7 @@
 \alias{remove_rstudiothemes}
 \alias{list_rstudiothemes}
 \alias{try_rstudiothemes}
-\title{Manage RStudio themes}
+\title{Manage \strong{RStudio} themes}
 \usage{
 install_rstudiothemes(
   style = c("all", "dark", "light"),
@@ -48,13 +48,13 @@ invisibly.
 lets you preview each one and restores your original theme when you quit.
 }
 \description{
-Install, list, preview or remove the RStudio themes included in
+Install, list, preview or remove the \strong{RStudio} themes included in
 \CRANpkg{rstudiothemes}. These functions are adapted from selected
 \pkg{rsthemes} functions.
 \href{https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md}{MIT License} Copyright © rsthemes authors.
 
-\strong{Important}: These functions only work in RStudio and return \code{NULL} when
-called from other IDEs. The exception is
+\strong{Important}: These functions only work in \strong{RStudio} and return \code{NULL}
+when called from other IDEs. The exception is
 \code{list_rstudiothemes(list_installed = FALSE)}.
 }
 \section{Functions}{
@@ -69,7 +69,7 @@ called from other IDEs. The exception is
 
 \section{Bundled themes}{
 
-\CRANpkg{rstudiothemes} includes RStudio themes based on the following
+\CRANpkg{rstudiothemes} includes \strong{RStudio} themes based on the following
 editor themes:
 \itemize{
 \item Ayu Theme by teabyii.

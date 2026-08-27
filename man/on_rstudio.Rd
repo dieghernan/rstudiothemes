@@ -3,16 +3,16 @@
 \encoding{UTF-8}
 \name{on_rstudio}
 \alias{on_rstudio}
-\title{Check whether the session is running in RStudio}
+\title{Check whether the session is running in \strong{RStudio}}
 \usage{
 on_rstudio()
 }
 \value{
-\code{TRUE} if running in RStudio, \code{FALSE} otherwise.
+\code{TRUE} if running in \strong{RStudio}, \code{FALSE} otherwise.
 }
 \description{
-Detect whether the current R session is running in RStudio. This is used to
-decide whether themes can be applied to the IDE.
+Detect whether the current R session is running in \strong{RStudio}. This is used
+to decide whether themes can be applied to the IDE.
 }
 \examples{
 on_rstudio()

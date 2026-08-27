@@ -3,7 +3,7 @@
 \encoding{UTF-8}
 \name{convert_to_rstudio_theme}
 \alias{convert_to_rstudio_theme}
-\title{Convert a theme file to RStudio}
+\title{Convert a theme file to \strong{RStudio}}
 \usage{
 convert_to_rstudio_theme(
   path,
@@ -16,8 +16,8 @@ convert_to_rstudio_theme(
 )
 }
 \arguments{
-\item{path}{Path or URL to a TextMate theme file (\code{.tmTheme} format) or a
-Visual Studio Code theme file (\code{.json} format).}
+\item{path}{Path or URL to a \strong{TextMate} theme file (\code{.tmTheme} format) or a
+\strong{Visual Studio Code} theme file (\code{.json} format).}
 
 \item{outfile}{Path where the resulting file will be written. Defaults to
 a temporary file created with \code{\link[=tempfile]{tempfile()}}.}
@@ -39,24 +39,25 @@ with the same name.\cr Default: \code{FALSE}.}
 \value{
 This function is called for its side effects. It writes a \code{.rstheme} file to
 \code{outfile} and returns the path. If \code{force} or \code{apply} is \code{TRUE}, it installs
-the theme. If \code{apply} is \code{TRUE}, it also applies the theme to your RStudio
-IDE.
+the theme. If \code{apply} is \code{TRUE}, it also applies the theme to your
+\strong{RStudio} IDE.
 }
 \description{
-Convert a \code{.tmTheme} or \code{.json} file that defines a TextMate or Visual
-Studio Code theme and write the equivalent RStudio \code{.rstheme} file.
+Convert a \code{.tmTheme} or \code{.json} file that defines a \strong{TextMate} or
+\strong{Visual Studio Code} theme and write the equivalent \strong{RStudio} \code{.rstheme}
+file.
 
-Optionally, the generated theme can be installed and applied to the RStudio
-IDE.
+Optionally, the generated theme can be installed and applied to the
+\strong{RStudio} IDE.
 
-\strong{Important}: This function only works in RStudio. It returns \code{NULL} when
-called from other IDEs.
+\strong{Important}: This function only works in \strong{RStudio}. It returns \code{NULL}
+when called from other IDEs.
 }
 \details{
-RStudio supports custom editor themes in two formats, \code{.tmTheme} and
-\code{.rstheme}. The \code{.tmTheme} format originated with TextMate and has become a
-common theme format. \href{https://tmtheme-editor.linuxbox.ninja/}{This tmTheme editor} hosts a large collection of
-\code{.tmTheme} files. The \code{.rstheme} format is specific to RStudio.
+\strong{RStudio} supports custom editor themes in two formats, \code{.tmTheme} and
+\code{.rstheme}. The \code{.tmTheme} format originated with \strong{TextMate} and has become
+a common theme format. \href{https://tmtheme-editor.linuxbox.ninja/}{This tmTheme editor} hosts a large collection of
+\code{.tmTheme} files. The \code{.rstheme} format is specific to \strong{RStudio}.
 
 To switch editor themes, go to \verb{Tools > Global Options > Appearance > Add}
 and use the editor theme selector.

@@ -1,8 +1,8 @@
-#' Convert a Visual Studio Code or Positron theme file to TextMate
+#' Convert a **Visual Studio Code** or **Positron** theme file to **TextMate**
 #'
 #' @description
-#' Convert a `.json` file representing a Visual Studio Code or Positron theme
-#' and write the equivalent TextMate theme file (`.tmTheme`).
+#' Convert a `.json` file representing a **Visual Studio Code** or **Positron**
+#' theme and write the equivalent **TextMate** theme file (`.tmTheme`).
 #'
 #' @inheritParams read_vs_theme path
 #' @param outfile Path where the resulting file will be written. Defaults to

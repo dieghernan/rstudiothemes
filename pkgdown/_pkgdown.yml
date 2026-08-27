@@ -71,6 +71,11 @@ reference:
 - contents:
   - has_concept("helpers")
 
+- title: About the package
+  desc: Package overview, authors and links.
+- contents:
+  - rstudiothemes-package
+
 authors:
   Diego Hernangómez:
     href: 'https://dieghernan.github.io/'

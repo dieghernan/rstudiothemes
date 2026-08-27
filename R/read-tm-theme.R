@@ -1,15 +1,16 @@
-#' Read and parse a TextMate theme file
+#' Read and parse a **TextMate** theme file
 #'
 #' @description
-#' Read a `.tmTheme` XML file representing a TextMate or Sublime Text theme.
+#' Read a `.tmTheme` XML file representing a **TextMate** or **Sublime Text**
+#' theme.
 #'
-#' @param path Path or URL to a TextMate theme file in `.tmTheme` format.
+#' @param path Path or URL to a **TextMate** theme file in `.tmTheme` format.
 #'
 #' @returns
 #' A [tibble][tibble::tbl_df()] containing the theme data.
 #'
 #' @seealso [convert_tm_to_vs_theme()] and [convert_to_rstudio_theme()] to
-#'   convert TextMate themes.
+#'   convert **TextMate** themes.
 #' @family readers
 #' @export
 #' @encoding UTF-8

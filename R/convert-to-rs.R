@@ -1,21 +1,22 @@
-#' Convert a theme file to RStudio
+#' Convert a theme file to **RStudio**
 #'
 #' @description
-#' Convert a `.tmTheme` or `.json` file that defines a TextMate or Visual
-#' Studio Code theme and write the equivalent RStudio `.rstheme` file.
+#' Convert a `.tmTheme` or `.json` file that defines a **TextMate** or
+#' **Visual Studio Code** theme and write the equivalent **RStudio** `.rstheme`
+#'  file.
 #'
-#' Optionally, the generated theme can be installed and applied to the RStudio
-#' IDE.
+#' Optionally, the generated theme can be installed and applied to the
+#' **RStudio** IDE.
 #'
-#' **Important**: This function only works in RStudio. It returns `NULL` when
-#' called from other IDEs.
+#' **Important**: This function only works in **RStudio**. It returns `NULL`
+#' when called from other IDEs.
 #'
 #' @details
-#' RStudio supports custom editor themes in two formats, `.tmTheme` and
-#' `.rstheme`. The `.tmTheme` format originated with TextMate and has become a
-#' common theme format. [This tmTheme
+#' **RStudio** supports custom editor themes in two formats, `.tmTheme` and
+#' `.rstheme`. The `.tmTheme` format originated with **TextMate** and has become
+#' a common theme format. [This tmTheme
 #' editor](https://tmtheme-editor.linuxbox.ninja/) hosts a large collection of
-#' `.tmTheme` files. The `.rstheme` format is specific to RStudio.
+#' `.tmTheme` files. The `.rstheme` format is specific to **RStudio**.
 #'
 #' To switch editor themes, go to `Tools > Global Options > Appearance > Add`
 #' and use the editor theme selector.
@@ -32,8 +33,8 @@
 #' For more information, see
 #' <https://docs.posit.co/ide/user/ide/guide/ui/appearance.html>.
 #'
-#' @param path Path or URL to a TextMate theme file (`.tmTheme` format) or a
-#'   Visual Studio Code theme file (`.json` format).
+#' @param path Path or URL to a **TextMate** theme file (`.tmTheme` format) or a
+#'   **Visual Studio Code** theme file (`.json` format).
 #' @param use_italics Logical. Use italics in the resulting theme. Defaults to
 #'   `TRUE`, although some themes may look better without italics.
 #' @inheritParams rstudioapi::addTheme force
@@ -44,8 +45,8 @@
 #' @returns
 #' This function is called for its side effects. It writes a `.rstheme` file to
 #' `outfile` and returns the path. If `force` or `apply` is `TRUE`, it installs
-#' the theme. If `apply` is `TRUE`, it also applies the theme to your RStudio
-#' IDE.
+#' the theme. If `apply` is `TRUE`, it also applies the theme to your
+#' **RStudio** IDE.
 #'
 #' @seealso
 #' - [read_vs_theme()] and [read_tm_theme()] to inspect input theme files.

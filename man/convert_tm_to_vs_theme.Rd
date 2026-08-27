@@ -4,7 +4,7 @@
 \name{convert_tm_to_vs_theme}
 \alias{convert_tm_to_vs_theme}
 \alias{convert_tm_to_positron_theme}
-\title{Convert a TextMate theme file to Visual Studio Code or Positron}
+\title{Convert a \strong{TextMate} theme file to \strong{Visual Studio Code} or \strong{Positron}}
 \usage{
 convert_tm_to_vs_theme(
   path,
@@ -21,7 +21,7 @@ convert_tm_to_positron_theme(
 )
 }
 \arguments{
-\item{path}{Path or URL to a TextMate theme file in \code{.tmTheme} format.}
+\item{path}{Path or URL to a \strong{TextMate} theme file in \code{.tmTheme} format.}
 
 \item{outfile}{Path where the resulting file will be written. Defaults to
 a temporary file created with \code{\link[=tempfile]{tempfile()}}.}
@@ -36,8 +36,8 @@ This function is called for its side effects. It writes a \code{.json} theme fil
 to \code{outfile} and returns the path.
 }
 \description{
-Convert a \code{.tmTheme} file representing a TextMate theme and write the
-equivalent Visual Studio Code theme file (\code{.json}).
+Convert a \code{.tmTheme} file representing a \strong{TextMate} theme and write the
+equivalent \strong{Visual Studio Code} theme file (\code{.json}).
 
 \code{convert_tm_to_positron_theme()} is an alias for
 \code{convert_tm_to_vs_theme()}.

@@ -28,10 +28,10 @@ rstudiothemes_sleep <- function(time) {
 }
 # nocov end
 
-#' Manage RStudio themes
+#' Manage **RStudio** themes
 #'
 #' @description
-#' Install, list, preview or remove the RStudio themes included in
+#' Install, list, preview or remove the **RStudio** themes included in
 #' \CRANpkg{rstudiothemes}. These functions are adapted from selected
 #' \pkg{rsthemes} functions.
 #'
@@ -42,8 +42,8 @@ rstudiothemes_sleep <- function(time) {
 #'
 #' ```
 #'
-#' **Important**: These functions only work in RStudio and return `NULL` when
-#' called from other IDEs. The exception is
+#' **Important**: These functions only work in **RStudio** and return `NULL`
+#' when called from other IDEs. The exception is
 #' `list_rstudiothemes(list_installed = FALSE)`.
 #'
 #' @section Functions:
@@ -53,7 +53,7 @@ rstudiothemes_sleep <- function(time) {
 #' - `try_rstudiothemes()` previews bundled themes.
 #'
 #' @section Bundled themes:
-#' \CRANpkg{rstudiothemes} includes RStudio themes based on the following
+#' \CRANpkg{rstudiothemes} includes **RStudio** themes based on the following
 #' editor themes:
 #'
 #' ```{r child="man/chunks/themes.Rmd"}

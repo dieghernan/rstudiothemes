@@ -3,18 +3,19 @@
 \encoding{UTF-8}
 \name{read_tm_theme}
 \alias{read_tm_theme}
-\title{Read and parse a TextMate theme file}
+\title{Read and parse a \strong{TextMate} theme file}
 \usage{
 read_tm_theme(path)
 }
 \arguments{
-\item{path}{Path or URL to a TextMate theme file in \code{.tmTheme} format.}
+\item{path}{Path or URL to a \strong{TextMate} theme file in \code{.tmTheme} format.}
 }
 \value{
 A \link[tibble:tbl_df]{tibble} containing the theme data.
 }
 \description{
-Read a \code{.tmTheme} XML file representing a TextMate or Sublime Text theme.
+Read a \code{.tmTheme} XML file representing a \strong{TextMate} or \strong{Sublime Text}
+theme.
 }
 \examples{
 the_theme <- system.file("ext/test-color-theme.json",
@@ -32,7 +33,7 @@ read_tm_theme(the_theme)
 }
 \seealso{
 \code{\link[=convert_tm_to_vs_theme]{convert_tm_to_vs_theme()}} and \code{\link[=convert_to_rstudio_theme]{convert_to_rstudio_theme()}} to
-convert TextMate themes.
+convert \strong{TextMate} themes.
 
 Theme file readers:
 \code{\link[=read_vs_theme]{read_vs_theme()}}

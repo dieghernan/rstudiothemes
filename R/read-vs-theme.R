@@ -1,15 +1,16 @@
-#' Read and parse a Visual Studio Code or Positron theme file
+#' Read and parse a **Visual Studio Code** or **Positron** theme file
 #'
 #' @description
-#' Read a `.json` file representing a Visual Studio Code or Positron theme.
+#' Read a `.json` file representing a **Visual Studio Code** or **Positron**
+#' theme.
 #'
-#' @param path Path or URL to a Visual Studio Code or Positron theme file in
-#'   `.json` format.
+#' @param path Path or URL to a **Visual Studio Code** or **Positron** theme
+#'   file in `.json` format.
 #'
 #' @inherit read_tm_theme return
 #'
 #' @seealso [convert_vs_to_tm_theme()] and [convert_to_rstudio_theme()] to
-#'   convert Visual Studio Code or Positron themes.
+#'   convert **Visual Studio Code** or **Positron** themes.
 #' @family readers
 #' @rdname read_vs_theme
 #' @export

@@ -4,21 +4,22 @@
 \name{read_vs_theme}
 \alias{read_vs_theme}
 \alias{read_positron_theme}
-\title{Read and parse a Visual Studio Code or Positron theme file}
+\title{Read and parse a \strong{Visual Studio Code} or \strong{Positron} theme file}
 \usage{
 read_vs_theme(path)
 
 read_positron_theme(path)
 }
 \arguments{
-\item{path}{Path or URL to a Visual Studio Code or Positron theme file in
-\code{.json} format.}
+\item{path}{Path or URL to a \strong{Visual Studio Code} or \strong{Positron} theme
+file in \code{.json} format.}
 }
 \value{
 A \link[tibble:tbl_df]{tibble} containing the theme data.
 }
 \description{
-Read a \code{.json} file representing a Visual Studio Code or Positron theme.
+Read a \code{.json} file representing a \strong{Visual Studio Code} or \strong{Positron}
+theme.
 
 \code{read_positron_theme()} is an alias for \code{read_vs_theme()}.
 }
@@ -31,7 +32,7 @@ read_vs_theme(vstheme)
 }
 \seealso{
 \code{\link[=convert_vs_to_tm_theme]{convert_vs_to_tm_theme()}} and \code{\link[=convert_to_rstudio_theme]{convert_to_rstudio_theme()}} to
-convert Visual Studio Code or Positron themes.
+convert \strong{Visual Studio Code} or \strong{Positron} themes.
 
 Theme file readers:
 \code{\link[=read_tm_theme]{read_tm_theme()}}
