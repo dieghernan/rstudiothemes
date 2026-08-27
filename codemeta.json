@@ -8,7 +8,7 @@
   "codeRepository": "https://github.com/dieghernan/rstudiothemes",
   "issueTracker": "https://github.com/dieghernan/rstudiothemes/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "1.1.2",
+  "version": "1.1.2.9000",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -226,7 +226,7 @@
     "SystemRequirements": null
   },
   "keywords": ["r-package", "rstudio-themes", "textmate-themes", "vscode-themes", "positron-themes", "cran", "cran-r"],
-  "fileSize": "2277.32KB",
+  "fileSize": "2289.735KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",

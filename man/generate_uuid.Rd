@@ -5,7 +5,8 @@
 \alias{generate_uuid}
 \title{Generate random UUIDs}
 \source{
-Adapted from an unreleased version of \code{ids::uuid()}.
+Adapted from an unreleased version of \code{uuid()} from
+\CRANpkg{ids}.
 }
 \usage{
 generate_uuid(hint = NULL)

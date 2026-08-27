@@ -1,4 +1,4 @@
-test_that("convert_vs_to_tm_theme() reports invalid inputs", {
+test_that("conversion rejects invalid paths and missing required colors", {
   expect_snapshot(error = TRUE, convert_vs_to_tm_theme())
   expect_snapshot(error = TRUE, convert_vs_to_tm_theme("a.txt"))
   expect_snapshot(error = TRUE, convert_vs_to_tm_theme("a.json"))
@@ -13,7 +13,7 @@ test_that("convert_vs_to_tm_theme() reports invalid inputs", {
   expect_snapshot(error = TRUE, convert_vs_to_tm_theme(tmp_path))
 })
 
-test_that("convert_vs_to_tm_theme() writes to the requested output path", {
+test_that("conversion writes to the requested TextMate path", {
   tmout <- theme_output_path(".tmTheme")
   vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
 
@@ -22,12 +22,10 @@ test_that("convert_vs_to_tm_theme() writes to the requested output path", {
   expect_true(file.exists(thef))
 })
 
-test_that("convert_vs_to_tm_theme() preserves TextMate metadata", {
-  skip_on_cran()
+test_that("conversion preserves metadata and required colors", {
   tmout <- theme_output_path(".tmTheme")
   vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
 
-  # Ensure file exists from conversion step
   expect_silent(convert_vs_to_tm_theme(vstheme, outfile = tmout))
   expect_identical(plist_top_value(tmout, "name"), "Tokyo Night")
   expect_identical(
@@ -37,14 +35,10 @@ test_that("convert_vs_to_tm_theme() preserves TextMate metadata", {
   expect_identical(plist_color_value(tmout, "background"), "#1A1B26")
   expect_identical(plist_color_value(tmout, "foreground"), "#A9B1D6")
   expect_identical(plist_color_value(tmout, "selection"), "#515C7E4D")
-
-  out <- readLines(tmout)
-  out <- mask_uuid_in_lines(out)
-
-  expect_snapshot(cat(out[seq(1, 500)], sep = "\n"))
+  expect_snapshot_file(tmout, name = "test-color-theme.tmTheme")
 })
 
-test_that("convert_vs_to_tm_theme() converts simple themes", {
+test_that("simple themes receive default TextMate metadata", {
   tmout <- theme_output_path(".tmTheme")
   vstheme <- system.file(
     "ext/test-simple-color-theme.json",
@@ -67,7 +61,7 @@ test_that("convert_vs_to_tm_theme() converts simple themes", {
   expect_snapshot(cat(out[seq(1, 15)], sep = "\n"))
 })
 
-test_that("convert_vs_to_tm_theme() uses explicit name and author metadata", {
+test_that("explicit metadata overrides Visual Studio Code values", {
   tmout2 <- theme_output_path(".tmTheme")
   vstheme <- system.file(
     "ext/test-simple-color-theme.json",
@@ -95,7 +89,7 @@ test_that("convert_vs_to_tm_theme() uses explicit name and author metadata", {
   expect_snapshot(cat(out[seq(1, 15)], sep = "\n"))
 })
 
-test_that("convert_vs_to_tm_theme() downloads URL inputs", {
+test_that("URL Visual Studio Code inputs are downloaded and converted", {
   vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
   local_mock_theme_download(vstheme)
 
@@ -114,7 +108,7 @@ test_that("convert_vs_to_tm_theme() downloads URL inputs", {
 })
 
 
-test_that("convert_vs_to_tm_theme() requires unnamed theme overrides", {
+test_that("unnamed themes require an explicit name", {
   fpath <- system.file(
     "ext/test-unnamed-color-theme.json",
     package = "rstudiothemes"
@@ -123,9 +117,7 @@ test_that("convert_vs_to_tm_theme() requires unnamed theme overrides", {
   expect_snapshot(error = TRUE, convert_vs_to_tm_theme(fpath))
 })
 
-test_that("convert_vs_to_tm_theme() fills optional settings", {
-  # Missing components, invisibles, lineHighlight, and caret
-
+test_that("missing optional colors receive TextMate defaults", {
   mapping <- read.csv(
     system.file("csv/mapping.csv", package = "rstudiothemes"),
     na.strings = c("NA", "")
@@ -145,19 +137,48 @@ test_that("convert_vs_to_tm_theme() fills optional settings", {
   expect_identical(plist_color_value(out, "caret"), "#A9B1D6")
   expect_identical(plist_color_value(out, "invisibles"), "#515C7E4D")
   expect_identical(plist_color_value(out, "lineHighlight"), "#515C7E4D")
+})
 
-  miss2 <- jsonlite::read_json(vstheme)
-  miss2$tokenColors <- NULL
-  miss2$semanticTokenColors <- NULL
+test_that("themes without token colors retain required metadata and colors", {
+  vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
+  miss <- jsonlite::read_json(vstheme)
+  miss$tokenColors <- NULL
+  miss$semanticTokenColors <- NULL
   tmp_path <- withr::local_tempfile(fileext = ".json")
-  jsonlite::write_json(miss2, tmp_path)
+  jsonlite::write_json(miss, tmp_path)
   out <- convert_vs_to_tm_theme(tmp_path)
+
   expect_identical(plist_top_value(out, "name"), "Tokyo Night")
   expect_identical(plist_color_value(out, "background"), "#1A1B26")
   expect_identical(plist_color_value(out, "foreground"), "#A9B1D6")
 })
 
-test_that("TextMate scope builders skip empty settings", {
+test_that("light themes receive a light TextMate semantic class", {
+  vstheme <- withr::local_tempfile(fileext = ".json")
+  writeLines(
+    c(
+      "{",
+      '  "name": "Light example",',
+      '  "colors": {',
+      '    "editor.background": "#FFFFFF",',
+      '    "editor.foreground": "#111111",',
+      '    "editor.selectionBackground": "#DDDDDD"',
+      "  },",
+      '  "tokenColors": []',
+      "}"
+    ),
+    vstheme
+  )
+
+  out <- convert_vs_to_tm_theme(vstheme, author = "Theme author")
+
+  expect_identical(
+    plist_top_value(out, "semanticClass"),
+    "theme.light.light_example"
+  )
+})
+
+test_that("scope builders omit empty styles and preserve unnamed scopes", {
   scope_row <- dplyr::tibble(
     name = NA_character_,
     scope = "source.r",
@@ -174,4 +195,15 @@ test_that("TextMate scope builders skip empty settings", {
 
   expect_identical(item$dict[[1]][[1]], "name")
   expect_identical(item$dict[[2]][[1]], "")
+})
+
+test_that("the Positron alias matches the Visual Studio Code converter", {
+  vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
+  vscode_out <- theme_output_path(".tmTheme")
+  positron_out <- theme_output_path(".tmTheme")
+
+  convert_vs_to_tm_theme(vstheme, outfile = vscode_out)
+  convert_positron_to_tm_theme(vstheme, outfile = positron_out)
+
+  expect_identical(readLines(positron_out), readLines(vscode_out))
 })

@@ -1,4 +1,4 @@
-# read_vs_theme() reports invalid inputs
+# reader rejects missing paths, wrong extensions and missing files
 
     Code
       read_vs_theme()
@@ -22,7 +22,7 @@
       Error in `local_theme_file()`:
       ! File 'a.json' was not found.
 
-# read_vs_theme() downloads URL inputs
+# URL themes are downloaded before parsing
 
     Code
       res <- read_vs_theme(path)

@@ -1,11 +1,11 @@
-test_that("read_tm_theme() reports invalid inputs", {
+test_that("reader rejects missing paths, wrong extensions and missing files", {
   expect_snapshot(error = TRUE, read_tm_theme())
   expect_snapshot(error = TRUE, read_tm_theme("a.txt"))
   expect_snapshot(error = TRUE, read_tm_theme("a.json"))
 })
 
 
-test_that("read_tm_theme() parses converted full TextMate themes", {
+test_that("converted full themes retain their metadata", {
   vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
 
   tmpfile <- withr::local_tempfile(fileext = ".tmTheme")
@@ -21,7 +21,7 @@ test_that("read_tm_theme() parses converted full TextMate themes", {
   )
 })
 
-test_that("read_tm_theme() parses converted simple TextMate themes", {
+test_that("converted simple themes receive generated metadata", {
   vstheme <- system.file(
     "ext/test-simple-color-theme.json",
     package = "rstudiothemes"
@@ -39,16 +39,32 @@ test_that("read_tm_theme() parses converted simple TextMate themes", {
   )
 })
 
-test_that("read_tm_theme() parses minimal TextMate themes", {
+test_that("minimal themes expose expected sections and fields", {
   fpath <- system.file("ext/test-minimal.tmTheme", package = "rstudiothemes")
 
   res <- read_tm_theme(fpath)
 
-  expect_snapshot(unique(res$section))
-  expect_snapshot(res$name)
+  expect_identical(unique(res$section), c("highlevel", "colors"))
+  expect_identical(
+    res$name,
+    c(
+      "name",
+      "uuid",
+      "colorSpaceName",
+      "semanticClass",
+      "author",
+      "comment",
+      "background",
+      "caret",
+      "foreground",
+      "invisibles",
+      "lineHighlight",
+      "selection"
+    )
+  )
 })
 
-test_that("read_tm_theme() reports invalid TextMate fixtures", {
+test_that("reader rejects themes missing required settings", {
   fpath <- system.file("ext/test-error.tmTheme", package = "rstudiothemes")
 
   expect_snapshot(
@@ -59,7 +75,7 @@ test_that("read_tm_theme() reports invalid TextMate fixtures", {
 })
 
 
-test_that("read_tm_theme() downloads URL inputs", {
+test_that("URL themes are downloaded before parsing", {
   tmtheme <- system.file("ext/test.tmTheme", package = "rstudiothemes")
   local_mock_theme_download(tmtheme)
 
@@ -75,7 +91,7 @@ test_that("read_tm_theme() downloads URL inputs", {
   expect_s3_class(res, "tbl_df")
 })
 
-test_that("read_tm_theme() handles empty token fields", {
+test_that("empty token fields are normalized without dropping styled scopes", {
   fpath <- withr::local_tempfile(fileext = ".tmTheme")
   writeLines(
     c(

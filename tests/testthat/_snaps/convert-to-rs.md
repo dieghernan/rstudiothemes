@@ -1,4 +1,4 @@
-# convert_to_rstudio_theme() reports invalid inputs
+# conversion rejects missing paths and unsupported extensions
 
     Code
       convert_to_rstudio_theme()
@@ -14,7 +14,7 @@
       Error in `convert_to_rstudio_theme()`:
       ! The `path` argument must be a 'tmTheme' or 'json' file, not "txt".
 
-# convert_to_rstudio_theme() installs and applies themes
+# successful installation applies the requested theme
 
     Code
       result <- convert_to_rstudio_theme(tmtheme, outfile = outfile, name = "Applied theme",
@@ -26,23 +26,26 @@
     Code
       invisible(result)
 
-# convert_to_rstudio_theme() reports installation warnings
+# installation warnings still allow an existing theme to be applied
 
     Code
-      result <- convert_to_rstudio_theme(tmtheme, outfile = outfile, force = TRUE)
+      result <- convert_to_rstudio_theme(tmtheme, outfile = outfile, force = TRUE,
+        apply = TRUE)
     Message
       i Installing RStudio theme "Converted Theme".
-      ! Theme already exists
+      ! Theme {already} exists
+      i Applying theme "Converted Theme".
     Code
       invisible(result)
 
-# convert_to_rstudio_theme() reports installation errors
+# installation errors prevent the theme from being applied
 
     Code
-      result <- convert_to_rstudio_theme(tmtheme, outfile = outfile, force = TRUE)
+      result <- convert_to_rstudio_theme(tmtheme, outfile = outfile, force = TRUE,
+        apply = TRUE)
     Message
       i Installing RStudio theme "Converted Theme".
-      x Cannot install theme
+      x Cannot install {theme}
     Code
       invisible(result)
 

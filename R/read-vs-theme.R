@@ -219,11 +219,10 @@ safe_read_json <- function(local_file) {
   # Remove the schema key.
   lns <- lns[!grepl("$schema", lns, fixed = TRUE)]
 
-  # Split inline comments into separate lines.
-  r2_split <- gsub("//", "~//", lns, fixed = TRUE)
-  r2 <- trimws(unlist(strsplit(r2_split, "~", fixed = TRUE)))
-  # Remove lines that start with a double slash.
-  r2 <- r2[!grepl("^//", r2)]
+  # Remove comments without changing double slashes inside JSON strings.
+  r2 <- gsub('"(?:\\\\.|[^"\\\\])*"(*SKIP)(*F)|//.*$', "", lns, perl = TRUE)
+  r2 <- trimws(r2)
+  r2 <- r2[nzchar(r2)]
 
   # Remove trailing commas by collapsing the JSON.
   r2 <- paste0(r2, collapse = "")

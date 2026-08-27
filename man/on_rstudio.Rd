@@ -11,8 +11,8 @@ on_rstudio()
 \code{TRUE} if running in \strong{RStudio}, \code{FALSE} otherwise.
 }
 \description{
-Detect whether the current R session is running in \strong{RStudio}. This is used
-to decide whether themes can be applied to the IDE.
+Detect whether the current \R session is running in \strong{RStudio} to decide
+whether themes can be applied to the IDE.
 }
 \examples{
 on_rstudio()

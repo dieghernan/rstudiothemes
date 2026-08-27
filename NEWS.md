@@ -1,3 +1,16 @@
+# rstudiothemes (development version)
+
+- `convert_to_rstudio_theme()` no longer tries to apply a theme after its
+  installation fails. It also builds inherited ACE scope styles reliably when a
+  theme mixes top-level and nested scopes.
+- `install_rstudiothemes()` now reports theme-copy failures instead of claiming
+  that every requested theme was installed.
+- `install_rstudiothemes()`, `list_pkg_rstudiothemes()` and
+  `try_rstudiothemes()` now report actions and unmatched themes with safer,
+  clearer **cli** markup.
+- `read_vs_theme()` now preserves double slashes inside JSON strings when it
+  removes comments.
+
 # rstudiothemes 1.1.2
 
 - Refreshed documentation to make package guidance, function references and
@@ -38,8 +51,8 @@ Initial **CRAN** release.
 - Added DOI:
   [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18519155.svg)](https://doi.org/10.5281/zenodo.18519155).
 - Migrated vignettes and articles to **Quarto** (#9).
-- At release time, repository status was active: [![Project Status: Active -
-  The project has reached a stable, usable state and is being actively
+- At release time, repository status was active: [![Project Status: Active - The
+  project has reached a stable, usable state and is being actively
   developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active).
 
 ## Bundled RStudio themes

@@ -1,38 +1,29 @@
-# list_pkg_rstudiothemes() filters bundled themes by style and name
+# partial theme matches are returned with guidance
 
     Code
-      sel_single <- list_pkg_rstudiothemes(style = "dark", themes = c("XXX",
+      selected <- list_pkg_rstudiothemes(style = "dark", themes = c("XXX",
         "Selenized Light"))
     Message
-      ! Matched 1 theme among 2 requested names: "XXX" and "Selenized Light".
+      ! Could not match 1 requested theme name: "XXX".
       i Use `rstudiothemes::list_rstudiothemes()` to check available names.
 
----
+# two unmatched theme names use plural guidance
 
     Code
-      nn <- list_pkg_rstudiothemes(themes = c("a", "b"))
+      result <- list_pkg_rstudiothemes(themes = c("a", "b"))
     Message
-      ! Matched no themes among 2 requested names: "a" and "b".
+      ! Could not match 2 requested theme names: "a" and "b".
       i Use `rstudiothemes::list_rstudiothemes()` to check available names.
 
----
+# three unmatched theme names use list guidance
 
     Code
-      nn <- list_pkg_rstudiothemes(themes = "a")
+      result <- list_pkg_rstudiothemes(themes = c("a", "b", "c"))
     Message
-      ! Matched no themes among 1 requested name: "a".
+      ! Could not match 3 requested theme names: "a", "b", and "c".
       i Use `rstudiothemes::list_rstudiothemes()` to check available names.
 
----
-
-    Code
-      sel_single <- list_pkg_rstudiothemes(style = "dark", themes = c("XXX",
-        "Selenized Light", "Selenized Dark"))
-    Message
-      ! Matched 2 themes among 3 requested names: "XXX", "Selenized Light", and "Selenized Dark".
-      i Use `rstudiothemes::list_rstudiothemes()` to check available names.
-
-# cli_how2install() explains how to install bundled themes
+# missing installations provide actionable guidance
 
     Code
       cli_how2install()
@@ -40,7 +31,44 @@
       ! No rstudiothemes themes are installed.
       i Use `rstudiothemes::install_rstudiothemes()` to install the package themes.
 
-# list_rstudiothemes() reports when no bundled themes are installed
+# custom installation directories receive copied theme files
+
+    Code
+      install_rstudiothemes(destdir = dest_dir)
+    Message
+      i Installing 1 theme to '<themes>'.
+      v Installed 1 theme.
+      i Use `rstudiothemes::list_rstudiothemes()` to list installed themes.
+      i Use `rstudiothemes::try_rstudiothemes()` to preview installed themes.
+
+# custom installation failures report uncopied theme files
+
+    Code
+      install_rstudiothemes(destdir = dest_dir)
+    Message
+      i Installing 2 themes to '<themes>'.
+    Condition
+      Error in `install_rstudiothemes()`:
+      ! Could not install all requested themes.
+      x Failed to copy 1 theme file: 'two.rstheme'.
+
+# default installation adds every selected theme
+
+    Code
+      install_rstudiothemes()
+    Message
+      v Installed 2 themes.
+      i Use `rstudiothemes::list_rstudiothemes()` to list installed themes.
+      i Use `rstudiothemes::try_rstudiothemes()` to preview installed themes.
+
+# removal deletes every installed bundled theme
+
+    Code
+      remove_rstudiothemes()
+    Message
+      v Uninstalled 2 themes.
+
+# installed listings explain when no bundled themes match
 
     Code
       res <- list_rstudiothemes()
@@ -48,7 +76,7 @@
       ! No rstudiothemes themes are installed.
       i Use `rstudiothemes::install_rstudiothemes()` to install the package themes.
 
-# try_rstudiothemes() restores the original theme
+# timed previews restore the original theme
 
     Code
       try_rstudiothemes(delay = 1)
@@ -60,9 +88,9 @@
       * [q] to quit and restore your original theme.
       * "Light Theme"
       * "Dark Theme"
-      v Restoring the original theme: Original Theme.
+      v Restored the original theme "Original Theme".
 
-# try_rstudiothemes() handles selected themes and prompt choices
+# quitting a prompted preview restores the original theme
 
     Code
       try_rstudiothemes(themes = c("Light Theme", "Dark Theme"))
@@ -74,9 +102,9 @@
       * [q] to quit and restore your original theme.
       * "Light Theme"
       * "Dark Theme"
-      v Restoring the original theme: Original Theme.
+      v Restored the original theme "Original Theme".
 
----
+# keeping a prompted preview leaves the selected theme active
 
     Code
       try_rstudiothemes(themes = "Light Theme")

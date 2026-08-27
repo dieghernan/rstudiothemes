@@ -1,61 +1,45 @@
-test_that("list_pkg_rstudiothemes() filters bundled themes by style and name", {
+test_that("bundled themes filter by style", {
   expect_silent(all <- list_pkg_rstudiothemes())
   expect_silent(lg <- list_pkg_rstudiothemes(style = "light"))
   expect_silent(dk <- list_pkg_rstudiothemes(style = "dark"))
 
   expect_gt(length(all), length(dk))
   expect_gt(length(dk), length(lg))
+})
 
+test_that("explicit theme selections preserve requested matches", {
   expect_silent(
-    sel_them <- list_pkg_rstudiothemes(
+    selected <- list_pkg_rstudiothemes(
       style = "light",
       themes = c("Selenized Dark", "Selenized Light")
     )
   )
-  expect_identical(c("Selenized Dark", "Selenized Light"), names(sel_them))
+  expect_identical(c("Selenized Dark", "Selenized Light"), names(selected))
+})
 
+test_that("partial theme matches are returned with guidance", {
   expect_snapshot(
-    sel_single <- list_pkg_rstudiothemes(
+    selected <- list_pkg_rstudiothemes(
       style = "dark",
       themes = c("XXX", "Selenized Light")
     )
   )
-  expect_identical("Selenized Light", names(sel_single))
+  expect_identical("Selenized Light", names(selected))
+})
 
-  # NULL
-  expect_snapshot(nn <- list_pkg_rstudiothemes(themes = c("a", "b")))
-  expect_null(nn)
+test_that("two unmatched theme names use plural guidance", {
+  expect_snapshot(result <- list_pkg_rstudiothemes(themes = c("a", "b")))
+  expect_null(result)
+})
 
-  expect_snapshot(nn <- list_pkg_rstudiothemes(themes = "a"))
-
-  # Check plural
+test_that("three unmatched theme names use list guidance", {
   expect_snapshot(
-    sel_single <- list_pkg_rstudiothemes(
-      style = "dark",
-      themes = c("XXX", "Selenized Light", "Selenized Dark")
-    )
+    result <- list_pkg_rstudiothemes(themes = c("a", "b", "c"))
   )
+  expect_null(result)
 })
 
-test_that("list_pkg_rstudiothemes() handles missing themes", {
-  all <- list_pkg_rstudiothemes()
-  light <- list_pkg_rstudiothemes(style = "light")
-  dark <- list_pkg_rstudiothemes(style = "dark")
-
-  expect_gt(length(all), length(dark))
-  expect_gt(length(dark), length(light))
-
-  selected <- suppressMessages(list_pkg_rstudiothemes(
-    style = "light",
-    themes = c("Selenized Dark", "Selenized Light")
-  ))
-  expect_identical(c("Selenized Dark", "Selenized Light"), names(selected))
-
-  missing <- suppressMessages(list_pkg_rstudiothemes(themes = c("a", "b")))
-  expect_null(missing)
-})
-
-test_that("list_rstudiothemes() lists bundled themes offline", {
+test_that("bundled themes can be listed without an RStudio session", {
   expect_identical(
     list_rstudiothemes(list_installed = FALSE),
     names(list_pkg_rstudiothemes())
@@ -72,11 +56,11 @@ test_that("list_rstudiothemes() lists bundled themes offline", {
   )
 })
 
-test_that("cli_how2install() explains how to install bundled themes", {
+test_that("missing installations provide actionable guidance", {
   expect_snapshot(cli_how2install())
 })
 
-test_that("install_rstudiothemes() copies themes to a custom directory", {
+test_that("custom installation directories receive copied theme files", {
   source_dir <- withr::local_tempdir()
   dest_dir <- file.path(withr::local_tempdir(), "themes")
   theme_file <- file.path(source_dir, "theme.rstheme")
@@ -88,12 +72,43 @@ test_that("install_rstudiothemes() copies themes to a custom directory", {
     rstudioapi_add_theme = function(...) NULL
   )
 
-  install_rstudiothemes(destdir = dest_dir)
+  expect_snapshot(
+    install_rstudiothemes(destdir = dest_dir),
+    transform = function(lines) {
+      lines <- gsub("\\\\", "/", lines)
+      dest_dir <- gsub("\\\\", "/", dest_dir)
+      gsub(dest_dir, "<themes>", lines, fixed = TRUE)
+    }
+  )
 
   expect_true(file.exists(file.path(dest_dir, basename(theme_file))))
 })
 
-test_that("install_rstudiothemes() adds selected themes", {
+test_that("custom installation failures report uncopied theme files", {
+  source_dir <- withr::local_tempdir()
+  dest_dir <- withr::local_tempdir()
+  theme_files <- file.path(source_dir, c("one.rstheme", "two.rstheme"))
+  writeLines("dummy", theme_files[1])
+  writeLines("dummy", theme_files[2])
+
+  local_mocked_bindings(
+    require_rstudio = function(...) TRUE,
+    list_pkg_rstudiothemes = function(...) theme_files,
+    copy_theme_files = function(...) c(TRUE, FALSE)
+  )
+
+  expect_snapshot(
+    error = TRUE,
+    install_rstudiothemes(destdir = dest_dir),
+    transform = function(lines) {
+      lines <- gsub("\\\\", "/", lines)
+      dest_dir <- gsub("\\\\", "/", dest_dir)
+      gsub(dest_dir, "<themes>", lines, fixed = TRUE)
+    }
+  )
+})
+
+test_that("default installation adds every selected theme", {
   added <- character()
 
   local_mocked_bindings(
@@ -106,11 +121,11 @@ test_that("install_rstudiothemes() adds selected themes", {
     }
   )
 
-  install_rstudiothemes()
+  expect_snapshot(install_rstudiothemes())
   expect_identical(added, c("theme-a.rstheme", "theme-b.rstheme"))
 })
 
-test_that("install_rstudiothemes() returns NULL for empty selections", {
+test_that("empty installation selections stop without side effects", {
   local_mocked_bindings(
     require_rstudio = function(...) TRUE,
     list_pkg_rstudiothemes = function(...) NULL
@@ -119,7 +134,7 @@ test_that("install_rstudiothemes() returns NULL for empty selections", {
   expect_null(install_rstudiothemes())
 })
 
-test_that("RStudio actions return NULL outside RStudio", {
+test_that("RStudio actions stop cleanly in other sessions", {
   local_mocked_bindings(require_rstudio = function(...) FALSE)
 
   expect_null(install_rstudiothemes())
@@ -128,7 +143,7 @@ test_that("RStudio actions return NULL outside RStudio", {
   expect_null(try_rstudiothemes())
 })
 
-test_that("remove_rstudiothemes() removes each installed bundled theme", {
+test_that("removal deletes every installed bundled theme", {
   removed <- character()
 
   local_mocked_bindings(
@@ -139,15 +154,21 @@ test_that("remove_rstudiothemes() removes each installed bundled theme", {
     }
   )
 
-  remove_rstudiothemes()
+  expect_snapshot(remove_rstudiothemes())
 
   expect_identical(removed, c("theme-a", "theme-b"))
+})
 
-  local_mocked_bindings(list_rstudiothemes = function(...) character())
+test_that("removal stops cleanly when no bundled themes are installed", {
+  local_mocked_bindings(
+    require_rstudio = function(...) TRUE,
+    list_rstudiothemes = function(...) character()
+  )
+
   expect_null(remove_rstudiothemes())
 })
 
-test_that("list_rstudiothemes() intersects installed and bundled themes", {
+test_that("installed listings retain only bundled theme names", {
   local_mocked_bindings(
     require_rstudio = function(...) TRUE,
     list_pkg_rstudiothemes = function(style = c("all", "dark", "light"),
@@ -162,7 +183,7 @@ test_that("list_rstudiothemes() intersects installed and bundled themes", {
   expect_identical(list_rstudiothemes(), c("Theme One", "Theme Two"))
 })
 
-test_that("list_rstudiothemes() reports when no bundled themes are installed", {
+test_that("installed listings explain when no bundled themes match", {
   local_mocked_bindings(
     require_rstudio = function(...) TRUE,
     list_pkg_rstudiothemes = function(...) {
@@ -177,80 +198,35 @@ test_that("list_rstudiothemes() reports when no bundled themes are installed", {
   expect_null(res)
 })
 
-test_that("try_rstudiothemes() restores the original theme", {
-  applied <- character()
-
-  local_mocked_bindings(
-    require_rstudio = function(...) TRUE,
-    list_rstudiothemes = function(...) c("Light Theme", "Dark Theme"),
-    list_pkg_rstudiothemes = function(style = c("all", "dark", "light"),
-                                      themes = NULL) {
-      style <- match.arg(style)
-      if (style == "light") {
-        return(structure("light.rstheme", names = "Light Theme"))
-      }
-      if (style == "dark") {
-        return(structure("dark.rstheme", names = "Dark Theme"))
-      }
-      structure(
-        c("light.rstheme", "dark.rstheme"),
-        names = c("Light Theme", "Dark Theme")
-      )
-    },
-    rstudioapi_get_theme_info = function() list(editor = "Original Theme"),
-    rstudioapi_apply_theme = function(theme) {
-      applied <<- c(applied, theme)
-    },
-    rstudiothemes_sleep = function(time) NULL
-  )
+test_that("timed previews restore the original theme", {
+  captured <- local_mock_rstudio_preview()
 
   expect_snapshot(try_rstudiothemes(delay = 1))
-  expect_identical(applied, c("Light Theme", "Dark Theme", "Original Theme"))
+  expect_identical(captured$slept, c(1, 1))
+  expect_identical(
+    captured$applied,
+    c("Light Theme", "Dark Theme", "Original Theme")
+  )
 })
 
-test_that("try_rstudiothemes() handles selected themes and prompt choices", {
-  applied <- character()
-  answers <- c("n", "q")
-
-  local_mocked_bindings(
-    require_rstudio = function(...) TRUE,
-    list_rstudiothemes = function(...) c("Light Theme", "Dark Theme"),
-    list_pkg_rstudiothemes = function(style = c("all", "dark", "light"),
-                                      themes = NULL) {
-      style <- match.arg(style)
-      if (style == "light") {
-        return(structure("light.rstheme", names = "Light Theme"))
-      }
-      if (style == "dark") {
-        return(structure("dark.rstheme", names = "Dark Theme"))
-      }
-      structure(
-        c("light.rstheme", "dark.rstheme"),
-        names = c("Light Theme", "Dark Theme")
-      )
-    },
-    rstudioapi_get_theme_info = function() list(editor = "Original Theme"),
-    rstudioapi_apply_theme = function(theme) {
-      applied <<- c(applied, theme)
-    },
-    rstudiothemes_readline = function(prompt) {
-      res <- answers[[1]]
-      answers <<- answers[-1]
-      res
-    }
-  )
+test_that("quitting a prompted preview restores the original theme", {
+  captured <- local_mock_rstudio_preview(c("n", "q"))
 
   expect_snapshot(try_rstudiothemes(themes = c("Light Theme", "Dark Theme")))
-  expect_identical(applied, c("Light Theme", "Dark Theme", "Original Theme"))
-
-  applied <- character()
-  local_mocked_bindings(rstudiothemes_readline = function(prompt) "k")
-
-  expect_snapshot(try_rstudiothemes(themes = "Light Theme"))
-  expect_identical(applied, "Light Theme")
+  expect_identical(
+    captured$applied,
+    c("Light Theme", "Dark Theme", "Original Theme")
+  )
 })
 
-test_that("RStudio theme actions work in an interactive RStudio session", {
+test_that("keeping a prompted preview leaves the selected theme active", {
+  captured <- local_mock_rstudio_preview("k")
+
+  expect_snapshot(try_rstudiothemes(themes = "Light Theme"))
+  expect_identical(captured$applied, "Light Theme")
+})
+
+test_that("local interactive smoke test exercises real RStudio actions", {
   # Warning! These tests would alter your theme configuration
   skip_on_cran()
   skip_if(!on_rstudio(), "Not in RStudio")

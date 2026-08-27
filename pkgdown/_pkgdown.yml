@@ -34,11 +34,10 @@ navbar:
       aria-label: Support the project on Ko-fi
 
 home:
-  title: >
-    rstudiothemes | Create and Install Custom **RStudio** Themes
+  title: rstudiothemes | Create and Install Custom RStudio Themes
   description: >
-    Create, convert and install custom **RStudio** editor themes from **Visual
-    Studio Code**, **Positron** and **TextMate** theme files.
+    Create, convert and install custom RStudio editor themes from Visual Studio
+    Code, Positron and TextMate theme files.
 
 reference:
 - title: Convert theme files

@@ -229,7 +229,7 @@ A **BibTeX** entry for **LaTeX** users:
       doi = {10.32614/CRAN.package.rstudiothemes},
       author = {Diego Hernangómez},
       year = {2026},
-      version = {1.1.2},
+      version = {1.1.2.9000},
       url = {https://dieghernan.github.io/rstudiothemes/},
       abstract = {Create, convert and install custom RStudio editor themes from Visual Studio Code, Positron and TextMate theme files. Convert themes between TextMate, Visual Studio Code and Positron formats and install bundled ports of popular themes for use in RStudio.},
     }

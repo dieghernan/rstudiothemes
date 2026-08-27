@@ -101,8 +101,9 @@ theme created with \strong{Pandoc}.
 list_rstudiothemes(list_installed = FALSE)
 }
 \references{
-Aden-Buie G (2026). \emph{rsthemes: Full Themes for RStudio v1.2+}. R package
-version 0.5.1, commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
+Aden-Buie G (2026). \emph{rsthemes: Full Themes for \strong{RStudio}} v1.2+.
+\pkg{rsthemes} version 0.5.1, commit
+48fc078f772e5e63669bc9773eabc8e9cdc7f699,
 \url{https://github.com/gadenbuie/rsthemes}.
 }
 \seealso{

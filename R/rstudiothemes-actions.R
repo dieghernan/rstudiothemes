@@ -26,6 +26,10 @@ rstudiothemes_readline <- function(prompt) {
 rstudiothemes_sleep <- function(time) {
   Sys.sleep(time)
 }
+
+copy_theme_files <- function(from, to, overwrite = TRUE) {
+  file.copy(from, to, overwrite = overwrite)
+}
 # nocov end
 
 #' Manage **RStudio** themes
@@ -60,8 +64,9 @@ rstudiothemes_sleep <- function(time) {
 #'
 #' ```
 #' @references
-#' Aden-Buie G (2026). _rsthemes: Full Themes for RStudio v1.2+_. R package
-#' version 0.5.1, commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
+#' Aden-Buie G (2026). _rsthemes: Full Themes for **RStudio**_ v1.2+.
+#' \pkg{rsthemes} version 0.5.1, commit
+#' 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
 #' <https://github.com/gadenbuie/rsthemes>.
 #'
 #' @seealso [convert_to_rstudio_theme()] to convert and install a custom theme
@@ -104,8 +109,8 @@ install_rstudiothemes <- function(
   }
 
   if (!is.null(destdir)) {
-    cli::cli_alert(
-      "Installing {length(theme_files)} theme{?s} to {.file {destdir}}."
+    cli::cli_alert_info(
+      "Installing {length(theme_files)} theme{?s} to {.path {destdir}}."
     )
     destdir <- path.expand(destdir)
 
@@ -113,7 +118,17 @@ install_rstudiothemes <- function(
       dir.create(destdir, recursive = TRUE)
     }
 
-    file.copy(theme_files, destdir, overwrite = TRUE)
+    copied <- copy_theme_files(theme_files, destdir, overwrite = TRUE)
+    if (!all(copied)) {
+      failed <- basename(theme_files[!copied]) # nolint
+      cli::cli_abort(c(
+        "Could not install all requested themes.",
+        "x" = paste0(
+          "Failed to copy {length(failed)} theme file{?s}: ",
+          "{.file {failed}}."
+        )
+      ))
+    }
   } else {
     for (theme in theme_files) {
       suppressWarnings(rstudioapi_add_theme(theme, force = TRUE))
@@ -124,7 +139,7 @@ install_rstudiothemes <- function(
     "Use {.run rstudiothemes::list_rstudiothemes()} to list installed themes."
   )
   cli::cli_alert_info(
-    "Use {.run rstudiothemes::try_rstudiothemes()} to preview installed themes."
+    "Use {.fn rstudiothemes::try_rstudiothemes} to preview installed themes."
   )
 }
 
@@ -214,12 +229,13 @@ list_pkg_rstudiothemes <- function(
   # Validate specific theme selections.
   if (!is.null(themes)) {
     sel <- ensure_null(allt[intersect(themes, nms)])
+    unmatched <- setdiff(themes, nms)
 
     # Inform the user if some themes are not found.
-    if (length(sel) < length(themes)) {
+    if (length(unmatched) > 0) {
       cli::cli_alert_warning(paste0(
-        "Matched {cli::no(length(sel))} theme{?s} among ",
-        "{length(themes)} requested name{?s}: {.val {themes}}."
+        "Could not match {length(unmatched)} requested theme name{?s}: ",
+        "{.val {unmatched}}."
       ))
       cli::cli_alert_info(paste0(
         "Use {.run rstudiothemes::list_rstudiothemes()} to check ",
@@ -313,16 +329,16 @@ try_rstudiothemes <- function(
       if (tolower(res) == "q") break
     }
   }
-  cli::cli_alert_success(
-    "Restoring the original theme: {.strong {current_theme$editor}}."
-  )
   rstudioapi_apply_theme(current_theme$editor)
+  cli::cli_alert_success(
+    "Restored the original theme {.val {current_theme$editor}}."
+  )
 }
 
 cli_how2install <- function() {
   cli::cli_alert_warning("No {.pkg rstudiothemes} themes are installed.")
   cli::cli_alert_info(paste0(
-    "Use {.run rstudiothemes::install_rstudiothemes()} to install ",
+    "Use {.fn rstudiothemes::install_rstudiothemes} to install ",
     "the package themes."
   ))
 }

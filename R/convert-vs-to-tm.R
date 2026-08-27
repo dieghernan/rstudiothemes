@@ -147,7 +147,7 @@ tmtheme_settings_df <- function(vs_df) {
     miss <- c("background", "foreground", "selection")[!check_vals] # nolint
     cli::cli_abort(c(
       "Cannot convert theme because required colors are missing.",
-      "x" = "Missing {length(miss)} setting{?s}: {.val {miss}}.",
+      "x" = "Missing {length(miss)} setting{?s}: {.field {miss}}.",
       "i" = paste0(
         "Ensure the input theme provides the required colors ",
         "or pass overrides."

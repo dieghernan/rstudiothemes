@@ -101,7 +101,7 @@ if (on_rstudio() && interactive()) {
 \item \code{\link[=read_vs_theme]{read_vs_theme()}} and \code{\link[=read_tm_theme]{read_tm_theme()}} to inspect input theme files.
 \item \code{\link[=install_rstudiothemes]{install_rstudiothemes()}} to install bundled themes.
 \item \code{\link[rstudioapi:addTheme]{rstudioapi::addTheme()}} and \code{\link[rstudioapi:applyTheme]{rstudioapi::applyTheme()}} to install or apply
-an RStudio theme directly.
+an \strong{RStudio} theme directly.
 }
 
 Theme file converters:

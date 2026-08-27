@@ -119,7 +119,7 @@ read_tm_theme <- function(path) {
   if (length(difs) > 0) {
     cli::cli_abort(c(
       "TextMate theme in {.file {path}} is invalid.",
-      "x" = "Required setting{?s} {.val {difs}} {?is/are} missing."
+      "x" = "Required setting{?s} {.field {difs}} {?is/are} missing."
     ))
   }
 

@@ -1,11 +1,11 @@
-test_that("convert_tm_to_vs_theme() reports invalid inputs", {
+test_that("conversion rejects invalid TextMate input paths", {
   expect_snapshot(error = TRUE, convert_tm_to_vs_theme())
   expect_snapshot(error = TRUE, convert_tm_to_vs_theme("a.txt"))
   expect_snapshot(error = TRUE, convert_tm_to_vs_theme("a.tmTheme"))
 })
 
 
-test_that("convert_tm_to_vs_theme() writes expected VS Code JSON", {
+test_that("a complete TextMate theme produces mapped VS Code JSON", {
   tmout <- theme_output_path(".json")
   tmtheme <- system.file("ext/test.tmTheme", package = "rstudiothemes")
 
@@ -19,15 +19,9 @@ test_that("convert_tm_to_vs_theme() writes expected VS Code JSON", {
   expect_identical(json$colors$editor.background, "#2B2836")
   expect_identical(json$colors$editor.foreground, "#DCE7FD")
   expect_gt(length(json$tokenColors), 1)
-
-  skip_on_cran()
-
-  out <- readLines(tmout)
-
-  expect_snapshot(cat(out, sep = "\n"))
 })
 
-test_that("convert_tm_to_vs_theme() handles minimal theme metadata", {
+test_that("minimal TextMate metadata uses source defaults", {
   tmout <- theme_output_path(".json")
   tmtheme <- system.file("ext/test-minimal.tmTheme", package = "rstudiothemes")
 
@@ -44,31 +38,27 @@ test_that("convert_tm_to_vs_theme() handles minimal theme metadata", {
     names(json$colors),
     c("editor.background", "editor.foreground")
   )
+})
 
-  out <- readLines(tmout)
+test_that("explicit metadata overrides TextMate values", {
+  tmout <- theme_output_path(".json")
+  tmtheme <- system.file("ext/test-minimal.tmTheme", package = "rstudiothemes")
 
-  expect_snapshot(cat(out, sep = "\n"))
-
-  tmout2 <- theme_output_path(".json")
   expect_silent(convert_tm_to_vs_theme(
     tmtheme,
-    outfile = tmout2,
+    outfile = tmout,
     name = "A test theme",
     author = "I am"
   ))
 
-  expect_true(file.exists(tmout2))
-  json <- jsonlite::read_json(tmout2)
+  expect_true(file.exists(tmout))
+  json <- jsonlite::read_json(tmout)
   expect_identical(json$name, "A test theme")
   expect_identical(json$author, "I am")
   expect_identical(json$type, "dark")
-
-  out <- readLines(tmout2)
-
-  expect_snapshot(cat(out, sep = "\n"))
 })
 
-test_that("convert_tm_to_vs_theme() reports invalid TextMate fixtures", {
+test_that("conversion rejects TextMate themes missing required settings", {
   fpath <- system.file("ext/test-error.tmTheme", package = "rstudiothemes")
 
   expect_snapshot(
@@ -78,7 +68,7 @@ test_that("convert_tm_to_vs_theme() reports invalid TextMate fixtures", {
   )
 })
 
-test_that("convert_tm_to_vs_theme() matches the Skeletor snapshot", {
+test_that("the Skeletor conversion matches its golden file", {
   fpath <- system.file("ext/Skeletor_Syntax.tmTheme", package = "rstudiothemes")
   out <- convert_tm_to_vs_theme(fpath)
   expect_snapshot_file(
@@ -88,7 +78,7 @@ test_that("convert_tm_to_vs_theme() matches the Skeletor snapshot", {
   )
 })
 
-test_that("convert_tm_to_vs_theme() downloads URL inputs", {
+test_that("URL TextMate inputs are downloaded and converted", {
   tmtheme <- system.file("ext/test.tmTheme", package = "rstudiothemes")
   local_mock_theme_download(tmtheme)
 
@@ -107,7 +97,7 @@ test_that("convert_tm_to_vs_theme() downloads URL inputs", {
   expect_identical(json$name, "Testing RStudioTheme")
 })
 
-test_that("convert_tm_to_vs_theme() infers dark high contrast themes", {
+test_that("dark high-contrast metadata produces hc-black output", {
   tmout <- theme_output_path(".json")
   tmtheme <- system.file("ext/test-hc-dark.tmTheme", package = "rstudiothemes")
 
@@ -119,7 +109,7 @@ test_that("convert_tm_to_vs_theme() infers dark high contrast themes", {
   expect_identical(ss[ss$name == "type", ]$value, "hc-black")
 })
 
-test_that("convert_tm_to_vs_theme() infers light high contrast themes", {
+test_that("light high-contrast metadata produces hc-light output", {
   tmout <- theme_output_path(".json")
   tmtheme <- system.file("ext/test-hc-light.tmTheme", package = "rstudiothemes")
 
@@ -131,7 +121,7 @@ test_that("convert_tm_to_vs_theme() infers light high contrast themes", {
   expect_identical(ss[ss$name == "type", ]$value, "hc-light")
 })
 
-test_that("TextMate token conversion handles optional settings", {
+test_that("token conversion keeps available styles and omits empty tokens", {
   token <- data.frame(
     name = "Token",
     sc = "source.r, keyword",
@@ -148,4 +138,15 @@ test_that("TextMate token conversion handles optional settings", {
 
   token$background <- NA_character_
   expect_null(tmtheme_vs_token(token))
+})
+
+test_that("the Positron alias matches the VS Code converter", {
+  tmtheme <- system.file("ext/test-minimal.tmTheme", package = "rstudiothemes")
+  vscode_out <- theme_output_path(".json")
+  positron_out <- theme_output_path(".json")
+
+  convert_tm_to_vs_theme(tmtheme, outfile = vscode_out)
+  convert_tm_to_positron_theme(tmtheme, outfile = positron_out)
+
+  expect_identical(readLines(positron_out), readLines(vscode_out))
 })

@@ -52,7 +52,7 @@
 #' - [read_vs_theme()] and [read_tm_theme()] to inspect input theme files.
 #' - [install_rstudiothemes()] to install bundled themes.
 #' - [rstudioapi::addTheme()] and [rstudioapi::applyTheme()] to install or apply
-#'   an RStudio theme directly.
+#'   an **RStudio** theme directly.
 #' @family converters
 #' @export
 #' @encoding UTF-8
@@ -316,14 +316,15 @@ convert_to_rstudio_theme <- function(
         e
       }
     )
+    install_failed <- "error" %in% attr(capture_log, "class")
     if ("warning" %in% attr(capture_log, "class")) {
-      cli::cli_alert_warning(capture_log$message)
-    } else if ("error" %in% attr(capture_log, "class")) {
-      cli::cli_alert_danger(capture_log$message)
+      cli::cli_alert_warning("{capture_log$message}")
+    } else if (install_failed) {
+      cli::cli_alert_danger("{capture_log$message}")
     } else {
       cli::cli_alert_success("Installed theme {.val {capture_log}}.")
     }
-    if (apply) {
+    if (apply && !install_failed) {
       cli::cli_alert_info("Applying theme {.val {theme_name}}.")
       rstudioapi_apply_theme(theme_name)
     }
@@ -358,6 +359,8 @@ sass_options <- function(output_style = "expanded") {
 
 create_ace_cascade <- function(tmcols_scopes) {
   full <- tmcols_scopes
+  style_cols <- c("scope", "foreground", "background", "fontStyle")
+  full[style_cols] <- lapply(full[style_cols], as.character)
   full <- dplyr::distinct(full, .keep_all = FALSE)
 
   # Exclude scopes containing spaces (pseudo-CSS).
@@ -390,7 +393,7 @@ create_ace_cascade <- function(tmcols_scopes) {
   lev2_xtra <- lev3
 
   # Do not inherit `fontStyle` from level 3.
-  lev2_xtra$fontStyle <- NA
+  lev2_xtra$fontStyle <- NA_character_
 
   lev2_xtra$scope <- vapply(
     lev3$scope,
@@ -415,7 +418,7 @@ create_ace_cascade <- function(tmcols_scopes) {
   lev1_xtra <- lev2_end
 
   # Do not inherit `fontStyle` from higher levels.
-  lev1_xtra$fontStyle <- NA
+  lev1_xtra$fontStyle <- NA_character_
 
   lev1_xtra$scope <- vapply(
     lev2_end$scope,

@@ -101,3 +101,47 @@ local_mock_rstudio_theme_build <- function(
 
   captured
 }
+
+local_mock_rstudio_preview <- function(answers = character(), env = NULL) {
+  if (is.null(env)) {
+    env <- parent.frame()
+  }
+  captured <- new.env(parent = emptyenv())
+  captured$answers <- answers
+  captured$applied <- character()
+  captured$slept <- numeric()
+
+  testthat::local_mocked_bindings(
+    require_rstudio = function(...) TRUE,
+    list_rstudiothemes = function(...) c("Light Theme", "Dark Theme"),
+    list_pkg_rstudiothemes = function(style = c("all", "dark", "light"),
+                                      themes = NULL) {
+      style <- match.arg(style)
+      if (style == "light") {
+        return(structure("light.rstheme", names = "Light Theme"))
+      }
+      if (style == "dark") {
+        return(structure("dark.rstheme", names = "Dark Theme"))
+      }
+      structure(
+        c("light.rstheme", "dark.rstheme"),
+        names = c("Light Theme", "Dark Theme")
+      )
+    },
+    rstudioapi_get_theme_info = function() list(editor = "Original Theme"),
+    rstudioapi_apply_theme = function(theme) {
+      captured$applied <- c(captured$applied, theme)
+    },
+    rstudiothemes_readline = function(prompt) {
+      response <- captured$answers[[1]]
+      captured$answers <- captured$answers[-1]
+      response
+    },
+    rstudiothemes_sleep = function(time) {
+      captured$slept <- c(captured$slept, time)
+    },
+    .env = env
+  )
+
+  captured
+}

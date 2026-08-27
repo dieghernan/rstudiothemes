@@ -14,7 +14,8 @@
 #' @returns
 #' A character string representing a valid UUID.
 #'
-#' @source Adapted from an unreleased version of `ids::uuid()`.
+#' @source Adapted from an unreleased version of `uuid()` from
+#'   \CRANpkg{ids}.
 #' @references
 #' Davis KR, Peabody B and Leach P (2024). "Universally Unique Identifiers
 #' (UUIDs)." RFC 9562. \doi{10.17487/RFC9562},

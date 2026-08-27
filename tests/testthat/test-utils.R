@@ -1,4 +1,4 @@
-test_that("col2hex() normalizes color names, hex values and alpha channels", {
+test_that("colors are normalized to uppercase hexadecimal values", {
   # Not parsed
   not <- "bold italic underline"
   expect_identical(not, col2hex(not))
@@ -10,9 +10,7 @@ test_that("col2hex() normalizes color names, hex values and alpha channels", {
   expect_identical("#FF002211", expand_hex("#F021"))
   expect_identical("#FF002211", col2hex("#F021"))
   expect_identical("not_a_color", expand_hex("not_a_color"))
-  expect_snapshot(col2hex("not_a_color"))
-
-  skip_on_cran()
+  expect_identical(col2hex("not_a_color"), "not_a_color")
 
   # Remove alpha if not needed
   alpha_1 <- "#FFF000FF"
@@ -22,10 +20,10 @@ test_that("col2hex() normalizes color names, hex values and alpha channels", {
   # Keep alpha
   hex_alpha <- "#ff00008f"
 
-  expect_snapshot(col2hex(hex_alpha))
+  expect_identical(col2hex(hex_alpha), "#FF00008F")
 })
 
-test_that("dark_or_light() classifies colors by brightness", {
+test_that("brightness separates light, dark and invalid colors", {
   expect_identical(dark_or_light("#fff"), "light")
   expect_identical(dark_or_light("#000"), "dark")
   expect_identical(dark_or_light("grey40"), "dark")
@@ -35,7 +33,7 @@ test_that("dark_or_light() classifies colors by brightness", {
   expect_snapshot(error = TRUE, dark_or_light("not_a_color"))
 })
 
-test_that("match_arg_pretty() reports invalid choices with helpful errors", {
+test_that("invalid argument choices produce contextual errors and hints", {
   my_fun <- function(arg_one = c(10, 1000, 3000, 5000)) {
     match_arg_pretty(arg_one)
   }
@@ -59,7 +57,7 @@ test_that("match_arg_pretty() reports invalid choices with helpful errors", {
   expect_snapshot(my_fun2(c(1, 2)), error = TRUE)
 })
 
-test_that("match_arg_pretty() returns exact, default and custom matches", {
+test_that("valid argument choices resolve exact and default matches", {
   my_fun <- function(arg_one = c(10, 1000, 3000, 5000)) {
     match_arg_pretty(arg_one)
   }
@@ -76,7 +74,7 @@ test_that("match_arg_pretty() returns exact, default and custom matches", {
   expect_snapshot(my_fun2("3"), error = TRUE)
 })
 
-test_that("ensure_null() collapses empty values and preserves real values", {
+test_that("empty values collapse to NULL while real values are preserved", {
   expect_null(ensure_null(NULL))
   expect_null(ensure_null(c(NULL, NA)))
   expect_null(ensure_null(c(NULL, NA, "")))
@@ -84,37 +82,44 @@ test_that("ensure_null() collapses empty values and preserves real values", {
   expect_identical(ensure_null(c(1, 2)), c(1, 2))
 })
 
-test_that("text normalization and mapping helpers return usable data", {
+test_that("theme text collapses repeated whitespace", {
   expect_identical(normalize_theme_text("  a  b   c  "), "a b c")
+})
 
+test_that("theme mappings expose Visual Studio Code and TextMate fields", {
   mapping <- theme_mapping()
+
   expect_s3_class(mapping, "data.frame")
   expect_contains(names(mapping), c("vscode", "tm"))
 })
 
-test_that("require_rstudio() succeeds inside RStudio", {
+test_that("RStudio-only actions proceed inside RStudio", {
   local_mocked_bindings(on_rstudio = function() TRUE)
 
   expect_true(require_rstudio("test"))
 })
 
-test_that("require_rstudio() reports non-RStudio sessions", {
+test_that("RStudio-only actions explain why other sessions are rejected", {
   local_mocked_bindings(on_rstudio = function() FALSE, detect_gui = function() {
     "RTerm"
   })
 
   expect_snapshot(s <- require_rstudio("test"))
-  expect_false(on_rstudio())
   expect_false(s)
 })
 
-test_that("local_theme_file() resolves local paths and downloads URLs", {
+test_that("local theme paths are returned unchanged", {
   local_file <- withr::local_tempfile(fileext = ".json")
   writeLines("{}", local_file)
 
   expect_identical(local_theme_file(local_file, "json"), local_file)
-  expect_snapshot(error = TRUE, local_theme_file("missing.json", "json"))
+})
 
+test_that("missing local theme files produce a contextual error", {
+  expect_snapshot(error = TRUE, local_theme_file("missing.json", "json"))
+})
+
+test_that("URL themes are downloaded to temporary files", {
   local_mocked_bindings(download_theme_file = function(
     url,
     destfile,
