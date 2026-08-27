@@ -10,7 +10,8 @@
   now reports theme-copy failures instead of claiming that every
   requested theme was installed.
 - [`install_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-actions.md),
-  `list_pkg_rstudiothemes()` and
+  [`list_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-actions.md)
+  and
   [`try_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-actions.md)
   now report actions and unmatched themes with safer, clearer **cli**
   markup.
