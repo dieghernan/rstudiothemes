@@ -5,7 +5,7 @@
   theme mixes top-level and nested scopes.
 - `install_rstudiothemes()` now reports theme-copy failures instead of claiming
   that every requested theme was installed.
-- `install_rstudiothemes()`, `list_pkg_rstudiothemes()` and
+- `install_rstudiothemes()`, `list_rstudiothemes()` and
   `try_rstudiothemes()` now report actions and unmatched themes with safer,
   clearer **cli** markup.
 - `read_vs_theme()` now preserves double slashes inside JSON strings when it
