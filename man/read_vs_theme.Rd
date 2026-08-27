@@ -30,7 +30,10 @@ read_vs_theme(vstheme)
 
 }
 \seealso{
-Theme readers:
+\code{\link[=convert_vs_to_tm_theme]{convert_vs_to_tm_theme()}} and \code{\link[=convert_to_rstudio_theme]{convert_to_rstudio_theme()}} to
+convert Visual Studio Code or Positron themes.
+
+Theme file readers:
 \code{\link[=read_tm_theme]{read_tm_theme()}}
 }
 \concept{readers}

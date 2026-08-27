@@ -36,9 +36,9 @@
 #'   Visual Studio Code theme file (`.json` format).
 #' @param use_italics Logical. Use italics in the resulting theme. Defaults to
 #'   `TRUE`, although some themes may look better without italics.
-#' @inheritParams rstudioapi::addTheme
-#' @inheritParams sass::sass_options
-#' @inheritParams convert_vs_to_tm_theme
+#' @inheritParams rstudioapi::addTheme force
+#' @inheritParams sass::sass_options output_style
+#' @inheritParams convert_vs_to_tm_theme outfile name
 #' @param apply Logical. Apply the theme with [rstudioapi::applyTheme()].
 #'
 #' @returns
@@ -47,10 +47,14 @@
 #' the theme. If `apply` is `TRUE`, it also applies the theme to your RStudio
 #' IDE.
 #'
+#' @seealso
+#' - [read_vs_theme()] and [read_tm_theme()] to inspect input theme files.
+#' - [install_rstudiothemes()] to install bundled themes.
+#' - [rstudioapi::addTheme()] and [rstudioapi::applyTheme()] to install or apply
+#'   an RStudio theme directly.
 #' @family converters
-#' @seealso [rstudioapi::addTheme()], [rstudioapi::applyTheme()]
-#' @encoding UTF-8
 #' @export
+#' @encoding UTF-8
 #'
 #' @examples
 #' if (on_rstudio() && interactive()) {
@@ -384,7 +388,7 @@ create_ace_cascade <- function(tmcols_scopes) {
   # Enrich level-2 scopes with color information from level 3.
   lev2_xtra <- lev3
 
-  # Do not inherit fontStyle from level 3.
+  # Do not inherit `fontStyle` from level 3.
   lev2_xtra$fontStyle <- NA
 
   lev2_xtra$scope <- vapply(
@@ -409,7 +413,7 @@ create_ace_cascade <- function(tmcols_scopes) {
   # Enrich level-1 scopes with color information from level 2.
   lev1_xtra <- lev2_end
 
-  # Do not inherit fontStyle from higher levels.
+  # Do not inherit `fontStyle` from higher levels.
   lev1_xtra$fontStyle <- NA
 
   lev1_xtra$scope <- vapply(

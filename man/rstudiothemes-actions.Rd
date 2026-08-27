@@ -58,16 +58,15 @@ called from other IDEs. The exception is
 \code{list_rstudiothemes(list_installed = FALSE)}.
 }
 \section{Functions}{
+
 \itemize{
-\item \code{install_rstudiothemes()}: Install RStudio themes.
+\item \code{install_rstudiothemes()} installs bundled themes.
+\item \code{remove_rstudiothemes()} removes bundled themes.
+\item \code{list_rstudiothemes()} lists installed or available themes.
+\item \code{try_rstudiothemes()} previews bundled themes.
+}
+}
 
-\item \code{remove_rstudiothemes()}: Remove bundled \CRANpkg{rstudiothemes} themes from RStudio.
-
-\item \code{list_rstudiothemes()}: List installed or available themes.
-
-\item \code{try_rstudiothemes()}: Preview bundled \CRANpkg{rstudiothemes} RStudio themes.
-
-}}
 \section{Bundled themes}{
 
 \CRANpkg{rstudiothemes} includes RStudio themes based on the following
@@ -105,6 +104,10 @@ list_rstudiothemes(list_installed = FALSE)
 Aden-Buie G (2026). \emph{rsthemes: Full Themes for RStudio v1.2+}. R package
 version 0.5.1, commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
 \url{https://github.com/gadenbuie/rsthemes}.
+}
+\seealso{
+\code{\link[=convert_to_rstudio_theme]{convert_to_rstudio_theme()}} to convert and install a custom theme
+file.
 }
 \author{
 Garrick Aden-Buie \url{https://github.com/gadenbuie}

@@ -42,7 +42,7 @@ Initial **CRAN** release.
   The project has reached a stable, usable state and is being actively
   developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active).
 
-## Bundled **RStudio** themes
+## Bundled RStudio themes
 
 Changes to bundled **RStudio** themes.
 

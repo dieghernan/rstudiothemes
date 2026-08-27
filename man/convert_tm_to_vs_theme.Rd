@@ -54,7 +54,10 @@ readLines(path) |>
 
 }
 \seealso{
-Theme converters:
+\code{\link[=read_tm_theme]{read_tm_theme()}} to inspect the input theme and \code{\link[=read_vs_theme]{read_vs_theme()}}
+to inspect the converted theme.
+
+Theme file converters:
 \code{\link[=convert_to_rstudio_theme]{convert_to_rstudio_theme()}},
 \code{\link[=convert_vs_to_tm_theme]{convert_vs_to_tm_theme()}}
 }

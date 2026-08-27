@@ -16,7 +16,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes/badge?s=db1aa5e9aa335100151678939d0b23ee5cb86b71)](https://www.codefactor.io/repository/github/dieghernan/rstudiothemes)
 [![DOI](https://img.shields.io/badge/DOI-%2010.32614/CRAN.package.rstudiothemes%20-blue)](https://doi.org/10.32614/CRAN.package.rstudiothemes)
 [![Project Status: Inactive – The project has reached a stable, usable
-state. It is no longer being actively developed, and support/maintenance
+state. It is no longer being actively developed and support/maintenance
 will be provided as time
 allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
 
@@ -39,7 +39,7 @@ documentation](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creati
 <div class="callout-body-container callout-body">
 
 This package is stable and maintained on a best-effort basis. I
-currently prioritize **CRAN** compatibility, bug and regression fixes
+currently prioritize **CRAN** compatibility and bug and regression fixes
 over new features.
 
 </div>
@@ -52,7 +52,7 @@ over new features.
 - Convert themes bidirectionally between **TextMate** and **Visual
   Studio Code** or **Positron** formats.
 - Install bundled ports of popular **Visual Studio Code** and
-  **Positron** themes ready to use in **RStudio**.
+  **Positron** themes that are ready to use in **RStudio**.
 - List, preview and remove bundled **RStudio** themes.
 - Read theme files as tabular data for inspection or conversion
   workflows.
@@ -135,8 +135,8 @@ You can install the development version of **rstudiothemes** with:
 pak::pak("dieghernan/rstudiothemes")
 ```
 
-Alternatively, you can install **rstudiothemes** using the
-[r-universe](https://dieghernan.r-universe.dev/rstudiothemes):
+Alternatively, you can install **rstudiothemes** using
+[**r-universe**](https://dieghernan.r-universe.dev/rstudiothemes):
 
 ``` r
 # Install rstudiothemes in R:
@@ -206,7 +206,7 @@ themes from scratch, use one of these tools and then convert the result:
 
 ## Contributing
 
-Contributions are welcome! To contribute to this project:
+Contributions are welcome. To contribute:
 
 1.  Open an issue to discuss your ideas or proposed changes.
 2.  Fork the repository and create a feature branch.
@@ -222,7 +222,7 @@ RStudio Themes</em>.
 <a href="https://dieghernan.github.io/rstudiothemes/">https://dieghernan.github.io/rstudiothemes/</a>.
 </p>
 
-A BibTeX entry for LaTeX users:
+A **BibTeX** entry for **LaTeX** users:
 
     @Manual{R-rstudiothemes,
       title = {{rstudiothemes}: Create and Install Custom {RStudio} Themes},

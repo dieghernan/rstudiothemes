@@ -8,10 +8,12 @@
 #'
 #' @inherit read_tm_theme return
 #'
+#' @seealso [convert_vs_to_tm_theme()] and [convert_to_rstudio_theme()] to
+#'   convert Visual Studio Code or Positron themes.
 #' @family readers
-#' @encoding UTF-8
 #' @rdname read_vs_theme
 #' @export
+#' @encoding UTF-8
 #'
 #' @examples
 #' vstheme <- system.file("ext/test-color-theme.json",
@@ -79,7 +81,7 @@ read_vs_theme <- function(path) {
       # Convert to a data frame.
       df_vals <- as.data.frame(t(vals))
 
-      # Convert the italic attribute to fontStyle.
+      # Convert the italic attribute to `fontStyle`.
       if ("italic" %in% names(df_vals)) {
         if (identical(df_vals$italic, "TRUE")) {
           df_vals$fontStyle <- "italic"
@@ -205,7 +207,7 @@ read_positron_theme <- read_vs_theme
 #' @param local_file Path to a JSON file.
 #'
 #' @returns
-#' A parsed list structure from the JSON file, with cleaned formatting.
+#' A parsed list structure containing the cleaned JSON data.
 #'
 #' @noRd
 safe_read_json <- function(local_file) {

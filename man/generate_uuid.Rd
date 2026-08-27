@@ -22,8 +22,8 @@ Generate version 4 pseudo-random Universally Unique Identifiers (UUIDs).
 }
 \details{
 This helper generates a
-\href{https://en.wikipedia.org/wiki/Universally_unique_identifier}{UUID} for
-identifying generated theme versions.
+\href{https://en.wikipedia.org/wiki/Universally_unique_identifier}{UUID} to
+identify generated theme versions.
 }
 \examples{
 # Random UUID.
@@ -44,7 +44,7 @@ Davis KR, Peabody B and Leach P (2024). "Universally Unique Identifiers
 \url{https://www.rfc-editor.org/info/rfc9562}.
 }
 \seealso{
-Helper functions:
+Package helpers:
 \code{\link[=on_rstudio]{on_rstudio()}}
 }
 \concept{helpers}

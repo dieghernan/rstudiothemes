@@ -60,7 +60,7 @@
       * [q] to quit and restore your original theme.
       * "Light Theme"
       * "Dark Theme"
-      v Restoring the original theme, Original Theme.
+      v Restoring the original theme: Original Theme.
 
 # try_rstudiothemes() handles selected themes and prompt choices
 
@@ -74,7 +74,7 @@
       * [q] to quit and restore your original theme.
       * "Light Theme"
       * "Dark Theme"
-      v Restoring the original theme, Original Theme.
+      v Restoring the original theme: Original Theme.
 
 ---
 

@@ -50,7 +50,7 @@ dark_or_light <- function(x) {
   theme_type
 }
 
-# Compatibility helper for R <= 4.4.
+# Compatibility helper for R 4.4 and earlier.
 expand_hex <- function(x) {
   if (all(grepl("^#", x), nchar(x) %in% c(4, 5))) {
     rem <- gsub("#", "", x, fixed = TRUE)

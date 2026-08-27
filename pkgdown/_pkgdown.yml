@@ -41,22 +41,22 @@ home:
     Studio Code**, **Positron** and **TextMate** theme files.
 
 reference:
-- title: Theme converters
+- title: Convert theme files
   desc: >
-    Convert theme files to **RStudio** `.rstheme` files or convert themes
-    between **Visual Studio Code**, **Positron** and **TextMate** formats.
+    Create **RStudio** `.rstheme` files or translate themes between **Visual
+    Studio Code**, **Positron** and **TextMate** formats.
 
 - contents:
   - has_concept("converters")
 
-- title: Bundled themes
+- title: Manage bundled themes
   desc: >
     Install, list, preview or remove bundled **RStudio** themes.
 
 - contents:
   - rstudiothemes-actions
 
-- title: Theme readers
+- title: Inspect theme files
   desc: >
     Read **Visual Studio Code**, **Positron** and **TextMate** theme files as
     tabular data for inspection or conversion workflows.
@@ -64,31 +64,19 @@ reference:
 - contents:
   - has_concept("readers")
 
-- title: Helper functions
+- title: Package helpers
   desc: >
     Check the current IDE and generate theme identifiers.
 
 - contents:
   - has_concept("helpers")
 
-- title: Package overview
-  desc: >
-    Learn what the package does and where to start.
-
-- contents:
-  - rstudiothemes-package
-
 authors:
   Diego Hernangómez:
     href: 'https://dieghernan.github.io/'
 
 articles:
-- title: Get started
-  desc: >
-    Learn how to install, preview and convert **RStudio** themes.
-  contents:
-  - rstudiothemes
-- title: Theme guides
+- title: Explore themes
   navbar: Theme guides
   desc: >
     Browse bundled **RStudio** themes and understand how theme elements map
@@ -96,7 +84,7 @@ articles:
   contents:
   - articles/showcase
   - articles/mapping
-- title: Online converter
+- title: Convert themes online
   navbar: Online converter
   desc: >
     Convert theme files in a browser with the hosted **Shiny** app.

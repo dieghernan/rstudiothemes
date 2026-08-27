@@ -1,8 +1,8 @@
-## code to `download_themes`
+## Generate bundled themes.
 
 devtools::load_all()
 
-# Current theme
+# Save the current theme.
 current_theme <- rstudioapi::getThemeInfo()$editor
 
 remove_rstudiothemes()
@@ -48,7 +48,7 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-# catpuccin (build)-----
+# Catppuccin (build) -----
 # source("./data-raw/compile_catppucin.R")
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/mocha.json",
@@ -66,7 +66,7 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-# cobalt -----
+# Cobalt -----
 url <- paste0(
   "https://raw.githubusercontent.com/wesbos/",
   "cobalt2-vscode/refs/heads/master/theme/cobalt2.json"
@@ -75,7 +75,7 @@ url <- paste0(
 dest <- file.path("inst", "rsthemes", basename(url))
 dest <- gsub("json$|tmtheme$", "rstheme", dest, ignore.case = TRUE)
 
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   url,
   "inst/rsthemes/Cobalt2.rstheme",
@@ -85,7 +85,7 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-# cran -------------------------------------------------------------------
+# CRAN -------------------------------------------------------------------
 url <- paste0(
   "https://raw.githubusercontent.com/dieghernan/pretty-themes/",
   "refs/heads/main/dist/tmTheme/cran.tmTheme"
@@ -94,7 +94,7 @@ url <- paste0(
 dest <- file.path("inst", "rsthemes", basename(url))
 dest <- gsub("json$|tmtheme$", "rstheme", dest, ignore.case = TRUE)
 
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   url,
   "inst/rsthemes/CRAN.rstheme",
@@ -104,9 +104,9 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-# dracula (build) --------------------------------------------------------
+# Dracula (build) --------------------------------------------------------
 # source("./data-raw/compile_dracula.R")
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   "./data-raw/vscode_themes/dracula.json",
   "inst/rsthemes/Dracula2025.rstheme",
@@ -116,7 +116,7 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-# github (build) -----------------------------------------------------------
+# GitHub (build) ---------------------------------------------------------
 # source("./data-raw/compile_github.R")
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/dark.json",
@@ -171,7 +171,7 @@ url <- file.path(
   "https://raw.githubusercontent.com/UstymUkhman/matrix-theme/refs/heads/",
   "master/themes/Matrix-color-theme.json"
 )
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   url,
   "inst/rsthemes/Matrix.rstheme",
@@ -215,7 +215,7 @@ url <- file.path(
   "develop/themes/nord-color-theme.json"
 )
 
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   url,
   "inst/rsthemes/Nord.rstheme",
@@ -231,7 +231,7 @@ url <- file.path(
   "main/dist/vscode/themes/oksolar-light-color-theme.json"
 )
 
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   url,
   "inst/rsthemes/OKSolar_Light.rstheme",
@@ -246,7 +246,7 @@ url <- file.path(
   "main/dist/vscode/themes/oksolar-dark-color-theme.json"
 )
 
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   url,
   "inst/rsthemes/OKSolar_Dark.rstheme",
@@ -261,7 +261,7 @@ url <- file.path(
   "main/dist/vscode/themes/oksolar-sky-color-theme.json"
 )
 
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   url,
   "inst/rsthemes/OKSolar_Sky.rstheme",
@@ -290,7 +290,7 @@ url <- file.path(
   "https://raw.githubusercontent.com/dieghernan/overflow-theme/refs/heads/",
   "main/dist/vscode/themes/overflow-light-color-theme.json"
 )
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   url,
   "inst/rsthemes/Overflow_Light.rstheme",
@@ -303,7 +303,7 @@ url <- file.path(
   "https://raw.githubusercontent.com/dieghernan/overflow-theme/refs/heads/",
   "main/dist/vscode/themes/overflow-dark-color-theme.json"
 )
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   url,
   "inst/rsthemes/Overflow_Dark.rstheme",
@@ -317,7 +317,7 @@ url <- file.path(
   "https://raw.githubusercontent.com/siamak/panda-syntax-vscode/refs/heads/",
   "main/dist/Panda.json"
 )
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   url,
   "inst/rsthemes/Panda_Syntax.rstheme",
@@ -332,7 +332,7 @@ url <- file.path(
   "https://raw.githubusercontent.com/dieghernan/selenized-theme/refs/heads/",
   "main/dist/vscode/themes/selenized-light-color-theme.json"
 )
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   url,
   "inst/rsthemes/Selenized_Light.rstheme",
@@ -346,7 +346,7 @@ url <- file.path(
   "https://raw.githubusercontent.com/dieghernan/selenized-theme/refs/heads/",
   "main/dist/vscode/themes/selenized-dark-color-theme.json"
 )
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   url,
   "inst/rsthemes/Selenized_Dark.rstheme",
@@ -361,7 +361,7 @@ url <- file.path(
   "https://raw.githubusercontent.com/dieghernan/skeletor-syntax/refs/heads/",
   "main/dist/vscode/themes/skeletor-syntax-color-theme.json"
 )
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   url,
   "inst/rsthemes/Skeletor_Syntax.rstheme",
@@ -378,9 +378,9 @@ url <- file.path(
   "master/themes/synthwave-color-theme.json"
 )
 
-# editor.foreground missing in SynthWave
+# The `editor.foreground` setting is missing from SynthWave.
 
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   url,
   "inst/rsthemes/SynthWave84.rstheme",
@@ -389,7 +389,6 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-
 # Tokyo Night --------------------------------------------------------------
 
 url <- paste0(
@@ -397,7 +396,7 @@ url <- paste0(
   "refs/heads/master/themes/tokyo-night-color-theme.json"
 )
 
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   url,
   "inst/rsthemes/Tokyo_Night.rstheme",
@@ -406,8 +405,7 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-
-# Generate rstheme
+# Generate the RStudio theme.
 url <- paste0(
   "https://raw.githubusercontent.com/tokyo-night/tokyo-night-vscode-theme/",
   "refs/heads/master/themes/tokyo-night-light-color-theme.json"
@@ -464,7 +462,7 @@ dd <- convert_to_rstudio_theme(
 )
 
 # Positron -------------------------------------------------------------------
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/positron_dark.json",
   "inst/rsthemes/Positron_Dark.rstheme",
@@ -474,7 +472,7 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/positron_light.json",
   "inst/rsthemes/Positron_Light.rstheme",
@@ -486,7 +484,7 @@ dd <- convert_to_rstudio_theme(
 
 # VSCode -------------------------------------------------------------------
 
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/vscode_dark.json",
   "inst/rsthemes/VSCode_Dark.rstheme",
@@ -496,7 +494,7 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-# Generate rstheme
+# Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/vscode_light.json",
   "inst/rsthemes/VSCode_Light.rstheme",
@@ -506,19 +504,19 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
-# Create dist release -----
+# Create the distribution archive. -----
 allt <- list.files("inst/rsthemes/", full.names = TRUE)
 
 unlink("pkgdown/assets/dist/rstudiothemes.zip", force = TRUE)
 
 zip::zip("pkgdown/assets/dist/rstudiothemes.zip", allt, mode = "cherry-pick")
 
-# Remove and re-install
+# Remove and reinstall the themes.
 devtools::load_all()
 remove_rstudiothemes()
 install_rstudiothemes()
 
-# Restore
+# Restore the original theme.
 
 rstudioapi::applyTheme(current_theme)
 

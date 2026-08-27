@@ -1,4 +1,4 @@
-# Compile and build on terminal using system
+# Compile and build in the terminal with system tools.
 
 current_wd <- getwd()
 
@@ -9,10 +9,10 @@ setwd("./data-raw/github-theme")
 system("npm install")
 system("npm run build")
 
-# Copy themes
+# Copy the themes.
 thems <- list.files("themes", pattern = ".json", full.names = TRUE)
 file.copy(thems, "../vscode_themes", overwrite = TRUE)
 
-# Restore and clean
+# Restore the working directory and clean up.
 setwd(current_wd)
 system("rm -rf ./data-raw/github-theme")

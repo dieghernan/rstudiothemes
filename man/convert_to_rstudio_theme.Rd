@@ -96,9 +96,14 @@ if (on_rstudio() && interactive()) {
 }
 }
 \seealso{
-\code{\link[rstudioapi:addTheme]{rstudioapi::addTheme()}}, \code{\link[rstudioapi:applyTheme]{rstudioapi::applyTheme()}}
+\itemize{
+\item \code{\link[=read_vs_theme]{read_vs_theme()}} and \code{\link[=read_tm_theme]{read_tm_theme()}} to inspect input theme files.
+\item \code{\link[=install_rstudiothemes]{install_rstudiothemes()}} to install bundled themes.
+\item \code{\link[rstudioapi:addTheme]{rstudioapi::addTheme()}} and \code{\link[rstudioapi:applyTheme]{rstudioapi::applyTheme()}} to install or apply
+an RStudio theme directly.
+}
 
-Theme converters:
+Theme file converters:
 \code{\link[=convert_tm_to_vs_theme]{convert_tm_to_vs_theme()}},
 \code{\link[=convert_vs_to_tm_theme]{convert_vs_to_tm_theme()}}
 }

@@ -8,8 +8,8 @@
 #' `TRUE` if running in RStudio, `FALSE` otherwise.
 #'
 #' @family helpers
-#' @encoding UTF-8
 #' @export
+#' @encoding UTF-8
 #'
 #' @examples
 #' on_rstudio()

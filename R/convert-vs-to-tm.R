@@ -4,7 +4,7 @@
 #' Convert a `.json` file representing a Visual Studio Code or Positron theme
 #' and write the equivalent TextMate theme file (`.tmTheme`).
 #'
-#' @inheritParams read_vs_theme
+#' @inheritParams read_vs_theme path
 #' @param outfile Path where the resulting file will be written. Defaults to
 #'   a temporary file created with [tempfile()].
 #' @param name Theme name. If `NULL`, the name from the input file is used.
@@ -15,10 +15,12 @@
 #' This function is called for its side effects. It writes a `.tmTheme` file to
 #' `outfile` and returns the file path.
 #'
+#' @seealso [read_vs_theme()] to inspect the input theme and [read_tm_theme()]
+#'   to inspect the converted theme.
 #' @family converters
-#' @encoding UTF-8
 #' @rdname convert_vs_to_tm_theme
 #' @export
+#' @encoding UTF-8
 #'
 #' @examples
 #' vstheme <- system.file("ext/test-simple-color-theme.json",

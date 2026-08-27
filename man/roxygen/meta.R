@@ -1,7 +1,7 @@
 list(
   rd_family_title = list(
-    converters = "Theme converters",
-    readers = "Theme readers",
-    helpers = "Helper functions"
+    converters = "Theme file converters",
+    readers = "Theme file readers",
+    helpers = "Package helpers"
   )
 )

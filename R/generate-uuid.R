@@ -5,8 +5,8 @@
 #'
 #' @details
 #' This helper generates a
-#' [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) for
-#' identifying generated theme versions.
+#' [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) to
+#' identify generated theme versions.
 #'
 #' @param hint Optional character string or object coercible with
 #'   [as.character()], used as a random seed.
@@ -21,8 +21,8 @@
 #' <https://www.rfc-editor.org/info/rfc9562>.
 #'
 #' @family helpers
-#' @encoding UTF-8
 #' @export
+#' @encoding UTF-8
 #'
 #' @examples
 #' # Random UUID.
@@ -44,7 +44,7 @@ generate_uuid <- function(hint = NULL) {
     raw_n <- as.raw(sample.int(256L, 16, replace = TRUE) - 1L)
   }
 
-  # Adapted from ids::uuid() (development version).
+  # Adapted from `ids::uuid()` (development version).
   bytes <- matrix(raw_n, 16, 1)
 
   ## Set the high nibble of the 7th byte to 4.

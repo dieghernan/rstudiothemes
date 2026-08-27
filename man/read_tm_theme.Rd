@@ -31,7 +31,10 @@ readLines(the_theme) |>
 read_tm_theme(the_theme)
 }
 \seealso{
-Theme readers:
+\code{\link[=convert_tm_to_vs_theme]{convert_tm_to_vs_theme()}} and \code{\link[=convert_to_rstudio_theme]{convert_to_rstudio_theme()}} to
+convert TextMate themes.
+
+Theme file readers:
 \code{\link[=read_vs_theme]{read_vs_theme()}}
 }
 \concept{readers}

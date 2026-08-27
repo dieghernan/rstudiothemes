@@ -1,6 +1,6 @@
 ---
 title: "Theme gallery"
-subtitle: Preview bundled **RStudio** themes
+subtitle: Preview bundled RStudio themes
 description: Preview bundled RStudio themes
 lightbox:
   match: auto
@@ -116,8 +116,7 @@ for (i in seq_along(themes)) {
 <div class="callout-body-container callout-body">
 ```
 
-Previews may differ from the display on your device. The screenshots use this
-setup:
+Previews may look different on your device. The screenshots use this setup:
 
 **RStudio** version
 

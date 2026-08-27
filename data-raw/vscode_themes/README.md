@@ -1,4 +1,4 @@
-# **Visual Studio Code** themes
+# Visual Studio Code themes
 
 **Note:** These theme files are not intended for use in **Visual Studio Code**.
 

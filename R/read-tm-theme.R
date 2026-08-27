@@ -8,9 +8,11 @@
 #' @returns
 #' A [tibble][tibble::tbl_df()] containing the theme data.
 #'
+#' @seealso [convert_tm_to_vs_theme()] and [convert_to_rstudio_theme()] to
+#'   convert TextMate themes.
 #' @family readers
-#' @encoding UTF-8
 #' @export
+#' @encoding UTF-8
 #'
 #' @examples
 #' the_theme <- system.file("ext/test-color-theme.json",

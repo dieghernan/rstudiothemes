@@ -46,6 +46,12 @@ rstudiothemes_sleep <- function(time) {
 #' called from other IDEs. The exception is
 #' `list_rstudiothemes(list_installed = FALSE)`.
 #'
+#' @section Functions:
+#' - `install_rstudiothemes()` installs bundled themes.
+#' - `remove_rstudiothemes()` removes bundled themes.
+#' - `list_rstudiothemes()` lists installed or available themes.
+#' - `try_rstudiothemes()` previews bundled themes.
+#'
 #' @section Bundled themes:
 #' \CRANpkg{rstudiothemes} includes RStudio themes based on the following
 #' editor themes:
@@ -58,17 +64,15 @@ rstudiothemes_sleep <- function(time) {
 #' version 0.5.1, commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
 #' <https://github.com/gadenbuie/rsthemes>.
 #'
+#' @seealso [convert_to_rstudio_theme()] to convert and install a custom theme
+#'   file.
 #' @author Garrick Aden-Buie <https://github.com/gadenbuie>
-#' @encoding UTF-8
 #' @name rstudiothemes-actions
 #'
 #' @examples
 #' list_rstudiothemes(list_installed = FALSE)
 NULL
 
-#' @describeIn rstudiothemes-actions
-#' Install RStudio themes.
-#'
 #' @param style Theme group: `"all"`, `"dark"` or `"light"`.
 #' @param destdir Optional directory for `.rstheme` files. By default, themes
 #'   are installed with [rstudioapi::addTheme()]. Use this argument to copy
@@ -80,7 +84,9 @@ NULL
 #' `install_rstudiothemes()` and `remove_rstudiothemes()` return `NULL`
 #' invisibly.
 #'
+#' @rdname rstudiothemes-actions
 #' @export
+#' @encoding UTF-8
 install_rstudiothemes <- function(
   style = c("all", "dark", "light"),
   themes = NULL,
@@ -99,7 +105,7 @@ install_rstudiothemes <- function(
 
   if (!is.null(destdir)) {
     cli::cli_alert(
-      "Installing {length(theme_files)} theme{?s} in {.file {destdir}}."
+      "Installing {length(theme_files)} theme{?s} to {.file {destdir}}."
     )
     destdir <- path.expand(destdir)
 
@@ -122,9 +128,7 @@ install_rstudiothemes <- function(
   )
 }
 
-#' @describeIn rstudiothemes-actions
-#' Remove bundled \CRANpkg{rstudiothemes} themes from RStudio.
-#'
+#' @rdname rstudiothemes-actions
 #' @export
 remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
   # Require RStudio.
@@ -144,9 +148,6 @@ remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
   cli::cli_alert_success("Uninstalled {length(themes)} theme{?s}.")
 }
 
-#' @describeIn rstudiothemes-actions
-#' List installed or available themes.
-#'
 #' @param list_installed If `TRUE` (default), list installed
 #'   \CRANpkg{rstudiothemes} themes. If `FALSE`, list themes available in the
 #'   package.
@@ -154,6 +155,7 @@ remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
 #' @returns
 #' `list_rstudiothemes()` returns a character vector of theme names.
 #'
+#' @rdname rstudiothemes-actions
 #' @export
 list_rstudiothemes <- function(
   style = c("all", "dark", "light"),
@@ -252,9 +254,6 @@ list_pkg_rstudiothemes <- function(
   allt[!dark]
 }
 
-#' @describeIn rstudiothemes-actions
-#' Preview bundled \CRANpkg{rstudiothemes} RStudio themes.
-#'
 #' @param delay Number of seconds to wait between themes. Set to 0 to be
 #'   prompted to continue after each theme.
 #'
@@ -262,6 +261,7 @@ list_pkg_rstudiothemes <- function(
 #' `try_rstudiothemes()` has side effects. It cycles through bundled themes,
 #' lets you preview each one and restores your original theme when you quit.
 #'
+#' @rdname rstudiothemes-actions
 #' @export
 try_rstudiothemes <- function(
   style = c("all", "dark", "light"),
@@ -314,7 +314,7 @@ try_rstudiothemes <- function(
     }
   }
   cli::cli_alert_success(
-    "Restoring the original theme, {.strong {current_theme$editor}}."
+    "Restoring the original theme: {.strong {current_theme$editor}}."
   )
   rstudioapi_apply_theme(current_theme$editor)
 }
