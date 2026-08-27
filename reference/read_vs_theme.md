@@ -26,7 +26,12 @@ containing the theme data.
 
 ## See also
 
-Theme readers:
+[`convert_vs_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_vs_to_tm_theme.md)
+and
+[`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_to_rstudio_theme.md)
+to convert Visual Studio Code or Positron themes.
+
+Theme file readers:
 [`read_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/read_tm_theme.md)
 
 ## Examples

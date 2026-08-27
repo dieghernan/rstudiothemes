@@ -199,8 +199,8 @@ Winter is Coming Light
 
 About the screenshots
 
-Previews may differ from the display on your device. The screenshots use
-this setup:
+Previews may look different on your device. The screenshots use this
+setup:
 
 **RStudio** version
 

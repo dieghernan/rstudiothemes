@@ -1,15 +1,6 @@
 # Articles
 
-### Get started
-
-Learn how to install, preview and convert **RStudio** themes.
-
-- [Get started with
-  rstudiothemes](https://dieghernan.github.io/rstudiothemes/articles/rstudiothemes.md):
-
-  First steps with the rstudiothemes package
-
-### Theme guides
+### Explore themes
 
 Browse bundled **RStudio** themes and understand how theme elements map
 across supported formats.
@@ -24,7 +15,7 @@ across supported formats.
 
   Map theme elements between formats
 
-### Online converter
+### Convert themes online
 
 Convert theme files in a browser with the hosted **Shiny** app.
 

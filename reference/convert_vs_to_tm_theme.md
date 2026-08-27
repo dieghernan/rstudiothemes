@@ -53,7 +53,12 @@ file to `outfile` and returns the file path.
 
 ## See also
 
-Theme converters:
+[`read_vs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/read_vs_theme.md)
+to inspect the input theme and
+[`read_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/read_tm_theme.md)
+to inspect the converted theme.
+
+Theme file converters:
 [`convert_tm_to_vs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_tm_to_vs_theme.md),
 [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_to_rstudio_theme.md)
 

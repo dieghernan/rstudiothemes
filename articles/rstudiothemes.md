@@ -53,7 +53,7 @@ list_rstudiothemes(list_installed = FALSE)
 
 ## Trying themes
 
-You can preview installed themes from an R session:
+You can preview installed themes from an **R** session:
 
 ``` r
 
@@ -96,7 +96,7 @@ convert_to_rstudio_theme(
 This function writes the `.rstheme` file, installs it and applies it
 when `apply = TRUE`.
 
-## Workflow example: from **Visual Studio Code** or **Positron** to **RStudio**
+## Workflow example: from Visual Studio Code or Positron to RStudio
 
 - Choose a `.json` theme file from **Visual Studio Code** or
   **Positron**.

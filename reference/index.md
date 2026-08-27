@@ -1,9 +1,9 @@
 # Package index
 
-## Theme converters
+## Convert theme files
 
-Convert theme files to **RStudio** `.rstheme` files or convert themes
-between **Visual Studio Code**, **Positron** and **TextMate** formats.
+Create **RStudio** `.rstheme` files or translate themes between **Visual
+Studio Code**, **Positron** and **TextMate** formats.
 
 - [`convert_tm_to_vs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_tm_to_vs_theme.md)
   [`convert_tm_to_positron_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_tm_to_vs_theme.md)
@@ -14,7 +14,7 @@ between **Visual Studio Code**, **Positron** and **TextMate** formats.
   [`convert_positron_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_vs_to_tm_theme.md)
   : Convert a Visual Studio Code or Positron theme file to TextMate
 
-## Bundled themes
+## Manage bundled themes
 
 Install, list, preview or remove bundled **RStudio** themes.
 
@@ -24,7 +24,7 @@ Install, list, preview or remove bundled **RStudio** themes.
   [`try_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-actions.md)
   : Manage RStudio themes
 
-## Theme readers
+## Inspect theme files
 
 Read **Visual Studio Code**, **Positron** and **TextMate** theme files
 as tabular data for inspection or conversion workflows.
@@ -35,7 +35,7 @@ as tabular data for inspection or conversion workflows.
   [`read_positron_theme()`](https://dieghernan.github.io/rstudiothemes/reference/read_vs_theme.md)
   : Read and parse a Visual Studio Code or Positron theme file
 
-## Helper functions
+## Package helpers
 
 Check the current IDE and generate theme identifiers.
 
@@ -43,11 +43,3 @@ Check the current IDE and generate theme identifiers.
   : Generate random UUIDs
 - [`on_rstudio()`](https://dieghernan.github.io/rstudiothemes/reference/on_rstudio.md)
   : Check whether the session is running in RStudio
-
-## Package overview
-
-Learn what the package does and where to start.
-
-- [`rstudiothemes`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-package.md)
-  [`rstudiothemes-package`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-package.md)
-  : rstudiothemes: Create and Install Custom 'RStudio' Themes

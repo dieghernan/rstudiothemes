@@ -13,7 +13,7 @@ documentation](https://rstudio.github.io/rstudio-extensions/rstudio-theme-creati
 Note
 
 This package is stable and maintained on a best-effort basis. I
-currently prioritize **CRAN** compatibility, bug and regression fixes
+currently prioritize **CRAN** compatibility and bug and regression fixes
 over new features.
 
 ## Features
@@ -23,7 +23,7 @@ over new features.
 - Convert themes bidirectionally between **TextMate** and **Visual
   Studio Code** or **Positron** formats.
 - Install bundled ports of popular **Visual Studio Code** and
-  **Positron** themes ready to use in **RStudio**.
+  **Positron** themes that are ready to use in **RStudio**.
 - List, preview and remove bundled **RStudio** themes.
 - Read theme files as tabular data for inspection or conversion
   workflows.
@@ -146,7 +146,7 @@ themes from scratch, use one of these tools and then convert the result:
 
 ## Contributing
 
-Contributions are welcome! To contribute to this project:
+Contributions are welcome. To contribute:
 
 1.  Open an issue to discuss your ideas or proposed changes.
 2.  Fork the repository and create a feature branch.
@@ -159,7 +159,7 @@ Themes*.
 [doi:10.32614/CRAN.package.rstudiothemes](https://doi.org/10.32614/CRAN.package.rstudiothemes).
 <https://dieghernan.github.io/rstudiothemes/>.
 
-A BibTeX entry for LaTeX users:
+A **BibTeX** entry for **LaTeX** users:
 
 ``` R
 @Manual{R-rstudiothemes,

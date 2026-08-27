@@ -22,7 +22,12 @@ containing the theme data.
 
 ## See also
 
-Theme readers:
+[`convert_tm_to_vs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_tm_to_vs_theme.md)
+and
+[`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_to_rstudio_theme.md)
+to convert TextMate themes.
+
+Theme file readers:
 [`read_vs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/read_vs_theme.md)
 
 ## Examples

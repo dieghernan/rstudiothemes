@@ -58,7 +58,7 @@ Initial **CRAN** release.
   actively
   developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active).
 
-### Bundled **RStudio** themes
+### Bundled RStudio themes
 
 Changes to bundled **RStudio** themes.
 

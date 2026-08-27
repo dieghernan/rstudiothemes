@@ -27,8 +27,8 @@ A character string representing a valid UUID.
 ## Details
 
 This helper generates a
-[UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) for
-identifying generated theme versions.
+[UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) to
+identify generated theme versions.
 
 ## References
 
@@ -39,7 +39,7 @@ Davis KR, Peabody B and Leach P (2024). "Universally Unique Identifiers
 
 ## See also
 
-Helper functions:
+Package helpers:
 [`on_rstudio()`](https://dieghernan.github.io/rstudiothemes/reference/on_rstudio.md)
 
 ## Examples

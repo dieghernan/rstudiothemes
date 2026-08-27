@@ -15,7 +15,7 @@ on_rstudio()
 
 ## See also
 
-Helper functions:
+Package helpers:
 [`generate_uuid()`](https://dieghernan.github.io/rstudiothemes/reference/generate_uuid.md)
 
 ## Examples

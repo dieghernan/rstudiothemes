@@ -68,17 +68,13 @@ you quit.
 
 ## Functions
 
-- `install_rstudiothemes()`: Install RStudio themes.
+- `install_rstudiothemes()` installs bundled themes.
 
-- `remove_rstudiothemes()`: Remove bundled
-  [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
-  themes from RStudio.
+- `remove_rstudiothemes()` removes bundled themes.
 
-- `list_rstudiothemes()`: List installed or available themes.
+- `list_rstudiothemes()` lists installed or available themes.
 
-- `try_rstudiothemes()`: Preview bundled
-  [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
-  RStudio themes.
+- `try_rstudiothemes()` previews bundled themes.
 
 ## Bundled themes
 
@@ -133,6 +129,11 @@ includes RStudio themes based on the following editor themes:
 Aden-Buie G (2026). *rsthemes: Full Themes for RStudio v1.2+*. R package
 version 0.5.1, commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
 <https://github.com/gadenbuie/rsthemes>.
+
+## See also
+
+[`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_to_rstudio_theme.md)
+to convert and install a custom theme file.
 
 ## Author
 
