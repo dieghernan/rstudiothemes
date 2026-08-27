@@ -13,7 +13,7 @@
 
     <a class="navbar-brand me-2" href="../index.html"><img src="../apple-touch-icon.png" alt="rstudiothemes logo" height="34" width="34" class="d-inline-block me-1">rstudiothemes</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.1.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.1.2.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,8 +32,6 @@
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Online converter</h6></li>
     <li><a class="dropdown-item" href="../articles/shinyapp.html">Online converter</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="../articles/index.html">More articles...</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
@@ -57,9 +55,9 @@
     </div>
 
     <div class="section level2">
-      <h2 id="theme-converters">Theme converters<a class="anchor" aria-label="anchor" href="#theme-converters"></a></h2>
+      <h2 id="convert-theme-files">Convert theme files<a class="anchor" aria-label="anchor" href="#convert-theme-files"></a></h2>
 
-      <div class="section-desc"><p>Convert theme files to <strong>RStudio</strong> <code>.rstheme</code> files or convert themes between <strong>Visual Studio Code</strong>, <strong>Positron</strong> and <strong>TextMate</strong> formats.</p></div>
+      <div class="section-desc"><p>Create <strong>RStudio</strong> <code>.rstheme</code> files or translate themes between <strong>Visual Studio Code</strong>, <strong>Positron</strong> and <strong>TextMate</strong> formats.</p></div>
 
       <dl></dl></div><div class="section level2">
 
@@ -71,23 +69,23 @@
           <code><a href="convert_tm_to_vs_theme.html">convert_tm_to_vs_theme()</a></code> <code><a href="convert_tm_to_vs_theme.html">convert_tm_to_positron_theme()</a></code>
 
         </dt>
-        <dd>Convert a TextMate theme file to Visual Studio Code or Positron</dd>
+        <dd>Convert a <strong>TextMate</strong> theme file to <strong>Visual Studio Code</strong> or <strong>Positron</strong></dd>
 
         <dt>
 
           <code><a href="convert_to_rstudio_theme.html">convert_to_rstudio_theme()</a></code>
 
         </dt>
-        <dd>Convert a theme file to RStudio</dd>
+        <dd>Convert a theme file to <strong>RStudio</strong></dd>
 
         <dt>
 
           <code><a href="convert_vs_to_tm_theme.html">convert_vs_to_tm_theme()</a></code> <code><a href="convert_vs_to_tm_theme.html">convert_positron_to_tm_theme()</a></code>
 
         </dt>
-        <dd>Convert a Visual Studio Code or Positron theme file to TextMate</dd>
+        <dd>Convert a <strong>Visual Studio Code</strong> or <strong>Positron</strong> theme file to <strong>TextMate</strong></dd>
       </dl></div><div class="section level2">
-      <h2 id="bundled-themes">Bundled themes<a class="anchor" aria-label="anchor" href="#bundled-themes"></a></h2>
+      <h2 id="manage-bundled-themes">Manage bundled themes<a class="anchor" aria-label="anchor" href="#manage-bundled-themes"></a></h2>
 
       <div class="section-desc"><p>Install, list, preview or remove bundled <strong>RStudio</strong> themes.</p></div>
 
@@ -101,9 +99,9 @@
           <code><a href="rstudiothemes-actions.html">install_rstudiothemes()</a></code> <code><a href="rstudiothemes-actions.html">remove_rstudiothemes()</a></code> <code><a href="rstudiothemes-actions.html">list_rstudiothemes()</a></code> <code><a href="rstudiothemes-actions.html">try_rstudiothemes()</a></code>
 
         </dt>
-        <dd>Manage RStudio themes</dd>
+        <dd>Manage <strong>RStudio</strong> themes</dd>
       </dl></div><div class="section level2">
-      <h2 id="theme-readers">Theme readers<a class="anchor" aria-label="anchor" href="#theme-readers"></a></h2>
+      <h2 id="inspect-theme-files">Inspect theme files<a class="anchor" aria-label="anchor" href="#inspect-theme-files"></a></h2>
 
       <div class="section-desc"><p>Read <strong>Visual Studio Code</strong>, <strong>Positron</strong> and <strong>TextMate</strong> theme files as tabular data for inspection or conversion workflows.</p></div>
 
@@ -117,16 +115,16 @@
           <code><a href="read_tm_theme.html">read_tm_theme()</a></code>
 
         </dt>
-        <dd>Read and parse a TextMate theme file</dd>
+        <dd>Read and parse a <strong>TextMate</strong> theme file</dd>
 
         <dt>
 
           <code><a href="read_vs_theme.html">read_vs_theme()</a></code> <code><a href="read_vs_theme.html">read_positron_theme()</a></code>
 
         </dt>
-        <dd>Read and parse a Visual Studio Code or Positron theme file</dd>
+        <dd>Read and parse a <strong>Visual Studio Code</strong> or <strong>Positron</strong> theme file</dd>
       </dl></div><div class="section level2">
-      <h2 id="helper-functions">Helper functions<a class="anchor" aria-label="anchor" href="#helper-functions"></a></h2>
+      <h2 id="package-helpers">Package helpers<a class="anchor" aria-label="anchor" href="#package-helpers"></a></h2>
 
       <div class="section-desc"><p>Check the current IDE and generate theme identifiers.</p></div>
 
@@ -147,11 +145,11 @@
           <code><a href="on_rstudio.html">on_rstudio()</a></code>
 
         </dt>
-        <dd>Check whether the session is running in RStudio</dd>
+        <dd>Check whether the session is running in <strong>RStudio</strong></dd>
       </dl></div><div class="section level2">
-      <h2 id="package-overview">Package overview<a class="anchor" aria-label="anchor" href="#package-overview"></a></h2>
+      <h2 id="about-the-package">About the package<a class="anchor" aria-label="anchor" href="#about-the-package"></a></h2>
 
-      <div class="section-desc"><p>Learn what the package does and where to start.</p></div>
+      <div class="section-desc"><p>Package overview, authors and links.</p></div>
 
       <dl></dl></div><div class="section level2">
 

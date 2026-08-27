@@ -1,9 +1,9 @@
-# Convert a TextMate theme file to Visual Studio Code or Positron
+# Convert a **TextMate** theme file to **Visual Studio Code** or **Positron**
 
-Convert a `.tmTheme` file representing a TextMate theme and write the
-equivalent Visual Studio Code theme file (`.json`).
+Convert a `.tmTheme` file representing a **TextMate** theme and write
+the equivalent **Visual Studio Code** theme file (`.json`).
 
-`convert_tm_to_positron_theme()` is an alias of
+`convert_tm_to_positron_theme()` is an alias for
 `convert_tm_to_vs_theme()`.
 
 ## Usage
@@ -28,7 +28,7 @@ convert_tm_to_positron_theme(
 
 - path:
 
-  Path or URL to a TextMate theme file, in `.tmTheme` format.
+  Path or URL to a **TextMate** theme file in `.tmTheme` format.
 
 - outfile:
 
@@ -42,8 +42,8 @@ convert_tm_to_positron_theme(
 
 - author:
 
-  Theme author. If `NULL`, it attempts to extract the author from the
-  input file, otherwise it defaults to "rstudiothemes R package".
+  Theme author. If `NULL`, the author is extracted from the input file,
+  otherwise it defaults to "rstudiothemes R package".
 
 ## Value
 
@@ -52,7 +52,12 @@ file to `outfile` and returns the path.
 
 ## See also
 
-Theme converters:
+[`read_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_tm_theme.md)
+to inspect the input theme and
+[`read_vs_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_vs_theme.md)
+to inspect the converted theme.
+
+Theme file converters:
 [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_to_rstudio_theme.md),
 [`convert_vs_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_vs_to_tm_theme.md)
 
@@ -68,7 +73,7 @@ readLines(path) |>
   head(50) |>
   cat(sep = "\n")
 #> {
-#>   // Created with the R package rstudiothemes (c) dieghernan.
+#>   // Created with the rstudiothemes R package (c) dieghernan.
 #>   // https://github.com/dieghernan/rstudiothemes
 #>   "$schema": "vscode://schemas/color-theme",
 #>   "name": "Testing RStudioTheme",

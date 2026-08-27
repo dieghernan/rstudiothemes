@@ -11,7 +11,7 @@ Sources:
 - **TextMate** and **RStudio**:
   <https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html>
 
-When several source elements map to the same target element, mapping
+When several source elements map to the same target element, the mapping
 priority determines which value is used.
 
 | priority | tm | vscode | rstheme |

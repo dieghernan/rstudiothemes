@@ -3,14 +3,14 @@
 rstudiothemes. These functions are adapted from selected
 rsthemes functions.
 MIT License Copyright © rsthemes authors.
-Important: These functions only work in RStudio and return NULL when
-called from other IDEs. The exception is
+Important: These functions only work in RStudio and return NULL
+when called from other IDEs. The exception is
 list_rstudiothemes(list_installed = FALSE)."><meta property="og:description" content="Install, list, preview or remove the RStudio themes included in
 rstudiothemes. These functions are adapted from selected
 rsthemes functions.
 MIT License Copyright © rsthemes authors.
-Important: These functions only work in RStudio and return NULL when
-called from other IDEs. The exception is
+Important: These functions only work in RStudio and return NULL
+when called from other IDEs. The exception is
 list_rstudiothemes(list_installed = FALSE)."><meta property="og:image" content="https://dieghernan.github.io/rstudiothemes/logo.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@dhernangomez"><meta name="twitter:site" content="@dhernangomez"><meta name="robots" content="noindex"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-JE054GNWFF"></script><script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -25,7 +25,7 @@ list_rstudiothemes(list_installed = FALSE)."><meta property="og:image" content="
 
     <a class="navbar-brand me-2" href="../index.html"><img src="../apple-touch-icon.png" alt="rstudiothemes logo" height="34" width="34" class="d-inline-block me-1">rstudiothemes</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.1.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.1.2.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,8 +44,6 @@ list_rstudiothemes(list_installed = FALSE)."><meta property="og:image" content="
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Online converter</h6></li>
     <li><a class="dropdown-item" href="../articles/shinyapp.html">Online converter</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="../articles/index.html">More articles...</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
@@ -65,18 +63,18 @@ list_rstudiothemes(list_installed = FALSE)."><meta property="og:image" content="
 </nav><div class="container template-reference-topic">
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="../logo.png" class="logo" alt=""><h1>Manage RStudio themes</h1>
+      <img src="../logo.png" class="logo" alt=""><h1>Manage <strong>RStudio</strong> themes</h1>
       <small class="dont-index">Source: <a href="https://github.com/dieghernan/rstudiothemes/blob/main/R/rstudiothemes-actions.R" class="external-link"><code>R/rstudiothemes-actions.R</code></a></small>
       <div class="d-none name"><code>rstudiothemes-actions.Rd</code></div>
     </div>
 
     <div class="ref-description section level2">
-    <p>Install, list, preview or remove the RStudio themes included in
+    <p>Install, list, preview or remove the <strong>RStudio</strong> themes included in
 <a href="https://CRAN.R-project.org/package=rstudiothemes" class="external-link"><span class="pkg">rstudiothemes</span></a>. These functions are adapted from selected
 <span class="pkg">rsthemes</span> functions.
 <a href="https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md" class="external-link">MIT License</a> Copyright © rsthemes authors.</p>
-<p><strong>Important</strong>: These functions only work in RStudio and return <code>NULL</code> when
-called from other IDEs. The exception is
+<p><strong>Important</strong>: These functions only work in <strong>RStudio</strong> and return <code>NULL</code>
+when called from other IDEs. The exception is
 <code>list_rstudiothemes(list_installed = FALSE)</code>.</p>
     </div>
 
@@ -109,15 +107,15 @@ these themes are used and <code>style</code> is ignored.</p></dd>
 
 
 <dt id="arg-destdir">destdir<a class="anchor" aria-label="anchor" href="#arg-destdir"></a></dt>
-<dd><p>Optional directory for <code>.rstheme</code> files. By default, it uses
-<code><a href="https://rstudio.github.io/rstudioapi/reference/addTheme.html" class="external-link">rstudioapi::addTheme()</a></code>, but this argument allows installation to
-non-standard directories.</p></dd>
+<dd><p>Optional directory for <code>.rstheme</code> files. By default, themes
+are installed with <code><a href="https://rstudio.github.io/rstudioapi/reference/addTheme.html" class="external-link">rstudioapi::addTheme()</a></code>. Use this argument to copy
+themes to a non-standard directory instead.</p></dd>
 
 
 <dt id="arg-list-installed">list_installed<a class="anchor" aria-label="anchor" href="#arg-list-installed"></a></dt>
-<dd><p>Should the installed <a href="https://CRAN.R-project.org/package=rstudiothemes" class="external-link"><span class="pkg">rstudiothemes</span></a> themes
-be listed (default). If <code>FALSE</code>, the available themes in the
-<a href="https://CRAN.R-project.org/package=rstudiothemes" class="external-link"><span class="pkg">rstudiothemes</span></a> package are listed instead.</p></dd>
+<dd><p>If <code>TRUE</code> (default), list installed
+<a href="https://CRAN.R-project.org/package=rstudiothemes" class="external-link"><span class="pkg">rstudiothemes</span></a> themes. If <code>FALSE</code>, list themes available in the
+package.</p></dd>
 
 
 <dt id="arg-delay">delay<a class="anchor" aria-label="anchor" href="#arg-delay"></a></dt>
@@ -130,29 +128,29 @@ prompted to continue after each theme.</p></dd>
     <p><code>install_rstudiothemes()</code> and <code>remove_rstudiothemes()</code> return <code>NULL</code>
 invisibly.</p>
 <p><code>list_rstudiothemes()</code> returns a character vector of theme names.</p>
-<p><code>try_rstudiothemes()</code> has side effects: it starts a widget that allows users
-to try different themes. The widget can be exited by following the prompts,
-which restore the original theme.</p>
+<p><code>try_rstudiothemes()</code> has side effects. It cycles through bundled themes,
+lets you preview each one and restores your original theme when you quit.</p>
     </div>
     <div class="section level2">
     <h2 id="functions">Functions<a class="anchor" aria-label="anchor" href="#functions"></a></h2>
 
-<ul><li><p><code>install_rstudiothemes()</code>: Install RStudio themes.</p></li>
-<li><p><code>remove_rstudiothemes()</code>: Remove bundled <a href="https://CRAN.R-project.org/package=rstudiothemes" class="external-link"><span class="pkg">rstudiothemes</span></a> themes from RStudio.</p></li>
-<li><p><code>list_rstudiothemes()</code>: List installed or available themes.</p></li>
-<li><p><code>try_rstudiothemes()</code>: Preview each bundled <a href="https://CRAN.R-project.org/package=rstudiothemes" class="external-link"><span class="pkg">rstudiothemes</span></a> RStudio theme.</p></li>
+
+<ul><li><p><code>install_rstudiothemes()</code> installs bundled themes.</p></li>
+<li><p><code>remove_rstudiothemes()</code> removes bundled themes.</p></li>
+<li><p><code>list_rstudiothemes()</code> lists installed or available themes.</p></li>
+<li><p><code>try_rstudiothemes()</code> previews bundled themes.</p></li>
 </ul></div>
     <div class="section level2">
     <h2 id="bundled-themes">Bundled themes<a class="anchor" aria-label="anchor" href="#bundled-themes"></a></h2>
 
 
-<p><a href="https://CRAN.R-project.org/package=rstudiothemes" class="external-link"><span class="pkg">rstudiothemes</span></a> includes RStudio themes based on the following
+<p><a href="https://CRAN.R-project.org/package=rstudiothemes" class="external-link"><span class="pkg">rstudiothemes</span></a> includes <strong>RStudio</strong> themes based on the following
 editor themes:</p><ul><li><p>Ayu Theme by teabyii.</p></li>
 <li><p>Andromeda Theme by Eliver Lara.</p></li>
 <li><p>Catppuccin Theme by <a href="https://catppuccin.com/" class="external-link">Catppuccin</a>.</p></li>
 <li><p>Cobalt2 Theme by Wes Bos.</p></li>
-<li><p>CRAN Theme by dieghernan, based on the CRAN (R Project) website theme
-created with Pandoc.</p></li>
+<li><p>CRAN Theme by dieghernan, based on the <strong>CRAN</strong> (<strong>R Project</strong>) website
+theme created with <strong>Pandoc</strong>.</p></li>
 <li><p>Dracula Theme by <a href="https://draculatheme.com/" class="external-link">Dracula</a>.</p></li>
 <li><p>GitHub Dark and Light Themes by GitHub.</p></li>
 <li><p>JellyFish Theme by Pawel Borkar.</p></li>
@@ -172,9 +170,15 @@ created with Pandoc.</p></li>
 </ul></div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
-    <p>Aden-Buie G (2026). <em>rsthemes: Full Themes for RStudio v1.2+</em>. R package
-version 0.5.1, commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
+    <p>Aden-Buie G (2026). <em>rsthemes: Full Themes for <strong>RStudio</strong></em> v1.2+.
+<span class="pkg">rsthemes</span> version 0.5.1, commit
+48fc078f772e5e63669bc9773eabc8e9cdc7f699,
 <a href="https://github.com/gadenbuie/rsthemes" class="external-link">https://github.com/gadenbuie/rsthemes</a>.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
+    <div class="dont-index"><p><code><a href="convert_to_rstudio_theme.html">convert_to_rstudio_theme()</a></code> to convert and install a custom theme
+file.</p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>

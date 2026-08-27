@@ -10,26 +10,26 @@ generate_uuid(hint = NULL)
 
 ## Source
 
-Heavily based on an unreleased version of `ids::uuid()`.
+Adapted from an unreleased version of `uuid()` from
+[ids](https://CRAN.R-project.org/package=ids).
 
 ## Arguments
 
 - hint:
 
   Optional character string or object coercible with
-  [`as.character()`](https://rdrr.io/r/base/character.html). Used as a
+  [`as.character()`](https://rdrr.io/r/base/character.html), used as a
   random seed.
 
 ## Value
 
-A character string representing a valid UUID that can be validated with
-[`uuid::UUIDvalidate()`](https://rdrr.io/pkg/uuid/man/UUIDgenerate.html).
+A character string representing a valid UUID.
 
 ## Details
 
 This helper generates a
-[UUID](https://rdrr.io/pkg/uuid/man/UUIDgenerate.html) for identifying
-generated theme versions.
+[UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) to
+identify generated theme versions.
 
 ## References
 
@@ -40,7 +40,7 @@ Davis KR, Peabody B and Leach P (2024). "Universally Unique Identifiers
 
 ## See also
 
-Helper functions:
+Package helpers:
 [`on_rstudio()`](https://dieghernan.github.io/rstudiothemes/dev/reference/on_rstudio.md)
 
 ## Examples

@@ -44,7 +44,7 @@
 
     <a class="navbar-brand me-2" href="../index.html"><img src="../apple-touch-icon.png" alt="rstudiothemes logo" height="34" width="34" class="d-inline-block me-1">rstudiothemes</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.1.1.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.1.2.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,8 +65,6 @@
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Online converter</h6></li>
     <li><a class="dropdown-item" href="../articles/shinyapp.html">Online converter</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="../articles/index.html">More articles...</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -123,7 +121,7 @@
 <span><span class="co">#&gt; ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes.</span></span>
 <span><span class="co">#&gt; ℹ Use `rstudiothemes::try_rstudiothemes()` to preview installed themes.</span></span></code></pre></div>
 </div>
-<p>This adds popular themes such as Tokyo Night, Nord, Winter is Coming and Dracula to your <strong>RStudio</strong> themes directory.</p>
+<p>This adds popular themes such as Tokyo Night, Nord, Winter is Coming and Dracula2025 to your <strong>RStudio</strong> themes directory.</p>
 <p>To list the themes available in the package:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="downlit sourceCode r">
@@ -149,7 +147,7 @@
 </div>
 </section><section class="level2"><h2 id="trying-themes">Trying themes<a class="anchor" aria-label="anchor" href="#trying-themes"></a>
 </h2>
-<p>You can preview installed themes from an R session:</p>
+<p>You can preview installed themes from an <strong>R</strong> session:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/rstudiothemes-actions.html">try_rstudiothemes</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
@@ -170,7 +168,7 @@
 Figure 1: Screenshot of the Winter is Coming Dark Blue theme.
 </figcaption></figure>
 </div>
-<p>Alternatively, in <strong>RStudio</strong>, go to <strong>Tools &gt; Global Options &gt; Appearance &gt; Add</strong> and select the installed theme.</p>
+<p>Alternatively, in <strong>RStudio</strong>, choose <code>Tools &gt; Global Options &gt; Appearance &gt; Add</code> and select the installed theme.</p>
 </section><section class="level2"><h2 id="converting-your-own-themes">Converting your own themes<a class="anchor" aria-label="anchor" href="#converting-your-own-themes"></a>
 </h2>
 <p>You can convert a <strong>Visual Studio Code</strong>, <strong>Positron</strong> or <strong>TextMate</strong> theme file to an <strong>RStudio</strong> <code>.rstheme</code> file:</p>
@@ -188,7 +186,7 @@ Figure 1: Screenshot of the Winter is Coming Dark Blue theme.
 <ul>
 <li>Choose a <code>.json</code> theme file from <strong>Visual Studio Code</strong> or <strong>Positron</strong>.</li>
 <li>Convert and install it with <code><a href="../reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme()</a></code>.</li>
-<li>Apply it with <code><a href="https://rstudio.github.io/rstudioapi/reference/applyTheme.html" class="external-link">rstudioapi::applyTheme()</a></code> or the <strong>RStudio</strong> UI.</li>
+<li>Apply it with <code><a href="https://rstudio.github.io/rstudioapi/reference/applyTheme.html" class="external-link">rstudioapi::applyTheme()</a></code> or the <strong>RStudio</strong> interface.</li>
 </ul>
 <p>This workflow brings your preferred editor theme to <strong>RStudio</strong>.</p>
 </section><section class="level2"><h2 id="tips-and-tricks">Tips and tricks<a class="anchor" aria-label="anchor" href="#tips-and-tricks"></a>
@@ -196,7 +194,7 @@ Figure 1: Screenshot of the Winter is Coming Dark Blue theme.
 <ul>
 <li>List installed themes with <code>list_rstudiothemes(list_installed = TRUE)</code>.</li>
 <li>Filter themes by <code>"light"</code> or <code>"dark"</code> style.</li>
-<li>Use the Add Theme UI in the <strong>RStudio</strong> IDE <strong>Global Options &gt; Appearance &gt; Add</strong> to manually add <code>.rstheme</code> files that you have created or converted.</li>
+<li>Use the Add Theme interface in the <strong>RStudio</strong> IDE (<code>Global Options &gt; Appearance &gt; Add</code>) to manually add <code>.rstheme</code> files that you have created or converted.</li>
 </ul></section><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);

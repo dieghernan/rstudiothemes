@@ -1,9 +1,10 @@
-# Convert a Visual Studio Code or Positron theme file to TextMate
+# Convert a **Visual Studio Code** or **Positron** theme file to **TextMate**
 
-Convert a `.json` file representing a Visual Studio Code or Positron
-theme and write the equivalent TextMate theme file (`.tmTheme`).
+Convert a `.json` file representing a **Visual Studio Code** or
+**Positron** theme and write the equivalent **TextMate** theme file
+(`.tmTheme`).
 
-`convert_positron_to_tm_theme()` is an alias of
+`convert_positron_to_tm_theme()` is an alias for
 `convert_vs_to_tm_theme()`.
 
 ## Usage
@@ -28,8 +29,8 @@ convert_positron_to_tm_theme(
 
 - path:
 
-  Path or URL to a Visual Studio Code or Positron theme file, in `.json`
-  format.
+  Path or URL to a **Visual Studio Code** or **Positron** theme file in
+  `.json` format.
 
 - outfile:
 
@@ -43,8 +44,8 @@ convert_positron_to_tm_theme(
 
 - author:
 
-  Theme author. If `NULL`, it attempts to extract the author from the
-  input file, otherwise it defaults to "rstudiothemes R package".
+  Theme author. If `NULL`, the author is extracted from the input file,
+  otherwise it defaults to "rstudiothemes R package".
 
 ## Value
 
@@ -53,7 +54,12 @@ file to `outfile` and returns the file path.
 
 ## See also
 
-Theme converters:
+[`read_vs_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_vs_theme.md)
+to inspect the input theme and
+[`read_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_tm_theme.md)
+to inspect the converted theme.
+
+Theme file converters:
 [`convert_tm_to_vs_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_tm_to_vs_theme.md),
 [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_to_rstudio_theme.md)
 

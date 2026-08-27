@@ -1,13 +1,13 @@
-# Manage RStudio themes
+# Manage **RStudio** themes
 
-Install, list, preview or remove the RStudio themes included in
+Install, list, preview or remove the **RStudio** themes included in
 [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes). These
 functions are adapted from selected rsthemes functions. [MIT
 License](https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md)
 Copyright © rsthemes authors.
 
-**Important**: These functions only work in RStudio and return `NULL`
-when called from other IDEs. The exception is
+**Important**: These functions only work in **RStudio** and return
+`NULL` when called from other IDEs. The exception is
 `list_rstudiothemes(list_installed = FALSE)`.
 
 ## Usage
@@ -39,17 +39,16 @@ try_rstudiothemes(style = c("all", "dark", "light"), themes = NULL, delay = 0)
 
 - destdir:
 
-  Optional directory for `.rstheme` files. By default, it uses
-  [`rstudioapi::addTheme()`](https://rstudio.github.io/rstudioapi/reference/addTheme.html),
-  but this argument allows installation to non-standard directories.
+  Optional directory for `.rstheme` files. By default, themes are
+  installed with
+  [`rstudioapi::addTheme()`](https://rstudio.github.io/rstudioapi/reference/addTheme.html).
+  Use this argument to copy themes to a non-standard directory instead.
 
 - list_installed:
 
-  Should the installed
+  If `TRUE` (default), list installed
   [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
-  themes be listed (default). If `FALSE`, the available themes in the
-  [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
-  package are listed instead.
+  themes. If `FALSE`, list themes available in the package.
 
 - delay:
 
@@ -63,28 +62,24 @@ invisibly.
 
 `list_rstudiothemes()` returns a character vector of theme names.
 
-`try_rstudiothemes()` has side effects: it starts a widget that allows
-users to try different themes. The widget can be exited by following the
-prompts, which restore the original theme.
+`try_rstudiothemes()` has side effects. It cycles through bundled
+themes, lets you preview each one and restores your original theme when
+you quit.
 
 ## Functions
 
-- `install_rstudiothemes()`: Install RStudio themes.
+- `install_rstudiothemes()` installs bundled themes.
 
-- `remove_rstudiothemes()`: Remove bundled
-  [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
-  themes from RStudio.
+- `remove_rstudiothemes()` removes bundled themes.
 
-- `list_rstudiothemes()`: List installed or available themes.
+- `list_rstudiothemes()` lists installed or available themes.
 
-- `try_rstudiothemes()`: Preview each bundled
-  [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
-  RStudio theme.
+- `try_rstudiothemes()` previews bundled themes.
 
 ## Bundled themes
 
 [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
-includes RStudio themes based on the following editor themes:
+includes **RStudio** themes based on the following editor themes:
 
 - Ayu Theme by teabyii.
 
@@ -94,8 +89,8 @@ includes RStudio themes based on the following editor themes:
 
 - Cobalt2 Theme by Wes Bos.
 
-- CRAN Theme by dieghernan, based on the CRAN (R Project) website theme
-  created with Pandoc.
+- CRAN Theme by dieghernan, based on the **CRAN** (**R Project**)
+  website theme created with **Pandoc**.
 
 - Dracula Theme by [Dracula](https://draculatheme.com/).
 
@@ -131,9 +126,14 @@ includes RStudio themes based on the following editor themes:
 
 ## References
 
-Aden-Buie G (2026). *rsthemes: Full Themes for RStudio v1.2+*. R package
-version 0.5.1, commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
+Aden-Buie G (2026). *rsthemes: Full Themes for **RStudio*** v1.2+.
+rsthemes version 0.5.1, commit 48fc078f772e5e63669bc9773eabc8e9cdc7f699,
 <https://github.com/gadenbuie/rsthemes>.
+
+## See also
+
+[`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_to_rstudio_theme.md)
+to convert and install a custom theme file.
 
 ## Author
 

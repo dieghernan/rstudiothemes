@@ -2,6 +2,26 @@
 
 ## rstudiothemes (development version)
 
+- [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_to_rstudio_theme.md)
+  no longer tries to apply a theme after its installation fails. It also
+  builds inherited ACE scope styles reliably when a theme mixes
+  top-level and nested scopes.
+- [`install_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-actions.md)
+  now reports theme-copy failures instead of claiming that every
+  requested theme was installed.
+- [`install_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-actions.md),
+  `list_pkg_rstudiothemes()` and
+  [`try_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-actions.md)
+  now report actions and unmatched themes with safer, clearer **cli**
+  markup.
+- [`read_vs_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/read_vs_theme.md)
+  now preserves double slashes inside JSON strings when it removes
+  comments.
+
+## rstudiothemes 1.1.2
+
+CRAN release: 2026-06-19
+
 - Refreshed documentation to make package guidance, function references
   and maintenance notes clearer and more consistent.
 
@@ -49,17 +69,18 @@ Initial **CRAN** release.
 
 - Added DOI:
   [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18519155.svg)](https://doi.org/10.5281/zenodo.18519155).
-- Migrated vignettes and articles to Quarto
+- Migrated vignettes and articles to **Quarto**
   ([\#9](https://github.com/dieghernan/rstudiothemes/issues/9)).
-- Repository status is active: [![Project Status: Active - The project
-  has reached a stable, usable state and is being actively
+- At release time, repository status was active: [![Project Status:
+  Active - The project has reached a stable, usable state and is being
+  actively
   developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active).
 
 ### Bundled RStudio themes
 
-Updates to bundled RStudio themes.
+Changes to bundled **RStudio** themes.
 
-- Added mapping of indent guides to RStudio themes.
+- Added mapping of indent guides to **RStudio** themes.
 - Added `"Andromeda"` by Eliver Lara.
 - Added `"Catppuccin Latte"` and `"Catppuccin Mocha"` by
   <https://catppuccin.com/>.
@@ -71,6 +92,6 @@ Updates to bundled RStudio themes.
 
 ## rstudiothemes 0.1.0
 
-*Compatible with RStudio 2026.01.0+392 “Apple Blossom”.*
+Compatible with **RStudio** 2026.01.0+392 “Apple Blossom”.
 
 - First working version.

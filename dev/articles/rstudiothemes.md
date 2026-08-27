@@ -24,7 +24,7 @@ install_rstudiothemes()
 ```
 
 This adds popular themes such as Tokyo Night, Nord, Winter is Coming and
-Dracula to your **RStudio** themes directory.
+Dracula2025 to your **RStudio** themes directory.
 
 To list the themes available in the package:
 
@@ -53,7 +53,7 @@ list_rstudiothemes(list_installed = FALSE)
 
 ## Trying themes
 
-You can preview installed themes from an R session:
+You can preview installed themes from an **R** session:
 
 ``` r
 
@@ -75,8 +75,9 @@ rstudioapi::applyTheme("Winter is Coming Dark Blue")
 
 Figure 1: Screenshot of the Winter is Coming Dark Blue theme.
 
-Alternatively, in **RStudio**, go to **Tools \> Global Options \>
-Appearance \> Add** and select the installed theme.
+Alternatively, in **RStudio**, choose
+`Tools > Global Options > Appearance > Add` and select the installed
+theme.
 
 ## Converting your own themes
 
@@ -103,7 +104,7 @@ when `apply = TRUE`.
   [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_to_rstudio_theme.md).
 - Apply it with
   [`rstudioapi::applyTheme()`](https://rstudio.github.io/rstudioapi/reference/applyTheme.html)
-  or the **RStudio** UI.
+  or the **RStudio** interface.
 
 This workflow brings your preferred editor theme to **RStudio**.
 
@@ -112,6 +113,6 @@ This workflow brings your preferred editor theme to **RStudio**.
 - List installed themes with
   `list_rstudiothemes(list_installed = TRUE)`.
 - Filter themes by `"light"` or `"dark"` style.
-- Use the Add Theme UI in the **RStudio** IDE **Global Options \>
-  Appearance \> Add** to manually add `.rstheme` files that you have
-  created or converted.
+- Use the Add Theme interface in the **RStudio** IDE
+  (`Global Options > Appearance > Add`) to manually add `.rstheme` files
+  that you have created or converted.
