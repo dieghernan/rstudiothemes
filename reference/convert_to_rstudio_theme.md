@@ -1,13 +1,14 @@
-# Convert a theme file to RStudio
+# Convert a theme file to **RStudio**
 
-Convert a `.tmTheme` or `.json` file that defines a TextMate or Visual
-Studio Code theme and write the equivalent RStudio `.rstheme` file.
+Convert a `.tmTheme` or `.json` file that defines a **TextMate** or
+**Visual Studio Code** theme and write the equivalent **RStudio**
+`.rstheme` file.
 
 Optionally, the generated theme can be installed and applied to the
-RStudio IDE.
+**RStudio** IDE.
 
-**Important**: This function only works in RStudio. It returns `NULL`
-when called from other IDEs.
+**Important**: This function only works in **RStudio**. It returns
+`NULL` when called from other IDEs.
 
 ## Usage
 
@@ -27,8 +28,8 @@ convert_to_rstudio_theme(
 
 - path:
 
-  Path or URL to a TextMate theme file (`.tmTheme` format) or a Visual
-  Studio Code theme file (`.json` format).
+  Path or URL to a **TextMate** theme file (`.tmTheme` format) or a
+  **Visual Studio Code** theme file (`.json` format).
 
 - outfile:
 
@@ -66,15 +67,15 @@ convert_to_rstudio_theme(
 This function is called for its side effects. It writes a `.rstheme`
 file to `outfile` and returns the path. If `force` or `apply` is `TRUE`,
 it installs the theme. If `apply` is `TRUE`, it also applies the theme
-to your RStudio IDE.
+to your **RStudio** IDE.
 
 ## Details
 
-RStudio supports custom editor themes in two formats, `.tmTheme` and
-`.rstheme`. The `.tmTheme` format originated with TextMate and has
+**RStudio** supports custom editor themes in two formats, `.tmTheme` and
+`.rstheme`. The `.tmTheme` format originated with **TextMate** and has
 become a common theme format. [This tmTheme
 editor](https://tmtheme-editor.linuxbox.ninja/) hosts a large collection
-of `.tmTheme` files. The `.rstheme` format is specific to RStudio.
+of `.tmTheme` files. The `.rstheme` format is specific to **RStudio**.
 
 To switch editor themes, go to
 `Tools > Global Options > Appearance > Add` and use the editor theme

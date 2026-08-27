@@ -1,7 +1,7 @@
-# Check whether the session is running in RStudio
+# Check whether the session is running in **RStudio**
 
-Detect whether the current R session is running in RStudio. This is used
-to decide whether themes can be applied to the IDE.
+Detect whether the current R session is running in **RStudio**. This is
+used to decide whether themes can be applied to the IDE.
 
 ## Usage
 
@@ -11,7 +11,7 @@ on_rstudio()
 
 ## Value
 
-`TRUE` if running in RStudio, `FALSE` otherwise.
+`TRUE` if running in **RStudio**, `FALSE` otherwise.
 
 ## See also
 

@@ -1,7 +1,7 @@
-# Read and parse a TextMate theme file
+# Read and parse a **TextMate** theme file
 
-Read a `.tmTheme` XML file representing a TextMate or Sublime Text
-theme.
+Read a `.tmTheme` XML file representing a **TextMate** or **Sublime
+Text** theme.
 
 ## Usage
 
@@ -13,7 +13,7 @@ read_tm_theme(path)
 
 - path:
 
-  Path or URL to a TextMate theme file in `.tmTheme` format.
+  Path or URL to a **TextMate** theme file in `.tmTheme` format.
 
 ## Value
 
@@ -25,7 +25,7 @@ containing the theme data.
 [`convert_tm_to_vs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_tm_to_vs_theme.md)
 and
 [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_to_rstudio_theme.md)
-to convert TextMate themes.
+to convert **TextMate** themes.
 
 Theme file readers:
 [`read_vs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/read_vs_theme.md)

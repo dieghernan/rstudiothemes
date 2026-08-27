@@ -1,13 +1,13 @@
-# Manage RStudio themes
+# Manage **RStudio** themes
 
-Install, list, preview or remove the RStudio themes included in
+Install, list, preview or remove the **RStudio** themes included in
 [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes). These
 functions are adapted from selected rsthemes functions. [MIT
 License](https://github.com/gadenbuie/rsthemes/blob/main/LICENSE.md)
 Copyright © rsthemes authors.
 
-**Important**: These functions only work in RStudio and return `NULL`
-when called from other IDEs. The exception is
+**Important**: These functions only work in **RStudio** and return
+`NULL` when called from other IDEs. The exception is
 `list_rstudiothemes(list_installed = FALSE)`.
 
 ## Usage
@@ -79,7 +79,7 @@ you quit.
 ## Bundled themes
 
 [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
-includes RStudio themes based on the following editor themes:
+includes **RStudio** themes based on the following editor themes:
 
 - Ayu Theme by teabyii.
 
