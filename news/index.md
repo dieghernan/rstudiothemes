@@ -1,5 +1,26 @@
 # Changelog
 
+## rstudiothemes 1.2.0
+
+- Added `"Barbie Theme"` by Milene Toazza and `"Bluloco Light"` by Umut
+  Topuzoglu.
+- [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_to_rstudio_theme.md)
+  no longer tries to apply a theme after its installation fails. It also
+  builds inherited ACE scope styles reliably when a theme mixes
+  top-level and nested scopes.
+- [`install_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-actions.md)
+  now reports theme-copy failures instead of claiming that every
+  requested theme was installed.
+- [`install_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-actions.md),
+  [`list_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-actions.md)
+  and
+  [`try_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/reference/rstudiothemes-actions.md)
+  now report actions and unmatched themes with safer, clearer **cli**
+  markup.
+- [`read_vs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/read_vs_theme.md)
+  now preserves double slashes inside JSON strings when it removes
+  comments.
+
 ## rstudiothemes 1.1.2
 
 CRAN release: 2026-06-19

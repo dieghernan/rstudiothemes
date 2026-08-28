@@ -10,7 +10,8 @@ generate_uuid(hint = NULL)
 
 ## Source
 
-Adapted from an unreleased version of `ids::uuid()`.
+Adapted from an unreleased version of `uuid()` from
+[ids](https://CRAN.R-project.org/package=ids).
 
 ## Arguments
 

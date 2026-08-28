@@ -99,7 +99,7 @@ For more information, see
 - [`rstudioapi::addTheme()`](https://rstudio.github.io/rstudioapi/reference/addTheme.html)
   and
   [`rstudioapi::applyTheme()`](https://rstudio.github.io/rstudioapi/reference/applyTheme.html)
-  to install or apply an RStudio theme directly.
+  to install or apply an **RStudio** theme directly.
 
 Theme file converters:
 [`convert_tm_to_vs_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_tm_to_vs_theme.md),
