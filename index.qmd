@@ -78,7 +78,7 @@ to install them in your **RStudio** IDE:
 ```{r}
 rstudiothemes::install_rstudiothemes()
 
-#> ✔ Installed 36 themes
+#> ✔ Installed 38 themes
 #> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes.
 #> ℹ Use `rstudiothemes::try_rstudiothemes()` to preview installed themes.
 

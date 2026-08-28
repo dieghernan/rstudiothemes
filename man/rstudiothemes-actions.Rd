@@ -72,28 +72,35 @@ when called from other IDEs. The exception is
 \CRANpkg{rstudiothemes} includes \strong{RStudio} themes based on the following
 editor themes:
 \itemize{
-\item Ayu Theme by teabyii.
-\item Andromeda Theme by Eliver Lara.
-\item Catppuccin Theme by \href{https://catppuccin.com/}{Catppuccin}.
-\item Cobalt2 Theme by Wes Bos.
-\item CRAN Theme by dieghernan, based on the \strong{CRAN} (\strong{R Project}) website
-theme created with \strong{Pandoc}.
-\item Dracula Theme by \href{https://draculatheme.com/}{Dracula}.
-\item GitHub Dark and Light Themes by GitHub.
-\item JellyFish Theme by Pawel Borkar.
-\item Matcha Theme by Luca Falasco.
-\item Matrix Theme by UstymUkhman.
-\item Night Owl Dark and Light Themes (no italics) by Sarah Drasner.
-\item Nord Theme by Arctic Ice Studio.
-\item OKSolar Theme by dieghernan.
-\item One Dark Pro Theme by binaryify.
-\item Overflow Theme by dieghernan.
-\item Panda Theme by Panda Theme.
-\item Selenized Themes by dieghernan.
-\item Skeletor Syntax Theme by dieghernan.
-\item SynthWave '84 Theme by Robb Owen.
-\item Tokyo Night Theme by Enkia.
-\item Winter is Coming Theme by John Papa.
+\item Andromeda Theme by Eliver Lara (MIT License).
+\item Ayu Theme by teabyii (MIT License).
+\item \href{https://github.com/mihtoa/barbie-theme}{Barbie Theme} by Milene Toazza (MIT
+License).
+\item \href{https://github.com/uloco/theme-bluloco-light}{Bluloco Light Theme} by Umut
+Topuzoglu (GNU Lesser General Public License version 3).
+\item Catppuccin Theme by \href{https://catppuccin.com/}{Catppuccin} (MIT License).
+\item Cobalt2 Theme by Wes Bos (MIT License).
+\item CRAN Theme by dieghernan, based on the \strong{CRAN} (\strong{R Project}) website theme
+created with \strong{Pandoc} (MIT License).
+\item Dracula Theme by \href{https://draculatheme.com/}{Dracula} (MIT License).
+\item GitHub Dark and Light Themes by GitHub (MIT License).
+\item JellyFish Theme by Pawel Borkar (Apache License 2.0).
+\item Matcha Theme by Luca Falasco (MIT License).
+\item Matrix Theme by UstymUkhman (MIT License).
+\item Night Owl Dark and Light Themes (no italics) by Sarah Drasner (MIT License).
+\item Nord Theme by Arctic Ice Studio (MIT License).
+\item OKSolar Theme by dieghernan (MIT License).
+\item One Dark Pro Theme by binaryify (MIT License).
+\item Overflow Theme by dieghernan (MIT License).
+\item Panda Theme by Panda Theme (no license declared).
+\item Positron Dark and Light Themes by Posit Software, PBC (Elastic License 2.0
+with the Positron Education License Rider).
+\item Selenized Themes by dieghernan (MIT License).
+\item Skeletor Syntax Theme by dieghernan (MIT License).
+\item SynthWave '84 Theme by Robb Owen (MIT License).
+\item Tokyo Night Theme by Enkia (MIT License).
+\item Visual Studio Code Dark and Light Themes by Microsoft (MIT License).
+\item Winter is Coming Theme by John Papa (MIT License).
 }
 }
 

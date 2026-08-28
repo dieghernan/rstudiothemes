@@ -1,22 +1,29 @@
--   Ayu Theme by teabyii.
--   Andromeda Theme by Eliver Lara.
--   Catppuccin Theme by [Catppuccin](https://catppuccin.com/).
--   Cobalt2 Theme by Wes Bos.
--   CRAN Theme by dieghernan, based on the **CRAN** (**R Project**) website
-    theme created with **Pandoc**.
--   Dracula Theme by [Dracula](https://draculatheme.com/).
--   GitHub Dark and Light Themes by GitHub.
--   JellyFish Theme by Pawel Borkar.
--   Matcha Theme by Luca Falasco.
--   Matrix Theme by UstymUkhman.
--   Night Owl Dark and Light Themes (no italics) by Sarah Drasner.
--   Nord Theme by Arctic Ice Studio.
--   OKSolar Theme by dieghernan.
--   One Dark Pro Theme by binaryify.
--   Overflow Theme by dieghernan.
--   Panda Theme by Panda Theme.
--   Selenized Themes by dieghernan.
--   Skeletor Syntax Theme by dieghernan.
--   SynthWave '84 Theme by Robb Owen.
--   Tokyo Night Theme by Enkia.
--   Winter is Coming Theme by John Papa.
+- Andromeda Theme by Eliver Lara (MIT License).
+- Ayu Theme by teabyii (MIT License).
+- [Barbie Theme](https://github.com/mihtoa/barbie-theme) by Milene Toazza (MIT
+  License).
+- [Bluloco Light Theme](https://github.com/uloco/theme-bluloco-light) by Umut
+  Topuzoglu (GNU Lesser General Public License version 3).
+- Catppuccin Theme by [Catppuccin](https://catppuccin.com/) (MIT License).
+- Cobalt2 Theme by Wes Bos (MIT License).
+- CRAN Theme by dieghernan, based on the **CRAN** (**R Project**) website theme
+  created with **Pandoc** (MIT License).
+- Dracula Theme by [Dracula](https://draculatheme.com/) (MIT License).
+- GitHub Dark and Light Themes by GitHub (MIT License).
+- JellyFish Theme by Pawel Borkar (Apache License 2.0).
+- Matcha Theme by Luca Falasco (MIT License).
+- Matrix Theme by UstymUkhman (MIT License).
+- Night Owl Dark and Light Themes (no italics) by Sarah Drasner (MIT License).
+- Nord Theme by Arctic Ice Studio (MIT License).
+- OKSolar Theme by dieghernan (MIT License).
+- One Dark Pro Theme by binaryify (MIT License).
+- Overflow Theme by dieghernan (MIT License).
+- Panda Theme by Panda Theme (no license declared).
+- Positron Dark and Light Themes by Posit Software, PBC (Elastic License 2.0
+  with the Positron Education License Rider).
+- Selenized Themes by dieghernan (MIT License).
+- Skeletor Syntax Theme by dieghernan (MIT License).
+- SynthWave '84 Theme by Robb Owen (MIT License).
+- Tokyo Night Theme by Enkia (MIT License).
+- Visual Studio Code Dark and Light Themes by Microsoft (MIT License).
+- Winter is Coming Theme by John Papa (MIT License).

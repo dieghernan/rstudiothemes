@@ -48,8 +48,36 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
+# Barbie -----
+url <- paste0(
+  "https://raw.githubusercontent.com/mihtoa/barbie-theme/refs/heads/",
+  "main/themes/barbie-theme-color-theme.json"
+)
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/Barbie_Theme.rstheme",
+  name = "Barbie Theme",
+  apply = TRUE,
+  force = TRUE,
+  output_style = "compact"
+)
+
+# Bluloco Light -----
+url <- paste0(
+  "https://raw.githubusercontent.com/uloco/theme-bluloco-light/refs/heads/",
+  "main/themes/bluloco-light-color-theme.json"
+)
+dd <- convert_to_rstudio_theme(
+  url,
+  "inst/rsthemes/Bluloco_Light.rstheme",
+  name = "Bluloco Light",
+  apply = TRUE,
+  force = TRUE,
+  output_style = "compact"
+)
+
 # Catppuccin (build) -----
-# source("./data-raw/compile_catppucin.R")
+source("./data-raw/compile_catppucin.R")
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/mocha.json",
   "inst/rsthemes/Catppuccin_Mocha.rstheme",
@@ -105,7 +133,7 @@ dd <- convert_to_rstudio_theme(
 )
 
 # Dracula (build) --------------------------------------------------------
-# source("./data-raw/compile_dracula.R")
+source("./data-raw/compile_dracula.R")
 # Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   "./data-raw/vscode_themes/dracula.json",
@@ -117,7 +145,7 @@ dd <- convert_to_rstudio_theme(
 )
 
 # GitHub (build) ---------------------------------------------------------
-# source("./data-raw/compile_github.R")
+source("./data-raw/compile_github.R")
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/dark.json",
   "inst/rsthemes/GitHub_Dark.rstheme",
@@ -506,10 +534,15 @@ dd <- convert_to_rstudio_theme(
 
 # Create the distribution archive. -----
 allt <- list.files("inst/rsthemes/", full.names = TRUE)
+licenses <- list.files("inst/licenses/", full.names = TRUE)
 
 unlink("pkgdown/assets/dist/rstudiothemes.zip", force = TRUE)
 
-zip::zip("pkgdown/assets/dist/rstudiothemes.zip", allt, mode = "cherry-pick")
+zip::zip(
+  "pkgdown/assets/dist/rstudiothemes.zip",
+  c(allt, licenses),
+  mode = "cherry-pick"
+)
 
 # Remove and reinstall the themes.
 devtools::load_all()
