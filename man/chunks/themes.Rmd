@@ -19,8 +19,8 @@
 - One Dark Pro Theme by binaryify (MIT License).
 - Overflow Theme by dieghernan (MIT License).
 - Panda Theme by Panda Theme (no license declared).
-- Positron Dark and Light Themes by Posit Software, PBC (Elastic License 2.0
-  with the Positron Education License Rider).
+- Positron Dark and Light Themes by dieghernan, inspired by the **Positron IDE**
+  (MIT License).
 - Selenized Themes by dieghernan (MIT License).
 - Skeletor Syntax Theme by dieghernan (MIT License).
 - SynthWave '84 Theme by Robb Owen (MIT License).

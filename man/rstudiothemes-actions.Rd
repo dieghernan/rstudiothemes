@@ -93,8 +93,8 @@ created with \strong{Pandoc} (MIT License).
 \item One Dark Pro Theme by binaryify (MIT License).
 \item Overflow Theme by dieghernan (MIT License).
 \item Panda Theme by Panda Theme (no license declared).
-\item Positron Dark and Light Themes by Posit Software, PBC (Elastic License 2.0
-with the Positron Education License Rider).
+\item Positron Dark and Light Themes by dieghernan, inspired by the \strong{Positron IDE}
+(MIT License).
 \item Selenized Themes by dieghernan (MIT License).
 \item Skeletor Syntax Theme by dieghernan (MIT License).
 \item SynthWave '84 Theme by Robb Owen (MIT License).

@@ -1,4 +1,4 @@
-# rstudiothemes (development version)
+# rstudiothemes 1.2.0
 
 - Added `"Barbie Theme"` by Milene Toazza and `"Bluloco Light"` by Umut
   Topuzoglu.

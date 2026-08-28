@@ -2,6 +2,13 @@
 
 devtools::load_all()
 
+add_theme_notice <- function(path, notice) {
+  theme <- readLines(path, warn = FALSE)
+  theme <- append(theme, notice, after = 3L)
+  writeLines(theme, path, useBytes = TRUE)
+  invisible(path)
+}
+
 # Save the current theme.
 current_theme <- rstudioapi::getThemeInfo()$editor
 
@@ -74,6 +81,15 @@ dd <- convert_to_rstudio_theme(
   apply = TRUE,
   force = TRUE,
   output_style = "compact"
+)
+
+add_theme_notice(
+  "inst/rsthemes/Bluloco_Light.rstheme",
+  c(
+    "/* Derived from Bluloco Light by Umut Topuzoglu. */",
+    "/* Converted and modified for rstudiothemes in 2026. */",
+    "/* LGPL-3.0; see licenses/Bluloco-Light-LICENSE and GPL-3. */"
+  )
 )
 
 # Catppuccin (build) -----
@@ -177,6 +193,15 @@ dd <- convert_to_rstudio_theme(
   apply = TRUE,
   force = TRUE,
   output_style = "compact"
+)
+
+add_theme_notice(
+  "inst/rsthemes/JellyFish_Theme.rstheme",
+  c(
+    "/* Derived from JellyFish by Pawel Borkar. */",
+    "/* Converted and modified for rstudiothemes in 2026. */",
+    "/* Apache-2.0; see licenses/JellyFish-LICENSE and COPYRIGHTS. */"
+  )
 )
 
 # Matcha -------------------------------------------------------------------
@@ -500,6 +525,17 @@ dd <- convert_to_rstudio_theme(
   output_style = "compact"
 )
 
+positron_notice <- c(
+  "/* Original rstudiothemes work inspired by the Positron IDE. */",
+  "/* Copyright (c) 2026 Diego Hernangómez; licensed under MIT. */",
+  "/* No Positron source code is distributed in this theme. */"
+)
+
+add_theme_notice(
+  "inst/rsthemes/Positron_Dark.rstheme",
+  positron_notice
+)
+
 # Generate the RStudio theme.
 dd <- convert_to_rstudio_theme(
   "data-raw/vscode_themes/positron_light.json",
@@ -508,6 +544,11 @@ dd <- convert_to_rstudio_theme(
   force = TRUE,
   apply = TRUE,
   output_style = "compact"
+)
+
+add_theme_notice(
+  "inst/rsthemes/Positron_Light.rstheme",
+  positron_notice
 )
 
 # VSCode -------------------------------------------------------------------
@@ -535,14 +576,38 @@ dd <- convert_to_rstudio_theme(
 # Create the distribution archive. -----
 allt <- list.files("inst/rsthemes/", full.names = TRUE)
 licenses <- list.files("inst/licenses/", full.names = TRUE)
+copyrights <- "inst/COPYRIGHTS"
+gpl3 <- file.path(R.home("share"), "licenses", "GPL-3")
+zipfile <- normalizePath(
+  "pkgdown/assets/dist/rstudiothemes.zip",
+  winslash = "/",
+  mustWork = FALSE
+)
+archive_root <- tempfile("rstudiothemes-")
+archive_licenses <- file.path(archive_root, "licenses")
 
-unlink("pkgdown/assets/dist/rstudiothemes.zip", force = TRUE)
+dir.create(dirname(zipfile), recursive = TRUE, showWarnings = FALSE)
+dir.create(archive_root)
+dir.create(archive_licenses)
+
+copied <- c(
+  file.copy(allt, archive_root),
+  file.copy(licenses, archive_licenses),
+  file.copy(copyrights, archive_root),
+  file.copy(gpl3, archive_licenses)
+)
+stopifnot(all(copied))
+
+unlink(zipfile, force = TRUE)
 
 zip::zip(
-  "pkgdown/assets/dist/rstudiothemes.zip",
-  c(allt, licenses),
-  mode = "cherry-pick"
+  zipfile,
+  list.files(archive_root, recursive = TRUE),
+  root = archive_root,
+  mode = "mirror"
 )
+
+unlink(archive_root, recursive = TRUE, force = TRUE)
 
 # Remove and reinstall the themes.
 devtools::load_all()

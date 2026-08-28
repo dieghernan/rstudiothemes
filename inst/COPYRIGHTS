@@ -1,0 +1,184 @@
+rstudiothemes copyright and licensing information
+=================================================
+
+Package code
+------------
+
+Copyright (c) 2026 Diego Hernangómez
+
+The R code, documentation and other original material created for the
+rstudiothemes package are licensed under the MIT License, as stated in the
+package DESCRIPTION and LICENSE files.
+
+Bundled themes
+--------------
+
+The files under rsthemes/ include modified conversions of themes created by
+third parties and original themes inspired by other products. Unless identified
+as original work below, conversion to the RStudio theme format does not replace
+or supersede the copyright or license of the upstream work. Each converted
+theme remains subject to the corresponding upstream license listed below. Full
+license texts and additional source information are provided under licenses/.
+
+The converted files were generated or modified for rstudiothemes in 2026.
+
+Files: rsthemes/Andromeda.rstheme
+Upstream: Andromeda
+Copyright: Copyright (c) 2017 <eliverlara@gmail.com>
+License: MIT
+License file: licenses/Andromeda-LICENSE
+
+Files: rsthemes/Ayu_Dark.rstheme, rsthemes/Ayu_Light.rstheme
+Upstream: Ayu for Visual Studio Code
+Copyright: Copyright (c) 2016 Ike Kurghinyan
+License: MIT
+License file: licenses/Ayu-LICENSE
+
+Files: rsthemes/Barbie_Theme.rstheme
+Upstream: Barbie Theme
+Copyright: Copyright (c) 2023 Milene Toazza
+License: MIT
+License file: licenses/Barbie-Theme-LICENSE
+
+Files: rsthemes/Bluloco_Light.rstheme
+Upstream: Bluloco Light
+Attribution: Umut Topuzoglu
+License: LGPL-3.0
+License file: licenses/Bluloco-Light-LICENSE
+Additional license: The standalone theme archive also includes GPL-3, whose
+ terms are incorporated by LGPL-3. The installed R distribution provides its
+ standard GPL-3 text under share/licenses/GPL-3.
+
+Files: rsthemes/Catppuccin_Latte.rstheme,
+ rsthemes/Catppuccin_Mocha.rstheme
+Upstream: Catppuccin for Visual Studio Code
+Copyright: Copyright (c) 2021 Catppuccin
+License: MIT
+License file: licenses/Catppuccin-LICENSE
+
+Files: rsthemes/Cobalt2.rstheme
+Upstream: Cobalt2
+Copyright: Copyright (c) 2018 Wes Bos, Roberto Achar
+License: MIT
+License file: licenses/Cobalt2-LICENSE
+
+Files: rsthemes/CRAN.rstheme
+Upstream: pretty-themes
+Copyright: Copyright (c) 2025 Diego H.
+License: MIT
+License file: licenses/CRAN-Theme-LICENSE
+
+Files: rsthemes/Dracula2025.rstheme
+Upstream: Dracula for Visual Studio Code
+Copyright: Copyright (c) 2016 Dracula Theme
+License: MIT
+License file: licenses/Dracula-LICENSE
+
+Files: rsthemes/GitHub_Dark.rstheme, rsthemes/GitHub_Light.rstheme
+Upstream: GitHub themes for Visual Studio Code
+Copyright: Copyright (c) 2020 Primer
+License: MIT
+License file: licenses/GitHub-Themes-LICENSE
+
+Files: rsthemes/JellyFish_Theme.rstheme
+Upstream: JellyFish
+Copyright: Copyright 2021-23 Pawel Borkar
+License: Apache-2.0
+License file: licenses/JellyFish-LICENSE
+
+Files: rsthemes/Matcha.rstheme
+Upstream: Matcha
+Copyright: Copyright (c) 2019 Luca Falasco
+License: MIT
+License file: licenses/Matcha-LICENSE
+
+Files: rsthemes/Matrix.rstheme
+Upstream: Matrix Theme
+Copyright: Copyright (c) 2020-2024 Ustym Ukhman
+License: MIT
+License file: licenses/Matrix-LICENSE
+
+Files: rsthemes/Night_Owl_Dark.rstheme,
+ rsthemes/Night_Owl_Light.rstheme
+Upstream: Night Owl
+Copyright: Copyright (c) 2018 Sarah Drasner
+License: MIT
+License file: licenses/Night-Owl-LICENSE
+
+Files: rsthemes/Nord.rstheme
+Upstream: Nord for Visual Studio Code
+Copyright: Copyright (c) 2016-present Sven Greb
+License: MIT
+License file: licenses/Nord-LICENSE
+
+Files: rsthemes/OKSolar_Dark.rstheme, rsthemes/OKSolar_Light.rstheme,
+ rsthemes/OKSolar_Sky.rstheme
+Upstream: OKSolar
+Copyright: Copyright (c) 2025 Diego H.
+License: MIT
+License file: licenses/OKSolar-LICENSE
+
+Files: rsthemes/One_Dark_Pro.rstheme
+Upstream: One Dark Pro
+Copyright: Copyright (c) 2013-2022 Binaryify
+License: MIT
+License file: licenses/One-Dark-Pro-LICENSE
+
+Files: rsthemes/Overflow_Dark.rstheme, rsthemes/Overflow_Light.rstheme
+Upstream: Overflow
+Copyright: Copyright (c) 2025 Diego H.
+License: MIT
+License file: licenses/Overflow-LICENSE
+
+Files: rsthemes/Panda_Syntax.rstheme
+Upstream: Panda Syntax
+License: No license declared and no redistribution permission identified
+Notice file: licenses/Panda-Syntax-NO-LICENSE.md
+
+Files: rsthemes/Positron_Dark.rstheme, rsthemes/Positron_Light.rstheme
+Description: Original rstudiothemes work inspired by the visual appearance of
+ the Positron IDE. No Positron source code is distributed in these themes.
+Copyright: Copyright (c) 2026 Diego Hernangómez
+License: MIT
+License file: licenses/rstudiothemes-MIT-LICENSE
+
+Files: rsthemes/Selenized_Dark.rstheme, rsthemes/Selenized_Light.rstheme
+Upstream: Selenized
+Copyright: Copyright (c) 2025 Diego H.
+License: MIT
+License file: licenses/Selenized-LICENSE
+
+Files: rsthemes/Skeletor_Syntax.rstheme
+Upstream: Skeletor Syntax
+Copyright: Copyright (c) 2025 Diego H.
+License: MIT
+License file: licenses/Skeletor-Syntax-LICENSE
+
+Files: rsthemes/SynthWave84.rstheme
+Upstream: SynthWave '84
+Copyright: Copyright (c) 2019 Robb Owen
+License: MIT
+License file: licenses/SynthWave84-LICENSE
+
+Files: rsthemes/Tokyo_Night.rstheme, rsthemes/Tokyo_Night_Light.rstheme,
+ rsthemes/Tokyo_Night_Storm.rstheme
+Upstream: Tokyo Night
+Copyright: Copyright (c) 2018-present Enkia
+License: MIT
+License file: licenses/Tokyo-Night-LICENSE
+
+Files: rsthemes/VSCode_Dark.rstheme, rsthemes/VSCode_Light.rstheme
+Upstream: Visual Studio Code
+Copyright: Copyright (c) 2015-present Microsoft Corporation
+License: MIT
+License file: licenses/VSCode-LICENSE
+
+Files: rsthemes/Winter_is_Coming_Dark_Blue.rstheme,
+ rsthemes/Winter_is_Coming_Light.rstheme
+Upstream: Winter is Coming
+Copyright: Copyright (c) 2015-2017 JohnPapa.net, LLC
+License: MIT
+License file: licenses/Winter-is-Coming-LICENSE
+
+For upstream repository URLs and a compact mapping of all bundled themes, see
+licenses/THEME-LICENSES.md.

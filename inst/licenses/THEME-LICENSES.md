@@ -1,9 +1,10 @@
 # Bundled theme licenses
 
-The bundled RStudio themes are derived from third-party projects and remain
+The bundled RStudio themes include conversions derived from third-party
+projects and original themes inspired by other products. Derived themes remain
 available under their original licenses. This table maps every bundled
-`.rstheme` file to its upstream project and the license text distributed with
-this package.
+`.rstheme` file to its source or inspiration and the applicable license text
+distributed with this package.
 
 | Bundled theme files | Upstream project | License |
 |---|---|---|
@@ -25,7 +26,7 @@ this package.
 | `One_Dark_Pro.rstheme` | [One Dark Pro](https://github.com/Binaryify/OneDark-Pro) | [MIT](One-Dark-Pro-LICENSE) |
 | `Overflow_Dark.rstheme`, `Overflow_Light.rstheme` | [Overflow](https://github.com/dieghernan/overflow-theme) | [MIT](Overflow-LICENSE) |
 | `Panda_Syntax.rstheme` | [Panda Syntax](https://github.com/siamak/panda-syntax-vscode) | [No license declared](Panda-Syntax-NO-LICENSE.md) |
-| `Positron_Dark.rstheme`, `Positron_Light.rstheme` | [Positron](https://github.com/posit-dev/positron) | [Elastic License 2.0 with Positron Education License Rider](Positron-LICENSE) |
+| `Positron_Dark.rstheme`, `Positron_Light.rstheme` | Original rstudiothemes work inspired by the [Positron IDE](https://positron.posit.co/) | [MIT](rstudiothemes-MIT-LICENSE) |
 | `Selenized_Dark.rstheme`, `Selenized_Light.rstheme` | [Selenized](https://github.com/dieghernan/selenized-theme) | [MIT](Selenized-LICENSE) |
 | `Skeletor_Syntax.rstheme` | [Skeletor Syntax](https://github.com/dieghernan/skeletor-syntax) | [MIT](Skeletor-Syntax-LICENSE) |
 | `SynthWave84.rstheme` | [SynthWave '84](https://github.com/robb0wen/synthwave-vscode) | [MIT](SynthWave84-LICENSE) |
@@ -37,3 +38,9 @@ The license files are verbatim copies retrieved from the upstream repositories
 on August 28, 2026. The Panda Syntax repository and its published Visual Studio
 Code extension did not contain a license file or declare a license in
 `package.json` on that date.
+
+The rstudiothemes MIT license applies to the original Positron-inspired themes;
+it is not an upstream license retrieved from the Positron project.
+
+The standalone theme archive also includes the GPL-3 text incorporated by the
+LGPL-3 license that applies to Bluloco Light.
