@@ -81,48 +81,61 @@ you quit.
 [rstudiothemes](https://CRAN.R-project.org/package=rstudiothemes)
 includes **RStudio** themes based on the following editor themes:
 
-- Ayu Theme by teabyii.
+- Andromeda Theme by Eliver Lara (MIT License).
 
-- Andromeda Theme by Eliver Lara.
+- Ayu Theme by teabyii (MIT License).
 
-- Catppuccin Theme by [Catppuccin](https://catppuccin.com/).
+- [Barbie Theme](https://github.com/mihtoa/barbie-theme) by Milene
+  Toazza (MIT License).
 
-- Cobalt2 Theme by Wes Bos.
+- [Bluloco Light Theme](https://github.com/uloco/theme-bluloco-light) by
+  Umut Topuzoglu (GNU Lesser General Public License version 3).
+
+- Catppuccin Theme by [Catppuccin](https://catppuccin.com/) (MIT
+  License).
+
+- Cobalt2 Theme by Wes Bos (MIT License).
 
 - CRAN Theme by dieghernan, based on the **CRAN** (**R Project**)
-  website theme created with **Pandoc**.
+  website theme created with **Pandoc** (MIT License).
 
-- Dracula Theme by [Dracula](https://draculatheme.com/).
+- Dracula Theme by [Dracula](https://draculatheme.com/) (MIT License).
 
-- GitHub Dark and Light Themes by GitHub.
+- GitHub Dark and Light Themes by GitHub (MIT License).
 
-- JellyFish Theme by Pawel Borkar.
+- JellyFish Theme by Pawel Borkar (Apache License 2.0).
 
-- Matcha Theme by Luca Falasco.
+- Matcha Theme by Luca Falasco (MIT License).
 
-- Matrix Theme by UstymUkhman.
+- Matrix Theme by UstymUkhman (MIT License).
 
-- Night Owl Dark and Light Themes (no italics) by Sarah Drasner.
+- Night Owl Dark and Light Themes (no italics) by Sarah Drasner (MIT
+  License).
 
-- Nord Theme by Arctic Ice Studio.
+- Nord Theme by Arctic Ice Studio (MIT License).
 
-- OKSolar Theme by dieghernan.
+- OKSolar Theme by dieghernan (MIT License).
 
-- One Dark Pro Theme by binaryify.
+- One Dark Pro Theme by binaryify (MIT License).
 
-- Overflow Theme by dieghernan.
+- Overflow Theme by dieghernan (MIT License).
 
-- Panda Theme by Panda Theme.
+- Panda Theme by Panda Theme (no license declared).
 
-- Selenized Themes by dieghernan.
+- Positron Dark and Light Themes by Posit Software, PBC (Elastic License
+  2.0 with the Positron Education License Rider).
 
-- Skeletor Syntax Theme by dieghernan.
+- Selenized Themes by dieghernan (MIT License).
 
-- SynthWave '84 Theme by Robb Owen.
+- Skeletor Syntax Theme by dieghernan (MIT License).
 
-- Tokyo Night Theme by Enkia.
+- SynthWave '84 Theme by Robb Owen (MIT License).
 
-- Winter is Coming Theme by John Papa.
+- Tokyo Night Theme by Enkia (MIT License).
+
+- Visual Studio Code Dark and Light Themes by Microsoft (MIT License).
+
+- Winter is Coming Theme by John Papa (MIT License).
 
 ## References
 
@@ -144,21 +157,22 @@ Garrick Aden-Buie <https://github.com/gadenbuie>
 ``` r
 list_rstudiothemes(list_installed = FALSE)
 #>  [1] "Andromeda"                  "ayu Dark"                  
-#>  [3] "ayu Light"                  "CRAN"                      
-#>  [5] "Catppuccin Latte"           "Catppuccin Mocha"          
-#>  [7] "cobalt2"                    "Dracula2025"               
-#>  [9] "GitHub Dark"                "GitHub Light"              
-#> [11] "JellyFish Theme"            "Matcha"                    
-#> [13] "Matrix"                     "Night Owl"                 
-#> [15] "Night Owl Light"            "Nord"                      
-#> [17] "OKSolar Dark"               "OKSolar Light"             
-#> [19] "OKSolar Sky"                "One Dark Pro"              
-#> [21] "Overflow Dark"              "Overflow Light"            
-#> [23] "Panda Syntax"               "Positron Dark"             
-#> [25] "Positron Light"             "Selenized Dark"            
-#> [27] "Selenized Light"            "Skeletor Syntax"           
-#> [29] "SynthWave 84"               "Tokyo Night"               
-#> [31] "Tokyo Night Light"          "Tokyo Night Storm"         
-#> [33] "VSCode Dark"                "VSCode Light"              
-#> [35] "Winter is Coming Dark Blue" "Winter is Coming Light"    
+#>  [3] "ayu Light"                  "Barbie Theme"              
+#>  [5] "Bluloco Light"              "CRAN"                      
+#>  [7] "Catppuccin Latte"           "Catppuccin Mocha"          
+#>  [9] "cobalt2"                    "Dracula2025"               
+#> [11] "GitHub Dark"                "GitHub Light"              
+#> [13] "JellyFish Theme"            "Matcha"                    
+#> [15] "Matrix"                     "Night Owl"                 
+#> [17] "Night Owl Light"            "Nord"                      
+#> [19] "OKSolar Dark"               "OKSolar Light"             
+#> [21] "OKSolar Sky"                "One Dark Pro"              
+#> [23] "Overflow Dark"              "Overflow Light"            
+#> [25] "Panda Syntax"               "Positron Dark"             
+#> [27] "Positron Light"             "Selenized Dark"            
+#> [29] "Selenized Light"            "Skeletor Syntax"           
+#> [31] "SynthWave 84"               "Tokyo Night"               
+#> [33] "Tokyo Night Light"          "Tokyo Night Storm"         
+#> [35] "VSCode Dark"                "VSCode Light"              
+#> [37] "Winter is Coming Dark Blue" "Winter is Coming Light"    
 ```

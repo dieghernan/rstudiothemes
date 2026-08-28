@@ -18,7 +18,7 @@ To install all bundled **RStudio** themes:
 
 install_rstudiothemes()
 
-#> ✔ Installed 36 themes
+#> ✔ Installed 38 themes
 #> ℹ Use `rstudiothemes::list_rstudiothemes()` to list installed themes.
 #> ℹ Use `rstudiothemes::try_rstudiothemes()` to preview installed themes.
 ```
@@ -32,23 +32,24 @@ To list the themes available in the package:
 
 list_rstudiothemes(list_installed = FALSE)
 #>  [1] "Andromeda"                  "ayu Dark"                  
-#>  [3] "ayu Light"                  "Catppuccin Latte"          
-#>  [5] "Catppuccin Mocha"           "cobalt2"                   
-#>  [7] "CRAN"                       "Dracula2025"               
-#>  [9] "GitHub Dark"                "GitHub Light"              
-#> [11] "JellyFish Theme"            "Matcha"                    
-#> [13] "Matrix"                     "Night Owl"                 
-#> [15] "Night Owl Light"            "Nord"                      
-#> [17] "OKSolar Dark"               "OKSolar Light"             
-#> [19] "OKSolar Sky"                "One Dark Pro"              
-#> [21] "Overflow Dark"              "Overflow Light"            
-#> [23] "Panda Syntax"               "Positron Dark"             
-#> [25] "Positron Light"             "Selenized Dark"            
-#> [27] "Selenized Light"            "Skeletor Syntax"           
-#> [29] "SynthWave 84"               "Tokyo Night Light"         
-#> [31] "Tokyo Night Storm"          "Tokyo Night"               
-#> [33] "VSCode Dark"                "VSCode Light"              
-#> [35] "Winter is Coming Dark Blue" "Winter is Coming Light"
+#>  [3] "ayu Light"                  "Barbie Theme"              
+#>  [5] "Bluloco Light"              "Catppuccin Latte"          
+#>  [7] "Catppuccin Mocha"           "cobalt2"                   
+#>  [9] "CRAN"                       "Dracula2025"               
+#> [11] "GitHub Dark"                "GitHub Light"              
+#> [13] "JellyFish Theme"            "Matcha"                    
+#> [15] "Matrix"                     "Night Owl"                 
+#> [17] "Night Owl Light"            "Nord"                      
+#> [19] "OKSolar Dark"               "OKSolar Light"             
+#> [21] "OKSolar Sky"                "One Dark Pro"              
+#> [23] "Overflow Dark"              "Overflow Light"            
+#> [25] "Panda Syntax"               "Positron Dark"             
+#> [27] "Positron Light"             "Selenized Dark"            
+#> [29] "Selenized Light"            "Skeletor Syntax"           
+#> [31] "SynthWave 84"               "Tokyo Night Light"         
+#> [33] "Tokyo Night Storm"          "Tokyo Night"               
+#> [35] "VSCode Dark"                "VSCode Light"              
+#> [37] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
 
 ## Trying themes

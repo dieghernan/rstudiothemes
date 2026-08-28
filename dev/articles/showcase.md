@@ -38,6 +38,16 @@ Light](screenshots/ayulight.png)](https://dieghernan.github.io/rstudiothemes/dev
 
 ayu Light
 
+[![Barbie
+Theme](screenshots/barbietheme.png)](https://dieghernan.github.io/rstudiothemes/dev/articles/screenshots/barbietheme.png)
+
+Barbie Theme
+
+[![Bluloco
+Light](screenshots/blulocolight.png)](https://dieghernan.github.io/rstudiothemes/dev/articles/screenshots/blulocolight.png)
+
+Bluloco Light
+
 [![Catppuccin
 Latte](screenshots/catppuccinlatte.png)](https://dieghernan.github.io/rstudiothemes/dev/articles/screenshots/catppuccinlatte.png)
 
@@ -204,9 +214,15 @@ setup:
 
 **RStudio** version
 
-    RStudio 2026.01.1+403 "Apple Blossom"
-    Release (0e924abb984501b0d66b204ea06b60fc7813275a, 2026-02-04) for Windows Mozilla/5.0
-    (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+    RStudio 2026.08.1+195 "Yellow Yarrow"
+
+    Release (8d474bc4cfad0e317095cd171e8ef44db6887068, 2026-08-14) for windows
+    Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
+    RStudio/2026.08.1+195
+    Chrome/148.0.7778.280
+    Electron/42.7.1
+    Safari/537.36,
+    Quarto 1.10.18 (C:/Users/diego/AppData/Local/Programs/Quarto/bin/quarto.exe)
 
 **Code font**
 
@@ -221,6 +237,10 @@ Andromeda
 ayu Dark
 
 ayu Light
+
+Barbie Theme
+
+Bluloco Light
 
 Catppuccin Latte
 

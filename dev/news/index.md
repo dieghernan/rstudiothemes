@@ -2,6 +2,8 @@
 
 ## rstudiothemes (development version)
 
+- Added `"Barbie Theme"` by Milene Toazza and `"Bluloco Light"` by Umut
+  Topuzoglu.
 - [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_to_rstudio_theme.md)
   no longer tries to apply a theme after its installation fails. It also
   builds inherited ACE scope styles reliably when a theme mixes

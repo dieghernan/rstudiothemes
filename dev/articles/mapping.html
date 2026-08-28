@@ -105,16 +105,107 @@
 
 
 
-    <p>This article summarizes how <strong>rstudiothemes</strong> maps theme elements between <strong>Visual Studio Code</strong>, <strong>Positron</strong>, <strong>TextMate</strong> and <strong>RStudio</strong> formats.</p>
-<p>Sources:</p>
+    <p>This article summarizes how <strong>rstudiothemes</strong> maps theme colors and syntax scopes between <strong>Visual Studio Code</strong>, <strong>Positron</strong>, <strong>TextMate</strong> and <strong>RStudio</strong> formats.</p>
+<section class="level2"><h2 id="rstudio-theme-generation">RStudio theme generation<a class="anchor" aria-label="anchor" href="#rstudio-theme-generation"></a>
+</h2>
+<p>An <strong>RStudio</strong> <code>.rstheme</code> file is CSS, but converting a <strong>TextMate</strong> <code>.tmTheme</code> file does not consist of mapping every setting directly to a CSS selector. When <strong>RStudio</strong> imports a <code>.tmTheme</code> file, it converts the theme to <code>.rstheme</code> before saving it.</p>
+<p><code><a href="../reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme()</a></code> delegates the same base conversion to <code><a href="https://rstudio.github.io/rstudioapi/reference/convertTheme.html" class="external-link">rstudioapi::convertTheme()</a></code>. <strong>RStudio</strong> performs the following steps internally:</p>
+<ol type="1">
+<li>It reads the global <strong>TextMate</strong> settings and supported scopes.</li>
+<li>It inserts the resulting styles into an <a href="https://github.com/rstudio/rstudio/blob/main/src/cpp/session/resources/templates/ace_theme_template.css" class="external-link"><strong>ACE</strong> CSS template</a>.</li>
+<li>It determines whether the theme is dark from the perceived luminance of its background, then compiles the <strong>ACE</strong> CSS into an <code>.rstheme</code> file.</li>
+<li>It derives additional editor and terminal styles from the background and foreground colors.</li>
+</ol>
+<p>For example, <strong>RStudio</strong> copies the editor background to the gutter background, mixes the foreground and background equally for the gutter text and uses the selection color for the selected-word border. It also derives colors for code chunks, debugging, errors and the terminal. These operations are defined in <a href="https://github.com/rstudio/rstudio/blob/main/src/cpp/session/modules/SessionThemes.R" class="external-link"><code>SessionThemes.R</code></a> and <a href="https://github.com/rstudio/rstudio/blob/main/src/cpp/session/resources/themes/compile-themes.R" class="external-link"><code>compile-themes.R</code></a>.</p>
+<p>After this internal conversion, <strong>rstudiothemes</strong> adds a package-specific GUI layer. It uses four global <strong>TextMate</strong> colors as its interface palette:</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead><tr class="header">
+<th>
+<strong>TextMate</strong> setting</th>
+<th>Role in the <strong>RStudio</strong> GUI</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>background</code></td>
+<td>Base color for panes, toolbars, tabs, menus and popups.</td>
+</tr>
+<tr class="even">
+<td><code>foreground</code></td>
+<td>Text color and a source for neutral backgrounds and borders.</td>
+</tr>
+<tr class="odd">
+<td><code>caret</code></td>
+<td>Accent color for active tabs, selected menu items and find results.</td>
+</tr>
+<tr class="even">
+<td><code>selection</code></td>
+<td>Progress indicator color.</td>
+</tr>
+</tbody>
+</table>
+<p>The GUI stylesheet derives five intermediate colors from that palette:</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead><tr class="header">
+<th>Derived color</th>
+<th>Mix</th>
+<th>Main uses</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Background accent 1</td>
+<td>98% background, 2% accent</td>
+<td>Panel, tab, menu and popup backgrounds.</td>
+</tr>
+<tr class="even">
+<td>Background accent 2</td>
+<td>80% background, 20% accent</td>
+<td>Active and hovered tabs, borders, selected menus and scrollbars.</td>
+</tr>
+<tr class="odd">
+<td>Foreground accent</td>
+<td>50% foreground, 50% accent</td>
+<td>Checkboxes in dark themes.</td>
+</tr>
+<tr class="even">
+<td>Background foreground 1</td>
+<td>90% background, 10% foreground</td>
+<td>Window chrome, table headers and inactive tabs.</td>
+</tr>
+<tr class="odd">
+<td>Background foreground 2</td>
+<td>70% background, 30% foreground</td>
+<td>Borders and separators.</td>
+</tr>
+</tbody>
+</table>
+<p>This GUI layer does not add syntax-highlighting token mappings. It extends the generated <code>.rstheme</code> so that more of the <strong>RStudio</strong> interface follows the source theme. Consequently, an empty cell in the <code>rstheme</code> column below means there is no direct one-to-one CSS selector in the package mapping. The value may still affect the generated theme through <strong>RStudio</strong>’s internal conversion or the derived GUI palette.</p>
+</section><section class="level2"><h2 id="sources">Sources<a class="anchor" aria-label="anchor" href="#sources"></a>
+</h2>
 <ul>
 <li>
 <strong>TextMate</strong> and <strong>Visual Studio Code</strong>: <a href="https://github.com/microsoft/vscode-generator-code/blob/main/generators/app/generate-colortheme.js" class="external-link">vscode-generator-code</a>
 </li>
 <li>
+<strong>Visual Studio Code</strong> syntax scopes: <a href="https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide" class="external-link">Syntax Highlight Guide</a>
+</li>
+<li>
+<strong>rstudiothemes</strong> scope conversion: <a href="https://github.com/dieghernan/rstudiothemes/blob/main/R/convert-vs-to-tm.R" class="external-link"><code>convert-vs-to-tm.R</code></a> and <a href="https://github.com/dieghernan/rstudiothemes/blob/main/R/convert-tm-to-vs.R" class="external-link"><code>convert-tm-to-vs.R</code></a>.</li>
+<li>
 <strong>TextMate</strong> and <strong>RStudio</strong>: <a href="https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html" class="external-link uri">https://rstudio.github.io/rstudio-extensions/rstudio-theme-creation.html</a>
 </li>
-</ul>
+<li>
+<strong>RStudio</strong> conversion internals: <a href="https://github.com/rstudio/rstudio/blob/main/src/cpp/session/resources/templates/ace_theme_template.css" class="external-link"><code>ace_theme_template.css</code></a>, <a href="https://github.com/rstudio/rstudio/blob/main/src/cpp/session/modules/SessionThemes.R" class="external-link"><code>SessionThemes.R</code></a> and <a href="https://github.com/rstudio/rstudio/blob/main/src/cpp/session/resources/themes/compile-themes.R" class="external-link"><code>compile-themes.R</code></a>.</li>
+</ul></section><section class="level2"><h2 id="color-mapping">Color mapping<a class="anchor" aria-label="anchor" href="#color-mapping"></a>
+</h2>
 <p>When several source elements map to the same target element, the mapping priority determines which value is used.</p>
 <div id="tbl-map" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl"><div aria-describedby="tbl-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -416,13 +507,311 @@
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table 1: Mapping between theme elements and formats.
+Table 1: Color mapping between theme formats.
 </figcaption></figure>
 </div>
-
-
-
-<script id="quarto-html-after-body" type="application/javascript">
+</section><section class="level2"><h2 id="syntax-scope-mapping">Syntax scope mapping<a class="anchor" aria-label="anchor" href="#syntax-scope-mapping"></a>
+</h2>
+<p>Before calling the <strong>RStudio</strong> converter, <strong>rstudiothemes</strong> converts a <strong>Visual Studio Code</strong> theme to <strong>TextMate</strong> internally. Rules from <code>tokenColors</code> retain their <strong>TextMate</strong> scope names. The conversion removes selectors containing <code>*</code>, gives <code>semanticTokenColors</code> precedence when it supplies the same scope and combines scopes that share a name and style into one <strong>TextMate</strong> rule. The reverse conversion writes the <strong>TextMate</strong> scopes to <code>tokenColors[].scope</code>.</p>
+<p>This process preserves scope names rather than translating one scope vocabulary into another. <strong>Visual Studio Code</strong> also defines its <code>tokenColors</code> rules using the <strong>TextMate</strong> theme syntax, so the two formats share the scope shown in the middle column of <a href="#tbl-scopes" class="quarto-xref">Table 2</a>. This does not imply that arbitrary <code>semanticTokenColors</code> keys are equivalent to <strong>TextMate</strong> scopes.</p>
+<p>The table lists the exact scopes recognized by the internal <strong>RStudio</strong> converter and the <strong>ACE</strong> selector it generates. <strong>rstudiothemes</strong> may generate CSS rules for other compatible scopes with up to three dot-separated components, so this is the <strong>RStudio</strong> baseline rather than an exhaustive list of every selector that can appear in the final <code>.rstheme</code> file.</p>
+<div id="tbl-scopes" class="striped hover responsive quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-tbl"><div aria-describedby="tbl-scopes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="table-responsive">
+<table class="table table-striped table-hover">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead><tr class="header">
+<th>Category</th>
+<th>
+<strong>Visual Studio Code</strong> / <strong>TextMate</strong> scope</th>
+<th>
+<strong>RStudio</strong> <strong>ACE</strong> selector</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Keyword</td>
+<td><code>keyword</code></td>
+<td><code>.ace_keyword</code></td>
+</tr>
+<tr class="even">
+<td>Keyword</td>
+<td><code>keyword.operator</code></td>
+<td><code>.ace_keyword.ace_operator</code></td>
+</tr>
+<tr class="odd">
+<td>Keyword</td>
+<td><code>keyword.other.unit</code></td>
+<td><code>.ace_keyword.ace_other.ace_unit</code></td>
+</tr>
+<tr class="even">
+<td>Constant</td>
+<td><code>constant</code></td>
+<td><code>.ace_constant</code></td>
+</tr>
+<tr class="odd">
+<td>Constant</td>
+<td><code>constant.language</code></td>
+<td><code>.ace_constant.ace_language</code></td>
+</tr>
+<tr class="even">
+<td>Constant</td>
+<td><code>constant.library</code></td>
+<td><code>.ace_constant.ace_library</code></td>
+</tr>
+<tr class="odd">
+<td>Constant</td>
+<td><code>constant.numeric</code></td>
+<td><code>.ace_constant.ace_numeric</code></td>
+</tr>
+<tr class="even">
+<td>Constant</td>
+<td><code>constant.character</code></td>
+<td><code>.ace_constant.ace_character</code></td>
+</tr>
+<tr class="odd">
+<td>Constant</td>
+<td><code>constant.character.escape</code></td>
+<td><code>.ace_constant.ace_character.ace_escape</code></td>
+</tr>
+<tr class="even">
+<td>Constant</td>
+<td><code>constant.character.entity</code></td>
+<td><code>.ace_constant.ace_character.ace_entity</code></td>
+</tr>
+<tr class="odd">
+<td>Constant</td>
+<td><code>constant.other</code></td>
+<td><code>.ace_constant.ace_other</code></td>
+</tr>
+<tr class="even">
+<td>Support</td>
+<td><code>support</code></td>
+<td><code>.ace_support</code></td>
+</tr>
+<tr class="odd">
+<td>Support</td>
+<td><code>support.function</code></td>
+<td><code>.ace_support.ace_function</code></td>
+</tr>
+<tr class="even">
+<td>Support</td>
+<td><code>support.function.dom</code></td>
+<td><code>.ace_support.ace_function.ace_dom</code></td>
+</tr>
+<tr class="odd">
+<td>Support</td>
+<td><code>support.function.firebug</code></td>
+<td><code>.ace_support.ace_firebug</code></td>
+</tr>
+<tr class="even">
+<td>Support</td>
+<td><code>support.function.constant</code></td>
+<td><code>.ace_support.ace_function.ace_constant</code></td>
+</tr>
+<tr class="odd">
+<td>Support</td>
+<td><code>support.constant</code></td>
+<td><code>.ace_support.ace_constant</code></td>
+</tr>
+<tr class="even">
+<td>Support</td>
+<td><code>support.constant.property-value</code></td>
+<td><code>.ace_support.ace_constant.ace_property-value</code></td>
+</tr>
+<tr class="odd">
+<td>Support</td>
+<td><code>support.class</code></td>
+<td><code>.ace_support.ace_class</code></td>
+</tr>
+<tr class="even">
+<td>Support</td>
+<td><code>support.type</code></td>
+<td><code>.ace_support.ace_type</code></td>
+</tr>
+<tr class="odd">
+<td>Support</td>
+<td><code>support.other</code></td>
+<td><code>.ace_support.ace_other</code></td>
+</tr>
+<tr class="even">
+<td>Function</td>
+<td><code>function</code></td>
+<td><code>.ace_function</code></td>
+</tr>
+<tr class="odd">
+<td>Function</td>
+<td><code>function.buildin</code></td>
+<td><code>.ace_function.ace_buildin</code></td>
+</tr>
+<tr class="even">
+<td>Storage</td>
+<td><code>storage</code></td>
+<td><code>.ace_storage</code></td>
+</tr>
+<tr class="odd">
+<td>Storage</td>
+<td><code>storage.type</code></td>
+<td><code>.ace_storage.ace_type</code></td>
+</tr>
+<tr class="even">
+<td>Invalid</td>
+<td><code>invalid</code></td>
+<td><code>.ace_invalid</code></td>
+</tr>
+<tr class="odd">
+<td>Invalid</td>
+<td><code>invalid.illegal</code></td>
+<td><code>.ace_invalid.ace_illegal</code></td>
+</tr>
+<tr class="even">
+<td>Invalid</td>
+<td><code>invalid.deprecated</code></td>
+<td><code>.ace_invalid.ace_deprecated</code></td>
+</tr>
+<tr class="odd">
+<td>String</td>
+<td><code>string</code></td>
+<td><code>.ace_string</code></td>
+</tr>
+<tr class="even">
+<td>String</td>
+<td><code>string.regexp</code></td>
+<td><code>.ace_string.ace_regexp</code></td>
+</tr>
+<tr class="odd">
+<td>Comment</td>
+<td><code>comment</code></td>
+<td><code>.ace_comment</code></td>
+</tr>
+<tr class="even">
+<td>Comment</td>
+<td><code>comment.documentation</code></td>
+<td><code>.ace_comment.ace_doc</code></td>
+</tr>
+<tr class="odd">
+<td>Comment</td>
+<td><code>comment.documentation.tag</code></td>
+<td><code>.ace_comment.ace_doc.ace_tag</code></td>
+</tr>
+<tr class="even">
+<td>Variable</td>
+<td><code>variable</code></td>
+<td><code>.ace_variable</code></td>
+</tr>
+<tr class="odd">
+<td>Variable</td>
+<td><code>variable.language</code></td>
+<td><code>.ace_variable.ace_language</code></td>
+</tr>
+<tr class="even">
+<td>Variable</td>
+<td><code>variable.parameter</code></td>
+<td><code>.ace_variable.ace_parameter</code></td>
+</tr>
+<tr class="odd">
+<td>Metadata</td>
+<td><code>meta</code></td>
+<td><code>.ace_meta</code></td>
+</tr>
+<tr class="even">
+<td>Metadata</td>
+<td><code>meta.tag.sgml.doctype</code></td>
+<td><code>.ace_xml-pe</code></td>
+</tr>
+<tr class="odd">
+<td>Metadata</td>
+<td><code>meta.tag</code></td>
+<td><code>.ace_meta.ace_tag</code></td>
+</tr>
+<tr class="even">
+<td>Metadata</td>
+<td><code>meta.selector</code></td>
+<td><code>.ace_meta.ace_selector</code></td>
+</tr>
+<tr class="odd">
+<td>Entity</td>
+<td><code>entity.other.attribute-name</code></td>
+<td><code>.ace_entity.ace_other.ace_attribute-name</code></td>
+</tr>
+<tr class="even">
+<td>Entity</td>
+<td><code>entity.name.function</code></td>
+<td><code>.ace_entity.ace_name.ace_function</code></td>
+</tr>
+<tr class="odd">
+<td>Entity</td>
+<td><code>entity.name</code></td>
+<td><code>.ace_entity.ace_name</code></td>
+</tr>
+<tr class="even">
+<td>Entity</td>
+<td><code>entity.name.tag</code></td>
+<td><code>.ace_entity.ace_name.ace_tag</code></td>
+</tr>
+<tr class="odd">
+<td>Markup</td>
+<td><code>markup.heading</code></td>
+<td><code>.ace_markup.ace_heading</code></td>
+</tr>
+<tr class="even">
+<td>Markup</td>
+<td><code>markup.heading.1</code></td>
+<td><code>.ace_markup.ace_heading.ace_1</code></td>
+</tr>
+<tr class="odd">
+<td>Markup</td>
+<td><code>markup.heading.2</code></td>
+<td><code>.ace_markup.ace_heading.ace_2</code></td>
+</tr>
+<tr class="even">
+<td>Markup</td>
+<td><code>markup.heading.3</code></td>
+<td><code>.ace_markup.ace_heading.ace_3</code></td>
+</tr>
+<tr class="odd">
+<td>Markup</td>
+<td><code>markup.heading.4</code></td>
+<td><code>.ace_markup.ace_heading.ace_4</code></td>
+</tr>
+<tr class="even">
+<td>Markup</td>
+<td><code>markup.heading.5</code></td>
+<td><code>.ace_markup.ace_heading.ace_5</code></td>
+</tr>
+<tr class="odd">
+<td>Markup</td>
+<td><code>markup.heading.6</code></td>
+<td><code>.ace_markup.ace_heading.ace_6</code></td>
+</tr>
+<tr class="even">
+<td>Markup</td>
+<td><code>markup.list</code></td>
+<td><code>.ace_markup.ace_list</code></td>
+</tr>
+<tr class="odd">
+<td>Collaboration</td>
+<td><code>collab.user1</code></td>
+<td><code>.ace_collab.ace_user1</code></td>
+</tr>
+<tr class="even">
+<td>Editor marker</td>
+<td><code>marker-layer.active_debug_line</code></td>
+<td><code>.ace_marker-layer .ace_active_debug_line</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-scopes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table 2: Syntax scopes shared by <strong>Visual Studio Code</strong> and <strong>TextMate</strong>, with the selectors generated by <strong>RStudio</strong>.
+</figcaption></figure>
+</div>
+<p>The <code>function.buildin</code> spelling is reproduced exactly from <strong>RStudio</strong>’s supported-scope list.</p>
+</section><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -505,7 +894,8 @@ Table 1: Mapping between theme elements and formats.
       }
     }
   });
-  </script></main>
+  </script></main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
