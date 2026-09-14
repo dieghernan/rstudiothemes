@@ -2,6 +2,8 @@
 
 ## rstudiothemes 1.2.0
 
+CRAN release: 2026-08-28
+
 - Added `"Barbie Theme"` by Milene Toazza and `"Bluloco Light"` by Umut
   Topuzoglu.
 - [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_to_rstudio_theme.md)
