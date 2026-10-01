@@ -1,6 +1,7 @@
-# Generate random UUIDs
+# Generate UUIDs
 
-Generate version 4 pseudo-random Universally Unique Identifiers (UUIDs).
+Generate version 4 universally unique identifiers (UUIDs), randomly or
+deterministically from a hint.
 
 ## Usage
 
@@ -18,12 +19,13 @@ Adapted from an unreleased version of `uuid()` from
 - hint:
 
   Optional character string or object coercible with
-  [`as.character()`](https://rdrr.io/r/base/character.html), used as a
-  random seed.
+  [`as.character()`](https://rdrr.io/r/base/character.html), used to
+  derive a reproducible UUID.
 
 ## Value
 
-A character string representing a valid UUID.
+A [character](https://rdrr.io/r/base/character.html) string representing
+a version 4 UUID.
 
 ## Details
 

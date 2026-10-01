@@ -57,7 +57,7 @@ as tabular data for inspection or conversion workflows.
 Check the current IDE and generate theme identifiers.
 
 - [`generate_uuid()`](https://dieghernan.github.io/rstudiothemes/reference/generate_uuid.md)
-  : Generate random UUIDs
+  : Generate UUIDs
 
 - [`on_rstudio()`](https://dieghernan.github.io/rstudiothemes/reference/on_rstudio.md)
   :

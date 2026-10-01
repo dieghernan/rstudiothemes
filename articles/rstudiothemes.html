@@ -109,7 +109,7 @@
 <div class="sourceCode cell-code" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dieghernan.github.io/rstudiothemes/">rstudiothemes</a></span><span class="op">)</span></span></code></pre></div>
 </div>
-<section class="level2"><h2 id="installing-bundled-themes">Installing bundled themes<a class="anchor" aria-label="anchor" href="#installing-bundled-themes"></a>
+<section class="level2"><h2 id="install-bundled-themes">Install bundled themes<a class="anchor" aria-label="anchor" href="#install-bundled-themes"></a>
 </h2>
 <p>To install all bundled <strong>RStudio</strong> themes:</p>
 <div class="cell">
@@ -145,31 +145,31 @@
 <span><span class="co">#&gt; [35] "VSCode Dark"                "VSCode Light"              </span></span>
 <span><span class="co">#&gt; [37] "Winter is Coming Dark Blue" "Winter is Coming Light"</span></span></code></pre></div>
 </div>
-</section><section class="level2"><h2 id="trying-themes">Trying themes<a class="anchor" aria-label="anchor" href="#trying-themes"></a>
+</section><section class="level2"><h2 id="preview-themes">Preview themes<a class="anchor" aria-label="anchor" href="#preview-themes"></a>
 </h2>
 <p>You can preview installed themes from an <strong>R</strong> session:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/rstudiothemes-actions.html">try_rstudiothemes</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
-<p>Pass a subset of styles (for example, <code>"dark"</code> or <code>"light"</code>) if needed.</p>
-</section><section class="level2"><h2 id="applying-a-theme">Applying a theme<a class="anchor" aria-label="anchor" href="#applying-a-theme"></a>
+<p>Set <code>style</code> to <code>"dark"</code> or <code>"light"</code> to filter the preview. During the preview, press <code>k</code> to keep the current theme.</p>
+</section><section class="level2"><h2 id="apply-a-theme">Apply a theme<a class="anchor" aria-label="anchor" href="#apply-a-theme"></a>
 </h2>
-<p>After installing themes, apply one with the <strong>RStudio</strong> API:</p>
+<p>After installing themes, apply one with the <strong>rstudioapi</strong> package:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">rstudioapi</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/rstudioapi/reference/applyTheme.html" class="external-link">applyTheme</a></span><span class="op">(</span><span class="st">"Winter is Coming Dark Blue"</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="fig-winter" class="quarto-float quarto-figure quarto-figure-center" alt="Winter is Coming Dark Blue theme">
+<div id="fig-winter" class="quarto-float quarto-figure quarto-figure-center" alt="RStudio screenshot with the Winter is Coming Dark Blue theme applied. The editor and surrounding panes have dark blue backgrounds, with R code highlighted in contrasting colors.">
 <figure class="quarto-float quarto-float-fig"><div aria-describedby="fig-winter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="winteriscoming.png" alt="Winter is Coming Dark Blue theme">
+<img src="winteriscoming.png" alt="RStudio screenshot with the Winter is Coming Dark Blue theme applied. The editor and surrounding panes have dark blue backgrounds, with R code highlighted in contrasting colors.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-winter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure 1: Screenshot of the Winter is Coming Dark Blue theme.
 </figcaption></figure>
 </div>
-<p>Alternatively, in <strong>RStudio</strong>, choose <code>Tools &gt; Global Options &gt; Appearance &gt; Add</code> and select the installed theme.</p>
-</section><section class="level2"><h2 id="converting-your-own-themes">Converting your own themes<a class="anchor" aria-label="anchor" href="#converting-your-own-themes"></a>
+<p>To apply an installed theme in <strong>RStudio</strong>, choose <code>Tools &gt; Global Options &gt; Appearance</code> and select it from the editor theme list.</p>
+</section><section class="level2"><h2 id="convert-your-own-themes">Convert your own themes<a class="anchor" aria-label="anchor" href="#convert-your-own-themes"></a>
 </h2>
 <p>You can convert a <strong>Visual Studio Code</strong>, <strong>Positron</strong> or <strong>TextMate</strong> theme file to an <strong>RStudio</strong> <code>.rstheme</code> file:</p>
 <div class="cell">
@@ -194,7 +194,7 @@ Figure 1: Screenshot of the Winter is Coming Dark Blue theme.
 <ul>
 <li>List installed themes with <code>list_rstudiothemes(list_installed = TRUE)</code>.</li>
 <li>Filter themes by <code>"light"</code> or <code>"dark"</code> style.</li>
-<li>Use the Add Theme interface in the <strong>RStudio</strong> IDE (<code>Global Options &gt; Appearance &gt; Add</code>) to manually add <code>.rstheme</code> files that you have created or converted.</li>
+<li>In <strong>RStudio</strong>, choose <code>Tools &gt; Global Options &gt; Appearance &gt; Add</code> to install <code>.rstheme</code> files that you have created or converted.</li>
 </ul></section><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);

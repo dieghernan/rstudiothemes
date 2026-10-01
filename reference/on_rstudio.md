@@ -11,7 +11,8 @@ on_rstudio()
 
 ## Value
 
-`TRUE` if running in **RStudio**, `FALSE` otherwise.
+A [logical](https://rdrr.io/r/base/logical.html) value, `TRUE` if
+running in **RStudio** and `FALSE` otherwise.
 
 ## See also
 

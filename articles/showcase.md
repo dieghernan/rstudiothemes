@@ -16,7 +16,9 @@ interface](https://docs.posit.co/ide/user/ide/guide/ui/appearance.html).
 
 In **RStudio**, choose `Tools > Global Options > Appearance > Add`.
 
-![RStudio Add Theme interface](rstudiogui.png)
+![RStudio Appearance options with an editor theme list and a
+syntax-highlighted code preview. The Add button below the list opens a
+file picker to install a theme.](rstudiogui.png)
 
 Figure 1: **RStudio** Add Theme interface.
 
@@ -24,186 +26,267 @@ Figure 1: **RStudio** Add Theme interface.
 
 Click an image to enlarge it.
 
-[![Andromeda](screenshots/andromeda.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/andromeda.png)
+[![RStudio screenshot with the Andromeda theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/andromeda.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/andromeda.png)
 
 Andromeda
 
-[![ayu
-Dark](screenshots/ayudark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/ayudark.png)
+[![RStudio screenshot with the ayu Dark theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/ayudark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/ayudark.png)
 
 ayu Dark
 
-[![ayu
-Light](screenshots/ayulight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/ayulight.png)
+[![RStudio screenshot with the ayu Light theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/ayulight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/ayulight.png)
 
 ayu Light
 
-[![Barbie
-Theme](screenshots/barbietheme.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/barbietheme.png)
+[![RStudio screenshot with the Barbie Theme theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/barbietheme.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/barbietheme.png)
 
 Barbie Theme
 
-[![Bluloco
-Light](screenshots/blulocolight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/blulocolight.png)
+[![RStudio screenshot with the Bluloco Light theme applied to the
+editor, console and surrounding panes. R code illustrates syntax
+highlighting in the
+editor.](screenshots/blulocolight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/blulocolight.png)
 
 Bluloco Light
 
-[![Catppuccin
-Latte](screenshots/catppuccinlatte.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/catppuccinlatte.png)
+[![RStudio screenshot with the Catppuccin Latte theme applied to the
+editor, console and surrounding panes. R code illustrates syntax
+highlighting in the
+editor.](screenshots/catppuccinlatte.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/catppuccinlatte.png)
 
 Catppuccin Latte
 
-[![Catppuccin
-Mocha](screenshots/catppuccinmocha.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/catppuccinmocha.png)
+[![RStudio screenshot with the Catppuccin Mocha theme applied to the
+editor, console and surrounding panes. R code illustrates syntax
+highlighting in the
+editor.](screenshots/catppuccinmocha.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/catppuccinmocha.png)
 
 Catppuccin Mocha
 
-[![cobalt2](screenshots/cobalt2.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/cobalt2.png)
+[![RStudio screenshot with the cobalt2 theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/cobalt2.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/cobalt2.png)
 
 cobalt2
 
-[![CRAN](screenshots/cran.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/cran.png)
+[![RStudio screenshot with the CRAN theme applied to the editor, console
+and surrounding panes. R code illustrates syntax highlighting in the
+editor.](screenshots/cran.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/cran.png)
 
 CRAN
 
-[![Dracula2025](screenshots/dracula2025.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/dracula2025.png)
+[![RStudio screenshot with the Dracula2025 theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/dracula2025.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/dracula2025.png)
 
 Dracula2025
 
-[![GitHub
-Dark](screenshots/githubdark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/githubdark.png)
+[![RStudio screenshot with the GitHub Dark theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/githubdark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/githubdark.png)
 
 GitHub Dark
 
-[![GitHub
-Light](screenshots/githublight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/githublight.png)
+[![RStudio screenshot with the GitHub Light theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/githublight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/githublight.png)
 
 GitHub Light
 
-[![JellyFish
-Theme](screenshots/jellyfishtheme.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/jellyfishtheme.png)
+[![RStudio screenshot with the JellyFish Theme theme applied to the
+editor, console and surrounding panes. R code illustrates syntax
+highlighting in the
+editor.](screenshots/jellyfishtheme.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/jellyfishtheme.png)
 
 JellyFish Theme
 
-[![Matcha](screenshots/matcha.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/matcha.png)
+[![RStudio screenshot with the Matcha theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/matcha.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/matcha.png)
 
 Matcha
 
-[![Matrix](screenshots/matrix.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/matrix.png)
+[![RStudio screenshot with the Matrix theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/matrix.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/matrix.png)
 
 Matrix
 
-[![Night
-Owl](screenshots/nightowl.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/nightowl.png)
+[![RStudio screenshot with the Night Owl theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/nightowl.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/nightowl.png)
 
 Night Owl
 
-[![Night Owl
-Light](screenshots/nightowllight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/nightowllight.png)
+[![RStudio screenshot with the Night Owl Light theme applied to the
+editor, console and surrounding panes. R code illustrates syntax
+highlighting in the
+editor.](screenshots/nightowllight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/nightowllight.png)
 
 Night Owl Light
 
-[![Nord](screenshots/nord.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/nord.png)
+[![RStudio screenshot with the Nord theme applied to the editor, console
+and surrounding panes. R code illustrates syntax highlighting in the
+editor.](screenshots/nord.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/nord.png)
 
 Nord
 
-[![OKSolar
-Dark](screenshots/oksolardark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/oksolardark.png)
+[![RStudio screenshot with the OKSolar Dark theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/oksolardark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/oksolardark.png)
 
 OKSolar Dark
 
-[![OKSolar
-Light](screenshots/oksolarlight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/oksolarlight.png)
+[![RStudio screenshot with the OKSolar Light theme applied to the
+editor, console and surrounding panes. R code illustrates syntax
+highlighting in the
+editor.](screenshots/oksolarlight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/oksolarlight.png)
 
 OKSolar Light
 
-[![OKSolar
-Sky](screenshots/oksolarsky.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/oksolarsky.png)
+[![RStudio screenshot with the OKSolar Sky theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/oksolarsky.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/oksolarsky.png)
 
 OKSolar Sky
 
-[![One Dark
-Pro](screenshots/onedarkpro.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/onedarkpro.png)
+[![RStudio screenshot with the One Dark Pro theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/onedarkpro.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/onedarkpro.png)
 
 One Dark Pro
 
-[![Overflow
-Dark](screenshots/overflowdark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/overflowdark.png)
+[![RStudio screenshot with the Overflow Dark theme applied to the
+editor, console and surrounding panes. R code illustrates syntax
+highlighting in the
+editor.](screenshots/overflowdark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/overflowdark.png)
 
 Overflow Dark
 
-[![Overflow
-Light](screenshots/overflowlight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/overflowlight.png)
+[![RStudio screenshot with the Overflow Light theme applied to the
+editor, console and surrounding panes. R code illustrates syntax
+highlighting in the
+editor.](screenshots/overflowlight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/overflowlight.png)
 
 Overflow Light
 
-[![Panda
-Syntax](screenshots/pandasyntax.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/pandasyntax.png)
+[![RStudio screenshot with the Panda Syntax theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/pandasyntax.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/pandasyntax.png)
 
 Panda Syntax
 
-[![Positron
-Dark](screenshots/positrondark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/positrondark.png)
+[![RStudio screenshot with the Positron Dark theme applied to the
+editor, console and surrounding panes. R code illustrates syntax
+highlighting in the
+editor.](screenshots/positrondark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/positrondark.png)
 
 Positron Dark
 
-[![Positron
-Light](screenshots/positronlight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/positronlight.png)
+[![RStudio screenshot with the Positron Light theme applied to the
+editor, console and surrounding panes. R code illustrates syntax
+highlighting in the
+editor.](screenshots/positronlight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/positronlight.png)
 
 Positron Light
 
-[![Selenized
-Dark](screenshots/selenizeddark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/selenizeddark.png)
+[![RStudio screenshot with the Selenized Dark theme applied to the
+editor, console and surrounding panes. R code illustrates syntax
+highlighting in the
+editor.](screenshots/selenizeddark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/selenizeddark.png)
 
 Selenized Dark
 
-[![Selenized
-Light](screenshots/selenizedlight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/selenizedlight.png)
+[![RStudio screenshot with the Selenized Light theme applied to the
+editor, console and surrounding panes. R code illustrates syntax
+highlighting in the
+editor.](screenshots/selenizedlight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/selenizedlight.png)
 
 Selenized Light
 
-[![Skeletor
-Syntax](screenshots/skeletorsyntax.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/skeletorsyntax.png)
+[![RStudio screenshot with the Skeletor Syntax theme applied to the
+editor, console and surrounding panes. R code illustrates syntax
+highlighting in the
+editor.](screenshots/skeletorsyntax.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/skeletorsyntax.png)
 
 Skeletor Syntax
 
-[![SynthWave
-84](screenshots/synthwave84.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/synthwave84.png)
+[![RStudio screenshot with the SynthWave 84 theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/synthwave84.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/synthwave84.png)
 
 SynthWave 84
 
-[![Tokyo
-Night](screenshots/tokyonight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/tokyonight.png)
+[![RStudio screenshot with the Tokyo Night theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/tokyonight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/tokyonight.png)
 
 Tokyo Night
 
-[![Tokyo Night
-Light](screenshots/tokyonightlight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/tokyonightlight.png)
+[![RStudio screenshot with the Tokyo Night Light theme applied to the
+editor, console and surrounding panes. R code illustrates syntax
+highlighting in the
+editor.](screenshots/tokyonightlight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/tokyonightlight.png)
 
 Tokyo Night Light
 
-[![Tokyo Night
-Storm](screenshots/tokyonightstorm.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/tokyonightstorm.png)
+[![RStudio screenshot with the Tokyo Night Storm theme applied to the
+editor, console and surrounding panes. R code illustrates syntax
+highlighting in the
+editor.](screenshots/tokyonightstorm.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/tokyonightstorm.png)
 
 Tokyo Night Storm
 
-[![VSCode
-Dark](screenshots/vscodedark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/vscodedark.png)
+[![RStudio screenshot with the VSCode Dark theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/vscodedark.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/vscodedark.png)
 
 VSCode Dark
 
-[![VSCode
-Light](screenshots/vscodelight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/vscodelight.png)
+[![RStudio screenshot with the VSCode Light theme applied to the editor,
+console and surrounding panes. R code illustrates syntax highlighting in
+the
+editor.](screenshots/vscodelight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/vscodelight.png)
 
 VSCode Light
 
-[![Winter is Coming Dark
-Blue](screenshots/winteriscomingdarkblue.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/winteriscomingdarkblue.png)
+[![RStudio screenshot with the Winter is Coming Dark Blue theme applied
+to the editor, console and surrounding panes. R code illustrates syntax
+highlighting in the
+editor.](screenshots/winteriscomingdarkblue.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/winteriscomingdarkblue.png)
 
 Winter is Coming Dark Blue
 
-[![Winter is Coming
-Light](screenshots/winteriscominglight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/winteriscominglight.png)
+[![RStudio screenshot with the Winter is Coming Light theme applied to
+the editor, console and surrounding panes. R code illustrates syntax
+highlighting in the
+editor.](screenshots/winteriscominglight.png)](https://dieghernan.github.io/rstudiothemes/articles/screenshots/winteriscominglight.png)
 
 Winter is Coming Light
 
@@ -228,7 +311,9 @@ setup:
 
 Fira Code: <https://fonts.google.com/specimen/Fira+Code>.
 
-![RStudio Options for Screenshots](rstudiooptions.png)
+![RStudio Code options on the Display tab. Line numbers, whitespace
+characters and R function call highlighting are enabled, with the margin
+at column 80 and gray indentation guides.](rstudiooptions.png)
 
 Figure 2: **RStudio** options used for screenshots.
 

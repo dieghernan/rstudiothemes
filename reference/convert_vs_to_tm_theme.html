@@ -105,14 +105,14 @@ a temporary file created with <code><a href="https://rdrr.io/r/base/tempfile.htm
 
 
 <dt id="arg-author">author<a class="anchor" aria-label="anchor" href="#arg-author"></a></dt>
-<dd><p>Theme author. If <code>NULL</code>, the author is extracted from the
-input file, otherwise it defaults to "rstudiothemes R package".</p></dd>
+<dd><p>Theme author. If <code>NULL</code>, use the author from the input file,
+falling back to "rstudiothemes R package" if no author is listed.</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>This function is called for its side effects. It writes a <code>.tmTheme</code> file to
-<code>outfile</code> and returns the file path.</p>
+    <p>A <a href="https://rdrr.io/r/base/character.html" class="external-link">character</a> string containing the path to the <code>.tmTheme</code>
+file written to <code>outfile</code>.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>

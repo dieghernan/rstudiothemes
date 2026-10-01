@@ -10,7 +10,7 @@ includes bundled **RStudio** themes.
 library(rstudiothemes)
 ```
 
-## Installing bundled themes
+## Install bundled themes
 
 To install all bundled **RStudio** themes:
 
@@ -52,7 +52,7 @@ list_rstudiothemes(list_installed = FALSE)
 #> [37] "Winter is Coming Dark Blue" "Winter is Coming Light"
 ```
 
-## Trying themes
+## Preview themes
 
 You can preview installed themes from an **R** session:
 
@@ -61,26 +61,29 @@ You can preview installed themes from an **R** session:
 try_rstudiothemes()
 ```
 
-Pass a subset of styles (for example, `"dark"` or `"light"`) if needed.
+Set `style` to `"dark"` or `"light"` to filter the preview. During the
+preview, press `k` to keep the current theme.
 
-## Applying a theme
+## Apply a theme
 
-After installing themes, apply one with the **RStudio** API:
+After installing themes, apply one with the **rstudioapi** package:
 
 ``` r
 
 rstudioapi::applyTheme("Winter is Coming Dark Blue")
 ```
 
-![Winter is Coming Dark Blue theme](winteriscoming.png)
+![RStudio screenshot with the Winter is Coming Dark Blue theme applied.
+The editor and surrounding panes have dark blue backgrounds, with R code
+highlighted in contrasting colors.](winteriscoming.png)
 
 Figure 1: Screenshot of the Winter is Coming Dark Blue theme.
 
-Alternatively, in **RStudio**, choose
-`Tools > Global Options > Appearance > Add` and select the installed
-theme.
+To apply an installed theme in **RStudio**, choose
+`Tools > Global Options > Appearance` and select it from the editor
+theme list.
 
-## Converting your own themes
+## Convert your own themes
 
 You can convert a **Visual Studio Code**, **Positron** or **TextMate**
 theme file to an **RStudio** `.rstheme` file:
@@ -114,6 +117,5 @@ This workflow brings your preferred editor theme to **RStudio**.
 - List installed themes with
   `list_rstudiothemes(list_installed = TRUE)`.
 - Filter themes by `"light"` or `"dark"` style.
-- Use the Add Theme interface in the **RStudio** IDE
-  (`Global Options > Appearance > Add`) to manually add `.rstheme` files
-  that you have created or converted.
+- In **RStudio**, choose `Tools > Global Options > Appearance > Add` to
+  install `.rstheme` files that you have created or converted.

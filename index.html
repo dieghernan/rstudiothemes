@@ -120,7 +120,7 @@ Note
 </h2>
 <ul>
 <li>Convert <strong>Visual Studio Code</strong>, <strong>Positron</strong> and <strong>TextMate</strong> theme files to <strong>RStudio</strong> <code>.rstheme</code> files.</li>
-<li>Convert themes bidirectionally between <strong>TextMate</strong> and <strong>Visual Studio Code</strong> or <strong>Positron</strong> formats.</li>
+<li>Convert themes in both directions between <strong>TextMate</strong> and <strong>Visual Studio Code</strong> or <strong>Positron</strong> formats.</li>
 <li>Install bundled ports of popular <strong>Visual Studio Code</strong> and <strong>Positron</strong> themes that are ready to use in <strong>RStudio</strong>.</li>
 <li>List, preview and remove bundled <strong>RStudio</strong> themes.</li>
 <li>Read theme files as tabular data for inspection or conversion workflows.</li>
@@ -139,7 +139,7 @@ Note
 <span></span>
 <span><span class="fu">rstudioapi</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/rstudioapi/reference/applyTheme.html" class="external-link">applyTheme</a></span><span class="op">(</span><span class="st">"Winter is Coming Dark Blue"</span><span class="op">)</span></span></code></pre></div>
 <div class="text-center">
-<p><img src="reference/figures/winteriscoming.png" alt="Winter is Coming Dark Blue theme"></p>
+<p><img src="reference/figures/winteriscoming.png" alt="RStudio screenshot with the Winter is Coming Dark Blue theme applied. The editor and surrounding panes have dark blue backgrounds, with R code highlighted in contrasting colors."></p>
 </div>
 <p>Available themes include popular choices such as Tokyo Night, Night Owl, Winter is Coming, SynthWave 84, Nord and many more:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
@@ -182,9 +182,9 @@ Note
 <p><a href="https://dieghernan-themeconverter.share.connect.posit.cloud/" class="external-link uri">https://dieghernan-themeconverter.share.connect.posit.cloud/</a></p>
 </div>
 <div class="section level2">
-<h2 id="converting-an-existing-theme">Converting an existing theme<a class="anchor" aria-label="anchor" href="#converting-an-existing-theme"></a>
+<h2 id="convert-an-existing-theme">Convert an existing theme<a class="anchor" aria-label="anchor" href="#convert-an-existing-theme"></a>
 </h2>
-<p>You can convert any <strong>Visual Studio Code</strong>, <strong>Positron</strong> or <strong>TextMate</strong> theme file to an <strong>RStudio</strong> <code>.rstheme</code> file with this workflow:</p>
+<p>You can convert a <strong>Visual Studio Code</strong>, <strong>Positron</strong> or <strong>TextMate</strong> theme file to an <strong>RStudio</strong> <code>.rstheme</code> file with this workflow:</p>
 <ol style="list-style-type: decimal">
 <li>Start with a <strong>Visual Studio Code</strong>, <strong>Positron</strong> or <strong>TextMate</strong> theme file or a URL to an online theme.</li>
 <li>Use <code><a href="reference/convert_to_rstudio_theme.html">convert_to_rstudio_theme()</a></code> to convert and install it:</li>
@@ -195,9 +195,9 @@ Note
 <span>  apply <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  force <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p>Alternatively, in <strong>RStudio</strong>, choose <code>Tools &gt; Global Options &gt; Appearance &gt; Add</code> and select the installed theme.</p>
+<p>To apply an installed theme in <strong>RStudio</strong>, choose <code>Tools &gt; Global Options &gt; Appearance</code> and select it from the editor theme list.</p>
 <div class="text-center">
-<p><img src="reference/figures/rstudiogui.png" style="width:80.0%" alt="RStudio IDE Add Theme interface"></p>
+<p><img src="reference/figures/rstudiogui.png" style="width:80.0%" alt="RStudio Appearance options with an editor theme list and a syntax-highlighted code preview. The Add button below the list opens a file picker to install a theme."></p>
 </div>
 <div class="section level3">
 <h3 id="convert-between-theme-formats">Convert between theme formats<a class="anchor" aria-label="anchor" href="#convert-between-theme-formats"></a>
@@ -206,7 +206,7 @@ Note
 </div>
 </div>
 <div class="section level2">
-<h2 id="creating-themes-from-scratch">Creating themes from scratch<a class="anchor" aria-label="anchor" href="#creating-themes-from-scratch"></a>
+<h2 id="create-themes-from-scratch">Create themes from scratch<a class="anchor" aria-label="anchor" href="#create-themes-from-scratch"></a>
 </h2>
 <p><strong>rstudiothemes</strong> does not provide a built-in theme editor. To create themes from scratch, use one of these tools and then convert the result:</p>
 <ul>

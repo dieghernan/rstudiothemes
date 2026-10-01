@@ -1,7 +1,8 @@
 # Convert a **TextMate** theme file to **Visual Studio Code** or **Positron**
 
 Convert a `.tmTheme` file representing a **TextMate** theme and write
-the equivalent **Visual Studio Code** theme file (`.json`).
+the equivalent **Visual Studio Code** or **Positron** theme file
+(`.json`).
 
 `convert_tm_to_positron_theme()` is an alias for
 `convert_tm_to_vs_theme()`.
@@ -42,13 +43,13 @@ convert_tm_to_positron_theme(
 
 - author:
 
-  Theme author. If `NULL`, the author is extracted from the input file,
-  otherwise it defaults to "rstudiothemes R package".
+  Theme author. If `NULL`, use the author from the input file, falling
+  back to "rstudiothemes R package" if no author is listed.
 
 ## Value
 
-This function is called for its side effects. It writes a `.json` theme
-file to `outfile` and returns the path.
+A [character](https://rdrr.io/r/base/character.html) string containing
+the path to the `.json` theme file written to `outfile`.
 
 ## See also
 

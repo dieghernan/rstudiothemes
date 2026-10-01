@@ -12,16 +12,16 @@ CSS selector. When **RStudio** imports a `.tmTheme` file, it converts
 the theme to `.rstheme` before saving it.
 
 [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/reference/convert_to_rstudio_theme.md)
-delegates the same base conversion to
-[`rstudioapi::convertTheme()`](https://rstudio.github.io/rstudioapi/reference/convertTheme.html).
-**RStudio** performs the following steps internally:
+delegates this base conversion to
+[`rstudioapi::convertTheme()`](https://rstudio.github.io/rstudioapi/reference/convertTheme.html)
+from **rstudioapi**. **RStudio** performs these steps internally:
 
 1.  It reads the global **TextMate** settings and supported scopes.
 2.  It inserts the resulting styles into an [**ACE** CSS
     template](https://github.com/rstudio/rstudio/blob/main/src/cpp/session/resources/templates/ace_theme_template.css).
-3.  It determines whether the theme is dark from the perceived luminance
-    of its background, then compiles the **ACE** CSS into an `.rstheme`
-    file.
+3.  It determines whether the theme is dark based on the perceived
+    luminance of its background, then compiles the **ACE** CSS into an
+    `.rstheme` file.
 4.  It derives additional editor and terminal styles from the background
     and foreground colors.
 
@@ -149,7 +149,7 @@ and style into one **TextMate** rule. The reverse conversion writes the
 This process preserves scope names rather than translating one scope
 vocabulary into another. **Visual Studio Code** also defines its
 `tokenColors` rules using the **TextMate** theme syntax, so the two
-formats share the scope shown in the middle column of
+formats share the scopes shown in the middle column of
 [Table 2](#tbl-scopes). This does not imply that arbitrary
 `semanticTokenColors` keys are equivalent to **TextMate** scopes.
 

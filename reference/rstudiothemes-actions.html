@@ -125,11 +125,21 @@ prompted to continue after each theme.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p><code>install_rstudiothemes()</code> and <code>remove_rstudiothemes()</code> return <code>NULL</code>
-invisibly.</p>
-<p><code>list_rstudiothemes()</code> returns a character vector of theme names.</p>
-<p><code>try_rstudiothemes()</code> has side effects. It cycles through bundled themes,
-lets you preview each one and restores your original theme when you quit.</p>
+    <p><code>install_rstudiothemes()</code> and <code>remove_rstudiothemes()</code> are called for their
+side effects. They invisibly return a <a href="https://rdrr.io/r/base/character.html" class="external-link">character</a> string
+identifying the final <a href="https://CRAN.R-project.org/package=cli" class="external-link"><span class="pkg">cli</span></a> message, or <a href="https://rdrr.io/r/base/NULL.html" class="external-link">NULL</a> if there
+are no themes to install or remove. Outside <strong>RStudio</strong>, they return <code>NULL</code>
+visibly.</p>
+<p><code>list_rstudiothemes()</code> returns a <a href="https://rdrr.io/r/base/character.html" class="external-link">character</a> vector of
+theme names, or <a href="https://rdrr.io/r/base/NULL.html" class="external-link">NULL</a> invisibly if no bundled themes are
+installed. It returns <code>NULL</code> visibly outside <strong>RStudio</strong> when
+<code>list_installed = TRUE</code>.</p>
+<p><code>try_rstudiothemes()</code> is called for its side effects. It previews installed
+bundled themes and restores your original theme when you quit or finish
+the preview, invisibly returning a <a href="https://rdrr.io/r/base/character.html" class="external-link">character</a> string
+identifying the final <a href="https://CRAN.R-project.org/package=cli" class="external-link"><span class="pkg">cli</span></a> message. If you choose to keep a theme,
+it leaves that theme active and invisibly returns <a href="https://rdrr.io/r/base/NULL.html" class="external-link">NULL</a>.
+Outside <strong>RStudio</strong>, it returns <code>NULL</code> visibly.</p>
     </div>
     <div class="section level2">
     <h2 id="functions">Functions<a class="anchor" aria-label="anchor" href="#functions"></a></h2>
