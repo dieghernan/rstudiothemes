@@ -29,12 +29,12 @@ a temporary file created with \code{\link[=tempfile]{tempfile()}}.}
 
 \item{name}{Theme name. If \code{NULL}, the name from the input file is used.}
 
-\item{author}{Theme author. If \code{NULL}, the author is extracted from the
-input file, otherwise it defaults to "rstudiothemes R package".}
+\item{author}{Theme author. If \code{NULL}, use the author from the input file,
+falling back to "rstudiothemes R package" if no author is listed.}
 }
 \value{
-This function is called for its side effects. It writes a \code{.tmTheme} file to
-\code{outfile} and returns the file path.
+A \link[base:character]{character} string containing the path to the \code{.tmTheme}
+file written to \code{outfile}.
 }
 \description{
 Convert a \code{.json} file representing a \strong{Visual Studio Code} or \strong{Positron}

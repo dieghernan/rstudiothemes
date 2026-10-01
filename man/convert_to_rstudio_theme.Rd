@@ -17,7 +17,7 @@ convert_to_rstudio_theme(
 }
 \arguments{
 \item{path}{Path or URL to a \strong{TextMate} theme file (\code{.tmTheme} format) or a
-\strong{Visual Studio Code} theme file (\code{.json} format).}
+\strong{Visual Studio Code} or \strong{Positron} theme file (\code{.json} format).}
 
 \item{outfile}{Path where the resulting file will be written. Defaults to
 a temporary file created with \code{\link[=tempfile]{tempfile()}}.}
@@ -37,15 +37,16 @@ with the same name.\cr Default: \code{FALSE}.}
 \item{apply}{Logical. Apply the theme with \code{\link[rstudioapi:applyTheme]{rstudioapi::applyTheme()}}.}
 }
 \value{
-This function is called for its side effects. It writes a \code{.rstheme} file to
-\code{outfile} and returns the path. If \code{force} or \code{apply} is \code{TRUE}, it installs
-the theme. If \code{apply} is \code{TRUE}, it also applies the theme to your
-\strong{RStudio} IDE.
+A \link[base:character]{character} string containing the path to the \code{.rstheme}
+file written to \code{outfile}, or \link[base:NULL]{NULL} outside \strong{RStudio}. If
+\code{force} or \code{apply} is \code{TRUE}, this function also attempts to install the
+theme. If \code{apply} is \code{TRUE} and installation does not raise an error, it
+applies the theme to your \strong{RStudio} IDE.
 }
 \description{
 Convert a \code{.tmTheme} or \code{.json} file that defines a \strong{TextMate} or
-\strong{Visual Studio Code} theme and write the equivalent \strong{RStudio} \code{.rstheme}
-file.
+\strong{Visual Studio Code} or \strong{Positron} theme and write the equivalent
+\strong{RStudio} theme file (\code{.rstheme}).
 
 Optionally, the generated theme can be installed and applied to the
 \strong{RStudio} IDE.
@@ -59,13 +60,15 @@ when called from other IDEs.
 a common theme format. \href{https://tmtheme-editor.linuxbox.ninja/}{This tmTheme editor} hosts a large collection of
 \code{.tmTheme} files. The \code{.rstheme} format is specific to \strong{RStudio}.
 
-To switch editor themes, go to \verb{Tools > Global Options > Appearance > Add}
-and use the editor theme selector.
+To install a theme file, go to \verb{Tools > Global Options > Appearance > Add}.
+To switch themes, select one from the editor theme list under
+\verb{Tools > Global Options > Appearance}.
 
 \if{html}{
   \out{<div style="text-align: center">}
 
-   \figure{rstudiogui.png}{options: alt="RStudio IDE add theme UI"
+   \figure{rstudiogui.png}{options:
+       alt="RStudio Appearance settings, with Add to import a theme file"
        style="max-width:80\%;"}
 
    \out{</div>}

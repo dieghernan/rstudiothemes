@@ -15,7 +15,8 @@ read_positron_theme(path)
 file in \code{.json} format.}
 }
 \value{
-A \link[tibble:tbl_df]{tibble} containing the theme data.
+A \link[tibble:tbl_df]{tibble} containing the theme metadata, color settings
+and token scopes.
 }
 \description{
 Read a \code{.json} file representing a \strong{Visual Studio Code} or \strong{Positron}

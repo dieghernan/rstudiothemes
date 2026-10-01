@@ -86,8 +86,11 @@ NULL
 #'   these themes are used and `style` is ignored.
 #'
 #' @returns
-#' `install_rstudiothemes()` and `remove_rstudiothemes()` return `NULL`
-#' invisibly.
+#' `install_rstudiothemes()` and `remove_rstudiothemes()` are called for their
+#' side effects. They invisibly return a [character][base::character] string
+#' identifying the final \CRANpkg{cli} message, or [NULL][base::NULL] if there
+#' are no themes to install or remove. Outside **RStudio**, they return `NULL`
+#' visibly.
 #'
 #' @rdname rstudiothemes-actions
 #' @export
@@ -168,7 +171,10 @@ remove_rstudiothemes <- function(style = c("all", "dark", "light")) {
 #'   package.
 #'
 #' @returns
-#' `list_rstudiothemes()` returns a character vector of theme names.
+#' `list_rstudiothemes()` returns a [character][base::character] vector of
+#' theme names, or [NULL][base::NULL] invisibly if no bundled themes are
+#' installed. It returns `NULL` visibly outside **RStudio** when
+#' `list_installed = TRUE`.
 #'
 #' @rdname rstudiothemes-actions
 #' @export
@@ -274,8 +280,12 @@ list_pkg_rstudiothemes <- function(
 #'   prompted to continue after each theme.
 #'
 #' @returns
-#' `try_rstudiothemes()` has side effects. It cycles through bundled themes,
-#' lets you preview each one and restores your original theme when you quit.
+#' `try_rstudiothemes()` is called for its side effects. It previews installed
+#' bundled themes and restores your original theme when you quit or finish
+#' the preview, invisibly returning a [character][base::character] string
+#' identifying the final \CRANpkg{cli} message. If you choose to keep a theme,
+#' it leaves that theme active and invisibly returns [NULL][base::NULL].
+#' Outside **RStudio**, it returns `NULL` visibly.
 #'
 #' @rdname rstudiothemes-actions
 #' @export

@@ -227,7 +227,7 @@ test_that("keeping a prompted preview leaves the selected theme active", {
 })
 
 test_that("local interactive smoke test exercises real RStudio actions", {
-  # Warning! These tests would alter your theme configuration
+  # These tests alter the RStudio theme configuration.
   skip_on_cran()
   skip_if(!on_rstudio(), "Not in RStudio")
   skip_if(!interactive(), "Not interactive")
@@ -236,31 +236,31 @@ test_that("local interactive smoke test exercises real RStudio actions", {
 
   expect_snapshot(install_rstudiothemes())
 
-  # Remove all at beginning
+  # Remove all bundled themes before testing installation.
   expect_snapshot(remove_rstudiothemes())
 
-  # Clean theme list now
+  # Inspect the installed theme list.
   invisible(rstudioapi::getThemes())
 
-  # Length of this should be 0 now
+  # Confirm that no bundled themes remain installed.
   expect_length(list_rstudiothemes(), 0)
 
-  # How many themes?
+  # Count the bundled light themes.
 
   lg <- length(list_pkg_rstudiothemes("light"))
 
-  # Install only light
+  # Install only light themes.
   expect_snapshot(install_rstudiothemes("light"))
 
   expect_identical(list_rstudiothemes(), list_rstudiothemes("light"))
   expect_length(list_rstudiothemes("light"), lg)
-  # But...
+  # Explicit theme names override the requested style.
   remove_rstudiothemes()
   install_rstudiothemes("light", c("Selenized Dark", "Skeletor Syntax"))
   expect_null(list_rstudiothemes("light"))
   expect_identical(list_rstudiothemes(), c("Selenized Dark", "Skeletor Syntax"))
 
-  # Install all again
+  # Reinstall all bundled themes.
   expect_snapshot(install_rstudiothemes())
   rstudioapi::applyTheme(current_theme)
 })

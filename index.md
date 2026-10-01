@@ -2,7 +2,7 @@
 
 <!-- index.md is generated from index.qmd. Please edit that file -->
 
-# rstudiothemes <a href="https://dieghernan.github.io/rstudiothemes/"><img src="man/figures/logo.png" alt="rstudiothemes website" align="right" height="139"/></a>
+# rstudiothemes <a href="https://dieghernan.github.io/rstudiothemes/"><img src="man/figures/logo.png" alt="rstudiothemes website home" align="right" height="139"/></a>
 
 <!-- badges: start -->
 
@@ -49,7 +49,7 @@ over new features.
 
 - Convert **Visual Studio Code**, **Positron** and **TextMate** theme
   files to **RStudio** `.rstheme` files.
-- Convert themes bidirectionally between **TextMate** and **Visual
+- Convert themes in both directions between **TextMate** and **Visual
   Studio Code** or **Positron** formats.
 - Install bundled ports of popular **Visual Studio Code** and
   **Positron** themes that are ready to use in **RStudio**.
@@ -76,7 +76,7 @@ rstudioapi::applyTheme("Winter is Coming Dark Blue")
 <div class="text-center">
 
 <img src="man/figures/winteriscoming.png"
-alt="Winter is Coming Dark Blue theme" />
+alt="RStudio screenshot with the Winter is Coming Dark Blue theme applied. The editor and surrounding panes have dark blue backgrounds, with R code highlighted in contrasting colors." />
 
 </div>
 
@@ -129,7 +129,8 @@ install.packages("rstudiothemes")
 Read the documentation for the development version at
 <https://dieghernan.github.io/rstudiothemes/dev/>.
 
-You can install the development version of **rstudiothemes** with:
+You can install the development version of **rstudiothemes** with
+**pak**:
 
 ``` r
 # install.packages("pak")
@@ -159,9 +160,9 @@ features and lets you convert theme files in your browser:
 
 <https://dieghernan-themeconverter.share.connect.posit.cloud/>
 
-## Converting an existing theme
+## Convert an existing theme
 
-You can convert any **Visual Studio Code**, **Positron** or **TextMate**
+You can convert a **Visual Studio Code**, **Positron** or **TextMate**
 theme file to an **RStudio** `.rstheme` file with this workflow:
 
 1.  Start with a **Visual Studio Code**, **Positron** or **TextMate**
@@ -176,14 +177,14 @@ rstudiothemes::convert_to_rstudio_theme(
 )
 ```
 
-Alternatively, in **RStudio**, choose
-`Tools > Global Options > Appearance > Add` and select the installed
-theme.
+To apply an installed theme in **RStudio**, choose
+`Tools > Global Options > Appearance` and select it from the editor
+theme list.
 
 <div class="text-center">
 
 <img src="man/figures/rstudiogui.png" style="width:80.0%"
-alt="RStudio IDE Add Theme interface" />
+alt="RStudio Appearance options with an editor theme list and a syntax-highlighted code preview. The Add button below the list opens a file picker to install a theme." />
 
 </div>
 
@@ -193,7 +194,7 @@ The package also provides `convert_vs_to_tm_theme()` and
 `convert_tm_to_vs_theme()` for conversion between **Visual Studio
 Code**, **Positron** and **TextMate** formats.
 
-## Creating themes from scratch
+## Create themes from scratch
 
 **rstudiothemes** does not provide a built-in theme editor. To create
 themes from scratch, use one of these tools and then convert the result:

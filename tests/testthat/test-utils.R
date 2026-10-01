@@ -1,9 +1,9 @@
 test_that("colors are normalized to uppercase hexadecimal values", {
-  # Not parsed
+  # Preserve text that is not a color.
   not <- "bold italic underline"
   expect_identical(not, col2hex(not))
 
-  # Expand colors
+  # Expand shorthand hexadecimal colors.
   xpan <- "#FFF"
   expect_identical("#FFFFFF", expand_hex(xpan))
   expect_identical("#FFFFFF", col2hex(xpan))
@@ -12,12 +12,12 @@ test_that("colors are normalized to uppercase hexadecimal values", {
   expect_identical("not_a_color", expand_hex("not_a_color"))
   expect_identical(col2hex("not_a_color"), "not_a_color")
 
-  # Remove alpha if not needed
+  # Omit the alpha channel for opaque colors.
   alpha_1 <- "#FFF000FF"
 
   expect_identical("#FFF000", col2hex(alpha_1))
 
-  # Keep alpha
+  # Preserve the alpha channel for translucent colors.
   hex_alpha <- "#ff00008f"
 
   expect_identical(col2hex(hex_alpha), "#FF00008F")
@@ -38,22 +38,22 @@ test_that("invalid argument choices produce contextual errors and hints", {
     match_arg_pretty(arg_one)
   }
 
-  # Single value no match
+  # Reject a single unmatched value.
   expect_snapshot(my_fun("error here"), error = TRUE)
 
-  # Several values no match
+  # Reject multiple unmatched values.
   expect_snapshot(my_fun(c("an", "error")), error = TRUE)
 
-  # One value regex
+  # Suggest a matching value for a unique partial match.
   expect_snapshot(my_fun("5"), error = TRUE)
-  # Several value regex
+  # Do not suggest a value for an ambiguous partial match.
   expect_snapshot(my_fun("00"), error = TRUE)
 
   my_fun2 <- function(year = 20) {
     match_arg_pretty(year)
   }
 
-  # Pass more options than expected
+  # Reject multiple values when only one is allowed.
   expect_snapshot(my_fun2(c(1, 2)), error = TRUE)
 })
 

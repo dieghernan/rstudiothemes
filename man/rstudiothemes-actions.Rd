@@ -39,13 +39,23 @@ package.}
 prompted to continue after each theme.}
 }
 \value{
-\code{install_rstudiothemes()} and \code{remove_rstudiothemes()} return \code{NULL}
-invisibly.
+\code{install_rstudiothemes()} and \code{remove_rstudiothemes()} are called for their
+side effects. They invisibly return a \link[base:character]{character} string
+identifying the final \CRANpkg{cli} message, or \link[base:NULL]{NULL} if there
+are no themes to install or remove. Outside \strong{RStudio}, they return \code{NULL}
+visibly.
 
-\code{list_rstudiothemes()} returns a character vector of theme names.
+\code{list_rstudiothemes()} returns a \link[base:character]{character} vector of
+theme names, or \link[base:NULL]{NULL} invisibly if no bundled themes are
+installed. It returns \code{NULL} visibly outside \strong{RStudio} when
+\code{list_installed = TRUE}.
 
-\code{try_rstudiothemes()} has side effects. It cycles through bundled themes,
-lets you preview each one and restores your original theme when you quit.
+\code{try_rstudiothemes()} is called for its side effects. It previews installed
+bundled themes and restores your original theme when you quit or finish
+the preview, invisibly returning a \link[base:character]{character} string
+identifying the final \CRANpkg{cli} message. If you choose to keep a theme,
+it leaves that theme active and invisibly returns \link[base:NULL]{NULL}.
+Outside \strong{RStudio}, it returns \code{NULL} visibly.
 }
 \description{
 Install, list, preview or remove the \strong{RStudio} themes included in

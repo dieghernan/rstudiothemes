@@ -5,7 +5,8 @@
 #' whether themes can be applied to the IDE.
 #'
 #' @returns
-#' `TRUE` if running in **RStudio**, `FALSE` otherwise.
+#' A [logical][base::logical] value, `TRUE` if running in **RStudio** and
+#' `FALSE` otherwise.
 #'
 #' @family helpers
 #' @export

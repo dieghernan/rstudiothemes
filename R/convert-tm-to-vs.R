@@ -2,14 +2,14 @@
 #'
 #' @description
 #' Convert a `.tmTheme` file representing a **TextMate** theme and write the
-#' equivalent **Visual Studio Code** theme file (`.json`).
+#' equivalent **Visual Studio Code** or **Positron** theme file (`.json`).
 #'
 #' @inheritParams read_tm_theme path
 #' @inheritParams convert_vs_to_tm_theme outfile name author
 #'
 #' @returns
-#' This function is called for its side effects. It writes a `.json` theme file
-#' to `outfile` and returns the path.
+#' A [character][base::character] string containing the path to the `.json`
+#' theme file written to `outfile`.
 #'
 #' @seealso [read_tm_theme()] to inspect the input theme and [read_vs_theme()]
 #'   to inspect the converted theme.

@@ -13,7 +13,7 @@ test_that("full themes retain metadata and semantic token colors", {
   expect_identical(res[res$name == "name", ]$value, "Tokyo Night")
   expect_identical(res[res$name == "type", ]$value, "dark")
 
-  # Extract semanticTokenColors
+  # Extract `semanticTokenColors`.
   expect_contains(res$section, "semanticTokenColors")
 })
 

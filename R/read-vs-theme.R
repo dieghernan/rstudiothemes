@@ -200,17 +200,7 @@ read_vs_theme <- function(path) {
 #' @export
 read_positron_theme <- read_vs_theme
 
-#' Read and clean JSON data from a theme file
-#'
-#' Read JSON after removing inline comments and trailing commas, then parse and
-#' clean the result.
-#'
-#' @param local_file Path to a JSON file.
-#'
-#' @returns
-#' A parsed list structure containing the cleaned JSON data.
-#'
-#' @noRd
+# Parse theme JSON after removing inline comments and trailing commas.
 safe_read_json <- function(local_file) {
   lns <- readLines(local_file, warn = FALSE)
 

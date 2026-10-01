@@ -62,15 +62,7 @@ expand_hex <- function(x) {
   x
 }
 
-#' Match an argument with a clear error message
-#'
-#' @param arg Argument to match.
-#' @param choices Allowed values for `arg`.
-#'
-#' @returns
-#' The matched argument value.
-#'
-#' @noRd
+# Match an argument against allowed values with a clear error message.
 match_arg_pretty <- function(arg, choices) {
   arg_name <- as.character(substitute(arg)) # nolint
   sys_par <- sys.parent()

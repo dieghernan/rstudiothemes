@@ -7,7 +7,8 @@
 #' @param path Path or URL to a **TextMate** theme file in `.tmTheme` format.
 #'
 #' @returns
-#' A [tibble][tibble::tbl_df()] containing the theme data.
+#' A [tibble][tibble::tbl_df] containing the theme metadata, color settings
+#' and token scopes.
 #'
 #' @seealso [convert_tm_to_vs_theme()] and [convert_to_rstudio_theme()] to
 #'   convert **TextMate** themes.

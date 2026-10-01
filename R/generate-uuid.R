@@ -1,7 +1,8 @@
-#' Generate random UUIDs
+#' Generate UUIDs
 #'
 #' @description
-#' Generate version 4 pseudo-random Universally Unique Identifiers (UUIDs).
+#' Generate version 4 universally unique identifiers (UUIDs), randomly or
+#' deterministically from a hint.
 #'
 #' @details
 #' This helper generates a
@@ -9,10 +10,10 @@
 #' identify generated theme versions.
 #'
 #' @param hint Optional character string or object coercible with
-#'   [as.character()], used as a random seed.
+#'   [as.character()], used to derive a reproducible UUID.
 #'
 #' @returns
-#' A character string representing a valid UUID.
+#' A [character][base::character] string representing a version 4 UUID.
 #'
 #' @source Adapted from an unreleased version of `uuid()` from
 #'   \CRANpkg{ids}.

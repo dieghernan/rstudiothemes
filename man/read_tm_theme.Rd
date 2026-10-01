@@ -11,7 +11,8 @@ read_tm_theme(path)
 \item{path}{Path or URL to a \strong{TextMate} theme file in \code{.tmTheme} format.}
 }
 \value{
-A \link[tibble:tbl_df]{tibble} containing the theme data.
+A \link[tibble:tbl_df]{tibble} containing the theme metadata, color settings
+and token scopes.
 }
 \description{
 Read a \code{.tmTheme} XML file representing a \strong{TextMate} or \strong{Sublime Text}

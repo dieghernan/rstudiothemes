@@ -3,7 +3,7 @@ test_that("conversion rejects invalid paths and missing required colors", {
   expect_snapshot(error = TRUE, convert_vs_to_tm_theme("a.txt"))
   expect_snapshot(error = TRUE, convert_vs_to_tm_theme("a.json"))
 
-  # Theme with missing values
+  # Use a theme with missing values.
   vstheme <- system.file("ext/test-color-theme.json", package = "rstudiothemes")
   miss <- jsonlite::read_json(vstheme)
   miss$colors$editor.background <- NULL

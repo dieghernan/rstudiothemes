@@ -3,7 +3,7 @@
 \encoding{UTF-8}
 \name{generate_uuid}
 \alias{generate_uuid}
-\title{Generate random UUIDs}
+\title{Generate UUIDs}
 \source{
 Adapted from an unreleased version of \code{uuid()} from
 \CRANpkg{ids}.
@@ -13,13 +13,14 @@ generate_uuid(hint = NULL)
 }
 \arguments{
 \item{hint}{Optional character string or object coercible with
-\code{\link[=as.character]{as.character()}}, used as a random seed.}
+\code{\link[=as.character]{as.character()}}, used to derive a reproducible UUID.}
 }
 \value{
-A character string representing a valid UUID.
+A \link[base:character]{character} string representing a version 4 UUID.
 }
 \description{
-Generate version 4 pseudo-random Universally Unique Identifiers (UUIDs).
+Generate version 4 universally unique identifiers (UUIDs), randomly or
+deterministically from a hint.
 }
 \details{
 This helper generates a
