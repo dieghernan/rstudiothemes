@@ -123,7 +123,8 @@ test_that("guide colors produce ruler and indent guide CSS", {
 })
 
 test_that("Visual Studio Code input is converted through TextMate", {
-  converted_path <- NULL
+  state <- new.env(parent = emptyenv())
+  state$converted_path <- NULL
   local_mock_rstudio_theme_build()
 
   tmtheme <- system.file("ext/test-minimal.tmTheme", package = "rstudiothemes")
@@ -132,7 +133,7 @@ test_that("Visual Studio Code input is converted through TextMate", {
     outfile,
     name = NULL
   ) {
-    converted_path <<- outfile
+    state$converted_path <- outfile
     file.copy(tmtheme, outfile, overwrite = TRUE)
     outfile
   })
@@ -146,21 +147,22 @@ test_that("Visual Studio Code input is converted through TextMate", {
   result <- convert_to_rstudio_theme(vstheme, outfile = outfile)
 
   expect_identical(result, outfile)
-  expect_match(converted_path, "[.]tmTheme$")
+  expect_match(state$converted_path, "[.]tmTheme$")
   expect_true(file.exists(outfile))
 })
 
 test_that("successful installation applies the requested theme", {
-  added <- NULL
-  applied <- NULL
+  state <- new.env(parent = emptyenv())
+  state$added <- NULL
+  state$applied <- NULL
   local_mock_rstudio_theme_build()
   local_mocked_bindings(
     rstudioapi_add_theme = function(theme, force = TRUE) {
-      added <<- list(theme = theme, force = force)
+      state$added <- list(theme = theme, force = force)
       "Installed theme"
     },
     rstudioapi_apply_theme = function(theme) {
-      applied <<- theme
+      state$applied <- theme
     }
   )
 
@@ -178,19 +180,20 @@ test_that("successful installation applies the requested theme", {
     invisible(result)
   })
   expect_identical(result, outfile)
-  expect_identical(added, list(theme = outfile, force = TRUE))
-  expect_identical(applied, "Applied theme")
+  expect_identical(state$added, list(theme = outfile, force = TRUE))
+  expect_identical(state$applied, "Applied theme")
 })
 
 test_that("installation warnings still allow an existing theme to be applied", {
-  applied <- NULL
+  state <- new.env(parent = emptyenv())
+  state$applied <- NULL
   local_mock_rstudio_theme_build()
   local_mocked_bindings(
     rstudioapi_add_theme = function(theme, force = TRUE) {
       warning("Theme {already} exists", call. = FALSE)
     },
     rstudioapi_apply_theme = function(theme) {
-      applied <<- theme
+      state$applied <- theme
     }
   )
 
@@ -207,18 +210,19 @@ test_that("installation warnings still allow an existing theme to be applied", {
     invisible(result)
   })
   expect_identical(result, outfile)
-  expect_identical(applied, "Converted Theme")
+  expect_identical(state$applied, "Converted Theme")
 })
 
 test_that("installation errors prevent the theme from being applied", {
-  applied <- NULL
+  state <- new.env(parent = emptyenv())
+  state$applied <- NULL
   local_mock_rstudio_theme_build()
   local_mocked_bindings(
     rstudioapi_add_theme = function(theme, force = TRUE) {
       stop("Cannot install {theme}", call. = FALSE)
     },
     rstudioapi_apply_theme = function(theme) {
-      applied <<- theme
+      state$applied <- theme
     }
   )
 
@@ -235,5 +239,5 @@ test_that("installation errors prevent the theme from being applied", {
     invisible(result)
   })
   expect_identical(result, outfile)
-  expect_null(applied)
+  expect_null(state$applied)
 })

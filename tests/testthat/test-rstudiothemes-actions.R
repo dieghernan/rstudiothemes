@@ -109,7 +109,8 @@ test_that("custom installation failures report uncopied theme files", {
 })
 
 test_that("default installation adds every selected theme", {
-  added <- character()
+  state <- new.env(parent = emptyenv())
+  state$added <- character()
 
   local_mocked_bindings(
     require_rstudio = function(...) TRUE,
@@ -117,12 +118,12 @@ test_that("default installation adds every selected theme", {
       c("theme-a.rstheme", "theme-b.rstheme")
     },
     rstudioapi_add_theme = function(theme, force = TRUE) {
-      added <<- c(added, theme)
+      state$added <- c(state$added, theme)
     }
   )
 
   expect_snapshot(install_rstudiothemes())
-  expect_identical(added, c("theme-a.rstheme", "theme-b.rstheme"))
+  expect_identical(state$added, c("theme-a.rstheme", "theme-b.rstheme"))
 })
 
 test_that("empty installation selections stop without side effects", {
@@ -144,19 +145,20 @@ test_that("RStudio actions stop cleanly in other sessions", {
 })
 
 test_that("removal deletes every installed bundled theme", {
-  removed <- character()
+  state <- new.env(parent = emptyenv())
+  state$removed <- character()
 
   local_mocked_bindings(
     require_rstudio = function(...) TRUE,
     list_rstudiothemes = function(...) c("theme-a", "theme-b"),
     rstudioapi_remove_theme = function(theme) {
-      removed <<- c(removed, theme)
+      state$removed <- c(state$removed, theme)
     }
   )
 
   expect_snapshot(remove_rstudiothemes())
 
-  expect_identical(removed, c("theme-a", "theme-b"))
+  expect_identical(state$removed, c("theme-a", "theme-b"))
 })
 
 test_that("removal stops cleanly when no bundled themes are installed", {

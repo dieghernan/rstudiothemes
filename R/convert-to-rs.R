@@ -306,6 +306,12 @@ convert_to_rstudio_theme <- function(
     options = sass_options(output_style = output_style)
   )
 
+  install_converted_theme(outfile, theme_name, force, apply)
+
+  outfile
+}
+
+install_converted_theme <- function(outfile, theme_name, force, apply) {
   # Install the theme.
   if (any(apply, force)) {
     cli::cli_alert_info("Installing RStudio theme {.val {theme_name}}.")
@@ -332,8 +338,6 @@ convert_to_rstudio_theme <- function(
       rstudioapi_apply_theme(theme_name)
     }
   }
-
-  outfile
 }
 
 # nocov start
