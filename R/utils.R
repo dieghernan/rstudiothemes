@@ -127,7 +127,7 @@ ensure_null <- function(x) {
   x <- as.vector(x)
   x[is.null(x)] <- NA
   x[is.na(x)] <- NA
-  x[nchar(as.character(x)) == 0] <- NA
+  x[!nzchar(as.character(x), keepNA = TRUE)] <- NA
   if (all(is.na(x))) {
     return(NULL)
   }

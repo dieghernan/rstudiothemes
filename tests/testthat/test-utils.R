@@ -5,17 +5,17 @@ test_that("colors are normalized to uppercase hexadecimal values", {
 
   # Expand shorthand hexadecimal colors.
   xpan <- "#FFF"
-  expect_identical("#FFFFFF", expand_hex(xpan))
-  expect_identical("#FFFFFF", col2hex(xpan))
-  expect_identical("#FF002211", expand_hex("#F021"))
-  expect_identical("#FF002211", col2hex("#F021"))
-  expect_identical("not_a_color", expand_hex("not_a_color"))
+  expect_identical(expand_hex(xpan), "#FFFFFF")
+  expect_identical(col2hex(xpan), "#FFFFFF")
+  expect_identical(expand_hex("#F021"), "#FF002211")
+  expect_identical(col2hex("#F021"), "#FF002211")
+  expect_identical(expand_hex("not_a_color"), "not_a_color")
   expect_identical(col2hex("not_a_color"), "not_a_color")
 
   # Omit the alpha channel for opaque colors.
   alpha_1 <- "#FFF000FF"
 
-  expect_identical("#FFF000", col2hex(alpha_1))
+  expect_identical(col2hex(alpha_1), "#FFF000")
 
   # Preserve the alpha channel for translucent colors.
   hex_alpha <- "#ff00008f"
