@@ -173,10 +173,8 @@ test_that("removal stops cleanly when no bundled themes are installed", {
 test_that("installed listings retain only bundled theme names", {
   local_mocked_bindings(
     require_rstudio = function(...) TRUE,
-    list_pkg_rstudiothemes = function(
-      style = c("all", "dark", "light"),
-      themes = NULL
-    ) {
+    list_pkg_rstudiothemes = function(style = c("all", "dark", "light"),
+                                      themes = NULL) {
       structure(c("/tmp/one", "/tmp/two"), names = c("Theme One", "Theme Two"))
     },
     rstudioapi_get_themes = function() {
