@@ -117,6 +117,29 @@ test_that("unnamed themes require an explicit name", {
   expect_snapshot(error = TRUE, convert_vs_to_tm_theme(fpath))
 })
 
+test_that("TextMate colors follow mapping priority and fall back when absent", {
+  mapping <- theme_mapping()
+  mapping <- mapping[order(mapping$priority, decreasing = TRUE), ]
+  local_mocked_bindings(theme_mapping = function() mapping)
+
+  vs_colors <- data.frame(
+    section = "colors",
+    name = c(
+      "background",
+      "editor.background",
+      "editor.foreground",
+      "editor.selectionBackground"
+    ),
+    foreground = c("#222222", "#111111", "#EEEEEE", "#555555")
+  )
+  settings <- tmtheme_settings_df(vs_colors)
+  expect_identical(settings$color[settings$tm == "background"], "#111111")
+
+  vs_colors$foreground[vs_colors$name == "editor.background"] <- NA_character_
+  settings <- tmtheme_settings_df(vs_colors)
+  expect_identical(settings$color[settings$tm == "background"], "#222222")
+})
+
 test_that("missing optional colors receive TextMate defaults", {
   mapping <- read.csv(
     system.file("csv/mapping.csv", package = "rstudiothemes"),

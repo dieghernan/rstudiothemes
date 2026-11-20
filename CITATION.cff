@@ -8,7 +8,7 @@ message: 'To cite package "rstudiothemes" in publications use:'
 type: software
 license: MIT
 title: 'rstudiothemes: Create and Install Custom ''RStudio'' Themes'
-version: 1.2.0
+version: 1.2.0.9000
 doi: 10.32614/CRAN.package.rstudiothemes
 identifiers:
 - type: doi
@@ -33,7 +33,7 @@ preferred-citation:
     orcid: https://orcid.org/0000-0001-8457-4658
   doi: 10.32614/CRAN.package.rstudiothemes
   year: '2026'
-  version: 1.2.0
+  version: 1.2.0.9000
   url: https://dieghernan.github.io/rstudiothemes/
   abstract: Create, convert and install custom RStudio editor themes from Visual Studio
     Code, Positron and TextMate theme files. Convert themes between TextMate, Visual
@@ -71,8 +71,7 @@ references:
   doi: 10.32614/R.manuals
   version: '>= 4.1.0'
 - type: software
-  title: cli
-  abstract: 'cli: Helpers for Developing Command Line Interfaces'
+  title: 'cli: Helpers for Developing Command Line Interfaces'
   notes: Imports
   url: https://cli.r-lib.org
   repository: https://CRAN.R-project.org/package=cli
@@ -83,8 +82,7 @@ references:
   year: '2026'
   doi: 10.32614/CRAN.package.cli
 - type: software
-  title: colorspace
-  abstract: 'colorspace: A Toolbox for Manipulating and Assessing Colors and Palettes'
+  title: 'colorspace: A Toolbox for Manipulating and Assessing Colors and Palettes'
   notes: Imports
   url: https://zeileis.codeberg.page/colorspace/
   repository: https://CRAN.R-project.org/package=colorspace
@@ -123,8 +121,7 @@ references:
   year: '2026'
   doi: 10.32614/CRAN.package.colorspace
 - type: software
-  title: dplyr
-  abstract: 'dplyr: A Grammar of Data Manipulation'
+  title: 'dplyr: A Grammar of Data Manipulation'
   notes: Imports
   url: https://dplyr.tidyverse.org
   repository: https://CRAN.R-project.org/package=dplyr
@@ -148,8 +145,7 @@ references:
   year: '2026'
   doi: 10.32614/CRAN.package.dplyr
 - type: software
-  title: grDevices
-  abstract: 'R: A Language and Environment for Statistical Computing'
+  title: 'R: A Language and Environment for Statistical Computing'
   notes: Imports
   authors:
   - name: R Core Team
@@ -161,8 +157,7 @@ references:
   year: '2026'
   doi: 10.32614/R.manuals
 - type: software
-  title: jsonlite
-  abstract: 'jsonlite: A Simple and Robust JSON Parser and Generator for R'
+  title: 'jsonlite: A Simple and Robust JSON Parser and Generator for R'
   notes: Imports
   url: https://jeroen.r-universe.dev/jsonlite
   repository: https://CRAN.R-project.org/package=jsonlite
@@ -171,11 +166,10 @@ references:
     given-names: Jeroen
     email: jeroenooms@gmail.com
     orcid: https://orcid.org/0000-0002-4035-0289
-  year: '2026'
+  year: '2025'
   doi: 10.32614/CRAN.package.jsonlite
 - type: software
-  title: rstudioapi
-  abstract: 'rstudioapi: Safely Access the RStudio API'
+  title: 'rstudioapi: Safely Access the RStudio API'
   notes: Imports
   url: https://rstudio.github.io/rstudioapi/
   repository: https://CRAN.R-project.org/package=rstudioapi
@@ -195,35 +189,33 @@ references:
   year: '2026'
   doi: 10.32614/CRAN.package.rstudioapi
 - type: software
-  title: sass
-  abstract: 'sass: Syntactically Awesome Style Sheets (''Sass'')'
+  title: 'sass: Syntactically Awesome Style Sheets (''Sass'')'
   notes: Imports
   url: https://rstudio.github.io/sass/
   repository: https://CRAN.R-project.org/package=sass
   authors:
   - family-names: Cheng
     given-names: Joe
-    email: joe@rstudio.com
+    email: joe@posit.co
   - family-names: Mastny
     given-names: Timothy
     email: tim.mastny@gmail.com
   - family-names: Iannone
     given-names: Richard
-    email: rich@rstudio.com
+    email: rich@posit.co
     orcid: https://orcid.org/0000-0003-3925-190X
   - family-names: Schloerke
     given-names: Barret
-    email: barret@rstudio.com
+    email: barret@posit.co
     orcid: https://orcid.org/0000-0001-9986-114X
   - family-names: Sievert
     given-names: Carson
-    email: carson@rstudio.com
+    email: carson@posit.co
     orcid: https://orcid.org/0000-0002-4958-2844
   year: '2026'
   doi: 10.32614/CRAN.package.sass
 - type: software
-  title: tidyr
-  abstract: 'tidyr: Tidy Messy Data'
+  title: 'tidyr: Tidy Messy Data'
   notes: Imports
   url: https://tidyr.tidyverse.org
   repository: https://CRAN.R-project.org/package=tidyr
@@ -236,37 +228,10 @@ references:
     email: davis@posit.co
   - family-names: Girlich
     given-names: Maximilian
-  year: '2026'
+  year: '2025'
   doi: 10.32614/CRAN.package.tidyr
 - type: software
-  title: tools
-  abstract: 'R: A Language and Environment for Statistical Computing'
-  notes: Imports
-  authors:
-  - name: R Core Team
-    website: https://ror.org/02zz1nj61
-  institution:
-    name: R Foundation for Statistical Computing
-    website: https://ror.org/05qewa988
-    address: Vienna, Austria
-  year: '2026'
-  doi: 10.32614/R.manuals
-- type: software
-  title: utils
-  abstract: 'R: A Language and Environment for Statistical Computing'
-  notes: Imports
-  authors:
-  - name: R Core Team
-    website: https://ror.org/02zz1nj61
-  institution:
-    name: R Foundation for Statistical Computing
-    website: https://ror.org/05qewa988
-    address: Vienna, Austria
-  year: '2026'
-  doi: 10.32614/R.manuals
-- type: software
-  title: xml2
-  abstract: 'xml2: Parse XML'
+  title: 'xml2: Parse XML'
   notes: Imports
   url: https://xml2.r-lib.org
   repository: https://CRAN.R-project.org/package=xml2
@@ -281,8 +246,7 @@ references:
   year: '2026'
   doi: 10.32614/CRAN.package.xml2
 - type: software
-  title: knitr
-  abstract: 'knitr: A General-Purpose Package for Dynamic Report Generation in R'
+  title: 'knitr: A General-Purpose Package for Dynamic Report Generation in R'
   notes: Suggests
   url: https://yihui.org/knitr/
   repository: https://CRAN.R-project.org/package=knitr
@@ -294,8 +258,7 @@ references:
   year: '2026'
   doi: 10.32614/CRAN.package.knitr
 - type: software
-  title: quarto
-  abstract: 'quarto: R Interface to ''Quarto'' Markdown Publishing System'
+  title: 'quarto: R Interface to ''Quarto'' Markdown Publishing System'
   notes: Suggests
   url: https://quarto-dev.github.io/quarto-r/
   repository: https://CRAN.R-project.org/package=quarto
@@ -311,8 +274,7 @@ references:
   year: '2026'
   doi: 10.32614/CRAN.package.quarto
 - type: software
-  title: testthat
-  abstract: 'testthat: Unit Testing for R'
+  title: 'testthat: Unit Testing for R'
   notes: Suggests
   url: https://testthat.r-lib.org
   repository: https://CRAN.R-project.org/package=testthat
@@ -324,8 +286,7 @@ references:
   doi: 10.32614/CRAN.package.testthat
   version: '>= 3.0.0'
 - type: software
-  title: withr
-  abstract: 'withr: Run Code ''With'' Temporarily Modified Global State'
+  title: 'withr: Run Code ''With'' Temporarily Modified Global State'
   notes: Suggests
   url: https://withr.r-lib.org
   repository: https://CRAN.R-project.org/package=withr

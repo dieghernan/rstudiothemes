@@ -52,7 +52,7 @@ copy_theme_files <- function(from, to, overwrite = TRUE) {
 #'
 #' @section Functions:
 #' - `install_rstudiothemes()` installs bundled themes.
-#' - `remove_rstudiothemes()` removes bundled themes.
+#' - `remove_rstudiothemes()` removes installed copies of bundled themes.
 #' - `list_rstudiothemes()` lists installed or available themes.
 #' - `try_rstudiothemes()` previews bundled themes.
 #'
@@ -113,7 +113,7 @@ install_rstudiothemes <- function(
 
   if (!is.null(destdir)) {
     cli::cli_alert_info(
-      "Installing {length(theme_files)} theme{?s} to {.path {destdir}}."
+      "Copying {length(theme_files)} theme{?s} to {.path {destdir}}."
     )
     destdir <- path.expand(destdir)
 
@@ -125,17 +125,20 @@ install_rstudiothemes <- function(
     if (!all(copied)) {
       failed <- basename(theme_files[!copied]) # nolint
       cli::cli_abort(c(
-        "Could not install all requested themes.",
+        "Could not copy all requested themes.",
         "x" = paste0(
           "Failed to copy {length(failed)} theme file{?s}: ",
           "{.file {failed}}."
         )
       ))
     }
-  } else {
-    for (theme in theme_files) {
-      suppressWarnings(rstudioapi_add_theme(theme, force = TRUE))
-    }
+    return(invisible(cli::cli_alert_success(
+      "Copied {length(theme_files)} theme{?s} to {.path {destdir}}."
+    )))
+  }
+
+  for (theme in theme_files) {
+    suppressWarnings(rstudioapi_add_theme(theme, force = TRUE))
   }
   cli::cli_alert_success("Installed {length(theme_files)} theme{?s}.")
   cli::cli_alert_info(
@@ -276,8 +279,8 @@ list_pkg_rstudiothemes <- function(
   allt[!dark]
 }
 
-#' @param delay Number of seconds to wait between themes. Set to 0 to be
-#'   prompted to continue after each theme.
+#' @param delay Number of seconds to wait before advancing automatically.
+#'   Set to `0` to wait for keyboard input after each theme.
 #'
 #' @returns
 #' `try_rstudiothemes()` is called for its side effects. It previews installed
@@ -301,7 +304,7 @@ try_rstudiothemes <- function(
     return(NULL)
   }
 
-  # Filter themes by style before applying user selections.
+  # Use explicit theme names when supplied. Otherwise, filter by style.
   if (!is.null(themes)) {
     # Validate theme names.
     all_installed <- intersect(themes, list_rstudiothemes())
@@ -320,12 +323,14 @@ try_rstudiothemes <- function(
   cli::cli_alert(
     "Trying {length(try_themes)} theme{?s} from {.pkg rstudiothemes}."
   )
-  cli::cli_alert("At the prompt, choose one of:")
-  cli::cli_bullets(c(
-    "*" = "{.kbd n} or {.kbd SPACE} to try the {.strong next} theme.",
-    "*" = "{.kbd k} to {.strong keep} that theme.",
-    "*" = "{.kbd q} to {.strong quit} and restore your original theme."
-  ))
+  if (isTRUE(delay <= 0)) {
+    cli::cli_alert("At the prompt, choose one of:")
+    cli::cli_bullets(c(
+      "*" = "{.kbd n} or {.kbd SPACE} to try the {.strong next} theme.",
+      "*" = "{.kbd k} to {.strong keep} that theme.",
+      "*" = "{.kbd q} to {.strong quit} and restore your original theme."
+    ))
+  }
   for (theme in try_themes) {
     cli::cli_bullets(c("*" = "{.val {theme}}"))
     rstudioapi_apply_theme(theme)

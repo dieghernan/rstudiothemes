@@ -5,7 +5,9 @@
 #' equivalent **Visual Studio Code** or **Positron** theme file (`.json`).
 #'
 #' @inheritParams read_tm_theme path
-#' @inheritParams convert_vs_to_tm_theme outfile name author
+#' @inheritParams convert_vs_to_tm_theme outfile name
+#' @param author Theme author. If `NULL`, use the author from the input file,
+#'   falling back to `rstudiothemes R package` if no author is listed.
 #'
 #' @returns
 #' A [character][base::character] string containing the path to the `.json`

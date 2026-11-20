@@ -8,8 +8,9 @@
 #' @param outfile Path where the resulting file will be written. Defaults to
 #'   a temporary file created with [tempfile()].
 #' @param name Theme name. If `NULL`, the name from the input file is used.
-#' @param author Theme author. If `NULL`, use the author from the input file,
-#'   falling back to "rstudiothemes R package" if no author is listed.
+#' @param author Theme author. If `NULL`, append `rstudiothemes R package` to
+#'   the author from the input file or use the package credit alone if the file
+#'   lists no author.
 #'
 #' @returns
 #' A [character][base::character] string containing the path to the `.tmTheme`
@@ -120,25 +121,18 @@ tmtheme_settings_df <- function(vs_df) {
   maps <- theme_mapping()
 
   end <- dplyr::inner_join(
-    maps,
+    maps[!is.na(maps$vscode), ],
     vs_df[vs_df$section == "colors", ],
     by = c("vscode" = "name")
   )
 
-  end <- end[, c("tm", "foreground")]
-  colnames(end) <- c("tm", "color")
-  end <- dplyr::distinct(end)
-  end <- end[!is.na(end$color), ]
+  end <- end[!is.na(end$foreground), ]
 
-  # Keep the first mapped value for each TextMate color.
-  end$rank <- seq_len(nrow(end))
-  end <- dplyr::grouped_df(end, "tm")
-  end <- dplyr::slice_head(end, n = 1)
-  end <- dplyr::ungroup(end)
-  end <- dplyr::arrange(end, dplyr::pick(dplyr::all_of("rank")))[c(
-    "tm",
-    "color"
-  )]
+  # Select by priority while preserving the output order of the chosen rows.
+  by_priority <- order(end$priority)
+  chosen <- by_priority[!duplicated(end$tm[by_priority])]
+  end <- end[sort(chosen), c("tm", "foreground")]
+  names(end) <- c("tm", "color")
 
   # Require the settings needed to derive the remaining defaults.
   check_vals <- c("background", "foreground", "selection") %in% end$tm

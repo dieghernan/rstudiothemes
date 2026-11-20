@@ -1357,6 +1357,8 @@
 
 .ace_keyword.ace_operator.ace_word { color: #C678DD; }
 
+.ace_keyword.ace_operator.ace_wordlike { color: #C678DD; }
+
 .ace_keyword.ace_other { color: #E06C75; }
 
 .ace_keyword.ace_other.ace_special-method { color: #61AFEF; }
@@ -1381,9 +1383,13 @@
 
 .ace_markup.ace_changed.ace_diff { color: #E5C07B; }
 
+.ace_markup.ace_changed.ace_git-commit { color: #E5C07B; }
+
 .ace_markup.ace_deleted { color: #E06C75; }
 
 .ace_markup.ace_deleted.ace_diff { color: #E06C75; }
+
+.ace_markup.ace_deleted.ace_git-commit { color: #E06C75; }
 
 .ace_markup.ace_heading { color: #E06C75; }
 
@@ -1394,6 +1400,8 @@
 .ace_markup.ace_inserted { color: #98C379; }
 
 .ace_markup.ace_inserted.ace_diff { color: #98C379; }
+
+.ace_markup.ace_inserted.ace_git-commit { color: #98C379; }
 
 .ace_markup.ace_italic { color: #C678DD; }
 

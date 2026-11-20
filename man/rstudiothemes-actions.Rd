@@ -35,8 +35,8 @@ themes to a non-standard directory instead.}
 \CRANpkg{rstudiothemes} themes. If \code{FALSE}, list themes available in the
 package.}
 
-\item{delay}{Number of seconds to wait between themes. Set to 0 to be
-prompted to continue after each theme.}
+\item{delay}{Number of seconds to wait before advancing automatically.
+Set to \code{0} to wait for keyboard input after each theme.}
 }
 \value{
 \code{install_rstudiothemes()} and \code{remove_rstudiothemes()} are called for their
@@ -71,7 +71,7 @@ when called from other IDEs. The exception is
 
 \itemize{
 \item \code{install_rstudiothemes()} installs bundled themes.
-\item \code{remove_rstudiothemes()} removes bundled themes.
+\item \code{remove_rstudiothemes()} removes installed copies of bundled themes.
 \item \code{list_rstudiothemes()} lists installed or available themes.
 \item \code{try_rstudiothemes()} previews bundled themes.
 }

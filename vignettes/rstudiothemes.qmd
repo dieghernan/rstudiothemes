@@ -46,7 +46,7 @@ list_rstudiothemes(list_installed = FALSE)
 
 ## Preview themes
 
-You can preview installed themes from an **R** session:
+In **RStudio**, run `try_rstudiothemes()` to preview installed themes:
 
 ```{r}
 #| eval: false

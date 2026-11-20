@@ -36,20 +36,18 @@
     Code
       install_rstudiothemes(destdir = dest_dir)
     Message
-      i Installing 1 theme to '<themes>'.
-      v Installed 1 theme.
-      i Use `rstudiothemes::list_rstudiothemes()` to list installed themes.
-      i Use `rstudiothemes::try_rstudiothemes()` to preview installed themes.
+      i Copying 1 theme to '<themes>'.
+      v Copied 1 theme to '<themes>'.
 
 # custom installation failures report uncopied theme files
 
     Code
       install_rstudiothemes(destdir = dest_dir)
     Message
-      i Installing 2 themes to '<themes>'.
+      i Copying 2 themes to '<themes>'.
     Condition
       Error in `install_rstudiothemes()`:
-      ! Could not install all requested themes.
+      ! Could not copy all requested themes.
       x Failed to copy 1 theme file: 'two.rstheme'.
 
 # default installation adds every selected theme
@@ -82,10 +80,6 @@
       try_rstudiothemes(delay = 1)
     Message
       > Trying 2 themes from rstudiothemes.
-      > At the prompt, choose one of:
-      * [n] or [SPACE] to try the next theme.
-      * [k] to keep that theme.
-      * [q] to quit and restore your original theme.
       * "Light Theme"
       * "Dark Theme"
       v Restored the original theme "Original Theme".

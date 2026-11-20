@@ -54,6 +54,8 @@
 
 .ace_support.ace_type { color: #D52753; }
 
+.ace_function { color: #23974A; }
+
 .ace_storage { color: #0098DD; }
 
 .ace_invalid { color: #FF0000; }
@@ -1196,6 +1198,34 @@
 
 .ace_line .ace_indent-guide { background: linear-gradient(to left, #D5D7D8 1px, transparent 1px, transparent); }
 
+.ace_arithmetic { color: #7A82DA; }
+
+.ace_arrow { color: #7A82DA; }
+
+.ace_attribute { color: #047485; }
+
+.ace_attributeBracket { color: #7A82DA; }
+
+.ace_bitwise { color: #7A82DA; }
+
+.ace_bracket { color: #7A82DA; }
+
+.ace_builtinAttribute { color: #047485; }
+
+.ace_builtinConstant { color: #0098DD; }
+
+.ace_builtinConstant.ace_readonly { color: #0098DD; }
+
+.ace_builtinType { color: #0098DD; }
+
+.ace_class { color: #D52753; }
+
+.ace_class.ace_decorator { color: #047485; }
+
+.ace_clsParameter { color: #0098DD; }
+
+.ace_colon { color: #7A82DA; }
+
 .ace_comment { color: #A0A1A7; }
 
 .ace_comment.ace_block { color: #A0A1A7; }
@@ -1207,6 +1237,10 @@
 .ace_comment.ace_unused { color: #383A42; }
 
 .ace_comment.ace_unused.ace_elixir { color: #383A42; }
+
+.ace_comparison { color: #7A82DA; }
+
+.ace_const { color: #823FF1; }
 
 .ace_constant { color: #823FF1; }
 
@@ -1227,6 +1261,18 @@
 .ace_constant.ace_other.ace_key { color: #A05A48; }
 
 .ace_constant.ace_other.ace_symbol { color: #823FF1; }
+
+.ace_constParameter { color: #823FF1; }
+
+.ace_controlKeyword { color: #0098DD; }
+
+.ace_curlybrace { color: #7A82DA; }
+
+.ace_decorator { color: #047485; }
+
+.ace_delegate { color: #D52753; }
+
+.ace_derive { color: #047485; }
 
 .ace_entity { color: #D52753; }
 
@@ -1256,7 +1302,29 @@
 
 .ace_entity.ace_other.ace_inherited-class { color: #D52753; }
 
+.ace_enum { color: #D52753; }
+
+.ace_enumMember { color: #823FF1; }
+
+.ace_escapeSequence { color: #DF631C; }
+
+.ace_excludedCode { color: #A0A1A7; }
+
+.ace_extensionMethod { color: #23974A; }
+
+.ace_field { color: #A05A48; }
+
+.ace_formatSpecifier { color: #7A82DA; }
+
+.ace_function { color: #23974A; }
+
+.ace_function.ace_decorator { color: #047485; }
+
+.ace_function.ace_defaultLibrary { color: #23974A; }
+
 .ace_heading { color: #C5A332; }
+
+.ace_interface { color: #D52753; }
 
 .ace_invalid { color: #FF0000; }
 
@@ -1283,6 +1351,18 @@
 .ace_keyword.ace_other.ace_special-method { color: #23974A; }
 
 .ace_keyword.ace_other.ace_unit { color: #C5A332; }
+
+.ace_label { color: #047485; }
+
+.ace_lifetime { color: #0098DD; }
+
+.ace_logical { color: #7A82DA; }
+
+.ace_macro { color: #23974A; }
+
+.ace_macroBang { color: #23974A; }
+
+.ace_magicFunction { color: #23974A; }
 
 .ace_markup { color: #C5A332; }
 
@@ -1321,8 +1401,6 @@
 .ace_markup.ace_raw.ace_inline { color: #C5A332; }
 
 .ace_markup.ace_strikethrough { color: #A0A1A7; }
-
-.ace_memberOperatorOverload { color: #7A82DA; }
 
 .ace_meta { color: #23974A; }
 
@@ -1370,11 +1448,27 @@
 
 .ace_meta.ace_separator.ace_grain { color: #0098DD; }
 
+.ace_method { color: #23974A; }
+
+.ace_namespace { color: #EE5672; }
+
 .ace_none { color: #383A42; }
+
+.ace_number { color: #CE33C0; }
 
 .ace_operator { color: #7A82DA; }
 
-.ace_operatorOverload { color: #7A82DA; }
+.ace_operatorOverloaded { color: #7A82DA; }
+
+.ace_parameter { color: #40B8C5; }
+
+.ace_parenthesis { color: #7A82DA; }
+
+.ace_preprocessorText { color: #A0A1A7; }
+
+.ace_property { color: #A05A48; }
+
+.ace_property.ace_readonly { color: #823FF1; }
 
 .ace_punctuation { color: #7A82DA; }
 
@@ -1464,6 +1558,22 @@
 
 .ace_punctuation.ace_terminator.ace_statement { color: #7A82DA; }
 
+.ace_recordClass { color: #D52753; }
+
+.ace_recordStruct { color: #D52753; }
+
+.ace_regexp { color: #A05A48; }
+
+.ace_selfKeyword { color: #0098DD; }
+
+.ace_selfParameter { color: #0098DD; }
+
+.ace_selfTypeKeyword { color: #0098DD; }
+
+.ace_semicolon { color: #7A82DA; }
+
+.ace_static { color: #823FF1; }
+
 .ace_storage { color: #0098DD; }
 
 .ace_storage.ace_type { color: #D52753; }
@@ -1478,6 +1588,8 @@
 
 .ace_string.ace_comment { color: #A0A1A7; }
 
+.ace_string.ace_escapeCharacter { color: #DF631C; }
+
 .ace_string.ace_interpolated { color: #7A82DA; }
 
 .ace_string.ace_interpolated.ace_pug { color: #7A82DA; }
@@ -1487,6 +1599,10 @@
 .ace_string.ace_other.ace_link { color: #275FE4; }
 
 .ace_string.ace_regexp { color: #A05A48; }
+
+.ace_stringEscapeCharacter { color: #DF631C; }
+
+.ace_struct { color: #D52753; }
 
 .ace_support { color: #D52753; }
 
@@ -1514,7 +1630,17 @@
 
 .ace_support.ace_variable.ace_property { color: #A05A48; }
 
+.ace_type { color: #D52753; }
+
+.ace_typeAlias { color: #D52753; }
+
+.ace_typeParameter { color: #D52753; }
+
+.ace_union { color: #D52753; }
+
 .ace_variable { color: #383A42; }
+
+.ace_variable.ace_defaultLibrary { color: #0098DD; }
 
 .ace_variable.ace_function { color: #23974A; }
 
@@ -1540,7 +1666,13 @@
 
 .ace_variable.ace_parameter { color: #40B8C5; }
 
+.ace_variable.ace_readonly { color: #823FF1; }
+
 .ace_xml-pe { color: #A0A1A7; }
+
+.ace_xmlDocCommentAttributeName { color: #727378; }
+
+.ace_xmlDocCommentName { color: #727378; }
 
 /* ---- RStudio Theme ---- */
 /* Main window borders and ribbons (Environment > Function, etc.) */

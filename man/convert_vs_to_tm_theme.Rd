@@ -29,8 +29,9 @@ a temporary file created with \code{\link[=tempfile]{tempfile()}}.}
 
 \item{name}{Theme name. If \code{NULL}, the name from the input file is used.}
 
-\item{author}{Theme author. If \code{NULL}, use the author from the input file,
-falling back to "rstudiothemes R package" if no author is listed.}
+\item{author}{Theme author. If \code{NULL}, append \verb{rstudiothemes R package} to
+the author from the input file or use the package credit alone if the file
+lists no author.}
 }
 \value{
 A \link[base:character]{character} string containing the path to the \code{.tmTheme}

@@ -62,10 +62,10 @@ The GUI stylesheet derives five intermediate colors from that palette:
 
 This GUI layer does not add syntax-highlighting token mappings. It extends the
 generated `.rstheme` so that more of the **RStudio** interface follows the
-source theme. Consequently, an empty cell in the `rstheme` column below means
-there is no direct one-to-one CSS selector in the package mapping. The value may
-still affect the generated theme through **RStudio**'s internal conversion or
-the derived GUI palette.
+source theme. An empty cell in the `rstheme` column below means the table does
+not list a CSS selector for that setting. For example, the package maps `guide`
+to `.ace_indent-guide` separately. Settings may also affect the generated theme
+through **RStudio**'s internal conversion or the derived GUI palette.
 
 ## Sources
 
@@ -87,8 +87,9 @@ the derived GUI palette.
 
 ## Color mapping
 
-When several source elements map to the same target element, the mapping
-priority determines which value is used.
+When converting from **Visual Studio Code** or **Positron** to **TextMate**,
+the converter uses the available color with the lowest `priority` number for
+each TextMate setting.
 
 ::: {#tbl-map}
 ```{r}
