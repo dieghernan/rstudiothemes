@@ -44,13 +44,14 @@ convert_positron_to_tm_theme(
 
 - author:
 
-  Theme author. If `NULL`, the author is extracted from the input file,
-  otherwise it defaults to "rstudiothemes R package".
+  Theme author. If `NULL`, append `rstudiothemes R package` to the
+  author from the input file or use the package credit alone if the file
+  lists no author.
 
 ## Value
 
-This function is called for its side effects. It writes a `.tmTheme`
-file to `outfile` and returns the file path.
+A [character](https://rdrr.io/r/base/character.html) string containing
+the path to the `.tmTheme` file written to `outfile`.
 
 ## See also
 

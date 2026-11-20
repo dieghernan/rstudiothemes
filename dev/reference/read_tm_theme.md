@@ -18,7 +18,7 @@ read_tm_theme(path)
 ## Value
 
 A [tibble](https://tibble.tidyverse.org/reference/tbl_df-class.html)
-containing the theme data.
+containing the theme metadata, color settings and token scopes.
 
 ## See also
 

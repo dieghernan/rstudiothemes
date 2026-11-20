@@ -1,8 +1,8 @@
 # Convert a theme file to **RStudio**
 
 Convert a `.tmTheme` or `.json` file that defines a **TextMate** or
-**Visual Studio Code** theme and write the equivalent **RStudio**
-`.rstheme` file.
+**Visual Studio Code** or **Positron** theme and write the equivalent
+**RStudio** theme file (`.rstheme`).
 
 Optionally, the generated theme can be installed and applied to the
 **RStudio** IDE.
@@ -29,7 +29,7 @@ convert_to_rstudio_theme(
 - path:
 
   Path or URL to a **TextMate** theme file (`.tmTheme` format) or a
-  **Visual Studio Code** theme file (`.json` format).
+  **Visual Studio Code** or **Positron** theme file (`.json` format).
 
 - outfile:
 
@@ -64,10 +64,12 @@ convert_to_rstudio_theme(
 
 ## Value
 
-This function is called for its side effects. It writes a `.rstheme`
-file to `outfile` and returns the path. If `force` or `apply` is `TRUE`,
-it installs the theme. If `apply` is `TRUE`, it also applies the theme
-to your **RStudio** IDE.
+A [character](https://rdrr.io/r/base/character.html) string containing
+the path to the `.rstheme` file written to `outfile`, or
+[NULL](https://rdrr.io/r/base/NULL.html) outside **RStudio**. If `force`
+or `apply` is `TRUE`, this function also attempts to install the theme.
+If `apply` is `TRUE` and installation does not raise an error, it
+applies the theme to your **RStudio** IDE.
 
 ## Details
 
@@ -77,11 +79,13 @@ become a common theme format. [This tmTheme
 editor](https://tmtheme-editor.linuxbox.ninja/) hosts a large collection
 of `.tmTheme` files. The `.rstheme` format is specific to **RStudio**.
 
-To switch editor themes, go to
-`Tools > Global Options > Appearance > Add` and use the editor theme
-selector.
+To install a theme file, go to
+`Tools > Global Options > Appearance > Add`. To switch themes, select
+one from the editor theme list under
+`Tools > Global Options > Appearance`.
 
-![RStudio IDE add theme UI](figures/rstudiogui.png)
+![RStudio Appearance settings, with Add to import a theme
+file](figures/rstudiogui.png)
 
 For more information, see
 <https://docs.posit.co/ide/user/ide/guide/ui/appearance.html>.

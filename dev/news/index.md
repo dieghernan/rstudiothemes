@@ -2,6 +2,22 @@
 
 ## rstudiothemes (development version)
 
+- Regenerated the bundled themes on November 20, 2026, using **RStudio**
+  2026.11.0+203.
+- [`convert_vs_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_vs_to_tm_theme.md)
+  and
+  [`convert_positron_to_tm_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_vs_to_tm_theme.md)
+  now select TextMate colors according to the mapping priorities and use
+  the next available color when the preferred one is missing.
+- [`install_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-actions.md)
+  now reports file copies when `destdir` is supplied.
+- [`try_rstudiothemes()`](https://dieghernan.github.io/rstudiothemes/dev/reference/rstudiothemes-actions.md)
+  shows keyboard instructions only when the preview waits for input.
+
+## rstudiothemes 1.2.0
+
+CRAN release: 2026-08-28
+
 - Added `"Barbie Theme"` by Milene Toazza and `"Bluloco Light"` by Umut
   Topuzoglu.
 - [`convert_to_rstudio_theme()`](https://dieghernan.github.io/rstudiothemes/dev/reference/convert_to_rstudio_theme.md)
