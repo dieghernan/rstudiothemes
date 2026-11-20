@@ -196,23 +196,23 @@ references:
   authors:
   - family-names: Cheng
     given-names: Joe
-    email: joe@posit.co
+    email: joe@rstudio.com
   - family-names: Mastny
     given-names: Timothy
     email: tim.mastny@gmail.com
   - family-names: Iannone
     given-names: Richard
-    email: rich@posit.co
+    email: rich@rstudio.com
     orcid: https://orcid.org/0000-0003-3925-190X
   - family-names: Schloerke
     given-names: Barret
-    email: barret@posit.co
+    email: barret@rstudio.com
     orcid: https://orcid.org/0000-0001-9986-114X
   - family-names: Sievert
     given-names: Carson
-    email: carson@posit.co
+    email: carson@rstudio.com
     orcid: https://orcid.org/0000-0002-4958-2844
-  year: '2026'
+  year: '2025'
   doi: 10.32614/CRAN.package.sass
 - type: software
   title: 'tidyr: Tidy Messy Data'
